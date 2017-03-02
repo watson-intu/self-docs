@@ -1,0 +1,69 @@
+\hypertarget{class_question_intent}{}\section{Question\+Intent Class Reference}
+\label{class_question_intent}\index{Question\+Intent@{Question\+Intent}}
+Inheritance diagram for Question\+Intent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_question_intent}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_question_intent_a250dceb08e1342574a0aca4fe40a7121}\label{class_question_intent_a250dceb08e1342574a0aca4fe40a7121}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_question_intent}{Question\+Intent} $>$ \hyperlink{class_question_intent_a250dceb08e1342574a0aca4fe40a7121}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_question_intent_a5292e951bfe77682c97c42ef4da2bae9}\label{class_question_intent_a5292e951bfe77682c97c42ef4da2bae9}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_question_intent}{Question\+Intent} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_question_intent_afd01d7e52c68fb88fb3d2b2ec83a7e6e}\label{class_question_intent_afd01d7e52c68fb88fb3d2b2ec83a7e6e}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_question_intent_a500e3eafcbace81edbe9bea2b082d174}\label{class_question_intent_a500e3eafcbace81edbe9bea2b082d174}} 
+\hyperlink{class_question_intent_a500e3eafcbace81edbe9bea2b082d174}{Question\+Intent} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_question_intent_a671b053bf3e1ab85296a923f7da80803}\label{class_question_intent_a671b053bf3e1ab85296a923f7da80803}} 
+virtual void \hyperlink{class_question_intent_a671b053bf3e1ab85296a923f7da80803}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_question_intent_a244bb8cb308664439aa29a025137bce6}\label{class_question_intent_a244bb8cb308664439aa29a025137bce6}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_question_intent_ae90fb07634ef1c858268ef6d05c5df54}\label{class_question_intent_ae90fb07634ef1c858268ef6d05c5df54}} 
+virtual void \hyperlink{class_question_intent_ae90fb07634ef1c858268ef6d05c5df54}{Create} (const Json\+::\+Value \&a\+\_\+\+Intent, const Json\+::\+Value \&a\+\_\+\+Parse)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_intent}{I\+Intent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_question_intent_a0f53f14b400b065bb08e518b3ce689d3}\label{class_question_intent_a0f53f14b400b065bb08e518b3ce689d3}} 
+void {\bfseries Set\+Text} (const std\+::string \&a\+\_\+\+Text)
+\item 
+\mbox{\Hypertarget{class_question_intent_a13d4b21e45c34f1e22e005bcca9800c3}\label{class_question_intent_a13d4b21e45c34f1e22e005bcca9800c3}} 
+const std\+::string \& {\bfseries Get\+Text} () const
+\item 
+\mbox{\Hypertarget{class_question_intent_a472c006ec1d401678c68651cff58deda}\label{class_question_intent_a472c006ec1d401678c68651cff58deda}} 
+void {\bfseries Set\+Pipeline} (const std\+::string \&a\+\_\+\+Pipeline)
+\item 
+\mbox{\Hypertarget{class_question_intent_a3883830cccf585fa9d1832893821d0cd}\label{class_question_intent_a3883830cccf585fa9d1832893821d0cd}} 
+const std\+::string \& {\bfseries Get\+Pipeline} () const
+\item 
+\mbox{\Hypertarget{class_question_intent_a565f000d1483fcca35052d38dac03f66}\label{class_question_intent_a565f000d1483fcca35052d38dac03f66}} 
+void {\bfseries Set\+Goal\+Params} (const Json\+::\+Value \&a\+\_\+\+Goal\+Params)
+\item 
+\mbox{\Hypertarget{class_question_intent_acc2cdb413dedb1939962903c1e68adeb}\label{class_question_intent_acc2cdb413dedb1939962903c1e68adeb}} 
+const Json\+::\+Value \& {\bfseries Get\+Goal\+Params} () const
+\item 
+\mbox{\Hypertarget{class_question_intent_a927c101af0e10987c6fd2179e2e9f8d8}\label{class_question_intent_a927c101af0e10987c6fd2179e2e9f8d8}} 
+const Json\+::\+Value \& {\bfseries Get\+Parse} () const
+\item 
+\mbox{\Hypertarget{class_question_intent_aff9063bc96ec3f9589a99adab3e3b529}\label{class_question_intent_aff9063bc96ec3f9589a99adab3e3b529}} 
+void {\bfseries Set\+Local\+Dialog} (bool a\+\_\+b\+Local\+Dialog)
+\item 
+\mbox{\Hypertarget{class_question_intent_a8401cdd87b1f4d9b3ea501c6e7041f75}\label{class_question_intent_a8401cdd87b1f4d9b3ea501c6e7041f75}} 
+bool {\bfseries Is\+Local\+Dialog} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Question\+Intent.\+h\item 
+src/blackboard/Question\+Intent.\+cpp\end{DoxyCompactItemize}

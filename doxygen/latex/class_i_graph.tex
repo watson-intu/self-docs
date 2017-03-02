@@ -1,0 +1,211 @@
+\hypertarget{class_i_graph}{}\section{I\+Graph Class Reference}
+\label{class_i_graph}\index{I\+Graph@{I\+Graph}}
+
+
+This class wraps the graph implementation that is used by self.  
+
+
+
+
+{\ttfamily \#include $<$I\+Graph.\+h$>$}
+
+Inheritance diagram for I\+Graph\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_graph}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_i_graph_1_1_i_edge}{I\+Edge}
+\begin{DoxyCompactList}\small\item\em This object defines a relationship between two vertices in this graph, this is one direction. \end{DoxyCompactList}\item 
+class \hyperlink{class_i_graph_1_1_i_observer}{I\+Observer}
+\item 
+class \hyperlink{class_i_graph_1_1_i_traverser}{I\+Traverser}
+\begin{DoxyCompactList}\small\item\em This object holds it\textquotesingle{}s results in a vector of vertex indexes into the original graph object. \end{DoxyCompactList}\item 
+class \hyperlink{class_i_graph_1_1_i_vertex}{I\+Vertex}
+\begin{DoxyCompactList}\small\item\em This class defines a vertices\textquotesingle{}s in the knowledge graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}\label{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}} 
+typedef std\+::string \hyperlink{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}{Hash\+Id}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a6a00cab0e8778831f5988ee0b678253e}\label{class_i_graph_a6a00cab0e8778831f5988ee0b678253e}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_graph}{I\+Graph} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_i_graph_ae52fe400e2c4d8f8733e29fbe3bee6cb}\label{class_i_graph_ae52fe400e2c4d8f8733e29fbe3bee6cb}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_graph}{I\+Graph} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_i_graph_aa0a2944fd6779519d525b31be0fe14e4}\label{class_i_graph_aa0a2944fd6779519d525b31be0fe14e4}} 
+typedef Delegate$<$ I\+Graph\+::\+SP $>$ {\bfseries On\+Graph\+Connected}
+\item 
+\mbox{\Hypertarget{class_i_graph_a37283b170085021f81b9391c85a16371}\label{class_i_graph_a37283b170085021f81b9391c85a16371}} 
+typedef Delegate$<$ I\+Graph\+::\+SP $>$ {\bfseries On\+Graph\+Loaded}
+\item 
+\mbox{\Hypertarget{class_i_graph_a0bc66accdc6a8a405627ecbd2ba18a2f}\label{class_i_graph_a0bc66accdc6a8a405627ecbd2ba18a2f}} 
+typedef int {\bfseries Vertex\+Index}
+\item 
+\mbox{\Hypertarget{class_i_graph_aa4a8ebca420160b744af3caa9c1d075e}\label{class_i_graph_aa4a8ebca420160b744af3caa9c1d075e}} 
+typedef I\+Conditional {\bfseries Condition}
+\item 
+\mbox{\Hypertarget{class_i_graph_a0529033d1feceeb0299160d356dfac9d}\label{class_i_graph_a0529033d1feceeb0299160d356dfac9d}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_edge}{I\+Edge} $>$ {\bfseries Edge\+SP}
+\item 
+\mbox{\Hypertarget{class_i_graph_a170fc85a23f5a6e2d4c31a58aa95feaa}\label{class_i_graph_a170fc85a23f5a6e2d4c31a58aa95feaa}} 
+typedef std\+::vector$<$ Edge\+SP $>$ {\bfseries Edge\+List}
+\item 
+\mbox{\Hypertarget{class_i_graph_a3402e475513468eebc284b85af5c5a42}\label{class_i_graph_a3402e475513468eebc284b85af5c5a42}} 
+typedef std\+::vector$<$ \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} $>$ {\bfseries Vertex\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_a10fdd6bb1da2be1304b29e52b50288c7}\label{class_i_graph_a10fdd6bb1da2be1304b29e52b50288c7}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_abb0b356a456772d975c849a4c9394194}\label{class_i_graph_abb0b356a456772d975c849a4c9394194}} 
+\hyperlink{class_i_graph_abb0b356a456772d975c849a4c9394194}{I\+Graph} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a23fa71aa1e1fbf14e5909e0bf53b01bb}\label{class_i_graph_a23fa71aa1e1fbf14e5909e0bf53b01bb}} 
+{\bfseries I\+Graph} (const std\+::string \&a\+\_\+\+Graph\+Id)
+\item 
+\mbox{\Hypertarget{class_i_graph_a1cb1988e5344b23ed333abde73499d54}\label{class_i_graph_a1cb1988e5344b23ed333abde73499d54}} 
+const std\+::string \& {\bfseries Get\+Graph\+Id} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_a2c70971a4c0ed9f62bb0568451ad4001}\label{class_i_graph_a2c70971a4c0ed9f62bb0568451ad4001}} 
+\hyperlink{class_i_graph_1_1_i_observer}{I\+Observer} $\ast$ {\bfseries Get\+Observer} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_ad7aa9db31b577c77ccd1098b6dd228aa}\label{class_i_graph_ad7aa9db31b577c77ccd1098b6dd228aa}} 
+void {\bfseries Set\+Observer} (\hyperlink{class_i_graph_1_1_i_observer}{I\+Observer} $\ast$a\+\_\+p\+Observer)
+\item 
+\mbox{\Hypertarget{class_i_graph_a282c63adf095748e411ac312238826be}\label{class_i_graph_a282c63adf095748e411ac312238826be}} 
+virtual bool \hyperlink{class_i_graph_a282c63adf095748e411ac312238826be}{Import} (const std\+::string \&a\+\_\+\+File)=0
+\begin{DoxyCompactList}\small\item\em Import a graph from a flat file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a6cff05100861eb3b5105437c8925d5ef}\label{class_i_graph_a6cff05100861eb3b5105437c8925d5ef}} 
+virtual bool \hyperlink{class_i_graph_a6cff05100861eb3b5105437c8925d5ef}{Export} (const std\+::string \&a\+\_\+\+File)=0
+\begin{DoxyCompactList}\small\item\em Export this graph into a flat file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a024d07e786250889acdc71486766780e}\label{class_i_graph_a024d07e786250889acdc71486766780e}} 
+virtual bool \hyperlink{class_i_graph_a024d07e786250889acdc71486766780e}{Load} (On\+Graph\+Loaded a\+\_\+\+On\+Graph\+Loaded=On\+Graph\+Loaded())=0
+\begin{DoxyCompactList}\small\item\em Load this graph from storage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a2110e66013c7e121a725039e4462e330}\label{class_i_graph_a2110e66013c7e121a725039e4462e330}} 
+virtual bool \hyperlink{class_i_graph_a2110e66013c7e121a725039e4462e330}{Save} ()=0
+\begin{DoxyCompactList}\small\item\em Save any changes to this graph to storage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a5cb9e9b50a265e988ff1c6d9e28470a8}\label{class_i_graph_a5cb9e9b50a265e988ff1c6d9e28470a8}} 
+virtual bool \hyperlink{class_i_graph_a5cb9e9b50a265e988ff1c6d9e28470a8}{Close} ()=0
+\begin{DoxyCompactList}\small\item\em Close this graph storage, any unsaved changes will be lost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_ac945f9913831cd03bee19dfd55627a0e}\label{class_i_graph_ac945f9913831cd03bee19dfd55627a0e}} 
+virtual void \hyperlink{class_i_graph_ac945f9913831cd03bee19dfd55627a0e}{Clear} ()=0
+\begin{DoxyCompactList}\small\item\em Clear this graph of all vertices and edges. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a871950046092ba81c590844b98e3a5da}\label{class_i_graph_a871950046092ba81c590844b98e3a5da}} 
+virtual void \hyperlink{class_i_graph_a871950046092ba81c590844b98e3a5da}{Optimize} ()=0
+\begin{DoxyCompactList}\small\item\em Optimize the graph. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_i_graph_a46918c61445d33e70de6636b81e0a829}{Get\+Edge\+Count} () const =0
+\item 
+\mbox{\Hypertarget{class_i_graph_a473c6e003b6c1d78eed1dc2867dea290}\label{class_i_graph_a473c6e003b6c1d78eed1dc2867dea290}} 
+virtual \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} {\bfseries Get\+Edge\+By\+Index} (Vertex\+Index a\+\_\+n\+Index) const =0
+\item 
+\mbox{\Hypertarget{class_i_graph_ac44208cb5d23934e3c94d836bc93dece}\label{class_i_graph_ac44208cb5d23934e3c94d836bc93dece}} 
+virtual size\+\_\+t {\bfseries Get\+Vertex\+Count} () const =0
+\item 
+\mbox{\Hypertarget{class_i_graph_a641a41859c784a64dafd427ccf261127}\label{class_i_graph_a641a41859c784a64dafd427ccf261127}} 
+virtual \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Get\+Vertex\+By\+Index} (Vertex\+Index a\+\_\+n\+Index) const =0
+\item 
+virtual void \hyperlink{class_i_graph_ac18561fc46a616fde450687f557897ac}{Merge\+Graph} (const I\+Graph\+::\+SP \&a\+\_\+sp\+Graph)=0
+\item 
+\mbox{\Hypertarget{class_i_graph_ad720ccf4b2c3fd510cfe7c93ec27573e}\label{class_i_graph_ad720ccf4b2c3fd510cfe7c93ec27573e}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Traverser\+::\+SP} \hyperlink{class_i_graph_ad720ccf4b2c3fd510cfe7c93ec27573e}{Create\+Traverser} (const Condition \&a\+\_\+sp\+Cond=\hyperlink{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}{N\+U\+L\+L\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON})=0
+\begin{DoxyCompactList}\small\item\em Create a new traverser object for searching this graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_ae254e3bba3978d52ff168c804f19b908}\label{class_i_graph_ae254e3bba3978d52ff168c804f19b908}} 
+virtual \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} \hyperlink{class_i_graph_ae254e3bba3978d52ff168c804f19b908}{Find\+Edge} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dest, const \hyperlink{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}{Hash\+Id} \&a\+\_\+\+Hash\+Id)=0
+\begin{DoxyCompactList}\small\item\em Find a edge between the two provided vertex objects and the given hash ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a577e42dd5a961f1404e697dbf6bf3218}\label{class_i_graph_a577e42dd5a961f1404e697dbf6bf3218}} 
+virtual \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} \hyperlink{class_i_graph_a577e42dd5a961f1404e697dbf6bf3218}{Resolve\+Edge} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dest, const Json\+::\+Value \&a\+\_\+\+Properties=Json\+::\+Value(), float a\+\_\+f\+Weight=1.\+0f)=0
+\begin{DoxyCompactList}\small\item\em Find/\+Create a new edge for this graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_aa458c163ec5e732bad303862e10fe450}\label{class_i_graph_aa458c163ec5e732bad303862e10fe450}} 
+virtual bool \hyperlink{class_i_graph_aa458c163ec5e732bad303862e10fe450}{Remove\+Edge} (const \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} \&a\+\_\+sp\+Edge)=0
+\begin{DoxyCompactList}\small\item\em Remove a edge from this graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a45f84405e490c58477325fce0a77ff48}\label{class_i_graph_a45f84405e490c58477325fce0a77ff48}} 
+virtual \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \hyperlink{class_i_graph_a45f84405e490c58477325fce0a77ff48}{Find\+Vertex} (const std\+::string \&a\+\_\+\+Hash\+Id)=0
+\begin{DoxyCompactList}\small\item\em Find the provided vertex by it\textquotesingle{}s hash ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_add272797f973bf9095cc9c84f9481976}\label{class_i_graph_add272797f973bf9095cc9c84f9481976}} 
+virtual \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \hyperlink{class_i_graph_add272797f973bf9095cc9c84f9481976}{Resolve\+Vertex} (const Json\+::\+Value \&a\+\_\+\+Properties)=0
+\begin{DoxyCompactList}\small\item\em Find/\+Create a new vertex in this graph, returns the I\+Vert object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a233c17f72916c4fad37329e082e75724}\label{class_i_graph_a233c17f72916c4fad37329e082e75724}} 
+virtual bool \hyperlink{class_i_graph_a233c17f72916c4fad37329e082e75724}{Add\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Vertex)=0
+\begin{DoxyCompactList}\small\item\em Add a existing vertex into this graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a550e07fceee6df75640a541fb0e1c2dc}\label{class_i_graph_a550e07fceee6df75640a541fb0e1c2dc}} 
+virtual bool \hyperlink{class_i_graph_a550e07fceee6df75640a541fb0e1c2dc}{Remove\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Vertex)=0
+\begin{DoxyCompactList}\small\item\em Remove a vertex from this graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_ac5a9f5c68020250b2cd2a30ca85570e7}\label{class_i_graph_ac5a9f5c68020250b2cd2a30ca85570e7}} 
+virtual std\+::string \hyperlink{class_i_graph_ac5a9f5c68020250b2cd2a30ca85570e7}{To\+String} ()=0
+\begin{DoxyCompactList}\small\item\em Dump graph into string for debugging purposes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_a5e775a60a7d460500c7a8d5a83a44bbe}\label{class_i_graph_a5e775a60a7d460500c7a8d5a83a44bbe}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \hyperlink{class_i_graph_a5e775a60a7d460500c7a8d5a83a44bbe}{operator\mbox{[}$\,$\mbox{]}} (Vertex\+Index a\+\_\+n\+Index) const
+\begin{DoxyCompactList}\small\item\em Helpers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_ace3ff1d280935b56fce4e98ea440d511}\label{class_i_graph_ace3ff1d280935b56fce4e98ea440d511}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Resolve\+Vertex\+KV} (const std\+::string \&a\+\_\+\+Key, const Json\+::\+Value \&a\+\_\+\+Value)
+\item 
+\mbox{\Hypertarget{class_i_graph_a7fa02b2d97a2825db64927794efacaca}\label{class_i_graph_a7fa02b2d97a2825db64927794efacaca}} 
+\hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} {\bfseries Resolve\+Edge} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dst, const char $\ast$a\+\_\+p\+Label, float a\+\_\+f\+Weight=1.\+0f)
+\item 
+\mbox{\Hypertarget{class_i_graph_a9d222dd961641657027f7e8465f170e8}\label{class_i_graph_a9d222dd961641657027f7e8465f170e8}} 
+void {\bfseries Connect} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dst, const Json\+::\+Value \&a\+\_\+\+Properties, float a\+\_\+f\+Weight=1.\+0f)
+\item 
+\mbox{\Hypertarget{class_i_graph_ad7c3b89bac4660af49341b6b3cdfb81e}\label{class_i_graph_ad7c3b89bac4660af49341b6b3cdfb81e}} 
+void {\bfseries Connect} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dst, const char $\ast$a\+\_\+p\+Label, float a\+\_\+f\+Weight=1.\+0f)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_a595f03d10242793fbbbf89db34ce8f05}\label{class_i_graph_a595f03d10242793fbbbf89db34ce8f05}} 
+static \hyperlink{class_i_graph}{I\+Graph} $\ast$ \hyperlink{class_i_graph_a595f03d10242793fbbbf89db34ce8f05}{Create} (const std\+::string \&a\+\_\+\+Graph\+Id)
+\begin{DoxyCompactList}\small\item\em Create a \hyperlink{class_i_graph}{I\+Graph}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}\label{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}} 
+static const Null\+Condition \hyperlink{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}{N\+U\+L\+L\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON}
+\begin{DoxyCompactList}\small\item\em Constants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_a7aac8a2403da511779f75bc2560305c6}\label{class_i_graph_a7aac8a2403da511779f75bc2560305c6}} 
+std\+::string {\bfseries m\+\_\+\+Graph\+Id}
+\item 
+\mbox{\Hypertarget{class_i_graph_aacdddd06e0c7268596f9f543e042f5e5}\label{class_i_graph_aacdddd06e0c7268596f9f543e042f5e5}} 
+\hyperlink{class_i_graph_1_1_i_observer}{I\+Observer} $\ast$ {\bfseries m\+\_\+p\+Observer}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class wraps the graph implementation that is used by self. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_graph_a46918c61445d33e70de6636b81e0a829}\label{class_i_graph_a46918c61445d33e70de6636b81e0a829}} 
+\index{I\+Graph@{I\+Graph}!Get\+Edge\+Count@{Get\+Edge\+Count}}
+\index{Get\+Edge\+Count@{Get\+Edge\+Count}!I\+Graph@{I\+Graph}}
+\subsubsection{\texorpdfstring{Get\+Edge\+Count()}{GetEdgeCount()}}
+{\footnotesize\ttfamily virtual size\+\_\+t I\+Graph\+::\+Get\+Edge\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Accessors for the contained data -\/ N\+O\+TE\+: Removing a vertex/edges do not reduce the vertex/edge count. Those removed vertex/edge\textquotesingle{}s will return a N\+U\+LL if you call Get\+Vertex/\+Get\+Edge. Calling \hyperlink{class_i_graph_a871950046092ba81c590844b98e3a5da}{Optimize()} will re-\/pack the graph and the vertex/edge count will be accurate. 
+
+Implemented in \hyperlink{class_graph_self_aa1514f3883bef6d823bd56d91a565b9c}{Graph\+Self}.
+
+\mbox{\Hypertarget{class_i_graph_ac18561fc46a616fde450687f557897ac}\label{class_i_graph_ac18561fc46a616fde450687f557897ac}} 
+\index{I\+Graph@{I\+Graph}!Merge\+Graph@{Merge\+Graph}}
+\index{Merge\+Graph@{Merge\+Graph}!I\+Graph@{I\+Graph}}
+\subsubsection{\texorpdfstring{Merge\+Graph()}{MergeGraph()}}
+{\footnotesize\ttfamily virtual void I\+Graph\+::\+Merge\+Graph (\begin{DoxyParamCaption}\item[{const I\+Graph\+::\+SP \&}]{a\+\_\+sp\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Add the provided graph into this graph. This routine will not add a new vertex if another vertex already exists with the same hash ID. The same goes for edges connecting vertex objects, new edges will not be added between vertex objects if another edge already exists with the same hash id. 
+
+Implemented in \hyperlink{class_graph_self_a64103889965233bb574b55bf2b7b1188}{Graph\+Self}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/I\+Graph.\+h\item 
+src/models/I\+Graph.\+cpp\end{DoxyCompactItemize}

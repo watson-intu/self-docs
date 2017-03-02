@@ -1,0 +1,270 @@
+\hypertarget{class_i_thing}{}\section{I\+Thing Class Reference}
+\label{class_i_thing}\index{I\+Thing@{I\+Thing}}
+
+
+{\ttfamily \#include $<$I\+Thing.\+h$>$}
+
+Inheritance diagram for I\+Thing\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_i_thing}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}\label{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_thing}{I\+Thing} $>$ \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a381facb34aee1e2b39f1b19388799f10}\label{class_i_thing_a381facb34aee1e2b39f1b19388799f10}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_thing}{I\+Thing} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_i_thing_a15b1a956e875bcbdb94b92a66e6b1134}\label{class_i_thing_a15b1a956e875bcbdb94b92a66e6b1134}} 
+typedef std\+::vector$<$ \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{SP} $>$ {\bfseries Thing\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_ac32afd0e0f92d23f42125677f26ca775}\label{class_i_thing_ac32afd0e0f92d23f42125677f26ca775}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_aabf16273d837cee6bd6a92413f9eba6f}\label{class_i_thing_aabf16273d837cee6bd6a92413f9eba6f}} 
+\hyperlink{class_i_thing_aabf16273d837cee6bd6a92413f9eba6f}{I\+Thing} (Thing\+Category a\+\_\+e\+Category, const std\+::string \&a\+\_\+\+Data\+Type=\char`\"{}\char`\"{}, const Json\+::\+Value \&a\+\_\+\+Data=Json\+::\+Value\+::null\+Ref, float a\+\_\+\+Life\+Span=3600.\+0f, float a\+\_\+f\+Importance=1.\+0f, const std\+::string \&a\+\_\+\+State=\char`\"{}\+A\+D\+D\+E\+D\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_ab1d3347e2cd73df03a8e869aa5f94ca6}\label{class_i_thing_ab1d3347e2cd73df03a8e869aa5f94ca6}} 
+{\bfseries I\+Thing} (Thing\+Category a\+\_\+e\+Category, float a\+\_\+\+Life\+Span, const std\+::string \&a\+\_\+\+State=\char`\"{}A\+D\+D\+ED\char`\"{})
+\item 
+\mbox{\Hypertarget{class_i_thing_abcd7a347d48984c860c4fe0f228ecb7f}\label{class_i_thing_abcd7a347d48984c860c4fe0f228ecb7f}} 
+virtual void \hyperlink{class_i_thing_abcd7a347d48984c860c4fe0f228ecb7f}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a77514b40750b5dc34c948fe528a672ee}\label{class_i_thing_a77514b40750b5dc34c948fe528a672ee}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_thing_a301d5f8f95d9775cf8a9f85fc3af01b2}\label{class_i_thing_a301d5f8f95d9775cf8a9f85fc3af01b2}} 
+\hyperlink{class_black_board}{Black\+Board} $\ast$ \hyperlink{class_i_thing_a301d5f8f95d9775cf8a9f85fc3af01b2}{Get\+Black\+Board} () const
+\begin{DoxyCompactList}\small\item\em Get our owning blackboard object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a8a52dd5d10428c02123a5728ad4778cb}\label{class_i_thing_a8a52dd5d10428c02123a5728ad4778cb}} 
+Thing\+Category \hyperlink{class_i_thing_a8a52dd5d10428c02123a5728ad4778cb}{Get\+Category} () const
+\begin{DoxyCompactList}\small\item\em Get the category for this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a48a5ff5298034f14de4e8a87073f7a45}\label{class_i_thing_a48a5ff5298034f14de4e8a87073f7a45}} 
+const std\+::string \& \hyperlink{class_i_thing_a48a5ff5298034f14de4e8a87073f7a45}{Get\+G\+U\+ID} () const
+\begin{DoxyCompactList}\small\item\em Get the unique ID for this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a3a0ba98bc1f6fd31344d860063ca7fea}\label{class_i_thing_a3a0ba98bc1f6fd31344d860063ca7fea}} 
+const std\+::string \& {\bfseries Get\+Proxy\+ID} () const
+\item 
+\mbox{\Hypertarget{class_i_thing_ab664750ec76615c0191d99d050efebf9}\label{class_i_thing_ab664750ec76615c0191d99d050efebf9}} 
+double \hyperlink{class_i_thing_ab664750ec76615c0191d99d050efebf9}{Get\+Create\+Time} () const
+\begin{DoxyCompactList}\small\item\em Get the creation time for this thing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a2214179561e0e1325de52a08ea3cce26}\label{class_i_thing_a2214179561e0e1325de52a08ea3cce26}} 
+double \hyperlink{class_i_thing_a2214179561e0e1325de52a08ea3cce26}{Get\+Age} () const
+\begin{DoxyCompactList}\small\item\em Age of this thing in seconds. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a702fc99c3a5ccf2586a69f77ee59210f}\label{class_i_thing_a702fc99c3a5ccf2586a69f77ee59210f}} 
+float {\bfseries Get\+Life\+Span} () const
+\item 
+\mbox{\Hypertarget{class_i_thing_ac3ed9b799c7282ca83489a2a6601ea3f}\label{class_i_thing_ac3ed9b799c7282ca83489a2a6601ea3f}} 
+float \hyperlink{class_i_thing_ac3ed9b799c7282ca83489a2a6601ea3f}{Get\+Importance} () const
+\begin{DoxyCompactList}\small\item\em The importance of this thing. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a5f2367cd88f65a32fa07a0d0bcbb7b09}\label{class_i_thing_a5f2367cd88f65a32fa07a0d0bcbb7b09}} 
+const std\+::string \& {\bfseries Get\+State} () const
+\item 
+\mbox{\Hypertarget{class_i_thing_a664a3d5c43a4b25c9e2de9d835c2f66b}\label{class_i_thing_a664a3d5c43a4b25c9e2de9d835c2f66b}} 
+\hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{SP} \hyperlink{class_i_thing_a664a3d5c43a4b25c9e2de9d835c2f66b}{Get\+Parent} (bool a\+\_\+b\+Enum\+Proxies=false) const
+\begin{DoxyCompactList}\small\item\em Returns our parent object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_ad4524a0d560a0fd038211e9643764f3d}\label{class_i_thing_ad4524a0d560a0fd038211e9643764f3d}} 
+const Thing\+List \& \hyperlink{class_i_thing_ad4524a0d560a0fd038211e9643764f3d}{Get\+Children} () const
+\begin{DoxyCompactList}\small\item\em Other things this thing is related too. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a3a8783dff6bfec6d5374b3b5d8c24ebc}\label{class_i_thing_a3a8783dff6bfec6d5374b3b5d8c24ebc}} 
+bool \hyperlink{class_i_thing_a3a8783dff6bfec6d5374b3b5d8c24ebc}{Is\+Parent} (const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Thing, bool a\+\_\+b\+Enum\+Proxies=false) const
+\begin{DoxyCompactList}\small\item\em Returns true if this object is a parent of this object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a99c674fe6630d51b55c69e48fe546389}\label{class_i_thing_a99c674fe6630d51b55c69e48fe546389}} 
+{\footnotesize template$<$typename T $>$ }\\boost\+::shared\+\_\+ptr$<$ T $>$ \hyperlink{class_i_thing_a99c674fe6630d51b55c69e48fe546389}{Find\+Parent\+Type} (bool a\+\_\+b\+Enum\+Proxies=false) const
+\begin{DoxyCompactList}\small\item\em This finds a parent object of the given type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a2c52ee1221dd4c9248c45abfdee7730f}\label{class_i_thing_a2c52ee1221dd4c9248c45abfdee7730f}} 
+{\footnotesize template$<$typename T $>$ }\\bool \hyperlink{class_i_thing_a2c52ee1221dd4c9248c45abfdee7730f}{Find\+Children\+Type} (std\+::vector$<$ boost\+::shared\+\_\+ptr$<$ T $>$ $>$ \&a\+\_\+\+Children, bool a\+\_\+b\+Recursive=true) const
+\begin{DoxyCompactList}\small\item\em Find all children of the given type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a5bb95c087dafd0af3c111d1684d37575}\label{class_i_thing_a5bb95c087dafd0af3c111d1684d37575}} 
+const std\+::string \& \hyperlink{class_i_thing_a5bb95c087dafd0af3c111d1684d37575}{Get\+Data\+Type} () const
+\begin{DoxyCompactList}\small\item\em Get the object type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a450fd65be6ba340814c491a9fcbd54d6}\label{class_i_thing_a450fd65be6ba340814c491a9fcbd54d6}} 
+const Json\+::\+Value \& {\bfseries Get\+Data} () const
+\item 
+\mbox{\Hypertarget{class_i_thing_a52adc46244acab54dede4068e702bdd6}\label{class_i_thing_a52adc46244acab54dede4068e702bdd6}} 
+const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Graph\+::\+I\+Vertex\+::\+SP} \& {\bfseries Get\+Vertex} () const
+\item 
+\mbox{\Hypertarget{class_i_thing_a3263b2b12d47be209251c2d05e0b8bc5}\label{class_i_thing_a3263b2b12d47be209251c2d05e0b8bc5}} 
+void \hyperlink{class_i_thing_a3263b2b12d47be209251c2d05e0b8bc5}{Set\+Black\+Board} (\hyperlink{class_black_board}{Black\+Board} $\ast$a\+\_\+p\+Black\+Board)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a74066783f759d31a6223c0933f8dfd24}\label{class_i_thing_a74066783f759d31a6223c0933f8dfd24}} 
+void {\bfseries Set\+G\+U\+ID} (const std\+::string \&a\+\_\+\+G\+U\+ID)
+\item 
+\mbox{\Hypertarget{class_i_thing_a10b45e2a3bbc7514898f46a8e6d475be}\label{class_i_thing_a10b45e2a3bbc7514898f46a8e6d475be}} 
+void {\bfseries Set\+Category} (Thing\+Category a\+\_\+e\+Category)
+\item 
+\mbox{\Hypertarget{class_i_thing_ac4e94c91c613375ef8ebc75eaa8efcf9}\label{class_i_thing_ac4e94c91c613375ef8ebc75eaa8efcf9}} 
+void {\bfseries Set\+Proxy\+ID} (const std\+::string \&a\+\_\+\+Proxy\+ID)
+\item 
+\mbox{\Hypertarget{class_i_thing_aac126276838b8e226a30c708f66d09e0}\label{class_i_thing_aac126276838b8e226a30c708f66d09e0}} 
+void {\bfseries Set\+Importance} (float a\+\_\+f\+Importance)
+\item 
+\mbox{\Hypertarget{class_i_thing_ac1ea9089d43a539b5e893040f4292412}\label{class_i_thing_ac1ea9089d43a539b5e893040f4292412}} 
+void {\bfseries Set\+State} (const std\+::string \&a\+\_\+\+New\+State)
+\item 
+\mbox{\Hypertarget{class_i_thing_a793abe2b628db2e9c17681d60d02b7e8}\label{class_i_thing_a793abe2b628db2e9c17681d60d02b7e8}} 
+void {\bfseries Reset\+Create\+Time} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_a75127988982b18ca401ef541c1d8fcd0}\label{class_i_thing_a75127988982b18ca401ef541c1d8fcd0}} 
+void {\bfseries Add\+Child} (const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{SP} \&a\+\_\+sp\+Thing)
+\item 
+\mbox{\Hypertarget{class_i_thing_aa772479067d50ec632e1b91e543dbaa4}\label{class_i_thing_aa772479067d50ec632e1b91e543dbaa4}} 
+bool {\bfseries Remove\+Child} (size\+\_\+t index)
+\item 
+\mbox{\Hypertarget{class_i_thing_a522c9b8aa9fc24082d774809e552b19b}\label{class_i_thing_a522c9b8aa9fc24082d774809e552b19b}} 
+bool {\bfseries Remove\+Child} (\hyperlink{class_i_thing}{I\+Thing} $\ast$a\+\_\+p\+Thing)
+\item 
+\mbox{\Hypertarget{class_i_thing_a22a9d457faa85cea50186790ca9734da}\label{class_i_thing_a22a9d457faa85cea50186790ca9734da}} 
+void {\bfseries Remove\+All\+Children} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_ab234f8b3005b1ae366bff118d260ce6c}\label{class_i_thing_ab234f8b3005b1ae366bff118d260ce6c}} 
+bool {\bfseries Remove\+This} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_ac53deef9ffbfb6446116ea42cf13f323}\label{class_i_thing_ac53deef9ffbfb6446116ea42cf13f323}} 
+void \hyperlink{class_i_thing_ac53deef9ffbfb6446116ea42cf13f323}{Subscribe} (Delegate$<$ const \hyperlink{class_thing_event}{Thing\+Event} \&$>$ a\+\_\+\+Subscriber)
+\begin{DoxyCompactList}\small\item\em subscribe to this specific instance for notifications. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a18dba6c237eb354160e9d97d68ad1bd3}\label{class_i_thing_a18dba6c237eb354160e9d97d68ad1bd3}} 
+bool {\bfseries Unsubscribe} (void $\ast$a\+\_\+p\+Object)
+\item 
+\mbox{\Hypertarget{class_i_thing_a9be54bac3cce158bf0366246c6e5d8e4}\label{class_i_thing_a9be54bac3cce158bf0366246c6e5d8e4}} 
+void \hyperlink{class_i_thing_a9be54bac3cce158bf0366246c6e5d8e4}{Send\+Event} (const \hyperlink{class_thing_event}{Thing\+Event} \&a\+\_\+\+Event)
+\begin{DoxyCompactList}\small\item\em Sends the given event to all subscribers and the owning blackboard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a68e0bff086c3bd17779c2c09024fc2c1}\label{class_i_thing_a68e0bff086c3bd17779c2c09024fc2c1}} 
+void {\bfseries Set\+Data\+Type} (const std\+::string \&a\+\_\+\+Data\+Type)
+\item 
+\mbox{\Hypertarget{class_i_thing_ae83da923f101155d5a1a4d3c6f12d608}\label{class_i_thing_ae83da923f101155d5a1a4d3c6f12d608}} 
+void {\bfseries Set\+Data} (const Json\+::\+Value \&a\+\_\+\+Data)
+\item 
+\mbox{\Hypertarget{class_i_thing_a6e74a7ccac7f6f54dde27d78fae4e16d}\label{class_i_thing_a6e74a7ccac7f6f54dde27d78fae4e16d}} 
+Json\+::\+Value \& {\bfseries Get\+Data} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_a3f62af9bd03230dc4c617af6c3fbf08c}\label{class_i_thing_a3f62af9bd03230dc4c617af6c3fbf08c}} 
+void {\bfseries Set\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Graph\+::\+I\+Vertex\+::\+SP} \&a\+\_\+sp\+Model)
+\item 
+\mbox{\Hypertarget{class_i_thing_a89e188333034c61e00d02341b3a2f8d6}\label{class_i_thing_a89e188333034c61e00d02341b3a2f8d6}} 
+Json\+::\+Value \& \hyperlink{class_i_thing_a89e188333034c61e00d02341b3a2f8d6}{operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Key)
+\begin{DoxyCompactList}\small\item\em Operator\mbox{[}\mbox{]} for accessing contained data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a420a9501d72cd823d9725b35ee8f7565}\label{class_i_thing_a420a9501d72cd823d9725b35ee8f7565}} 
+const Json\+::\+Value \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Key) const
+\item 
+\mbox{\Hypertarget{class_i_thing_afc3be625c06f223c51d76ecc93d91811}\label{class_i_thing_afc3be625c06f223c51d76ecc93d91811}} 
+virtual void \hyperlink{class_i_thing_afc3be625c06f223c51d76ecc93d91811}{On\+Attached} ()
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a9dcb0efb7bf085ad0eac865e2e49d46c}\label{class_i_thing_a9dcb0efb7bf085ad0eac865e2e49d46c}} 
+virtual void {\bfseries On\+Detach} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_a543632e1e628c81071a47904e80ae842}\label{class_i_thing_a543632e1e628c81071a47904e80ae842}} 
+virtual void {\bfseries On\+Importance\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_a6a50ab4191f986cb614187bc4094375d}\label{class_i_thing_a6a50ab4191f986cb614187bc4094375d}} 
+virtual void {\bfseries On\+State\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_af60bed23bee78b51c9316bebc58ea3dd}\label{class_i_thing_af60bed23bee78b51c9316bebc58ea3dd}} 
+virtual void {\bfseries On\+Guid\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_a4e62b4bda0871ed41704b299ce43af9d}\label{class_i_thing_a4e62b4bda0871ed41704b299ce43af9d}} 
+virtual void {\bfseries On\+Data\+Changed} ()
+\item 
+\mbox{\Hypertarget{class_i_thing_a739362b9f7bf711af7bab2fcef54115d}\label{class_i_thing_a739362b9f7bf711af7bab2fcef54115d}} 
+virtual void {\bfseries On\+Life\+Span\+Expired} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_abf6d252bb2f43faa5dd3e517a86fbf25}\label{class_i_thing_abf6d252bb2f43faa5dd3e517a86fbf25}} 
+static void \hyperlink{class_i_thing_abf6d252bb2f43faa5dd3e517a86fbf25}{Sort\+Chron} (Thing\+List \&a\+\_\+\+Things, bool a\+\_\+b\+Acending=true)
+\begin{DoxyCompactList}\small\item\em Sort the things by time, ascending order places the newest thing last in the last. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a04d8dafff2c7e747e619b49fa004b972}\label{class_i_thing_a04d8dafff2c7e747e619b49fa004b972}} 
+static const char $\ast$ \hyperlink{class_i_thing_a04d8dafff2c7e747e619b49fa004b972}{Thing\+Event\+Type\+Text} (Thing\+Event\+Type a\+\_\+e\+Type)
+\begin{DoxyCompactList}\small\item\em Returns a text description of the event type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a3d297608c533e99877cf4debb383d6e9}\label{class_i_thing_a3d297608c533e99877cf4debb383d6e9}} 
+static Json\+::\+Value \hyperlink{class_i_thing_a3d297608c533e99877cf4debb383d6e9}{Json\+Object} (const char $\ast$a\+\_\+p\+Key, const Json\+::\+Value \&a\+\_\+\+Value)
+\begin{DoxyCompactList}\small\item\em Helper function to make a Json\+::\+Object from a key/value pair. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_acc0b0d00c1a667fd8e8cf074ea6efdda}\label{class_i_thing_acc0b0d00c1a667fd8e8cf074ea6efdda}} 
+static const std\+::string {\bfseries E\+M\+P\+T\+Y\+\_\+\+S\+T\+R\+I\+NG}
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_adc1c62dbb379402740b35c4685efdee1}\label{class_i_thing_adc1c62dbb379402740b35c4685efdee1}} 
+typedef Delegate$<$ const \hyperlink{class_thing_event}{Thing\+Event} \& $>$ \hyperlink{class_i_thing_adc1c62dbb379402740b35c4685efdee1}{Subscriber}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a21f4f35d7f53437297401894241e2be5}\label{class_i_thing_a21f4f35d7f53437297401894241e2be5}} 
+typedef std\+::list$<$ \hyperlink{class_i_thing_adc1c62dbb379402740b35c4685efdee1}{Subscriber} $>$ {\bfseries Subscriber\+List}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_a7b78d4e976ac7d55255ed2cbcf70e1e4}\label{class_i_thing_a7b78d4e976ac7d55255ed2cbcf70e1e4}} 
+\hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{SP} {\bfseries Get\+Proxy} () const
+\item 
+\mbox{\Hypertarget{class_i_thing_a40ca0ff681596515ef267792537ca606}\label{class_i_thing_a40ca0ff681596515ef267792537ca606}} 
+void {\bfseries Start\+Detach\+Timer} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_thing_aa3e6a2793c501cae74be9f89be740178}\label{class_i_thing_aa3e6a2793c501cae74be9f89be740178}} 
+\hyperlink{class_black_board}{Black\+Board} $\ast$ \hyperlink{class_i_thing_aa3e6a2793c501cae74be9f89be740178}{m\+\_\+p\+Black\+Board}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_thing_a1369be496eddca6ea2b123cd568a239b}\label{class_i_thing_a1369be496eddca6ea2b123cd568a239b}} 
+Thing\+Category {\bfseries m\+\_\+e\+Category}
+\item 
+\mbox{\Hypertarget{class_i_thing_aeee4e1937ea9dab9aa77d650245a2882}\label{class_i_thing_aeee4e1937ea9dab9aa77d650245a2882}} 
+std\+::string {\bfseries m\+\_\+\+G\+U\+ID}
+\item 
+\mbox{\Hypertarget{class_i_thing_a35f19087d88f1c13e2269dc91b5477ba}\label{class_i_thing_a35f19087d88f1c13e2269dc91b5477ba}} 
+std\+::string {\bfseries m\+\_\+\+Proxy\+ID}
+\item 
+\mbox{\Hypertarget{class_i_thing_aa5d15b0d7256da558a94c530b34e183a}\label{class_i_thing_aa5d15b0d7256da558a94c530b34e183a}} 
+Time {\bfseries m\+\_\+\+Create\+Time}
+\item 
+\mbox{\Hypertarget{class_i_thing_ab9a26b71e7eae17b3ed3fb799073f5c1}\label{class_i_thing_ab9a26b71e7eae17b3ed3fb799073f5c1}} 
+float {\bfseries m\+\_\+f\+Importance}
+\item 
+\mbox{\Hypertarget{class_i_thing_a91f80b83c293ef0b830573b6ea86bd03}\label{class_i_thing_a91f80b83c293ef0b830573b6ea86bd03}} 
+std\+::string {\bfseries m\+\_\+\+State}
+\item 
+\mbox{\Hypertarget{class_i_thing_a7a42e6fb8a5d33375b675be285a5cbd3}\label{class_i_thing_a7a42e6fb8a5d33375b675be285a5cbd3}} 
+\hyperlink{class_i_thing}{I\+Thing} $\ast$ {\bfseries m\+\_\+p\+Parent}
+\item 
+\mbox{\Hypertarget{class_i_thing_a2389e5094a2c8d5ca7287803a6eac677}\label{class_i_thing_a2389e5094a2c8d5ca7287803a6eac677}} 
+Thing\+List {\bfseries m\+\_\+\+Children}
+\item 
+\mbox{\Hypertarget{class_i_thing_adc7b3f0aa7d370b9cbba806414428591}\label{class_i_thing_adc7b3f0aa7d370b9cbba806414428591}} 
+std\+::string {\bfseries m\+\_\+\+Data\+Type}
+\item 
+\mbox{\Hypertarget{class_i_thing_a0b47a4734391e189e5898902e78f02eb}\label{class_i_thing_a0b47a4734391e189e5898902e78f02eb}} 
+Json\+::\+Value {\bfseries m\+\_\+\+Data}
+\item 
+\mbox{\Hypertarget{class_i_thing_aa9369e0c21c8d7a70e5dd8e99992734a}\label{class_i_thing_aa9369e0c21c8d7a70e5dd8e99992734a}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Graph\+::\+I\+Vertex\+::\+SP} {\bfseries m\+\_\+sp\+Vertex}
+\item 
+\mbox{\Hypertarget{class_i_thing_a8e51811cda850ebcf2588181561d164b}\label{class_i_thing_a8e51811cda850ebcf2588181561d164b}} 
+float {\bfseries m\+\_\+f\+Life\+Span}
+\item 
+\mbox{\Hypertarget{class_i_thing_aa487afb3428e4a2a2d258eff1cf937ab}\label{class_i_thing_aa487afb3428e4a2a2d258eff1cf937ab}} 
+Timer\+Pool\+::\+I\+Timer\+::\+SP {\bfseries m\+\_\+sp\+Detach\+Timer}
+\item 
+\mbox{\Hypertarget{class_i_thing_aff0f41013e03bea8fd5a2d2a1ed30d48}\label{class_i_thing_aff0f41013e03bea8fd5a2d2a1ed30d48}} 
+Subscriber\+List {\bfseries m\+\_\+\+Subscribers}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This abstract interface is the base class for any object that can be added to the blackboard. The idea is that things connect to each other automatically using a trained graph, then drive the goals of the system. These things should automatically remove them-\/selves after they are no longer needed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/I\+Thing.\+h\item 
+src/blackboard/I\+Thing.\+cpp\end{DoxyCompactItemize}

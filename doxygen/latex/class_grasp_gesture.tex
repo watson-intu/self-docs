@@ -1,0 +1,57 @@
+\hypertarget{class_grasp_gesture}{}\section{Grasp\+Gesture Class Reference}
+\label{class_grasp_gesture}\index{Grasp\+Gesture@{Grasp\+Gesture}}
+
+
+This gesture grabs an object in the enviroment.  
+
+
+
+
+{\ttfamily \#include $<$Grasp\+Gesture.\+h$>$}
+
+Inheritance diagram for Grasp\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_grasp_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_grasp_gesture_a41814ebf71c5f39722a78b3a1546fd3f}\label{class_grasp_gesture_a41814ebf71c5f39722a78b3a1546fd3f}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_grasp_gesture_aaeabee09e5f8e5be11b745bbc9ffb49c}\label{class_grasp_gesture_aaeabee09e5f8e5be11b745bbc9ffb49c}} 
+\hyperlink{class_grasp_gesture_aaeabee09e5f8e5be11b745bbc9ffb49c}{Grasp\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grasp_gesture_ab2871c8df7e702d4dd1a1b4878524091}\label{class_grasp_gesture_ab2871c8df7e702d4dd1a1b4878524091}} 
+virtual void \hyperlink{class_grasp_gesture_ab2871c8df7e702d4dd1a1b4878524091}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grasp_gesture_a541b2ec489aa0533ff195e4f0f614ebb}\label{class_grasp_gesture_a541b2ec489aa0533ff195e4f0f614ebb}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_grasp_gesture_adc88ab16d6d3bcbbbc06ea89b416f8b1}\label{class_grasp_gesture_adc88ab16d6d3bcbbbc06ea89b416f8b1}} 
+virtual bool \hyperlink{class_grasp_gesture_adc88ab16d6d3bcbbbc06ea89b416f8b1}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grasp_gesture_a85046e956cc579cf22bd8f2ec0b03640}\label{class_grasp_gesture_a85046e956cc579cf22bd8f2ec0b03640}} 
+virtual bool \hyperlink{class_grasp_gesture_a85046e956cc579cf22bd8f2ec0b03640}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_grasp_gesture_a44f8f1a3a011a52ccf55809a028f787c}\label{class_grasp_gesture_a44f8f1a3a011a52ccf55809a028f787c}} 
+std\+::string \hyperlink{class_grasp_gesture_a44f8f1a3a011a52ccf55809a028f787c}{m\+\_\+\+Hand}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_grasp_gesture_a5a3722d452f6b3ece2956802db2353f3}\label{class_grasp_gesture_a5a3722d452f6b3ece2956802db2353f3}} 
+bool {\bfseries m\+\_\+\+Open}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture grabs an object in the enviroment. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Grasp\+Gesture.\+h\item 
+src/gestures/Grasp\+Gesture.\+cpp\end{DoxyCompactItemize}

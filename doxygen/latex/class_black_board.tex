@@ -1,0 +1,115 @@
+\hypertarget{class_black_board}{}\section{Black\+Board Class Reference}
+\label{class_black_board}\index{Black\+Board@{Black\+Board}}
+
+
+The \hyperlink{class_black_board}{Black\+Board} class acts as the central publish/subscribe system for all agents, classifiers, and extractors.  
+
+
+
+
+{\ttfamily \#include $<$Black\+Board.\+h$>$}
+
+Inheritance diagram for Black\+Board\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_black_board}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_black_board_a34c71e0cce3bbfd34bd9fd91607b01c0}\label{class_black_board_a34c71e0cce3bbfd34bd9fd91607b01c0}} 
+typedef I\+Thing\+::\+Thing\+List \hyperlink{class_black_board_a34c71e0cce3bbfd34bd9fd91607b01c0}{Thing\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_black_board_adab334b501f4d17adf3b20395a65ca8a}\label{class_black_board_adab334b501f4d17adf3b20395a65ca8a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_black_board_a34e2a107547d7217a7705d6c88058db3}\label{class_black_board_a34e2a107547d7217a7705d6c88058db3}} 
+\hyperlink{class_black_board_a34e2a107547d7217a7705d6c88058db3}{Black\+Board} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_black_board_a7c0ededc79c06f51a4042392add4e964}\label{class_black_board_a7c0ededc79c06f51a4042392add4e964}} 
+virtual void \hyperlink{class_black_board_a7c0ededc79c06f51a4042392add4e964}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_black_board_a263a37bd1fdbb46db6def0cd0503d0c5}\label{class_black_board_a263a37bd1fdbb46db6def0cd0503d0c5}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_black_board_a13d70fb27ef59b83635fed85ced2d3eb}\label{class_black_board_a13d70fb27ef59b83635fed85ced2d3eb}} 
+const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \& \hyperlink{class_black_board_a13d70fb27ef59b83635fed85ced2d3eb}{Get\+Perception\+Root} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_black_board_aa2baa55ec0fa21acc396add9e1ec4d1d}\label{class_black_board_aa2baa55ec0fa21acc396add9e1ec4d1d}} 
+const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \& {\bfseries Get\+Agency\+Root} () const
+\item 
+\mbox{\Hypertarget{class_black_board_a17c8cf8fee4533eb0ac37a7a33e1d3aa}\label{class_black_board_a17c8cf8fee4533eb0ac37a7a33e1d3aa}} 
+const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \& {\bfseries Get\+Models\+Root} () const
+\item 
+\mbox{\Hypertarget{class_black_board_aa54d6d7a39e067e0091e0358951b598b}\label{class_black_board_aa54d6d7a39e067e0091e0358951b598b}} 
+\hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} {\bfseries Find\+Thing} (const std\+::string \&a\+\_\+\+G\+U\+ID) const
+\item 
+\mbox{\Hypertarget{class_black_board_adb449e10fc27b8f50dc3b00c63a188c2}\label{class_black_board_adb449e10fc27b8f50dc3b00c63a188c2}} 
+bool \hyperlink{class_black_board_adb449e10fc27b8f50dc3b00c63a188c2}{Start} ()
+\begin{DoxyCompactList}\small\item\em Initialize this blackboard. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_black_board_ab1f9089fcea4cb6739401df5d72301cc}\label{class_black_board_ab1f9089fcea4cb6739401df5d72301cc}} 
+bool {\bfseries Stop} ()
+\item 
+void \hyperlink{class_black_board_ae5c15e743e9abd413c1711a3091b6da8}{Add\+Thing} (const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Thing)
+\item 
+\mbox{\Hypertarget{class_black_board_a64c506b6e6a6eaaeac52c03ecfe6b4a5}\label{class_black_board_a64c506b6e6a6eaaeac52c03ecfe6b4a5}} 
+bool \hyperlink{class_black_board_a64c506b6e6a6eaaeac52c03ecfe6b4a5}{Remove\+Thing} (\hyperlink{class_i_thing}{I\+Thing} $\ast$a\+\_\+p\+Thing)
+\begin{DoxyCompactList}\small\item\em This removes the specific thing from the board. \end{DoxyCompactList}\item 
+void \hyperlink{class_black_board_a6e3a81af31e182047d78adf2131f8d09}{Subscribe\+To\+Type} (const std\+::string \&a\+\_\+\+Type, Delegate$<$ const \hyperlink{class_thing_event}{Thing\+Event} \&$>$ a\+\_\+callback, Thing\+Event\+Type event\+Mask=T\+E\+\_\+\+A\+LL)
+\item 
+bool \hyperlink{class_black_board_a743f02f77a5d7008b510459dbcac69d6}{Unsubscribe\+From\+Type} (const std\+::string \&a\+\_\+\+Type, void $\ast$a\+\_\+p\+Object=N\+U\+LL)
+\item 
+void \hyperlink{class_black_board_a64acc3b0a151c7124341ec4b67b2a23c}{On\+Thing\+Event} (const \hyperlink{class_thing_event}{Thing\+Event} \&thing)
+\item 
+\mbox{\Hypertarget{class_black_board_a497c4e96a9fe9b38c003c69804af039f}\label{class_black_board_a497c4e96a9fe9b38c003c69804af039f}} 
+void {\bfseries Register\+Thing} (const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Thing)
+\item 
+\mbox{\Hypertarget{class_black_board_a031276d932dff376433465ce51930d0a}\label{class_black_board_a031276d932dff376433465ce51930d0a}} 
+void {\bfseries Unregister\+Thing} (const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Thing)
+\item 
+\mbox{\Hypertarget{class_black_board_aa4d9fbeac301adf593f08db2b6e24b74}\label{class_black_board_aa4d9fbeac301adf593f08db2b6e24b74}} 
+void \hyperlink{class_black_board_aa4d9fbeac301adf593f08db2b6e24b74}{Subscribe\+To\+Type} (const R\+T\+TI \&type, Delegate$<$ const \hyperlink{class_thing_event}{Thing\+Event} \&$>$ a\+\_\+callback, Thing\+Event\+Type event\+Mask=T\+E\+\_\+\+A\+LL)
+\begin{DoxyCompactList}\small\item\em Deprecated Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_black_board_a44f2cc7495a0a89e50813f5420ced0e5}\label{class_black_board_a44f2cc7495a0a89e50813f5420ced0e5}} 
+bool {\bfseries Unsubscribe\+From\+Type} (const R\+T\+TI \&type, void $\ast$a\+\_\+p\+Object=N\+U\+LL)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+The \hyperlink{class_black_board}{Black\+Board} class acts as the central publish/subscribe system for all agents, classifiers, and extractors. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_black_board_ae5c15e743e9abd413c1711a3091b6da8}\label{class_black_board_ae5c15e743e9abd413c1711a3091b6da8}} 
+\index{Black\+Board@{Black\+Board}!Add\+Thing@{Add\+Thing}}
+\index{Add\+Thing@{Add\+Thing}!Black\+Board@{Black\+Board}}
+\subsubsection{\texorpdfstring{Add\+Thing()}{AddThing()}}
+{\footnotesize\ttfamily void Black\+Board\+::\+Add\+Thing (\begin{DoxyParamCaption}\item[{const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&}]{a\+\_\+sp\+Thing }\end{DoxyParamCaption})}
+
+Add a concept to this \hyperlink{class_black_board}{Black\+Board}, this concept will automatically be connected to other concepts to produce a \hyperlink{class_goal}{Goal} in the end. This object takes ownership of the provided object and will delete the concept once a goal is produced. \mbox{\Hypertarget{class_black_board_a64acc3b0a151c7124341ec4b67b2a23c}\label{class_black_board_a64acc3b0a151c7124341ec4b67b2a23c}} 
+\index{Black\+Board@{Black\+Board}!On\+Thing\+Event@{On\+Thing\+Event}}
+\index{On\+Thing\+Event@{On\+Thing\+Event}!Black\+Board@{Black\+Board}}
+\subsubsection{\texorpdfstring{On\+Thing\+Event()}{OnThingEvent()}}
+{\footnotesize\ttfamily void Black\+Board\+::\+On\+Thing\+Event (\begin{DoxyParamCaption}\item[{const \hyperlink{class_thing_event}{Thing\+Event} \&}]{thing }\end{DoxyParamCaption})}
+
+Invoke this function to pass a event to all subscribers for a given object type. This is invoked automatically by \hyperlink{class_black_board_ae5c15e743e9abd413c1711a3091b6da8}{Add\+Thing()}, \hyperlink{class_black_board_a64c506b6e6a6eaaeac52c03ecfe6b4a5}{Remove\+Thing()}, and when a state is changed on a \hyperlink{class_i_thing}{I\+Thing} object. \mbox{\Hypertarget{class_black_board_a6e3a81af31e182047d78adf2131f8d09}\label{class_black_board_a6e3a81af31e182047d78adf2131f8d09}} 
+\index{Black\+Board@{Black\+Board}!Subscribe\+To\+Type@{Subscribe\+To\+Type}}
+\index{Subscribe\+To\+Type@{Subscribe\+To\+Type}!Black\+Board@{Black\+Board}}
+\subsubsection{\texorpdfstring{Subscribe\+To\+Type()}{SubscribeToType()}}
+{\footnotesize\ttfamily void Black\+Board\+::\+Subscribe\+To\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Type,  }\item[{Delegate$<$ const \hyperlink{class_thing_event}{Thing\+Event} \&$>$}]{a\+\_\+callback,  }\item[{Thing\+Event\+Type}]{event\+Mask = {\ttfamily TE\+\_\+ALL} }\end{DoxyParamCaption})}
+
+Subscribe to any objects of the given type getting added to this Blackboard. Optionally, the user may subscribe to only certain events. \mbox{\Hypertarget{class_black_board_a743f02f77a5d7008b510459dbcac69d6}\label{class_black_board_a743f02f77a5d7008b510459dbcac69d6}} 
+\index{Black\+Board@{Black\+Board}!Unsubscribe\+From\+Type@{Unsubscribe\+From\+Type}}
+\index{Unsubscribe\+From\+Type@{Unsubscribe\+From\+Type}!Black\+Board@{Black\+Board}}
+\subsubsection{\texorpdfstring{Unsubscribe\+From\+Type()}{UnsubscribeFromType()}}
+{\footnotesize\ttfamily bool Black\+Board\+::\+Unsubscribe\+From\+Type (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Type,  }\item[{void $\ast$}]{a\+\_\+p\+Object = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+Unsubscribe the given type and callback object. If a\+\_\+p\+Object is N\+U\+LL, then all callbacks for the given type are cleared. Returns false if no match was found. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Black\+Board.\+h\item 
+src/blackboard/Black\+Board.\+cpp\end{DoxyCompactItemize}

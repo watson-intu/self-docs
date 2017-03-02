@@ -1,0 +1,78 @@
+\hypertarget{class_telephony_microphone}{}\section{Telephony\+Microphone Class Reference}
+\label{class_telephony_microphone}\index{Telephony\+Microphone@{Telephony\+Microphone}}
+Inheritance diagram for Telephony\+Microphone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_telephony_microphone}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_a81d4e21e9cc2904aa8811bd92f06f4da}\label{class_telephony_microphone_a81d4e21e9cc2904aa8811bd92f06f4da}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_telephony_microphone}{Telephony\+Microphone} $>$ \hyperlink{class_telephony_microphone_a81d4e21e9cc2904aa8811bd92f06f4da}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_aa619cd0158efa2fb353f770b8ab1bfa5}\label{class_telephony_microphone_aa619cd0158efa2fb353f770b8ab1bfa5}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_telephony_microphone}{Telephony\+Microphone} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_ae8460fca8fd281cab3ec131ab6b1124e}\label{class_telephony_microphone_ae8460fca8fd281cab3ec131ab6b1124e}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_a03dc0272d5adf7f321cb7b8e77aed0b8}\label{class_telephony_microphone_a03dc0272d5adf7f321cb7b8e77aed0b8}} 
+\hyperlink{class_telephony_microphone_a03dc0272d5adf7f321cb7b8e77aed0b8}{Telephony\+Microphone} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_ac91d451ec8941c4c00031a508a767cfd}\label{class_telephony_microphone_ac91d451ec8941c4c00031a508a767cfd}} 
+void {\bfseries Send\+Audio\+Data} (const std\+::string \&a\+\_\+\+Data)
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_a3ba8e7fa57608d44cb27a11599c479ad}\label{class_telephony_microphone_a3ba8e7fa57608d44cb27a11599c479ad}} 
+virtual void \hyperlink{class_telephony_microphone_a3ba8e7fa57608d44cb27a11599c479ad}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_a58296ed3c456176013c12ddc5b78455e}\label{class_telephony_microphone_a58296ed3c456176013c12ddc5b78455e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_a5ee9a5904409d8bb4c35b17196b585e0}\label{class_telephony_microphone_a5ee9a5904409d8bb4c35b17196b585e0}} 
+virtual const char $\ast$ \hyperlink{class_telephony_microphone_a5ee9a5904409d8bb4c35b17196b585e0}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_acedec63000d7213285ddfb4e7474105d}\label{class_telephony_microphone_acedec63000d7213285ddfb4e7474105d}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_a2e43cc400de496224aa00115362ee2b1}\label{class_telephony_microphone_a2e43cc400de496224aa00115362ee2b1}} 
+virtual const char $\ast$ {\bfseries Get\+Binary\+Type} ()
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_af8dd386c022883aab868b232fd6e2676}\label{class_telephony_microphone_af8dd386c022883aab868b232fd6e2676}} 
+virtual bool \hyperlink{class_telephony_microphone_af8dd386c022883aab868b232fd6e2676}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_a01055ff84f01b086e07e0a91553ca6dd}\label{class_telephony_microphone_a01055ff84f01b086e07e0a91553ca6dd}} 
+virtual bool \hyperlink{class_telephony_microphone_a01055ff84f01b086e07e0a91553ca6dd}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_aff29d7a9f627a6ebe29eaa6c17dcf032}\label{class_telephony_microphone_aff29d7a9f627a6ebe29eaa6c17dcf032}} 
+virtual void \hyperlink{class_telephony_microphone_aff29d7a9f627a6ebe29eaa6c17dcf032}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_a148c411f20af227993a13a2fe8c00008}\label{class_telephony_microphone_a148c411f20af227993a13a2fe8c00008}} 
+virtual void \hyperlink{class_telephony_microphone_a148c411f20af227993a13a2fe8c00008}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_ad64d01d130659c54a857c655a8ebc93d}\label{class_telephony_microphone_ad64d01d130659c54a857c655a8ebc93d}} 
+int \hyperlink{class_telephony_microphone_ad64d01d130659c54a857c655a8ebc93d}{m\+\_\+\+Recording\+HZ}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_microphone_a9ae78c623cc36e53989982f18f46b42d}\label{class_telephony_microphone_a9ae78c623cc36e53989982f18f46b42d}} 
+int {\bfseries m\+\_\+\+Recording\+Bits}
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_ad939b85268144fdcead83040447ed5eb}\label{class_telephony_microphone_ad939b85268144fdcead83040447ed5eb}} 
+int {\bfseries m\+\_\+\+Recording\+Channels}
+\item 
+\mbox{\Hypertarget{class_telephony_microphone_a992dcfbe72e789fc85bb8c5a869671b8}\label{class_telephony_microphone_a992dcfbe72e789fc85bb8c5a869671b8}} 
+std\+::string {\bfseries m\+\_\+\+Binary\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Telephony\+Microphone.\+h\item 
+src/sensors/Telephony\+Microphone.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,60 @@
+\hypertarget{class_move_gesture}{}\section{Move\+Gesture Class Reference}
+\label{class_move_gesture}\index{Move\+Gesture@{Move\+Gesture}}
+
+
+This gesture moves the robot to a location in the enviroment.  
+
+
+
+
+{\ttfamily \#include $<$Move\+Gesture.\+h$>$}
+
+Inheritance diagram for Move\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_move_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_move_gesture_afac1f8c5640f0df858c09855eb6be148}\label{class_move_gesture_afac1f8c5640f0df858c09855eb6be148}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_move_gesture_a0a0dd9ec9fa7136664e61d6e362b35d2}\label{class_move_gesture_a0a0dd9ec9fa7136664e61d6e362b35d2}} 
+\hyperlink{class_move_gesture_a0a0dd9ec9fa7136664e61d6e362b35d2}{Move\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_gesture_a7c28ba31406a6f613a8968f30fd8ddb3}\label{class_move_gesture_a7c28ba31406a6f613a8968f30fd8ddb3}} 
+virtual void \hyperlink{class_move_gesture_a7c28ba31406a6f613a8968f30fd8ddb3}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_gesture_a643df3eac8209e53fb2af8a1e871941c}\label{class_move_gesture_a643df3eac8209e53fb2af8a1e871941c}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_move_gesture_af3b5646e7942018b7b4ea8b0ecb46e69}\label{class_move_gesture_af3b5646e7942018b7b4ea8b0ecb46e69}} 
+virtual bool \hyperlink{class_move_gesture_af3b5646e7942018b7b4ea8b0ecb46e69}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_gesture_ab3ae33003e26b88aad830c9e3528a21d}\label{class_move_gesture_ab3ae33003e26b88aad830c9e3528a21d}} 
+virtual bool \hyperlink{class_move_gesture_ab3ae33003e26b88aad830c9e3528a21d}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_move_gesture_a3f72cda80fdf5cf316edbde825f6e003}\label{class_move_gesture_a3f72cda80fdf5cf316edbde825f6e003}} 
+float \hyperlink{class_move_gesture_a3f72cda80fdf5cf316edbde825f6e003}{m\+\_\+fX}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_gesture_ad44b852220d31a6169edd297956984fc}\label{class_move_gesture_ad44b852220d31a6169edd297956984fc}} 
+float {\bfseries m\+\_\+fY}
+\item 
+\mbox{\Hypertarget{class_move_gesture_a0e69954b50055b6e68e7f12495ee1a7d}\label{class_move_gesture_a0e69954b50055b6e68e7f12495ee1a7d}} 
+float {\bfseries m\+\_\+fZ}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture moves the robot to a location in the enviroment. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Move\+Gesture.\+h\item 
+src/gestures/Move\+Gesture.\+cpp\end{DoxyCompactItemize}

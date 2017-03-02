@@ -1,0 +1,66 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+Base class for a \hyperlink{class_camera}{Camera} sensor class that collects \hyperlink{class_video_data}{Video\+Data}. This is not a actual implementation, see Nao\+Camera.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+Inheritance diagram for Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_camera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_abee8bc9a9c1ebee8a809b2fb8e436950}\label{class_camera_abee8bc9a9c1ebee8a809b2fb8e436950}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_camera_a5b70be7fddf2ccf074890a7e7b369188}\label{class_camera_a5b70be7fddf2ccf074890a7e7b369188}} 
+virtual void \hyperlink{class_camera_a5b70be7fddf2ccf074890a7e7b369188}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialiazable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a82ec2a9bb8493f2c4bbdb97cd79dfd94}\label{class_camera_a82ec2a9bb8493f2c4bbdb97cd79dfd94}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_camera_a982c2ab097483c212e1267485848819d}\label{class_camera_a982c2ab097483c212e1267485848819d}} 
+virtual const char $\ast$ \hyperlink{class_camera_a982c2ab097483c212e1267485848819d}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a0601adae3ffbef3152cab59d423fc678}\label{class_camera_a0601adae3ffbef3152cab59d423fc678}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_camera_a10d9f7d28581f448474b65ca9755caa3}\label{class_camera_a10d9f7d28581f448474b65ca9755caa3}} 
+virtual const char $\ast$ {\bfseries Get\+Binary\+Type} ()
+\item 
+\mbox{\Hypertarget{class_camera_a7ca83b9c76148375de7f2c38c7443824}\label{class_camera_a7ca83b9c76148375de7f2c38c7443824}} 
+virtual bool \hyperlink{class_camera_a7ca83b9c76148375de7f2c38c7443824}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_af42a31534de2673e62f4b000d96ddd4c}\label{class_camera_af42a31534de2673e62f4b000d96ddd4c}} 
+virtual bool \hyperlink{class_camera_af42a31534de2673e62f4b000d96ddd4c}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aecd7262c9ddd921cd7d6223ee84586ae}\label{class_camera_aecd7262c9ddd921cd7d6223ee84586ae}} 
+virtual void \hyperlink{class_camera_aecd7262c9ddd921cd7d6223ee84586ae}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_afb0a4e93bb0bb354d3fa3e5b5631a247}\label{class_camera_afb0a4e93bb0bb354d3fa3e5b5631a247}} 
+virtual void \hyperlink{class_camera_afb0a4e93bb0bb354d3fa3e5b5631a247}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_aa5bca0acb4af13119c6d5c498dafd59d}\label{class_camera_aa5bca0acb4af13119c6d5c498dafd59d}} 
+float \hyperlink{class_camera_aa5bca0acb4af13119c6d5c498dafd59d}{m\+\_\+f\+Frames\+Per\+Sec}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a \hyperlink{class_camera}{Camera} sensor class that collects \hyperlink{class_video_data}{Video\+Data}. This is not a actual implementation, see Nao\+Camera. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Camera.\+h\item 
+src/sensors/Camera.\+cpp\end{DoxyCompactItemize}

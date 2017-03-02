@@ -1,0 +1,42 @@
+\hypertarget{class_f_beat_detect}{}\section{F\+Beat\+Detect Class Reference}
+\label{class_f_beat_detect}\index{F\+Beat\+Detect@{F\+Beat\+Detect}}
+Inheritance diagram for F\+Beat\+Detect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_f_beat_detect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_f_beat_detect_a34a48d288ca04f08d4722dbff72252df}\label{class_f_beat_detect_a34a48d288ca04f08d4722dbff72252df}} 
+virtual void \hyperlink{class_f_beat_detect_a34a48d288ca04f08d4722dbff72252df}{Initialize} (int time\+Size, float sample\+Rate)
+\begin{DoxyCompactList}\small\item\em Initialize this beat detector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_f_beat_detect_a141db57cfa7acc2a45e77ac28c970776}\label{class_f_beat_detect_a141db57cfa7acc2a45e77ac28c970776}} 
+virtual void \hyperlink{class_f_beat_detect_a141db57cfa7acc2a45e77ac28c970776}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Release this beat detector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_f_beat_detect_ad6298d38e6ac967abeb1dec8f0339e1d}\label{class_f_beat_detect_ad6298d38e6ac967abeb1dec8f0339e1d}} 
+bool \hyperlink{class_f_beat_detect_ad6298d38e6ac967abeb1dec8f0339e1d}{Detect} (std\+::vector$<$ float $>$ \&a\+\_\+\+Samples, size\+\_\+t a\+\_\+n\+Offset)
+\begin{DoxyCompactList}\small\item\em Returns true if a onset is detected in this block of audio data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_f_beat_detect_a5c892e74c4c1320a15fcaf6422b52417}\label{class_f_beat_detect_a5c892e74c4c1320a15fcaf6422b52417}} 
+bool {\bfseries Is\+Onset} (int i) const
+\item 
+\mbox{\Hypertarget{class_f_beat_detect_af83d0ffedd3b071c8003628150c8ca82}\label{class_f_beat_detect_af83d0ffedd3b071c8003628150c8ca82}} 
+bool {\bfseries Is\+Kick} () const
+\item 
+\mbox{\Hypertarget{class_f_beat_detect_a3a83abb2a3b152b01dc4405c7f77bcbd}\label{class_f_beat_detect_a3a83abb2a3b152b01dc4405c7f77bcbd}} 
+bool {\bfseries Is\+Snare} () const
+\item 
+\mbox{\Hypertarget{class_f_beat_detect_ae2867a9c4a488ffba2556d9732a0e868}\label{class_f_beat_detect_ae2867a9c4a488ffba2556d9732a0e868}} 
+bool {\bfseries Is\+Hat} () const
+\item 
+\mbox{\Hypertarget{class_f_beat_detect_a6f871db6cdeea7106ce2adbb676c053c}\label{class_f_beat_detect_a6f871db6cdeea7106ce2adbb676c053c}} 
+bool {\bfseries Is\+Range} (int low, int high, int threshold) const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/fft/F\+Beat\+Detect.\+h\item 
+src/utils/fft/F\+Beat\+Detect.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,62 @@
+\hypertarget{class_weather_insights}{}\section{Weather\+Insights Class Reference}
+\label{class_weather_insights}\index{Weather\+Insights@{Weather\+Insights}}
+Inheritance diagram for Weather\+Insights\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_weather_insights}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}\label{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}} 
+typedef Delegate$<$ const Json\+::\+Value \& $>$ \hyperlink{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}{Send\+Callback}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weather_insights_a6a74ebf2286bdc5b3acbe4ca6af9aff8}\label{class_weather_insights_a6a74ebf2286bdc5b3acbe4ca6af9aff8}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_weather_insights_a15e3f3a37d28ee9f89009dc2f8a4d1cb}\label{class_weather_insights_a15e3f3a37d28ee9f89009dc2f8a4d1cb}} 
+\hyperlink{class_weather_insights_a15e3f3a37d28ee9f89009dc2f8a4d1cb}{Weather\+Insights} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_weather_insights_a174a071d9530f6c261f343ae796fc6d1}\label{class_weather_insights_a174a071d9530f6c261f343ae796fc6d1}} 
+virtual void \hyperlink{class_weather_insights_a174a071d9530f6c261f343ae796fc6d1}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_weather_insights_ab69c0433a55f15011b2717a0ad376049}\label{class_weather_insights_ab69c0433a55f15011b2717a0ad376049}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_weather_insights_a1b8186d82337f02c990d168b34cc5580}\label{class_weather_insights_a1b8186d82337f02c990d168b34cc5580}} 
+virtual bool \hyperlink{class_weather_insights_a1b8186d82337f02c990d168b34cc5580}{Start} ()
+\begin{DoxyCompactList}\small\item\em I\+Service interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_weather_insights_a5cc992dc2eab7e9b2a10a6cee5dfa1d9}\label{class_weather_insights_a5cc992dc2eab7e9b2a10a6cee5dfa1d9}} 
+void {\bfseries Get\+Current\+Conditions} (\hyperlink{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}{Send\+Callback} a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_weather_insights_a25bad60d47a1e0fab54256022a778bb4}\label{class_weather_insights_a25bad60d47a1e0fab54256022a778bb4}} 
+void {\bfseries Get\+Current\+Conditions} (const std\+::string \&a\+\_\+\+Lat, const std\+::string \&a\+\_\+\+Long, \hyperlink{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}{Send\+Callback} a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_weather_insights_a3a8591802cc5eb9e228a11fd9a42c4a9}\label{class_weather_insights_a3a8591802cc5eb9e228a11fd9a42c4a9}} 
+void {\bfseries Get\+Hourly\+Forecast} (\hyperlink{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}{Send\+Callback} a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_weather_insights_a536e90d9b7b3ee4474e54f5f8a8bb07c}\label{class_weather_insights_a536e90d9b7b3ee4474e54f5f8a8bb07c}} 
+void {\bfseries Get\+Ten\+Day\+Forecast} (\hyperlink{class_weather_insights_a65ee20ca4986e83a6de60b1f2a4e36ac}{Send\+Callback} a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_weather_insights_a937d693a2274d385748fa7b2b6692951}\label{class_weather_insights_a937d693a2274d385748fa7b2b6692951}} 
+void {\bfseries Get\+Location} (const std\+::string \&a\+\_\+\+Location, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_weather_insights_a37e7892a877eb8fa9113dbdb0434cb31}\label{class_weather_insights_a37e7892a877eb8fa9113dbdb0434cb31}} 
+void {\bfseries Get\+Time\+Zone} (const double \&a\+\_\+\+Latitude, const double \&a\+\_\+\+Longitude, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_weather_insights_a6d6e026da75d5a829d6e18e2be337506}\label{class_weather_insights_a6d6e026da75d5a829d6e18e2be337506}} 
+static void {\bfseries Celsius\+To\+Fahrenheit} (const float \&a\+\_\+\+Celsius, float \&a\+\_\+\+Fahrenheit)
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/services/Weather\+Insights.\+h\item 
+src/services/Weather\+Insights.\+cpp\end{DoxyCompactItemize}

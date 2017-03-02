@@ -1,0 +1,81 @@
+\hypertarget{class_gesture_manager}{}\section{Gesture\+Manager Class Reference}
+\label{class_gesture_manager}\index{Gesture\+Manager@{Gesture\+Manager}}
+
+
+{\ttfamily \#include $<$Gesture\+Manager.\+h$>$}
+
+Inheritance diagram for Gesture\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_gesture_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a72da7b5c9399cc34be1ec0337c447f54}\label{class_gesture_manager_a72da7b5c9399cc34be1ec0337c447f54}} 
+typedef std\+::list$<$ std\+::string $>$ \hyperlink{class_gesture_manager_a72da7b5c9399cc34be1ec0337c447f54}{Gesture\+Files}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_adf20e982b5dfe2f8cd9ef357211d4a2d}\label{class_gesture_manager_adf20e982b5dfe2f8cd9ef357211d4a2d}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_gesture}{I\+Gesture} $>$ {\bfseries I\+Gesture\+SP}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a51038e010deb91bf4df120bf34e7eee2}\label{class_gesture_manager_a51038e010deb91bf4df120bf34e7eee2}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_proxy_gesture}{Proxy\+Gesture} $>$ {\bfseries Proxy\+Gesture\+SP}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a572b1d9a614d6ed3642618efa3fc8c4c}\label{class_gesture_manager_a572b1d9a614d6ed3642618efa3fc8c4c}} 
+typedef std\+::vector$<$ I\+Gesture\+SP $>$ {\bfseries Gesture\+List}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_ad61019472923fab10fc3333e70cc19e4}\label{class_gesture_manager_ad61019472923fab10fc3333e70cc19e4}} 
+typedef std\+::multimap$<$ std\+::string, I\+Gesture\+SP $>$ {\bfseries Gesture\+Map}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a9cdebb5ea97129019db72056043792c7}\label{class_gesture_manager_a9cdebb5ea97129019db72056043792c7}} 
+typedef std\+::map$<$ std\+::string, Proxy\+Gesture\+SP $>$ {\bfseries Proxy\+Map}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_af19a0f40db6d9f52ce6f52e029f137e3}\label{class_gesture_manager_af19a0f40db6d9f52ce6f52e029f137e3}} 
+typedef Factory$<$ \hyperlink{class_i_gesture}{I\+Gesture} $>$ {\bfseries Gesture\+Factory}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a949853cf7837f7f20da2aa66ef769766}\label{class_gesture_manager_a949853cf7837f7f20da2aa66ef769766}} 
+typedef Delegate$<$ \hyperlink{class_i_gesture}{I\+Gesture} $\ast$ $>$ {\bfseries Gesture\+Delegate}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a568a60a3f0763d9d26991a6da3abd8b9}\label{class_gesture_manager_a568a60a3f0763d9d26991a6da3abd8b9}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a5ecfa8bb990c8b2064df5051848845a1}\label{class_gesture_manager_a5ecfa8bb990c8b2064df5051848845a1}} 
+\hyperlink{class_gesture_manager_a5ecfa8bb990c8b2064df5051848845a1}{Gesture\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_ad785801d982e5a8f1b943fe8d042ba27}\label{class_gesture_manager_ad785801d982e5a8f1b943fe8d042ba27}} 
+virtual void \hyperlink{class_gesture_manager_ad785801d982e5a8f1b943fe8d042ba27}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_afafe002820cead44bead7c4dea9a16f7}\label{class_gesture_manager_afafe002820cead44bead7c4dea9a16f7}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_gesture_manager_a12fa31aabe615a3190e8eda374a11558}\label{class_gesture_manager_a12fa31aabe615a3190e8eda374a11558}} 
+const Gesture\+Map \& \hyperlink{class_gesture_manager_a12fa31aabe615a3190e8eda374a11558}{Get\+Gesture\+Map} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_af3d61e28375c7e0a38b4c4fa43138f7a}\label{class_gesture_manager_af3d61e28375c7e0a38b4c4fa43138f7a}} 
+bool \hyperlink{class_gesture_manager_af3d61e28375c7e0a38b4c4fa43138f7a}{Find\+Gestures} (const std\+::string \&a\+\_\+\+Gesture\+Id, Gesture\+List \&a\+\_\+\+Gestures) const
+\begin{DoxyCompactList}\small\item\em This finds all gestures who have the given ID, returns false if none are found. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_ab227e6b7b7e111594725fcd3e571e929}\label{class_gesture_manager_ab227e6b7b7e111594725fcd3e571e929}} 
+bool \hyperlink{class_gesture_manager_ab227e6b7b7e111594725fcd3e571e929}{Start} (const \hyperlink{class_gesture_manager_a72da7b5c9399cc34be1ec0337c447f54}{Gesture\+Files} \&a\+\_\+\+Files)
+\begin{DoxyCompactList}\small\item\em Initialize and start this sensor manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_a22472656b5488240160d5a9bde47aa6a}\label{class_gesture_manager_a22472656b5488240160d5a9bde47aa6a}} 
+bool \hyperlink{class_gesture_manager_a22472656b5488240160d5a9bde47aa6a}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this sensor manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_manager_a861ab88404e3de59931aea922c6b5f87}\label{class_gesture_manager_a861ab88404e3de59931aea922c6b5f87}} 
+bool {\bfseries Add\+Gesture} (const I\+Gesture\+SP \&a\+\_\+sp\+Gesture)
+\item 
+\mbox{\Hypertarget{class_gesture_manager_afd960ebe3b54c2d61ea40676743b2f84}\label{class_gesture_manager_afd960ebe3b54c2d61ea40676743b2f84}} 
+bool {\bfseries Remove\+Gesture} (const I\+Gesture\+SP \&a\+\_\+sp\+Gesture)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This manager manages all gestures available to the local self instance. Normally a Skill\+Gesture will invoke into this manager to execute various gestures to perform actions. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Gesture\+Manager.\+h\item 
+src/gestures/Gesture\+Manager.\+cpp\end{DoxyCompactItemize}

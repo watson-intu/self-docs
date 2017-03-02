@@ -1,0 +1,180 @@
+\hypertarget{class_topic_manager}{}\section{Topic\+Manager Class Reference}
+\label{class_topic_manager}\index{Topic\+Manager@{Topic\+Manager}}
+
+
+A agent that implements the \hyperlink{class_i_topics}{I\+Topics} interface.  
+
+
+
+
+{\ttfamily \#include $<$Topic\+Manager.\+h$>$}
+
+Inheritance diagram for Topic\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_topic_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_topic_manager_a6428eb9fabeb46f68a22aca95cc519ab}\label{class_topic_manager_a6428eb9fabeb46f68a22aca95cc519ab}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_topic_manager_a5561dab14ad2952c21273552bdf10774}\label{class_topic_manager_a5561dab14ad2952c21273552bdf10774}} 
+\hyperlink{class_topic_manager_a5561dab14ad2952c21273552bdf10774}{Topic\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a3c548969f0b269e3ee83f1d950b9ef53}\label{class_topic_manager_a3c548969f0b269e3ee83f1d950b9ef53}} 
+virtual void \hyperlink{class_topic_manager_a3c548969f0b269e3ee83f1d950b9ef53}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a151462dbcd1bd52b166ac4a178213479}\label{class_topic_manager_a151462dbcd1bd52b166ac4a178213479}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a0886c112b469abc52eefd0c3fc1eb549}\label{class_topic_manager_a0886c112b469abc52eefd0c3fc1eb549}} 
+virtual void \hyperlink{class_topic_manager_a0886c112b469abc52eefd0c3fc1eb549}{Process} (const Log\+Record \&a\+\_\+\+Record)
+\begin{DoxyCompactList}\small\item\em I\+Log\+Reactor interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_afa514b1fa1a86c40b4e9164eb04e4429}\label{class_topic_manager_afa514b1fa1a86c40b4e9164eb04e4429}} 
+bool \hyperlink{class_topic_manager_afa514b1fa1a86c40b4e9164eb04e4429}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start this manager, returns false on failure. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a1f76f9178dab41fd99f9a8df153d0549}\label{class_topic_manager_a1f76f9178dab41fd99f9a8df153d0549}} 
+bool {\bfseries Stop} ()
+\item 
+\mbox{\Hypertarget{class_topic_manager_ae83a9d6fc33c274e73e832e08844040c}\label{class_topic_manager_ae83a9d6fc33c274e73e832e08844040c}} 
+virtual void \hyperlink{class_topic_manager_ae83a9d6fc33c274e73e832e08844040c}{Get\+Topics} (Topic\+Vector \&a\+\_\+\+Topics)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_topics}{I\+Topics} interface. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_topic_manager_a681e4ef90d13d2f0cca948135f4c8097}{Register\+Topic} (const std\+::string \&a\+\_\+\+Topic, const std\+::string \&a\+\_\+\+Type, Sub\+Callback a\+\_\+\+Subscriber\+Callback=Sub\+Callback())
+\item 
+\mbox{\Hypertarget{class_topic_manager_a57e8a94646a9cdd60bfd8af0d355a7a0}\label{class_topic_manager_a57e8a94646a9cdd60bfd8af0d355a7a0}} 
+virtual void \hyperlink{class_topic_manager_a57e8a94646a9cdd60bfd8af0d355a7a0}{Unregister\+Topic} (const std\+::string \&a\+\_\+\+Topic\+Id)
+\begin{DoxyCompactList}\small\item\em unregister a topic \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_af57d892659d7e4006f85f890009dc158}\label{class_topic_manager_af57d892659d7e4006f85f890009dc158}} 
+virtual bool \hyperlink{class_topic_manager_af57d892659d7e4006f85f890009dc158}{Is\+Subscribed} (const std\+::string \&a\+\_\+\+Topic\+Id)
+\begin{DoxyCompactList}\small\item\em This will return true if anyone is subscribed to the given topic. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_topic_manager_a7dd5e9041ac8f297f9695adf576beed0}{Get\+Subscriber\+Count} (const std\+::string \&a\+\_\+\+Topic\+Id)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a3aa590170f26a39fb5d22dbf753da2ad}\label{class_topic_manager_a3aa590170f26a39fb5d22dbf753da2ad}} 
+virtual bool \hyperlink{class_topic_manager_a3aa590170f26a39fb5d22dbf753da2ad}{Publish} (const std\+::string \&a\+\_\+\+Topic\+Id, const std\+::string \&a\+\_\+\+Data, bool a\+\_\+b\+Persisted=false, bool a\+\_\+b\+Binary=false)
+\begin{DoxyCompactList}\small\item\em Publish data for a given topic to all subscribers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_ae24c44e8c13b33798300da4001e9c0a8}\label{class_topic_manager_ae24c44e8c13b33798300da4001e9c0a8}} 
+virtual bool \hyperlink{class_topic_manager_ae24c44e8c13b33798300da4001e9c0a8}{Send} (const std\+::string \&a\+\_\+\+Targets, const std\+::string \&a\+\_\+\+Topic\+Id, const std\+::string \&a\+\_\+\+Data, bool a\+\_\+b\+Binary=false)
+\begin{DoxyCompactList}\small\item\em Send data for a given topic to a specific subscriber. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_ac1cef454d6fb66b9fd70596b9dbc2b72}\label{class_topic_manager_ac1cef454d6fb66b9fd70596b9dbc2b72}} 
+virtual bool \hyperlink{class_topic_manager_ac1cef454d6fb66b9fd70596b9dbc2b72}{Publish\+At} (const std\+::string \&a\+\_\+\+Path, const std\+::string \&a\+\_\+\+Data, bool a\+\_\+b\+Persisted=false, bool a\+\_\+b\+Binary=false)
+\begin{DoxyCompactList}\small\item\em Publish data for a remote target specified by the provided path. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_topic_manager_a7b1d312d794d8876c0ea8592eb41a82b}{Query} (const std\+::string \&a\+\_\+\+Path, Query\+Callback a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em This queries a node specified by the given path. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_topic_manager_a45df0bdd5a5d9ba4dfbb471726cf04c5}{Subscribe} (const std\+::string \&a\+\_\+\+Path, Payload\+Callback a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Subscribe to the given topic specified by the provided path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a5d1380adbc66f961a43179cb079d28d8}\label{class_topic_manager_a5d1380adbc66f961a43179cb079d28d8}} 
+virtual bool \hyperlink{class_topic_manager_a5d1380adbc66f961a43179cb079d28d8}{Unsubscribe} (const std\+::string \&a\+\_\+\+Path, void $\ast$a\+\_\+p\+Object=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Unsubscribe from the given topic. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a526d2e5f71fd6b73cdad169f700a11f1}\label{class_topic_manager_a526d2e5f71fd6b73cdad169f700a11f1}} 
+const std\+::string \& \hyperlink{class_topic_manager_a526d2e5f71fd6b73cdad169f700a11f1}{Get\+Parent\+Host} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a43273dba6ec08330e5e50fe9aa39e134}\label{class_topic_manager_a43273dba6ec08330e5e50fe9aa39e134}} 
+void \hyperlink{class_topic_manager_a43273dba6ec08330e5e50fe9aa39e134}{Set\+Cert\+File} (const std\+::string \&a\+\_\+\+Cert\+File)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_topic_manager_a665211287a9e390acf9862fd0d9f7167}\label{class_topic_manager_a665211287a9e390acf9862fd0d9f7167}} 
+void {\bfseries Set\+Key\+File} (const std\+::string \&a\+\_\+\+Key\+File)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a56c8fe63b366fe5162b65196c509b622}\label{class_topic_manager_a56c8fe63b366fe5162b65196c509b622}} 
+void {\bfseries Set\+Verify\+File} (const std\+::string \&a\+\_\+\+Verify\+File)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a780bc089a2470aec0582273bca18d2e9}\label{class_topic_manager_a780bc089a2470aec0582273bca18d2e9}} 
+void {\bfseries Set\+Parent\+Host} (const std\+::string \&a\+\_\+\+Parent\+Host)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a807b8205f70c08313244ffe68c93e72d}\label{class_topic_manager_a807b8205f70c08313244ffe68c93e72d}} 
+void {\bfseries Set\+Interface} (const std\+::string \&a\+\_\+\+Interface)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a2d43bb5f29bcead18d524804976628ec}\label{class_topic_manager_a2d43bb5f29bcead18d524804976628ec}} 
+void {\bfseries Set\+Port} (int a\+\_\+n\+Port)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a99f69d432cb92382f853336842e63710}\label{class_topic_manager_a99f69d432cb92382f853336842e63710}} 
+void {\bfseries Set\+Threads} (int a\+\_\+n\+Threads)
+\item 
+\mbox{\Hypertarget{class_topic_manager_af9bc1d3c052117c398a41e8f526ed8c6}\label{class_topic_manager_af9bc1d3c052117c398a41e8f526ed8c6}} 
+void {\bfseries Set\+Request\+Timeout} (float a\+\_\+f\+Req\+Timeout)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a6f0f17ecb705a49e89564ab1b7f30a50}\label{class_topic_manager_a6f0f17ecb705a49e89564ab1b7f30a50}} 
+void {\bfseries Set\+Reconnect\+Interval} (float a\+\_\+f\+Reconnect\+Interval)
+\item 
+\mbox{\Hypertarget{class_topic_manager_a86925b071fcca54a79eacd08ff909041}\label{class_topic_manager_a86925b071fcca54a79eacd08ff909041}} 
+void {\bfseries Set\+Config\+File} (const std\+::string \&a\+\_\+\+Config\+File)
+\item 
+\mbox{\Hypertarget{class_topic_manager_ae8b35f6fc8f1f2f8d2e9d7a1c6928e13}\label{class_topic_manager_ae8b35f6fc8f1f2f8d2e9d7a1c6928e13}} 
+void {\bfseries Set\+Self\+Id} (const std\+::string \&a\+\_\+\+Self\+Id)
+\item 
+\mbox{\Hypertarget{class_topic_manager_ab404f67516e6a7b2cf3601909a5f461c}\label{class_topic_manager_ab404f67516e6a7b2cf3601909a5f461c}} 
+void {\bfseries Set\+Bearer\+Token} (const std\+::string \&a\+\_\+\+Bearer\+Token)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A agent that implements the \hyperlink{class_i_topics}{I\+Topics} interface. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_topic_manager_a7dd5e9041ac8f297f9695adf576beed0}\label{class_topic_manager_a7dd5e9041ac8f297f9695adf576beed0}} 
+\index{Topic\+Manager@{Topic\+Manager}!Get\+Subscriber\+Count@{Get\+Subscriber\+Count}}
+\index{Get\+Subscriber\+Count@{Get\+Subscriber\+Count}!Topic\+Manager@{Topic\+Manager}}
+\subsubsection{\texorpdfstring{Get\+Subscriber\+Count()}{GetSubscriberCount()}}
+{\footnotesize\ttfamily size\+\_\+t Topic\+Manager\+::\+Get\+Subscriber\+Count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Topic\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This returns a list of subscribers for the given topic, the strings returned will be relative paths to the given subscribers. 
+
+Implements \hyperlink{class_i_topics_a5e49b50568c300e2f3a182942a3c316d}{I\+Topics}.
+
+\mbox{\Hypertarget{class_topic_manager_a7b1d312d794d8876c0ea8592eb41a82b}\label{class_topic_manager_a7b1d312d794d8876c0ea8592eb41a82b}} 
+\index{Topic\+Manager@{Topic\+Manager}!Query@{Query}}
+\index{Query@{Query}!Topic\+Manager@{Topic\+Manager}}
+\subsubsection{\texorpdfstring{Query()}{Query()}}
+{\footnotesize\ttfamily void Topic\+Manager\+::\+Query (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Path,  }\item[{Query\+Callback}]{a\+\_\+\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+This queries a node specified by the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+\+Callback} & the path to the parent topic, we will return all topics underneath the provided topic. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_topics_a2d0193d6be4ce0c10d4bf352c21eb56a}{I\+Topics}.
+
+\mbox{\Hypertarget{class_topic_manager_a681e4ef90d13d2f0cca948135f4c8097}\label{class_topic_manager_a681e4ef90d13d2f0cca948135f4c8097}} 
+\index{Topic\+Manager@{Topic\+Manager}!Register\+Topic@{Register\+Topic}}
+\index{Register\+Topic@{Register\+Topic}!Topic\+Manager@{Topic\+Manager}}
+\subsubsection{\texorpdfstring{Register\+Topic()}{RegisterTopic()}}
+{\footnotesize\ttfamily void Topic\+Manager\+::\+Register\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Topic\+Id,  }\item[{const std\+::string \&}]{a\+\_\+\+Type,  }\item[{Sub\+Callback}]{a\+\_\+\+Subscriber\+Callback = {\ttfamily SubCallback()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Local systems should register what topics they will be publishing, this allows other clients to enumerate available topics since some topics are not published unless they have subscribers. 
+
+Implements \hyperlink{class_i_topics_aaef29cbe6b8c089b22689a4ece3f711a}{I\+Topics}.
+
+\mbox{\Hypertarget{class_topic_manager_a45df0bdd5a5d9ba4dfbb471726cf04c5}\label{class_topic_manager_a45df0bdd5a5d9ba4dfbb471726cf04c5}} 
+\index{Topic\+Manager@{Topic\+Manager}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!Topic\+Manager@{Topic\+Manager}}
+\subsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily bool Topic\+Manager\+::\+Subscribe (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Path,  }\item[{Payload\+Callback}]{a\+\_\+\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Subscribe to the given topic specified by the provided path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+\+Callback} & The topic to subscribe, \char`\"{}..\char`\"{} moves up to a parent self, \char`\"{}+\char`\"{} is a wild-\/card. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \hyperlink{class_i_topics_a6381bbfcfc39b3630a802bae4c7c5337}{I\+Topics}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/topics/Topic\+Manager.\+h\item 
+src/topics/Topic\+Manager.\+cpp\end{DoxyCompactItemize}

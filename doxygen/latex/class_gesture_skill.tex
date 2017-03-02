@@ -1,0 +1,78 @@
+\hypertarget{class_gesture_skill}{}\section{Gesture\+Skill Class Reference}
+\label{class_gesture_skill}\index{Gesture\+Skill@{Gesture\+Skill}}
+
+
+This skill executes a gestures in the gesture manager.  
+
+
+
+
+{\ttfamily \#include $<$Gesture\+Skill.\+h$>$}
+
+Inheritance diagram for Gesture\+Skill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gesture_skill}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_skill_ab8669ee642c7c699bcabf333852fbb74}\label{class_gesture_skill_ab8669ee642c7c699bcabf333852fbb74}} 
+typedef std\+::list$<$ \hyperlink{class_i_skill}{I\+Skill} $\ast$$>$ \hyperlink{class_gesture_skill_ab8669ee642c7c699bcabf333852fbb74}{Skill\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_skill_af813f9000835a90a5f913a68224eafb7}\label{class_gesture_skill_af813f9000835a90a5f913a68224eafb7}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_gesture_skill_a3ed1fb78c858d9f70ac8b0e894c345d4}\label{class_gesture_skill_a3ed1fb78c858d9f70ac8b0e894c345d4}} 
+\hyperlink{class_gesture_skill_a3ed1fb78c858d9f70ac8b0e894c345d4}{Gesture\+Skill} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_skill_ae47ed58380ac3ba82edc622ffc20e053}\label{class_gesture_skill_ae47ed58380ac3ba82edc622ffc20e053}} 
+{\bfseries Gesture\+Skill} (const \hyperlink{class_gesture_skill}{Gesture\+Skill} \&a\+\_\+\+Copy)
+\item 
+\mbox{\Hypertarget{class_gesture_skill_a54bcd1b0b3901d98aaae29262decae25}\label{class_gesture_skill_a54bcd1b0b3901d98aaae29262decae25}} 
+{\bfseries Gesture\+Skill} (const std\+::string \&a\+\_\+\+Gesture\+ID)
+\item 
+\mbox{\Hypertarget{class_gesture_skill_ae5e37990e118acf550a1091fb96efb1e}\label{class_gesture_skill_ae5e37990e118acf550a1091fb96efb1e}} 
+const std\+::string \& {\bfseries Get\+Gesture\+Id} () const
+\item 
+\mbox{\Hypertarget{class_gesture_skill_a0b60ccdba1e8bacc76d135a021b08839}\label{class_gesture_skill_a0b60ccdba1e8bacc76d135a021b08839}} 
+const \hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Gesture\+Params} () const
+\item 
+\mbox{\Hypertarget{class_gesture_skill_aef9c81c6b8c4cd3d6907319f6abfb056}\label{class_gesture_skill_aef9c81c6b8c4cd3d6907319f6abfb056}} 
+void {\bfseries Set\+Gesture\+Id} (const std\+::string \&a\+\_\+\+Gesture\+Id)
+\item 
+\mbox{\Hypertarget{class_gesture_skill_a18c845d82e55043b612e1a52e8cd5bfb}\label{class_gesture_skill_a18c845d82e55043b612e1a52e8cd5bfb}} 
+void {\bfseries Set\+Gesture\+Params} (const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_gesture_skill_a9a0b5dcba0cbbced2bfc5108304d7513}\label{class_gesture_skill_a9a0b5dcba0cbbced2bfc5108304d7513}} 
+virtual void \hyperlink{class_gesture_skill_a9a0b5dcba0cbbced2bfc5108304d7513}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_skill_a16b99eb71c3757981012b70979cd5b85}\label{class_gesture_skill_a16b99eb71c3757981012b70979cd5b85}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_gesture_skill_a44a7d102f239e72a1199c122f33d19ba}\label{class_gesture_skill_a44a7d102f239e72a1199c122f33d19ba}} 
+virtual bool \hyperlink{class_gesture_skill_a44a7d102f239e72a1199c122f33d19ba}{Can\+Use\+Skill} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_skill}{I\+Skill} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_skill_a2cecea782e270b8e7fe86189f839c1e7}\label{class_gesture_skill_a2cecea782e270b8e7fe86189f839c1e7}} 
+virtual void \hyperlink{class_gesture_skill_a2cecea782e270b8e7fe86189f839c1e7}{Use\+Skill} (Delegate$<$ \hyperlink{class_i_skill}{I\+Skill} $\ast$$>$ a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em This should return true if this skill can be used, false is returned otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_skill_a20d5b15e86591d642c89c492bf29b66e}\label{class_gesture_skill_a20d5b15e86591d642c89c492bf29b66e}} 
+virtual bool {\bfseries Abort\+Skill} ()
+\item 
+\mbox{\Hypertarget{class_gesture_skill_ac903e6f48157179e362f680e99274dcc}\label{class_gesture_skill_ac903e6f48157179e362f680e99274dcc}} 
+virtual \hyperlink{class_i_skill}{I\+Skill} $\ast$ \hyperlink{class_gesture_skill_ac903e6f48157179e362f680e99274dcc}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Invoke this function to stop using this skill, the callback passed to \hyperlink{class_gesture_skill_a2cecea782e270b8e7fe86189f839c1e7}{Use\+Skill()} will N\+OT be invoked after this is called. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This skill executes a gestures in the gesture manager. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/Gesture\+Skill.\+h\item 
+src/skills/Gesture\+Skill.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,44 @@
+\hypertarget{class_noise_filter}{}\section{Noise\+Filter Class Reference}
+\label{class_noise_filter}\index{Noise\+Filter@{Noise\+Filter}}
+Inheritance diagram for Noise\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.837838cm]{class_noise_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_noise_filter_a370d856bcaa70d1b96e50420f8e244fa}\label{class_noise_filter_a370d856bcaa70d1b96e50420f8e244fa}} 
+typedef std\+::complex$<$ float $>$ \hyperlink{class_noise_filter_a370d856bcaa70d1b96e50420f8e244fa}{Complex\+Num}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_noise_filter_a93f473b0f202c6a0a975eef0bd034e24}\label{class_noise_filter_a93f473b0f202c6a0a975eef0bd034e24}} 
+typedef std\+::valarray$<$ \hyperlink{class_noise_filter_a370d856bcaa70d1b96e50420f8e244fa}{Complex\+Num} $>$ {\bfseries Complex\+Num\+Array}
+\item 
+\mbox{\Hypertarget{class_noise_filter_ad724425f427810ba3285a3b5ccc5060f}\label{class_noise_filter_ad724425f427810ba3285a3b5ccc5060f}} 
+typedef std\+::valarray$<$ float $>$ {\bfseries Num\+Array}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_noise_filter_a3bad4304c1e6a18eeb634ee23b591d17}\label{class_noise_filter_a3bad4304c1e6a18eeb634ee23b591d17}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_noise_filter_a0f9898ebd48dbb5db6d58c5373a91fc5}\label{class_noise_filter_a0f9898ebd48dbb5db6d58c5373a91fc5}} 
+\hyperlink{class_noise_filter_a0f9898ebd48dbb5db6d58c5373a91fc5}{Noise\+Filter} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_noise_filter_af82665e8d05322af29c2a1074e990804}\label{class_noise_filter_af82665e8d05322af29c2a1074e990804}} 
+virtual void \hyperlink{class_noise_filter_af82665e8d05322af29c2a1074e990804}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialziable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_noise_filter_a5804c75bc1da3d00e4476d9bf43dcfbf}\label{class_noise_filter_a5804c75bc1da3d00e4476d9bf43dcfbf}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_noise_filter_af34c060518525acbd9ced9520938a969}\label{class_noise_filter_af34c060518525acbd9ced9520938a969}} 
+virtual bool \hyperlink{class_noise_filter_af34c060518525acbd9ced9520938a969}{Apply\+Filter} (Complex\+Num\+Array \&a\+\_\+X)
+\begin{DoxyCompactList}\small\item\em I\+Fourier\+Filter interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/extractors/filters/Noise\+Filter.\+h\item 
+src/extractors/filters/Noise\+Filter.\+cpp\end{DoxyCompactItemize}

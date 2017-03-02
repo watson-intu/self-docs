@@ -1,0 +1,72 @@
+\hypertarget{class_health_sensor}{}\section{Health\+Sensor Class Reference}
+\label{class_health_sensor}\index{Health\+Sensor@{Health\+Sensor}}
+
+
+Base class for a Hardware Device sensor class.  
+
+
+
+
+{\ttfamily \#include $<$Health\+Sensor.\+h$>$}
+
+Inheritance diagram for Health\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_health_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_health_sensor_a42555330e272b94ce4ee79bc37577e5f}\label{class_health_sensor_a42555330e272b94ce4ee79bc37577e5f}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_health_sensor_ae16ed09ccefb50740b92c7d00bdccc91}\label{class_health_sensor_ae16ed09ccefb50740b92c7d00bdccc91}} 
+virtual void \hyperlink{class_health_sensor_ae16ed09ccefb50740b92c7d00bdccc91}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_sensor_af32a5cf0768634ae059eb1fa2c17de5a}\label{class_health_sensor_af32a5cf0768634ae059eb1fa2c17de5a}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_health_sensor_add169d53995a7d9e82a7cc393092ddef}\label{class_health_sensor_add169d53995a7d9e82a7cc393092ddef}} 
+virtual const char $\ast$ \hyperlink{class_health_sensor_add169d53995a7d9e82a7cc393092ddef}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_sensor_affc96525ef1cc307536bdae718595f73}\label{class_health_sensor_affc96525ef1cc307536bdae718595f73}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_health_sensor_ac7bccdd036a3c143c53026bc823937a6}\label{class_health_sensor_ac7bccdd036a3c143c53026bc823937a6}} 
+virtual bool \hyperlink{class_health_sensor_ac7bccdd036a3c143c53026bc823937a6}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_sensor_a65dd981941e06dc9944ab153d7f5b3fd}\label{class_health_sensor_a65dd981941e06dc9944ab153d7f5b3fd}} 
+virtual bool \hyperlink{class_health_sensor_a65dd981941e06dc9944ab153d7f5b3fd}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_sensor_a7724138ea388093eb823b5f738ce41c6}\label{class_health_sensor_a7724138ea388093eb823b5f738ce41c6}} 
+virtual void \hyperlink{class_health_sensor_a7724138ea388093eb823b5f738ce41c6}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_sensor_a9aa8075a5d410b33f754daea6987c14c}\label{class_health_sensor_a9aa8075a5d410b33f754daea6987c14c}} 
+virtual void \hyperlink{class_health_sensor_a9aa8075a5d410b33f754daea6987c14c}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_health_sensor_a662f2710e3b142bcbd92d59447dd93d6}\label{class_health_sensor_a662f2710e3b142bcbd92d59447dd93d6}} 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_health_sensor_a662f2710e3b142bcbd92d59447dd93d6}{m\+\_\+\+Sensor\+Readings}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_sensor_ab4f25d09f60c558fa22d24c3e47c1ac3}\label{class_health_sensor_ab4f25d09f60c558fa22d24c3e47c1ac3}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+\+Error\+Diagnosis}
+\item 
+\mbox{\Hypertarget{class_health_sensor_a8eb8cc4610c54c0bd433593cc49c4ebd}\label{class_health_sensor_a8eb8cc4610c54c0bd433593cc49c4ebd}} 
+int {\bfseries m\+\_\+\+Health\+Sensor\+Check\+Interval}
+\item 
+\mbox{\Hypertarget{class_health_sensor_a749550e4090aee3ca92ea997d97f9af8}\label{class_health_sensor_a749550e4090aee3ca92ea997d97f9af8}} 
+float {\bfseries m\+\_\+f\+Low\+Battery\+Threshold}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a Hardware Device sensor class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Health\+Sensor.\+h\item 
+src/sensors/Health\+Sensor.\+cpp\end{DoxyCompactItemize}

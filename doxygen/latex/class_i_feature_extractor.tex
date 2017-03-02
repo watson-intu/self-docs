@@ -1,0 +1,53 @@
+\hypertarget{class_i_feature_extractor}{}\section{I\+Feature\+Extractor Class Reference}
+\label{class_i_feature_extractor}\index{I\+Feature\+Extractor@{I\+Feature\+Extractor}}
+
+
+{\ttfamily \#include $<$I\+Feature\+Extractor.\+h$>$}
+
+Inheritance diagram for I\+Feature\+Extractor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=0.875000cm]{class_i_feature_extractor}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_feature_extractor_accaef91768ee64d51b4dc959f36e9f08}\label{class_i_feature_extractor_accaef91768ee64d51b4dc959f36e9f08}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_feature_extractor}{I\+Feature\+Extractor} $>$ \hyperlink{class_i_feature_extractor_accaef91768ee64d51b4dc959f36e9f08}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a2b42ce26f52c342dd815839af50f3402}\label{class_i_feature_extractor_a2b42ce26f52c342dd815839af50f3402}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_feature_extractor}{I\+Feature\+Extractor} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a5ee07e0f74adca366527106d16bb6c95}\label{class_i_feature_extractor_a5ee07e0f74adca366527106d16bb6c95}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a0a2542462222862fd47d6bcde5c6ff11}\label{class_i_feature_extractor_a0a2542462222862fd47d6bcde5c6ff11}} 
+\hyperlink{class_i_feature_extractor_a0a2542462222862fd47d6bcde5c6ff11}{I\+Feature\+Extractor} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a4275525b3455e2fdcc8443be67761b17}\label{class_i_feature_extractor_a4275525b3455e2fdcc8443be67761b17}} 
+virtual void \hyperlink{class_i_feature_extractor_a4275525b3455e2fdcc8443be67761b17}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a1f408a3f75af9d33aabd9dd89e153d1e}\label{class_i_feature_extractor_a1f408a3f75af9d33aabd9dd89e153d1e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a4e19c597534ff62d7b9ee71431d19cd8}\label{class_i_feature_extractor_a4e19c597534ff62d7b9ee71431d19cd8}} 
+virtual const char $\ast$ \hyperlink{class_i_feature_extractor_a4e19c597534ff62d7b9ee71431d19cd8}{Get\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a969a6d0dad7cddd176aee991b023a929}\label{class_i_feature_extractor_a969a6d0dad7cddd176aee991b023a929}} 
+virtual bool {\bfseries On\+Start} ()=0
+\item 
+\mbox{\Hypertarget{class_i_feature_extractor_a690fdffbb0c4f6f35d149c03b5d57a0c}\label{class_i_feature_extractor_a690fdffbb0c4f6f35d149c03b5d57a0c}} 
+virtual bool {\bfseries On\+Stop} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class manages all active classifier instances. This classifiers subscribe to sensors and add concepts to the \hyperlink{class_black_board}{Black\+Board} object contained by the \hyperlink{class_self_instance}{Self\+Instance}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/extractors/I\+Feature\+Extractor.\+h\end{DoxyCompactItemize}

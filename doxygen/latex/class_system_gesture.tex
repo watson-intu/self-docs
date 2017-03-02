@@ -1,0 +1,51 @@
+\hypertarget{class_system_gesture}{}\section{System\+Gesture Class Reference}
+\label{class_system_gesture}\index{System\+Gesture@{System\+Gesture}}
+
+
+This is the base class for any gesture that changes the system.  
+
+
+
+
+{\ttfamily \#include $<$System\+Gesture.\+h$>$}
+
+Inheritance diagram for System\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_system_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_system_gesture_a23c434744fb9da7882e2bc92bf115a78}\label{class_system_gesture_a23c434744fb9da7882e2bc92bf115a78}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_system_gesture_a7335c2cb71c51592454b89923229aa80}\label{class_system_gesture_a7335c2cb71c51592454b89923229aa80}} 
+\hyperlink{class_system_gesture_a7335c2cb71c51592454b89923229aa80}{System\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_system_gesture_ae65d14438d804bdb37928993aaac441a}\label{class_system_gesture_ae65d14438d804bdb37928993aaac441a}} 
+virtual void \hyperlink{class_system_gesture_ae65d14438d804bdb37928993aaac441a}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_system_gesture_a004764ee2f860645773f2957e5d0f3db}\label{class_system_gesture_a004764ee2f860645773f2957e5d0f3db}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_system_gesture_ae7b4fc979652c0bcf1094b10864a9002}\label{class_system_gesture_ae7b4fc979652c0bcf1094b10864a9002}} 
+virtual bool \hyperlink{class_system_gesture_ae7b4fc979652c0bcf1094b10864a9002}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_system_gesture_aef12d19ba3cf6ed58c54a44260e08509}\label{class_system_gesture_aef12d19ba3cf6ed58c54a44260e08509}} 
+std\+::string \hyperlink{class_system_gesture_aef12d19ba3cf6ed58c54a44260e08509}{m\+\_\+\+System\+Id}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for any gesture that changes the system. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/System\+Gesture.\+h\item 
+src/gestures/System\+Gesture.\+cpp\end{DoxyCompactItemize}

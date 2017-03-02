@@ -1,0 +1,67 @@
+\hypertarget{class_goal}{}\section{Goal Class Reference}
+\label{class_goal}\index{Goal@{Goal}}
+
+
+{\ttfamily \#include $<$Goal.\+h$>$}
+
+Inheritance diagram for Goal\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_goal}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_goal_a818ae12a4d1f28bd433dab2a830a390e}\label{class_goal_a818ae12a4d1f28bd433dab2a830a390e}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_goal}{Goal} $>$ \hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_goal_a2ed42e0bd1adf651fc2514b58af7ea4d}\label{class_goal_a2ed42e0bd1adf651fc2514b58af7ea4d}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_goal}{Goal} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_goal_a7d79f22200beca322bcd7d233377169c}\label{class_goal_a7d79f22200beca322bcd7d233377169c}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_goal_aef5013c9bf548e51178f58da869d508a}\label{class_goal_aef5013c9bf548e51178f58da869d508a}} 
+\hyperlink{class_goal_aef5013c9bf548e51178f58da869d508a}{Goal} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_goal_a30de5f1c4006f0158cba622816652c07}\label{class_goal_a30de5f1c4006f0158cba622816652c07}} 
+{\bfseries Goal} (const std\+::string \&a\+\_\+\+Name)
+\item 
+\mbox{\Hypertarget{class_goal_a75f87281e05255c70796ea73a17a9ef5}\label{class_goal_a75f87281e05255c70796ea73a17a9ef5}} 
+{\bfseries Goal} (const std\+::string \&a\+\_\+\+Name, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_goal_a2096d4ea4b752a795a96f50ebb699a16}\label{class_goal_a2096d4ea4b752a795a96f50ebb699a16}} 
+virtual void \hyperlink{class_goal_a2096d4ea4b752a795a96f50ebb699a16}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_goal_a813bc3e77a58fcbbc2516ea392e3b49e}\label{class_goal_a813bc3e77a58fcbbc2516ea392e3b49e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_goal_a64b7107f65dcc2342abf96fbfbe4840e}\label{class_goal_a64b7107f65dcc2342abf96fbfbe4840e}} 
+const std\+::string \& \hyperlink{class_goal_a64b7107f65dcc2342abf96fbfbe4840e}{Get\+Name} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_goal_aa4f2805affa84db1dd3e7b0e2806fecc}\label{class_goal_aa4f2805affa84db1dd3e7b0e2806fecc}} 
+const \hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Params} () const
+\item 
+\mbox{\Hypertarget{class_goal_aa12d8e975f52616e9f51fe7c1a4151ab}\label{class_goal_aa12d8e975f52616e9f51fe7c1a4151ab}} 
+\hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Params} ()
+\item 
+\mbox{\Hypertarget{class_goal_ab9ef63d5c7740d055a878897a3d75851}\label{class_goal_ab9ef63d5c7740d055a878897a3d75851}} 
+void \hyperlink{class_goal_ab9ef63d5c7740d055a878897a3d75851}{Set\+Name} (const std\+::string \&a\+\_\+\+Name)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_goal_a570e141b2be345955ca13e674abed787}\label{class_goal_a570e141b2be345955ca13e674abed787}} 
+void {\bfseries Set\+Params} (const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This object represents a goal that is added by a agent onto the Blackboard. Once a goal is added the Goal\+Manager will pass the goal onto the \hyperlink{class_plan_manager}{Plan\+Manager} and track a \hyperlink{class_plan_instance}{Plan\+Instance} object until the goal is completed or failed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Goal.\+h\item 
+src/blackboard/Goal.\+cpp\end{DoxyCompactItemize}

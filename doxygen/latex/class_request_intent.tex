@@ -1,0 +1,59 @@
+\hypertarget{class_request_intent}{}\section{Request\+Intent Class Reference}
+\label{class_request_intent}\index{Request\+Intent@{Request\+Intent}}
+Inheritance diagram for Request\+Intent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_request_intent}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_request_intent_1_1_request}{Request}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_request_intent_a60d08b72bbc1d35371b5d42b85215478}\label{class_request_intent_a60d08b72bbc1d35371b5d42b85215478}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_request_intent}{Request\+Intent} $>$ \hyperlink{class_request_intent_a60d08b72bbc1d35371b5d42b85215478}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_request_intent_ae0d51c0901019922485d49adc4b3c5ac}\label{class_request_intent_ae0d51c0901019922485d49adc4b3c5ac}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_request_intent}{Request\+Intent} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_request_intent_a4e406f546ed2ca83334f8ff5d14f8875}\label{class_request_intent_a4e406f546ed2ca83334f8ff5d14f8875}} 
+typedef std\+::vector$<$ \hyperlink{struct_request_intent_1_1_request}{Request} $>$ {\bfseries Request\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_request_intent_a8f4ddd4bafa932a05102605133e89b36}\label{class_request_intent_a8f4ddd4bafa932a05102605133e89b36}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_request_intent_ad6c5dad4872b07b4187601e9f88fccd4}\label{class_request_intent_ad6c5dad4872b07b4187601e9f88fccd4}} 
+virtual void \hyperlink{class_request_intent_ad6c5dad4872b07b4187601e9f88fccd4}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_request_intent_a36e0ca59871afe19fb6410f91af61515}\label{class_request_intent_a36e0ca59871afe19fb6410f91af61515}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_request_intent_a7cd5569cdbf69eb1522c47d790de2251}\label{class_request_intent_a7cd5569cdbf69eb1522c47d790de2251}} 
+virtual void \hyperlink{class_request_intent_a7cd5569cdbf69eb1522c47d790de2251}{Create} (const Json\+::\+Value \&a\+\_\+\+Intent, const Json\+::\+Value \&a\+\_\+\+Parse)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_intent}{I\+Intent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_request_intent_aa741e3071cf16b00f6fa3f343adb9251}\label{class_request_intent_aa741e3071cf16b00f6fa3f343adb9251}} 
+const std\+::string \& \hyperlink{class_request_intent_aa741e3071cf16b00f6fa3f343adb9251}{Get\+Text} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_request_intent_a3d9b12f73579b06e99792806117d6f0c}\label{class_request_intent_a3d9b12f73579b06e99792806117d6f0c}} 
+const Json\+::\+Value \& {\bfseries Get\+Tags} () const
+\item 
+\mbox{\Hypertarget{class_request_intent_aa0011f7def60256bfcbb72d86fc06bae}\label{class_request_intent_aa0011f7def60256bfcbb72d86fc06bae}} 
+const std\+::string \& {\bfseries Get\+Type} () const
+\item 
+\mbox{\Hypertarget{class_request_intent_a44be520ee04418428eb577bb4a306540}\label{class_request_intent_a44be520ee04418428eb577bb4a306540}} 
+const Request\+List \& {\bfseries Get\+Requests} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Request\+Intent.\+h\item 
+src/blackboard/Request\+Intent.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,87 @@
+\hypertarget{class_proxy_gesture}{}\section{Proxy\+Gesture Class Reference}
+\label{class_proxy_gesture}\index{Proxy\+Gesture@{Proxy\+Gesture}}
+
+
+This gesture acts as a proxy for a remote gesture to be executed via the topic system.  
+
+
+
+
+{\ttfamily \#include $<$Proxy\+Gesture.\+h$>$}
+
+Inheritance diagram for Proxy\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proxy_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_a5853df6f3567a9be2b0970422557e953}\label{class_proxy_gesture_a5853df6f3567a9be2b0970422557e953}} 
+typedef std\+::vector$<$ \hyperlink{class_i_gesture_a4455e468c21c82736bb3ec97c1c72158}{I\+Gesture\+::\+SP} $>$ \hyperlink{class_proxy_gesture_a5853df6f3567a9be2b0970422557e953}{Override\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_gesture_a76d456c0053c383b8b6fd70e3c5dd859}\label{class_proxy_gesture_a76d456c0053c383b8b6fd70e3c5dd859}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_proxy_gesture}{Proxy\+Gesture} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_aade8789f5d62ca217f278d4471ffd1e9}\label{class_proxy_gesture_aade8789f5d62ca217f278d4471ffd1e9}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_proxy_gesture}{Proxy\+Gesture} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_a124484879d950d1871f7140c4fbabe6b}\label{class_proxy_gesture_a124484879d950d1871f7140c4fbabe6b}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_aac76dd8efbba6a9379300e21eccf3188}\label{class_proxy_gesture_aac76dd8efbba6a9379300e21eccf3188}} 
+\hyperlink{class_proxy_gesture_aac76dd8efbba6a9379300e21eccf3188}{Proxy\+Gesture} (const std\+::string \&a\+\_\+\+Gesture\+Id, const std\+::string \&a\+\_\+\+Instance\+Id, bool a\+\_\+b\+Override, const std\+::string \&a\+\_\+\+Origin)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_gesture_ad203e53c96ea77d27ea3efb0ecd6e828}\label{class_proxy_gesture_ad203e53c96ea77d27ea3efb0ecd6e828}} 
+virtual void \hyperlink{class_proxy_gesture_ad203e53c96ea77d27ea3efb0ecd6e828}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_gesture_a6756332ee3bd028d9c9ba6cfd3533fb2}\label{class_proxy_gesture_a6756332ee3bd028d9c9ba6cfd3533fb2}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_a9afef5a1dbccf0bc71ce63b622862346}\label{class_proxy_gesture_a9afef5a1dbccf0bc71ce63b622862346}} 
+virtual bool \hyperlink{class_proxy_gesture_a9afef5a1dbccf0bc71ce63b622862346}{Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_gesture_a7f1b97467409ec54345cf9575ed1b010}\label{class_proxy_gesture_a7f1b97467409ec54345cf9575ed1b010}} 
+virtual bool \hyperlink{class_proxy_gesture_a7f1b97467409ec54345cf9575ed1b010}{Stop} ()
+\begin{DoxyCompactList}\small\item\em This is called when the \hyperlink{class_gesture_manager}{Gesture\+Manager} is stopped. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_proxy_gesture_a771b299c01bfaac71566e0c42353f3bf}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_a59d2fc62f2fac2a83efb97191de8799a}\label{class_proxy_gesture_a59d2fc62f2fac2a83efb97191de8799a}} 
+virtual bool \hyperlink{class_proxy_gesture_a59d2fc62f2fac2a83efb97191de8799a}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_gesture_a8ab917fe3907524d55712e69cebbfc6c}\label{class_proxy_gesture_a8ab917fe3907524d55712e69cebbfc6c}} 
+const std\+::string \& {\bfseries Get\+Instance\+Id} () const
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_acd784bc6ac96bac8a17f2c42224a9b7a}\label{class_proxy_gesture_acd784bc6ac96bac8a17f2c42224a9b7a}} 
+const std\+::string \& {\bfseries Get\+Origin} () const
+\item 
+\mbox{\Hypertarget{class_proxy_gesture_a77bfad90466d834ef5604499063fdaa2}\label{class_proxy_gesture_a77bfad90466d834ef5604499063fdaa2}} 
+void \hyperlink{class_proxy_gesture_a77bfad90466d834ef5604499063fdaa2}{On\+Execute\+Done} (bool a\+\_\+b\+Error)
+\begin{DoxyCompactList}\small\item\em Invoked by the \hyperlink{class_gesture_manager}{Gesture\+Manager} when a execute\+\_\+done event is received. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture acts as a proxy for a remote gesture to be executed via the topic system. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_proxy_gesture_a771b299c01bfaac71566e0c42353f3bf}\label{class_proxy_gesture_a771b299c01bfaac71566e0c42353f3bf}} 
+\index{Proxy\+Gesture@{Proxy\+Gesture}!Execute@{Execute}}
+\index{Execute@{Execute}!Proxy\+Gesture@{Proxy\+Gesture}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily bool Proxy\+Gesture\+::\+Execute (\begin{DoxyParamCaption}\item[{Gesture\+Delegate}]{a\+\_\+\+Callback,  }\item[{const \hyperlink{class_params_map}{Params\+Map} \&}]{a\+\_\+\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function will be called by a Skill object, this object should invoke the provided callback when this gesture is done. 
+
+Reimplemented from \hyperlink{class_i_gesture_aa48e38eda852843cab78c22dabfe7371}{I\+Gesture}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Proxy\+Gesture.\+h\item 
+src/gestures/Proxy\+Gesture.\+cpp\end{DoxyCompactItemize}

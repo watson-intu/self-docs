@@ -1,0 +1,66 @@
+\hypertarget{class_attention}{}\section{Attention Class Reference}
+\label{class_attention}\index{Attention@{Attention}}
+
+
+This object is placed on the blackboard when we need self to say anything.  
+
+
+
+
+{\ttfamily \#include $<$Attention.\+h$>$}
+
+Inheritance diagram for Attention\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_attention}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_attention_ac152b0a7c507c13e8996fc7f2d5e9c31}\label{class_attention_ac152b0a7c507c13e8996fc7f2d5e9c31}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_attention}{Attention} $>$ \hyperlink{class_attention_ac152b0a7c507c13e8996fc7f2d5e9c31}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_attention_a3f620dc06985c6e3f447ea904da097a5}\label{class_attention_a3f620dc06985c6e3f447ea904da097a5}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_attention}{Attention} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_attention_a01d452288b56763edcfbeab616d0d4bb}\label{class_attention_a01d452288b56763edcfbeab616d0d4bb}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_attention_a441783dea3735b46e3c3b2f59f3aa49f}\label{class_attention_a441783dea3735b46e3c3b2f59f3aa49f}} 
+virtual void \hyperlink{class_attention_a441783dea3735b46e3c3b2f59f3aa49f}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_attention_a61c66464d5611b07d758b4cc6b44edf1}\label{class_attention_a61c66464d5611b07d758b4cc6b44edf1}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_attention_a2774a77497bb424a4e1e6819f5716ce9}\label{class_attention_a2774a77497bb424a4e1e6819f5716ce9}} 
+\hyperlink{class_attention_a2774a77497bb424a4e1e6819f5716ce9}{Attention} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_attention_a4997f530ad9e16dce515de5936a4ea33}\label{class_attention_a4997f530ad9e16dce515de5936a4ea33}} 
+{\bfseries Attention} (double a\+\_\+\+Min\+Intent\+Confidence, double a\+\_\+\+Min\+Miss\+Node\+Confidence)
+\item 
+\mbox{\Hypertarget{class_attention_a281e498ba8e0c9f40964833d357be02d}\label{class_attention_a281e498ba8e0c9f40964833d357be02d}} 
+double \hyperlink{class_attention_a281e498ba8e0c9f40964833d357be02d}{Get\+Min\+Intent\+Confidence} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_attention_aac64fc991f1fdf46900c39f2f0788f7e}\label{class_attention_aac64fc991f1fdf46900c39f2f0788f7e}} 
+void {\bfseries Set\+Min\+Intent\+Confidence} (double a\+\_\+\+Min\+Intent\+Confidence)
+\item 
+\mbox{\Hypertarget{class_attention_a34a86bb78a2b6dc1ee33fa2d0d290d8b}\label{class_attention_a34a86bb78a2b6dc1ee33fa2d0d290d8b}} 
+double {\bfseries Get\+Min\+Miss\+Node\+Confidence} () const
+\item 
+\mbox{\Hypertarget{class_attention_ad6ebd549f9698013376e208b416890eb}\label{class_attention_ad6ebd549f9698013376e208b416890eb}} 
+void {\bfseries Set\+Min\+Miss\+Node\+Confidence} (double a\+\_\+\+Min\+Miss\+Node\+Confidence)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This object is placed on the blackboard when we need self to say anything. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Attention.\+h\item 
+src/blackboard/Attention.\+cpp\end{DoxyCompactItemize}

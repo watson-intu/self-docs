@@ -1,0 +1,90 @@
+\hypertarget{class_plan_manager}{}\section{Plan\+Manager Class Reference}
+\label{class_plan_manager}\index{Plan\+Manager@{Plan\+Manager}}
+
+
+This manager manages all \hyperlink{class_i_skill}{I\+Skill} instances including the saving and loading of skills from local storage.  
+
+
+
+
+{\ttfamily \#include $<$Plan\+Manager.\+h$>$}
+
+Inheritance diagram for Plan\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plan_manager}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_manager_a2b39636cced4cfd897b38adc822deaf4}\label{class_plan_manager_a2b39636cced4cfd897b38adc822deaf4}} 
+typedef std\+::list$<$ std\+::string $>$ \hyperlink{class_plan_manager_a2b39636cced4cfd897b38adc822deaf4}{Plan\+Files}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_a7528c9006b807eddf0d4b7b11caca1d4}\label{class_plan_manager_a7528c9006b807eddf0d4b7b11caca1d4}} 
+typedef std\+::map$<$ std\+::string, Plan\+::\+SP $>$ {\bfseries Plan\+Map}
+\item 
+\mbox{\Hypertarget{class_plan_manager_a6d41a8d06e6eb5952743d48b3dad6b86}\label{class_plan_manager_a6d41a8d06e6eb5952743d48b3dad6b86}} 
+typedef Delegate$<$ Plan\+Instance\+::\+SP $>$ {\bfseries State\+Callback}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_manager_a5a60e702c521f199f802482101a6b3de}\label{class_plan_manager_a5a60e702c521f199f802482101a6b3de}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_plan_manager_a4ca8ee77bcfd4b0fabecfca2cea0afcb}\label{class_plan_manager_a4ca8ee77bcfd4b0fabecfca2cea0afcb}} 
+\hyperlink{class_plan_manager_a4ca8ee77bcfd4b0fabecfca2cea0afcb}{Plan\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_a897eaed2a85ff87f574f8672a10a0e8c}\label{class_plan_manager_a897eaed2a85ff87f574f8672a10a0e8c}} 
+virtual void \hyperlink{class_plan_manager_a897eaed2a85ff87f574f8672a10a0e8c}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_a09d4f5cf5d2369705d80bba33cd9af84}\label{class_plan_manager_a09d4f5cf5d2369705d80bba33cd9af84}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_plan_manager_ac26f5359b90f876f8f55bc0e90f936c9}\label{class_plan_manager_ac26f5359b90f876f8f55bc0e90f936c9}} 
+\hyperlink{class_plan}{Plan} $\ast$ \hyperlink{class_plan_manager_ac26f5359b90f876f8f55bc0e90f936c9}{Find\+Plan} (const std\+::string \&a\+\_\+\+ID) const
+\begin{DoxyCompactList}\small\item\em Find a plan by it\textquotesingle{}s unique ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_a04194595729eafc14466fdc305342a9e}\label{class_plan_manager_a04194595729eafc14466fdc305342a9e}} 
+bool \hyperlink{class_plan_manager_a04194595729eafc14466fdc305342a9e}{Start} (const \hyperlink{class_plan_manager_a2b39636cced4cfd897b38adc822deaf4}{Plan\+Files} \&a\+\_\+\+Plan\+Files)
+\begin{DoxyCompactList}\small\item\em Start this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_af9a35cd7a12a5d97e5716326a8a46285}\label{class_plan_manager_af9a35cd7a12a5d97e5716326a8a46285}} 
+bool \hyperlink{class_plan_manager_af9a35cd7a12a5d97e5716326a8a46285}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_a857f99e0cc17c4a5206d509dfb66bfa2}\label{class_plan_manager_a857f99e0cc17c4a5206d509dfb66bfa2}} 
+Plan\+::\+SP \hyperlink{class_plan_manager_a857f99e0cc17c4a5206d509dfb66bfa2}{Select\+Plan} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+p\+Goal)
+\begin{DoxyCompactList}\small\item\em Find a local plan based on the ability to complete the provided goal. \end{DoxyCompactList}\item 
+bool \hyperlink{class_plan_manager_ad53eba96fe9bf9551eec3281d9bcb6db}{Add\+Plan} (const Plan\+::\+SP \&a\+\_\+sp\+Plan, bool a\+\_\+b\+Add\+Remote=true)
+\item 
+\mbox{\Hypertarget{class_plan_manager_a0aabef93b6da1a6bd3dafdad26353827}\label{class_plan_manager_a0aabef93b6da1a6bd3dafdad26353827}} 
+bool \hyperlink{class_plan_manager_a0aabef93b6da1a6bd3dafdad26353827}{Delete\+Plan} (const Plan\+::\+SP \&a\+\_\+sp\+Plan)
+\begin{DoxyCompactList}\small\item\em delete a plan object by it\textquotesingle{}s pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_manager_affeec742082c496f258068a1aebf594d}\label{class_plan_manager_affeec742082c496f258068a1aebf594d}} 
+bool \hyperlink{class_plan_manager_affeec742082c496f258068a1aebf594d}{Delete\+Plan} (const std\+::string \&a\+\_\+\+ID)
+\begin{DoxyCompactList}\small\item\em delete a plan by it\textquotesingle{}s ID \end{DoxyCompactList}\item 
+Plan\+Instance\+::\+SP \hyperlink{class_plan_manager_a6208be809c2d01d556dfa4f56aa5e1b6}{Execute\+Plan} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+p\+Goal, State\+Callback a\+\_\+\+Callback)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This manager manages all \hyperlink{class_i_skill}{I\+Skill} instances including the saving and loading of skills from local storage. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_plan_manager_ad53eba96fe9bf9551eec3281d9bcb6db}\label{class_plan_manager_ad53eba96fe9bf9551eec3281d9bcb6db}} 
+\index{Plan\+Manager@{Plan\+Manager}!Add\+Plan@{Add\+Plan}}
+\index{Add\+Plan@{Add\+Plan}!Plan\+Manager@{Plan\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Plan()}{AddPlan()}}
+{\footnotesize\ttfamily bool Plan\+Manager\+::\+Add\+Plan (\begin{DoxyParamCaption}\item[{const Plan\+::\+SP \&}]{a\+\_\+sp\+Plan,  }\item[{bool}]{a\+\_\+b\+Add\+Remote = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Add a new plan into this manager, if a\+\_\+b\+Add\+Remote is true then the plan is uploaded to the remote server as well. \mbox{\Hypertarget{class_plan_manager_a6208be809c2d01d556dfa4f56aa5e1b6}\label{class_plan_manager_a6208be809c2d01d556dfa4f56aa5e1b6}} 
+\index{Plan\+Manager@{Plan\+Manager}!Execute\+Plan@{Execute\+Plan}}
+\index{Execute\+Plan@{Execute\+Plan}!Plan\+Manager@{Plan\+Manager}}
+\subsubsection{\texorpdfstring{Execute\+Plan()}{ExecutePlan()}}
+{\footnotesize\ttfamily Plan\+Instance\+::\+SP Plan\+Manager\+::\+Execute\+Plan (\begin{DoxyParamCaption}\item[{\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP}}]{a\+\_\+p\+Goal,  }\item[{State\+Callback}]{a\+\_\+\+Callback }\end{DoxyParamCaption})}
+
+The main interface for executing a plan to complete the provided goal. This routine may generate a new plan to complete the given goal if no plans are found that are suitable for completing the given goal. The callback will be invoked each time the \hyperlink{class_plan_instance}{Plan\+Instance} state is changed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/Plan\+Manager.\+h\item 
+src/planning/Plan\+Manager.\+cpp\end{DoxyCompactItemize}

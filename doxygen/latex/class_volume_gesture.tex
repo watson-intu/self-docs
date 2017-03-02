@@ -1,0 +1,63 @@
+\hypertarget{class_volume_gesture}{}\section{Volume\+Gesture Class Reference}
+\label{class_volume_gesture}\index{Volume\+Gesture@{Volume\+Gesture}}
+
+
+This is the base class for any gesture that changes the volume.  
+
+
+
+
+{\ttfamily \#include $<$Volume\+Gesture.\+h$>$}
+
+Inheritance diagram for Volume\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_volume_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_volume_gesture_a7890f3c16153593699bf39fb6493059f}\label{class_volume_gesture_a7890f3c16153593699bf39fb6493059f}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_volume_gesture_a765725d9268144e1d2c07e1ac66d76ec}\label{class_volume_gesture_a765725d9268144e1d2c07e1ac66d76ec}} 
+\hyperlink{class_volume_gesture_a765725d9268144e1d2c07e1ac66d76ec}{Volume\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_volume_gesture_a66bad1ed769d1bada10a9fe8255602f0}\label{class_volume_gesture_a66bad1ed769d1bada10a9fe8255602f0}} 
+{\bfseries Volume\+Gesture} (const std\+::string \&a\+\_\+\+Gesture\+Id)
+\item 
+\mbox{\Hypertarget{class_volume_gesture_abd174855cdbc906bd3a790e10793802f}\label{class_volume_gesture_abd174855cdbc906bd3a790e10793802f}} 
+virtual void \hyperlink{class_volume_gesture_abd174855cdbc906bd3a790e10793802f}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_volume_gesture_ae36a593672a2da32ef6aea4923f0496e}\label{class_volume_gesture_ae36a593672a2da32ef6aea4923f0496e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_volume_gesture_afa3847c6b25e72f1471501d86a110895}\label{class_volume_gesture_afa3847c6b25e72f1471501d86a110895}} 
+virtual bool \hyperlink{class_volume_gesture_afa3847c6b25e72f1471501d86a110895}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_volume_gesture_a6568785ada12a4bf742294be6b01e6a9}\label{class_volume_gesture_a6568785ada12a4bf742294be6b01e6a9}} 
+void \hyperlink{class_volume_gesture_a6568785ada12a4bf742294be6b01e6a9}{Set\+Change} (float a\+\_\+f\+Change)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_volume_gesture_a8beb02a1450429d36cee2170c3c5b43b}\label{class_volume_gesture_a8beb02a1450429d36cee2170c3c5b43b}} 
+void {\bfseries Set\+Target\+Volume} (float a\+\_\+f\+Target\+Volume)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_volume_gesture_adea5501a91f39da471344f8efafac3ba}\label{class_volume_gesture_adea5501a91f39da471344f8efafac3ba}} 
+float \hyperlink{class_volume_gesture_adea5501a91f39da471344f8efafac3ba}{m\+\_\+f\+Change}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_volume_gesture_a0694a5b06750cea8bb6a566452658eb0}\label{class_volume_gesture_a0694a5b06750cea8bb6a566452658eb0}} 
+float {\bfseries m\+\_\+f\+Target\+Volume}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for any gesture that changes the volume. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Volume\+Gesture.\+h\item 
+src/gestures/Volume\+Gesture.\+cpp\end{DoxyCompactItemize}

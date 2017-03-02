@@ -1,0 +1,69 @@
+\hypertarget{class_email_gesture}{}\section{Email\+Gesture Class Reference}
+\label{class_email_gesture}\index{Email\+Gesture@{Email\+Gesture}}
+
+
+This gesture can use the S\+MS service to send a text message.  
+
+
+
+
+{\ttfamily \#include $<$Email\+Gesture.\+h$>$}
+
+Inheritance diagram for Email\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_email_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_email_gesture_ae05c88462a443fed845c9e36b170db93}\label{class_email_gesture_ae05c88462a443fed845c9e36b170db93}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_email_gesture_aaa22c0fd82be56f1689da3690bcdc1cb}\label{class_email_gesture_aaa22c0fd82be56f1689da3690bcdc1cb}} 
+\hyperlink{class_email_gesture_aaa22c0fd82be56f1689da3690bcdc1cb}{Email\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_email_gesture_aa0f8b393736ada60de4aca24f4bfd9f5}\label{class_email_gesture_aa0f8b393736ada60de4aca24f4bfd9f5}} 
+virtual void \hyperlink{class_email_gesture_aa0f8b393736ada60de4aca24f4bfd9f5}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_email_gesture_a40485b74138b09f1c6255ae85e4534ac}\label{class_email_gesture_a40485b74138b09f1c6255ae85e4534ac}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_email_gesture_a18514859abb88f7f9d3912ecf124300f}\label{class_email_gesture_a18514859abb88f7f9d3912ecf124300f}} 
+virtual bool \hyperlink{class_email_gesture_a18514859abb88f7f9d3912ecf124300f}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_email_gesture_a0cab4ae66bb888460d9a5fd9505df490}\label{class_email_gesture_a0cab4ae66bb888460d9a5fd9505df490}} 
+virtual bool \hyperlink{class_email_gesture_a0cab4ae66bb888460d9a5fd9505df490}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_email_gesture_a2022ae28deecc2b3cf5ebfd5bdb5b6e2}\label{class_email_gesture_a2022ae28deecc2b3cf5ebfd5bdb5b6e2}} 
+void {\bfseries Send} ()
+\item 
+\mbox{\Hypertarget{class_email_gesture_a7bae857915df2b0be2bccec653424584}\label{class_email_gesture_a7bae857915df2b0be2bccec653424584}} 
+void {\bfseries On\+Sent} (I\+Service\+::\+Request $\ast$a\+\_\+p\+Request)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_email_gesture_a997e18da9492231149945da5d060f96a}\label{class_email_gesture_a997e18da9492231149945da5d060f96a}} 
+std\+::string \hyperlink{class_email_gesture_a997e18da9492231149945da5d060f96a}{m\+\_\+\+To}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_email_gesture_a6ed94a30670dc081a4beeab638bc2844}\label{class_email_gesture_a6ed94a30670dc081a4beeab638bc2844}} 
+std\+::string {\bfseries m\+\_\+\+Subject}
+\item 
+\mbox{\Hypertarget{class_email_gesture_a054b73a0c0aa72fe3c1d057d80242132}\label{class_email_gesture_a054b73a0c0aa72fe3c1d057d80242132}} 
+std\+::string {\bfseries m\+\_\+\+Message}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture can use the S\+MS service to send a text message. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Email\+Gesture.\+h\item 
+src/gestures/Email\+Gesture.\+cpp\end{DoxyCompactItemize}

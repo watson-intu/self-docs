@@ -1,0 +1,51 @@
+\hypertarget{class_speech_gesture}{}\section{Speech\+Gesture Class Reference}
+\label{class_speech_gesture}\index{Speech\+Gesture@{Speech\+Gesture}}
+
+
+This gesture wraps the local speech sythesis so the self can speak.  
+
+
+
+
+{\ttfamily \#include $<$Speech\+Gesture.\+h$>$}
+
+Inheritance diagram for Speech\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_speech_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_speech_gesture_a7a64c6958da22c1eaa2f6793f1618358}\label{class_speech_gesture_a7a64c6958da22c1eaa2f6793f1618358}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_speech_gesture_ad5da1d2262be9d30e2fe32fdd9972b3a}\label{class_speech_gesture_ad5da1d2262be9d30e2fe32fdd9972b3a}} 
+\hyperlink{class_speech_gesture_ad5da1d2262be9d30e2fe32fdd9972b3a}{Speech\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_speech_gesture_a11e7ca92445c22479429a470d2e1395d}\label{class_speech_gesture_a11e7ca92445c22479429a470d2e1395d}} 
+{\bfseries Speech\+Gesture} (const std\+::string \&a\+\_\+gesture\+Id)
+\item 
+\mbox{\Hypertarget{class_speech_gesture_a329ce19bebb4dbfc026e2670c074df41}\label{class_speech_gesture_a329ce19bebb4dbfc026e2670c074df41}} 
+virtual void \hyperlink{class_speech_gesture_a329ce19bebb4dbfc026e2670c074df41}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_speech_gesture_a733c84aeee76f7f4ffc9de241183c14b}\label{class_speech_gesture_a733c84aeee76f7f4ffc9de241183c14b}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_speech_gesture_a353c573afdea4713e12e88de207b67ec}\label{class_speech_gesture_a353c573afdea4713e12e88de207b67ec}} 
+virtual bool \hyperlink{class_speech_gesture_a353c573afdea4713e12e88de207b67ec}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_speech_gesture_acf657cf5f390755653e18e9f7819ecb3}\label{class_speech_gesture_acf657cf5f390755653e18e9f7819ecb3}} 
+virtual bool \hyperlink{class_speech_gesture_acf657cf5f390755653e18e9f7819ecb3}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture wraps the local speech sythesis so the self can speak. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Speech\+Gesture.\+h\item 
+src/gestures/Speech\+Gesture.\+cpp\end{DoxyCompactItemize}

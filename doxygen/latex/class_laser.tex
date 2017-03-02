@@ -1,0 +1,57 @@
+\hypertarget{class_laser}{}\section{Laser Class Reference}
+\label{class_laser}\index{Laser@{Laser}}
+
+
+Base class for a \hyperlink{class_laser}{Laser} Sensor class.  
+
+
+
+
+{\ttfamily \#include $<$Laser.\+h$>$}
+
+Inheritance diagram for Laser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_laser}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_laser_ad6b0a8910200a1eafd24a52cef254a7e}\label{class_laser_ad6b0a8910200a1eafd24a52cef254a7e}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_laser_a546cecc614056a8c0e737f22f7ba256a}\label{class_laser_a546cecc614056a8c0e737f22f7ba256a}} 
+virtual void \hyperlink{class_laser_a546cecc614056a8c0e737f22f7ba256a}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialiazable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_laser_ae07839b0aa38285f2000cfcc6f2c1199}\label{class_laser_ae07839b0aa38285f2000cfcc6f2c1199}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_laser_afd15243de85b58b83f57f9b58919eae5}\label{class_laser_afd15243de85b58b83f57f9b58919eae5}} 
+virtual const char $\ast$ \hyperlink{class_laser_afd15243de85b58b83f57f9b58919eae5}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_laser_abe8a25f833da3ef40facb5bb2f8e8453}\label{class_laser_abe8a25f833da3ef40facb5bb2f8e8453}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_laser_a974a852811068a542c37f8d9dd1f257f}\label{class_laser_a974a852811068a542c37f8d9dd1f257f}} 
+virtual bool \hyperlink{class_laser_a974a852811068a542c37f8d9dd1f257f}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_laser_a58df3d88df4d4cb7c204b2b173eb9f0d}\label{class_laser_a58df3d88df4d4cb7c204b2b173eb9f0d}} 
+virtual bool \hyperlink{class_laser_a58df3d88df4d4cb7c204b2b173eb9f0d}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_laser_a167caa7397e04b6e4046a8978d6e435e}\label{class_laser_a167caa7397e04b6e4046a8978d6e435e}} 
+virtual void \hyperlink{class_laser_a167caa7397e04b6e4046a8978d6e435e}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_laser_a5cc939b5cab69c8861351f41b8a9f4fc}\label{class_laser_a5cc939b5cab69c8861351f41b8a9f4fc}} 
+virtual void \hyperlink{class_laser_a5cc939b5cab69c8861351f41b8a9f4fc}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a \hyperlink{class_laser}{Laser} Sensor class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Laser.\+h\item 
+src/sensors/Laser.\+cpp\end{DoxyCompactItemize}

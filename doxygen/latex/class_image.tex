@@ -1,0 +1,57 @@
+\hypertarget{class_image}{}\section{Image Class Reference}
+\label{class_image}\index{Image@{Image}}
+
+
+An image object taken from camera sensor.  
+
+
+
+
+{\ttfamily \#include $<$Image.\+h$>$}
+
+Inheritance diagram for Image\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_image}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_a441de502d70eb0b0a61de6fe6ad6a5fd}\label{class_image_a441de502d70eb0b0a61de6fe6ad6a5fd}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_image}{Image} $>$ \hyperlink{class_image_a441de502d70eb0b0a61de6fe6ad6a5fd}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_a07fed06f62da98370fdf5037109fb862}\label{class_image_a07fed06f62da98370fdf5037109fb862}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_image}{Image} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_image_a0971cdf1a4e64ab0ccef3452151eb5c4}\label{class_image_a0971cdf1a4e64ab0ccef3452151eb5c4}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_image_a58edd1c45b4faeb5f789b0d036d02313}\label{class_image_a58edd1c45b4faeb5f789b0d036d02313}} 
+\hyperlink{class_image_a58edd1c45b4faeb5f789b0d036d02313}{Image} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_aa9754d698c24f7f4d27716d08d973f61}\label{class_image_aa9754d698c24f7f4d27716d08d973f61}} 
+const std\+::string \& \hyperlink{class_image_aa9754d698c24f7f4d27716d08d973f61}{Get\+Content} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_ae9538432309c8626ac03e1a7d4425eb4}\label{class_image_ae9538432309c8626ac03e1a7d4425eb4}} 
+void {\bfseries Set\+Content} (const std\+::string \&a\+\_\+\+Content)
+\item 
+\mbox{\Hypertarget{class_image_ab3ad88206f29548e6c6ff643a6059b80}\label{class_image_ab3ad88206f29548e6c6ff643a6059b80}} 
+virtual void \hyperlink{class_image_ab3ad88206f29548e6c6ff643a6059b80}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_image_a880edf876477f740ef1a502b08fa164e}\label{class_image_a880edf876477f740ef1a502b08fa164e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An image object taken from camera sensor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Image.\+h\item 
+src/blackboard/Image.\+cpp\end{DoxyCompactItemize}

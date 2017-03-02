@@ -1,0 +1,66 @@
+\hypertarget{class_health}{}\section{Health Class Reference}
+\label{class_health}\index{Health@{Health}}
+Inheritance diagram for Health\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_health}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_health_ae99ee603426761f4a2c1372c78a4275a}\label{class_health_ae99ee603426761f4a2c1372c78a4275a}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_health}{Health} $>$ \hyperlink{class_health_ae99ee603426761f4a2c1372c78a4275a}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_a603efc632d2cc2aa2a8abf8aaa03077e}\label{class_health_a603efc632d2cc2aa2a8abf8aaa03077e}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_health}{Health} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_health_a2d05e69a50aa98de45b0497eebddd8f8}\label{class_health_a2d05e69a50aa98de45b0497eebddd8f8}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_health_a80c08e07b1f79985062f600992ab78a2}\label{class_health_a80c08e07b1f79985062f600992ab78a2}} 
+virtual void \hyperlink{class_health_a80c08e07b1f79985062f600992ab78a2}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_afb68315c682ecd5a05e1a8c68f6391fd}\label{class_health_afb68315c682ecd5a05e1a8c68f6391fd}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_health_acd41f307cc9a942c3335480420c0ace7}\label{class_health_acd41f307cc9a942c3335480420c0ace7}} 
+\hyperlink{class_health_acd41f307cc9a942c3335480420c0ace7}{Health} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_a8c140714144e6b9142ea1d95f982c7e8}\label{class_health_a8c140714144e6b9142ea1d95f982c7e8}} 
+{\bfseries Health} (const std\+::string \&a\+\_\+\+Health\+Name, const std\+::string \&a\+\_\+\+Health\+State, const float a\+\_\+f\+Health\+Value, bool a\+\_\+b\+Error, bool a\+\_\+b\+Trigger\+Goal)
+\item 
+\mbox{\Hypertarget{class_health_ac72804b9ebff0dff725d23bd98695bbf}\label{class_health_ac72804b9ebff0dff725d23bd98695bbf}} 
+{\bfseries Health} (const std\+::string \&a\+\_\+\+Health\+Name, bool a\+\_\+b\+Error, bool a\+\_\+b\+Trigger\+Goal)
+\item 
+\mbox{\Hypertarget{class_health_a41938437411f1f870b701af07da4d5d4}\label{class_health_a41938437411f1f870b701af07da4d5d4}} 
+const std\+::string \& \hyperlink{class_health_a41938437411f1f870b701af07da4d5d4}{Get\+Health\+Name} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_health_a2958b97f36daee3874d223c457298688}\label{class_health_a2958b97f36daee3874d223c457298688}} 
+const std\+::string \& {\bfseries Get\+Error\+Name} () const
+\item 
+\mbox{\Hypertarget{class_health_a097530321958cc6d9382f405abeee43b}\label{class_health_a097530321958cc6d9382f405abeee43b}} 
+bool {\bfseries Is\+Error} () const
+\item 
+\mbox{\Hypertarget{class_health_a2b1700de542c791c707bd12be7f491e3}\label{class_health_a2b1700de542c791c707bd12be7f491e3}} 
+bool {\bfseries Is\+Trigger\+Goal} () const
+\item 
+\mbox{\Hypertarget{class_health_a7268fea88a2d3ce66ce9fc8a9b24c58c}\label{class_health_a7268fea88a2d3ce66ce9fc8a9b24c58c}} 
+float {\bfseries Get\+Health\+Value} () const
+\item 
+\mbox{\Hypertarget{class_health_a5a3c5f86a9fdc804e1b3dd813ecb302c}\label{class_health_a5a3c5f86a9fdc804e1b3dd813ecb302c}} 
+void {\bfseries Set\+Health\+Name} (const std\+::string \&a\+\_\+\+Health\+Name)
+\item 
+\mbox{\Hypertarget{class_health_a41cc5338bbfbd2aad32a38cc0cc0c9f5}\label{class_health_a41cc5338bbfbd2aad32a38cc0cc0c9f5}} 
+void {\bfseries Set\+Error\+Name} (const std\+::string \&a\+\_\+\+Error\+Name)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Health.\+h\item 
+src/blackboard/Health.\+cpp\end{DoxyCompactItemize}

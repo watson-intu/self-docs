@@ -1,0 +1,96 @@
+\hypertarget{class_web_socket_gesture}{}\section{Web\+Socket\+Gesture Class Reference}
+\label{class_web_socket_gesture}\index{Web\+Socket\+Gesture@{Web\+Socket\+Gesture}}
+
+
+This gesture can send messages over a web socket.  
+
+
+
+
+{\ttfamily \#include $<$Web\+Socket\+Gesture.\+h$>$}
+
+Inheritance diagram for Web\+Socket\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_web_socket_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a0cc08ce65d72a224166d68550a7979ed}\label{class_web_socket_gesture_a0cc08ce65d72a224166d68550a7979ed}} 
+typedef I\+Web\+Client\+::\+Headers \hyperlink{class_web_socket_gesture_a0cc08ce65d72a224166d68550a7979ed}{Headers}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a6c73dc4db74600f974b2378c9bc7949b}\label{class_web_socket_gesture_a6c73dc4db74600f974b2378c9bc7949b}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a2f02711e725da18c2e2d3fc305a26e57}\label{class_web_socket_gesture_a2f02711e725da18c2e2d3fc305a26e57}} 
+\hyperlink{class_web_socket_gesture_a2f02711e725da18c2e2d3fc305a26e57}{Web\+Socket\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_web_socket_gesture_afff9bc7e818b8fde0cdf37100430d5b4}\label{class_web_socket_gesture_afff9bc7e818b8fde0cdf37100430d5b4}} 
+virtual void \hyperlink{class_web_socket_gesture_afff9bc7e818b8fde0cdf37100430d5b4}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_web_socket_gesture_ac47e05d2eed7b42a782e36d30615c2ed}\label{class_web_socket_gesture_ac47e05d2eed7b42a782e36d30615c2ed}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_ad783a6eef384b037b5272e41d86e1305}\label{class_web_socket_gesture_ad783a6eef384b037b5272e41d86e1305}} 
+virtual bool \hyperlink{class_web_socket_gesture_ad783a6eef384b037b5272e41d86e1305}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a22141af446c953234867ad6a6de996cf}\label{class_web_socket_gesture_a22141af446c953234867ad6a6de996cf}} 
+virtual bool \hyperlink{class_web_socket_gesture_a22141af446c953234867ad6a6de996cf}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a3b17656d09f94a42fda866927bad204b}\label{class_web_socket_gesture_a3b17656d09f94a42fda866927bad204b}} 
+void \hyperlink{class_web_socket_gesture_a3b17656d09f94a42fda866927bad204b}{Set\+U\+RL} (const std\+::string \&a\+\_\+\+U\+RL)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a4a4375e434499108b1c9f53b64ce60e3}\label{class_web_socket_gesture_a4a4375e434499108b1c9f53b64ce60e3}} 
+void {\bfseries Set\+Headers} (const \hyperlink{class_web_socket_gesture_a0cc08ce65d72a224166d68550a7979ed}{Headers} \&a\+\_\+\+Headers)
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_aa4e55225c9580a0cf22cb01c54b56eea}\label{class_web_socket_gesture_aa4e55225c9580a0cf22cb01c54b56eea}} 
+void {\bfseries Set\+Message} (const std\+::string \&a\+\_\+\+Message)
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a1ba04a96d95206bbb2edb535bd8425fa}\label{class_web_socket_gesture_a1ba04a96d95206bbb2edb535bd8425fa}} 
+void {\bfseries Set\+User\+Name} (const std\+::string \&a\+\_\+\+User\+Name)
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a8150f54c04dd97765576a143cd251acc}\label{class_web_socket_gesture_a8150f54c04dd97765576a143cd251acc}} 
+void {\bfseries Set\+Password} (const std\+::string \&a\+\_\+\+Password)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a0ec4375901d611be78bbf9c463a649ee}\label{class_web_socket_gesture_a0ec4375901d611be78bbf9c463a649ee}} 
+void {\bfseries Send} ()
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a4328bfda5f07a81b6296019aecd80291}\label{class_web_socket_gesture_a4328bfda5f07a81b6296019aecd80291}} 
+void {\bfseries On\+Gesture\+Finished} (bool a\+\_\+\+Response)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_aff99611e94cb8fde6967b4decd840ef2}\label{class_web_socket_gesture_aff99611e94cb8fde6967b4decd840ef2}} 
+std\+::string \hyperlink{class_web_socket_gesture_aff99611e94cb8fde6967b4decd840ef2}{m\+\_\+\+U\+RL}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a2775b41dc305ede82e5a672307aecdf3}\label{class_web_socket_gesture_a2775b41dc305ede82e5a672307aecdf3}} 
+std\+::string {\bfseries m\+\_\+\+Message}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a4243be951130256e29d5d4765f8cb193}\label{class_web_socket_gesture_a4243be951130256e29d5d4765f8cb193}} 
+\hyperlink{class_web_socket_gesture_a0cc08ce65d72a224166d68550a7979ed}{Headers} {\bfseries m\+\_\+\+Headers}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_ae7ced1e40a38dad835031297d6be88b8}\label{class_web_socket_gesture_ae7ced1e40a38dad835031297d6be88b8}} 
+std\+::string {\bfseries m\+\_\+\+User\+Name}
+\item 
+\mbox{\Hypertarget{class_web_socket_gesture_a39e543db8b337fa75d37b918123e81f8}\label{class_web_socket_gesture_a39e543db8b337fa75d37b918123e81f8}} 
+std\+::string {\bfseries m\+\_\+\+Password}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture can send messages over a web socket. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Web\+Socket\+Gesture.\+h\item 
+src/gestures/Web\+Socket\+Gesture.\+cpp\end{DoxyCompactItemize}

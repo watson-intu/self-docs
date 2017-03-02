@@ -1,0 +1,69 @@
+\hypertarget{class_use_skill_action}{}\section{Use\+Skill\+Action Class Reference}
+\label{class_use_skill_action}\index{Use\+Skill\+Action@{Use\+Skill\+Action}}
+
+
+This action uses a skill.  
+
+
+
+
+{\ttfamily \#include $<$Use\+Skill\+Action.\+h$>$}
+
+Inheritance diagram for Use\+Skill\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_use_skill_action}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_use_skill_action_a928e72bf1a6591e0508e6bc002639caa}\label{class_use_skill_action_a928e72bf1a6591e0508e6bc002639caa}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_use_skill_action_a8e70e1842a154af84374b6ff577b8dcd}\label{class_use_skill_action_a8e70e1842a154af84374b6ff577b8dcd}} 
+\hyperlink{class_use_skill_action_a8e70e1842a154af84374b6ff577b8dcd}{Use\+Skill\+Action} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_use_skill_action_ab87f3c23de93b8c0460b65dc2f6ab75f}\label{class_use_skill_action_ab87f3c23de93b8c0460b65dc2f6ab75f}} 
+{\bfseries Use\+Skill\+Action} (const std\+::string \&a\+\_\+\+Skill)
+\item 
+\mbox{\Hypertarget{class_use_skill_action_a3d6e383c8c408e0c28fdeb40158d3123}\label{class_use_skill_action_a3d6e383c8c408e0c28fdeb40158d3123}} 
+virtual void \hyperlink{class_use_skill_action_a3d6e383c8c408e0c28fdeb40158d3123}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_use_skill_action_a69ccc1114702f75532c1e582de4e4f43}\label{class_use_skill_action_a69ccc1114702f75532c1e582de4e4f43}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_use_skill_action_aad5962d4cce5d3f8e5b16b19639625e8}\label{class_use_skill_action_aad5962d4cce5d3f8e5b16b19639625e8}} 
+virtual void \hyperlink{class_use_skill_action_aad5962d4cce5d3f8e5b16b19639625e8}{Execute} (const \hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} \&a\+\_\+sp\+Goal, Delegate$<$ const \hyperlink{struct_i_action_1_1_state}{State} \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_action}{I\+Action} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_use_skill_action_af9abcf631299b6ce3f0a8ade0e71e668}\label{class_use_skill_action_af9abcf631299b6ce3f0a8ade0e71e668}} 
+virtual \hyperlink{class_i_action}{I\+Action} $\ast$ \hyperlink{class_use_skill_action_af9abcf631299b6ce3f0a8ade0e71e668}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Make a new instance copy of this action object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_use_skill_action_ada6d34e409f046d1ba0b23212bcb29e1}\label{class_use_skill_action_ada6d34e409f046d1ba0b23212bcb29e1}} 
+const std\+::string \& \hyperlink{class_use_skill_action_ada6d34e409f046d1ba0b23212bcb29e1}{Get\+Skill} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_use_skill_action_ac527894dcf69a7c6da9cfe7d6a521467}\label{class_use_skill_action_ac527894dcf69a7c6da9cfe7d6a521467}} 
+bool {\bfseries Get\+Replace\+Params} () const
+\item 
+\mbox{\Hypertarget{class_use_skill_action_aaa52be37dece71df7285e75f243134f8}\label{class_use_skill_action_aaa52be37dece71df7285e75f243134f8}} 
+const \hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Skill\+Params} () const
+\item 
+\mbox{\Hypertarget{class_use_skill_action_aed25ee980739a8a74fd4a08f1b961c4c}\label{class_use_skill_action_aed25ee980739a8a74fd4a08f1b961c4c}} 
+void \hyperlink{class_use_skill_action_aed25ee980739a8a74fd4a08f1b961c4c}{Set\+Skill} (const std\+::string \&a\+\_\+\+Skill)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_use_skill_action_a55cb501de2e17d97d69120935e521432}\label{class_use_skill_action_a55cb501de2e17d97d69120935e521432}} 
+void {\bfseries Set\+Replace\+Params} (bool a\+\_\+b\+Replace)
+\item 
+\mbox{\Hypertarget{class_use_skill_action_a70a89d45e693212abc36e19063c2d8a3}\label{class_use_skill_action_a70a89d45e693212abc36e19063c2d8a3}} 
+\hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Skill\+Params} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This action uses a skill. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/actions/Use\+Skill\+Action.\+h\item 
+src/planning/actions/Use\+Skill\+Action.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,174 @@
+\hypertarget{class_i_skill}{}\section{I\+Skill Class Reference}
+\label{class_i_skill}\index{I\+Skill@{I\+Skill}}
+
+
+This base class wraps all available skills in S\+E\+LF.  
+
+
+
+
+{\ttfamily \#include $<$I\+Skill.\+h$>$}
+
+Inheritance diagram for I\+Skill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.258065cm]{class_i_skill}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i_skill_1_1_request}{Request}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_skill_a30ab644adc7e0e8de9599e8e5b3c0f65}\label{class_i_skill_a30ab644adc7e0e8de9599e8e5b3c0f65}} 
+enum {\bfseries Skill\+State} \{ \newline
+{\bfseries I\+N\+A\+C\+T\+I\+VE}, 
+{\bfseries A\+C\+T\+I\+VE}, 
+{\bfseries B\+L\+O\+C\+K\+ED}, 
+{\bfseries C\+O\+M\+P\+L\+E\+T\+ED}, 
+\newline
+{\bfseries F\+A\+I\+L\+ED}
+ \}
+\item 
+\mbox{\Hypertarget{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}\label{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_skill}{I\+Skill} $>$ \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_a1bd624d8493f2fbacfd200205a89cb3a}\label{class_i_skill_a1bd624d8493f2fbacfd200205a89cb3a}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_skill}{I\+Skill} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_i_skill_ae25de8350481bba4c44c78371f0de450}\label{class_i_skill_ae25de8350481bba4c44c78371f0de450}} 
+typedef Delegate$<$ \hyperlink{class_i_skill}{I\+Skill} $\ast$ $>$ {\bfseries Skill\+Delegate}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_skill_af1abce61a0ffd7be80faba049f24ab9d}\label{class_i_skill_af1abce61a0ffd7be80faba049f24ab9d}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_skill_a8c88240c8b9631177869f65b869d23c6}\label{class_i_skill_a8c88240c8b9631177869f65b869d23c6}} 
+\hyperlink{class_i_skill_a8c88240c8b9631177869f65b869d23c6}{I\+Skill} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_a96a180cf214bac70ff74e4f3d5165805}\label{class_i_skill_a96a180cf214bac70ff74e4f3d5165805}} 
+{\bfseries I\+Skill} (const \hyperlink{class_i_skill}{I\+Skill} \&a\+\_\+\+Copy)
+\item 
+\mbox{\Hypertarget{class_i_skill_aba339bdb6c968a639d91907d42b8994c}\label{class_i_skill_aba339bdb6c968a639d91907d42b8994c}} 
+const std\+::string \& \hyperlink{class_i_skill_aba339bdb6c968a639d91907d42b8994c}{Get\+Skill\+G\+U\+ID} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_ade77820fbba37899f0219eb114f717a8}\label{class_i_skill_ade77820fbba37899f0219eb114f717a8}} 
+const std\+::string \& {\bfseries Get\+Skill\+Name} () const
+\item 
+\mbox{\Hypertarget{class_i_skill_ac7bb2e88855f01c2cc2c0dd3543cab60}\label{class_i_skill_ac7bb2e88855f01c2cc2c0dd3543cab60}} 
+Skill\+State {\bfseries Get\+State} () const
+\item 
+\mbox{\Hypertarget{class_i_skill_aa4c77ec612e7167ea657e001baabc3e7}\label{class_i_skill_aa4c77ec612e7167ea657e001baabc3e7}} 
+Thread\+Pool $\ast$ {\bfseries Get\+Thread\+Pool} () const
+\item 
+\mbox{\Hypertarget{class_i_skill_aa906e5e27ed9262e4b0eb630b999af7a}\label{class_i_skill_aa906e5e27ed9262e4b0eb630b999af7a}} 
+void {\bfseries Set\+Skill\+G\+U\+ID} (const std\+::string \&a\+\_\+\+Skill\+G\+U\+ID)
+\item 
+\mbox{\Hypertarget{class_i_skill_a45ee64d93d19b827127abc0f3acfce6c}\label{class_i_skill_a45ee64d93d19b827127abc0f3acfce6c}} 
+void {\bfseries Set\+Skill\+Name} (const std\+::string \&a\+\_\+\+Skill\+Name)
+\item 
+\mbox{\Hypertarget{class_i_skill_a3a8465988d9da7e8b84e49ae318d1c55}\label{class_i_skill_a3a8465988d9da7e8b84e49ae318d1c55}} 
+virtual bool \hyperlink{class_i_skill_a3a8465988d9da7e8b84e49ae318d1c55}{Can\+Use\+Skill} ()=0
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_skill}{I\+Skill} interface. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_skill_a0b9243b397c4902c973f191d32a6e46d}{Use\+Skill} (Skill\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)=0
+\begin{DoxyCompactList}\small\item\em This should return true if this skill can be used, false is returned otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_ab8466db6a0ad8dba3db869871098f285}\label{class_i_skill_ab8466db6a0ad8dba3db869871098f285}} 
+virtual bool {\bfseries Abort\+Skill} ()=0
+\item 
+\mbox{\Hypertarget{class_i_skill_a46c5a054af920bbac29db2834180588c}\label{class_i_skill_a46c5a054af920bbac29db2834180588c}} 
+virtual \hyperlink{class_i_skill}{I\+Skill} $\ast$ \hyperlink{class_i_skill_a46c5a054af920bbac29db2834180588c}{Clone} ()=0
+\begin{DoxyCompactList}\small\item\em Invoke this function to stop using this skill, the callback passed to \hyperlink{class_i_skill_a0b9243b397c4902c973f191d32a6e46d}{Use\+Skill()} will N\+OT be invoked after this is called. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_skill_a5a64f9e4fdb3a1b0aecd7e208cc534e2}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em Make a copy of this skill object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_a9217aea73671b2504923dbb0c1b290af}\label{class_i_skill_a9217aea73671b2504923dbb0c1b290af}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_skill_a6bf41210a021139a1e001108581917e3}\label{class_i_skill_a6bf41210a021139a1e001108581917e3}} 
+typedef std\+::list$<$ \hyperlink{struct_i_skill_1_1_request}{Request} $\ast$ $>$ {\bfseries Request\+List}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_skill_a68cb01da21e254114ee4dde1a5a19fd8}\label{class_i_skill_a68cb01da21e254114ee4dde1a5a19fd8}} 
+bool {\bfseries Have\+Requests} () const
+\item 
+\mbox{\Hypertarget{class_i_skill_a4daf4ea4b3326ac134d13231173af641}\label{class_i_skill_a4daf4ea4b3326ac134d13231173af641}} 
+\hyperlink{struct_i_skill_1_1_request}{Request} $\ast$ {\bfseries Active\+Request} () const
+\item 
+\mbox{\Hypertarget{class_i_skill_af9487c5d673cc9dc6d26714291d23e5d}\label{class_i_skill_af9487c5d673cc9dc6d26714291d23e5d}} 
+bool \hyperlink{class_i_skill_af9487c5d673cc9dc6d26714291d23e5d}{Push\+Request} (Skill\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em Push a request into the queue, returns true if this is the first active request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_ad157dbcb7747d66fb0f282e87d289875}\label{class_i_skill_ad157dbcb7747d66fb0f282e87d289875}} 
+bool \hyperlink{class_i_skill_ad157dbcb7747d66fb0f282e87d289875}{Pop\+Request} ()
+\begin{DoxyCompactList}\small\item\em invokes the callback and pops the current active request from the queue, returns true if there are more requests \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_a02ee7862bb7a20cb954a94333ab2e394}\label{class_i_skill_a02ee7862bb7a20cb954a94333ab2e394}} 
+void {\bfseries Pop\+All\+Requests} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_skill_a9ae6267977d36500e4d0cdfc1ea6747b}\label{class_i_skill_a9ae6267977d36500e4d0cdfc1ea6747b}} 
+std\+::string \hyperlink{class_i_skill_a9ae6267977d36500e4d0cdfc1ea6747b}{m\+\_\+\+G\+U\+ID}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_skill_a649925e8b0559d7fe2a26bd390e2347e}\label{class_i_skill_a649925e8b0559d7fe2a26bd390e2347e}} 
+std\+::string {\bfseries m\+\_\+\+Skill\+Name}
+\item 
+\mbox{\Hypertarget{class_i_skill_a8080ecead0803c22ba76a2661a840dd3}\label{class_i_skill_a8080ecead0803c22ba76a2661a840dd3}} 
+Skill\+State {\bfseries m\+\_\+e\+State}
+\item 
+\mbox{\Hypertarget{class_i_skill_a7ef2ff508b740d2f70b440b5d14d241d}\label{class_i_skill_a7ef2ff508b740d2f70b440b5d14d241d}} 
+Request\+List {\bfseries m\+\_\+\+Requests}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This base class wraps all available skills in S\+E\+LF. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_skill_a5a64f9e4fdb3a1b0aecd7e208cc534e2}\label{class_i_skill_a5a64f9e4fdb3a1b0aecd7e208cc534e2}} 
+\index{I\+Skill@{I\+Skill}!Serialize@{Serialize}}
+\index{Serialize@{Serialize}!I\+Skill@{I\+Skill}}
+\subsubsection{\texorpdfstring{Serialize()}{Serialize()}}
+{\footnotesize\ttfamily void I\+Skill\+::\+Serialize (\begin{DoxyParamCaption}\item[{Json\+::\+Value \&}]{json }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Make a copy of this skill object. 
+
+I\+Serializable interface 
+
+Reimplemented in \hyperlink{class_gesture_skill_a9a0b5dcba0cbbced2bfc5108304d7513}{Gesture\+Skill}, \hyperlink{class_linear_skill_a848dd09f0e2c7db9a096e57a75266f40}{Linear\+Skill}, and \hyperlink{class_parallel_skill_a6b8c895c0996b4edec98cf4c26724fef}{Parallel\+Skill}.
+
+\mbox{\Hypertarget{class_i_skill_a0b9243b397c4902c973f191d32a6e46d}\label{class_i_skill_a0b9243b397c4902c973f191d32a6e46d}} 
+\index{I\+Skill@{I\+Skill}!Use\+Skill@{Use\+Skill}}
+\index{Use\+Skill@{Use\+Skill}!I\+Skill@{I\+Skill}}
+\subsubsection{\texorpdfstring{Use\+Skill()}{UseSkill()}}
+{\footnotesize\ttfamily virtual void I\+Skill\+::\+Use\+Skill (\begin{DoxyParamCaption}\item[{Skill\+Delegate}]{a\+\_\+\+Callback,  }\item[{const \hyperlink{class_params_map}{Params\+Map} \&}]{a\+\_\+\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This should return true if this skill can be used, false is returned otherwise. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+\+Params} & This begins using this skill, it returns true on success, this should not block. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_gesture_skill_a2cecea782e270b8e7fe86189f839c1e7}{Gesture\+Skill}, \hyperlink{class_linear_skill_a63f85339807231fb81997e88de3f612f}{Linear\+Skill}, and \hyperlink{class_parallel_skill_ad95fee894046921fb0d3e9c91034737e}{Parallel\+Skill}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/I\+Skill.\+h\item 
+src/skills/I\+Skill.\+cpp\end{DoxyCompactItemize}

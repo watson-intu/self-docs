@@ -1,0 +1,69 @@
+\hypertarget{class_gesture}{}\section{Gesture Class Reference}
+\label{class_gesture}\index{Gesture@{Gesture}}
+
+
+This object is placed on the blackboard when we need self to say anything.  
+
+
+
+
+{\ttfamily \#include $<$Gesture.\+h$>$}
+
+Inheritance diagram for Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_a33ef75f98bf7b23f861e031e23da0a9f}\label{class_gesture_a33ef75f98bf7b23f861e031e23da0a9f}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_gesture}{Gesture} $>$ \hyperlink{class_gesture_a33ef75f98bf7b23f861e031e23da0a9f}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_aaa739c72bb83c940b5f1bd57f9eb11e8}\label{class_gesture_aaa739c72bb83c940b5f1bd57f9eb11e8}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_gesture}{Gesture} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_ab2d9cebca764207566feffc774dfaa06}\label{class_gesture_ab2d9cebca764207566feffc774dfaa06}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_gesture_a7a3df706550bedd9fdd7df76618fd2e6}\label{class_gesture_a7a3df706550bedd9fdd7df76618fd2e6}} 
+virtual void \hyperlink{class_gesture_a7a3df706550bedd9fdd7df76618fd2e6}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_ae2ffef97bf23de5909bb482d8dc52155}\label{class_gesture_ae2ffef97bf23de5909bb482d8dc52155}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_gesture_a840ff60bea4128f137c5b114abc844f6}\label{class_gesture_a840ff60bea4128f137c5b114abc844f6}} 
+\hyperlink{class_gesture_a840ff60bea4128f137c5b114abc844f6}{Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_ac3c273ee5e5ac8c1a170c97538929aec}\label{class_gesture_ac3c273ee5e5ac8c1a170c97538929aec}} 
+{\bfseries Gesture} (const std\+::string \&a\+\_\+\+Type)
+\item 
+\mbox{\Hypertarget{class_gesture_af0fb78e7c333a92dacef56975eb96e9f}\label{class_gesture_af0fb78e7c333a92dacef56975eb96e9f}} 
+{\bfseries Gesture} (const std\+::string \&a\+\_\+\+Type, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_gesture_accb71d86b7be76eb9db494a97122454a}\label{class_gesture_accb71d86b7be76eb9db494a97122454a}} 
+const std\+::string \& \hyperlink{class_gesture_accb71d86b7be76eb9db494a97122454a}{Get\+Type} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_a79d4745d74841bbf76ddd094b875ff2d}\label{class_gesture_a79d4745d74841bbf76ddd094b875ff2d}} 
+const \hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Params} () const
+\item 
+\mbox{\Hypertarget{class_gesture_af4c98298c644a7012d9ee45c4c1eb9dd}\label{class_gesture_af4c98298c644a7012d9ee45c4c1eb9dd}} 
+void {\bfseries Set\+Type} (const std\+::string \&a\+\_\+\+Type)
+\item 
+\mbox{\Hypertarget{class_gesture_aba15db55f1cce6ebc0363237b09e0e46}\label{class_gesture_aba15db55f1cce6ebc0363237b09e0e46}} 
+void {\bfseries Set\+Params} (const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Param)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This object is placed on the blackboard when we need self to say anything. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Gesture.\+h\item 
+src/blackboard/Gesture.\+cpp\end{DoxyCompactItemize}

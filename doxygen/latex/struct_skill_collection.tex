@@ -1,0 +1,41 @@
+\hypertarget{struct_skill_collection}{}\section{Skill\+Collection Struct Reference}
+\label{struct_skill_collection}\index{Skill\+Collection@{Skill\+Collection}}
+Inheritance diagram for Skill\+Collection\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_skill_collection}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_skill_collection_aca267e890008e7f71ab14e97a05dff8a}\label{struct_skill_collection_aca267e890008e7f71ab14e97a05dff8a}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_skill}{I\+Skill} $>$ {\bfseries I\+Skill\+SP}
+\item 
+\mbox{\Hypertarget{struct_skill_collection_afc4b2159eeaaa114856db2797250f622}\label{struct_skill_collection_afc4b2159eeaaa114856db2797250f622}} 
+typedef std\+::map$<$ std\+::string, I\+Skill\+SP $>$ {\bfseries Skill\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_skill_collection_af614f1cdf9c326185b1af96ef08efd08}\label{struct_skill_collection_af614f1cdf9c326185b1af96ef08efd08}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{struct_skill_collection_a50aafa284b5c79743f640e6a1b39522b}\label{struct_skill_collection_a50aafa284b5c79743f640e6a1b39522b}} 
+virtual void \hyperlink{struct_skill_collection_a50aafa284b5c79743f640e6a1b39522b}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_skill_collection_a5614a31f13481a581aa1e8e18b62990f}\label{struct_skill_collection_a5614a31f13481a581aa1e8e18b62990f}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_skill_collection_a2a3a4fd4030c667c745f6e70b2427942}\label{struct_skill_collection_a2a3a4fd4030c667c745f6e70b2427942}} 
+Skill\+Map {\bfseries m\+\_\+\+Skill\+Map}
+\end{DoxyCompactItemize}
+
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/Skill\+Manager.\+h\item 
+src/skills/Skill\+Manager.\+cpp\end{DoxyCompactItemize}

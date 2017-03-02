@@ -1,0 +1,69 @@
+\hypertarget{class_local_speech_to_text}{}\section{Local\+Speech\+To\+Text Class Reference}
+\label{class_local_speech_to_text}\index{Local\+Speech\+To\+Text@{Local\+Speech\+To\+Text}}
+
+
+This is the base class for a speech to text sensor implementation, this is not a concrete implementation.  
+
+
+
+
+{\ttfamily \#include $<$Local\+Speech\+To\+Text.\+h$>$}
+
+Inheritance diagram for Local\+Speech\+To\+Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_local_speech_to_text}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a002252051030cae256a3173592caef21}\label{class_local_speech_to_text_a002252051030cae256a3173592caef21}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a408e62a78bc6b0361f122f9281e27174}\label{class_local_speech_to_text_a408e62a78bc6b0361f122f9281e27174}} 
+\hyperlink{class_local_speech_to_text_a408e62a78bc6b0361f122f9281e27174}{Local\+Speech\+To\+Text} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a897619731ae0e4180cfe1bd09e5ee838}\label{class_local_speech_to_text_a897619731ae0e4180cfe1bd09e5ee838}} 
+virtual void \hyperlink{class_local_speech_to_text_a897619731ae0e4180cfe1bd09e5ee838}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a740a6fc38ca2b2031110570aa8c332e4}\label{class_local_speech_to_text_a740a6fc38ca2b2031110570aa8c332e4}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a9e324aa59ff87989fea2278bdb6a06cf}\label{class_local_speech_to_text_a9e324aa59ff87989fea2278bdb6a06cf}} 
+virtual const char $\ast$ \hyperlink{class_local_speech_to_text_a9e324aa59ff87989fea2278bdb6a06cf}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a7b9bcc2db6afe0223a7b16df0583946c}\label{class_local_speech_to_text_a7b9bcc2db6afe0223a7b16df0583946c}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_local_speech_to_text_afc8d632674a9c5ca22066a1c760e46f5}\label{class_local_speech_to_text_afc8d632674a9c5ca22066a1c760e46f5}} 
+virtual bool \hyperlink{class_local_speech_to_text_afc8d632674a9c5ca22066a1c760e46f5}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a8d5bc8dfe0494ca0581e7d0b5ba9d2e6}\label{class_local_speech_to_text_a8d5bc8dfe0494ca0581e7d0b5ba9d2e6}} 
+virtual bool \hyperlink{class_local_speech_to_text_a8d5bc8dfe0494ca0581e7d0b5ba9d2e6}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a5d99385276987d589da378cb582c44d5}\label{class_local_speech_to_text_a5d99385276987d589da378cb582c44d5}} 
+virtual void \hyperlink{class_local_speech_to_text_a5d99385276987d589da378cb582c44d5}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_a9b48889f99cceed10ef8dc58c759b97e}\label{class_local_speech_to_text_a9b48889f99cceed10ef8dc58c759b97e}} 
+virtual void \hyperlink{class_local_speech_to_text_a9b48889f99cceed10ef8dc58c759b97e}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_local_speech_to_text_ac99d79a0b39a9f7e70c823fdccfa93b3}\label{class_local_speech_to_text_ac99d79a0b39a9f7e70c823fdccfa93b3}} 
+float \hyperlink{class_local_speech_to_text_ac99d79a0b39a9f7e70c823fdccfa93b3}{m\+\_\+\+Min\+Confidence}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_local_speech_to_text_ae0ebc75293ec59d4add5b5df810b1161}\label{class_local_speech_to_text_ae0ebc75293ec59d4add5b5df810b1161}} 
+std\+::vector$<$ std\+::string $>$ {\bfseries m\+\_\+\+Vocabulary\+List}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for a speech to text sensor implementation, this is not a concrete implementation. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Local\+Speech\+To\+Text.\+h\item 
+src/sensors/Local\+Speech\+To\+Text.\+cpp\end{DoxyCompactItemize}

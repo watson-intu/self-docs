@@ -1,0 +1,59 @@
+\hypertarget{class_package_store}{}\section{Package\+Store Class Reference}
+\label{class_package_store}\index{Package\+Store@{Package\+Store}}
+
+
+This service wraps the \hyperlink{class_package_store}{Package\+Store} application.  
+
+
+
+
+{\ttfamily \#include $<$Package\+Store.\+h$>$}
+
+Inheritance diagram for Package\+Store\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_package_store}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_package_store_ad434d9b754137b340341e97476df6b38}\label{class_package_store_ad434d9b754137b340341e97476df6b38}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_package_store_aacca93681e760a9663f96df10947ddd0}\label{class_package_store_aacca93681e760a9663f96df10947ddd0}} 
+\hyperlink{class_package_store_aacca93681e760a9663f96df10947ddd0}{Package\+Store} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_package_store_add35765608d83e9cdddea9603c661909}\label{class_package_store_add35765608d83e9cdddea9603c661909}} 
+virtual void \hyperlink{class_package_store_add35765608d83e9cdddea9603c661909}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_package_store_a14f18a98122858e0e6580f102669fbe9}\label{class_package_store_a14f18a98122858e0e6580f102669fbe9}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_package_store_a429969a30bac520dcffa0649bea2cef1}\label{class_package_store_a429969a30bac520dcffa0649bea2cef1}} 
+virtual bool \hyperlink{class_package_store_a429969a30bac520dcffa0649bea2cef1}{Start} ()
+\begin{DoxyCompactList}\small\item\em I\+Service interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_package_store_abdcbb72ed4e12e01f3fdac5ed112f7c8}\label{class_package_store_abdcbb72ed4e12e01f3fdac5ed112f7c8}} 
+virtual bool {\bfseries Stop} ()
+\item 
+\mbox{\Hypertarget{class_package_store_a15c8adcfc5e64ff53fda42ce4110922b}\label{class_package_store_a15c8adcfc5e64ff53fda42ce4110922b}} 
+virtual void {\bfseries Get\+Service\+Status} (Service\+Status\+Callback a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_package_store_ada150ea0e76c4c89193c4daffcd811cd}\label{class_package_store_ada150ea0e76c4c89193c4daffcd811cd}} 
+void {\bfseries Download\+Package} (const std\+::string \&a\+\_\+\+Package\+Id, const std\+::string \&a\+\_\+\+Version, Delegate$<$ const std\+::string \&$>$ a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_package_store_a60b09b7b3b424db6f7b1c3c30af5a186}\label{class_package_store_a60b09b7b3b424db6f7b1c3c30af5a186}} 
+void {\bfseries Get\+Versions} (const std\+::string \&a\+\_\+\+Package\+Id, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_package_store_a10bb954fb5040259ad830f4d483bd026}\label{class_package_store_a10bb954fb5040259ad830f4d483bd026}} 
+int {\bfseries Version\+Compare} (const std\+::string \&a\+\_\+\+First\+Version, const std\+::string \&a\+\_\+\+Second\+Version)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This service wraps the \hyperlink{class_package_store}{Package\+Store} application. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/services/\+Package\+Store/Package\+Store.\+h\item 
+src/services/\+Package\+Store/Package\+Store.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,53 @@
+\hypertarget{class_fourier_filters}{}\section{Fourier\+Filters Class Reference}
+\label{class_fourier_filters}\index{Fourier\+Filters@{Fourier\+Filters}}
+Inheritance diagram for Fourier\+Filters\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.926829cm]{class_fourier_filters}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_fourier_filters_1_1_i_fourier_filter}{I\+Fourier\+Filter}
+\begin{DoxyCompactList}\small\item\em Interface class for any audio filter that operates in the frequency domain. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fourier_filters_a5ef63b00a3f87418e214e3ca254cb2d7}\label{class_fourier_filters_a5ef63b00a3f87418e214e3ca254cb2d7}} 
+typedef std\+::complex$<$ float $>$ \hyperlink{class_fourier_filters_a5ef63b00a3f87418e214e3ca254cb2d7}{Complex\+Num}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fourier_filters_a0c1dda206fd4fb5648ef03533562f804}\label{class_fourier_filters_a0c1dda206fd4fb5648ef03533562f804}} 
+typedef std\+::valarray$<$ \hyperlink{class_fourier_filters_a5ef63b00a3f87418e214e3ca254cb2d7}{Complex\+Num} $>$ {\bfseries Complex\+Num\+Array}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_fourier_filters_a1194955fe9d06a2b1453165b5d1375b7}\label{class_fourier_filters_a1194955fe9d06a2b1453165b5d1375b7}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_fourier_filters_ab68f377ff94adb8e97c0425f3a7ab711}\label{class_fourier_filters_ab68f377ff94adb8e97c0425f3a7ab711}} 
+{\footnotesize template$<$typename T $>$ }\\boost\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Find\+Filter} () const
+\item 
+\mbox{\Hypertarget{class_fourier_filters_a268c613597b9cf717e1564fe6fa636b9}\label{class_fourier_filters_a268c613597b9cf717e1564fe6fa636b9}} 
+\hyperlink{class_fourier_filters_a268c613597b9cf717e1564fe6fa636b9}{Fourier\+Filters} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fourier_filters_ae59b98c84e2cae9754bf743b706869d8}\label{class_fourier_filters_ae59b98c84e2cae9754bf743b706869d8}} 
+virtual void \hyperlink{class_fourier_filters_ae59b98c84e2cae9754bf743b706869d8}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialziable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fourier_filters_a83afe09537b528b8bbc128ce744aaa58}\label{class_fourier_filters_a83afe09537b528b8bbc128ce744aaa58}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_fourier_filters_ab3c9f0f031eed41cc32f9b2210b88021}\label{class_fourier_filters_ab3c9f0f031eed41cc32f9b2210b88021}} 
+virtual void \hyperlink{class_fourier_filters_ab3c9f0f031eed41cc32f9b2210b88021}{Apply\+Filter} (Speech\+Audio\+Data \&a\+\_\+\+Data)
+\begin{DoxyCompactList}\small\item\em I\+Audio\+Filter interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_fourier_filters_a355bfc3ec927b150379cae40896db624}\label{class_fourier_filters_a355bfc3ec927b150379cae40896db624}} 
+void \hyperlink{class_fourier_filters_a355bfc3ec927b150379cae40896db624}{Add\+Filter} (\hyperlink{class_fourier_filters_1_1_i_fourier_filter_acad39dd74318f8f8b06d80a00b19f8cb}{I\+Fourier\+Filter\+::\+SP} a\+\_\+\+Filter)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/extractors/filters/Fourier\+Filters.\+h\item 
+src/extractors/filters/Fourier\+Filters.\+cpp\end{DoxyCompactItemize}

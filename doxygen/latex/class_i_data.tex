@@ -1,0 +1,55 @@
+\hypertarget{class_i_data}{}\section{I\+Data Class Reference}
+\label{class_i_data}\index{I\+Data@{I\+Data}}
+
+
+This is the base class for any type of data sent by a sensor.  
+
+
+
+
+{\ttfamily \#include $<$I\+Data.\+h$>$}
+
+Inheritance diagram for I\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_i_data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_data_acdd36c3c0e577bc44eb5df14aad0fe8d}\label{class_i_data_acdd36c3c0e577bc44eb5df14aad0fe8d}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_data_aaf249fea6a9510e211d2812deceadf6a}\label{class_i_data_aaf249fea6a9510e211d2812deceadf6a}} 
+\hyperlink{class_i_sensor}{I\+Sensor} $\ast$ {\bfseries Get\+Origin} () const
+\item 
+\mbox{\Hypertarget{class_i_data_a0f936ff9f2310ff48a6b7672a7579a78}\label{class_i_data_a0f936ff9f2310ff48a6b7672a7579a78}} 
+void {\bfseries Set\+Origin} (\hyperlink{class_i_sensor}{I\+Sensor} $\ast$a\+\_\+p\+Sensor)
+\item 
+virtual bool \hyperlink{class_i_data_a24bd9f1e78807b0101ffe2cb8e38f860}{To\+Binary} (std\+::string \&a\+\_\+\+Output)
+\item 
+\mbox{\Hypertarget{class_i_data_a019510bb815e82eefec404099b158096}\label{class_i_data_a019510bb815e82eefec404099b158096}} 
+virtual bool {\bfseries From\+Binary} (const std\+::string \&a\+\_\+\+Type, const std\+::string \&a\+\_\+\+Input)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base class for any type of data sent by a sensor. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_data_a24bd9f1e78807b0101ffe2cb8e38f860}\label{class_i_data_a24bd9f1e78807b0101ffe2cb8e38f860}} 
+\index{I\+Data@{I\+Data}!To\+Binary@{To\+Binary}}
+\index{To\+Binary@{To\+Binary}!I\+Data@{I\+Data}}
+\subsubsection{\texorpdfstring{To\+Binary()}{ToBinary()}}
+{\footnotesize\ttfamily virtual bool I\+Data\+::\+To\+Binary (\begin{DoxyParamCaption}\item[{std\+::string \&}]{a\+\_\+\+Output }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+By default, the To\+Binary/\+From\+Binary just convert the data to and from Json using the I\+Serialiable interface we can expect certain data types to override this an actually serialize real binary data. 
+
+Reimplemented in \hyperlink{class_audio_data_a1cc9349b5edf80a5e0b35e6eb5cb3045}{Audio\+Data}, \hyperlink{class_depth_video_data_a0902f7a270581cd84d79866f0273680e}{Depth\+Video\+Data}, and \hyperlink{class_video_data_a452a7f7290e463b02513ba4f1b08c3b7}{Video\+Data}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/I\+Data.\+h\end{DoxyCompactItemize}

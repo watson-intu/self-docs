@@ -1,0 +1,95 @@
+\hypertarget{class_i_agent}{}\section{I\+Agent Class Reference}
+\label{class_i_agent}\index{I\+Agent@{I\+Agent}}
+Inheritance diagram for I\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_i_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_agent_ac78c4d9c6aeb907135b88b0ee4a269c0}\label{class_i_agent_ac78c4d9c6aeb907135b88b0ee4a269c0}} 
+enum {\bfseries State} \{ {\bfseries A\+S\+\_\+\+S\+T\+O\+P\+P\+ED}, 
+{\bfseries A\+S\+\_\+\+R\+U\+N\+N\+I\+NG}, 
+{\bfseries A\+S\+\_\+\+S\+U\+S\+P\+E\+N\+D\+ED}
+ \}
+\item 
+\mbox{\Hypertarget{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}\label{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_agent}{I\+Agent} $>$ \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_agent_ad41d667d4605b781f81485e4f2cb6d40}\label{class_i_agent_ad41d667d4605b781f81485e4f2cb6d40}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_agent}{I\+Agent} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_agent_af511e4b0c62eb4701911ce387fc6d8d2}\label{class_i_agent_af511e4b0c62eb4701911ce387fc6d8d2}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_agent_a4ef6a127f3eca899f021cf138db09bad}\label{class_i_agent_a4ef6a127f3eca899f021cf138db09bad}} 
+\hyperlink{class_i_agent_a4ef6a127f3eca899f021cf138db09bad}{I\+Agent} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_agent_a5aa109135dbd669f8384cc73a54e8767}\label{class_i_agent_a5aa109135dbd669f8384cc73a54e8767}} 
+virtual void \hyperlink{class_i_agent_a5aa109135dbd669f8384cc73a54e8767}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_agent_a3d22d33e81fb5257170013277ef59613}\label{class_i_agent_a3d22d33e81fb5257170013277ef59613}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_agent_a176389a45e19affdd1b8be5c6c981120}\label{class_i_agent_a176389a45e19affdd1b8be5c6c981120}} 
+virtual bool \hyperlink{class_i_agent_a176389a45e19affdd1b8be5c6c981120}{On\+Start} ()=0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_agent_a0de8756c1035a1a905cb09b19d4bf164}\label{class_i_agent_a0de8756c1035a1a905cb09b19d4bf164}} 
+virtual bool {\bfseries On\+Stop} ()=0
+\item 
+\mbox{\Hypertarget{class_i_agent_ab3935ad94d9672ca2f980868c089d04f}\label{class_i_agent_ab3935ad94d9672ca2f980868c089d04f}} 
+void {\bfseries Set\+State} (State a\+\_\+e\+State)
+\item 
+\mbox{\Hypertarget{class_i_agent_ad210876d1cedf15d7bfdd94cb6d9842b}\label{class_i_agent_ad210876d1cedf15d7bfdd94cb6d9842b}} 
+void {\bfseries Set\+Agent\+Society} (\hyperlink{class_agent_society}{Agent\+Society} $\ast$a\+\_\+p\+Society, bool a\+\_\+b\+Override)
+\item 
+\mbox{\Hypertarget{class_i_agent_aeaab9245e752a5f35c48f869a6816314}\label{class_i_agent_aeaab9245e752a5f35c48f869a6816314}} 
+State \hyperlink{class_i_agent_aeaab9245e752a5f35c48f869a6816314}{Get\+State} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_agent_a8e065535745f20d1597114cc4f6d4282}\label{class_i_agent_a8e065535745f20d1597114cc4f6d4282}} 
+virtual const std\+::string \& {\bfseries Get\+Agent\+Name} () const
+\item 
+\mbox{\Hypertarget{class_i_agent_a14ae7bbeb1f1a2ae2f74abbd097c1a52}\label{class_i_agent_a14ae7bbeb1f1a2ae2f74abbd097c1a52}} 
+virtual const std\+::string \& {\bfseries Get\+Instance\+Id} () const
+\item 
+\mbox{\Hypertarget{class_i_agent_aea4a4f956bc9f1f1e1f2b763232027eb}\label{class_i_agent_aea4a4f956bc9f1f1e1f2b763232027eb}} 
+bool {\bfseries Is\+Overridden} () const
+\item 
+\mbox{\Hypertarget{class_i_agent_a21762f47ec7fed02949494a980fb6414}\label{class_i_agent_a21762f47ec7fed02949494a980fb6414}} 
+bool {\bfseries Is\+Active} () const
+\item 
+\mbox{\Hypertarget{class_i_agent_ab3dc0886aafb612cc9db880dc6a39648}\label{class_i_agent_ab3dc0886aafb612cc9db880dc6a39648}} 
+void {\bfseries Add\+Override} ()
+\item 
+\mbox{\Hypertarget{class_i_agent_a65e6a2c685607a24d6ced32f96be46c6}\label{class_i_agent_a65e6a2c685607a24d6ced32f96be46c6}} 
+void {\bfseries Remove\+Override} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_agent_a610556bfbb11adc1900370d200e21486}\label{class_i_agent_a610556bfbb11adc1900370d200e21486}} 
+State \hyperlink{class_i_agent_a610556bfbb11adc1900370d200e21486}{m\+\_\+e\+State}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_agent_aa518895ac7b3dc7c611285c5c3281e97}\label{class_i_agent_aa518895ac7b3dc7c611285c5c3281e97}} 
+\hyperlink{class_agent_society}{Agent\+Society} $\ast$ {\bfseries m\+\_\+p\+Society}
+\item 
+\mbox{\Hypertarget{class_i_agent_a44af3f5b1c4a9828d1f3840f83064a21}\label{class_i_agent_a44af3f5b1c4a9828d1f3840f83064a21}} 
+int {\bfseries m\+\_\+\+Overrides}
+\item 
+\mbox{\Hypertarget{class_i_agent_ae206f22cf4d1a734a01e648384485e7e}\label{class_i_agent_ae206f22cf4d1a734a01e648384485e7e}} 
+std\+::vector$<$ \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{SP} $>$ {\bfseries m\+\_\+\+Overriden}
+\item 
+\mbox{\Hypertarget{class_i_agent_a06fcde1be1039cffd81d63f3112766e4}\label{class_i_agent_a06fcde1be1039cffd81d63f3112766e4}} 
+std\+::string {\bfseries m\+\_\+\+Instance\+Id}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/I\+Agent.\+h\item 
+src/agent/I\+Agent.\+cpp\end{DoxyCompactItemize}

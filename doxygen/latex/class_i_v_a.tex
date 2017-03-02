@@ -1,0 +1,59 @@
+\hypertarget{class_i_v_a}{}\section{I\+VA Class Reference}
+\label{class_i_v_a}\index{I\+VA@{I\+VA}}
+
+
+Intelligent Video Analytics service.  
+
+
+
+
+{\ttfamily \#include $<$I\+V\+A.\+h$>$}
+
+Inheritance diagram for I\+VA\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_v_a}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_v_a_a01d85de78968b86a32ca130ae0fe799a}\label{class_i_v_a_a01d85de78968b86a32ca130ae0fe799a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_v_a_a2f89a2a265f6dd7cf7a3eddf6ebb3646}\label{class_i_v_a_a2f89a2a265f6dd7cf7a3eddf6ebb3646}} 
+\hyperlink{class_i_v_a_a2f89a2a265f6dd7cf7a3eddf6ebb3646}{I\+VA} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_v_a_ad7fd44b0c20536b24029e4a8055f7142}\label{class_i_v_a_ad7fd44b0c20536b24029e4a8055f7142}} 
+virtual void \hyperlink{class_i_v_a_ad7fd44b0c20536b24029e4a8055f7142}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_v_a_a387d056a6afe666461faa5e8ead6d8c4}\label{class_i_v_a_a387d056a6afe666461faa5e8ead6d8c4}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_v_a_a58253fd87350524f81c77ef8b7ad3394}\label{class_i_v_a_a58253fd87350524f81c77ef8b7ad3394}} 
+virtual bool \hyperlink{class_i_v_a_a58253fd87350524f81c77ef8b7ad3394}{Start} ()
+\begin{DoxyCompactList}\small\item\em I\+Service interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_v_a_aeb672e35cf8d4dfd6b9fa48b5480c953}\label{class_i_v_a_aeb672e35cf8d4dfd6b9fa48b5480c953}} 
+bool {\bfseries Is\+Logged\+In} () const
+\item 
+\mbox{\Hypertarget{class_i_v_a_a2439fdf64e03842250815c51a3333245}\label{class_i_v_a_a2439fdf64e03842250815c51a3333245}} 
+void {\bfseries Login} ()
+\item 
+\mbox{\Hypertarget{class_i_v_a_ab72fafe17f99f3ca7d01cdb8a9fa9691}\label{class_i_v_a_ab72fafe17f99f3ca7d01cdb8a9fa9691}} 
+void \hyperlink{class_i_v_a_ab72fafe17f99f3ca7d01cdb8a9fa9691}{Classify\+Face} (const std\+::string \&a\+\_\+\+Face\+Image\+Data, Delegate$<$ const Ti\+Xml\+Document \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Classify the provided face image data, should return a response containing the F256 data for the provided image. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_v_a_a7b4ac8913c4ddb0f9ed9b52ca778584c}\label{class_i_v_a_a7b4ac8913c4ddb0f9ed9b52ca778584c}} 
+bool \hyperlink{class_i_v_a_a7b4ac8913c4ddb0f9ed9b52ca778584c}{Search\+For\+Face} (const Ti\+Xml\+Document \&a\+\_\+\+F256, float a\+\_\+f\+Threas\+Hold, int a\+\_\+\+Max\+Results, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Search for a face in the DB with the given F256 profile.. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_v_a_a28f7cfebce4b1ee7fd5fdac1226e8743}\label{class_i_v_a_a28f7cfebce4b1ee7fd5fdac1226e8743}} 
+bool \hyperlink{class_i_v_a_a28f7cfebce4b1ee7fd5fdac1226e8743}{Add\+Face} (const Ti\+Xml\+Document \&a\+\_\+\+F256, const std\+::string \&a\+\_\+\+Face\+Image, const std\+::string \&a\+\_\+\+Person\+Id, const std\+::string \&a\+\_\+\+Name, const std\+::string \&a\+\_\+\+Gender, const std\+::string \&a\+\_\+\+D\+OB, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Upload a new face along with a name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Intelligent Video Analytics service. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/services/\+I\+V\+A/I\+V\+A.\+h\item 
+src/services/\+I\+V\+A/I\+V\+A.\+cpp\end{DoxyCompactItemize}

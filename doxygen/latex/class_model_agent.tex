@@ -1,0 +1,101 @@
+\hypertarget{class_model_agent}{}\section{Model\+Agent Class Reference}
+\label{class_model_agent}\index{Model\+Agent@{Model\+Agent}}
+
+
+{\ttfamily \#include $<$Model\+Agent.\+h$>$}
+
+Inheritance diagram for Model\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_model_agent}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_model_agent_1_1_model}{Model}
+\begin{DoxyCompactList}\small\item\em This object holds a collection of Class\+Relationship objects. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_model_agent_1_1_relationship}{Relationship}
+\begin{DoxyCompactList}\small\item\em Map a class type to its vertex in the graph of self, others, or the world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_agent_a0e4db842aaa669acc5da6c17fae0a2de}\label{class_model_agent_a0e4db842aaa669acc5da6c17fae0a2de}} 
+enum \hyperlink{class_model_agent_a0e4db842aaa669acc5da6c17fae0a2de}{Graph\+Type} \{ \newline
+{\bfseries I\+N\+V\+A\+L\+ID} = -\/1, 
+{\bfseries S\+E\+LF}, 
+{\bfseries W\+O\+R\+LD}, 
+{\bfseries O\+T\+H\+E\+RS}, 
+\newline
+{\bfseries G\+R\+A\+P\+H\+\_\+\+T\+Y\+P\+E\+\_\+\+C\+O\+U\+NT}
+ \}\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{class_model_agent_a56f1c63cf032ea60ffc98e840bdfb105}\label{class_model_agent_a56f1c63cf032ea60ffc98e840bdfb105}} 
+typedef std\+::vector$<$ std\+::string $>$ {\bfseries File\+List}
+\item 
+\mbox{\Hypertarget{class_model_agent_aca3ac086dcb6a357227634aafb830076}\label{class_model_agent_aca3ac086dcb6a357227634aafb830076}} 
+typedef std\+::vector$<$ Model\+::\+SP $>$ {\bfseries Models}
+\item 
+\mbox{\Hypertarget{class_model_agent_a7f4b350e7059f7f09b56e05b7cb54d54}\label{class_model_agent_a7f4b350e7059f7f09b56e05b7cb54d54}} 
+typedef std\+::map$<$ std\+::string, Relationship\+::\+SP $>$ {\bfseries Relationship\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_agent_a7718df479a7722905a87ec3d4c46bd15}\label{class_model_agent_a7718df479a7722905a87ec3d4c46bd15}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_model_agent_ad108cb8a2224b171c2e73f11fcca1929}\label{class_model_agent_ad108cb8a2224b171c2e73f11fcca1929}} 
+\hyperlink{class_model_agent_ad108cb8a2224b171c2e73f11fcca1929}{Model\+Agent} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_agent_a1aa79fdeba8748e91c850482a8d90203}\label{class_model_agent_a1aa79fdeba8748e91c850482a8d90203}} 
+void \hyperlink{class_model_agent_a1aa79fdeba8748e91c850482a8d90203}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_agent_af79efe6ce6c2ab60b4089f79300975d3}\label{class_model_agent_af79efe6ce6c2ab60b4089f79300975d3}} 
+void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_model_agent_afd32cf6c082d96df2418822b866460ed}\label{class_model_agent_afd32cf6c082d96df2418822b866460ed}} 
+virtual bool \hyperlink{class_model_agent_afd32cf6c082d96df2418822b866460ed}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_agent}{I\+Agent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_agent_a10288ed4e99bd24c6faf305af56d62dd}\label{class_model_agent_a10288ed4e99bd24c6faf305af56d62dd}} 
+virtual bool {\bfseries On\+Stop} ()
+\item 
+\mbox{\Hypertarget{class_model_agent_ac7d469fa7ed30865e22b111041cd8966}\label{class_model_agent_ac7d469fa7ed30865e22b111041cd8966}} 
+const File\+List \& \hyperlink{class_model_agent_ac7d469fa7ed30865e22b111041cd8966}{Get\+Model\+Files} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_model_agent_af179fb7e54b6329ee84434be7819bb8b}\label{class_model_agent_af179fb7e54b6329ee84434be7819bb8b}} 
+const Models \& {\bfseries Get\+Models} () const
+\item 
+bool \hyperlink{class_model_agent_af75ddec339ede2777221a8fcd91b6044}{Load\+Model} (const std\+::string \&a\+\_\+\+Model\+File)
+\item 
+\mbox{\Hypertarget{class_model_agent_a67350e55d5c981b854c624eb6365d64c}\label{class_model_agent_a67350e55d5c981b854c624eb6365d64c}} 
+bool \hyperlink{class_model_agent_a67350e55d5c981b854c624eb6365d64c}{Save\+Model} (const Model\+::\+SP \&a\+\_\+sp\+Model)
+\begin{DoxyCompactList}\small\item\em Save the given model into it\textquotesingle{}s file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_model_agent_a02561694b29a4803437f2a79d68366d1}\label{class_model_agent_a02561694b29a4803437f2a79d68366d1}} 
+static const char $\ast$ {\bfseries Graph\+Type\+String} (\hyperlink{class_model_agent_a0e4db842aaa669acc5da6c17fae0a2de}{Graph\+Type} a\+\_\+\+Type)
+\item 
+\mbox{\Hypertarget{class_model_agent_a332382409bf973c757fe6f960f41bae9}\label{class_model_agent_a332382409bf973c757fe6f960f41bae9}} 
+static \hyperlink{class_model_agent_a0e4db842aaa669acc5da6c17fae0a2de}{Graph\+Type} {\bfseries String\+Graph\+Type} (const std\+::string \&a\+\_\+\+Type)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This agent bridges an object on the blackboard with it\textquotesingle{}s representation within our graphs of others, self, or the world. It uses a loaded model files to define the relationship between what is on the blackboard and what is in the knowledge graph. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_model_agent_af75ddec339ede2777221a8fcd91b6044}\label{class_model_agent_af75ddec339ede2777221a8fcd91b6044}} 
+\index{Model\+Agent@{Model\+Agent}!Load\+Model@{Load\+Model}}
+\index{Load\+Model@{Load\+Model}!Model\+Agent@{Model\+Agent}}
+\subsubsection{\texorpdfstring{Load\+Model()}{LoadModel()}}
+{\footnotesize\ttfamily bool Model\+Agent\+::\+Load\+Model (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Model\+File }\end{DoxyParamCaption})}
+
+Load the given model file into this blackboard, this allows us to map from blackboard objects to the graphs of others, self, and the world. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/Model\+Agent.\+h\item 
+src/agent/Model\+Agent.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,57 @@
+\hypertarget{class_gesture_sensor}{}\section{Gesture\+Sensor Class Reference}
+\label{class_gesture_sensor}\index{Gesture\+Sensor@{Gesture\+Sensor}}
+
+
+Base class for a \hyperlink{class_gesture}{Gesture} Sensor class.  
+
+
+
+
+{\ttfamily \#include $<$Gesture\+Sensor.\+h$>$}
+
+Inheritance diagram for Gesture\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_gesture_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_gesture_sensor_a2262485356c60a9d0bf5e6ffdcbe3a4c}\label{class_gesture_sensor_a2262485356c60a9d0bf5e6ffdcbe3a4c}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_gesture_sensor_ae69a58945c1572e0aac47a75a0fe4b7e}\label{class_gesture_sensor_ae69a58945c1572e0aac47a75a0fe4b7e}} 
+virtual void \hyperlink{class_gesture_sensor_ae69a58945c1572e0aac47a75a0fe4b7e}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialiazable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_sensor_a6e07179b4b799de3dea6234cde01ab3e}\label{class_gesture_sensor_a6e07179b4b799de3dea6234cde01ab3e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_gesture_sensor_ae62b4d22b9e8a116e92190d2d8dfe2ea}\label{class_gesture_sensor_ae62b4d22b9e8a116e92190d2d8dfe2ea}} 
+virtual const char $\ast$ \hyperlink{class_gesture_sensor_ae62b4d22b9e8a116e92190d2d8dfe2ea}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_sensor_a77ec8b522049505ce9f5072a59bf1c62}\label{class_gesture_sensor_a77ec8b522049505ce9f5072a59bf1c62}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_gesture_sensor_a4743a42260f8aeb0b71ef6d85eb3b343}\label{class_gesture_sensor_a4743a42260f8aeb0b71ef6d85eb3b343}} 
+virtual bool \hyperlink{class_gesture_sensor_a4743a42260f8aeb0b71ef6d85eb3b343}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_sensor_ab7db8e69526a7e98d3feb8889759b2ca}\label{class_gesture_sensor_ab7db8e69526a7e98d3feb8889759b2ca}} 
+virtual bool \hyperlink{class_gesture_sensor_ab7db8e69526a7e98d3feb8889759b2ca}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_sensor_adda207e7d5e86f79dbbfceede21f7c91}\label{class_gesture_sensor_adda207e7d5e86f79dbbfceede21f7c91}} 
+virtual void \hyperlink{class_gesture_sensor_adda207e7d5e86f79dbbfceede21f7c91}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_gesture_sensor_af9ebfec9b18d1eab71d06f8f0f62e9ed}\label{class_gesture_sensor_af9ebfec9b18d1eab71d06f8f0f62e9ed}} 
+virtual void \hyperlink{class_gesture_sensor_af9ebfec9b18d1eab71d06f8f0f62e9ed}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a \hyperlink{class_gesture}{Gesture} Sensor class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Gesture\+Sensor.\+h\item 
+src/sensors/Gesture\+Sensor.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\hypertarget{class_graph_self}{}\section{Graph\+Self Class Reference}
+\label{class_graph_self}\index{Graph\+Self@{Graph\+Self}}
+
+
+This class wraps the graph implementation that is used by self.  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Self.\+h$>$}
+
+Inheritance diagram for Graph\+Self\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_graph_self}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_graph_self_1_1_edge}{Edge}
+\item 
+class \hyperlink{class_graph_self_1_1_filter_traverser}{Filter\+Traverser}
+\item 
+class \hyperlink{class_graph_self_1_1_in_traverser}{In\+Traverser}
+\item 
+class \hyperlink{class_graph_self_1_1_i_self_traverser}{I\+Self\+Traverser}
+\begin{DoxyCompactList}\small\item\em base class for all \hyperlink{class_graph_self}{Graph\+Self} traverser classes \end{DoxyCompactList}\item 
+class \hyperlink{class_graph_self_1_1_out_traverser}{Out\+Traverser}
+\item 
+class \hyperlink{class_graph_self_1_1_vertex}{Vertex}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_self_a1056eed01bb12bab3637ccccd7ae6932}\label{class_graph_self_a1056eed01bb12bab3637ccccd7ae6932}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_graph_self}{Graph\+Self} $>$ \hyperlink{class_graph_self_a1056eed01bb12bab3637ccccd7ae6932}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_afc131300883779c56973328bf52b1f25}\label{class_graph_self_afc131300883779c56973328bf52b1f25}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_graph_self}{Graph\+Self} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_graph_self_abf1007417c7f7f1f26460db99c8cd79f}\label{class_graph_self_abf1007417c7f7f1f26460db99c8cd79f}} 
+typedef unsigned int {\bfseries Event\+Id}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_self_a9117b3058bdd226c37333bf9ecf77ff9}\label{class_graph_self_a9117b3058bdd226c37333bf9ecf77ff9}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_graph_self_af0198395a7cb48fc55b338eebb5b8661}\label{class_graph_self_af0198395a7cb48fc55b338eebb5b8661}} 
+\hyperlink{class_graph_self_af0198395a7cb48fc55b338eebb5b8661}{Graph\+Self} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a4db140e964aab6f90584b9866405636f}\label{class_graph_self_a4db140e964aab6f90584b9866405636f}} 
+{\bfseries Graph\+Self} (const std\+::string \&a\+\_\+\+Graph\+Id)
+\item 
+\mbox{\Hypertarget{class_graph_self_a1bdbda4234360a5745d5e290cb2697b2}\label{class_graph_self_a1bdbda4234360a5745d5e290cb2697b2}} 
+virtual void \hyperlink{class_graph_self_a1bdbda4234360a5745d5e290cb2697b2}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a9cc9cd31b18669d44470290dfe579972}\label{class_graph_self_a9cc9cd31b18669d44470290dfe579972}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_graph_self_ad6864c8fe4a5862e3687d041e0d4e2b1}\label{class_graph_self_ad6864c8fe4a5862e3687d041e0d4e2b1}} 
+virtual bool \hyperlink{class_graph_self_ad6864c8fe4a5862e3687d041e0d4e2b1}{Import} (const std\+::string \&a\+\_\+\+File)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_graph}{I\+Graph} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a841bcdcd8258023be6fad40620a8d0da}\label{class_graph_self_a841bcdcd8258023be6fad40620a8d0da}} 
+virtual bool \hyperlink{class_graph_self_a841bcdcd8258023be6fad40620a8d0da}{Export} (const std\+::string \&a\+\_\+\+File)
+\begin{DoxyCompactList}\small\item\em Export this graph into a flat file. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a347b1ef766600eba107974315bbd8ee6}\label{class_graph_self_a347b1ef766600eba107974315bbd8ee6}} 
+virtual bool \hyperlink{class_graph_self_a347b1ef766600eba107974315bbd8ee6}{Load} (On\+Graph\+Loaded a\+\_\+\+On\+Graph\+Loaded=On\+Graph\+Loaded())
+\begin{DoxyCompactList}\small\item\em Load this graph from storage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a9e084bd9c94d9eaedbccd6106392d79f}\label{class_graph_self_a9e084bd9c94d9eaedbccd6106392d79f}} 
+virtual bool \hyperlink{class_graph_self_a9e084bd9c94d9eaedbccd6106392d79f}{Save} ()
+\begin{DoxyCompactList}\small\item\em Save any changes to this graph to storage. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_ad4ad936c38233bdd82d946410896387f}\label{class_graph_self_ad4ad936c38233bdd82d946410896387f}} 
+virtual bool \hyperlink{class_graph_self_ad4ad936c38233bdd82d946410896387f}{Close} ()
+\begin{DoxyCompactList}\small\item\em Close this graph storage, any unsaved changes will be lost. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_aa6582df8149221d0bf2d234c53ca9f15}\label{class_graph_self_aa6582df8149221d0bf2d234c53ca9f15}} 
+virtual void \hyperlink{class_graph_self_aa6582df8149221d0bf2d234c53ca9f15}{Clear} ()
+\begin{DoxyCompactList}\small\item\em Clear this graph of all vertices and edges. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a09c800ad3ad30f30837842aaae2497b0}\label{class_graph_self_a09c800ad3ad30f30837842aaae2497b0}} 
+virtual void \hyperlink{class_graph_self_a09c800ad3ad30f30837842aaae2497b0}{Optimize} ()
+\begin{DoxyCompactList}\small\item\em Optimize the graph. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_graph_self_aa1514f3883bef6d823bd56d91a565b9c}{Get\+Edge\+Count} () const
+\item 
+\mbox{\Hypertarget{class_graph_self_a4fa48390a299f7e0453d7557e8a094c9}\label{class_graph_self_a4fa48390a299f7e0453d7557e8a094c9}} 
+virtual \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} {\bfseries Get\+Edge\+By\+Index} (Vertex\+Index a\+\_\+n\+Index) const
+\item 
+\mbox{\Hypertarget{class_graph_self_a604f142168d4ae906649956a385c06d1}\label{class_graph_self_a604f142168d4ae906649956a385c06d1}} 
+virtual size\+\_\+t {\bfseries Get\+Vertex\+Count} () const
+\item 
+\mbox{\Hypertarget{class_graph_self_aa8315c3e17031778264e97ca4795825a}\label{class_graph_self_aa8315c3e17031778264e97ca4795825a}} 
+virtual \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Get\+Vertex\+By\+Index} (Vertex\+Index a\+\_\+n\+Index) const
+\item 
+virtual void \hyperlink{class_graph_self_a64103889965233bb574b55bf2b7b1188}{Merge\+Graph} (const I\+Graph\+::\+SP \&a\+\_\+sp\+Graph)
+\item 
+\mbox{\Hypertarget{class_graph_self_a405b9a94515464cc4f48d1e7d9952f98}\label{class_graph_self_a405b9a94515464cc4f48d1e7d9952f98}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Traverser\+::\+SP} \hyperlink{class_graph_self_a405b9a94515464cc4f48d1e7d9952f98}{Create\+Traverser} (const Condition \&a\+\_\+sp\+Cond=\hyperlink{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}{N\+U\+L\+L\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON})
+\begin{DoxyCompactList}\small\item\em Create a new traverser object for searching this graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a31d2e85031fa61743379938a17209ce6}\label{class_graph_self_a31d2e85031fa61743379938a17209ce6}} 
+virtual \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} {\bfseries Find\+Edge} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dest, const \hyperlink{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}{Hash\+Id} \&a\+\_\+\+Hash\+Id)
+\item 
+\mbox{\Hypertarget{class_graph_self_a71fa21ced08e0ab887c3805ec5b2220d}\label{class_graph_self_a71fa21ced08e0ab887c3805ec5b2220d}} 
+virtual \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} {\bfseries Resolve\+Edge} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Src, const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+\+Dest, const Json\+::\+Value \&a\+\_\+\+Properties=Json\+::\+Value(), float a\+\_\+f\+Weight=1.\+0f)
+\item 
+\mbox{\Hypertarget{class_graph_self_aa83ef575c368738ed3e697fd19b16ce2}\label{class_graph_self_aa83ef575c368738ed3e697fd19b16ce2}} 
+virtual bool {\bfseries Remove\+Edge} (const \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_graph_self_a6afb274f3c9d5b016be3fe3fcd5fc8e6}\label{class_graph_self_a6afb274f3c9d5b016be3fe3fcd5fc8e6}} 
+virtual \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \hyperlink{class_graph_self_a6afb274f3c9d5b016be3fe3fcd5fc8e6}{Find\+Vertex} (const std\+::string \&a\+\_\+\+Hash\+Id)
+\begin{DoxyCompactList}\small\item\em Find the provided vertex by it\textquotesingle{}s hash ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_aeb2c9da8116fe4d60649d81a9d32e109}\label{class_graph_self_aeb2c9da8116fe4d60649d81a9d32e109}} 
+virtual \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \hyperlink{class_graph_self_aeb2c9da8116fe4d60649d81a9d32e109}{Resolve\+Vertex} (const Json\+::\+Value \&a\+\_\+\+Properties=Json\+::\+Value())
+\begin{DoxyCompactList}\small\item\em Find/\+Create a new vertex in this graph, returns the I\+Vert object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_a01288cd0b6d452b72b619f1a2f9564f6}\label{class_graph_self_a01288cd0b6d452b72b619f1a2f9564f6}} 
+virtual bool {\bfseries Add\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Vertex)
+\item 
+\mbox{\Hypertarget{class_graph_self_a08553eba89389e58348fd5923e9c8e09}\label{class_graph_self_a08553eba89389e58348fd5923e9c8e09}} 
+virtual bool {\bfseries Remove\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Vertex)
+\item 
+\mbox{\Hypertarget{class_graph_self_a467e165be6d2263403b5437f7df84245}\label{class_graph_self_a467e165be6d2263403b5437f7df84245}} 
+virtual std\+::string \hyperlink{class_graph_self_a467e165be6d2263403b5437f7df84245}{To\+String} ()
+\begin{DoxyCompactList}\small\item\em Dump graph into string for debugging purposes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This class wraps the graph implementation that is used by self. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_self_aa1514f3883bef6d823bd56d91a565b9c}\label{class_graph_self_aa1514f3883bef6d823bd56d91a565b9c}} 
+\index{Graph\+Self@{Graph\+Self}!Get\+Edge\+Count@{Get\+Edge\+Count}}
+\index{Get\+Edge\+Count@{Get\+Edge\+Count}!Graph\+Self@{Graph\+Self}}
+\subsubsection{\texorpdfstring{Get\+Edge\+Count()}{GetEdgeCount()}}
+{\footnotesize\ttfamily size\+\_\+t Graph\+Self\+::\+Get\+Edge\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Accessors for the contained data -\/ N\+O\+TE\+: Removing a vertex/edges do not reduce the vertex/edge count. Those removed vertex/edge\textquotesingle{}s will return a N\+U\+LL if you call Get\+Vertex/\+Get\+Edge. Calling \hyperlink{class_graph_self_a09c800ad3ad30f30837842aaae2497b0}{Optimize()} will re-\/pack the graph and the vertex/edge count will be accurate. 
+
+Implements \hyperlink{class_i_graph_a46918c61445d33e70de6636b81e0a829}{I\+Graph}.
+
+\mbox{\Hypertarget{class_graph_self_a64103889965233bb574b55bf2b7b1188}\label{class_graph_self_a64103889965233bb574b55bf2b7b1188}} 
+\index{Graph\+Self@{Graph\+Self}!Merge\+Graph@{Merge\+Graph}}
+\index{Merge\+Graph@{Merge\+Graph}!Graph\+Self@{Graph\+Self}}
+\subsubsection{\texorpdfstring{Merge\+Graph()}{MergeGraph()}}
+{\footnotesize\ttfamily void Graph\+Self\+::\+Merge\+Graph (\begin{DoxyParamCaption}\item[{const I\+Graph\+::\+SP \&}]{a\+\_\+sp\+Graph }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Add the provided graph into this graph. This routine will not add a new vertex if another vertex already exists with the same hash ID. The same goes for edges connecting vertex objects, new edges will not be added between vertex objects if another edge already exists with the same hash id. 
+
+Implements \hyperlink{class_i_graph_ac18561fc46a616fde450687f557897ac}{I\+Graph}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/Graph\+Self.\+h\item 
+src/models/Graph\+Self.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\hypertarget{class_u_r_l_agent}{}\section{U\+R\+L\+Agent Class Reference}
+\label{class_u_r_l_agent}\index{U\+R\+L\+Agent@{U\+R\+L\+Agent}}
+
+
+{\ttfamily \#include $<$U\+R\+L\+Agent.\+h$>$}
+
+Inheritance diagram for U\+R\+L\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_u_r_l_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_r_l_agent_a25b983d8e03216705568557a5e6ab73a}\label{class_u_r_l_agent_a25b983d8e03216705568557a5e6ab73a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_u_r_l_agent_a77f059d4d63b24e78cea5faf6ce0dcf5}\label{class_u_r_l_agent_a77f059d4d63b24e78cea5faf6ce0dcf5}} 
+virtual void \hyperlink{class_u_r_l_agent_a77f059d4d63b24e78cea5faf6ce0dcf5}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_agent_a1895e824f6c3c7d8f01e0400b2cb101a}\label{class_u_r_l_agent_a1895e824f6c3c7d8f01e0400b2cb101a}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_u_r_l_agent_adda66bbf1698fa889a188642806c7eb2}\label{class_u_r_l_agent_adda66bbf1698fa889a188642806c7eb2}} 
+virtual bool \hyperlink{class_u_r_l_agent_adda66bbf1698fa889a188642806c7eb2}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_agent}{I\+Agent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_agent_a3f9ffbcb875a9639035d2c4a590967c7}\label{class_u_r_l_agent_a3f9ffbcb875a9639035d2c4a590967c7}} 
+virtual bool {\bfseries On\+Stop} ()
+\item 
+\mbox{\Hypertarget{class_u_r_l_agent_a2b51d491ca90b72c41861358c5c67c04}\label{class_u_r_l_agent_a2b51d491ca90b72c41861358c5c67c04}} 
+void {\bfseries On\+Heart\+Beat\+Timer} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This agent handles displaying the U\+RL (e.\+g. Way\+Blazer) It acts on a U\+RL object placed on the blackboard. It sends the U\+RL using a service to a system for displaying the U\+RL. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/U\+R\+L\+Agent.\+h\item 
+src/agent/U\+R\+L\+Agent.\+cpp\end{DoxyCompactItemize}

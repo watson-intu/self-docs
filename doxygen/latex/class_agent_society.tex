@@ -1,0 +1,50 @@
+\hypertarget{class_agent_society}{}\section{Agent\+Society Class Reference}
+\label{class_agent_society}\index{Agent\+Society@{Agent\+Society}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_agent_society_a97390fc3b2f25357b0b771ccaa919f8c}\label{class_agent_society_a97390fc3b2f25357b0b771ccaa919f8c}} 
+typedef std\+::vector$<$ \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{I\+Agent\+::\+SP} $>$ \hyperlink{class_agent_society_a97390fc3b2f25357b0b771ccaa919f8c}{Agent\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_ae02963e0f837bc38c1ab44ff44218d91}\label{class_agent_society_ae02963e0f837bc38c1ab44ff44218d91}} 
+typedef Factory$<$ \hyperlink{class_i_agent}{I\+Agent} $>$ {\bfseries Agent\+Factory}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_agent_society_a66fc039ea4050420d546cb9e7f7e508a}\label{class_agent_society_a66fc039ea4050420d546cb9e7f7e508a}} 
+\hyperlink{class_agent_society_a66fc039ea4050420d546cb9e7f7e508a}{Agent\+Society} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_ab19c6fddacfee7e1b65437eecc04fc51}\label{class_agent_society_ab19c6fddacfee7e1b65437eecc04fc51}} 
+const \hyperlink{class_agent_society_a97390fc3b2f25357b0b771ccaa919f8c}{Agent\+List} \& \hyperlink{class_agent_society_ab19c6fddacfee7e1b65437eecc04fc51}{Get\+Agent\+List} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_af72ffccc3b4149c3552e8d14738cdc6b}\label{class_agent_society_af72ffccc3b4149c3552e8d14738cdc6b}} 
+bool \hyperlink{class_agent_society_af72ffccc3b4149c3552e8d14738cdc6b}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_ad6959698b4d5ee542ff526cf61f3342f}\label{class_agent_society_ad6959698b4d5ee542ff526cf61f3342f}} 
+bool \hyperlink{class_agent_society_ad6959698b4d5ee542ff526cf61f3342f}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_a94441afad0798946e500df24ee207c79}\label{class_agent_society_a94441afad0798946e500df24ee207c79}} 
+bool \hyperlink{class_agent_society_a94441afad0798946e500df24ee207c79}{Add\+Agent} (const \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{I\+Agent\+::\+SP} \&a\+\_\+sp\+Agent, bool a\+\_\+b\+Override=false)
+\begin{DoxyCompactList}\small\item\em Add the agent to this society, it takes ownership of the object if accepted. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_a4edf60330b175d2f55e670fc834480cd}\label{class_agent_society_a4edf60330b175d2f55e670fc834480cd}} 
+bool \hyperlink{class_agent_society_a4edf60330b175d2f55e670fc834480cd}{Remove\+Agent} (const \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{I\+Agent\+::\+SP} \&a\+\_\+sp\+Agent)
+\begin{DoxyCompactList}\small\item\em Remove a agent from this society. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_agent_society_a0e61af59353f3b4866105e81aa7e4bcb}\label{class_agent_society_a0e61af59353f3b4866105e81aa7e4bcb}} 
+bool {\bfseries Find\+Agents\+By\+Name} (const std\+::string \&a\+\_\+\+Name, std\+::vector$<$ \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{I\+Agent\+::\+SP} $>$ \&a\+\_\+\+Overrides)
+\item 
+\mbox{\Hypertarget{class_agent_society_ae92d7bb4c6b7f7ce75c4568496dd1719}\label{class_agent_society_ae92d7bb4c6b7f7ce75c4568496dd1719}} 
+void {\bfseries On\+Agent\+Override} (\hyperlink{class_i_agent}{I\+Agent} $\ast$a\+\_\+p\+Agent)
+\item 
+\mbox{\Hypertarget{class_agent_society_a3949bca346a6d643d14a985605bff3c1}\label{class_agent_society_a3949bca346a6d643d14a985605bff3c1}} 
+void {\bfseries On\+Agent\+Override\+End} (\hyperlink{class_i_agent}{I\+Agent} $\ast$a\+\_\+p\+Agent)
+\item 
+\mbox{\Hypertarget{class_agent_society_af79303e6e9a1ffdbaade0abe3b3cffee}\label{class_agent_society_af79303e6e9a1ffdbaade0abe3b3cffee}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries Get\+Agent} () const
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/Agent\+Society.\+h\item 
+src/agent/Agent\+Society.\+cpp\end{DoxyCompactItemize}

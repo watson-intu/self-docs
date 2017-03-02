@@ -1,0 +1,53 @@
+\hypertarget{class_i_classifier}{}\section{I\+Classifier Class Reference}
+\label{class_i_classifier}\index{I\+Classifier@{I\+Classifier}}
+
+
+{\ttfamily \#include $<$I\+Classifier.\+h$>$}
+
+Inheritance diagram for I\+Classifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.958042cm]{class_i_classifier}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_classifier_a532d21507aef94011669a0b73bd49c2d}\label{class_i_classifier_a532d21507aef94011669a0b73bd49c2d}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_classifier}{I\+Classifier} $>$ \hyperlink{class_i_classifier_a532d21507aef94011669a0b73bd49c2d}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_classifier_aae20fb920d287fa048ca3603c950036f}\label{class_i_classifier_aae20fb920d287fa048ca3603c950036f}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_classifier}{I\+Classifier} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_classifier_a95d67344da5f1e0fa1da3d701d4bfd3f}\label{class_i_classifier_a95d67344da5f1e0fa1da3d701d4bfd3f}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_classifier_a346562110d1f71b7543b7e3e4b861118}\label{class_i_classifier_a346562110d1f71b7543b7e3e4b861118}} 
+virtual void \hyperlink{class_i_classifier_a346562110d1f71b7543b7e3e4b861118}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_classifier_ada0c3d856f88fdc6561bad90005f7fe7}\label{class_i_classifier_ada0c3d856f88fdc6561bad90005f7fe7}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_classifier_a856b76897089d0bc0fa113c7fe84c9ef}\label{class_i_classifier_a856b76897089d0bc0fa113c7fe84c9ef}} 
+\hyperlink{class_i_classifier_a856b76897089d0bc0fa113c7fe84c9ef}{I\+Classifier} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_classifier_ac27b83132de5d650fdfcfe62a61d73c8}\label{class_i_classifier_ac27b83132de5d650fdfcfe62a61d73c8}} 
+virtual const char $\ast$ \hyperlink{class_i_classifier_ac27b83132de5d650fdfcfe62a61d73c8}{Get\+Name} () const =0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_classifier_ab43bd079a6c539bcbeef7d47cc89d2d2}\label{class_i_classifier_ab43bd079a6c539bcbeef7d47cc89d2d2}} 
+virtual bool {\bfseries On\+Start} ()=0
+\item 
+\mbox{\Hypertarget{class_i_classifier_ad13b23a90aecd95f3bf0fc918e583e62}\label{class_i_classifier_ad13b23a90aecd95f3bf0fc918e583e62}} 
+virtual bool {\bfseries On\+Stop} ()=0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class manages all active classifier instances. This classifiers subscribe to sensors and add concepts to the \hyperlink{class_black_board}{Black\+Board} object contained by the \hyperlink{class_self_instance}{Self\+Instance}. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/classifiers/I\+Classifier.\+h\end{DoxyCompactItemize}

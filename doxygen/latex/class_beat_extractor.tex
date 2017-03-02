@@ -1,0 +1,46 @@
+\hypertarget{class_beat_extractor}{}\section{Beat\+Extractor Class Reference}
+\label{class_beat_extractor}\index{Beat\+Extractor@{Beat\+Extractor}}
+
+
+{\ttfamily \#include $<$Beat\+Extractor.\+h$>$}
+
+Inheritance diagram for Beat\+Extractor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.625000cm]{class_beat_extractor}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_beat_extractor_ac3b3f8d1723f4e4992e918e02265602a}\label{class_beat_extractor_ac3b3f8d1723f4e4992e918e02265602a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_beat_extractor_a3c8410a38f7750f44160ddf21ff21336}\label{class_beat_extractor_a3c8410a38f7750f44160ddf21ff21336}} 
+\hyperlink{class_beat_extractor_a3c8410a38f7750f44160ddf21ff21336}{Beat\+Extractor} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_beat_extractor_a9f8e101a85fc83b9613c1fa1aa4db8b1}\label{class_beat_extractor_a9f8e101a85fc83b9613c1fa1aa4db8b1}} 
+virtual void \hyperlink{class_beat_extractor_a9f8e101a85fc83b9613c1fa1aa4db8b1}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialziable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_beat_extractor_a4375f7f44e267b8e79c87644c22b6d08}\label{class_beat_extractor_a4375f7f44e267b8e79c87644c22b6d08}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_beat_extractor_ae0fda2270d14b1a8d712dcfda853b64c}\label{class_beat_extractor_ae0fda2270d14b1a8d712dcfda853b64c}} 
+virtual const char $\ast$ \hyperlink{class_beat_extractor_ae0fda2270d14b1a8d712dcfda853b64c}{Get\+Name} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_feature_extractor}{I\+Feature\+Extractor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_beat_extractor_ae6823071ceed497f3e5f33a799c1adc5}\label{class_beat_extractor_ae6823071ceed497f3e5f33a799c1adc5}} 
+virtual bool {\bfseries On\+Start} ()
+\item 
+\mbox{\Hypertarget{class_beat_extractor_a4e6b9f8229e11f66110bf1ec05f3506b}\label{class_beat_extractor_a4e6b9f8229e11f66110bf1ec05f3506b}} 
+virtual bool {\bfseries On\+Stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This filter doesn\textquotesingle{}t filter audio, it just detects music beats and posts a Beat object to the blackboard when a music beat is detected. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/extractors/Beat\+Extractor.\+h\item 
+src/extractors/Beat\+Extractor.\+cpp\end{DoxyCompactItemize}

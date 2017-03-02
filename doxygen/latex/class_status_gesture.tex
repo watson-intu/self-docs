@@ -1,0 +1,63 @@
+\hypertarget{class_status_gesture}{}\section{Status\+Gesture Class Reference}
+\label{class_status_gesture}\index{Status\+Gesture@{Status\+Gesture}}
+
+
+This gesture wraps a status indicator on the robot.  
+
+
+
+
+{\ttfamily \#include $<$Status\+Gesture.\+h$>$}
+
+Inheritance diagram for Status\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_status_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_status_gesture_a7f353d780e9c3b115e9f6b0bafd16e92}\label{class_status_gesture_a7f353d780e9c3b115e9f6b0bafd16e92}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_status_gesture_a79c2131f710c95044672a3de38c53910}\label{class_status_gesture_a79c2131f710c95044672a3de38c53910}} 
+\hyperlink{class_status_gesture_a79c2131f710c95044672a3de38c53910}{Status\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_gesture_a79dc647b42f0bd86f2be667609fdd636}\label{class_status_gesture_a79dc647b42f0bd86f2be667609fdd636}} 
+virtual void \hyperlink{class_status_gesture_a79dc647b42f0bd86f2be667609fdd636}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_gesture_abc820c17f218b0bd20fe5fdad8318fc9}\label{class_status_gesture_abc820c17f218b0bd20fe5fdad8318fc9}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_status_gesture_af2d43cd68d2831424d9bed4c8f59941d}\label{class_status_gesture_af2d43cd68d2831424d9bed4c8f59941d}} 
+virtual bool \hyperlink{class_status_gesture_af2d43cd68d2831424d9bed4c8f59941d}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_gesture_a5037a5f32e125b63d6fbd04d94936c40}\label{class_status_gesture_a5037a5f32e125b63d6fbd04d94936c40}} 
+virtual bool \hyperlink{class_status_gesture_a5037a5f32e125b63d6fbd04d94936c40}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_status_gesture_a8ac29241829de3bb86ae269668a3145f}\label{class_status_gesture_a8ac29241829de3bb86ae269668a3145f}} 
+float \hyperlink{class_status_gesture_a8ac29241829de3bb86ae269668a3145f}{m\+\_\+\+Red}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_gesture_a0405e60c8c4f9d633ef052acbb5ee99a}\label{class_status_gesture_a0405e60c8c4f9d633ef052acbb5ee99a}} 
+float {\bfseries m\+\_\+\+Green}
+\item 
+\mbox{\Hypertarget{class_status_gesture_a5cdfe986ef967fb8acff58658ef551c0}\label{class_status_gesture_a5cdfe986ef967fb8acff58658ef551c0}} 
+float {\bfseries m\+\_\+\+Blue}
+\item 
+\mbox{\Hypertarget{class_status_gesture_a49edc346230e6c51dc3784f9660e83d5}\label{class_status_gesture_a49edc346230e6c51dc3784f9660e83d5}} 
+std\+::map$<$ std\+::string, std\+::string $>$ {\bfseries m\+\_\+\+State\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture wraps a status indicator on the robot. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Status\+Gesture.\+h\item 
+src/gestures/Status\+Gesture.\+cpp\end{DoxyCompactItemize}

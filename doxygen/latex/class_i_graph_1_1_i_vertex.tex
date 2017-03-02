@@ -1,0 +1,155 @@
+\hypertarget{class_i_graph_1_1_i_vertex}{}\section{I\+Graph\+:\+:I\+Vertex Class Reference}
+\label{class_i_graph_1_1_i_vertex}\index{I\+Graph\+::\+I\+Vertex@{I\+Graph\+::\+I\+Vertex}}
+
+
+This class defines a vertices\textquotesingle{}s in the knowledge graph.  
+
+
+
+
+{\ttfamily \#include $<$I\+Graph.\+h$>$}
+
+Inheritance diagram for I\+Graph\+:\+:I\+Vertex\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_graph_1_1_i_vertex}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}\label{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_vertex}{I\+Vertex} $>$ \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a9ede3f4a5dfe4a97c01e9a4b3a8d34d0}\label{class_i_graph_1_1_i_vertex_a9ede3f4a5dfe4a97c01e9a4b3a8d34d0}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_vertex}{I\+Vertex} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a62bc11e3e62b8bf7b2ec9df6fc0e5e75}\label{class_i_graph_1_1_i_vertex_a62bc11e3e62b8bf7b2ec9df6fc0e5e75}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_edge}{I\+Edge} $>$ {\bfseries Edge\+SP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_ab67dad14501e037dc0cdf423e3d85679}\label{class_i_graph_1_1_i_vertex_ab67dad14501e037dc0cdf423e3d85679}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a1333d1efdd907b605d4a87329f9c63cf}\label{class_i_graph_1_1_i_vertex_a1333d1efdd907b605d4a87329f9c63cf}} 
+\hyperlink{class_i_graph}{I\+Graph} $\ast$ \hyperlink{class_i_graph_1_1_i_vertex_a1333d1efdd907b605d4a87329f9c63cf}{Get\+Graph} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a6e7d9eb6b6a713a2093ccb0cff1ff644}\label{class_i_graph_1_1_i_vertex_a6e7d9eb6b6a713a2093ccb0cff1ff644}} 
+Vertex\+Index {\bfseries Get\+Index} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_ae40b3e2c59776d90c16ea1a25bc41d8d}\label{class_i_graph_1_1_i_vertex_ae40b3e2c59776d90c16ea1a25bc41d8d}} 
+const \hyperlink{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}{Hash\+Id} \& {\bfseries Get\+Hash\+Id} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_aa7e8c6bf3fed2214f340da58fb587065}\label{class_i_graph_1_1_i_vertex_aa7e8c6bf3fed2214f340da58fb587065}} 
+const Json\+::\+Value \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Property) const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a7eb322edccc5fd51c9852a48f19407e7}\label{class_i_graph_1_1_i_vertex_a7eb322edccc5fd51c9852a48f19407e7}} 
+const Json\+::\+Value \& {\bfseries Get\+Properties} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_ab8d4d62e7d39fbd37bcc5cb9ec6a0535}\label{class_i_graph_1_1_i_vertex_ab8d4d62e7d39fbd37bcc5cb9ec6a0535}} 
+double {\bfseries Get\+Time} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_accc3c41ceb133fbccbcf9816e8a37382}\label{class_i_graph_1_1_i_vertex_accc3c41ceb133fbccbcf9816e8a37382}} 
+const Edge\+List \& {\bfseries Get\+In\+Edges} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a9d435a11de3a4af4e88bbd7573ac5ce3}\label{class_i_graph_1_1_i_vertex_a9d435a11de3a4af4e88bbd7573ac5ce3}} 
+const Edge\+List \& {\bfseries Get\+Out\+Edges} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a373221f004432cebe4b85132e1443e3f}\label{class_i_graph_1_1_i_vertex_a373221f004432cebe4b85132e1443e3f}} 
+bool {\bfseries Is\+Dirty} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a7ac93c1a85e66f6d2f649e53a16d552e}\label{class_i_graph_1_1_i_vertex_a7ac93c1a85e66f6d2f649e53a16d552e}} 
+void \hyperlink{class_i_graph_1_1_i_vertex_a7ac93c1a85e66f6d2f649e53a16d552e}{Set\+Graph} (\hyperlink{class_i_graph}{I\+Graph} $\ast$a\+\_\+p\+Graph)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_acaf8a3b43c6daccbfbc3cc22d1bf1fc5}\label{class_i_graph_1_1_i_vertex_acaf8a3b43c6daccbfbc3cc22d1bf1fc5}} 
+void {\bfseries Set\+Index} (Vertex\+Index a\+\_\+n\+Index)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a770219ef2fee791327d0cf783222d994}\label{class_i_graph_1_1_i_vertex_a770219ef2fee791327d0cf783222d994}} 
+virtual void {\bfseries Update\+Hash\+Id} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_af5096c350a78645a18b4f80d36e68043}\label{class_i_graph_1_1_i_vertex_af5096c350a78645a18b4f80d36e68043}} 
+Json\+::\+Value \& \hyperlink{class_i_graph_1_1_i_vertex_af5096c350a78645a18b4f80d36e68043}{operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Property)
+\begin{DoxyCompactList}\small\item\em N\+O\+TE\+: You should invoke Update\+Hash\+Id() manually after updating properties with operator\mbox{[}\mbox{]} or Get\+Properties() \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a1a17257e5b5767729cee582bd38f7f56}\label{class_i_graph_1_1_i_vertex_a1a17257e5b5767729cee582bd38f7f56}} 
+Json\+::\+Value \& {\bfseries Get\+Properties} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a5d96ab6b42f7baac3af2f7a8833a5c89}\label{class_i_graph_1_1_i_vertex_a5d96ab6b42f7baac3af2f7a8833a5c89}} 
+void {\bfseries Set\+Properties} (const Json\+::\+Value \&a\+\_\+\+Properties, bool a\+\_\+b\+Update\+Hash=true)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_aec151462d4cf7a56ed519dcacd9984f2}\label{class_i_graph_1_1_i_vertex_aec151462d4cf7a56ed519dcacd9984f2}} 
+void {\bfseries Set\+Hash\+Id} (const std\+::string \&a\+\_\+\+Hash\+Id)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a5769d328cbfa14c64354db10b88d22ca}\label{class_i_graph_1_1_i_vertex_a5769d328cbfa14c64354db10b88d22ca}} 
+void {\bfseries Set\+Time} (double a\+\_\+f\+Time)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_af5b4cb5dcf82ed01ed5b5a129fe3622f}\label{class_i_graph_1_1_i_vertex_af5b4cb5dcf82ed01ed5b5a129fe3622f}} 
+void {\bfseries Add\+In\+Edge} (const Edge\+SP \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a4c0404d2c486c8c6bc3459f1230e270f}\label{class_i_graph_1_1_i_vertex_a4c0404d2c486c8c6bc3459f1230e270f}} 
+bool {\bfseries Remove\+In\+Edge} (const Edge\+SP \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_af01d924d6e9c6fedf64680659f27ccfe}\label{class_i_graph_1_1_i_vertex_af01d924d6e9c6fedf64680659f27ccfe}} 
+void {\bfseries Add\+Out\+Edge} (const Edge\+SP \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a94ffc85b9c85e91d2084931a6e2cfc05}\label{class_i_graph_1_1_i_vertex_a94ffc85b9c85e91d2084931a6e2cfc05}} 
+bool {\bfseries Remove\+Out\+Edge} (const Edge\+SP \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a4602c192fbc7d21b9d099eb59c1453c7}\label{class_i_graph_1_1_i_vertex_a4602c192fbc7d21b9d099eb59c1453c7}} 
+void {\bfseries Set\+Dirty} (bool a\+\_\+b\+Dirty)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a8a2445e43dfc6b86a2a46682e9fa143f}\label{class_i_graph_1_1_i_vertex_a8a2445e43dfc6b86a2a46682e9fa143f}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \hyperlink{class_i_graph_1_1_i_vertex_a8a2445e43dfc6b86a2a46682e9fa143f}{Resolve\+Vertex} (const Json\+::\+Value \&a\+\_\+\+Properties, const Json\+::\+Value \&a\+\_\+\+Edge\+Properties, float a\+\_\+f\+Weight=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Make a new vertex connected to this vertex by the provided edge. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a7c55ee302427e3069e3f708b1ef4ce27}\label{class_i_graph_1_1_i_vertex_a7c55ee302427e3069e3f708b1ef4ce27}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Resolve\+Vertex} (const Json\+::\+Value \&a\+\_\+\+Properties, const char $\ast$a\+\_\+p\+Edge\+Label, float a\+\_\+f\+Weight=1.\+0f)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a7c3e83b576674e139b77bf96b4c508d0}\label{class_i_graph_1_1_i_vertex_a7c3e83b576674e139b77bf96b4c508d0}} 
+bool {\bfseries Find\+Out\+Edges} (const char $\ast$a\+\_\+p\+Edge\+Label, Edge\+List \&a\+\_\+\+Edges)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_af2b6512e45673f2259ec35bfed6d27a8}\label{class_i_graph_1_1_i_vertex_af2b6512e45673f2259ec35bfed6d27a8}} 
+bool {\bfseries Find\+In\+Edges} (const char $\ast$a\+\_\+p\+Edge\+Label, Edge\+List \&a\+\_\+\+Edges)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a56519e9e2f5998dcac8dfbc1f736fd77}\label{class_i_graph_1_1_i_vertex_a56519e9e2f5998dcac8dfbc1f736fd77}} 
+static bool {\bfseries Sort\+Edges} (const Edge\+SP \&a1, const Edge\+SP \&a2)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a3b1cf7a46d91d0af5139560b3a0b90ce}\label{class_i_graph_1_1_i_vertex_a3b1cf7a46d91d0af5139560b3a0b90ce}} 
+\hyperlink{class_i_graph}{I\+Graph} $\ast$ \hyperlink{class_i_graph_1_1_i_vertex_a3b1cf7a46d91d0af5139560b3a0b90ce}{m\+\_\+p\+Graph}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a9348c0642fc2eccb99b702e0c7b88ec2}\label{class_i_graph_1_1_i_vertex_a9348c0642fc2eccb99b702e0c7b88ec2}} 
+Vertex\+Index {\bfseries m\+\_\+n\+Index}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_ad1a8dd207aa6879eab2a08f4b46379b0}\label{class_i_graph_1_1_i_vertex_ad1a8dd207aa6879eab2a08f4b46379b0}} 
+\hyperlink{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}{Hash\+Id} {\bfseries m\+\_\+\+Hash\+Id}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_afc6549354bf6d1f6aa5d735e37a315e0}\label{class_i_graph_1_1_i_vertex_afc6549354bf6d1f6aa5d735e37a315e0}} 
+Json\+::\+Value {\bfseries m\+\_\+\+Properties}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_ae17ad409a99aead275570bbf12db2000}\label{class_i_graph_1_1_i_vertex_ae17ad409a99aead275570bbf12db2000}} 
+double {\bfseries m\+\_\+f\+Time}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a59070df2fa32eab3eb7e10f1f82875ed}\label{class_i_graph_1_1_i_vertex_a59070df2fa32eab3eb7e10f1f82875ed}} 
+Edge\+List {\bfseries m\+\_\+\+In\+Edges}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a8e5709430f3fe54144cdd93d1f68dfd4}\label{class_i_graph_1_1_i_vertex_a8e5709430f3fe54144cdd93d1f68dfd4}} 
+Edge\+List {\bfseries m\+\_\+\+Out\+Edges}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_vertex_a77f9bde47fca5d73af196c53be88c850}\label{class_i_graph_1_1_i_vertex_a77f9bde47fca5d73af196c53be88c850}} 
+bool {\bfseries m\+\_\+b\+Dirty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class defines a vertices\textquotesingle{}s in the knowledge graph. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/I\+Graph.\+h\item 
+src/models/I\+Graph\+Impl.\+h\end{DoxyCompactItemize}

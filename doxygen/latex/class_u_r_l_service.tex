@@ -1,0 +1,107 @@
+\hypertarget{class_u_r_l_service}{}\section{U\+R\+L\+Service Class Reference}
+\label{class_u_r_l_service}\index{U\+R\+L\+Service@{U\+R\+L\+Service}}
+
+
+{\ttfamily \#include $<$U\+R\+L\+Service.\+h$>$}
+
+Inheritance diagram for U\+R\+L\+Service\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_u_r_l_service}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_u_r_l_service_1_1_heart_beat}{Heart\+Beat}
+\item 
+class \hyperlink{class_u_r_l_service_1_1_service_status_checker}{Service\+Status\+Checker}
+\begin{DoxyCompactList}\small\item\em This class is responsible for checking whether the service is available or not. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_u_r_l_service_1_1_u_r_l_service_data}{U\+R\+L\+Service\+Data}
+\begin{DoxyCompactList}\small\item\em Data containers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_a0459fed277e6b3e9f933e89f06b05e18}\label{class_u_r_l_service_a0459fed277e6b3e9f933e89f06b05e18}} 
+typedef Delegate$<$ \hyperlink{struct_u_r_l_service_1_1_u_r_l_service_data}{U\+R\+L\+Service\+Data} $\ast$ $>$ \hyperlink{class_u_r_l_service_a0459fed277e6b3e9f933e89f06b05e18}{Url\+Callback}
+\begin{DoxyCompactList}\small\item\em Typedefs. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_aac1d1778b4dbc7294458a040708a99e5}\label{class_u_r_l_service_aac1d1778b4dbc7294458a040708a99e5}} 
+typedef struct \hyperlink{struct_u_r_l_service_1_1_u_r_l_service_data}{U\+R\+L\+Service\+Data} {\bfseries Url\+Service\+Data}
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_a77bd0c8070fc2735e46b95443a3b9c9b}\label{class_u_r_l_service_a77bd0c8070fc2735e46b95443a3b9c9b}} 
+typedef Delegate$<$ void $\ast$ $>$ {\bfseries On\+Get\+Server}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_af88dd746b3765b3a5a5e4aa92338ef98}\label{class_u_r_l_service_af88dd746b3765b3a5a5e4aa92338ef98}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_a19b9ecdd8282174944e75767fc55d22f}\label{class_u_r_l_service_a19b9ecdd8282174944e75767fc55d22f}} 
+\hyperlink{class_u_r_l_service_a19b9ecdd8282174944e75767fc55d22f}{U\+R\+L\+Service} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_ade34a612b8682b2ea618e46dc91dd890}\label{class_u_r_l_service_ade34a612b8682b2ea618e46dc91dd890}} 
+virtual bool \hyperlink{class_u_r_l_service_ade34a612b8682b2ea618e46dc91dd890}{Start} ()
+\begin{DoxyCompactList}\small\item\em I\+Service interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_abf67fe4ec5ffb8d87f27b6bb336b5c12}\label{class_u_r_l_service_abf67fe4ec5ffb8d87f27b6bb336b5c12}} 
+virtual void {\bfseries Get\+Service\+Status} (Service\+Status\+Callback a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_a970ef212b8ac0473d640f4ba0127655a}\label{class_u_r_l_service_a970ef212b8ac0473d640f4ba0127655a}} 
+virtual void \hyperlink{class_u_r_l_service_a970ef212b8ac0473d640f4ba0127655a}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_a8b183378c2ee545c8367455b24b2dc93}\label{class_u_r_l_service_a8b183378c2ee545c8367455b24b2dc93}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_ab15f5c5f61f7754abf0718ba1fcc7020}\label{class_u_r_l_service_ab15f5c5f61f7754abf0718ba1fcc7020}} 
+virtual void \hyperlink{class_u_r_l_service_ab15f5c5f61f7754abf0718ba1fcc7020}{Send\+U\+RL} (const \hyperlink{class_url_aaca644501980743f3446d0d7a31565be}{Url\+::\+SP} \&a\+\_\+sp\+Url\+Agent, \hyperlink{class_u_r_l_service_a0459fed277e6b3e9f933e89f06b05e18}{Url\+Callback} a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Upload the specified dialog. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_a36adf254a0097ec9708de865ef7feddb}\label{class_u_r_l_service_a36adf254a0097ec9708de865ef7feddb}} 
+void \hyperlink{class_u_r_l_service_a36adf254a0097ec9708de865ef7feddb}{On\+Result} (const Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em Callbacks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_aa11ad208e95b7c72858caf1da254940e}\label{class_u_r_l_service_aa11ad208e95b7c72858caf1da254940e}} 
+bool {\bfseries Get\+Server\+Status} (On\+Get\+Server a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_a640ad1b9b173b72818ffee1fae352437}\label{class_u_r_l_service_a640ad1b9b173b72818ffee1fae352437}} 
+void \hyperlink{class_u_r_l_service_a640ad1b9b173b72818ffee1fae352437}{Make\+Heart\+Beat} ()
+\begin{DoxyCompactList}\small\item\em Way\+Blazer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_aa6d442922e8750237db6bca03297f88a}\label{class_u_r_l_service_aa6d442922e8750237db6bca03297f88a}} 
+void {\bfseries On\+Heart\+Beat\+Response} (const Json\+::\+Value \&a\+\_\+\+Response)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::string \hyperlink{class_u_r_l_service_ac2ce83dbbbe8452d8952f82efd4f88bb}{Escape\+Url} (const std\+::string \&a\+\_\+\+U\+RL)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_r_l_service_ab9e42ade42f203264d7a55d3931f6f00}\label{class_u_r_l_service_ab9e42ade42f203264d7a55d3931f6f00}} 
+std\+::string \hyperlink{class_u_r_l_service_ab9e42ade42f203264d7a55d3931f6f00}{m\+\_\+\+Availability\+Suffix}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_u_r_l_service_a8fc0eb442467202e5a306173fdaacc19}\label{class_u_r_l_service_a8fc0eb442467202e5a306173fdaacc19}} 
+std\+::string {\bfseries m\+\_\+\+Functional\+Suffix}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Copyright 2015 I\+BM Corp. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.\+0 (the \char`\"{}\+License\char`\"{}); you may not use this file except in compliance with the License. You may obtain a copy of the License at \begin{DoxyVerb} http://www.apache.org/licenses/LICENSE-2.0
+\end{DoxyVerb}
+
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \char`\"{}\+A\+S I\+S\char`\"{} B\+A\+S\+IS, W\+I\+T\+H\+O\+UT W\+A\+R\+R\+A\+N\+T\+I\+ES OR C\+O\+N\+D\+I\+T\+I\+O\+NS OF A\+NY K\+I\+ND, either express or implied. See the License for the specific language governing permissions and limitations under the License. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_r_l_service_ac2ce83dbbbe8452d8952f82efd4f88bb}\label{class_u_r_l_service_ac2ce83dbbbe8452d8952f82efd4f88bb}} 
+\index{U\+R\+L\+Service@{U\+R\+L\+Service}!Escape\+Url@{Escape\+Url}}
+\index{Escape\+Url@{Escape\+Url}!U\+R\+L\+Service@{U\+R\+L\+Service}}
+\subsubsection{\texorpdfstring{Escape\+Url()}{EscapeUrl()}}
+{\footnotesize\ttfamily std\+::string U\+R\+L\+Service\+::\+Escape\+Url (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+U\+RL }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Escape the given U\+RL of any spaces found in any of the arguments, this is used to convert some text into a fully escaped U\+RL. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/services/U\+R\+L\+Service.\+h\item 
+src/services/U\+R\+L\+Service.\+cpp\end{DoxyCompactItemize}

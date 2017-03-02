@@ -1,0 +1,68 @@
+\hypertarget{struct_goal_params_condition}{}\section{Goal\+Params\+Condition Struct Reference}
+\label{struct_goal_params_condition}\index{Goal\+Params\+Condition@{Goal\+Params\+Condition}}
+
+
+This condition tests against one or more of the params of the \hyperlink{class_goal}{Goal} object.  
+
+
+
+
+{\ttfamily \#include $<$Goal\+Params\+Conditon.\+h$>$}
+
+Inheritance diagram for Goal\+Params\+Condition\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.014389cm]{struct_goal_params_condition}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_goal_params_condition_1_1_param_condition}{Param\+Condition}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a8f597c0f1db798aa788d3a1dc1f0501d}\label{struct_goal_params_condition_a8f597c0f1db798aa788d3a1dc1f0501d}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a8236d070bbfe98f800c5fd4b011fc37e}\label{struct_goal_params_condition_a8236d070bbfe98f800c5fd4b011fc37e}} 
+\hyperlink{struct_goal_params_condition_a8236d070bbfe98f800c5fd4b011fc37e}{Goal\+Params\+Condition} ()
+\begin{DoxyCompactList}\small\item\em C\+Onstructions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a1f398643684232a13596781c948e935b}\label{struct_goal_params_condition_a1f398643684232a13596781c948e935b}} 
+{\bfseries Goal\+Params\+Condition} (const std\+::vector$<$ \hyperlink{struct_goal_params_condition_1_1_param_condition}{Param\+Condition} $>$ \&a\+\_\+\+Params, Logical\+Op a\+\_\+\+Log\+Op=A\+ND)
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a37331cb548a61b77a8ee6bfe00a2b554}\label{struct_goal_params_condition_a37331cb548a61b77a8ee6bfe00a2b554}} 
+{\bfseries Goal\+Params\+Condition} (const std\+::string \&a\+\_\+\+Name, const Json\+::\+Value \&a\+\_\+\+Value, Equality\+Op a\+\_\+\+Op=I\+Condition\+::\+EQ, Logical\+Op a\+\_\+\+Log\+Op=A\+ND)
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a6a16d977aa0d7ab00bf866d40fe3a1e8}\label{struct_goal_params_condition_a6a16d977aa0d7ab00bf866d40fe3a1e8}} 
+virtual void \hyperlink{struct_goal_params_condition_a6a16d977aa0d7ab00bf866d40fe3a1e8}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a16933f1509a8cac1e61ebfacc72a36e9}\label{struct_goal_params_condition_a16933f1509a8cac1e61ebfacc72a36e9}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a125b15ce9cee3898a7fe10e4af48c92b}\label{struct_goal_params_condition_a125b15ce9cee3898a7fe10e4af48c92b}} 
+virtual float \hyperlink{struct_goal_params_condition_a125b15ce9cee3898a7fe10e4af48c92b}{Test} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+sp\+Goal)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_condition}{I\+Condition} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a6566267768ced522a57ec3c44e5f4bca}\label{struct_goal_params_condition_a6566267768ced522a57ec3c44e5f4bca}} 
+virtual \hyperlink{class_i_condition}{I\+Condition} $\ast$ \hyperlink{struct_goal_params_condition_a6566267768ced522a57ec3c44e5f4bca}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Make a new instance of this \hyperlink{class_i_condition}{I\+Condition} object. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a20b92bbd7f7cd8846cc05e35eff8aac9}\label{struct_goal_params_condition_a20b92bbd7f7cd8846cc05e35eff8aac9}} 
+std\+::vector$<$ \hyperlink{struct_goal_params_condition_1_1_param_condition}{Param\+Condition} $>$ {\bfseries m\+\_\+\+Params}
+\item 
+\mbox{\Hypertarget{struct_goal_params_condition_a67988805f966c140543ee54833e804b0}\label{struct_goal_params_condition_a67988805f966c140543ee54833e804b0}} 
+Logical\+Op {\bfseries m\+\_\+\+Logical\+Op}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This condition tests against one or more of the params of the \hyperlink{class_goal}{Goal} object. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/conditions/Goal\+Params\+Conditon.\+h\item 
+src/planning/conditions/Goal\+Params\+Condition.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,81 @@
+\hypertarget{class_plan}{}\section{Plan Class Reference}
+\label{class_plan}\index{Plan@{Plan}}
+
+
+{\ttfamily \#include $<$Plan.\+h$>$}
+
+Inheritance diagram for Plan\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plan}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}\label{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}} 
+typedef std\+::vector$<$ \hyperlink{class_i_condition_a9e52c5b905c336e61daf97bc3f10def8}{I\+Condition\+::\+SP} $>$ \hyperlink{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}{Conditions}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_a0697d1681ecf56500f2576b09887f3e3}\label{class_plan_a0697d1681ecf56500f2576b09887f3e3}} 
+typedef std\+::vector$<$ I\+Action\+::\+SP $>$ {\bfseries Actions}
+\item 
+\mbox{\Hypertarget{class_plan_a7040be830f0b76cf33cfaa4b5d30fb8c}\label{class_plan_a7040be830f0b76cf33cfaa4b5d30fb8c}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_plan}{Plan} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_plan_a8c525bf942121ad5ffd59f87c843525c}\label{class_plan_a8c525bf942121ad5ffd59f87c843525c}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_plan}{Plan} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_acfbb87d5cde05ca5cf44818ae468a26d}\label{class_plan_acfbb87d5cde05ca5cf44818ae468a26d}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_plan_a031ab495af5a99a883be2e09860086f1}\label{class_plan_a031ab495af5a99a883be2e09860086f1}} 
+\hyperlink{class_plan_a031ab495af5a99a883be2e09860086f1}{Plan} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_ae85758b24127c3c0035cf23b3d867602}\label{class_plan_ae85758b24127c3c0035cf23b3d867602}} 
+virtual void \hyperlink{class_plan_ae85758b24127c3c0035cf23b3d867602}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_a86061b79dfe7c42aa6a80cff309b172d}\label{class_plan_a86061b79dfe7c42aa6a80cff309b172d}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_plan_ab57cc9df6f7a78b58f7c91e9ab40738e}\label{class_plan_ab57cc9df6f7a78b58f7c91e9ab40738e}} 
+const std\+::string \& \hyperlink{class_plan_ab57cc9df6f7a78b58f7c91e9ab40738e}{Get\+Plan\+Id} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_ab9c270221705d97ff14e2a1e8baa7ac2}\label{class_plan_ab9c270221705d97ff14e2a1e8baa7ac2}} 
+const \hyperlink{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}{Conditions} \& {\bfseries Get\+Pre\+Conditions} () const
+\item 
+\mbox{\Hypertarget{class_plan_ae3c1c4287e8cb6e9ab7c6d1ea5655847}\label{class_plan_ae3c1c4287e8cb6e9ab7c6d1ea5655847}} 
+const Actions \& {\bfseries Get\+Actions} () const
+\item 
+\mbox{\Hypertarget{class_plan_a49a7875f998eab1657ca2272549cb903}\label{class_plan_a49a7875f998eab1657ca2272549cb903}} 
+const \hyperlink{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}{Conditions} \& {\bfseries Get\+Post\+Conditions} () const
+\item 
+\mbox{\Hypertarget{class_plan_a749cf2773ba0514aa05cc29b38203873}\label{class_plan_a749cf2773ba0514aa05cc29b38203873}} 
+void \hyperlink{class_plan_a749cf2773ba0514aa05cc29b38203873}{Set\+Plan\+Id} (const std\+::string \&a\+\_\+\+Plan\+Id)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_a7bd37af59ecbe2603310a467dda091ff}\label{class_plan_a7bd37af59ecbe2603310a467dda091ff}} 
+void {\bfseries Set\+Pre\+Conditions} (const \hyperlink{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}{Conditions} \&a\+\_\+\+Conditions)
+\item 
+\mbox{\Hypertarget{class_plan_a67bdb03ad0b61ddd7ea21c815fc78443}\label{class_plan_a67bdb03ad0b61ddd7ea21c815fc78443}} 
+void {\bfseries Set\+Actions} (const Actions \&a\+\_\+\+Actions)
+\item 
+\mbox{\Hypertarget{class_plan_a88fd731f14b0ebeaab4c0cb935e4b00d}\label{class_plan_a88fd731f14b0ebeaab4c0cb935e4b00d}} 
+void {\bfseries Set\+Post\+Conditions} (const \hyperlink{class_plan_aa0455bd3e1ec9a820f31ef52706fdf76}{Conditions} \&a\+\_\+\+Conditions)
+\item 
+\mbox{\Hypertarget{class_plan_a5979d7915c891ec9b92b49afb1856a13}\label{class_plan_a5979d7915c891ec9b92b49afb1856a13}} 
+float \hyperlink{class_plan_a5979d7915c891ec9b92b49afb1856a13}{Test\+Pre\+Conditions} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+sp\+Goal)
+\begin{DoxyCompactList}\small\item\em Check if this plan is a valid plan for the given goal object, returns a value between 0.\+0 (no) to 1.\+0 (yes) \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_ad4fec82bbd1b2e48a4d2d00f47e5ebcf}\label{class_plan_ad4fec82bbd1b2e48a4d2d00f47e5ebcf}} 
+float {\bfseries Test\+Post\+Conditions} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+sp\+Goal)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class contains the code/data for a single plan instance. A plan has pre-\/conditions, actions, and post-\/conditions. pre-\/conditions are checked before a plan can be considered for execution. Actions make up the actual plan. A action is a polymorphic type that can do any number of actions (e.\+g. add a goal, use a skill, etc) post-\/conditions are checked once a plan completes to see if the plan succeeded or failed. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/Plan.\+h\item 
+src/planning/Plan.\+cpp\end{DoxyCompactItemize}

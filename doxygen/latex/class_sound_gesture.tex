@@ -1,0 +1,66 @@
+\hypertarget{class_sound_gesture}{}\section{Sound\+Gesture Class Reference}
+\label{class_sound_gesture}\index{Sound\+Gesture@{Sound\+Gesture}}
+
+
+This gesture wraps a sound effect to play back.  
+
+
+
+
+{\ttfamily \#include $<$Sound\+Gesture.\+h$>$}
+
+Inheritance diagram for Sound\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sound_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sound_gesture_a1b363ad9ef05bece9d1cffd748092a6a}\label{class_sound_gesture_a1b363ad9ef05bece9d1cffd748092a6a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_sound_gesture_aa415eb13b652e6d2843853dd7788cf0c}\label{class_sound_gesture_aa415eb13b652e6d2843853dd7788cf0c}} 
+\hyperlink{class_sound_gesture_aa415eb13b652e6d2843853dd7788cf0c}{Sound\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_gesture_a6dc35996edaaa7d958c78b3116c7fc5b}\label{class_sound_gesture_a6dc35996edaaa7d958c78b3116c7fc5b}} 
+virtual void \hyperlink{class_sound_gesture_a6dc35996edaaa7d958c78b3116c7fc5b}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_gesture_a4fe2db11f73ab2f2ca4c0b4db2c29d4a}\label{class_sound_gesture_a4fe2db11f73ab2f2ca4c0b4db2c29d4a}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_sound_gesture_a378b3387a33072f25e9624fc4bde0dd3}\label{class_sound_gesture_a378b3387a33072f25e9624fc4bde0dd3}} 
+virtual bool \hyperlink{class_sound_gesture_a378b3387a33072f25e9624fc4bde0dd3}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_gesture_a67552ec35df66f74bf977ede265a426f}\label{class_sound_gesture_a67552ec35df66f74bf977ede265a426f}} 
+virtual bool \hyperlink{class_sound_gesture_a67552ec35df66f74bf977ede265a426f}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_gesture_a610cfa40dec1ce8a6714488f5237b602}\label{class_sound_gesture_a610cfa40dec1ce8a6714488f5237b602}} 
+const std\+::string \& {\bfseries Get\+Sound} () const
+\item 
+\mbox{\Hypertarget{class_sound_gesture_a11ec55d400ee548201c2ffb4dcf216bd}\label{class_sound_gesture_a11ec55d400ee548201c2ffb4dcf216bd}} 
+void {\bfseries Set\+Sound} (const std\+::string \&a\+\_\+\+Sound)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sound_gesture_a9116f8550e708bc343a084e1b17d1bd6}\label{class_sound_gesture_a9116f8550e708bc343a084e1b17d1bd6}} 
+std\+::string \hyperlink{class_sound_gesture_a9116f8550e708bc343a084e1b17d1bd6}{m\+\_\+\+Sound}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sound_gesture_a277d7ea60dcc05c8d10168732176de29}\label{class_sound_gesture_a277d7ea60dcc05c8d10168732176de29}} 
+float {\bfseries m\+\_\+f\+Volume}
+\item 
+\mbox{\Hypertarget{class_sound_gesture_ae563843ba99704fe330e24b0752b6d45}\label{class_sound_gesture_ae563843ba99704fe330e24b0752b6d45}} 
+float {\bfseries m\+\_\+f\+Pan}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture wraps a sound effect to play back. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Sound\+Gesture.\+h\item 
+src/gestures/Sound\+Gesture.\+cpp\end{DoxyCompactItemize}

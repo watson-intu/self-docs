@@ -1,0 +1,35 @@
+\hypertarget{class_i_window_function}{}\section{I\+Window\+Function Class Reference}
+\label{class_i_window_function}\index{I\+Window\+Function@{I\+Window\+Function}}
+Inheritance diagram for I\+Window\+Function\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_window_function}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_window_function_a8863127c872ee0c38242b38e645b56e8}\label{class_i_window_function_a8863127c872ee0c38242b38e645b56e8}} 
+virtual float {\bfseries Value} (int a\+\_\+\+Length, int a\+\_\+\+Index)=0
+\item 
+\mbox{\Hypertarget{class_i_window_function_ac7e097cdf897129e2981e468bdd02b00}\label{class_i_window_function_ac7e097cdf897129e2981e468bdd02b00}} 
+void \hyperlink{class_i_window_function_ac7e097cdf897129e2981e468bdd02b00}{Apply} (std\+::vector$<$ float $>$ \&a\+\_\+\+Samples, size\+\_\+t a\+\_\+\+Offset, size\+\_\+t a\+\_\+\+Length)
+\begin{DoxyCompactList}\small\item\em Apply the windows to a portion of the sample buffer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_window_function_a9f524f3dd56a3098c02ce42f48edb1d0}\label{class_i_window_function_a9f524f3dd56a3098c02ce42f48edb1d0}} 
+void {\bfseries Generate\+Curve} (size\+\_\+t a\+\_\+\+Length, std\+::vector$<$ float $>$ \&a\+\_\+\+Samples)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_window_function_a682f2069fe09b43f886ca8235b00a030}\label{class_i_window_function_a682f2069fe09b43f886ca8235b00a030}} 
+static const float \hyperlink{class_i_window_function_a682f2069fe09b43f886ca8235b00a030}{PI} = 3.\+14159265358979323846f
+\begin{DoxyCompactList}\small\item\em Constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_window_function_a129f803adb97f09c25d2f48aca352bbe}\label{class_i_window_function_a129f803adb97f09c25d2f48aca352bbe}} 
+static const float {\bfseries T\+W\+O\+\_\+\+PI} = 2.\+0f $\ast$ PI
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/fft/I\+Window\+Function.\+h\item 
+src/utils/fft/I\+Fourier\+Transform.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,67 @@
+\hypertarget{class_audio_data}{}\section{Audio\+Data Class Reference}
+\label{class_audio_data}\index{Audio\+Data@{Audio\+Data}}
+
+
+This data type contains raw wave audio data..  
+
+
+
+
+{\ttfamily \#include $<$Audio\+Data.\+h$>$}
+
+Inheritance diagram for Audio\+Data\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_audio_data}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_data_a5575718044a8ddea5b42997c8bcd5d68}\label{class_audio_data_a5575718044a8ddea5b42997c8bcd5d68}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_audio_data_a8bb6ddb671a324453713570496f54e59}\label{class_audio_data_a8bb6ddb671a324453713570496f54e59}} 
+\hyperlink{class_audio_data_a8bb6ddb671a324453713570496f54e59}{Audio\+Data} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_audio_data_a916c76fcefbffd41a05cddd529df680e}\label{class_audio_data_a916c76fcefbffd41a05cddd529df680e}} 
+{\bfseries Audio\+Data} (const std\+::string \&a\+\_\+\+Wave\+Data, unsigned int a\+\_\+\+Freq, unsigned int a\+\_\+\+Channels, unsigned int a\+\_\+\+B\+PS)
+\item 
+\mbox{\Hypertarget{class_audio_data_ad1e3dd274ef311cb7c92d68f98ff425d}\label{class_audio_data_ad1e3dd274ef311cb7c92d68f98ff425d}} 
+virtual void \hyperlink{class_audio_data_ad1e3dd274ef311cb7c92d68f98ff425d}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_audio_data_a58a64796ab07807316c1b8b1f4ea49dc}\label{class_audio_data_a58a64796ab07807316c1b8b1f4ea49dc}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_audio_data_a1cc9349b5edf80a5e0b35e6eb5cb3045}\label{class_audio_data_a1cc9349b5edf80a5e0b35e6eb5cb3045}} 
+virtual bool \hyperlink{class_audio_data_a1cc9349b5edf80a5e0b35e6eb5cb3045}{To\+Binary} (std\+::string \&a\+\_\+\+Output)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_data}{I\+Data} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_audio_data_a9f543a8cd2349e177c861de05ddb9fa8}\label{class_audio_data_a9f543a8cd2349e177c861de05ddb9fa8}} 
+virtual bool {\bfseries From\+Binary} (const std\+::string \&a\+\_\+\+Type, const std\+::string \&a\+\_\+\+Input)
+\item 
+\mbox{\Hypertarget{class_audio_data_aa48989be23c171180a31544dc4059f57}\label{class_audio_data_aa48989be23c171180a31544dc4059f57}} 
+const std\+::string \& {\bfseries Get\+Wave\+Data} () const
+\item 
+\mbox{\Hypertarget{class_audio_data_af99b89b200428c821c6dddc9f823b618}\label{class_audio_data_af99b89b200428c821c6dddc9f823b618}} 
+unsigned int {\bfseries Get\+Frequency} () const
+\item 
+\mbox{\Hypertarget{class_audio_data_a04b3b6246c09ee366260c4b6fb456196}\label{class_audio_data_a04b3b6246c09ee366260c4b6fb456196}} 
+unsigned int {\bfseries Get\+Channels} () const
+\item 
+\mbox{\Hypertarget{class_audio_data_a33ec30b595bcdb8ce9eaf2b8fd8fbf20}\label{class_audio_data_a33ec30b595bcdb8ce9eaf2b8fd8fbf20}} 
+unsigned int {\bfseries Get\+B\+PS} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_audio_data_a128642493aaf25366ebb1ebc49280f3d}\label{class_audio_data_a128642493aaf25366ebb1ebc49280f3d}} 
+static bool {\bfseries Parse\+Audio\+Format} (const std\+::string \&a\+\_\+\+Format, unsigned int \&a\+\_\+\+Freq, unsigned int \&a\+\_\+\+B\+PS, unsigned int \&a\+\_\+\+Channels)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This data type contains raw wave audio data.. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Audio\+Data.\+h\end{DoxyCompactItemize}

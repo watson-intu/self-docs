@@ -1,0 +1,67 @@
+\hypertarget{class_text}{}\section{Text Class Reference}
+\label{class_text}\index{Text@{Text}}
+
+
+{\ttfamily \#include $<$Text.\+h$>$}
+
+Inheritance diagram for Text\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_text}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_a35ce88bdca4f380b865b6066079230b1}\label{class_text_a35ce88bdca4f380b865b6066079230b1}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_text}{Text} $>$ \hyperlink{class_text_a35ce88bdca4f380b865b6066079230b1}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_accc04109f85aad769e96b5f63139c0da}\label{class_text_accc04109f85aad769e96b5f63139c0da}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_text}{Text} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_aed53805928ff9f9cac7cf1d61754fe9a}\label{class_text_aed53805928ff9f9cac7cf1d61754fe9a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_text_ab3e26143fccc52699bcc5149cae852bc}\label{class_text_ab3e26143fccc52699bcc5149cae852bc}} 
+\hyperlink{class_text_ab3e26143fccc52699bcc5149cae852bc}{Text} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_aeb42acf8fae51a9ceccda347bc74926f}\label{class_text_aeb42acf8fae51a9ceccda347bc74926f}} 
+{\bfseries Text} (const std\+::string \&a\+\_\+\+Speech, double a\+\_\+f\+Confidence, bool a\+\_\+b\+Local\+Dialog, bool a\+\_\+b\+Classify\+Intent, const std\+::string \&a\+\_\+\+Language=\char`\"{}en-\/US\char`\"{})
+\item 
+\mbox{\Hypertarget{class_text_a7f92fab25827ccb68728f642fa47d2cb}\label{class_text_a7f92fab25827ccb68728f642fa47d2cb}} 
+const std\+::string \& {\bfseries Get\+Text} () const
+\item 
+\mbox{\Hypertarget{class_text_a9a4da2a691c7ec5d75cfeeb3c0ba2820}\label{class_text_a9a4da2a691c7ec5d75cfeeb3c0ba2820}} 
+double {\bfseries Get\+Confidence} () const
+\item 
+\mbox{\Hypertarget{class_text_a8e9303d0d0a504ef1ffe33cf54ee1aef}\label{class_text_a8e9303d0d0a504ef1ffe33cf54ee1aef}} 
+bool {\bfseries Is\+Local\+Dialog} () const
+\item 
+\mbox{\Hypertarget{class_text_a8e67d2096c74cea6c16646c318c261a3}\label{class_text_a8e67d2096c74cea6c16646c318c261a3}} 
+bool {\bfseries Classify\+Intent} () const
+\item 
+\mbox{\Hypertarget{class_text_a5806db0a5fe1d6108f5963d5bd5ba2c0}\label{class_text_a5806db0a5fe1d6108f5963d5bd5ba2c0}} 
+const std\+::string \& {\bfseries Get\+Language} () const
+\item 
+\mbox{\Hypertarget{class_text_a7866cb666ef13a6e9324c4230dee6aa7}\label{class_text_a7866cb666ef13a6e9324c4230dee6aa7}} 
+void {\bfseries Set\+Text} (const std\+::string \&a\+\_\+\+Text)
+\item 
+\mbox{\Hypertarget{class_text_a17ba419891b5a48c0ab824d7074de6bd}\label{class_text_a17ba419891b5a48c0ab824d7074de6bd}} 
+virtual void \hyperlink{class_text_a17ba419891b5a48c0ab824d7074de6bd}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_a6ad75ef21419f1c2c1621e1f85f0c031}\label{class_text_a6ad75ef21419f1c2c1621e1f85f0c031}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Recognized speech or entered text, usually attached to a person object if they are known. This object will send the get processed by the \hyperlink{class_text_classifier}{Text\+Classifier} object and a intent object will be attached to it on the blackboard. N\+O\+TE\+: Language is set the original language before it has been translated into the back-\/end language The Dialog\+Agent will use this to know what to translate the language back into when responding to the user. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Text.\+h\item 
+src/blackboard/Text.\+cpp\end{DoxyCompactItemize}

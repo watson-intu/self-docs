@@ -1,0 +1,155 @@
+\hypertarget{class_i_graph_1_1_i_traverser}{}\section{I\+Graph\+:\+:I\+Traverser Class Reference}
+\label{class_i_graph_1_1_i_traverser}\index{I\+Graph\+::\+I\+Traverser@{I\+Graph\+::\+I\+Traverser}}
+
+
+This object holds it\textquotesingle{}s results in a vector of vertex indexes into the original graph object.  
+
+
+
+
+{\ttfamily \#include $<$I\+Graph.\+h$>$}
+
+Inheritance diagram for I\+Graph\+:\+:I\+Traverser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.657177cm]{class_i_graph_1_1_i_traverser}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}\label{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_traverser}{I\+Traverser} $>$ \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a476855fae4d53ba084ad2ee8a8284d4f}\label{class_i_graph_1_1_i_traverser_a476855fae4d53ba084ad2ee8a8284d4f}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_traverser}{I\+Traverser} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a3b662c97c3feccb71ab5445faba3e864}\label{class_i_graph_1_1_i_traverser_a3b662c97c3feccb71ab5445faba3e864}} 
+typedef std\+::vector$<$ Vertex\+Index $>$ {\bfseries Index\+List}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a7a26faf45c540f122ac8c26b20735afa}\label{class_i_graph_1_1_i_traverser_a7a26faf45c540f122ac8c26b20735afa}} 
+typedef Delegate$<$ \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} $>$ {\bfseries Traverse\+Callback}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a254b5757511fee6f33c760df3f0a32df}\label{class_i_graph_1_1_i_traverser_a254b5757511fee6f33c760df3f0a32df}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_afbc0456a78d7984d673726d8c538fe42}\label{class_i_graph_1_1_i_traverser_afbc0456a78d7984d673726d8c538fe42}} 
+\hyperlink{class_i_graph_1_1_i_traverser_afbc0456a78d7984d673726d8c538fe42}{I\+Traverser} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a7a365e0f8a649cf76c30e31a0a84d74a}\label{class_i_graph_1_1_i_traverser_a7a365e0f8a649cf76c30e31a0a84d74a}} 
+{\bfseries I\+Traverser} (const Condition \&a\+\_\+\+Condition, const \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} \&a\+\_\+sp\+Next)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a76431f57457c4e894c354b1df326d1bf}\label{class_i_graph_1_1_i_traverser_a76431f57457c4e894c354b1df326d1bf}} 
+virtual void \hyperlink{class_i_graph_1_1_i_traverser_a76431f57457c4e894c354b1df326d1bf}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a1789c5e9328f7d33d2f6e68069597a95}\label{class_i_graph_1_1_i_traverser_a1789c5e9328f7d33d2f6e68069597a95}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a4c074c64cb2a46a40d8d2e3daff61765}\label{class_i_graph_1_1_i_traverser_a4c074c64cb2a46a40d8d2e3daff61765}} 
+I\+Graph\+::\+SP \hyperlink{class_i_graph_1_1_i_traverser_a4c074c64cb2a46a40d8d2e3daff61765}{Get\+Graph} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_acca713dfca7e7f49ff130670824ba18f}\label{class_i_graph_1_1_i_traverser_acca713dfca7e7f49ff130670824ba18f}} 
+\hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} {\bfseries Get\+Next} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a8a8a6e29362d30547c3367cb7b7e03cc}\label{class_i_graph_1_1_i_traverser_a8a8a6e29362d30547c3367cb7b7e03cc}} 
+const Index\+List \& {\bfseries Get\+Vertex\+List} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a1d1f583dc4d80dabdb0a3f96063ce85a}\label{class_i_graph_1_1_i_traverser_a1d1f583dc4d80dabdb0a3f96063ce85a}} 
+Vertex\+Index {\bfseries operator\mbox{[}$\,$\mbox{]}} (size\+\_\+t a\+\_\+\+Vertex) const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a8642f02d31cd85cb3712ee390c8d78a0}\label{class_i_graph_1_1_i_traverser_a8642f02d31cd85cb3712ee390c8d78a0}} 
+size\+\_\+t {\bfseries Get\+Vertex\+Count} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a0f6413856bce7078f4a73287fd660fc3}\label{class_i_graph_1_1_i_traverser_a0f6413856bce7078f4a73287fd660fc3}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Get\+Vertex} (size\+\_\+t a\+\_\+\+Vertex) const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a7acbe703916d10afb64d405db29b1ade}\label{class_i_graph_1_1_i_traverser_a7acbe703916d10afb64d405db29b1ade}} 
+void \hyperlink{class_i_graph_1_1_i_traverser_a7acbe703916d10afb64d405db29b1ade}{Set\+Graph} (const I\+Graph\+::\+SP \&a\+\_\+sp\+Graph)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a0dc65d46f235aa520121b1c45dd4ab82}\label{class_i_graph_1_1_i_traverser_a0dc65d46f235aa520121b1c45dd4ab82}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} \hyperlink{class_i_graph_1_1_i_traverser_a0dc65d46f235aa520121b1c45dd4ab82}{Filter} (const Condition \&a\+\_\+sp\+Cond)=0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_ae559752d97e7e19fc29f3d98c8eb4a6c}\label{class_i_graph_1_1_i_traverser_ae559752d97e7e19fc29f3d98c8eb4a6c}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} \hyperlink{class_i_graph_1_1_i_traverser_ae559752d97e7e19fc29f3d98c8eb4a6c}{Out} (const Condition \&a\+\_\+\+Condition=\hyperlink{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}{N\+U\+L\+L\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON})=0
+\begin{DoxyCompactList}\small\item\em Get all verts that meet the provided conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a46312057c0b40c61ea59b3e0bf90cbec}\label{class_i_graph_1_1_i_traverser_a46312057c0b40c61ea59b3e0bf90cbec}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} \hyperlink{class_i_graph_1_1_i_traverser_a46312057c0b40c61ea59b3e0bf90cbec}{In} (const Condition \&a\+\_\+sp\+Cond=\hyperlink{class_i_graph_af5f1100a2f9d5a6f7e795bd7b2d642a4}{N\+U\+L\+L\+\_\+\+C\+O\+N\+D\+I\+T\+I\+ON})=0
+\begin{DoxyCompactList}\small\item\em Get all verts with an out edge that meets the provided conditions. \end{DoxyCompactList}\item 
+virtual I\+Graph\+::\+SP \hyperlink{class_i_graph_1_1_i_traverser_ac6ce6b5258a3ef06297b5b91b87bbf00}{Create\+Graph} (const std\+::string \&a\+\_\+\+Graph\+Id)=0
+\begin{DoxyCompactList}\small\item\em Get all verts with an in edge that meets the provided conditions. \end{DoxyCompactList}\item 
+bool \hyperlink{class_i_graph_1_1_i_traverser_ab7995bf2c010898ca3bfb92e4318f8de}{Start} (Traverse\+Callback a\+\_\+\+Callback, bool a\+\_\+b\+Notify\+Observer=true)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a0bc6c0d37022d91136917e5a6450dd11}\label{class_i_graph_1_1_i_traverser_a0bc6c0d37022d91136917e5a6450dd11}} 
+void \hyperlink{class_i_graph_1_1_i_traverser_a0bc6c0d37022d91136917e5a6450dd11}{On\+Remote\+Traverse\+Complete} ()
+\begin{DoxyCompactList}\small\item\em This is invoked once a remote traverse is completed and results have been applied to the local graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a4541a9328cfc10c09f706d90c1599392}\label{class_i_graph_1_1_i_traverser_a4541a9328cfc10c09f706d90c1599392}} 
+void {\bfseries On\+Next\+Done} (\hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} a\+\_\+sp\+Traverser)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_ab88b7ab8a91dd79eb937af300318bc54}\label{class_i_graph_1_1_i_traverser_ab88b7ab8a91dd79eb937af300318bc54}} 
+void {\bfseries Do\+Traverse} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_ac6a46d894404636ce0ecd7eb73de9b42}\label{class_i_graph_1_1_i_traverser_ac6a46d894404636ce0ecd7eb73de9b42}} 
+virtual void \hyperlink{class_i_graph_1_1_i_traverser_ac6a46d894404636ce0ecd7eb73de9b42}{On\+Traverse} ()=0
+\begin{DoxyCompactList}\small\item\em Actually perform the traverse. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_add28950de19b35b00f711ed6d27a0a01}\label{class_i_graph_1_1_i_traverser_add28950de19b35b00f711ed6d27a0a01}} 
+bool \hyperlink{class_i_graph_1_1_i_traverser_add28950de19b35b00f711ed6d27a0a01}{m\+\_\+b\+Remote\+Traverse}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a7358aee35de7715811008b6de2fa51b1}\label{class_i_graph_1_1_i_traverser_a7358aee35de7715811008b6de2fa51b1}} 
+I\+Graph\+::\+WP {\bfseries m\+\_\+wp\+Graph}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a90c722fa3374b08177d42cc701bdac58}\label{class_i_graph_1_1_i_traverser_a90c722fa3374b08177d42cc701bdac58}} 
+Index\+List {\bfseries m\+\_\+\+Verts}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a087e8109096af659f768a7a36df609f6}\label{class_i_graph_1_1_i_traverser_a087e8109096af659f768a7a36df609f6}} 
+\hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} {\bfseries m\+\_\+sp\+Next}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a81e2c4377d86f2f2ff1690947ae35f17}\label{class_i_graph_1_1_i_traverser_a81e2c4377d86f2f2ff1690947ae35f17}} 
+Condition\+::\+SP {\bfseries m\+\_\+sp\+Condition}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_a1590fdbb91981aedf506d783fa2c8fb6}\label{class_i_graph_1_1_i_traverser_a1590fdbb91981aedf506d783fa2c8fb6}} 
+Traverse\+Callback {\bfseries m\+\_\+\+Callback}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object holds it\textquotesingle{}s results in a vector of vertex indexes into the original graph object. 
+
+This object is created the traverse the graph and search for vertex/edge objects. These objects are usually chained together to form a more complex query, this is done by linking each \hyperlink{class_i_graph_1_1_i_traverser}{I\+Traverser} object to the next object in the chain to form the query. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_ac6ce6b5258a3ef06297b5b91b87bbf00}\label{class_i_graph_1_1_i_traverser_ac6ce6b5258a3ef06297b5b91b87bbf00}} 
+\index{I\+Graph\+::\+I\+Traverser@{I\+Graph\+::\+I\+Traverser}!Create\+Graph@{Create\+Graph}}
+\index{Create\+Graph@{Create\+Graph}!I\+Graph\+::\+I\+Traverser@{I\+Graph\+::\+I\+Traverser}}
+\subsubsection{\texorpdfstring{Create\+Graph()}{CreateGraph()}}
+{\footnotesize\ttfamily virtual I\+Graph\+::\+SP I\+Graph\+::\+I\+Traverser\+::\+Create\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Graph\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Get all verts with an in edge that meets the provided conditions. 
+
+Create a sub-\/graph from the the provided \hyperlink{class_i_graph_1_1_i_traverser}{I\+Traverser}, this is useful for creating a smaller chunk of a graph that can be serialized over a network. The created graph will only contain vertex/edge data that the traverser is referencing. The user may then use the \hyperlink{class_i_graph_ac18561fc46a616fde450687f557897ac}{Merge\+Graph()} to merge the created graph into a another graph to combine data. 
+
+Implemented in \hyperlink{class_graph_self_1_1_i_self_traverser_adf9a16dd7596a980483af356e4439724}{Graph\+Self\+::\+I\+Self\+Traverser}.
+
+\mbox{\Hypertarget{class_i_graph_1_1_i_traverser_ab7995bf2c010898ca3bfb92e4318f8de}\label{class_i_graph_1_1_i_traverser_ab7995bf2c010898ca3bfb92e4318f8de}} 
+\index{I\+Graph\+::\+I\+Traverser@{I\+Graph\+::\+I\+Traverser}!Start@{Start}}
+\index{Start@{Start}!I\+Graph\+::\+I\+Traverser@{I\+Graph\+::\+I\+Traverser}}
+\subsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily bool I\+Graph\+::\+I\+Traverser\+::\+Start (\begin{DoxyParamCaption}\item[{Traverse\+Callback}]{a\+\_\+\+Callback,  }\item[{bool}]{a\+\_\+b\+Notify\+Observer = {\ttfamily true} }\end{DoxyParamCaption})}
+
+Traverse the graph and invoke the provided callback once the search is completed. Since traverse make take some time to complete, this call is asynchronous. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/I\+Graph.\+h\item 
+src/models/I\+Graph.\+cpp\item 
+src/models/I\+Graph\+Impl.\+h\end{DoxyCompactItemize}

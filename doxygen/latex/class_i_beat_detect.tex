@@ -1,0 +1,64 @@
+\hypertarget{class_i_beat_detect}{}\section{I\+Beat\+Detect Class Reference}
+\label{class_i_beat_detect}\index{I\+Beat\+Detect@{I\+Beat\+Detect}}
+Inheritance diagram for I\+Beat\+Detect\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_beat_detect}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a5ce3a9fb18f79ba58ac63942c8210b23}\label{class_i_beat_detect_a5ce3a9fb18f79ba58ac63942c8210b23}} 
+float {\bfseries Get\+Sample\+Rate} () const
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_ad5510f3bff3944f3abdedd26f158fdc8}\label{class_i_beat_detect_ad5510f3bff3944f3abdedd26f158fdc8}} 
+int {\bfseries Get\+Time\+Size} () const
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a3cb01954186a93107d1621d271a58797}\label{class_i_beat_detect_a3cb01954186a93107d1621d271a58797}} 
+double {\bfseries Get\+Sensitivity} () const
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a71f530d091f24436cce9ff6869c14441}\label{class_i_beat_detect_a71f530d091f24436cce9ff6869c14441}} 
+void {\bfseries Set\+Sensitivity} (double a\+\_\+\+Time)
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a7aba35484c282fdb8a605eb673afa78c}\label{class_i_beat_detect_a7aba35484c282fdb8a605eb673afa78c}} 
+virtual void \hyperlink{class_i_beat_detect_a7aba35484c282fdb8a605eb673afa78c}{Initialize} (int a\+\_\+n\+Time\+Size, float a\+\_\+\+Sample\+Rate)
+\begin{DoxyCompactList}\small\item\em Initialize this beat detector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_beat_detect_a141dca9bde5f8db117944cbd198bb3d6}\label{class_i_beat_detect_a141dca9bde5f8db117944cbd198bb3d6}} 
+virtual void \hyperlink{class_i_beat_detect_a141dca9bde5f8db117944cbd198bb3d6}{Reset} ()
+\begin{DoxyCompactList}\small\item\em Release this beat detector. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_beat_detect_ac6c42852e234557f636c99c24eb6770c}\label{class_i_beat_detect_ac6c42852e234557f636c99c24eb6770c}} 
+virtual bool \hyperlink{class_i_beat_detect_ac6c42852e234557f636c99c24eb6770c}{Detect} (std\+::vector$<$ float $>$ \&a\+\_\+\+Samples, size\+\_\+t a\+\_\+n\+Offset)=0
+\begin{DoxyCompactList}\small\item\em Returns true if a onset is detected in this block of audio data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a739114e0fbc6715495c1e84c69929d99}\label{class_i_beat_detect_a739114e0fbc6715495c1e84c69929d99}} 
+static float {\bfseries M\+AX} (float a, float b)
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_ad80da1815f7e78daf2c7543a9639b2ef}\label{class_i_beat_detect_ad80da1815f7e78daf2c7543a9639b2ef}} 
+static float {\bfseries Get\+Average} (std\+::vector$<$ float $>$ \&arr)
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a3b031ad4392d3afc5b7f93b6d6c6cf07}\label{class_i_beat_detect_a3b031ad4392d3afc5b7f93b6d6c6cf07}} 
+static float {\bfseries Get\+Spec\+Average} (std\+::vector$<$ float $>$ \&arr)
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a2d14939826cdcb3dfaa64bfac03d2341}\label{class_i_beat_detect_a2d14939826cdcb3dfaa64bfac03d2341}} 
+static float {\bfseries Get\+Variance} (std\+::vector$<$ float $>$ \&arr, float val)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a85d8fecbec38e16275fbc3c843806098}\label{class_i_beat_detect_a85d8fecbec38e16275fbc3c843806098}} 
+float \hyperlink{class_i_beat_detect_a85d8fecbec38e16275fbc3c843806098}{m\+\_\+f\+Sample\+Rate}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_beat_detect_aea58939e318524cddf721df7e385874f}\label{class_i_beat_detect_aea58939e318524cddf721df7e385874f}} 
+int {\bfseries m\+\_\+n\+Time\+Size}
+\item 
+\mbox{\Hypertarget{class_i_beat_detect_a07c6a8693af40599e28c48f90bcaad0d}\label{class_i_beat_detect_a07c6a8693af40599e28c48f90bcaad0d}} 
+double {\bfseries m\+\_\+\+Sensitivity}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/fft/I\+Beat\+Detect.\+h\end{DoxyCompactItemize}

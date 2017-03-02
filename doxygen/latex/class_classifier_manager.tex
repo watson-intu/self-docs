@@ -1,0 +1,42 @@
+\hypertarget{class_classifier_manager}{}\section{Classifier\+Manager Class Reference}
+\label{class_classifier_manager}\index{Classifier\+Manager@{Classifier\+Manager}}
+
+
+{\ttfamily \#include $<$Classifier\+Manager.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_classifier_manager_aae20ce0b00515992da2c2375decebdd3}\label{class_classifier_manager_aae20ce0b00515992da2c2375decebdd3}} 
+typedef std\+::list$<$ \hyperlink{class_i_classifier_a532d21507aef94011669a0b73bd49c2d}{I\+Classifier\+::\+SP} $>$ \hyperlink{class_classifier_manager_aae20ce0b00515992da2c2375decebdd3}{Classifier\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_classifier_manager_a1af886a1f3c7bb0fe6a804978e6ef431}\label{class_classifier_manager_a1af886a1f3c7bb0fe6a804978e6ef431}} 
+\hyperlink{class_classifier_manager_a1af886a1f3c7bb0fe6a804978e6ef431}{Classifier\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_classifier_manager_a76f262b018bee815fa1772edd665c61e}\label{class_classifier_manager_a76f262b018bee815fa1772edd665c61e}} 
+const \hyperlink{class_classifier_manager_aae20ce0b00515992da2c2375decebdd3}{Classifier\+List} \& \hyperlink{class_classifier_manager_a76f262b018bee815fa1772edd665c61e}{Get\+Classifier\+List} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_classifier_manager_a80379c1004db60dbd1c39baa522732b7}\label{class_classifier_manager_a80379c1004db60dbd1c39baa522732b7}} 
+bool \hyperlink{class_classifier_manager_a80379c1004db60dbd1c39baa522732b7}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start this manager, initializes all available Classifier objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_classifier_manager_ab4ba7a475ee06b7e58e557da8cf49b13}\label{class_classifier_manager_ab4ba7a475ee06b7e58e557da8cf49b13}} 
+bool \hyperlink{class_classifier_manager_ab4ba7a475ee06b7e58e557da8cf49b13}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_classifier_manager_aa9710c99ee57697553c8d6329dfc409f}\label{class_classifier_manager_aa9710c99ee57697553c8d6329dfc409f}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries Find\+Classifier} () const
+\item 
+\mbox{\Hypertarget{class_classifier_manager_ad811cdc506ae96eecc90f055b01bea69}\label{class_classifier_manager_ad811cdc506ae96eecc90f055b01bea69}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries Get\+Classifier} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class manages all active classifier instances. This classifiers subscribe to sensors and add concepts to the \hyperlink{class_black_board}{Black\+Board} object contained by the \hyperlink{class_self_instance}{Self\+Instance}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/classifiers/Classifier\+Manager.\+h\item 
+src/classifiers/Classifier\+Manager.\+cpp\end{DoxyCompactItemize}

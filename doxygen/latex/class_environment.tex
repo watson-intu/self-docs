@@ -1,0 +1,63 @@
+\hypertarget{class_environment}{}\section{Environment Class Reference}
+\label{class_environment}\index{Environment@{Environment}}
+Inheritance diagram for Environment\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_environment}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_environment_aedaf5e37c31f4aaab9d9b04b15000181}\label{class_environment_aedaf5e37c31f4aaab9d9b04b15000181}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_environment}{Environment} $>$ \hyperlink{class_environment_aedaf5e37c31f4aaab9d9b04b15000181}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_environment_a026424718965a2c1e5b8e9f296af6266}\label{class_environment_a026424718965a2c1e5b8e9f296af6266}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_environment}{Environment} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_environment_a5129bc938599c31f0471ccd4b2e065f2}\label{class_environment_a5129bc938599c31f0471ccd4b2e065f2}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_environment_aa25092a73326ea28d175fe7e9e63dfb2}\label{class_environment_aa25092a73326ea28d175fe7e9e63dfb2}} 
+const int \& {\bfseries Get\+Carbon\+Dioxide} () const
+\item 
+\mbox{\Hypertarget{class_environment_a0c37e68c4dbb1165c569610abd4d3001}\label{class_environment_a0c37e68c4dbb1165c569610abd4d3001}} 
+const int \& {\bfseries Get\+Humidity} () const
+\item 
+\mbox{\Hypertarget{class_environment_a617b45e74b14d60fc67c58c5545d92c0}\label{class_environment_a617b45e74b14d60fc67c58c5545d92c0}} 
+const float \& {\bfseries Get\+Temperature} () const
+\item 
+\mbox{\Hypertarget{class_environment_ac2efbab6db1444c9e778356d71b07093}\label{class_environment_ac2efbab6db1444c9e778356d71b07093}} 
+const float \& {\bfseries Get\+Pressure} () const
+\item 
+\mbox{\Hypertarget{class_environment_a3f0a159e23a307abf67c55aae968676b}\label{class_environment_a3f0a159e23a307abf67c55aae968676b}} 
+void {\bfseries Set\+Carbon\+Dioxide} (const int \&a\+\_\+\+Carbon\+Dioxide)
+\item 
+\mbox{\Hypertarget{class_environment_a90195dc8013a17d812dd5f2d196b675f}\label{class_environment_a90195dc8013a17d812dd5f2d196b675f}} 
+void {\bfseries Set\+Humidity} (const int \&a\+\_\+\+Humidity)
+\item 
+\mbox{\Hypertarget{class_environment_acd735f2cc81c89b5577cd505f9581041}\label{class_environment_acd735f2cc81c89b5577cd505f9581041}} 
+void {\bfseries Set\+Temperature} (const float \&a\+\_\+\+Temperature)
+\item 
+\mbox{\Hypertarget{class_environment_a5fd108e8eb46a4064c9f0fb1e9081378}\label{class_environment_a5fd108e8eb46a4064c9f0fb1e9081378}} 
+void {\bfseries Set\+Pressure} (const float \&a\+\_\+\+Pressure)
+\item 
+\mbox{\Hypertarget{class_environment_a224cbba6df23fc2dc519642cec1324a6}\label{class_environment_a224cbba6df23fc2dc519642cec1324a6}} 
+bool \hyperlink{class_environment_a224cbba6df23fc2dc519642cec1324a6}{Create} (const Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em Create this object from a J\+S\+ON response from a \hyperlink{class_remote_device}{Remote\+Device}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_environment_ad8e3b7d748f8bbc152ad52c4b180cd05}\label{class_environment_ad8e3b7d748f8bbc152ad52c4b180cd05}} 
+virtual void \hyperlink{class_environment_ad8e3b7d748f8bbc152ad52c4b180cd05}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_environment_abcc857ccb97d4e9540436f940145552b}\label{class_environment_abcc857ccb97d4e9540436f940145552b}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Environment.\+h\item 
+src/blackboard/Environment.\+cpp\end{DoxyCompactItemize}

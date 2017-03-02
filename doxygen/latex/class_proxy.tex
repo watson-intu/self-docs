@@ -1,0 +1,60 @@
+\hypertarget{class_proxy}{}\section{Proxy Class Reference}
+\label{class_proxy}\index{Proxy@{Proxy}}
+
+
+This thing links to another object on the blackboard.  
+
+
+
+
+{\ttfamily \#include $<$Proxy.\+h$>$}
+
+Inheritance diagram for Proxy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proxy}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_a9e49424f92534e11863eec6067759c33}\label{class_proxy_a9e49424f92534e11863eec6067759c33}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_proxy}{Proxy} $>$ \hyperlink{class_proxy_a9e49424f92534e11863eec6067759c33}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_ac521fb293e7ef97c5653f7fc8db6e038}\label{class_proxy_ac521fb293e7ef97c5653f7fc8db6e038}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_proxy}{Proxy} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_aa0804f7d47c16eb60c979ea6df61758e}\label{class_proxy_aa0804f7d47c16eb60c979ea6df61758e}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_proxy_a69c4dd7c847504b7f65774e3dde67c1b}\label{class_proxy_a69c4dd7c847504b7f65774e3dde67c1b}} 
+\hyperlink{class_proxy_a69c4dd7c847504b7f65774e3dde67c1b}{Proxy} (Thing\+Category a\+\_\+e\+Type=T\+T\+\_\+\+I\+N\+V\+A\+L\+ID)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_ae458f80d1e8dfd9cc360c525df52f3ec}\label{class_proxy_ae458f80d1e8dfd9cc360c525df52f3ec}} 
+{\bfseries Proxy} (Thing\+Category a\+\_\+e\+Type, const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Thing)
+\item 
+\mbox{\Hypertarget{class_proxy_a8149837d9a7a2efa5b268097b21516e5}\label{class_proxy_a8149837d9a7a2efa5b268097b21516e5}} 
+virtual void \hyperlink{class_proxy_a8149837d9a7a2efa5b268097b21516e5}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_a959a0ba1176819f0b60dc982e515dbf0}\label{class_proxy_a959a0ba1176819f0b60dc982e515dbf0}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_proxy_af0017755511d78b4bbd8a1bfe804f26c}\label{class_proxy_af0017755511d78b4bbd8a1bfe804f26c}} 
+const std\+::string \& \hyperlink{class_proxy_af0017755511d78b4bbd8a1bfe804f26c}{Get\+Target\+G\+U\+ID} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_aae22d6e606a11c94f37f51eaddbc77f8}\label{class_proxy_aae22d6e606a11c94f37f51eaddbc77f8}} 
+\hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} {\bfseries Get\+Target} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This thing links to another object on the blackboard. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Proxy.\+h\item 
+src/blackboard/Proxy.\+cpp\end{DoxyCompactItemize}

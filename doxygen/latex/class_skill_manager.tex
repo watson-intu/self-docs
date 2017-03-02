@@ -1,0 +1,117 @@
+\hypertarget{class_skill_manager}{}\section{Skill\+Manager Class Reference}
+\label{class_skill_manager}\index{Skill\+Manager@{Skill\+Manager}}
+
+
+This manager manages all \hyperlink{class_i_skill}{I\+Skill} instances including the saving and loading of skills from local storage.  
+
+
+
+
+{\ttfamily \#include $<$Skill\+Manager.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_skill_manager_a380a09a2cb5f00dbe79ba34467abc9ed}\label{class_skill_manager_a380a09a2cb5f00dbe79ba34467abc9ed}} 
+typedef std\+::list$<$ std\+::string $>$ \hyperlink{class_skill_manager_a380a09a2cb5f00dbe79ba34467abc9ed}{Skill\+Files}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a1abbbc3ddfdd2a9ae1e84e8bc07b37a2}\label{class_skill_manager_a1abbbc3ddfdd2a9ae1e84e8bc07b37a2}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_skill}{I\+Skill} $>$ {\bfseries I\+Skill\+SP}
+\item 
+\mbox{\Hypertarget{class_skill_manager_adbaa615fadbe67a9cbcbdf2131a027ab}\label{class_skill_manager_adbaa615fadbe67a9cbcbdf2131a027ab}} 
+typedef std\+::map$<$ std\+::string, I\+Skill\+SP $>$ {\bfseries Skill\+Map}
+\item 
+\mbox{\Hypertarget{class_skill_manager_ae55792e637fe8a3fb466aeb0c1bce4f2}\label{class_skill_manager_ae55792e637fe8a3fb466aeb0c1bce4f2}} 
+typedef std\+::set$<$ \hyperlink{class_skill_instance}{Skill\+Instance} $\ast$$>$ {\bfseries Skill\+Set}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_skill_manager_a88ba520bb439d226bc62b44d10e3a679}\label{class_skill_manager_a88ba520bb439d226bc62b44d10e3a679}} 
+\hyperlink{class_skill_manager_a88ba520bb439d226bc62b44d10e3a679}{Skill\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a2988694cf9bca6190a3a1d1d32746c8e}\label{class_skill_manager_a2988694cf9bca6190a3a1d1d32746c8e}} 
+const I\+Graph\+::\+SP \& \hyperlink{class_skill_manager_a2988694cf9bca6190a3a1d1d32746c8e}{Get\+Skill\+Graph} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a2c97daf72840aa1a1be8ffa4a859bac2}\label{class_skill_manager_a2c97daf72840aa1a1be8ffa4a859bac2}} 
+const Skill\+Set \& {\bfseries Get\+Active\+Skills} () const
+\item 
+\mbox{\Hypertarget{class_skill_manager_a259df4660f96c4fc895e30eb0d359f33}\label{class_skill_manager_a259df4660f96c4fc895e30eb0d359f33}} 
+const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \& {\bfseries Find\+Cached\+Skill} (const std\+::string \&a\+\_\+\+G\+U\+ID) const
+\item 
+void \hyperlink{class_skill_manager_a93d4f06cba6013263d249a52d0cd8e8c}{Use\+Skill} (const std\+::string \&a\+\_\+skill, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params, const Delegate$<$ \hyperlink{class_skill_instance}{Skill\+Instance} $\ast$$>$ \&a\+\_\+\+Callback, const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Parent)
+\item 
+\mbox{\Hypertarget{class_skill_manager_a6b61035d0240c4355dc55aa35825e6c9}\label{class_skill_manager_a6b61035d0240c4355dc55aa35825e6c9}} 
+void {\bfseries Use\+Skill} (const std\+::string \&a\+\_\+skill, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params, const Delegate$<$ \hyperlink{class_skill_instance}{Skill\+Instance} $\ast$$>$ \&a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_skill_manager_a87fa23793bfdd49f8cb60877446395c1}\label{class_skill_manager_a87fa23793bfdd49f8cb60877446395c1}} 
+void {\bfseries Use\+Skill} (const std\+::string \&a\+\_\+skill, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params, const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Parent)
+\item 
+\mbox{\Hypertarget{class_skill_manager_ae8bcd0cd97ad81b32cf5ce9afad27e68}\label{class_skill_manager_ae8bcd0cd97ad81b32cf5ce9afad27e68}} 
+void {\bfseries Use\+Skill} (const std\+::string \&a\+\_\+skill, const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Parent)
+\item 
+\mbox{\Hypertarget{class_skill_manager_afbdf2abc030e5c3e6b849bfcf5ebab9e}\label{class_skill_manager_afbdf2abc030e5c3e6b849bfcf5ebab9e}} 
+void {\bfseries Use\+Skill} (const std\+::string \&a\+\_\+skill, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_skill_manager_a5670974dd172f0ba4ec3ebaa622332ba}\label{class_skill_manager_a5670974dd172f0ba4ec3ebaa622332ba}} 
+void {\bfseries Use\+Skill} (const std\+::string \&a\+\_\+skill)
+\item 
+\mbox{\Hypertarget{class_skill_manager_ab6bf410f20b4e87ee2e85c46d32a1819}\label{class_skill_manager_ab6bf410f20b4e87ee2e85c46d32a1819}} 
+bool \hyperlink{class_skill_manager_ab6bf410f20b4e87ee2e85c46d32a1819}{Abort\+Active\+Skills} ()
+\begin{DoxyCompactList}\small\item\em Abort all active skills. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a2fdc4a0701e2d352e3c7f3df44825c56}\label{class_skill_manager_a2fdc4a0701e2d352e3c7f3df44825c56}} 
+bool {\bfseries Abort\+Active\+Skill} (const std\+::string \&a\+\_\+\+Skill)
+\item 
+\mbox{\Hypertarget{class_skill_manager_ac5bd87257d3630c8e0c7bb5733682fbb}\label{class_skill_manager_ac5bd87257d3630c8e0c7bb5733682fbb}} 
+bool \hyperlink{class_skill_manager_ac5bd87257d3630c8e0c7bb5733682fbb}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a4a6e700c9c6cca9f07f65d16342a5907}\label{class_skill_manager_a4a6e700c9c6cca9f07f65d16342a5907}} 
+bool \hyperlink{class_skill_manager_a4a6e700c9c6cca9f07f65d16342a5907}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this manager. \end{DoxyCompactList}\item 
+bool \hyperlink{class_skill_manager_a27b25eebb68ae5679073b4c3bf472857}{Add\+Skill} (const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&a\+\_\+sp\+Skill)
+\item 
+\mbox{\Hypertarget{class_skill_manager_a4919941d2c625b23c77a728c97e04575}\label{class_skill_manager_a4919941d2c625b23c77a728c97e04575}} 
+bool \hyperlink{class_skill_manager_a4919941d2c625b23c77a728c97e04575}{Delete\+Skill} (const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&a\+\_\+sp\+Skill)
+\begin{DoxyCompactList}\small\item\em delete a skill object by it\textquotesingle{}s pointer. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a7e637625aef16e5618f4db5dd9d677ba}\label{class_skill_manager_a7e637625aef16e5618f4db5dd9d677ba}} 
+bool \hyperlink{class_skill_manager_a7e637625aef16e5618f4db5dd9d677ba}{Delete\+Skill} (const std\+::string \&a\+\_\+\+Skill)
+\begin{DoxyCompactList}\small\item\em delete all skills connected to the given name \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_manager_a805a83759fe64ab0bdfdb342b21b5a7a}\label{class_skill_manager_a805a83759fe64ab0bdfdb342b21b5a7a}} 
+void {\bfseries Add\+Instance} (\hyperlink{class_skill_instance}{Skill\+Instance} $\ast$a\+\_\+p\+Instance)
+\item 
+\mbox{\Hypertarget{class_skill_manager_ab62d9744b0d8f9822b5f566105ae528a}\label{class_skill_manager_ab62d9744b0d8f9822b5f566105ae528a}} 
+void {\bfseries Remove\+Instance} (\hyperlink{class_skill_instance}{Skill\+Instance} $\ast$a\+\_\+p\+Instance)
+\item 
+\mbox{\Hypertarget{class_skill_manager_ad5c31869afc31cfba3efc73903aaa407}\label{class_skill_manager_ad5c31869afc31cfba3efc73903aaa407}} 
+void \hyperlink{class_skill_manager_ad5c31869afc31cfba3efc73903aaa407}{Cache\+Skill} (const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&a\+\_\+sp\+Skill)
+\begin{DoxyCompactList}\small\item\em Cache a skill by it\textquotesingle{}s G\+U\+ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_skill_manager_aec8b450284bdf756e1eaaf5d87adaf33}\label{class_skill_manager_aec8b450284bdf756e1eaaf5d87adaf33}} 
+static I\+Skill\+SP \hyperlink{class_skill_manager_aec8b450284bdf756e1eaaf5d87adaf33}{N\+U\+L\+L\+\_\+\+S\+K\+I\+LL}
+\begin{DoxyCompactList}\small\item\em Constants. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This manager manages all \hyperlink{class_i_skill}{I\+Skill} instances including the saving and loading of skills from local storage. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_skill_manager_a27b25eebb68ae5679073b4c3bf472857}\label{class_skill_manager_a27b25eebb68ae5679073b4c3bf472857}} 
+\index{Skill\+Manager@{Skill\+Manager}!Add\+Skill@{Add\+Skill}}
+\index{Add\+Skill@{Add\+Skill}!Skill\+Manager@{Skill\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Skill()}{AddSkill()}}
+{\footnotesize\ttfamily bool Skill\+Manager\+::\+Add\+Skill (\begin{DoxyParamCaption}\item[{const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&}]{a\+\_\+sp\+Skill }\end{DoxyParamCaption})}
+
+add a new skill into this manager. It will be saved into local storage and uploaded into remote storage. this manager takes ownership of this object and will delete it upon destruction. \mbox{\Hypertarget{class_skill_manager_a93d4f06cba6013263d249a52d0cd8e8c}\label{class_skill_manager_a93d4f06cba6013263d249a52d0cd8e8c}} 
+\index{Skill\+Manager@{Skill\+Manager}!Use\+Skill@{Use\+Skill}}
+\index{Use\+Skill@{Use\+Skill}!Skill\+Manager@{Skill\+Manager}}
+\subsubsection{\texorpdfstring{Use\+Skill()}{UseSkill()}}
+{\footnotesize\ttfamily void Skill\+Manager\+::\+Use\+Skill (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+skill,  }\item[{const \hyperlink{class_params_map}{Params\+Map} \&}]{a\+\_\+\+Params,  }\item[{const Delegate$<$ \hyperlink{class_skill_instance}{Skill\+Instance} $\ast$$>$ \&}]{a\+\_\+\+Callback,  }\item[{const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&}]{a\+\_\+sp\+Parent }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Use a skill by it\textquotesingle{}s ID with the given parameters. The callback if provided will be invoked as the state changes for the skill. This object will be deleted automatically once the skill is completed after the final callback is made. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/Skill\+Manager.\+h\item 
+src/skills/Skill\+Manager.\+cpp\end{DoxyCompactItemize}

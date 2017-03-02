@@ -1,0 +1,73 @@
+\hypertarget{class_microphone}{}\section{Microphone Class Reference}
+\label{class_microphone}\index{Microphone@{Microphone}}
+
+
+{\ttfamily \#include $<$Microphone.\+h$>$}
+
+Inheritance diagram for Microphone\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_microphone}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_microphone_a19b9b7d9d4d92fb532be7e5b19c39ea1}\label{class_microphone_a19b9b7d9d4d92fb532be7e5b19c39ea1}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_microphone_a1c6930eb9e11886e30b695d6a2e94b5e}\label{class_microphone_a1c6930eb9e11886e30b695d6a2e94b5e}} 
+\hyperlink{class_microphone_a1c6930eb9e11886e30b695d6a2e94b5e}{Microphone} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_a29294b7f7ac52f388086d97eca9d2b16}\label{class_microphone_a29294b7f7ac52f388086d97eca9d2b16}} 
+virtual void \hyperlink{class_microphone_a29294b7f7ac52f388086d97eca9d2b16}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_aa927c37df60cdd615353cedd044c2380}\label{class_microphone_aa927c37df60cdd615353cedd044c2380}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_microphone_ae5e452c8edcd7221ed14085f1c5d9a4d}\label{class_microphone_ae5e452c8edcd7221ed14085f1c5d9a4d}} 
+virtual const char $\ast$ \hyperlink{class_microphone_ae5e452c8edcd7221ed14085f1c5d9a4d}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_a706e505971eb256e19633d59033b293f}\label{class_microphone_a706e505971eb256e19633d59033b293f}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_microphone_a1b313ccac38820c91eec1626853dd257}\label{class_microphone_a1b313ccac38820c91eec1626853dd257}} 
+virtual const char $\ast$ {\bfseries Get\+Binary\+Type} ()
+\item 
+\mbox{\Hypertarget{class_microphone_a786ace62e9a59713e190a036e51a15d3}\label{class_microphone_a786ace62e9a59713e190a036e51a15d3}} 
+virtual bool \hyperlink{class_microphone_a786ace62e9a59713e190a036e51a15d3}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_af68dd773dbd3bfb381aa827f3ec30196}\label{class_microphone_af68dd773dbd3bfb381aa827f3ec30196}} 
+virtual bool \hyperlink{class_microphone_af68dd773dbd3bfb381aa827f3ec30196}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_a7afee929c83661709b4cf81624e2ff38}\label{class_microphone_a7afee929c83661709b4cf81624e2ff38}} 
+virtual void \hyperlink{class_microphone_a7afee929c83661709b4cf81624e2ff38}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_a2e0a9c0d26319bdb4d2191fc6567a15b}\label{class_microphone_a2e0a9c0d26319bdb4d2191fc6567a15b}} 
+virtual void \hyperlink{class_microphone_a2e0a9c0d26319bdb4d2191fc6567a15b}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_microphone_a7263061329ffc35acc2f772ac3f440b2}\label{class_microphone_a7263061329ffc35acc2f772ac3f440b2}} 
+int \hyperlink{class_microphone_a7263061329ffc35acc2f772ac3f440b2}{m\+\_\+\+Recording\+HZ}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_microphone_a0cf269a9d9aecf4f2298cef4604b552d}\label{class_microphone_a0cf269a9d9aecf4f2298cef4604b552d}} 
+int {\bfseries m\+\_\+\+Recording\+Bits}
+\item 
+\mbox{\Hypertarget{class_microphone_a5304521178fb390d380fc698c6dc6c3f}\label{class_microphone_a5304521178fb390d380fc698c6dc6c3f}} 
+int {\bfseries m\+\_\+\+Recording\+Channels}
+\item 
+\mbox{\Hypertarget{class_microphone_ad51a9dabedae6c593ecfd87457882671}\label{class_microphone_ad51a9dabedae6c593ecfd87457882671}} 
+std\+::string {\bfseries m\+\_\+\+Binary\+Type}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for a standard microphone, this is not a concrete implementation. For that see D\+S\+Microphone or Nao\+Microphone 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Microphone.\+h\item 
+src/sensors/Microphone.\+cpp\end{DoxyCompactItemize}

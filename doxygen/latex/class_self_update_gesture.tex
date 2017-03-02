@@ -1,0 +1,48 @@
+\hypertarget{class_self_update_gesture}{}\section{Self\+Update\+Gesture Class Reference}
+\label{class_self_update_gesture}\index{Self\+Update\+Gesture@{Self\+Update\+Gesture}}
+
+
+This gesture updates the version of Self.  
+
+
+
+
+{\ttfamily \#include $<$Self\+Update\+Gesture.\+h$>$}
+
+Inheritance diagram for Self\+Update\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_self_update_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_self_update_gesture_a02796fe89b422a53b6a98da574764177}\label{class_self_update_gesture_a02796fe89b422a53b6a98da574764177}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_self_update_gesture_aa7e2973a7ef9efc2d50636b80a954a09}\label{class_self_update_gesture_aa7e2973a7ef9efc2d50636b80a954a09}} 
+\hyperlink{class_self_update_gesture_aa7e2973a7ef9efc2d50636b80a954a09}{Self\+Update\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_update_gesture_a80be43798c048574abe97d5823e7ce20}\label{class_self_update_gesture_a80be43798c048574abe97d5823e7ce20}} 
+virtual void \hyperlink{class_self_update_gesture_a80be43798c048574abe97d5823e7ce20}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_update_gesture_af1941c5aa8fefd968518ae7e00c19001}\label{class_self_update_gesture_af1941c5aa8fefd968518ae7e00c19001}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_self_update_gesture_adca477442d05fdd8ed80cdd963583ef9}\label{class_self_update_gesture_adca477442d05fdd8ed80cdd963583ef9}} 
+virtual bool \hyperlink{class_self_update_gesture_adca477442d05fdd8ed80cdd963583ef9}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_update_gesture_a561a4289bdc9fb6e01909d3305e3b561}\label{class_self_update_gesture_a561a4289bdc9fb6e01909d3305e3b561}} 
+virtual bool \hyperlink{class_self_update_gesture_a561a4289bdc9fb6e01909d3305e3b561}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture updates the version of Self. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Self\+Update\+Gesture.\+h\item 
+src/gestures/Self\+Update\+Gesture.\+cpp\end{DoxyCompactItemize}

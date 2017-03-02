@@ -1,0 +1,65 @@
+\hypertarget{class_network}{}\section{Network Class Reference}
+\label{class_network}\index{Network@{Network}}
+
+
+Base class for a \hyperlink{class_network}{Network} sensor class.  
+
+
+
+
+{\ttfamily \#include $<$Network.\+h$>$}
+
+Inheritance diagram for Network\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_network}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{class_network_1_1_request}{Request}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_network_ac7e7c596dccf559081866591dd4b46b3}\label{class_network_ac7e7c596dccf559081866591dd4b46b3}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_network_aba0bb7188181a86f566897ecc4cab0e5}\label{class_network_aba0bb7188181a86f566897ecc4cab0e5}} 
+virtual void \hyperlink{class_network_aba0bb7188181a86f566897ecc4cab0e5}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_a0444d61d9083acea6eb7c4ab75c232e0}\label{class_network_a0444d61d9083acea6eb7c4ab75c232e0}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_network_aed4a2be43cf3625fe37e4b9a9a578167}\label{class_network_aed4a2be43cf3625fe37e4b9a9a578167}} 
+virtual const char $\ast$ \hyperlink{class_network_aed4a2be43cf3625fe37e4b9a9a578167}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_a4466db1d5f304d8e5d5411f0876ef519}\label{class_network_a4466db1d5f304d8e5d5411f0876ef519}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_network_ac62a9aa7f5bf645549e05385a1ca3c21}\label{class_network_ac62a9aa7f5bf645549e05385a1ca3c21}} 
+virtual bool \hyperlink{class_network_ac62a9aa7f5bf645549e05385a1ca3c21}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_af87fccea8e1cc71e1130e4210f8c751d}\label{class_network_af87fccea8e1cc71e1130e4210f8c751d}} 
+virtual bool \hyperlink{class_network_af87fccea8e1cc71e1130e4210f8c751d}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_a11df81f4a6df3a321c897f957305ee86}\label{class_network_a11df81f4a6df3a321c897f957305ee86}} 
+virtual void \hyperlink{class_network_a11df81f4a6df3a321c897f957305ee86}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_a6b2bd8c045b2bedf587f93320d914d2d}\label{class_network_a6b2bd8c045b2bedf587f93320d914d2d}} 
+virtual void \hyperlink{class_network_a6b2bd8c045b2bedf587f93320d914d2d}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_network_a0e7c7fc6f5abdd0ea3e00b8425c2cae2}\label{class_network_a0e7c7fc6f5abdd0ea3e00b8425c2cae2}} 
+bool \hyperlink{class_network_a0e7c7fc6f5abdd0ea3e00b8425c2cae2}{Is\+Network\+Up} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a \hyperlink{class_network}{Network} sensor class. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Network.\+h\item 
+src/sensors/Network.\+cpp\end{DoxyCompactItemize}

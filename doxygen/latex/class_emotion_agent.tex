@@ -1,0 +1,62 @@
+\hypertarget{class_emotion_agent}{}\section{Emotion\+Agent Class Reference}
+\label{class_emotion_agent}\index{Emotion\+Agent@{Emotion\+Agent}}
+
+
+This agent handles emotions.  
+
+
+
+
+{\ttfamily \#include $<$Emotion\+Agent.\+h$>$}
+
+Inheritance diagram for Emotion\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_emotion_agent}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_emotion_agent_1_1_touch_response}{Touch\+Response}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_emotion_agent_a1578745a702913f10ace02142df6163f}\label{class_emotion_agent_a1578745a702913f10ace02142df6163f}} 
+typedef std\+::vector$<$ I\+Conditional\+::\+SP $>$ \hyperlink{class_emotion_agent_a1578745a702913f10ace02142df6163f}{Conditions}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_emotion_agent_a1f7279e7c1fc07df109c947794734814}\label{class_emotion_agent_a1f7279e7c1fc07df109c947794734814}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_emotion_agent_a74570ffbdf84d550a482b2a3b9b88c1d}\label{class_emotion_agent_a74570ffbdf84d550a482b2a3b9b88c1d}} 
+\hyperlink{class_emotion_agent_a74570ffbdf84d550a482b2a3b9b88c1d}{Emotion\+Agent} ()
+\begin{DoxyCompactList}\small\item\em Constructions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_emotion_agent_a423209e01aa9d2823317a0a5af3f468b}\label{class_emotion_agent_a423209e01aa9d2823317a0a5af3f468b}} 
+virtual void \hyperlink{class_emotion_agent_a423209e01aa9d2823317a0a5af3f468b}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_emotion_agent_a754713b176cf292986405269336b9541}\label{class_emotion_agent_a754713b176cf292986405269336b9541}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_emotion_agent_a366a230b7ea3926a4b899cabb6476512}\label{class_emotion_agent_a366a230b7ea3926a4b899cabb6476512}} 
+virtual bool \hyperlink{class_emotion_agent_a366a230b7ea3926a4b899cabb6476512}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_agent}{I\+Agent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_emotion_agent_a991e85bfd0583a70e8668cd4388bbfb1}\label{class_emotion_agent_a991e85bfd0583a70e8668cd4388bbfb1}} 
+virtual bool {\bfseries On\+Stop} ()
+\item 
+\mbox{\Hypertarget{class_emotion_agent_a7fb8bdf10868cb62af2b849282db8a0f}\label{class_emotion_agent_a7fb8bdf10868cb62af2b849282db8a0f}} 
+const float {\bfseries Get\+Emotional\+State} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This agent handles emotions. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/Emotion\+Agent.\+h\item 
+src/agent/Emotion\+Agent.\+cpp\end{DoxyCompactItemize}

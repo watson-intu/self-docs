@@ -1,0 +1,57 @@
+\hypertarget{class_sonar}{}\section{Sonar Class Reference}
+\label{class_sonar}\index{Sonar@{Sonar}}
+
+
+Base class for a \hyperlink{class_camera}{Camera} sensor class that collects \hyperlink{class_video_data}{Video\+Data}. This is not a actual implementation, see Nao\+Camera.  
+
+
+
+
+{\ttfamily \#include $<$Sonar.\+h$>$}
+
+Inheritance diagram for Sonar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_sonar}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sonar_a2ca73026ac6a7368015804e9153f2eb2}\label{class_sonar_a2ca73026ac6a7368015804e9153f2eb2}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_sonar_a82dc7b0b0472eaf9d6e8a20219ba8f51}\label{class_sonar_a82dc7b0b0472eaf9d6e8a20219ba8f51}} 
+virtual void \hyperlink{class_sonar_a82dc7b0b0472eaf9d6e8a20219ba8f51}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialiazable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sonar_a1118991235f65dc3fecff8878955fc44}\label{class_sonar_a1118991235f65dc3fecff8878955fc44}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_sonar_abc5ce7d97d728b5f2ee701aed4a501f1}\label{class_sonar_abc5ce7d97d728b5f2ee701aed4a501f1}} 
+virtual const char $\ast$ \hyperlink{class_sonar_abc5ce7d97d728b5f2ee701aed4a501f1}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sonar_a6705198785986d06b0132d10adf9bf99}\label{class_sonar_a6705198785986d06b0132d10adf9bf99}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_sonar_a19cfe2b07138b6c9edede1415b19b593}\label{class_sonar_a19cfe2b07138b6c9edede1415b19b593}} 
+virtual bool \hyperlink{class_sonar_a19cfe2b07138b6c9edede1415b19b593}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sonar_ac3c8e5369e2fc92efaf30a2ffc6a7103}\label{class_sonar_ac3c8e5369e2fc92efaf30a2ffc6a7103}} 
+virtual bool \hyperlink{class_sonar_ac3c8e5369e2fc92efaf30a2ffc6a7103}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sonar_a2040459f0005b4829915b8e28461fd9b}\label{class_sonar_a2040459f0005b4829915b8e28461fd9b}} 
+virtual void \hyperlink{class_sonar_a2040459f0005b4829915b8e28461fd9b}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sonar_a48121118d78a726608c85c94b89a2ba8}\label{class_sonar_a48121118d78a726608c85c94b89a2ba8}} 
+virtual void \hyperlink{class_sonar_a48121118d78a726608c85c94b89a2ba8}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a \hyperlink{class_camera}{Camera} sensor class that collects \hyperlink{class_video_data}{Video\+Data}. This is not a actual implementation, see Nao\+Camera. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Sonar.\+h\item 
+src/sensors/Sonar.\+cpp\end{DoxyCompactItemize}

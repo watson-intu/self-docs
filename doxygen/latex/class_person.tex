@@ -1,0 +1,111 @@
+\hypertarget{class_person}{}\section{Person Class Reference}
+\label{class_person}\index{Person@{Person}}
+
+
+A person as recognized by the visual recognition system.  
+
+
+
+
+{\ttfamily \#include $<$Person.\+h$>$}
+
+Inheritance diagram for Person\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_person}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_person_a16426d961e9ca63d2524812444163d36}\label{class_person_a16426d961e9ca63d2524812444163d36}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_person}{Person} $>$ \hyperlink{class_person_a16426d961e9ca63d2524812444163d36}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_person_ae91542016d2e03d1fa9e37ed95b1dcd6}\label{class_person_ae91542016d2e03d1fa9e37ed95b1dcd6}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_person}{Person} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_person_ac27922315c4a377e9f45a12ec6f854e8}\label{class_person_ac27922315c4a377e9f45a12ec6f854e8}} 
+typedef std\+::list$<$ std\+::string $>$ {\bfseries String\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_person_a89f2b3baabafacd2daf345d87a7d0a06}\label{class_person_a89f2b3baabafacd2daf345d87a7d0a06}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_person_a0397c6f89fafc12e738923f612bc41a3}\label{class_person_a0397c6f89fafc12e738923f612bc41a3}} 
+\hyperlink{class_person_a0397c6f89fafc12e738923f612bc41a3}{Person} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_person_a08db889ed330ed1c638b4d173442239e}\label{class_person_a08db889ed330ed1c638b4d173442239e}} 
+virtual void \hyperlink{class_person_a08db889ed330ed1c638b4d173442239e}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_person_a92b7f3962aed21de3bf2af92d404aed4}\label{class_person_a92b7f3962aed21de3bf2af92d404aed4}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_person_a0bd18ad14cb9ddf031d49ead5558bd51}\label{class_person_a0bd18ad14cb9ddf031d49ead5558bd51}} 
+const std\+::string \& \hyperlink{class_person_a0bd18ad14cb9ddf031d49ead5558bd51}{Get\+Person\+Id} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_person_a048949c892efca3a9ab6a47376fce65f}\label{class_person_a048949c892efca3a9ab6a47376fce65f}} 
+const std\+::string \& {\bfseries Get\+Name} () const
+\item 
+\mbox{\Hypertarget{class_person_a20cc261ce7dede3d15d1bc2b0a08cf57}\label{class_person_a20cc261ce7dede3d15d1bc2b0a08cf57}} 
+const std\+::string \& {\bfseries Get\+Gender} () const
+\item 
+\mbox{\Hypertarget{class_person_af81de021d5dcb15fe362c130d6e8797d}\label{class_person_af81de021d5dcb15fe362c130d6e8797d}} 
+const std\+::string \& {\bfseries Get\+Age\+Range} () const
+\item 
+\mbox{\Hypertarget{class_person_a521d614a46e1cc2347f1e914bbd36030}\label{class_person_a521d614a46e1cc2347f1e914bbd36030}} 
+const std\+::string \& {\bfseries Get\+Features} () const
+\item 
+\mbox{\Hypertarget{class_person_a204fbbdf8beaecc8b466d8e8db54f83d}\label{class_person_a204fbbdf8beaecc8b466d8e8db54f83d}} 
+const double \& {\bfseries Get\+Confidence} () const
+\item 
+\mbox{\Hypertarget{class_person_af487ee9d16d9b94dc76614a70e7d5e3b}\label{class_person_af487ee9d16d9b94dc76614a70e7d5e3b}} 
+const std\+::vector$<$ float $>$ \& {\bfseries Get\+Face\+Location} () const
+\item 
+\mbox{\Hypertarget{class_person_a68d5b695873d47f3cfcb6da1a7d076ce}\label{class_person_a68d5b695873d47f3cfcb6da1a7d076ce}} 
+const std\+::string \& {\bfseries Get\+Face\+Image} () const
+\item 
+\mbox{\Hypertarget{class_person_a8431cf906d005de0c0050fa3d885a864}\label{class_person_a8431cf906d005de0c0050fa3d885a864}} 
+void \hyperlink{class_person_a8431cf906d005de0c0050fa3d885a864}{Set\+Person\+Id} (const std\+::string \&a\+\_\+\+Person\+Id)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_person_a11108755294db672b104e4b89d7948ea}\label{class_person_a11108755294db672b104e4b89d7948ea}} 
+void {\bfseries Set\+Name} (const std\+::string \&a\+\_\+\+Name)
+\item 
+\mbox{\Hypertarget{class_person_aa6256de77cce93b3c4deb34f5a7acccd}\label{class_person_aa6256de77cce93b3c4deb34f5a7acccd}} 
+void {\bfseries Set\+Gender} (const std\+::string \&a\+\_\+\+Gender)
+\item 
+\mbox{\Hypertarget{class_person_a60582729800507c0c3caa4a4bd35c9d9}\label{class_person_a60582729800507c0c3caa4a4bd35c9d9}} 
+void {\bfseries Set\+Age\+Range} (const std\+::string \&a\+\_\+\+Age)
+\item 
+\mbox{\Hypertarget{class_person_a7e6e69193377849063c8e63da8aa0fcf}\label{class_person_a7e6e69193377849063c8e63da8aa0fcf}} 
+void {\bfseries Set\+Features} (const std\+::string \&a\+\_\+\+Features)
+\item 
+\mbox{\Hypertarget{class_person_a5640a80798887d825f27899ab623ea55}\label{class_person_a5640a80798887d825f27899ab623ea55}} 
+void {\bfseries Set\+Confidence} (const double a\+\_\+\+Confidence)
+\item 
+\mbox{\Hypertarget{class_person_afb2dc47be93f7c65b2b9068a53616220}\label{class_person_afb2dc47be93f7c65b2b9068a53616220}} 
+void {\bfseries Set\+Face\+Location} (const std\+::vector$<$ float $>$ \&a\+\_\+\+Location)
+\item 
+\mbox{\Hypertarget{class_person_a07a75eb9acbfa27d85f30cf5a21852f6}\label{class_person_a07a75eb9acbfa27d85f30cf5a21852f6}} 
+void {\bfseries Set\+Face\+Image} (const std\+::string \&a\+\_\+\+Image)
+\item 
+\mbox{\Hypertarget{class_person_a59ffd28980d7e5771ab05f2ae1432098}\label{class_person_a59ffd28980d7e5771ab05f2ae1432098}} 
+void {\bfseries Load\+Person} ()
+\item 
+\mbox{\Hypertarget{class_person_a3c554d2a581b99664aa3381826061e56}\label{class_person_a3c554d2a581b99664aa3381826061e56}} 
+void {\bfseries Save\+Person} ()
+\item 
+\mbox{\Hypertarget{class_person_afc0b4a1db118fedafcbfe269b0304bb3}\label{class_person_afc0b4a1db118fedafcbfe269b0304bb3}} 
+float \hyperlink{class_person_afc0b4a1db118fedafcbfe269b0304bb3}{Get\+Face\+Distance} (const std\+::vector$<$ float $>$ \&a\+\_\+\+Location) const
+\begin{DoxyCompactList}\small\item\em Returns the distance to another face location.. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+A person as recognized by the visual recognition system. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Person.\+h\item 
+src/blackboard/Person.\+cpp\end{DoxyCompactItemize}

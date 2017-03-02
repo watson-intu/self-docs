@@ -1,0 +1,58 @@
+\hypertarget{class_text_extractor_1_1_i_audio_filter}{}\section{Text\+Extractor\+:\+:I\+Audio\+Filter Class Reference}
+\label{class_text_extractor_1_1_i_audio_filter}\index{Text\+Extractor\+::\+I\+Audio\+Filter@{Text\+Extractor\+::\+I\+Audio\+Filter}}
+
+
+Interface class for filtering Audio before sending to S\+TT.  
+
+
+
+
+{\ttfamily \#include $<$Text\+Extractor.\+h$>$}
+
+Inheritance diagram for Text\+Extractor\+:\+:I\+Audio\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.926829cm]{class_text_extractor_1_1_i_audio_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_ad0299b138a52b6307bcbd3096a673de5}\label{class_text_extractor_1_1_i_audio_filter_ad0299b138a52b6307bcbd3096a673de5}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_text_extractor_1_1_i_audio_filter}{I\+Audio\+Filter} $>$ \hyperlink{class_text_extractor_1_1_i_audio_filter_ad0299b138a52b6307bcbd3096a673de5}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_a58f973ff58ae0e74495119808160fd31}\label{class_text_extractor_1_1_i_audio_filter_a58f973ff58ae0e74495119808160fd31}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_text_extractor_1_1_i_audio_filter}{I\+Audio\+Filter} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_adae24812eb8187c0a17491450319ea90}\label{class_text_extractor_1_1_i_audio_filter_adae24812eb8187c0a17491450319ea90}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_a9c6a14ed9f149263b65147113c934096}\label{class_text_extractor_1_1_i_audio_filter_a9c6a14ed9f149263b65147113c934096}} 
+\hyperlink{class_text_extractor_1_1_i_audio_filter_a9c6a14ed9f149263b65147113c934096}{I\+Audio\+Filter} ()
+\begin{DoxyCompactList}\small\item\em Base class functions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_a2133f26fb0d79faa2f774f35a788fca8}\label{class_text_extractor_1_1_i_audio_filter_a2133f26fb0d79faa2f774f35a788fca8}} 
+bool {\bfseries Is\+Active} () const
+\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_af57bc63637f1928bd7821d7c6d8ac6de}\label{class_text_extractor_1_1_i_audio_filter_af57bc63637f1928bd7821d7c6d8ac6de}} 
+void {\bfseries Set\+Active\+State} (bool a\+\_\+\+State)
+\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_aa5be454fb207c6f6634eff60b33968d0}\label{class_text_extractor_1_1_i_audio_filter_aa5be454fb207c6f6634eff60b33968d0}} 
+virtual void \hyperlink{class_text_extractor_1_1_i_audio_filter_aa5be454fb207c6f6634eff60b33968d0}{Apply\+Filter} (Speech\+Audio\+Data \&a\+\_\+\+Data)=0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_text_extractor_1_1_i_audio_filter_aa7803b507e0cd6b915fc6b24e137410c}\label{class_text_extractor_1_1_i_audio_filter_aa7803b507e0cd6b915fc6b24e137410c}} 
+bool \hyperlink{class_text_extractor_1_1_i_audio_filter_aa7803b507e0cd6b915fc6b24e137410c}{m\+\_\+b\+Active}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface class for filtering Audio before sending to S\+TT. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/extractors/Text\+Extractor.\+h\end{DoxyCompactItemize}

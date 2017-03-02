@@ -1,0 +1,66 @@
+\hypertarget{class_telephony_speech_gesture}{}\section{Telephony\+Speech\+Gesture Class Reference}
+\label{class_telephony_speech_gesture}\index{Telephony\+Speech\+Gesture@{Telephony\+Speech\+Gesture}}
+
+
+This gesture wraps the local speech sythesis so the self can speak.  
+
+
+
+
+{\ttfamily \#include $<$Telephony\+Speech\+Gesture.\+h$>$}
+
+Inheritance diagram for Telephony\+Speech\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_telephony_speech_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a75bae581794350b70a4656b698c83f6e}\label{class_telephony_speech_gesture_a75bae581794350b70a4656b698c83f6e}} 
+typedef std\+::vector$<$ \hyperlink{class_i_gesture_a4455e468c21c82736bb3ec97c1c72158}{I\+Gesture\+::\+SP} $>$ \hyperlink{class_telephony_speech_gesture_a75bae581794350b70a4656b698c83f6e}{Override\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a7bfd87cedaad2b2abc822bd31678cd54}\label{class_telephony_speech_gesture_a7bfd87cedaad2b2abc822bd31678cd54}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_telephony_speech_gesture}{Telephony\+Speech\+Gesture} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a56deb08f41fb91dbe4651a7b3e588c2b}\label{class_telephony_speech_gesture_a56deb08f41fb91dbe4651a7b3e588c2b}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_telephony_speech_gesture}{Telephony\+Speech\+Gesture} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_ab16901b59041940a79434d25e94a2daa}\label{class_telephony_speech_gesture_ab16901b59041940a79434d25e94a2daa}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a4e69db6253148a3d2e9745d92a02f577}\label{class_telephony_speech_gesture_a4e69db6253148a3d2e9745d92a02f577}} 
+\hyperlink{class_telephony_speech_gesture_a4e69db6253148a3d2e9745d92a02f577}{Telephony\+Speech\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_ac0b966a41b816515eb1ba2971b64c804}\label{class_telephony_speech_gesture_ac0b966a41b816515eb1ba2971b64c804}} 
+virtual void \hyperlink{class_telephony_speech_gesture_ac0b966a41b816515eb1ba2971b64c804}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a6abc5841ad84c00961ddcae8dbf31590}\label{class_telephony_speech_gesture_a6abc5841ad84c00961ddcae8dbf31590}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a268526fcb803568bc1de33eb63f90afc}\label{class_telephony_speech_gesture_a268526fcb803568bc1de33eb63f90afc}} 
+virtual bool \hyperlink{class_telephony_speech_gesture_a268526fcb803568bc1de33eb63f90afc}{Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a293b3372be769e18ba8de9a0a5c790ea}\label{class_telephony_speech_gesture_a293b3372be769e18ba8de9a0a5c790ea}} 
+virtual bool \hyperlink{class_telephony_speech_gesture_a293b3372be769e18ba8de9a0a5c790ea}{Stop} ()
+\begin{DoxyCompactList}\small\item\em This is called when the \hyperlink{class_gesture_manager}{Gesture\+Manager} is stopped. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a9ee4eca6da4830ddcbcffd5c3a13cd30}\label{class_telephony_speech_gesture_a9ee4eca6da4830ddcbcffd5c3a13cd30}} 
+virtual bool \hyperlink{class_telephony_speech_gesture_a9ee4eca6da4830ddcbcffd5c3a13cd30}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_speech_gesture_a763ffe66a7747b2abc19203f9dc73352}\label{class_telephony_speech_gesture_a763ffe66a7747b2abc19203f9dc73352}} 
+virtual bool \hyperlink{class_telephony_speech_gesture_a763ffe66a7747b2abc19203f9dc73352}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture wraps the local speech sythesis so the self can speak. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Telephony\+Speech\+Gesture.\+h\item 
+src/gestures/Telephony\+Speech\+Gesture.\+cpp\end{DoxyCompactItemize}

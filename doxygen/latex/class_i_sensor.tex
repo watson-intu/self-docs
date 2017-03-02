@@ -1,0 +1,152 @@
+\hypertarget{class_i_sensor}{}\section{I\+Sensor Class Reference}
+\label{class_i_sensor}\index{I\+Sensor@{I\+Sensor}}
+
+
+{\ttfamily \#include $<$I\+Sensor.\+h$>$}
+
+Inheritance diagram for I\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.861635cm]{class_i_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_sensor_a9c8b231fdda50c9d368e47ef5b9d0faf}\label{class_i_sensor_a9c8b231fdda50c9d368e47ef5b9d0faf}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_sensor}{I\+Sensor} $>$ \hyperlink{class_i_sensor_a9c8b231fdda50c9d368e47ef5b9d0faf}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_sensor_abc4ab755a8b770cd2b195ca942481184}\label{class_i_sensor_abc4ab755a8b770cd2b195ca942481184}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_sensor_a76ff7396e26cd605508367325dd070ab}\label{class_i_sensor_a76ff7396e26cd605508367325dd070ab}} 
+\hyperlink{class_i_sensor_a76ff7396e26cd605508367325dd070ab}{I\+Sensor} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_ace2350133639bbfcb3135067a3e826a3}\label{class_i_sensor_ace2350133639bbfcb3135067a3e826a3}} 
+{\bfseries I\+Sensor} (const std\+::string \&a\+\_\+\+Sensor\+Id)
+\item 
+\mbox{\Hypertarget{class_i_sensor_aaedd4206c746fb4219a8bf55804706d9}\label{class_i_sensor_aaedd4206c746fb4219a8bf55804706d9}} 
+virtual void \hyperlink{class_i_sensor_aaedd4206c746fb4219a8bf55804706d9}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a9141c3a58c5f0bf3f9439a400d720683}\label{class_i_sensor_a9141c3a58c5f0bf3f9439a400d720683}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_sensor_a55b7ed29ecd363f63c473ecca16cad13}\label{class_i_sensor_a55b7ed29ecd363f63c473ecca16cad13}} 
+virtual const char $\ast$ \hyperlink{class_i_sensor_a55b7ed29ecd363f63c473ecca16cad13}{Get\+Sensor\+Name} ()=0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a0820de7fbe8839752b275c71eec7f488}\label{class_i_sensor_a0820de7fbe8839752b275c71eec7f488}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()=0
+\item 
+\mbox{\Hypertarget{class_i_sensor_a8ce1f068ca952120c6dd2c9a44f9bf12}\label{class_i_sensor_a8ce1f068ca952120c6dd2c9a44f9bf12}} 
+virtual const char $\ast$ {\bfseries Get\+Binary\+Type} ()
+\item 
+\mbox{\Hypertarget{class_i_sensor_af4528b6b0cbccc71fefc06962fe59dca}\label{class_i_sensor_af4528b6b0cbccc71fefc06962fe59dca}} 
+virtual bool \hyperlink{class_i_sensor_af4528b6b0cbccc71fefc06962fe59dca}{On\+Start} ()=0
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_aff54fa470b6873502b2f41b34a3f38cb}\label{class_i_sensor_aff54fa470b6873502b2f41b34a3f38cb}} 
+virtual bool \hyperlink{class_i_sensor_aff54fa470b6873502b2f41b34a3f38cb}{On\+Stop} ()=0
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_aaca0902bbff9f0b1f0e371b1cabbe9fe}\label{class_i_sensor_aaca0902bbff9f0b1f0e371b1cabbe9fe}} 
+virtual void \hyperlink{class_i_sensor_aaca0902bbff9f0b1f0e371b1cabbe9fe}{On\+Pause} ()=0
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a938e06f4c6eb85ef2b4b737d905be960}\label{class_i_sensor_a938e06f4c6eb85ef2b4b737d905be960}} 
+virtual void \hyperlink{class_i_sensor_a938e06f4c6eb85ef2b4b737d905be960}{On\+Resume} ()=0
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_aa5badbc820f0e8dba39ebd35ed577fc8}\label{class_i_sensor_aa5badbc820f0e8dba39ebd35ed577fc8}} 
+virtual void \hyperlink{class_i_sensor_aa5badbc820f0e8dba39ebd35ed577fc8}{On\+Register\+Topics} (\hyperlink{class_i_topics}{I\+Topics} $\ast$a\+\_\+p\+Topics)
+\begin{DoxyCompactList}\small\item\em This is invoke by the \hyperlink{class_sensor_manager}{Sensor\+Manager} to register any topics provided by this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a85727a1d95a93689d471f759f5c647a4}\label{class_i_sensor_a85727a1d95a93689d471f759f5c647a4}} 
+virtual void \hyperlink{class_i_sensor_a85727a1d95a93689d471f759f5c647a4}{On\+Unregister\+Topics} (\hyperlink{class_i_topics}{I\+Topics} $\ast$a\+\_\+p\+Topics)
+\begin{DoxyCompactList}\small\item\em This is invoked to de-\/register this sensor from the topic system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a0379a7f8ce0552396a922797306f6085}\label{class_i_sensor_a0379a7f8ce0552396a922797306f6085}} 
+bool \hyperlink{class_i_sensor_a0379a7f8ce0552396a922797306f6085}{Is\+Active} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a5be397deb901ad32c32ab5d4cbef5259}\label{class_i_sensor_a5be397deb901ad32c32ab5d4cbef5259}} 
+const std\+::string \& {\bfseries Get\+Sensor\+Id} () const
+\item 
+\mbox{\Hypertarget{class_i_sensor_aeb9434bf6b1d8e9552c2f6558d5c641c}\label{class_i_sensor_aeb9434bf6b1d8e9552c2f6558d5c641c}} 
+bool {\bfseries Is\+Overridden} () const
+\item 
+\mbox{\Hypertarget{class_i_sensor_a09e71bf5717196c26461392f0d3c0643}\label{class_i_sensor_a09e71bf5717196c26461392f0d3c0643}} 
+bool {\bfseries Is\+Paused} () const
+\item 
+\mbox{\Hypertarget{class_i_sensor_a8fae74cf4b7dec5c42357909276dd102}\label{class_i_sensor_a8fae74cf4b7dec5c42357909276dd102}} 
+void \hyperlink{class_i_sensor_a8fae74cf4b7dec5c42357909276dd102}{Set\+Sensor\+Manager} (\hyperlink{class_sensor_manager}{Sensor\+Manager} $\ast$a\+\_\+p\+Manager, bool a\+\_\+b\+Override)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a80d29736929d0ff0cf861cefeb5e7896}\label{class_i_sensor_a80d29736929d0ff0cf861cefeb5e7896}} 
+void \hyperlink{class_i_sensor_a80d29736929d0ff0cf861cefeb5e7896}{Subscribe} (Delegate$<$ \hyperlink{class_i_data}{I\+Data} $\ast$$>$ a\+\_\+\+Subscriber)
+\begin{DoxyCompactList}\small\item\em Subscribe to this sensor, any incoming data should be sent to the given delegate. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a0dcaab26c4197ae7d2912507aba1d28f}\label{class_i_sensor_a0dcaab26c4197ae7d2912507aba1d28f}} 
+bool \hyperlink{class_i_sensor_a0dcaab26c4197ae7d2912507aba1d28f}{Unsubscribe} (void $\ast$obj)
+\begin{DoxyCompactList}\small\item\em Un-\/subscribe from this sensor, you pass the this pointer of the object that the delegate was initialized with.. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_af3ef5bb85938012a2904243bf3b1ec2a}\label{class_i_sensor_af3ef5bb85938012a2904243bf3b1ec2a}} 
+void {\bfseries Add\+Override} ()
+\item 
+\mbox{\Hypertarget{class_i_sensor_a80832df92aa8f8771600cb8963d7733d}\label{class_i_sensor_a80832df92aa8f8771600cb8963d7733d}} 
+void {\bfseries Remove\+Override} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_sensor_adb8f7745f3eb22b0b840d3fb6aea0c1d}\label{class_i_sensor_adb8f7745f3eb22b0b840d3fb6aea0c1d}} 
+typedef std\+::list$<$ Delegate$<$ \hyperlink{class_i_data}{I\+Data} $\ast$ $>$ $>$ \hyperlink{class_i_sensor_adb8f7745f3eb22b0b840d3fb6aea0c1d}{Subcriber\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_sensor_a5781417861ffae6b6cd083700ed01910}\label{class_i_sensor_a5781417861ffae6b6cd083700ed01910}} 
+void {\bfseries On\+Subscriber} (const \hyperlink{struct_i_topics_1_1_sub_info}{I\+Topics\+::\+Sub\+Info} \&a\+\_\+\+Sub)
+\item 
+void \hyperlink{class_i_sensor_a00503f0e5633a03835715a2a74efe5a7}{Send\+Data} (\hyperlink{class_i_data}{I\+Data} $\ast$a\+\_\+\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_sensor_acc53fe34c8f2ed7459b78c152d497ed3}\label{class_i_sensor_acc53fe34c8f2ed7459b78c152d497ed3}} 
+std\+::string \hyperlink{class_i_sensor_acc53fe34c8f2ed7459b78c152d497ed3}{m\+\_\+\+Sensor\+Id}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_sensor_a7ad80113996c9830d323276a924785de}\label{class_i_sensor_a7ad80113996c9830d323276a924785de}} 
+\hyperlink{class_i_sensor_adb8f7745f3eb22b0b840d3fb6aea0c1d}{Subcriber\+List} {\bfseries m\+\_\+\+Subscribers}
+\item 
+\mbox{\Hypertarget{class_i_sensor_a417f58c50ef50fbbd1010b122a3a0cad}\label{class_i_sensor_a417f58c50ef50fbbd1010b122a3a0cad}} 
+\hyperlink{class_i_topics}{I\+Topics} $\ast$ {\bfseries m\+\_\+p\+Topics}
+\item 
+\mbox{\Hypertarget{class_i_sensor_aa27388f60fc66b577f99cb85316fa967}\label{class_i_sensor_aa27388f60fc66b577f99cb85316fa967}} 
+std\+::string {\bfseries m\+\_\+\+Topic\+Id}
+\item 
+\mbox{\Hypertarget{class_i_sensor_ab7351a332130af98f5e20db824e30858}\label{class_i_sensor_ab7351a332130af98f5e20db824e30858}} 
+int {\bfseries m\+\_\+\+Topic\+Subscribers}
+\item 
+\mbox{\Hypertarget{class_i_sensor_a0221d3569177b541ba346b3e263c8a54}\label{class_i_sensor_a0221d3569177b541ba346b3e263c8a54}} 
+int {\bfseries m\+\_\+\+Overrides}
+\item 
+\mbox{\Hypertarget{class_i_sensor_a179ba52b0ff7480cce3270125c0c4eb4}\label{class_i_sensor_a179ba52b0ff7480cce3270125c0c4eb4}} 
+volatile int {\bfseries m\+\_\+\+Paused}
+\item 
+\mbox{\Hypertarget{class_i_sensor_a2cb2c283760f825cccd4c5cf0ae82f1e}\label{class_i_sensor_a2cb2c283760f825cccd4c5cf0ae82f1e}} 
+\hyperlink{class_sensor_manager}{Sensor\+Manager} $\ast$ {\bfseries m\+\_\+p\+Manager}
+\item 
+\mbox{\Hypertarget{class_i_sensor_aa57994e831bcd2cee9646a2bc8972c8f}\label{class_i_sensor_aa57994e831bcd2cee9646a2bc8972c8f}} 
+std\+::vector$<$ \hyperlink{class_i_sensor_a9c8b231fdda50c9d368e47ef5b9d0faf}{SP} $>$ {\bfseries m\+\_\+\+Overriden}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base class for all sensors that can receive some type of input from an external source. Examples include connected video camera, microphone input, or data through a connected socket. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_sensor_a00503f0e5633a03835715a2a74efe5a7}\label{class_i_sensor_a00503f0e5633a03835715a2a74efe5a7}} 
+\index{I\+Sensor@{I\+Sensor}!Send\+Data@{Send\+Data}}
+\index{Send\+Data@{Send\+Data}!I\+Sensor@{I\+Sensor}}
+\subsubsection{\texorpdfstring{Send\+Data()}{SendData()}}
+{\footnotesize\ttfamily void I\+Sensor\+::\+Send\+Data (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_data}{I\+Data} $\ast$}]{a\+\_\+\+Data }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Send data to all subscribers of this sensor, note this function takes ownership of the \hyperlink{class_i_data}{I\+Data} object and will delete it once it\textquotesingle{}s done processing with all sensors. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/I\+Sensor.\+h\item 
+src/sensors/I\+Sensor.\+cpp\end{DoxyCompactItemize}

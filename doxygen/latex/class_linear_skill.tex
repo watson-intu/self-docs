@@ -1,0 +1,78 @@
+\hypertarget{class_linear_skill}{}\section{Linear\+Skill Class Reference}
+\label{class_linear_skill}\index{Linear\+Skill@{Linear\+Skill}}
+
+
+This skill is composed of multiple skills running in sequence.  
+
+
+
+
+{\ttfamily \#include $<$Linear\+Skill.\+h$>$}
+
+Inheritance diagram for Linear\+Skill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_linear_skill}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_linear_skill_a512dfa2d2357921fc3d54dc9af8dddc5}\label{class_linear_skill_a512dfa2d2357921fc3d54dc9af8dddc5}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_linear_skill}{Linear\+Skill} $>$ \hyperlink{class_linear_skill_a512dfa2d2357921fc3d54dc9af8dddc5}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_linear_skill_a9c55b54da87a91899a6b37ec96d150ac}\label{class_linear_skill_a9c55b54da87a91899a6b37ec96d150ac}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_linear_skill}{Linear\+Skill} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_linear_skill_ac7f3bd1abcf82a7618b3d42a14f52903}\label{class_linear_skill_ac7f3bd1abcf82a7618b3d42a14f52903}} 
+typedef std\+::vector$<$ \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} $>$ {\bfseries Skill\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_linear_skill_ab453748493c75ef7f1dba656d6d849f2}\label{class_linear_skill_ab453748493c75ef7f1dba656d6d849f2}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_linear_skill_aa3c88b2ed0545d6aad38d45c380c38bb}\label{class_linear_skill_aa3c88b2ed0545d6aad38d45c380c38bb}} 
+\hyperlink{class_linear_skill_aa3c88b2ed0545d6aad38d45c380c38bb}{Linear\+Skill} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_linear_skill_a257c1367e67ea9f84b402d76e796782e}\label{class_linear_skill_a257c1367e67ea9f84b402d76e796782e}} 
+{\bfseries Linear\+Skill} (const \hyperlink{class_linear_skill}{Linear\+Skill} \&a\+\_\+\+Copy)
+\item 
+\mbox{\Hypertarget{class_linear_skill_a616095c8244d6a240ecec6ca5ae45a5f}\label{class_linear_skill_a616095c8244d6a240ecec6ca5ae45a5f}} 
+const Skill\+List \& {\bfseries Get\+Skill\+List} () const
+\item 
+\mbox{\Hypertarget{class_linear_skill_a848dd09f0e2c7db9a096e57a75266f40}\label{class_linear_skill_a848dd09f0e2c7db9a096e57a75266f40}} 
+virtual void \hyperlink{class_linear_skill_a848dd09f0e2c7db9a096e57a75266f40}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_linear_skill_a1cb12edb6cf2864dec3bda655b709ed1}\label{class_linear_skill_a1cb12edb6cf2864dec3bda655b709ed1}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_linear_skill_ad19e09038c5bc3cd0f3f3a97651e3dd8}\label{class_linear_skill_ad19e09038c5bc3cd0f3f3a97651e3dd8}} 
+virtual bool \hyperlink{class_linear_skill_ad19e09038c5bc3cd0f3f3a97651e3dd8}{Can\+Use\+Skill} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_skill}{I\+Skill} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_linear_skill_a63f85339807231fb81997e88de3f612f}\label{class_linear_skill_a63f85339807231fb81997e88de3f612f}} 
+virtual void \hyperlink{class_linear_skill_a63f85339807231fb81997e88de3f612f}{Use\+Skill} (Delegate$<$ \hyperlink{class_i_skill}{I\+Skill} $\ast$$>$ a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em This should return true if this skill can be used, false is returned otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_linear_skill_a8dfd88fb0cb469cec683ea35864977b2}\label{class_linear_skill_a8dfd88fb0cb469cec683ea35864977b2}} 
+virtual bool {\bfseries Abort\+Skill} ()
+\item 
+\mbox{\Hypertarget{class_linear_skill_a8d93777dac067feeea15fb493a20c701}\label{class_linear_skill_a8d93777dac067feeea15fb493a20c701}} 
+virtual \hyperlink{class_i_skill}{I\+Skill} $\ast$ \hyperlink{class_linear_skill_a8d93777dac067feeea15fb493a20c701}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Invoke this function to stop using this skill, the callback passed to \hyperlink{class_linear_skill_a63f85339807231fb81997e88de3f612f}{Use\+Skill()} will N\+OT be invoked after this is called. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_linear_skill_aec9d06d2c6cb14bc93a92c021b6afd0a}\label{class_linear_skill_aec9d06d2c6cb14bc93a92c021b6afd0a}} 
+void {\bfseries Add\+Skill} (const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&a\+\_\+p\+Skill)
+\item 
+\mbox{\Hypertarget{class_linear_skill_a2a31e08a88425b7ee89c7f7fef24a77b}\label{class_linear_skill_a2a31e08a88425b7ee89c7f7fef24a77b}} 
+void {\bfseries Clear\+Skill\+List} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This skill is composed of multiple skills running in sequence. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/Linear\+Skill.\+h\item 
+src/skills/Linear\+Skill.\+cpp\end{DoxyCompactItemize}

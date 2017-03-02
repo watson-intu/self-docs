@@ -1,0 +1,65 @@
+\hypertarget{struct_graph_connector_1_1_i_graph_event}{}\section{Graph\+Connector\+:\+:I\+Graph\+Event Struct Reference}
+\label{struct_graph_connector_1_1_i_graph_event}\index{Graph\+Connector\+::\+I\+Graph\+Event@{Graph\+Connector\+::\+I\+Graph\+Event}}
+
+
+Base class for all events published to the graph-\/topic.  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Connector.\+h$>$}
+
+Inheritance diagram for Graph\+Connector\+:\+:I\+Graph\+Event\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.238938cm]{struct_graph_connector_1_1_i_graph_event}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_a0a8b47d20ad15b26911cd2029334d8dc}\label{struct_graph_connector_1_1_i_graph_event_a0a8b47d20ad15b26911cd2029334d8dc}} 
+typedef Delegate$<$ \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} $\ast$ $>$ \hyperlink{struct_graph_connector_1_1_i_graph_event_a0a8b47d20ad15b26911cd2029334d8dc}{Event\+Callback}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_a7642ff57ccd63909a59919096ac46278}\label{struct_graph_connector_1_1_i_graph_event_a7642ff57ccd63909a59919096ac46278}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} $>$ {\bfseries SP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_a9f61ca574bb0181620c5c63cea35fb23}\label{struct_graph_connector_1_1_i_graph_event_a9f61ca574bb0181620c5c63cea35fb23}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_ae9fa0cc47f37c7393f0866b826aee634}\label{struct_graph_connector_1_1_i_graph_event_ae9fa0cc47f37c7393f0866b826aee634}} 
+\hyperlink{struct_graph_connector_1_1_i_graph_event_ae9fa0cc47f37c7393f0866b826aee634}{I\+Graph\+Event} (Event\+Id a\+\_\+n\+Event\+Id=0)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_afc63dc09792065e27feab3423617fbd4}\label{struct_graph_connector_1_1_i_graph_event_afc63dc09792065e27feab3423617fbd4}} 
+virtual void \hyperlink{struct_graph_connector_1_1_i_graph_event_afc63dc09792065e27feab3423617fbd4}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_a34e3df76de670b2d3f83f1d4ee04e5bc}\label{struct_graph_connector_1_1_i_graph_event_a34e3df76de670b2d3f83f1d4ee04e5bc}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_aa9da1cab9f3bd7b0c5a6c8f5097d93d2}\label{struct_graph_connector_1_1_i_graph_event_aa9da1cab9f3bd7b0c5a6c8f5097d93d2}} 
+virtual void \hyperlink{struct_graph_connector_1_1_i_graph_event_aa9da1cab9f3bd7b0c5a6c8f5097d93d2}{Execute} ()=0
+\begin{DoxyCompactList}\small\item\em \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_ae63bd1a184c986be34299ab0dcf431eb}\label{struct_graph_connector_1_1_i_graph_event_ae63bd1a184c986be34299ab0dcf431eb}} 
+Event\+Id \hyperlink{struct_graph_connector_1_1_i_graph_event_ae63bd1a184c986be34299ab0dcf431eb}{m\+\_\+n\+Event\+Id}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_a8cb28e151df47d468b062d6bd863c7f1}\label{struct_graph_connector_1_1_i_graph_event_a8cb28e151df47d468b062d6bd863c7f1}} 
+\hyperlink{class_graph_connector}{Graph\+Connector} $\ast$ {\bfseries m\+\_\+p\+Connector}
+\item 
+\mbox{\Hypertarget{struct_graph_connector_1_1_i_graph_event_ada9b84948a2e66e64001edd5a0cc5891}\label{struct_graph_connector_1_1_i_graph_event_ada9b84948a2e66e64001edd5a0cc5891}} 
+std\+::string {\bfseries m\+\_\+\+Origin}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Base class for all events published to the graph-\/topic. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/Graph\+Connector.\+h\item 
+src/models/Graph\+Connector.\+cpp\end{DoxyCompactItemize}

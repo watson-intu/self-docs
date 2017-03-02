@@ -1,0 +1,69 @@
+\hypertarget{class_used_skill}{}\section{Used\+Skill Class Reference}
+\label{class_used_skill}\index{Used\+Skill@{Used\+Skill}}
+
+
+This object is placed on the blackboard when a skill is used.  
+
+
+
+
+{\ttfamily \#include $<$Used\+Skill.\+h$>$}
+
+Inheritance diagram for Used\+Skill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_used_skill}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_used_skill_a9195c4f5e7147fef601ace10dc322369}\label{class_used_skill_a9195c4f5e7147fef601ace10dc322369}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_used_skill}{Used\+Skill} $>$ \hyperlink{class_used_skill_a9195c4f5e7147fef601ace10dc322369}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_used_skill_a63ff4b35f90eeca55d7d212c40b53a02}\label{class_used_skill_a63ff4b35f90eeca55d7d212c40b53a02}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_used_skill}{Used\+Skill} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_used_skill_a83be394652687321497faa1958bbd951}\label{class_used_skill_a83be394652687321497faa1958bbd951}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_used_skill_ae082664c88d1b7576da997629c6820f5}\label{class_used_skill_ae082664c88d1b7576da997629c6820f5}} 
+\hyperlink{class_used_skill_ae082664c88d1b7576da997629c6820f5}{Used\+Skill} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_used_skill_a43e47ab501956f70e2276dad62f396dd}\label{class_used_skill_a43e47ab501956f70e2276dad62f396dd}} 
+{\bfseries Used\+Skill} (const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&a\+\_\+sp\+Skill, bool a\+\_\+b\+Failed)
+\item 
+\mbox{\Hypertarget{class_used_skill_a25a5493ba651a760537a4a62d4ffcf0c}\label{class_used_skill_a25a5493ba651a760537a4a62d4ffcf0c}} 
+virtual void \hyperlink{class_used_skill_a25a5493ba651a760537a4a62d4ffcf0c}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_used_skill_a394a26c66d269d043a88e589bfb2162e}\label{class_used_skill_a394a26c66d269d043a88e589bfb2162e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_used_skill_a7c6f40cd5da674b362f8210126274801}\label{class_used_skill_a7c6f40cd5da674b362f8210126274801}} 
+const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \& \hyperlink{class_used_skill_a7c6f40cd5da674b362f8210126274801}{Get\+Skill} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_used_skill_a6a45e4916a991f7eb38aa08c9a7d3fbf}\label{class_used_skill_a6a45e4916a991f7eb38aa08c9a7d3fbf}} 
+bool {\bfseries Is\+Failed} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_used_skill_a0e1f8f9921f9da276182d30f5601bc23}\label{class_used_skill_a0e1f8f9921f9da276182d30f5601bc23}} 
+\hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \hyperlink{class_used_skill_a0e1f8f9921f9da276182d30f5601bc23}{m\+\_\+sp\+Skill}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_used_skill_a31ec924c3a094c2e2961bbbd4fb20677}\label{class_used_skill_a31ec924c3a094c2e2961bbbd4fb20677}} 
+bool {\bfseries m\+\_\+b\+Failed}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This object is placed on the blackboard when a skill is used. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Used\+Skill.\+h\item 
+src/blackboard/Used\+Skill.\+cpp\end{DoxyCompactItemize}

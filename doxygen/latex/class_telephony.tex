@@ -1,0 +1,99 @@
+\hypertarget{class_telephony}{}\section{Telephony Class Reference}
+\label{class_telephony}\index{Telephony@{Telephony}}
+
+
+This service interfaces with the telephony gateway to allow for sending \& accepting phone calls and S\+MS messages.  
+
+
+
+
+{\ttfamily \#include $<$Telephony.\+h$>$}
+
+Inheritance diagram for Telephony\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_telephony}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_ab5c5a24d45eb0612478a26dfbf11a168}\label{class_telephony_ab5c5a24d45eb0612478a26dfbf11a168}} 
+typedef Delegate$<$ const Json\+::\+Value \& $>$ \hyperlink{class_telephony_ab5c5a24d45eb0612478a26dfbf11a168}{On\+Command}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_ace72764fd16a6bf7ddf18b3e7c2ed217}\label{class_telephony_ace72764fd16a6bf7ddf18b3e7c2ed217}} 
+typedef Delegate$<$ const std\+::string \& $>$ {\bfseries On\+Audio\+Out}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_ab9de300c7e8437f7ea2cc38040b80cb7}\label{class_telephony_ab9de300c7e8437f7ea2cc38040b80cb7}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_telephony_a96a183ef350e87c4471cdfcde3138829}\label{class_telephony_a96a183ef350e87c4471cdfcde3138829}} 
+\hyperlink{class_telephony_a96a183ef350e87c4471cdfcde3138829}{Telephony} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_a56b3b1913c335cfae7ed4e53e7718451}\label{class_telephony_a56b3b1913c335cfae7ed4e53e7718451}} 
+virtual void \hyperlink{class_telephony_a56b3b1913c335cfae7ed4e53e7718451}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_a6ffe691f3bfef560de249d61708db274}\label{class_telephony_a6ffe691f3bfef560de249d61708db274}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_telephony_a9db040465debbf79deb0ec189fa9fff2}\label{class_telephony_a9db040465debbf79deb0ec189fa9fff2}} 
+virtual bool \hyperlink{class_telephony_a9db040465debbf79deb0ec189fa9fff2}{Start} ()
+\begin{DoxyCompactList}\small\item\em I\+Service interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_a1789d6678798304ca956035a43c8228d}\label{class_telephony_a1789d6678798304ca956035a43c8228d}} 
+I\+Web\+Client $\ast$ \hyperlink{class_telephony_a1789d6678798304ca956035a43c8228d}{Get\+Connection} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_afd8f4f89ce39bb4cf3a26c2019d1cb30}\label{class_telephony_afd8f4f89ce39bb4cf3a26c2019d1cb30}} 
+const std\+::string \& {\bfseries Get\+Audio\+In\+Format} () const
+\item 
+\mbox{\Hypertarget{class_telephony_a11c08895dc47a8a8ab33350e456c4465}\label{class_telephony_a11c08895dc47a8a8ab33350e456c4465}} 
+const std\+::string \& {\bfseries Get\+Audio\+Out\+Format} () const
+\item 
+\mbox{\Hypertarget{class_telephony_a1ac58c6dd0e477b3876979b106d4e654}\label{class_telephony_a1ac58c6dd0e477b3876979b106d4e654}} 
+const std\+::string \& {\bfseries Get\+My\+Number} () const
+\item 
+bool \hyperlink{class_telephony_aa419e85950a323e88bf8b0123a8bd56e}{Connect} (const std\+::string \&a\+\_\+\+Self\+Id, \hyperlink{class_telephony_ab5c5a24d45eb0612478a26dfbf11a168}{On\+Command} a\+\_\+\+On\+Command, On\+Audio\+Out a\+\_\+\+On\+Audio\+Out)
+\item 
+\mbox{\Hypertarget{class_telephony_ac07f2c04c5f6c4697b59936528e07c9f}\label{class_telephony_ac07f2c04c5f6c4697b59936528e07c9f}} 
+bool \hyperlink{class_telephony_ac07f2c04c5f6c4697b59936528e07c9f}{Dial} (const std\+::string \&a\+\_\+\+Number)
+\begin{DoxyCompactList}\small\item\em Make outgoing call. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_a390bfb55dc1a6314b9faa43d099c1693}\label{class_telephony_a390bfb55dc1a6314b9faa43d099c1693}} 
+bool \hyperlink{class_telephony_a390bfb55dc1a6314b9faa43d099c1693}{Answer} (const std\+::string \&from\+Number, const std\+::string \&to\+Number)
+\begin{DoxyCompactList}\small\item\em Answer an incoming call, returns true on success. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_acd9f3436d7dfcbabbdbde5f0ea8a51a7}\label{class_telephony_acd9f3436d7dfcbabbdbde5f0ea8a51a7}} 
+bool \hyperlink{class_telephony_acd9f3436d7dfcbabbdbde5f0ea8a51a7}{Hang\+Up} ()
+\begin{DoxyCompactList}\small\item\em Hang up current call. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_a4dae6da4af340f564eca72fbdc1ea68a}\label{class_telephony_a4dae6da4af340f564eca72fbdc1ea68a}} 
+bool \hyperlink{class_telephony_a4dae6da4af340f564eca72fbdc1ea68a}{Text} (const std\+::string \&a\+\_\+\+Number, const std\+::string \&a\+\_\+\+Message)
+\begin{DoxyCompactList}\small\item\em Send a S\+MS message. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_abbdf8f6968f3761b3b699aec89ebd107}\label{class_telephony_abbdf8f6968f3761b3b699aec89ebd107}} 
+bool \hyperlink{class_telephony_abbdf8f6968f3761b3b699aec89ebd107}{Disconnect} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from the back-\/end.. \end{DoxyCompactList}\item 
+void \hyperlink{class_telephony_a7e6fb76a0d470cce05e70560e3a0f338}{Send\+Audio\+In} (const std\+::string \&a\+\_\+\+Audio)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This service interfaces with the telephony gateway to allow for sending \& accepting phone calls and S\+MS messages. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_telephony_aa419e85950a323e88bf8b0123a8bd56e}\label{class_telephony_aa419e85950a323e88bf8b0123a8bd56e}} 
+\index{Telephony@{Telephony}!Connect@{Connect}}
+\index{Connect@{Connect}!Telephony@{Telephony}}
+\subsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily bool Telephony\+::\+Connect (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Self\+Id,  }\item[{\hyperlink{class_telephony_ab5c5a24d45eb0612478a26dfbf11a168}{On\+Command}}]{a\+\_\+\+On\+Command,  }\item[{On\+Audio\+Out}]{a\+\_\+\+On\+Audio\+Out }\end{DoxyParamCaption})}
+
+Connect to the back-\/end, this will register and we will become available to receive phone calls. The provided Callback will be invoke when a call is incoming, the user must call \hyperlink{class_telephony_a390bfb55dc1a6314b9faa43d099c1693}{Answer()} to answer the incoming call. \mbox{\Hypertarget{class_telephony_a7e6fb76a0d470cce05e70560e3a0f338}\label{class_telephony_a7e6fb76a0d470cce05e70560e3a0f338}} 
+\index{Telephony@{Telephony}!Send\+Audio\+In@{Send\+Audio\+In}}
+\index{Send\+Audio\+In@{Send\+Audio\+In}!Telephony@{Telephony}}
+\subsubsection{\texorpdfstring{Send\+Audio\+In()}{SendAudioIn()}}
+{\footnotesize\ttfamily void Telephony\+::\+Send\+Audio\+In (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Audio }\end{DoxyParamCaption})}
+
+Send binary audio data up to the gateway, the format of the audio must match the format specified by Get\+Audio\+Format(), usually audio/\+L16;rate=16000 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/services/\+Telephony/Telephony.\+h\item 
+src/services/\+Telephony/Telephony.\+cpp\end{DoxyCompactItemize}

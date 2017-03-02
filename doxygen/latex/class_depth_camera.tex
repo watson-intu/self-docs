@@ -1,0 +1,63 @@
+\hypertarget{class_depth_camera}{}\section{Depth\+Camera Class Reference}
+\label{class_depth_camera}\index{Depth\+Camera@{Depth\+Camera}}
+
+
+Base class for a 3\+D\+Camera sensor class that collects \hyperlink{class_video_data}{Video\+Data}. This is not a actual implementation, see Nao\+Camera.  
+
+
+
+
+{\ttfamily \#include $<$Depth\+Camera.\+h$>$}
+
+Inheritance diagram for Depth\+Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_depth_camera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_depth_camera_a65ba6b900f13d75408d1fbb90e2b1b01}\label{class_depth_camera_a65ba6b900f13d75408d1fbb90e2b1b01}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_depth_camera_a70f1c1dca8591622d6c92dfde5d5c4e4}\label{class_depth_camera_a70f1c1dca8591622d6c92dfde5d5c4e4}} 
+virtual void \hyperlink{class_depth_camera_a70f1c1dca8591622d6c92dfde5d5c4e4}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialiazable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_depth_camera_aafde1d8d16bf2dd14c303729929df0cc}\label{class_depth_camera_aafde1d8d16bf2dd14c303729929df0cc}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_depth_camera_aadd17c5e675559f14c42663902fd10e6}\label{class_depth_camera_aadd17c5e675559f14c42663902fd10e6}} 
+virtual const char $\ast$ \hyperlink{class_depth_camera_aadd17c5e675559f14c42663902fd10e6}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_depth_camera_ac05b35efb90d7beace0cd8bb9c22064c}\label{class_depth_camera_ac05b35efb90d7beace0cd8bb9c22064c}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_depth_camera_a6374182e6de29c0920e54779f9d12be0}\label{class_depth_camera_a6374182e6de29c0920e54779f9d12be0}} 
+virtual bool \hyperlink{class_depth_camera_a6374182e6de29c0920e54779f9d12be0}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_depth_camera_a9a1f1276865887d32898f6e97dfaffea}\label{class_depth_camera_a9a1f1276865887d32898f6e97dfaffea}} 
+virtual bool \hyperlink{class_depth_camera_a9a1f1276865887d32898f6e97dfaffea}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_depth_camera_a1f4ab0e4b2393ad90f6bb4767cbad31c}\label{class_depth_camera_a1f4ab0e4b2393ad90f6bb4767cbad31c}} 
+virtual void \hyperlink{class_depth_camera_a1f4ab0e4b2393ad90f6bb4767cbad31c}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_depth_camera_aaf54e1c596148f5faa99b5c5dbf4daaa}\label{class_depth_camera_aaf54e1c596148f5faa99b5c5dbf4daaa}} 
+virtual void \hyperlink{class_depth_camera_aaf54e1c596148f5faa99b5c5dbf4daaa}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_depth_camera_a333d874d5b7ec662da4955fd923a3329}\label{class_depth_camera_a333d874d5b7ec662da4955fd923a3329}} 
+float \hyperlink{class_depth_camera_a333d874d5b7ec662da4955fd923a3329}{m\+\_\+f\+Frames\+Per\+Sec}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+Base class for a 3\+D\+Camera sensor class that collects \hyperlink{class_video_data}{Video\+Data}. This is not a actual implementation, see Nao\+Camera. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Depth\+Camera.\+h\item 
+src/sensors/Depth\+Camera.\+cpp\end{DoxyCompactItemize}

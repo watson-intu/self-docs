@@ -1,0 +1,56 @@
+\hypertarget{struct_model_agent_1_1_relationship}{}\section{Model\+Agent\+:\+:Relationship Struct Reference}
+\label{struct_model_agent_1_1_relationship}\index{Model\+Agent\+::\+Relationship@{Model\+Agent\+::\+Relationship}}
+
+
+Map a class type to its vertex in the graph of self, others, or the world.  
+
+
+
+
+{\ttfamily \#include $<$Model\+Agent.\+h$>$}
+
+Inheritance diagram for Model\+Agent\+:\+:Relationship\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{struct_model_agent_1_1_relationship}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_a3682280919cce04ac0549675f0d99429}\label{struct_model_agent_1_1_relationship_a3682280919cce04ac0549675f0d99429}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{struct_model_agent_1_1_relationship}{Relationship} $>$ {\bfseries SP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_abc3f69fb3a514968b77a63fcbc59c18a}\label{struct_model_agent_1_1_relationship_abc3f69fb3a514968b77a63fcbc59c18a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_a42004dc0c651db79c492f99e6b71d94d}\label{struct_model_agent_1_1_relationship_a42004dc0c651db79c492f99e6b71d94d}} 
+virtual void \hyperlink{struct_model_agent_1_1_relationship_a42004dc0c651db79c492f99e6b71d94d}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_ab582470770a2e9abb7fad67fd324e61a}\label{struct_model_agent_1_1_relationship_ab582470770a2e9abb7fad67fd324e61a}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_ad32f0000ba6bf15194d3474b07de79ae}\label{struct_model_agent_1_1_relationship_ad32f0000ba6bf15194d3474b07de79ae}} 
+\hyperlink{class_model_agent_a0e4db842aaa669acc5da6c17fae0a2de}{Graph\+Type} {\bfseries m\+\_\+\+Graph}
+\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_a8981b7f01afd9bad56717c2dfcf570f5}\label{struct_model_agent_1_1_relationship_a8981b7f01afd9bad56717c2dfcf570f5}} 
+std\+::string {\bfseries m\+\_\+\+Type}
+\item 
+\mbox{\Hypertarget{struct_model_agent_1_1_relationship_ad1794cce99c9e6d0ed06ea0e325d3b50}\label{struct_model_agent_1_1_relationship_ad1794cce99c9e6d0ed06ea0e325d3b50}} 
+Json\+::\+Value {\bfseries m\+\_\+\+Query}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Map a class type to its vertex in the graph of self, others, or the world. 
+
+The documentation for this struct was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/Model\+Agent.\+h\item 
+src/agent/Model\+Agent.\+cpp\end{DoxyCompactItemize}

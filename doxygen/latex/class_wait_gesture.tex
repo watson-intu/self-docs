@@ -1,0 +1,48 @@
+\hypertarget{class_wait_gesture}{}\section{Wait\+Gesture Class Reference}
+\label{class_wait_gesture}\index{Wait\+Gesture@{Wait\+Gesture}}
+
+
+This gesture waits for a specified period of time.  
+
+
+
+
+{\ttfamily \#include $<$Wait\+Gesture.\+h$>$}
+
+Inheritance diagram for Wait\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_wait_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_wait_gesture_adb42a30b594fbe6c836484d0fa8e08e7}\label{class_wait_gesture_adb42a30b594fbe6c836484d0fa8e08e7}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_wait_gesture_acdd53753c30823b32c9b3234ea68c16c}\label{class_wait_gesture_acdd53753c30823b32c9b3234ea68c16c}} 
+\hyperlink{class_wait_gesture_acdd53753c30823b32c9b3234ea68c16c}{Wait\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_wait_gesture_a0bd3c78bce0890a9cb3e603089a30bec}\label{class_wait_gesture_a0bd3c78bce0890a9cb3e603089a30bec}} 
+virtual void \hyperlink{class_wait_gesture_a0bd3c78bce0890a9cb3e603089a30bec}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_wait_gesture_ac7ef5539f00e7f8543c32acd7633882b}\label{class_wait_gesture_ac7ef5539f00e7f8543c32acd7633882b}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_wait_gesture_a2f775dd69f877bf21382e963af61c337}\label{class_wait_gesture_a2f775dd69f877bf21382e963af61c337}} 
+virtual bool \hyperlink{class_wait_gesture_a2f775dd69f877bf21382e963af61c337}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_wait_gesture_a831908a332246f6234f47adfe827d575}\label{class_wait_gesture_a831908a332246f6234f47adfe827d575}} 
+virtual bool \hyperlink{class_wait_gesture_a831908a332246f6234f47adfe827d575}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture waits for a specified period of time. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Wait\+Gesture.\+h\item 
+src/gestures/Wait\+Gesture.\+cpp\end{DoxyCompactItemize}

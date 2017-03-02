@@ -1,0 +1,66 @@
+\hypertarget{class_entity}{}\section{Entity Class Reference}
+\label{class_entity}\index{Entity@{Entity}}
+
+
+An entity object classified from Visual Recognition.  
+
+
+
+
+{\ttfamily \#include $<$Entity.\+h$>$}
+
+Inheritance diagram for Entity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_entity}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_entity_a7ec71d8cbb17276eb23575040bfbd481}\label{class_entity_a7ec71d8cbb17276eb23575040bfbd481}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_entity}{Entity} $>$ \hyperlink{class_entity_a7ec71d8cbb17276eb23575040bfbd481}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_entity_a4cfc4e9d54917f65c04bcaa915d458df}\label{class_entity_a4cfc4e9d54917f65c04bcaa915d458df}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_entity}{Entity} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_entity_aaf469281c2b86495bf400362eda6ef57}\label{class_entity_aaf469281c2b86495bf400362eda6ef57}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_entity_aa4b1144ee0a85240c58268bab6a02636}\label{class_entity_aa4b1144ee0a85240c58268bab6a02636}} 
+const std\+::string \& {\bfseries Get\+Top\+Class} () const
+\item 
+\mbox{\Hypertarget{class_entity_a9b114e718c3552a822a29cf0b3680fb3}\label{class_entity_a9b114e718c3552a822a29cf0b3680fb3}} 
+const double \& {\bfseries Get\+Top\+Score} () const
+\item 
+\mbox{\Hypertarget{class_entity_a9de188785e8ec974fd587963b181f0fd}\label{class_entity_a9de188785e8ec974fd587963b181f0fd}} 
+const std\+::string \& {\bfseries Get\+Type\+Heirarchy} () const
+\item 
+\mbox{\Hypertarget{class_entity_acb89eda6c2d05419ff158c54ad82afb3}\label{class_entity_acb89eda6c2d05419ff158c54ad82afb3}} 
+void {\bfseries Set\+Top\+Class} (const std\+::string \&a\+\_\+\+Top\+Class)
+\item 
+\mbox{\Hypertarget{class_entity_a88c543a1bb48ca08676d992e521da246}\label{class_entity_a88c543a1bb48ca08676d992e521da246}} 
+void {\bfseries Set\+Top\+Score} (const double \&a\+\_\+\+Top\+Score)
+\item 
+\mbox{\Hypertarget{class_entity_aaf6a72657088c2848e4f6c257d3d04d7}\label{class_entity_aaf6a72657088c2848e4f6c257d3d04d7}} 
+void {\bfseries Set\+Type\+Hierarchy} (const std\+::string \&a\+\_\+\+Type\+Hierarchy)
+\item 
+\mbox{\Hypertarget{class_entity_af6d9b40f72df44d26108e44a94ca3be0}\label{class_entity_af6d9b40f72df44d26108e44a94ca3be0}} 
+virtual void \hyperlink{class_entity_af6d9b40f72df44d26108e44a94ca3be0}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_entity_aa26ea4f3da292a6903d54a0482ad5136}\label{class_entity_aa26ea4f3da292a6903d54a0482ad5136}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An entity object classified from Visual Recognition. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Entity.\+h\item 
+src/blackboard/Entity.\+cpp\end{DoxyCompactItemize}

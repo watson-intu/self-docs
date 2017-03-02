@@ -1,0 +1,98 @@
+\hypertarget{class_sensor_manager}{}\section{Sensor\+Manager Class Reference}
+\label{class_sensor_manager}\index{Sensor\+Manager@{Sensor\+Manager}}
+
+
+{\ttfamily \#include $<$Sensor\+Manager.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}\label{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_sensor}{I\+Sensor} $>$ \hyperlink{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}{I\+Sensor\+SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_af5afe695338cdece05eb03f94424dbb4}\label{class_sensor_manager_af5afe695338cdece05eb03f94424dbb4}} 
+typedef std\+::vector$<$ \hyperlink{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}{I\+Sensor\+SP} $>$ {\bfseries Sensor\+List}
+\item 
+\mbox{\Hypertarget{class_sensor_manager_a5fcebad14f399f3b3d37a85d053f0039}\label{class_sensor_manager_a5fcebad14f399f3b3d37a85d053f0039}} 
+typedef Delegate$<$ \hyperlink{class_i_data}{I\+Data} $\ast$ $>$ {\bfseries Sensor\+Delegate}
+\item 
+\mbox{\Hypertarget{class_sensor_manager_a243d2b54e3115be1f15254e6d66ec9cd}\label{class_sensor_manager_a243d2b54e3115be1f15254e6d66ec9cd}} 
+typedef Delegate$<$ \hyperlink{class_i_sensor}{I\+Sensor} $\ast$ $>$ {\bfseries On\+Sensor}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_sensor_manager_ac2bea3e22536f101970bd20fc72fa5d1}\label{class_sensor_manager_ac2bea3e22536f101970bd20fc72fa5d1}} 
+\hyperlink{class_sensor_manager_ac2bea3e22536f101970bd20fc72fa5d1}{Sensor\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a762ec47d44fb9a4a6277182f68cf794f}\label{class_sensor_manager_a762ec47d44fb9a4a6277182f68cf794f}} 
+const Sensor\+List \& \hyperlink{class_sensor_manager_a762ec47d44fb9a4a6277182f68cf794f}{Get\+Sensors} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a3b2b9c5fbd2a405af96cf6aca3e930f6}\label{class_sensor_manager_a3b2b9c5fbd2a405af96cf6aca3e930f6}} 
+\hyperlink{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}{I\+Sensor\+SP} \hyperlink{class_sensor_manager_a3b2b9c5fbd2a405af96cf6aca3e930f6}{Find\+Sensor} (const std\+::string \&a\+\_\+\+Sensor\+Id) const
+\begin{DoxyCompactList}\small\item\em Finds a sensor by it\textquotesingle{}s ID. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a70c5aeb3d8f44f00a011b20b835b0f18}\label{class_sensor_manager_a70c5aeb3d8f44f00a011b20b835b0f18}} 
+bool \hyperlink{class_sensor_manager_a70c5aeb3d8f44f00a011b20b835b0f18}{Find\+Sensors\+By\+Data\+Type} (const std\+::string \&a\+\_\+\+Data\+Type, Sensor\+List \&sensors) const
+\begin{DoxyCompactList}\small\item\em Finds all sensors by the specified data type, returns true if any sensors are found. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a9a26305c41d9a296d8d4d5efc0afa159}\label{class_sensor_manager_a9a26305c41d9a296d8d4d5efc0afa159}} 
+bool \hyperlink{class_sensor_manager_a9a26305c41d9a296d8d4d5efc0afa159}{Start} ()
+\begin{DoxyCompactList}\small\item\em Initialize and start this sensor manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a58d0f003e4a7f7869400b23587b71815}\label{class_sensor_manager_a58d0f003e4a7f7869400b23587b71815}} 
+bool \hyperlink{class_sensor_manager_a58d0f003e4a7f7869400b23587b71815}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this sensor manager. \end{DoxyCompactList}\item 
+bool \hyperlink{class_sensor_manager_a68d55cf9952fd77c7977bb5563bf11fe}{Add\+Sensor} (const \hyperlink{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}{I\+Sensor\+SP} \&a\+\_\+sp\+Sensor, bool a\+\_\+b\+Override=false)
+\item 
+\mbox{\Hypertarget{class_sensor_manager_a8d76b3d96ba46fb80818fc4259bdb66c}\label{class_sensor_manager_a8d76b3d96ba46fb80818fc4259bdb66c}} 
+bool \hyperlink{class_sensor_manager_a8d76b3d96ba46fb80818fc4259bdb66c}{Remove\+Sensor} (const \hyperlink{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}{I\+Sensor\+SP} \&a\+\_\+p\+Sensor)
+\begin{DoxyCompactList}\small\item\em Remove a sensor from this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a8ef97293847f6eceed9969b2bb74b00c}\label{class_sensor_manager_a8ef97293847f6eceed9969b2bb74b00c}} 
+void \hyperlink{class_sensor_manager_a8ef97293847f6eceed9969b2bb74b00c}{Register\+For\+Sensor} (const std\+::string \&a\+\_\+\+Data\+Type, On\+Sensor a\+\_\+\+On\+Add\+Sensor, On\+Sensor a\+\_\+\+On\+Remove\+Sensor)
+\begin{DoxyCompactList}\small\item\em Register for sensors for the given data type, the callbacks will be invoked when a sensor is added or removed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a6759fcc36572574e2c3df1a81a3abc22}\label{class_sensor_manager_a6759fcc36572574e2c3df1a81a3abc22}} 
+bool \hyperlink{class_sensor_manager_a6759fcc36572574e2c3df1a81a3abc22}{Unregister\+For\+Sensor} (const std\+::string \&a\+\_\+\+Data\+Type, void $\ast$a\+\_\+p\+Object=N\+U\+LL)
+\begin{DoxyCompactList}\small\item\em Unregister for sensor callbacks. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_afae256a237fffc86cbf91239a430823f}\label{class_sensor_manager_afae256a237fffc86cbf91239a430823f}} 
+void \hyperlink{class_sensor_manager_afae256a237fffc86cbf91239a430823f}{Pause\+Sensor\+Type} (const std\+::string \&a\+\_\+data\+Type)
+\begin{DoxyCompactList}\small\item\em Pause all sensors of the given type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a598c08b51a852266857d9e546bd64f90}\label{class_sensor_manager_a598c08b51a852266857d9e546bd64f90}} 
+void \hyperlink{class_sensor_manager_a598c08b51a852266857d9e546bd64f90}{Resume\+Sensor\+Type} (const std\+::string \&a\+\_\+data\+Type)
+\begin{DoxyCompactList}\small\item\em Resume all sensors of the given type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_aeffa1ce070caf751a12e84b1b5a9768a}\label{class_sensor_manager_aeffa1ce070caf751a12e84b1b5a9768a}} 
+void \hyperlink{class_sensor_manager_aeffa1ce070caf751a12e84b1b5a9768a}{On\+Sensor\+Override} (\hyperlink{class_i_sensor}{I\+Sensor} $\ast$a\+\_\+p\+Sensor)
+\begin{DoxyCompactList}\small\item\em Callbacks from \hyperlink{class_i_sensor}{I\+Sensor}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_ab63ca4ca24b995e0ab06be9b59bf4428}\label{class_sensor_manager_ab63ca4ca24b995e0ab06be9b59bf4428}} 
+void {\bfseries On\+Sensor\+Override\+End} (\hyperlink{class_i_sensor}{I\+Sensor} $\ast$a\+\_\+p\+Sensor)
+\item 
+\mbox{\Hypertarget{class_sensor_manager_ad38b06d4613062dd72a3acf1ff0af6e0}\label{class_sensor_manager_ad38b06d4613062dd72a3acf1ff0af6e0}} 
+{\footnotesize template$<$typename T $>$ }\\boost\+::shared\+\_\+ptr$<$ T $>$ {\bfseries Find\+Sensor\+Type} () const
+\item 
+\mbox{\Hypertarget{class_sensor_manager_a98470733532d22579714e118176dd855}\label{class_sensor_manager_a98470733532d22579714e118176dd855}} 
+{\footnotesize template$<$typename T $>$ }\\bool {\bfseries Remove\+Sensor\+Type} ()
+\item 
+\mbox{\Hypertarget{class_sensor_manager_adeab0a24c5a396227d87ee34f45c5fb6}\label{class_sensor_manager_adeab0a24c5a396227d87ee34f45c5fb6}} 
+void {\bfseries Remove\+Sensors\+By\+Data\+Type} (const std\+::string \&a\+\_\+\+Data\+Type)
+\item 
+\mbox{\Hypertarget{class_sensor_manager_a9cfd39d423b9d214994e4c8776950849}\label{class_sensor_manager_a9cfd39d423b9d214994e4c8776950849}} 
+bool \hyperlink{class_sensor_manager_a9cfd39d423b9d214994e4c8776950849}{Find\+Sensors} (const R\+T\+TI \&a\+\_\+\+Data\+Type, Sensor\+List \&sensors) const
+\begin{DoxyCompactList}\small\item\em Deprecated, use Find\+Sensors\+By\+Data\+Type instead. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_sensor_manager_a4bbc99c3107af4cd3c84d87d288710d9}\label{class_sensor_manager_a4bbc99c3107af4cd3c84d87d288710d9}} 
+void {\bfseries Remove\+Sensors\+By\+Data\+Type} (const R\+T\+TI \&a\+\_\+\+Data\+Type)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This manager initializes all sensor objects for the local environment. Various systems in Self can access a sensor object and subscribe to receive data from a given sensor when it occurs. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_sensor_manager_a68d55cf9952fd77c7977bb5563bf11fe}\label{class_sensor_manager_a68d55cf9952fd77c7977bb5563bf11fe}} 
+\index{Sensor\+Manager@{Sensor\+Manager}!Add\+Sensor@{Add\+Sensor}}
+\index{Add\+Sensor@{Add\+Sensor}!Sensor\+Manager@{Sensor\+Manager}}
+\subsubsection{\texorpdfstring{Add\+Sensor()}{AddSensor()}}
+{\footnotesize\ttfamily bool Sensor\+Manager\+::\+Add\+Sensor (\begin{DoxyParamCaption}\item[{const \hyperlink{class_sensor_manager_a5cd8f6f5dfe0ccc8875ed536ae5df51e}{I\+Sensor\+SP} \&}]{a\+\_\+sp\+Sensor,  }\item[{bool}]{a\+\_\+b\+Override = {\ttfamily false} }\end{DoxyParamCaption})}
+
+Add the sensor to this manager, it takes ownership of the object if accepted. If a\+\_\+b\+Override is true, any sensor of the same data type will be disabled. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Sensor\+Manager.\+h\item 
+src/sensors/Sensor\+Manager.\+cpp\end{DoxyCompactItemize}

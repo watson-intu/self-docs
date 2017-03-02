@@ -1,0 +1,86 @@
+\hypertarget{class_proxy_agent}{}\section{Proxy\+Agent Class Reference}
+\label{class_proxy_agent}\index{Proxy\+Agent@{Proxy\+Agent}}
+
+
+This sensor class is used to represent a remote sensor that is running outside this self instance.  
+
+
+
+
+{\ttfamily \#include $<$Proxy\+Agent.\+h$>$}
+
+Inheritance diagram for Proxy\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proxy_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_agent_abc4706bbb488127acadcbb3943f311c7}\label{class_proxy_agent_abc4706bbb488127acadcbb3943f311c7}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_proxy_agent}{Proxy\+Agent} $>$ \hyperlink{class_proxy_agent_abc4706bbb488127acadcbb3943f311c7}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_agent_ac79c762f3dfbe797e9555b0b8b284d5f}\label{class_proxy_agent_ac79c762f3dfbe797e9555b0b8b284d5f}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_proxy_agent}{Proxy\+Agent} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_agent_ad0260a36883417b4ce4236017920db1c}\label{class_proxy_agent_ad0260a36883417b4ce4236017920db1c}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a0a2258939df1d5e859ad0d94d0f27c47}\label{class_proxy_agent_a0a2258939df1d5e859ad0d94d0f27c47}} 
+\hyperlink{class_proxy_agent_a0a2258939df1d5e859ad0d94d0f27c47}{Proxy\+Agent} (const std\+::string \&a\+\_\+\+Agent\+Id, const std\+::string \&a\+\_\+\+Instance\+Id, bool a\+\_\+b\+Override, const std\+::string \&a\+\_\+\+Origin)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_agent_ae4585a6d5136f5cca0fefc274df20c1b}\label{class_proxy_agent_ae4585a6d5136f5cca0fefc274df20c1b}} 
+virtual void \hyperlink{class_proxy_agent_ae4585a6d5136f5cca0fefc274df20c1b}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_agent_ab0c191a60c5d0c57fdb7651f2b1a6994}\label{class_proxy_agent_ab0c191a60c5d0c57fdb7651f2b1a6994}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a1b69ba113991aa0c35ce88a3ca5fba47}\label{class_proxy_agent_a1b69ba113991aa0c35ce88a3ca5fba47}} 
+virtual bool \hyperlink{class_proxy_agent_a1b69ba113991aa0c35ce88a3ca5fba47}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_agent}{I\+Agent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_agent_a9016f6d25f23c950543807ff564b81ce}\label{class_proxy_agent_a9016f6d25f23c950543807ff564b81ce}} 
+virtual bool {\bfseries On\+Stop} ()
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a8c14a15f0c3ddde8992688b88b5aa368}\label{class_proxy_agent_a8c14a15f0c3ddde8992688b88b5aa368}} 
+virtual const std\+::string \& {\bfseries Get\+Agent\+Name} () const
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a5819530f52afa6b2d67894ce440f9b63}\label{class_proxy_agent_a5819530f52afa6b2d67894ce440f9b63}} 
+void {\bfseries Send\+Event} (const std\+::string \&a\+\_\+\+Event\+Name)
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a7c35928b0c30c9294b3fbf624ee22dac}\label{class_proxy_agent_a7c35928b0c30c9294b3fbf624ee22dac}} 
+const std\+::string \& {\bfseries Get\+Instance\+Id} () const
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a054f00082d3216c9dc067f3b42703351}\label{class_proxy_agent_a054f00082d3216c9dc067f3b42703351}} 
+const std\+::string \& {\bfseries Get\+Origin} () const
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a1c95e8ecfe8686bd6cf3ade42049a715}\label{class_proxy_agent_a1c95e8ecfe8686bd6cf3ade42049a715}} 
+const std\+::string \& {\bfseries Get\+Agent\+Id} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a7d293f78f766d884961ffa8ca1bf5c3a}\label{class_proxy_agent_a7d293f78f766d884961ffa8ca1bf5c3a}} 
+std\+::string \hyperlink{class_proxy_agent_a7d293f78f766d884961ffa8ca1bf5c3a}{m\+\_\+\+Origin}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_agent_aae4f40ae46ad2823ae456fa48ad492ea}\label{class_proxy_agent_aae4f40ae46ad2823ae456fa48ad492ea}} 
+std\+::string {\bfseries m\+\_\+\+Instance\+Id}
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a9a53b6a5e22ab5db13e90176576bfdf3}\label{class_proxy_agent_a9a53b6a5e22ab5db13e90176576bfdf3}} 
+std\+::string {\bfseries m\+\_\+\+Agent\+Id}
+\item 
+\mbox{\Hypertarget{class_proxy_agent_a95d89beffeb4bdcb9fa78029e111e02e}\label{class_proxy_agent_a95d89beffeb4bdcb9fa78029e111e02e}} 
+bool {\bfseries m\+\_\+b\+Override}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This sensor class is used to represent a remote sensor that is running outside this self instance. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/Proxy\+Agent.\+h\item 
+src/agent/Proxy\+Agent.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,89 @@
+\hypertarget{class_robot_gateway}{}\section{Robot\+Gateway Class Reference}
+\label{class_robot_gateway}\index{Robot\+Gateway@{Robot\+Gateway}}
+
+
+{\ttfamily \#include $<$Robot\+Gateway.\+h$>$}
+
+Inheritance diagram for Robot\+Gateway\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_robot_gateway}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_robot_gateway_ad92269ce84c4572cf85c048a9f659dd1}\label{class_robot_gateway_ad92269ce84c4572cf85c048a9f659dd1}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_robot_gateway_a28c0b116777769c06c0c56ac7a56cba2}\label{class_robot_gateway_a28c0b116777769c06c0c56ac7a56cba2}} 
+\hyperlink{class_robot_gateway_a28c0b116777769c06c0c56ac7a56cba2}{Robot\+Gateway} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a11101db43b15ea8a7514e99a98dc9e70}\label{class_robot_gateway_a11101db43b15ea8a7514e99a98dc9e70}} 
+virtual void \hyperlink{class_robot_gateway_a11101db43b15ea8a7514e99a98dc9e70}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a2bda02cfd986577641f700457374c598}\label{class_robot_gateway_a2bda02cfd986577641f700457374c598}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_robot_gateway_abee150edb84fc1219bd16d5e1826e46f}\label{class_robot_gateway_abee150edb84fc1219bd16d5e1826e46f}} 
+virtual bool \hyperlink{class_robot_gateway_abee150edb84fc1219bd16d5e1826e46f}{Start} ()
+\begin{DoxyCompactList}\small\item\em I\+Service interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a37879ac91cf515d23170a365965b69c1}\label{class_robot_gateway_a37879ac91cf515d23170a365965b69c1}} 
+virtual bool {\bfseries Stop} ()
+\item 
+\mbox{\Hypertarget{class_robot_gateway_a59427dcfd7fa3e982b0ed26d3c93701d}\label{class_robot_gateway_a59427dcfd7fa3e982b0ed26d3c93701d}} 
+virtual void {\bfseries Get\+Service\+Status} (Service\+Status\+Callback a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_robot_gateway_adce798117d5ca477acef6abb47a062b1}\label{class_robot_gateway_adce798117d5ca477acef6abb47a062b1}} 
+virtual void \hyperlink{class_robot_gateway_adce798117d5ca477acef6abb47a062b1}{Process} (const Log\+Record \&a\+\_\+\+Record)
+\begin{DoxyCompactList}\small\item\em I\+Log\+Reactor interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_ab0887f20b112ca9be75a0a26b5804b59}\label{class_robot_gateway_ab0887f20b112ca9be75a0a26b5804b59}} 
+const std\+::string \& \hyperlink{class_robot_gateway_ab0887f20b112ca9be75a0a26b5804b59}{Get\+Org\+Admins} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a6073bb6099a36ec29cbccd6ee246a8a4}\label{class_robot_gateway_a6073bb6099a36ec29cbccd6ee246a8a4}} 
+void \hyperlink{class_robot_gateway_a6073bb6099a36ec29cbccd6ee246a8a4}{Register\+Embodiment} (Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Register embodiment on gateway. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a415e92bf9f9f936daf5157beeacba119}\label{class_robot_gateway_a415e92bf9f9f936daf5157beeacba119}} 
+void \hyperlink{class_robot_gateway_a415e92bf9f9f936daf5157beeacba119}{Update\+Embodiment\+Name} (Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Update the embodiment name. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a744e9c566e643a9c5c4c80030be68548}\label{class_robot_gateway_a744e9c566e643a9c5c4c80030be68548}} 
+void \hyperlink{class_robot_gateway_a744e9c566e643a9c5c4c80030be68548}{Send\+Email} (const std\+::string \&a\+\_\+\+To, const std\+::string \&a\+\_\+\+Subject, const std\+::string \&a\+\_\+\+Message, Delegate$<$ Request $\ast$$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Send e-\/mail to gateway. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_af966137ef528f430e62032d8bd85e788}\label{class_robot_gateway_af966137ef528f430e62032d8bd85e788}} 
+void \hyperlink{class_robot_gateway_af966137ef528f430e62032d8bd85e788}{Send\+Backtrace} (const std\+::string \&a\+\_\+\+BT)
+\begin{DoxyCompactList}\small\item\em Send backtrace from previous crash. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_af0d53ef23f82f59416ebb369b322673c}\label{class_robot_gateway_af0d53ef23f82f59416ebb369b322673c}} 
+void \hyperlink{class_robot_gateway_af0d53ef23f82f59416ebb369b322673c}{Heartbeat} ()
+\begin{DoxyCompactList}\small\item\em Send heart-\/beat to the gateway. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_a6f6e84d97ec23c8912a4ce10c065ac63}\label{class_robot_gateway_a6f6e84d97ec23c8912a4ce10c065ac63}} 
+void \hyperlink{class_robot_gateway_a6f6e84d97ec23c8912a4ce10c065ac63}{Get\+Organization} (Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Get information about our current organization. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_aac011ecb681cb19c914ecaadde942f38}\label{class_robot_gateway_aac011ecb681cb19c914ecaadde942f38}} 
+void \hyperlink{class_robot_gateway_aac011ecb681cb19c914ecaadde942f38}{Get\+Org\+Admin\+List} (Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Get organization admin list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_robot_gateway_ad6fd6ebf158e521b03a51a114fc1552b}\label{class_robot_gateway_ad6fd6ebf158e521b03a51a114fc1552b}} 
+void \hyperlink{class_robot_gateway_ad6fd6ebf158e521b03a51a114fc1552b}{Get\+Parent} (const std\+::string \&a\+\_\+\+Parent\+Id, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Get current parent. \end{DoxyCompactList}\item 
+void \hyperlink{class_robot_gateway_a4f188cf0d9eb8962397ffaa15395e2d1}{Get\+Services} (Delegate$<$ \hyperlink{struct_service_list}{Service\+List} $\ast$$>$ a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_robot_gateway_a41ef8d27ca40f224d6ed6c034774d242}\label{class_robot_gateway_a41ef8d27ca40f224d6ed6c034774d242}} 
+void \hyperlink{class_robot_gateway_a41ef8d27ca40f224d6ed6c034774d242}{Authenticate} (const std\+::string \&a\+\_\+\+Token, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Authenticate if another self instance is allowed to connect into this self. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This service wraps the \hyperlink{class_robot_gateway}{Robot\+Gateway} Blue\+Mix application. Depending on the configuration, some of these calls may go directly to Blue\+Mix. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_robot_gateway_a4f188cf0d9eb8962397ffaa15395e2d1}\label{class_robot_gateway_a4f188cf0d9eb8962397ffaa15395e2d1}} 
+\index{Robot\+Gateway@{Robot\+Gateway}!Get\+Services@{Get\+Services}}
+\index{Get\+Services@{Get\+Services}!Robot\+Gateway@{Robot\+Gateway}}
+\subsubsection{\texorpdfstring{Get\+Services()}{GetServices()}}
+{\footnotesize\ttfamily void Robot\+Gateway\+::\+Get\+Services (\begin{DoxyParamCaption}\item[{Delegate$<$ \hyperlink{struct_service_list}{Service\+List} $\ast$$>$}]{a\+\_\+\+Callback }\end{DoxyParamCaption})}
+
+Get the current configuration data store in the gateway for the provided Robot Key and mac ID. The user is responsible for the Servie\+List object returned in the callback, they must call delete on the object when they are done. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/services/\+Robot\+Gateway/Robot\+Gateway.\+h\item 
+src/services/\+Robot\+Gateway/Robot\+Gateway.\+cpp\end{DoxyCompactItemize}

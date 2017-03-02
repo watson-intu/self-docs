@@ -1,0 +1,108 @@
+\hypertarget{class_proxy_sensor}{}\section{Proxy\+Sensor Class Reference}
+\label{class_proxy_sensor}\index{Proxy\+Sensor@{Proxy\+Sensor}}
+
+
+This sensor class is used to represent a remote sensor that is running outside this self instance.  
+
+
+
+
+{\ttfamily \#include $<$Proxy\+Sensor.\+h$>$}
+
+Inheritance diagram for Proxy\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proxy_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_ae00680b19ebf3399157515c5895e768c}\label{class_proxy_sensor_ae00680b19ebf3399157515c5895e768c}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_proxy_sensor}{Proxy\+Sensor} $>$ \hyperlink{class_proxy_sensor_ae00680b19ebf3399157515c5895e768c}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a2b49ec093d942b5e828bdec66d958738}\label{class_proxy_sensor_a2b49ec093d942b5e828bdec66d958738}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_proxy_sensor}{Proxy\+Sensor} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_addf8ddb9d8ecd97b9cb83a7fbc0261b3}\label{class_proxy_sensor_addf8ddb9d8ecd97b9cb83a7fbc0261b3}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_ad3bb6b93878eb3d9a92f8c327300cbff}\label{class_proxy_sensor_ad3bb6b93878eb3d9a92f8c327300cbff}} 
+\hyperlink{class_proxy_sensor_ad3bb6b93878eb3d9a92f8c327300cbff}{Proxy\+Sensor} (const std\+::string \&a\+\_\+\+Sensor\+Id, const std\+::string \&a\+\_\+\+Sensor\+Name, const std\+::string \&a\+\_\+\+Data\+Type, const std\+::string \&a\+\_\+\+Binary\+Type, const std\+::string \&a\+\_\+\+Origin)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a9e06df766f08165c019e821fc7a7bde9}\label{class_proxy_sensor_a9e06df766f08165c019e821fc7a7bde9}} 
+virtual void \hyperlink{class_proxy_sensor_a9e06df766f08165c019e821fc7a7bde9}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a9b2c01e09d5b0e9a915aa9bac7569cd2}\label{class_proxy_sensor_a9b2c01e09d5b0e9a915aa9bac7569cd2}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_aaa5099e5aadf1f13105ceeaeb2198a32}\label{class_proxy_sensor_aaa5099e5aadf1f13105ceeaeb2198a32}} 
+virtual const char $\ast$ \hyperlink{class_proxy_sensor_aaa5099e5aadf1f13105ceeaeb2198a32}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a2fdcc6ed33f40dd5d48c96dd05eb81ec}\label{class_proxy_sensor_a2fdcc6ed33f40dd5d48c96dd05eb81ec}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_ae1ebc1d573761159f53b407a27c6cac2}\label{class_proxy_sensor_ae1ebc1d573761159f53b407a27c6cac2}} 
+virtual const char $\ast$ {\bfseries Get\+Binary\+Type} ()
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a3f06761583e3bb76765f54043843fe0a}\label{class_proxy_sensor_a3f06761583e3bb76765f54043843fe0a}} 
+virtual bool \hyperlink{class_proxy_sensor_a3f06761583e3bb76765f54043843fe0a}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a905edd0abdaf9d58e5825dda472ca216}\label{class_proxy_sensor_a905edd0abdaf9d58e5825dda472ca216}} 
+virtual bool \hyperlink{class_proxy_sensor_a905edd0abdaf9d58e5825dda472ca216}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a97712278ffe297b5f8bb03901e9ec760}\label{class_proxy_sensor_a97712278ffe297b5f8bb03901e9ec760}} 
+virtual void \hyperlink{class_proxy_sensor_a97712278ffe297b5f8bb03901e9ec760}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_adbb538d103d807365cc6d341ea673f3f}\label{class_proxy_sensor_adbb538d103d807365cc6d341ea673f3f}} 
+virtual void \hyperlink{class_proxy_sensor_adbb538d103d807365cc6d341ea673f3f}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_a73ee0b1e69b2f02168f021a307f16c5b}\label{class_proxy_sensor_a73ee0b1e69b2f02168f021a307f16c5b}} 
+virtual void \hyperlink{class_proxy_sensor_a73ee0b1e69b2f02168f021a307f16c5b}{On\+Register\+Topics} (\hyperlink{class_i_topics}{I\+Topics} $\ast$a\+\_\+p\+Topics)
+\begin{DoxyCompactList}\small\item\em This is invoke by the \hyperlink{class_sensor_manager}{Sensor\+Manager} to register any topics provided by this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_ac9adabdb0749b1ca93dce0d6033a8c0f}\label{class_proxy_sensor_ac9adabdb0749b1ca93dce0d6033a8c0f}} 
+virtual void \hyperlink{class_proxy_sensor_ac9adabdb0749b1ca93dce0d6033a8c0f}{On\+Unregister\+Topics} (\hyperlink{class_i_topics}{I\+Topics} $\ast$a\+\_\+p\+Topics)
+\begin{DoxyCompactList}\small\item\em This is invoked to de-\/register this sensor from the topic system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_ad0724f2580caf1581ac854b5b8a8430a}\label{class_proxy_sensor_ad0724f2580caf1581ac854b5b8a8430a}} 
+const std\+::string \& {\bfseries Get\+Origin} () const
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a2f5579bb82a81ac9c8f0751adf336983}\label{class_proxy_sensor_a2f5579bb82a81ac9c8f0751adf336983}} 
+void {\bfseries Send\+Event} (const std\+::string \&a\+\_\+\+Event\+Name)
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a8b1cd12f19375013e0a6b46dbb71e905}\label{class_proxy_sensor_a8b1cd12f19375013e0a6b46dbb71e905}} 
+void {\bfseries On\+Sensor\+Data} (const \hyperlink{struct_i_topics_1_1_payload}{I\+Topics\+::\+Payload} \&a\+\_\+\+Payload)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a79e9207ed4d74d0e39b01f82859d5b4a}\label{class_proxy_sensor_a79e9207ed4d74d0e39b01f82859d5b4a}} 
+std\+::string \hyperlink{class_proxy_sensor_a79e9207ed4d74d0e39b01f82859d5b4a}{m\+\_\+\+Sensor\+Name}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proxy_sensor_aa33481a2a2647b096cdc9520fcbe2f56}\label{class_proxy_sensor_aa33481a2a2647b096cdc9520fcbe2f56}} 
+std\+::string {\bfseries m\+\_\+\+Data\+Type}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a46b266c633d61ad810c2ae62f2658b9c}\label{class_proxy_sensor_a46b266c633d61ad810c2ae62f2658b9c}} 
+std\+::string {\bfseries m\+\_\+\+Binary\+Type}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a574f51f9b1dff01027b466882eda61aa}\label{class_proxy_sensor_a574f51f9b1dff01027b466882eda61aa}} 
+std\+::string {\bfseries m\+\_\+\+Origin}
+\item 
+\mbox{\Hypertarget{class_proxy_sensor_a20f35e96ed407304d5615644a4295bba}\label{class_proxy_sensor_a20f35e96ed407304d5615644a4295bba}} 
+std\+::string {\bfseries m\+\_\+\+Proxy\+Topic\+Id}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This sensor class is used to represent a remote sensor that is running outside this self instance. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Proxy\+Sensor.\+h\item 
+src/sensors/Proxy\+Sensor.\+cpp\end{DoxyCompactItemize}

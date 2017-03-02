@@ -1,0 +1,37 @@
+\hypertarget{class_duplicate_filter}{}\section{Duplicate\+Filter Class Reference}
+\label{class_duplicate_filter}\index{Duplicate\+Filter@{Duplicate\+Filter}}
+
+
+{\ttfamily \#include $<$Duplicate\+Filter.\+h$>$}
+
+Inheritance diagram for Duplicate\+Filter\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_duplicate_filter}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_duplicate_filter_a64917174d78b20ea83040237069f334b}\label{class_duplicate_filter_a64917174d78b20ea83040237069f334b}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_duplicate_filter_af83da16afc47b3e76585cafa2b79fe3b}\label{class_duplicate_filter_af83da16afc47b3e76585cafa2b79fe3b}} 
+virtual void \hyperlink{class_duplicate_filter_af83da16afc47b3e76585cafa2b79fe3b}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serialiable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_duplicate_filter_a88fc1ec78931b4c6545e76c8e9ea9843}\label{class_duplicate_filter_a88fc1ec78931b4c6545e76c8e9ea9843}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_duplicate_filter_a7acbdcc9396eca917a2567d986175ea8}\label{class_duplicate_filter_a7acbdcc9396eca917a2567d986175ea8}} 
+virtual bool \hyperlink{class_duplicate_filter_a7acbdcc9396eca917a2567d986175ea8}{Apply\+Filter} (Json\+::\+Value \&a\+\_\+\+Intent)
+\begin{DoxyCompactList}\small\item\em I\+Class\+Filter interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This filter looks for the same intent within a time window and will ignore those intents. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/classifiers/filters/Duplicate\+Filter.\+h\item 
+src/classifiers/filters/Duplicate\+Filter.\+cpp\end{DoxyCompactItemize}

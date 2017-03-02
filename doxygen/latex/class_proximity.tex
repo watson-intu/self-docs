@@ -1,0 +1,72 @@
+\hypertarget{class_proximity}{}\section{Proximity Class Reference}
+\label{class_proximity}\index{Proximity@{Proximity}}
+
+
+An image object taken from camera sensor.  
+
+
+
+
+{\ttfamily \#include $<$Proximity.\+h$>$}
+
+Inheritance diagram for Proximity\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proximity}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proximity_ab0f7e4d755afe6b0246a81d027658902}\label{class_proximity_ab0f7e4d755afe6b0246a81d027658902}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_proximity}{Proximity} $>$ \hyperlink{class_proximity_ab0f7e4d755afe6b0246a81d027658902}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proximity_ae2a63a41787c8521156624fa239b570b}\label{class_proximity_ae2a63a41787c8521156624fa239b570b}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_proximity}{Proximity} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proximity_a663269433b7f33c5e14e22306dbbc01a}\label{class_proximity_a663269433b7f33c5e14e22306dbbc01a}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_proximity_a15dc826d5afc130edad3eb1ad9869ccc}\label{class_proximity_a15dc826d5afc130edad3eb1ad9869ccc}} 
+\hyperlink{class_proximity_a15dc826d5afc130edad3eb1ad9869ccc}{Proximity} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proximity_a0c40207c24ee0b4f014348f49ca81f8a}\label{class_proximity_a0c40207c24ee0b4f014348f49ca81f8a}} 
+{\bfseries Proximity} (const std\+::string \&a\+\_\+s\+Type, bool a\+\_\+b\+Person)
+\item 
+\mbox{\Hypertarget{class_proximity_aa503a7d5d0d688f5cc08e6dff4547e64}\label{class_proximity_aa503a7d5d0d688f5cc08e6dff4547e64}} 
+{\bfseries Proximity} (std\+::string s\+Type, bool p, float a\+\_\+\+Distance)
+\item 
+\mbox{\Hypertarget{class_proximity_a44482bf526f0d7e7e9d921a77dd07a88}\label{class_proximity_a44482bf526f0d7e7e9d921a77dd07a88}} 
+bool \hyperlink{class_proximity_a44482bf526f0d7e7e9d921a77dd07a88}{Is\+Person} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proximity_a4712681b706a0d9d4efb6719c2653913}\label{class_proximity_a4712681b706a0d9d4efb6719c2653913}} 
+bool {\bfseries Is\+Classified} () const
+\item 
+\mbox{\Hypertarget{class_proximity_aacb22e68c8be9a29846248296e236734}\label{class_proximity_aacb22e68c8be9a29846248296e236734}} 
+bool {\bfseries Check\+Person} ()
+\item 
+\mbox{\Hypertarget{class_proximity_a39bd0f3d99982a91d1cab040bd2e44f2}\label{class_proximity_a39bd0f3d99982a91d1cab040bd2e44f2}} 
+float {\bfseries Get\+Distance} () const
+\item 
+\mbox{\Hypertarget{class_proximity_ac5b9c6f3c475cc9f3685f1014c03947b}\label{class_proximity_ac5b9c6f3c475cc9f3685f1014c03947b}} 
+void {\bfseries Set\+Distance} (float d)
+\item 
+\mbox{\Hypertarget{class_proximity_aa522f275544e9f0cfb93b75aec68b3ce}\label{class_proximity_aa522f275544e9f0cfb93b75aec68b3ce}} 
+virtual void \hyperlink{class_proximity_aa522f275544e9f0cfb93b75aec68b3ce}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proximity_a4716c31c9de6478b0d5b13d71ef4b074}\label{class_proximity_a4716c31c9de6478b0d5b13d71ef4b074}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+An image object taken from camera sensor. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Proximity.\+h\item 
+src/blackboard/Proximity.\+cpp\end{DoxyCompactItemize}

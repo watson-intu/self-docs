@@ -1,0 +1,70 @@
+\hypertarget{class_graph_self_1_1_i_self_traverser}{}\section{Graph\+Self\+:\+:I\+Self\+Traverser Class Reference}
+\label{class_graph_self_1_1_i_self_traverser}\index{Graph\+Self\+::\+I\+Self\+Traverser@{Graph\+Self\+::\+I\+Self\+Traverser}}
+
+
+base class for all \hyperlink{class_graph_self}{Graph\+Self} traverser classes  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Self.\+h$>$}
+
+Inheritance diagram for Graph\+Self\+:\+:I\+Self\+Traverser\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.657177cm]{class_graph_self_1_1_i_self_traverser}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_adeff9e8b95bf333821a6071f8cedfaac}\label{class_graph_self_1_1_i_self_traverser_adeff9e8b95bf333821a6071f8cedfaac}} 
+typedef I\+Graph\+::\+Condition {\bfseries Condition}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_a27076dec5fad599255baa06f60e95c33}\label{class_graph_self_1_1_i_self_traverser_a27076dec5fad599255baa06f60e95c33}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_a36c7f8b84b954ea9464a7abcc2521687}\label{class_graph_self_1_1_i_self_traverser_a36c7f8b84b954ea9464a7abcc2521687}} 
+{\bfseries I\+Self\+Traverser} (const I\+Graph\+::\+Condition \&a\+\_\+\+Condition, \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP} a\+\_\+sp\+Next=\hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{SP}())
+\item 
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_abaebcd6e326948043b1c703602acde32}\label{class_graph_self_1_1_i_self_traverser_abaebcd6e326948043b1c703602acde32}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Graph\+::\+I\+Traverser\+::\+SP} \hyperlink{class_graph_self_1_1_i_self_traverser_abaebcd6e326948043b1c703602acde32}{Filter} (const Condition \&a\+\_\+sp\+Cond)
+\begin{DoxyCompactList}\small\item\em I\+Traverser interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_a93c9e7956c64fa96177dc7c855090df9}\label{class_graph_self_1_1_i_self_traverser_a93c9e7956c64fa96177dc7c855090df9}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Graph\+::\+I\+Traverser\+::\+SP} \hyperlink{class_graph_self_1_1_i_self_traverser_a93c9e7956c64fa96177dc7c855090df9}{Out} (const Condition \&a\+\_\+sp\+Cond)
+\begin{DoxyCompactList}\small\item\em Get all verts that meet the provided conditions. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_a79bc80c7af5398f4413f5fc2b3be45cb}\label{class_graph_self_1_1_i_self_traverser_a79bc80c7af5398f4413f5fc2b3be45cb}} 
+virtual \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Graph\+::\+I\+Traverser\+::\+SP} \hyperlink{class_graph_self_1_1_i_self_traverser_a79bc80c7af5398f4413f5fc2b3be45cb}{In} (const Condition \&a\+\_\+sp\+Cond)
+\begin{DoxyCompactList}\small\item\em Get all verts with an out edge that meets the provided conditions. \end{DoxyCompactList}\item 
+virtual I\+Graph\+::\+SP \hyperlink{class_graph_self_1_1_i_self_traverser_adf9a16dd7596a980483af356e4439724}{Create\+Graph} (const std\+::string \&a\+\_\+\+Graph\+Id)
+\begin{DoxyCompactList}\small\item\em Get all verts with an in edge that meets the provided conditions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+base class for all \hyperlink{class_graph_self}{Graph\+Self} traverser classes 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_self_1_1_i_self_traverser_adf9a16dd7596a980483af356e4439724}\label{class_graph_self_1_1_i_self_traverser_adf9a16dd7596a980483af356e4439724}} 
+\index{Graph\+Self\+::\+I\+Self\+Traverser@{Graph\+Self\+::\+I\+Self\+Traverser}!Create\+Graph@{Create\+Graph}}
+\index{Create\+Graph@{Create\+Graph}!Graph\+Self\+::\+I\+Self\+Traverser@{Graph\+Self\+::\+I\+Self\+Traverser}}
+\subsubsection{\texorpdfstring{Create\+Graph()}{CreateGraph()}}
+{\footnotesize\ttfamily I\+Graph\+::\+SP Graph\+Self\+::\+I\+Self\+Traverser\+::\+Create\+Graph (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Graph\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Get all verts with an in edge that meets the provided conditions. 
+
+Create a sub-\/graph from the the provided I\+Traverser, this is useful for creating a smaller chunk of a graph that can be serialized over a network. The created graph will only contain vertex/edge data that the traverser is referencing. The user may then use the \hyperlink{class_graph_self_a64103889965233bb574b55bf2b7b1188}{Merge\+Graph()} to merge the created graph into a another graph to combine data. 
+
+Implements \hyperlink{class_i_graph_1_1_i_traverser_ac6ce6b5258a3ef06297b5b91b87bbf00}{I\+Graph\+::\+I\+Traverser}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/Graph\+Self.\+h\item 
+src/models/Graph\+Self\+Traverser.\+cpp\end{DoxyCompactItemize}

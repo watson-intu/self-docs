@@ -1,0 +1,49 @@
+\hypertarget{class_i_question_answer_proxy}{}\section{I\+Question\+Answer\+Proxy Class Reference}
+\label{class_i_question_answer_proxy}\index{I\+Question\+Answer\+Proxy@{I\+Question\+Answer\+Proxy}}
+Inheritance diagram for I\+Question\+Answer\+Proxy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.595442cm]{class_i_question_answer_proxy}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_a32a802825699f981b41d370a2aa497d1}\label{class_i_question_answer_proxy_a32a802825699f981b41d370a2aa497d1}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_question_answer_proxy}{I\+Question\+Answer\+Proxy} $>$ \hyperlink{class_i_question_answer_proxy_a32a802825699f981b41d370a2aa497d1}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_a681df4503a8ee754e2eb0cb942ef0fb2}\label{class_i_question_answer_proxy_a681df4503a8ee754e2eb0cb942ef0fb2}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_question_answer_proxy}{I\+Question\+Answer\+Proxy} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_a192ee92c414af1292a52b644a75b6fa3}\label{class_i_question_answer_proxy_a192ee92c414af1292a52b644a75b6fa3}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_ac1da38ac6fefc852844022816e3e0416}\label{class_i_question_answer_proxy_ac1da38ac6fefc852844022816e3e0416}} 
+\hyperlink{class_i_question_answer_proxy_ac1da38ac6fefc852844022816e3e0416}{I\+Question\+Answer\+Proxy} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_aec161c372a770ef483db88b095ae590d}\label{class_i_question_answer_proxy_aec161c372a770ef483db88b095ae590d}} 
+virtual void \hyperlink{class_i_question_answer_proxy_aec161c372a770ef483db88b095ae590d}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_a147d5e869d44441afe1aa7bb9f72246a}\label{class_i_question_answer_proxy_a147d5e869d44441afe1aa7bb9f72246a}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_afc0ec358c055679097e1296e295270fb}\label{class_i_question_answer_proxy_afc0ec358c055679097e1296e295270fb}} 
+virtual void \hyperlink{class_i_question_answer_proxy_afc0ec358c055679097e1296e295270fb}{Start} ()=0
+\begin{DoxyCompactList}\small\item\em Interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_ac8253edf03de82b4cf208281509c1c6e}\label{class_i_question_answer_proxy_ac8253edf03de82b4cf208281509c1c6e}} 
+virtual void {\bfseries Stop} ()=0
+\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_a0455a97ac2858241e636ee418d4b1c48}\label{class_i_question_answer_proxy_a0455a97ac2858241e636ee418d4b1c48}} 
+virtual void {\bfseries Ask\+Question} (\hyperlink{class_question_intent_a250dceb08e1342574a0aca4fe40a7121}{Question\+Intent\+::\+SP} a\+\_\+sp\+Question, Delegate$<$ const Json\+::\+Value \&$>$ a\+\_\+\+Callback)=0
+\item 
+\mbox{\Hypertarget{class_i_question_answer_proxy_af2720967ba607fe2a628a4401e18d49d}\label{class_i_question_answer_proxy_af2720967ba607fe2a628a4401e18d49d}} 
+const bool \hyperlink{class_i_question_answer_proxy_af2720967ba607fe2a628a4401e18d49d}{Has\+Priority} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/proxies/I\+Question\+Answer\+Proxy.\+h\end{DoxyCompactItemize}

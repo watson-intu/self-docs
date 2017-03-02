@@ -1,0 +1,85 @@
+\hypertarget{class_create_action}{}\section{Create\+Action Class Reference}
+\label{class_create_action}\index{Create\+Action@{Create\+Action}}
+
+
+{\ttfamily \#include $<$Create\+Action.\+h$>$}
+
+Inheritance diagram for Create\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_create_action}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_create_action_af604f763d3ead8f78a4707cdd17a386c}\label{class_create_action_af604f763d3ead8f78a4707cdd17a386c}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_create_action_ace7af1feef3a0ba0b101256e74d58996}\label{class_create_action_ace7af1feef3a0ba0b101256e74d58996}} 
+\hyperlink{class_create_action_ace7af1feef3a0ba0b101256e74d58996}{Create\+Action} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_create_action_ad8a4b25a8c77d8e379e0f39f84a537a6}\label{class_create_action_ad8a4b25a8c77d8e379e0f39f84a537a6}} 
+virtual void \hyperlink{class_create_action_ad8a4b25a8c77d8e379e0f39f84a537a6}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_create_action_a3b3f5527b6ac1747927808d76f744188}\label{class_create_action_a3b3f5527b6ac1747927808d76f744188}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_create_action_ac23070e18aa583e373a9e26c7ab6d3a8}\label{class_create_action_ac23070e18aa583e373a9e26c7ab6d3a8}} 
+virtual void \hyperlink{class_create_action_ac23070e18aa583e373a9e26c7ab6d3a8}{Execute} (const \hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} \&a\+\_\+sp\+Goal, Delegate$<$ const \hyperlink{struct_i_action_1_1_state}{State} \&$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_action}{I\+Action} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_create_action_a4e8abe3c1f0e767c8536a20e59c5acfa}\label{class_create_action_a4e8abe3c1f0e767c8536a20e59c5acfa}} 
+virtual \hyperlink{class_i_action}{I\+Action} $\ast$ \hyperlink{class_create_action_a4e8abe3c1f0e767c8536a20e59c5acfa}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Make a new instance copy of this action object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_create_action_a815aa769367621586abbf8aa94d54c19}\label{class_create_action_a815aa769367621586abbf8aa94d54c19}} 
+bool \hyperlink{class_create_action_a815aa769367621586abbf8aa94d54c19}{Attach\+To\+Root} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_create_action_a72a439a5e9a23aeded689809b5bd286d}\label{class_create_action_a72a439a5e9a23aeded689809b5bd286d}} 
+float {\bfseries Get\+Importance} () const
+\item 
+\mbox{\Hypertarget{class_create_action_acdfa0f60401f5c09c8958d669208d1a7}\label{class_create_action_acdfa0f60401f5c09c8958d669208d1a7}} 
+const \hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Goal\+Params} () const
+\item 
+\mbox{\Hypertarget{class_create_action_aed0f6d95fc1658125a4c29e05f71b95e}\label{class_create_action_aed0f6d95fc1658125a4c29e05f71b95e}} 
+bool {\bfseries Get\+Replace\+Params} () const
+\item 
+\mbox{\Hypertarget{class_create_action_ac6274e6904fb6acd2222ed03e5a89023}\label{class_create_action_ac6274e6904fb6acd2222ed03e5a89023}} 
+const std\+::string \& {\bfseries Get\+Initial\+State} () const
+\item 
+\mbox{\Hypertarget{class_create_action_a0ec0f7381da9b705a63d6a9c536b674a}\label{class_create_action_a0ec0f7381da9b705a63d6a9c536b674a}} 
+const std\+::string \& {\bfseries Get\+Completed\+State} () const
+\item 
+\mbox{\Hypertarget{class_create_action_af1b9fedd8d610c9e41119823266a0ba6}\label{class_create_action_af1b9fedd8d610c9e41119823266a0ba6}} 
+const std\+::string \& {\bfseries Get\+Failed\+State} () const
+\item 
+\mbox{\Hypertarget{class_create_action_ac63dddded3b3de271d0541afa64caf50}\label{class_create_action_ac63dddded3b3de271d0541afa64caf50}} 
+void \hyperlink{class_create_action_ac63dddded3b3de271d0541afa64caf50}{Set\+Attach\+To\+Root} (bool a\+\_\+b\+Attach\+To\+Root)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_create_action_a490159d7be18034ee11b2faf1bda96d0}\label{class_create_action_a490159d7be18034ee11b2faf1bda96d0}} 
+void {\bfseries Set\+Importance} (float a\+\_\+f\+Importance)
+\item 
+\mbox{\Hypertarget{class_create_action_ac45e984d2846e7584d9bc2f1a11d8b03}\label{class_create_action_ac45e984d2846e7584d9bc2f1a11d8b03}} 
+\hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Goal\+Params} ()
+\item 
+\mbox{\Hypertarget{class_create_action_a7d87f0df66148df95bffd8449f64af13}\label{class_create_action_a7d87f0df66148df95bffd8449f64af13}} 
+void {\bfseries Set\+Replace\+Params} (bool a\+\_\+b\+Replace)
+\item 
+\mbox{\Hypertarget{class_create_action_a5a25fab15f93477461590466f2fd2273}\label{class_create_action_a5a25fab15f93477461590466f2fd2273}} 
+void {\bfseries Set\+Inital\+State} (const std\+::string \&a\+\_\+\+Inital\+State)
+\item 
+\mbox{\Hypertarget{class_create_action_a8121af05414f2f4cf26e5f4d86b68c3c}\label{class_create_action_a8121af05414f2f4cf26e5f4d86b68c3c}} 
+void {\bfseries Set\+Completed\+State} (const std\+::string \&a\+\_\+\+Wait\+State)
+\item 
+\mbox{\Hypertarget{class_create_action_a5019cd728a3f3a59b4ff9f4719c309a7}\label{class_create_action_a5019cd728a3f3a59b4ff9f4719c309a7}} 
+void {\bfseries Set\+Failed\+State} (const std\+::string \&a\+\_\+\+Failed\+State)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This action creates a new object on the blackboard attached to the provided goal object. This action uses the \hyperlink{class_params_map}{Params\+Map} of the goal to resolve any variables into their final form then we try to deserialize an object from the provided json. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/actions/Create\+Action.\+h\item 
+src/planning/actions/Create\+Action.\+cpp\end{DoxyCompactItemize}

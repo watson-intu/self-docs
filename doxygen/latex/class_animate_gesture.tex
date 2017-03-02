@@ -1,0 +1,59 @@
+\hypertarget{class_animate_gesture}{}\section{Animate\+Gesture Class Reference}
+\label{class_animate_gesture}\index{Animate\+Gesture@{Animate\+Gesture}}
+
+
+This gesture animates a robot using a built in animation ID.  
+
+
+
+
+{\ttfamily \#include $<$Animate\+Gesture.\+h$>$}
+
+Inheritance diagram for Animate\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_animate_gesture}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_animate_gesture_1_1_animation_entry}{Animation\+Entry}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_animate_gesture_ad111db7e57cc39136a8f073a4ae04d56}\label{class_animate_gesture_ad111db7e57cc39136a8f073a4ae04d56}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_animate_gesture_a4db752a229224a48445d80c9168cf758}\label{class_animate_gesture_a4db752a229224a48445d80c9168cf758}} 
+\hyperlink{class_animate_gesture_a4db752a229224a48445d80c9168cf758}{Animate\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_animate_gesture_ac3f44e46cea494d3bbdb0ed72bc0dc48}\label{class_animate_gesture_ac3f44e46cea494d3bbdb0ed72bc0dc48}} 
+virtual void \hyperlink{class_animate_gesture_ac3f44e46cea494d3bbdb0ed72bc0dc48}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_animate_gesture_a2612e96d9fe1002e113fc86005ba1dcc}\label{class_animate_gesture_a2612e96d9fe1002e113fc86005ba1dcc}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_animate_gesture_afa38a88906eb256fcaabe18e4c18b3eb}\label{class_animate_gesture_afa38a88906eb256fcaabe18e4c18b3eb}} 
+virtual bool \hyperlink{class_animate_gesture_afa38a88906eb256fcaabe18e4c18b3eb}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_animate_gesture_a7da2db6241a173a7a0acfc3370b1ada4}\label{class_animate_gesture_a7da2db6241a173a7a0acfc3370b1ada4}} 
+virtual bool \hyperlink{class_animate_gesture_a7da2db6241a173a7a0acfc3370b1ada4}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_animate_gesture_a18ad52314eb12b9f3b1504ca0862517a}\label{class_animate_gesture_a18ad52314eb12b9f3b1504ca0862517a}} 
+std\+::vector$<$ \hyperlink{struct_animate_gesture_1_1_animation_entry}{Animation\+Entry} $>$ {\bfseries m\+\_\+\+Animations}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture animates a robot using a built in animation ID. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Animate\+Gesture.\+h\item 
+src/gestures/Animate\+Gesture.\+cpp\end{DoxyCompactItemize}

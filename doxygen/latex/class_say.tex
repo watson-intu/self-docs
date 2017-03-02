@@ -1,0 +1,60 @@
+\hypertarget{class_say}{}\section{Say Class Reference}
+\label{class_say}\index{Say@{Say}}
+
+
+This object is placed on the blackboard when we need self to say anything.  
+
+
+
+
+{\ttfamily \#include $<$Say.\+h$>$}
+
+Inheritance diagram for Say\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_say}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_say_ac844265c12a229a008e755e2a3d1728d}\label{class_say_ac844265c12a229a008e755e2a3d1728d}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_say}{Say} $>$ \hyperlink{class_say_ac844265c12a229a008e755e2a3d1728d}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_say_aa56112c283d3f9f9c38353270c7b6f88}\label{class_say_aa56112c283d3f9f9c38353270c7b6f88}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_say}{Say} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_say_a95ff271ca43ebac094887830a441842b}\label{class_say_a95ff271ca43ebac094887830a441842b}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_say_ae74161f8bd14fb45aa76c9a5b5741bfd}\label{class_say_ae74161f8bd14fb45aa76c9a5b5741bfd}} 
+virtual void \hyperlink{class_say_ae74161f8bd14fb45aa76c9a5b5741bfd}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_say_a514699e870abc523ab3a6275c051a266}\label{class_say_a514699e870abc523ab3a6275c051a266}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_say_a41965c642cae90d518121d0b9c8175d1}\label{class_say_a41965c642cae90d518121d0b9c8175d1}} 
+\hyperlink{class_say_a41965c642cae90d518121d0b9c8175d1}{Say} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_say_a76a72f55bdde108312ad5f80f919f7bc}\label{class_say_a76a72f55bdde108312ad5f80f919f7bc}} 
+{\bfseries Say} (const std\+::string \&a\+\_\+\+Text)
+\item 
+\mbox{\Hypertarget{class_say_ac9e53667fa5f1edc4bd17cef871136db}\label{class_say_ac9e53667fa5f1edc4bd17cef871136db}} 
+const std\+::string \& \hyperlink{class_say_ac9e53667fa5f1edc4bd17cef871136db}{Get\+Text} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_say_ae829cb305d572b977a255aa00b2c2f01}\label{class_say_ae829cb305d572b977a255aa00b2c2f01}} 
+void {\bfseries Set\+Text} (const std\+::string \&a\+\_\+\+Text)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This object is placed on the blackboard when we need self to say anything. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Say.\+h\item 
+src/blackboard/Say.\+cpp\end{DoxyCompactItemize}

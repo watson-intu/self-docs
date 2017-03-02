@@ -1,0 +1,63 @@
+\hypertarget{class_disk_audio_sensor}{}\section{Disk\+Audio\+Sensor Class Reference}
+\label{class_disk_audio_sensor}\index{Disk\+Audio\+Sensor@{Disk\+Audio\+Sensor}}
+Inheritance diagram for Disk\+Audio\+Sensor\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_disk_audio_sensor}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ace31aa7c9c8645b0355f4ddcb61c6611}\label{class_disk_audio_sensor_ace31aa7c9c8645b0355f4ddcb61c6611}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_disk_audio_sensor}{Disk\+Audio\+Sensor} $>$ \hyperlink{class_disk_audio_sensor_ace31aa7c9c8645b0355f4ddcb61c6611}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_a6207eaecaac1d6b390f715d07d9b08a2}\label{class_disk_audio_sensor_a6207eaecaac1d6b390f715d07d9b08a2}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_disk_audio_sensor}{Disk\+Audio\+Sensor} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ab7a536d98f84a415e1e594ee6b67d285}\label{class_disk_audio_sensor_ab7a536d98f84a415e1e594ee6b67d285}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_af2c053fa2821b9e4f72ffefdfc831229}\label{class_disk_audio_sensor_af2c053fa2821b9e4f72ffefdfc831229}} 
+\hyperlink{class_disk_audio_sensor_af2c053fa2821b9e4f72ffefdfc831229}{Disk\+Audio\+Sensor} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_acfa38d87a557de544ec7fb16d1a7f464}\label{class_disk_audio_sensor_acfa38d87a557de544ec7fb16d1a7f464}} 
+void \hyperlink{class_disk_audio_sensor_acfa38d87a557de544ec7fb16d1a7f464}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ad4a871a18e5c375ee60e7cf4a13ba59a}\label{class_disk_audio_sensor_ad4a871a18e5c375ee60e7cf4a13ba59a}} 
+void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ac0deead63e4f35c90cf32a4046084e92}\label{class_disk_audio_sensor_ac0deead63e4f35c90cf32a4046084e92}} 
+virtual const char $\ast$ \hyperlink{class_disk_audio_sensor_ac0deead63e4f35c90cf32a4046084e92}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ae39fded0d11e45d915ac7141ebf70c53}\label{class_disk_audio_sensor_ae39fded0d11e45d915ac7141ebf70c53}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_a77d25c71d6978e80f2202f417fbb4192}\label{class_disk_audio_sensor_a77d25c71d6978e80f2202f417fbb4192}} 
+const std\+::string \& {\bfseries Get\+Recordings\+Path} () const
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_a2dd5b3d98892282b5764f7354d30cda1}\label{class_disk_audio_sensor_a2dd5b3d98892282b5764f7354d30cda1}} 
+bool {\bfseries Get\+Capture\+Stopped} ()
+\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_af8d84b4e6eb932ecd342a824e8c9d79e}\label{class_disk_audio_sensor_af8d84b4e6eb932ecd342a824e8c9d79e}} 
+virtual bool \hyperlink{class_disk_audio_sensor_af8d84b4e6eb932ecd342a824e8c9d79e}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ae0a2904cd8b1115d25e3fbfec733ed15}\label{class_disk_audio_sensor_ae0a2904cd8b1115d25e3fbfec733ed15}} 
+virtual bool \hyperlink{class_disk_audio_sensor_ae0a2904cd8b1115d25e3fbfec733ed15}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_ab77e804b5c6afb2333466dcc77a55b31}\label{class_disk_audio_sensor_ab77e804b5c6afb2333466dcc77a55b31}} 
+virtual void \hyperlink{class_disk_audio_sensor_ab77e804b5c6afb2333466dcc77a55b31}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_disk_audio_sensor_a6de062e47ee854ab1f041325b3963426}\label{class_disk_audio_sensor_a6de062e47ee854ab1f041325b3963426}} 
+virtual void \hyperlink{class_disk_audio_sensor_a6de062e47ee854ab1f041325b3963426}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Disk\+Audio\+Sensor.\+h\item 
+src/sensors/Disk\+Audio\+Sensor.\+cpp\end{DoxyCompactItemize}

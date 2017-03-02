@@ -1,0 +1,63 @@
+\hypertarget{class_remote_device}{}\section{Remote\+Device Class Reference}
+\label{class_remote_device}\index{Remote\+Device@{Remote\+Device}}
+
+
+{\ttfamily \#include $<$Remote\+Device.\+h$>$}
+
+Inheritance diagram for Remote\+Device\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_remote_device}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_remote_device_1_1_rest}{Rest}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_remote_device_a881cb3807daed0681e7a987e607b01f9}\label{class_remote_device_a881cb3807daed0681e7a987e607b01f9}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_remote_device_a2dfcfa2accb2a843dc4e2c727b51dca9}\label{class_remote_device_a2dfcfa2accb2a843dc4e2c727b51dca9}} 
+\hyperlink{class_remote_device_a2dfcfa2accb2a843dc4e2c727b51dca9}{Remote\+Device} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_a1d70e691a7542ac33c403802e3f29b58}\label{class_remote_device_a1d70e691a7542ac33c403802e3f29b58}} 
+virtual void \hyperlink{class_remote_device_a1d70e691a7542ac33c403802e3f29b58}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_ad133fb07547f9d6bb694330dbbfaf684}\label{class_remote_device_ad133fb07547f9d6bb694330dbbfaf684}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_remote_device_abfc791a402ed89d69619d5832ee216b5}\label{class_remote_device_abfc791a402ed89d69619d5832ee216b5}} 
+virtual const char $\ast$ \hyperlink{class_remote_device_abfc791a402ed89d69619d5832ee216b5}{Get\+Sensor\+Name} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_sensor}{I\+Sensor} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_a51ee1143cd9812af9dcc21d5a1948f57}\label{class_remote_device_a51ee1143cd9812af9dcc21d5a1948f57}} 
+virtual const char $\ast$ {\bfseries Get\+Data\+Type} ()
+\item 
+\mbox{\Hypertarget{class_remote_device_a93c2e32258e85fc97e8791e746c7c51c}\label{class_remote_device_a93c2e32258e85fc97e8791e746c7c51c}} 
+virtual bool \hyperlink{class_remote_device_a93c2e32258e85fc97e8791e746c7c51c}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the first subscriber subscribes to this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_a08118b1873997d1c13bf45cb5b6ba915}\label{class_remote_device_a08118b1873997d1c13bf45cb5b6ba915}} 
+virtual bool \hyperlink{class_remote_device_a08118b1873997d1c13bf45cb5b6ba915}{On\+Stop} ()
+\begin{DoxyCompactList}\small\item\em This is invoked when the last subscriber un-\/subscribes. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_a08a1a57cbb390beca8b50034281f9f9a}\label{class_remote_device_a08a1a57cbb390beca8b50034281f9f9a}} 
+virtual void \hyperlink{class_remote_device_a08a1a57cbb390beca8b50034281f9f9a}{On\+Pause} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to pause this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_a2d5acc820ae73ac430cf1ee6c365064a}\label{class_remote_device_a2d5acc820ae73ac430cf1ee6c365064a}} 
+virtual void \hyperlink{class_remote_device_a2d5acc820ae73ac430cf1ee6c365064a}{On\+Resume} ()
+\begin{DoxyCompactList}\small\item\em This is invoked to restart this sensor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_remote_device_aff8d133c0771bb13feebc7c1174e53d3}\label{class_remote_device_aff8d133c0771bb13feebc7c1174e53d3}} 
+void {\bfseries Sending\+Data} (\hyperlink{class_remote_device_data}{Remote\+Device\+Data} $\ast$a\+\_\+p\+Data)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for a interacting with external devices For example, weather station, cameras, microphones 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/sensors/Remote\+Device.\+h\item 
+src/sensors/Remote\+Device.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,123 @@
+\hypertarget{class_i_action}{}\section{I\+Action Class Reference}
+\label{class_i_action}\index{I\+Action@{I\+Action}}
+
+
+This is the base class for an action that can be attached onto a plan.  
+
+
+
+
+{\ttfamily \#include $<$I\+Action.\+h$>$}
+
+Inheritance diagram for I\+Action\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_i_action}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i_action_1_1_state}{State}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_action_aeeeed1494a57b36c5c3694d6daa845ee}\label{class_i_action_aeeeed1494a57b36c5c3694d6daa845ee}} 
+enum \hyperlink{class_i_action_aeeeed1494a57b36c5c3694d6daa845ee}{Action\+Flags} \{ {\bfseries C\+A\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+P\+RE} = 0x1, 
+{\bfseries C\+A\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+P\+O\+ST} = 0x2, 
+{\bfseries N\+O\+N\+\_\+\+B\+L\+O\+C\+K\+I\+NG} = 0x4, 
+{\bfseries C\+A\+N\+\_\+\+I\+G\+N\+O\+R\+E\+\_\+\+E\+R\+R\+OR} = 0x8
+ \}\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{class_i_action_ab3214c20841529adea22b1a8176eaa0d}\label{class_i_action_ab3214c20841529adea22b1a8176eaa0d}} 
+enum {\bfseries Action\+States} \{ \newline
+{\bfseries A\+S\+\_\+\+E\+X\+E\+C\+U\+T\+I\+NG}, 
+{\bfseries A\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}, 
+{\bfseries A\+S\+\_\+\+F\+A\+I\+L\+ED}, 
+{\bfseries A\+S\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}, 
+\newline
+{\bfseries A\+S\+\_\+\+A\+B\+O\+R\+T\+ED}
+ \}
+\item 
+\mbox{\Hypertarget{class_i_action_a727fdbdee90d75af36f6445526071aee}\label{class_i_action_a727fdbdee90d75af36f6445526071aee}} 
+typedef std\+::vector$<$ \hyperlink{class_i_condition_a9e52c5b905c336e61daf97bc3f10def8}{I\+Condition\+::\+SP} $>$ {\bfseries Conditions}
+\item 
+\mbox{\Hypertarget{class_i_action_aee03a4f0b336457bacf052ae337517c4}\label{class_i_action_aee03a4f0b336457bacf052ae337517c4}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_action}{I\+Action} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_i_action_a296c74714a4a8bb95f7873248990563c}\label{class_i_action_a296c74714a4a8bb95f7873248990563c}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_action}{I\+Action} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_action_aa6aa5b2aa73741c45b40f3b2b09eb5bf}\label{class_i_action_aa6aa5b2aa73741c45b40f3b2b09eb5bf}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_action_a8add7e99c248231a9f29365a2ff187f6}\label{class_i_action_a8add7e99c248231a9f29365a2ff187f6}} 
+\hyperlink{class_i_action_a8add7e99c248231a9f29365a2ff187f6}{I\+Action} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_action_a0431476c3747f9c718f53ba08bd0756a}\label{class_i_action_a0431476c3747f9c718f53ba08bd0756a}} 
+virtual void \hyperlink{class_i_action_a0431476c3747f9c718f53ba08bd0756a}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_action_afa3df32b1c1ab62941f407abdb5343a0}\label{class_i_action_afa3df32b1c1ab62941f407abdb5343a0}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+virtual void \hyperlink{class_i_action_aef670368aadfdf1a45d2ec845dfc2277}{Execute} (const \hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} \&a\+\_\+sp\+Goal, Delegate$<$ const \hyperlink{struct_i_action_1_1_state}{State} \&$>$ a\+\_\+\+Callback)=0
+\item 
+\mbox{\Hypertarget{class_i_action_ae1e4174cd77aa60609b77139a0f0b082}\label{class_i_action_ae1e4174cd77aa60609b77139a0f0b082}} 
+virtual \hyperlink{class_i_action}{I\+Action} $\ast$ \hyperlink{class_i_action_ae1e4174cd77aa60609b77139a0f0b082}{Clone} ()=0
+\begin{DoxyCompactList}\small\item\em Make a new instance copy of this action object. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_action_ae2a71820d5dcf4e34c60853947872379}\label{class_i_action_ae2a71820d5dcf4e34c60853947872379}} 
+const std\+::string \& \hyperlink{class_i_action_ae2a71820d5dcf4e34c60853947872379}{Get\+Action\+Id} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_action_aaef8dc9176609fce9ae82c6b48abe008}\label{class_i_action_aaef8dc9176609fce9ae82c6b48abe008}} 
+unsigned int {\bfseries Get\+Action\+Flags} () const
+\item 
+\mbox{\Hypertarget{class_i_action_a10ba678d11073fdc2d62330262c907a2}\label{class_i_action_a10ba678d11073fdc2d62330262c907a2}} 
+bool {\bfseries Check\+Action\+Flag} (\hyperlink{class_i_action_aeeeed1494a57b36c5c3694d6daa845ee}{Action\+Flags} a\+\_\+e\+Flag) const
+\item 
+\mbox{\Hypertarget{class_i_action_ac7878a2f117d055aeefafb247b14ecb2}\label{class_i_action_ac7878a2f117d055aeefafb247b14ecb2}} 
+const Conditions \& {\bfseries Get\+Pre\+Conditions} () const
+\item 
+\mbox{\Hypertarget{class_i_action_a0f92134074c76f84aee2ebe6b6bfd542}\label{class_i_action_a0f92134074c76f84aee2ebe6b6bfd542}} 
+bool {\bfseries Test\+Pre\+Conditions} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+sp\+Goal) const
+\item 
+\mbox{\Hypertarget{class_i_action_a615932e369704999d1d9e82d14d3f851}\label{class_i_action_a615932e369704999d1d9e82d14d3f851}} 
+const Conditions \& {\bfseries Get\+Post\+Conditions} () const
+\item 
+\mbox{\Hypertarget{class_i_action_ab5b3c9012eb533994099c5e17af2bcbe}\label{class_i_action_ab5b3c9012eb533994099c5e17af2bcbe}} 
+bool {\bfseries Test\+Post\+Conditions} (\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+sp\+Goal) const
+\item 
+\mbox{\Hypertarget{class_i_action_afb5bf930b563d66880f002126ae4d2f9}\label{class_i_action_afb5bf930b563d66880f002126ae4d2f9}} 
+void \hyperlink{class_i_action_afb5bf930b563d66880f002126ae4d2f9}{Set\+Action\+Flags} (unsigned int a\+\_\+n\+Flags)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_action_a328fb2dbdeaaac4abd0fe32a05b45a78}\label{class_i_action_a328fb2dbdeaaac4abd0fe32a05b45a78}} 
+void {\bfseries Set\+Pre\+Conditions} (const Conditions \&a\+\_\+\+Conditions)
+\item 
+\mbox{\Hypertarget{class_i_action_a224646f44a86bacb02c0a1838e14665c}\label{class_i_action_a224646f44a86bacb02c0a1838e14665c}} 
+void {\bfseries Set\+Post\+Conditions} (const Conditions \&a\+\_\+\+Conditions)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the base class for an action that can be attached onto a plan. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_action_aef670368aadfdf1a45d2ec845dfc2277}\label{class_i_action_aef670368aadfdf1a45d2ec845dfc2277}} 
+\index{I\+Action@{I\+Action}!Execute@{Execute}}
+\index{Execute@{Execute}!I\+Action@{I\+Action}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily virtual void I\+Action\+::\+Execute (\begin{DoxyParamCaption}\item[{const \hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} \&}]{a\+\_\+sp\+Goal,  }\item[{Delegate$<$ const \hyperlink{struct_i_action_1_1_state}{State} \&$>$}]{a\+\_\+\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This is invoked by the \hyperlink{class_plan_instance}{Plan\+Instance} to execute a action of a currently active plan. The implementation should invoke the callback when the action is done, success or failure. 
+
+Implemented in \hyperlink{class_use_skill_action_aad5962d4cce5d3f8e5b16b19639625e8}{Use\+Skill\+Action}, and \hyperlink{class_create_action_ac23070e18aa583e373a9e26c7ab6d3a8}{Create\+Action}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/I\+Action.\+h\item 
+src/planning/I\+Action.\+cpp\end{DoxyCompactItemize}

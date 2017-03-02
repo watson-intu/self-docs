@@ -1,0 +1,128 @@
+\hypertarget{class_i_graph_1_1_i_edge}{}\section{I\+Graph\+:\+:I\+Edge Class Reference}
+\label{class_i_graph_1_1_i_edge}\index{I\+Graph\+::\+I\+Edge@{I\+Graph\+::\+I\+Edge}}
+
+
+This object defines a relationship between two vertices in this graph, this is one direction.  
+
+
+
+
+{\ttfamily \#include $<$I\+Graph.\+h$>$}
+
+Inheritance diagram for I\+Graph\+:\+:I\+Edge\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_graph_1_1_i_edge}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}\label{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_edge}{I\+Edge} $>$ \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_ab49139a63801731e2c3fcff7ab1edd26}\label{class_i_graph_1_1_i_edge_ab49139a63801731e2c3fcff7ab1edd26}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_graph_1_1_i_edge}{I\+Edge} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a84847ceffca92e6ca24a4316cd02dc6d}\label{class_i_graph_1_1_i_edge_a84847ceffca92e6ca24a4316cd02dc6d}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a72ac71ebf465c2b01fe276c53f242fe5}\label{class_i_graph_1_1_i_edge_a72ac71ebf465c2b01fe276c53f242fe5}} 
+Vertex\+Index \hyperlink{class_i_graph_1_1_i_edge_a72ac71ebf465c2b01fe276c53f242fe5}{Get\+Index} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_af3846ff53ce0843f41e299d7ff9d23dc}\label{class_i_graph_1_1_i_edge_af3846ff53ce0843f41e299d7ff9d23dc}} 
+const std\+::string \& {\bfseries Get\+Hash\+Id} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a8546ac8596a5f8ef79766364c275c811}\label{class_i_graph_1_1_i_edge_a8546ac8596a5f8ef79766364c275c811}} 
+const Json\+::\+Value \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Property) const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a1626fc35aa13ff95f119fd200b2149f3}\label{class_i_graph_1_1_i_edge_a1626fc35aa13ff95f119fd200b2149f3}} 
+const Json\+::\+Value \& {\bfseries Get\+Properties} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a7449dba2a9eef3cb728ae95add711bd2}\label{class_i_graph_1_1_i_edge_a7449dba2a9eef3cb728ae95add711bd2}} 
+float {\bfseries Get\+Weight} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a7023ed2ea2d343b189546f0f23f9b7db}\label{class_i_graph_1_1_i_edge_a7023ed2ea2d343b189546f0f23f9b7db}} 
+double {\bfseries Get\+Time} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_ac041770706a2331db17a7a7f3af47b90}\label{class_i_graph_1_1_i_edge_ac041770706a2331db17a7a7f3af47b90}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Get\+Source} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a840654ed92e088bcfb4cb8453a0140e5}\label{class_i_graph_1_1_i_edge_a840654ed92e088bcfb4cb8453a0140e5}} 
+\hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} {\bfseries Get\+Destination} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a8279a583dc5213960bc1c4396e009126}\label{class_i_graph_1_1_i_edge_a8279a583dc5213960bc1c4396e009126}} 
+bool {\bfseries Is\+Dirty} () const
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a270031dafb84401d51d059aefca98ff1}\label{class_i_graph_1_1_i_edge_a270031dafb84401d51d059aefca98ff1}} 
+void \hyperlink{class_i_graph_1_1_i_edge_a270031dafb84401d51d059aefca98ff1}{Set\+Index} (Vertex\+Index a\+\_\+n\+Index)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_ab706a9961a7867082ac999760cdb35d8}\label{class_i_graph_1_1_i_edge_ab706a9961a7867082ac999760cdb35d8}} 
+virtual void {\bfseries Update\+Hash\+Id} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a445fff49be2eb58cfb6e05e4e9b03c0b}\label{class_i_graph_1_1_i_edge_a445fff49be2eb58cfb6e05e4e9b03c0b}} 
+Json\+::\+Value \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Property)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a87f0f578ab07d48a7161445c41fef47f}\label{class_i_graph_1_1_i_edge_a87f0f578ab07d48a7161445c41fef47f}} 
+Json\+::\+Value \& {\bfseries Get\+Properties} ()
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a0e1a79084c425e92587c81271cd9a445}\label{class_i_graph_1_1_i_edge_a0e1a79084c425e92587c81271cd9a445}} 
+void {\bfseries Set\+Properties} (const Json\+::\+Value \&a\+\_\+\+Properties, bool a\+\_\+b\+Update\+Hash=true)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a855e545f56bb6d7e7f4cc2c97332e06e}\label{class_i_graph_1_1_i_edge_a855e545f56bb6d7e7f4cc2c97332e06e}} 
+void {\bfseries Set\+Hash\+Id} (const std\+::string \&a\+\_\+\+Hash\+Id)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a766829b68109a95c3aa8c094280b0bdd}\label{class_i_graph_1_1_i_edge_a766829b68109a95c3aa8c094280b0bdd}} 
+void {\bfseries Set\+Weight} (float a\+\_\+f\+Weight)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a5aa3d2df41ebb5d09b42b5e9d523617f}\label{class_i_graph_1_1_i_edge_a5aa3d2df41ebb5d09b42b5e9d523617f}} 
+void {\bfseries Set\+Time} (double a\+\_\+f\+Time)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a7c2c3084861a7a99cae05ee5ffe0dce8}\label{class_i_graph_1_1_i_edge_a7c2c3084861a7a99cae05ee5ffe0dce8}} 
+void {\bfseries Set\+Source} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Source)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_afd0f322e846a826d7cc350780c3e79b5}\label{class_i_graph_1_1_i_edge_afd0f322e846a826d7cc350780c3e79b5}} 
+void {\bfseries Set\+Destination} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Dest)
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a34e42274fcf26acdf185d19033f151b2}\label{class_i_graph_1_1_i_edge_a34e42274fcf26acdf185d19033f151b2}} 
+void {\bfseries Set\+Dirty} (bool a\+\_\+b\+Dirty)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_aead9c969f0ee580883e9661e02afde57}\label{class_i_graph_1_1_i_edge_aead9c969f0ee580883e9661e02afde57}} 
+Vertex\+Index \hyperlink{class_i_graph_1_1_i_edge_aead9c969f0ee580883e9661e02afde57}{m\+\_\+n\+Index}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a28e27b75cd78266ce9b4a3d627e88569}\label{class_i_graph_1_1_i_edge_a28e27b75cd78266ce9b4a3d627e88569}} 
+\hyperlink{class_i_graph_a27d53eee7b0a7abc9fce6c28983d5446}{Hash\+Id} {\bfseries m\+\_\+\+Hash\+Id}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a8e9312e5c48e3128ecd608d3ede6c25e}\label{class_i_graph_1_1_i_edge_a8e9312e5c48e3128ecd608d3ede6c25e}} 
+Json\+::\+Value {\bfseries m\+\_\+\+Properties}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_ac19d877b352a2e2b0ec1a98b8d8f511e}\label{class_i_graph_1_1_i_edge_ac19d877b352a2e2b0ec1a98b8d8f511e}} 
+float {\bfseries m\+\_\+f\+Weight}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a4c2574ba88d0886dd36ba3fb62d9d863}\label{class_i_graph_1_1_i_edge_a4c2574ba88d0886dd36ba3fb62d9d863}} 
+double {\bfseries m\+\_\+f\+Time}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_a9ddc78d60d3da6360d736047063bd882}\label{class_i_graph_1_1_i_edge_a9ddc78d60d3da6360d736047063bd882}} 
+I\+Vertex\+::\+WP {\bfseries m\+\_\+\+Source}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_ab02e6ac977013149917a6e9c2eb1988f}\label{class_i_graph_1_1_i_edge_ab02e6ac977013149917a6e9c2eb1988f}} 
+I\+Vertex\+::\+WP {\bfseries m\+\_\+\+Destination}
+\item 
+\mbox{\Hypertarget{class_i_graph_1_1_i_edge_aa0330614f2ec78e95e20048eef26a38a}\label{class_i_graph_1_1_i_edge_aa0330614f2ec78e95e20048eef26a38a}} 
+bool {\bfseries m\+\_\+b\+Dirty}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object defines a relationship between two vertices in this graph, this is one direction. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/I\+Graph.\+h\item 
+src/models/I\+Graph\+Impl.\+h\end{DoxyCompactItemize}

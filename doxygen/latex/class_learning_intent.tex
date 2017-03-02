@@ -1,0 +1,54 @@
+\hypertarget{class_learning_intent}{}\section{Learning\+Intent Class Reference}
+\label{class_learning_intent}\index{Learning\+Intent@{Learning\+Intent}}
+Inheritance diagram for Learning\+Intent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{class_learning_intent}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_learning_intent_abaffa9bca5379d9667976591a6eda2c3}\label{class_learning_intent_abaffa9bca5379d9667976591a6eda2c3}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_learning_intent}{Learning\+Intent} $>$ \hyperlink{class_learning_intent_abaffa9bca5379d9667976591a6eda2c3}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_learning_intent_a9172237de20dd4300482075fcedb1551}\label{class_learning_intent_a9172237de20dd4300482075fcedb1551}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_learning_intent}{Learning\+Intent} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_learning_intent_a98a8f18a8ce8c6b3a1806beff881bbc1}\label{class_learning_intent_a98a8f18a8ce8c6b3a1806beff881bbc1}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_learning_intent_aa7d4833adf42e244372c9b2596d5b13a}\label{class_learning_intent_aa7d4833adf42e244372c9b2596d5b13a}} 
+virtual void \hyperlink{class_learning_intent_aa7d4833adf42e244372c9b2596d5b13a}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_learning_intent_aeb9ff364040abc266070bf8f918baac7}\label{class_learning_intent_aeb9ff364040abc266070bf8f918baac7}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_learning_intent_a0b75db8e6f6cfffd35cc516d97225316}\label{class_learning_intent_a0b75db8e6f6cfffd35cc516d97225316}} 
+virtual void \hyperlink{class_learning_intent_a0b75db8e6f6cfffd35cc516d97225316}{Create} (const Json\+::\+Value \&a\+\_\+\+Intent, const Json\+::\+Value \&a\+\_\+\+Parse)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_intent}{I\+Intent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_learning_intent_ac6c6ee33dc29cccd7c50e795cfcb5654}\label{class_learning_intent_ac6c6ee33dc29cccd7c50e795cfcb5654}} 
+const std\+::string \& \hyperlink{class_learning_intent_ac6c6ee33dc29cccd7c50e795cfcb5654}{Get\+Text} () const
+\begin{DoxyCompactList}\small\item\em Accessors and Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_learning_intent_a2d40eb04b00dc66114a918b5f9d35f77}\label{class_learning_intent_a2d40eb04b00dc66114a918b5f9d35f77}} 
+const Json\+::\+Value \& {\bfseries Get\+Tags} () const
+\item 
+\mbox{\Hypertarget{class_learning_intent_a60cf61fab5395aafd28303ec06715dee}\label{class_learning_intent_a60cf61fab5395aafd28303ec06715dee}} 
+const std\+::string \& {\bfseries Get\+Target} () const
+\item 
+\mbox{\Hypertarget{class_learning_intent_a869650ca905800248b97c698893c9ffe}\label{class_learning_intent_a869650ca905800248b97c698893c9ffe}} 
+const std\+::string \& {\bfseries Get\+Verb} () const
+\item 
+\mbox{\Hypertarget{class_learning_intent_a3a9a96b726b36090dfb5c5486b45a1f4}\label{class_learning_intent_a3a9a96b726b36090dfb5c5486b45a1f4}} 
+const std\+::string \& {\bfseries Get\+Answer} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Learning\+Intent.\+h\item 
+src/blackboard/Learning\+Intent.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,170 @@
+\hypertarget{class_i_fourier_transform}{}\section{I\+Fourier\+Transform Class Reference}
+\label{class_i_fourier_transform}\index{I\+Fourier\+Transform@{I\+Fourier\+Transform}}
+Inheritance diagram for I\+Fourier\+Transform\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_fourier_transform}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a82befe0906b68bfbf00e0591ce54fcfe}\label{class_i_fourier_transform_a82befe0906b68bfbf00e0591ce54fcfe}} 
+\hyperlink{class_i_fourier_transform_a82befe0906b68bfbf00e0591ce54fcfe}{I\+Fourier\+Transform} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_fourier_transform_ae1d2976c7ff1193ef9102e1f5c47f19b}\label{class_i_fourier_transform_ae1d2976c7ff1193ef9102e1f5c47f19b}} 
+virtual void {\bfseries Allocate\+Arrays} ()=0
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a1d64a970f3e5f48bc925b556ab539609}\label{class_i_fourier_transform_a1d64a970f3e5f48bc925b556ab539609}} 
+virtual void {\bfseries Set\+Band} (int i, float a)=0
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a8ea0068a486051050b5aaf4b10064826}\label{class_i_fourier_transform_a8ea0068a486051050b5aaf4b10064826}} 
+virtual void {\bfseries Scale\+Band} (int i, float s)=0
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a3e7b1f3ffe8bcb8898a2f09e2f04db98}\label{class_i_fourier_transform_a3e7b1f3ffe8bcb8898a2f09e2f04db98}} 
+virtual void {\bfseries Forward} (std\+::vector$<$ float $>$ \&buffer, int a\+\_\+n\+Offset=0)=0
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a4d8469a82bdc9baea257ff924e5890d3}\label{class_i_fourier_transform_a4d8469a82bdc9baea257ff924e5890d3}} 
+virtual void {\bfseries Inverse} (std\+::vector$<$ float $>$ \&buffer, int a\+\_\+n\+Offset=0)=0
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a0877933d72294a8918a01168a5e35dc4}\label{class_i_fourier_transform_a0877933d72294a8918a01168a5e35dc4}} 
+void {\bfseries Initialize} (int a\+\_\+\+Time\+Size, float a\+\_\+\+Sample\+Rate, \hyperlink{class_i_window_function}{I\+Window\+Function} $\ast$a\+\_\+p\+Function=N\+U\+LL)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_af46038f00e4d84a74b32a820b7416b30}\label{class_i_fourier_transform_af46038f00e4d84a74b32a820b7416b30}} 
+int {\bfseries Get\+Time\+Size} () const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_ab0271eeca32a5ced68f43993f6894fd2}\label{class_i_fourier_transform_ab0271eeca32a5ced68f43993f6894fd2}} 
+size\+\_\+t {\bfseries Get\+Spec\+Size} () const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_aef88c3b8a115bf9f5eb43d31963c77a5}\label{class_i_fourier_transform_aef88c3b8a115bf9f5eb43d31963c77a5}} 
+float {\bfseries Get\+Band} (int i) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_aec51b2699f06114e75da87282d404d8d}\label{class_i_fourier_transform_aec51b2699f06114e75da87282d404d8d}} 
+float {\bfseries Get\+Band\+Width} () const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a58be0d9da15e4e6f27c8e285c8766148}\label{class_i_fourier_transform_a58be0d9da15e4e6f27c8e285c8766148}} 
+float {\bfseries Get\+Average\+Band\+Width} (int average\+Index) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a79891012dfb2e443253d97fa165aa3dd}\label{class_i_fourier_transform_a79891012dfb2e443253d97fa165aa3dd}} 
+int {\bfseries Freq\+To\+Index} (float freq) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a5103d0538993068538c940679712cc99}\label{class_i_fourier_transform_a5103d0538993068538c940679712cc99}} 
+float {\bfseries Index\+To\+Freq} (int i) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_adb8afcae93b0789416ddf3c794f1c070}\label{class_i_fourier_transform_adb8afcae93b0789416ddf3c794f1c070}} 
+float {\bfseries Get\+Average\+Center\+Frequency} (int i) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_ad9cdb0ecf1b47eb9fc01a1aef6e9ec3d}\label{class_i_fourier_transform_ad9cdb0ecf1b47eb9fc01a1aef6e9ec3d}} 
+float {\bfseries Get\+Freq} (float freq) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a34f8bca2225bea18952c406a1f90bf36}\label{class_i_fourier_transform_a34f8bca2225bea18952c406a1f90bf36}} 
+void {\bfseries Set\+Freq} (float freq, float a)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a76ac3d5d5d027431fab1b58044bceacc}\label{class_i_fourier_transform_a76ac3d5d5d027431fab1b58044bceacc}} 
+void {\bfseries Scale\+Freq} (float freq, float s)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a97fb645c2c0e909f82c14b61509f3348}\label{class_i_fourier_transform_a97fb645c2c0e909f82c14b61509f3348}} 
+size\+\_\+t {\bfseries Get\+Average\+Size} () const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a653056cd938325ead0b452be4cc7e1ed}\label{class_i_fourier_transform_a653056cd938325ead0b452be4cc7e1ed}} 
+float {\bfseries Get\+Average} (int i) const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_af439467899cd48422f0199a83015eeda}\label{class_i_fourier_transform_af439467899cd48422f0199a83015eeda}} 
+float {\bfseries Calculate\+Average} (float low\+Freq, float hi\+Freq)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a3da319ccaa42225a22cc8334906e91ce}\label{class_i_fourier_transform_a3da319ccaa42225a22cc8334906e91ce}} 
+const std\+::vector$<$ float $>$ \& {\bfseries Get\+Spectrum\+Real} () const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a0d24f101db9e6191c011f3a7c81de11f}\label{class_i_fourier_transform_a0d24f101db9e6191c011f3a7c81de11f}} 
+const std\+::vector$<$ float $>$ {\bfseries Get\+Spectrum\+Imaginary} () const
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a87ee273cc9b7e83774a78dc7a25cc645}\label{class_i_fourier_transform_a87ee273cc9b7e83774a78dc7a25cc645}} 
+void {\bfseries Inverse} (const std\+::vector$<$ float $>$ \&freq\+Real, const std\+::vector$<$ float $>$ \&freq\+Imag, std\+::vector$<$ float $>$ \&buffer)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_adcbde0d27deaa9effff8b10ba0202f95}\label{class_i_fourier_transform_adcbde0d27deaa9effff8b10ba0202f95}} 
+void {\bfseries No\+Averages} ()
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a0e74b95250661319512776c0e2ba9aeb}\label{class_i_fourier_transform_a0e74b95250661319512776c0e2ba9aeb}} 
+void {\bfseries Linear\+Averages} (int num\+Avg)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_aff06c88d7195c1d4b84e1a34d50e4f99}\label{class_i_fourier_transform_aff06c88d7195c1d4b84e1a34d50e4f99}} 
+void {\bfseries Log\+Averages} (int min\+Bandwidth, int bands\+Per\+Octave)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_adb8c00f0b10e6af8cfc00ed0be8c803f}\label{class_i_fourier_transform_adb8c00f0b10e6af8cfc00ed0be8c803f}} 
+void {\bfseries Set\+Window} (\hyperlink{class_i_window_function}{I\+Window\+Function} $\ast$window\+Function)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a228fd1ce32ae105a30421c38d8132b1a}\label{class_i_fourier_transform_a228fd1ce32ae105a30421c38d8132b1a}} 
+static const float \hyperlink{class_i_fourier_transform_a228fd1ce32ae105a30421c38d8132b1a}{PI} = 3.\+14159265358979323846f
+\begin{DoxyCompactList}\small\item\em Constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a63a6b56e9cc2a078622329497383271d}\label{class_i_fourier_transform_a63a6b56e9cc2a078622329497383271d}} 
+static const float {\bfseries T\+W\+O\+\_\+\+PI} = 2.\+0f $\ast$ PI
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_ae58ec6e92c7ddc0c8b6c14bfa9ee0c3b}\label{class_i_fourier_transform_ae58ec6e92c7ddc0c8b6c14bfa9ee0c3b}} 
+void {\bfseries Set\+Complex} (const std\+::vector$<$ float $>$ \&r, const std\+::vector$<$ float $>$ \&i)
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_aab6befb32d6423ad9d351c6498ce279e}\label{class_i_fourier_transform_aab6befb32d6423ad9d351c6498ce279e}} 
+void {\bfseries Fill\+Spectrum} ()
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_ad66dcbdc5994f63d381d1568c5e152bd}\label{class_i_fourier_transform_ad66dcbdc5994f63d381d1568c5e152bd}} 
+void {\bfseries Do\+Window} (std\+::vector$<$ float $>$ \&samples, int a\+\_\+n\+Offset=0)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a45f92f98ceb9bee099af457a79a948bb}\label{class_i_fourier_transform_a45f92f98ceb9bee099af457a79a948bb}} 
+int \hyperlink{class_i_fourier_transform_a45f92f98ceb9bee099af457a79a948bb}{m\+\_\+n\+Time\+Size}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_fourier_transform_aa74b476657e4da26c6eceac93d8f2b41}\label{class_i_fourier_transform_aa74b476657e4da26c6eceac93d8f2b41}} 
+int {\bfseries m\+\_\+n\+Sample\+Rate}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a060b7bdda6671fd9be3cfb57d0582ddb}\label{class_i_fourier_transform_a060b7bdda6671fd9be3cfb57d0582ddb}} 
+float {\bfseries m\+\_\+f\+Band\+Width}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a79704316365242a97189be3b6118d934}\label{class_i_fourier_transform_a79704316365242a97189be3b6118d934}} 
+\hyperlink{class_i_window_function}{I\+Window\+Function} $\ast$ {\bfseries m\+\_\+p\+Window}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a31b583928536e8b50ceefc1c51b5502c}\label{class_i_fourier_transform_a31b583928536e8b50ceefc1c51b5502c}} 
+std\+::vector$<$ float $>$ {\bfseries m\+\_\+\+Real}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a7d88333596ae579ce099e279387d3099}\label{class_i_fourier_transform_a7d88333596ae579ce099e279387d3099}} 
+std\+::vector$<$ float $>$ {\bfseries m\+\_\+\+Imag}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a40e4b83a889873b58db3866f1b464ef1}\label{class_i_fourier_transform_a40e4b83a889873b58db3866f1b464ef1}} 
+std\+::vector$<$ float $>$ {\bfseries m\+\_\+\+Spectrum}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a190270824d8fe83da6947fef05d32ea2}\label{class_i_fourier_transform_a190270824d8fe83da6947fef05d32ea2}} 
+std\+::vector$<$ float $>$ {\bfseries m\+\_\+\+Averages}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a6c0dae2c18264d0e5e05b27d7ee7bfbf}\label{class_i_fourier_transform_a6c0dae2c18264d0e5e05b27d7ee7bfbf}} 
+int {\bfseries m\+\_\+n\+Which\+Average}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a253dbc1f4cacc379f6a78fd9470baad9}\label{class_i_fourier_transform_a253dbc1f4cacc379f6a78fd9470baad9}} 
+int {\bfseries m\+\_\+n\+Octaves}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a5bbc5075515c412b68dfd895d9a4361f}\label{class_i_fourier_transform_a5bbc5075515c412b68dfd895d9a4361f}} 
+int {\bfseries m\+\_\+\+Avg\+Per\+Octave}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_ab55669ab5299907f66c48266ac90f6a0}\label{class_i_fourier_transform_ab55669ab5299907f66c48266ac90f6a0}} 
+static int \hyperlink{class_i_fourier_transform_ab55669ab5299907f66c48266ac90f6a0}{L\+I\+N\+A\+VG} = 1
+\begin{DoxyCompactList}\small\item\em Constants. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a8c6c3bbee8dde5a5a69cfb1fa384ee4f}\label{class_i_fourier_transform_a8c6c3bbee8dde5a5a69cfb1fa384ee4f}} 
+static int {\bfseries L\+O\+G\+A\+VG} = 2
+\item 
+\mbox{\Hypertarget{class_i_fourier_transform_a380b5ed9463f1052284d3b0c9846cec8}\label{class_i_fourier_transform_a380b5ed9463f1052284d3b0c9846cec8}} 
+static int {\bfseries N\+O\+A\+VG} = 3
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/fft/I\+Fourier\+Transform.\+h\item 
+src/utils/fft/I\+Fourier\+Transform.\+cpp\end{DoxyCompactItemize}

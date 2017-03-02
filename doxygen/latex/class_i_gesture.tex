@@ -1,0 +1,136 @@
+\hypertarget{class_i_gesture}{}\section{I\+Gesture Class Reference}
+\label{class_i_gesture}\index{I\+Gesture@{I\+Gesture}}
+
+
+{\ttfamily \#include $<$I\+Gesture.\+h$>$}
+
+Inheritance diagram for I\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{class_i_gesture}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i_gesture_1_1_request}{Request}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_i_gesture_1_1_result}{Result}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_gesture_a4455e468c21c82736bb3ec97c1c72158}\label{class_i_gesture_a4455e468c21c82736bb3ec97c1c72158}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_gesture}{I\+Gesture} $>$ \hyperlink{class_i_gesture_a4455e468c21c82736bb3ec97c1c72158}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_a07787d01dffaf1cdf47f2fc977dccf6c}\label{class_i_gesture_a07787d01dffaf1cdf47f2fc977dccf6c}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_gesture}{I\+Gesture} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_i_gesture_a1dad82fee845b5afba43ed900287f118}\label{class_i_gesture_a1dad82fee845b5afba43ed900287f118}} 
+typedef Delegate$<$ const \hyperlink{struct_i_gesture_1_1_result}{Result} \& $>$ {\bfseries Gesture\+Delegate}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_gesture_a6cfd84ce1368cacb8c1697f4cc0fb422}\label{class_i_gesture_a6cfd84ce1368cacb8c1697f4cc0fb422}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_gesture_a3c4ab1d83b28336b464172470450e144}\label{class_i_gesture_a3c4ab1d83b28336b464172470450e144}} 
+\hyperlink{class_i_gesture_a3c4ab1d83b28336b464172470450e144}{I\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_a3f4a4fa5521a8e7827acc3598139ebdd}\label{class_i_gesture_a3f4a4fa5521a8e7827acc3598139ebdd}} 
+{\bfseries I\+Gesture} (const std\+::string \&a\+\_\+\+Gesture\+Id)
+\item 
+\mbox{\Hypertarget{class_i_gesture_a41367fdda56c77bbd94be4714174f05c}\label{class_i_gesture_a41367fdda56c77bbd94be4714174f05c}} 
+virtual void \hyperlink{class_i_gesture_a41367fdda56c77bbd94be4714174f05c}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_a9cb1003a5a8910fd0b616dfbfec29ca0}\label{class_i_gesture_a9cb1003a5a8910fd0b616dfbfec29ca0}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_gesture_a04abf9cb14d867ba0ce0a7bb07793e5f}\label{class_i_gesture_a04abf9cb14d867ba0ce0a7bb07793e5f}} 
+const std\+::string \& \hyperlink{class_i_gesture_a04abf9cb14d867ba0ce0a7bb07793e5f}{Get\+Gesture\+Id} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_aa180fafe865c3fdeaf82258808d85017}\label{class_i_gesture_aa180fafe865c3fdeaf82258808d85017}} 
+bool {\bfseries Is\+Overridden} () const
+\item 
+\mbox{\Hypertarget{class_i_gesture_ae3ccbc6bef0d4d8728c106d25bbe5d0c}\label{class_i_gesture_ae3ccbc6bef0d4d8728c106d25bbe5d0c}} 
+void {\bfseries Set\+Gesture\+Id} (const std\+::string \&a\+\_\+\+Gesture\+Id)
+\item 
+\mbox{\Hypertarget{class_i_gesture_accdcc472f29dfe53163eb7dcd4cba185}\label{class_i_gesture_accdcc472f29dfe53163eb7dcd4cba185}} 
+void {\bfseries Add\+Override} ()
+\item 
+\mbox{\Hypertarget{class_i_gesture_a8f246e2ba518a5e8ecd0ee0688cff8b8}\label{class_i_gesture_a8f246e2ba518a5e8ecd0ee0688cff8b8}} 
+void {\bfseries Remove\+Override} ()
+\item 
+\mbox{\Hypertarget{class_i_gesture_a26334c27f6df0a78e47bdbdec0564e17}\label{class_i_gesture_a26334c27f6df0a78e47bdbdec0564e17}} 
+virtual bool \hyperlink{class_i_gesture_a26334c27f6df0a78e47bdbdec0564e17}{Start} ()
+\begin{DoxyCompactList}\small\item\em Initialize this gesture, if this returns false then \hyperlink{class_gesture_manager}{Gesture\+Manager} will not register this gesture. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_a954a15b343ff62c46fb1081f201079e1}\label{class_i_gesture_a954a15b343ff62c46fb1081f201079e1}} 
+virtual bool \hyperlink{class_i_gesture_a954a15b343ff62c46fb1081f201079e1}{Stop} ()
+\begin{DoxyCompactList}\small\item\em This is called when the \hyperlink{class_gesture_manager}{Gesture\+Manager} is stopped. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_gesture_aa48e38eda852843cab78c22dabfe7371}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_i_gesture_a83920e1b8e53045f629464cbec2288bd}\label{class_i_gesture_a83920e1b8e53045f629464cbec2288bd}} 
+virtual bool \hyperlink{class_i_gesture_a83920e1b8e53045f629464cbec2288bd}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_gesture_a12f8bdd79d5804d2c44946c3c17d2867}\label{class_i_gesture_a12f8bdd79d5804d2c44946c3c17d2867}} 
+typedef std\+::list$<$ \hyperlink{struct_i_gesture_1_1_request}{Request} $\ast$ $>$ {\bfseries Request\+List}
+\item 
+\mbox{\Hypertarget{class_i_gesture_ac93248133f6daa9e048478b1c836b217}\label{class_i_gesture_ac93248133f6daa9e048478b1c836b217}} 
+typedef std\+::vector$<$ WP $>$ {\bfseries Override\+List}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_gesture_ab0cbdbb592255aae7160e49530d22637}\label{class_i_gesture_ab0cbdbb592255aae7160e49530d22637}} 
+bool {\bfseries Have\+Requests} () const
+\item 
+\mbox{\Hypertarget{class_i_gesture_a15b70361f0efdb3ab0ae464cc30b6e9c}\label{class_i_gesture_a15b70361f0efdb3ab0ae464cc30b6e9c}} 
+\hyperlink{struct_i_gesture_1_1_request}{Request} $\ast$ {\bfseries Active\+Request} () const
+\item 
+\mbox{\Hypertarget{class_i_gesture_a2a4006d6d6159cc049037244dfce50a5}\label{class_i_gesture_a2a4006d6d6159cc049037244dfce50a5}} 
+bool \hyperlink{class_i_gesture_a2a4006d6d6159cc049037244dfce50a5}{Push\+Request} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em Push a request into the queue, returns true if this is the first active request. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_a63dcd92051bd943f4aee0eb9be868677}\label{class_i_gesture_a63dcd92051bd943f4aee0eb9be868677}} 
+bool \hyperlink{class_i_gesture_a63dcd92051bd943f4aee0eb9be868677}{Pop\+Request} (bool a\+\_\+b\+Error=false)
+\begin{DoxyCompactList}\small\item\em pops the current active request from the queue, returns true if there are more requests \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_acc5979659111c095f7a8477f4737155e}\label{class_i_gesture_acc5979659111c095f7a8477f4737155e}} 
+void {\bfseries Pop\+All\+Requests} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_gesture_a7ddbab6bf28ab74e7b07c3c6e74806b0}\label{class_i_gesture_a7ddbab6bf28ab74e7b07c3c6e74806b0}} 
+std\+::string \hyperlink{class_i_gesture_a7ddbab6bf28ab74e7b07c3c6e74806b0}{m\+\_\+\+Gesture\+Id}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_gesture_a3a478c04712c15b9972bca47a59c2cea}\label{class_i_gesture_a3a478c04712c15b9972bca47a59c2cea}} 
+int {\bfseries m\+\_\+\+Overrides}
+\item 
+\mbox{\Hypertarget{class_i_gesture_a7c23884d6aa459a2365fee0e32aaded8}\label{class_i_gesture_a7c23884d6aa459a2365fee0e32aaded8}} 
+Request\+List {\bfseries m\+\_\+\+Requests}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class wraps a action the self instance can take, this may be moving a joint, locomotion, or even making a R\+E\+ST call to a server. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_gesture_aa48e38eda852843cab78c22dabfe7371}\label{class_i_gesture_aa48e38eda852843cab78c22dabfe7371}} 
+\index{I\+Gesture@{I\+Gesture}!Execute@{Execute}}
+\index{Execute@{Execute}!I\+Gesture@{I\+Gesture}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily bool I\+Gesture\+::\+Execute (\begin{DoxyParamCaption}\item[{Gesture\+Delegate}]{a\+\_\+\+Callback,  }\item[{const \hyperlink{class_params_map}{Params\+Map} \&}]{a\+\_\+\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function will be called by a Skill object, this object should invoke the provided callback when this gesture is done. 
+
+Reimplemented in \hyperlink{class_proxy_gesture_a771b299c01bfaac71566e0c42353f3bf}{Proxy\+Gesture}, \hyperlink{class_telephony_speech_gesture_a9ee4eca6da4830ddcbcffd5c3a13cd30}{Telephony\+Speech\+Gesture}, \hyperlink{class_rest_gesture_a84673c22b5a8d5c30b946149b4884d6c}{Rest\+Gesture}, \hyperlink{class_web_socket_gesture_ad783a6eef384b037b5272e41d86e1305}{Web\+Socket\+Gesture}, \hyperlink{class_move_joint_gesture_a05ffbd58e927b0f42aba6756925602ea}{Move\+Joint\+Gesture}, \hyperlink{class_speech_gesture_a353c573afdea4713e12e88de207b67ec}{Speech\+Gesture}, \hyperlink{class_volume_gesture_afa3847c6b25e72f1471501d86a110895}{Volume\+Gesture}, \hyperlink{class_display_gesture_a85bd298434073aa8d384ccbf520ef221}{Display\+Gesture}, \hyperlink{class_email_gesture_a18514859abb88f7f9d3912ecf124300f}{Email\+Gesture}, \hyperlink{class_s_m_s_gesture_ab857d98828882acecc1d5ecd0462a6f3}{S\+M\+S\+Gesture}, \hyperlink{class_system_gesture_ae7b4fc979652c0bcf1094b10864a9002}{System\+Gesture}, \hyperlink{class_wait_gesture_a2f775dd69f877bf21382e963af61c337}{Wait\+Gesture}, \hyperlink{class_animate_gesture_afa38a88906eb256fcaabe18e4c18b3eb}{Animate\+Gesture}, \hyperlink{class_grasp_gesture_adc88ab16d6d3bcbbbc06ea89b416f8b1}{Grasp\+Gesture}, \hyperlink{class_move_gesture_af3b5646e7942018b7b4ea8b0ecb46e69}{Move\+Gesture}, \hyperlink{class_posture_gesture_a0bfa3f0e2b3a9b3897ca69d4aa9aff2b}{Posture\+Gesture}, \hyperlink{class_self_update_gesture_adca477442d05fdd8ed80cdd963583ef9}{Self\+Update\+Gesture}, \hyperlink{class_sound_gesture_a378b3387a33072f25e9624fc4bde0dd3}{Sound\+Gesture}, \hyperlink{class_status_gesture_af2d43cd68d2831424d9bed4c8f59941d}{Status\+Gesture}, and \hyperlink{class_watson_avatar_gesture_af15fa364e5be7d7188285155035d7797}{Watson\+Avatar\+Gesture}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/I\+Gesture.\+h\item 
+src/gestures/I\+Gesture.\+cpp\end{DoxyCompactItemize}

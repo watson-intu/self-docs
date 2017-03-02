@@ -1,0 +1,87 @@
+\hypertarget{class_params_map}{}\section{Params\+Map Class Reference}
+\label{class_params_map}\index{Params\+Map@{Params\+Map}}
+
+
+This is a container for skill/gesture arguments.  
+
+
+
+
+{\ttfamily \#include $<$Params\+Map.\+h$>$}
+
+Inheritance diagram for Params\+Map\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_params_map}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_params_map_a9a87f25b3a6f420ff53bef6a36aebc55}\label{class_params_map_a9a87f25b3a6f420ff53bef6a36aebc55}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_params_map_a8d606a7d84a804e9480dbbc1806b29df}\label{class_params_map_a8d606a7d84a804e9480dbbc1806b29df}} 
+\hyperlink{class_params_map_a8d606a7d84a804e9480dbbc1806b29df}{Params\+Map} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_params_map_a1c0d524f21b882a0f60aefa47482fdcf}\label{class_params_map_a1c0d524f21b882a0f60aefa47482fdcf}} 
+{\bfseries Params\+Map} (const std\+::string \&key, const std\+::string \&value)
+\item 
+\mbox{\Hypertarget{class_params_map_a5f59c2e240f03e00084c50712ba67d18}\label{class_params_map_a5f59c2e240f03e00084c50712ba67d18}} 
+{\bfseries Params\+Map} (const std\+::string \&key, float value)
+\item 
+\mbox{\Hypertarget{class_params_map_a30a9f6dedd69a729dc6d2cde7d12132b}\label{class_params_map_a30a9f6dedd69a729dc6d2cde7d12132b}} 
+{\bfseries Params\+Map} (const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Copy)
+\item 
+\mbox{\Hypertarget{class_params_map_acf03415d122ef3d6bef1716086cd53aa}\label{class_params_map_acf03415d122ef3d6bef1716086cd53aa}} 
+{\bfseries Params\+Map} (const Json\+::\+Value \&a\+\_\+json)
+\item 
+\mbox{\Hypertarget{class_params_map_a802b5d358b1db32e8a553e47b1c59517}\label{class_params_map_a802b5d358b1db32e8a553e47b1c59517}} 
+const Json\+::\+Value \& \hyperlink{class_params_map_a802b5d358b1db32e8a553e47b1c59517}{Get\+Data} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_params_map_affbb8dc9d2ebcac706a1cce064a047ee}\label{class_params_map_affbb8dc9d2ebcac706a1cce064a047ee}} 
+bool \hyperlink{class_params_map_affbb8dc9d2ebcac706a1cce064a047ee}{Valid\+Path} (const std\+::string \&a\+\_\+\+Path) const
+\begin{DoxyCompactList}\small\item\em Validate a given path, returns false if any member of the path doesn\textquotesingle{}t exist. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_params_map_acf47e7ad87edf3d071a1f67eb46644e4}\label{class_params_map_acf47e7ad87edf3d071a1f67eb46644e4}} 
+const Json\+::\+Value \& {\bfseries operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Path) const
+\item 
+Json\+::\+Value \& \hyperlink{class_params_map_a8a33e06714e2955ce0b81d27a8b59da2}{operator\mbox{[}$\,$\mbox{]}} (const std\+::string \&a\+\_\+\+Path)
+\item 
+\mbox{\Hypertarget{class_params_map_a68e19546cb7630284ff13018ea024bc8}\label{class_params_map_a68e19546cb7630284ff13018ea024bc8}} 
+void \hyperlink{class_params_map_a68e19546cb7630284ff13018ea024bc8}{Merge} (const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Merge, bool a\+\_\+b\+Replace=true)
+\begin{DoxyCompactList}\small\item\em Merge the provided \hyperlink{class_params_map}{Params\+Map} into this map, if a\+\_\+b\+Replace is false, then no matching keys will be replaced. \end{DoxyCompactList}\item 
+std\+::string \hyperlink{class_params_map_ab78106a273b59aee641d5cef3b561c20}{Resolve\+Variables} (const std\+::string \&a\+\_\+\+Input)
+\item 
+\mbox{\Hypertarget{class_params_map_a3908d17884a9ce7b1e850144632210ca}\label{class_params_map_a3908d17884a9ce7b1e850144632210ca}} 
+Json\+::\+Value \hyperlink{class_params_map_a3908d17884a9ce7b1e850144632210ca}{Resolve\+Variables} (const Json\+::\+Value \&a\+\_\+\+Json)
+\begin{DoxyCompactList}\small\item\em Resolve variables found in the provided Json, return the translated json. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_params_map_a5fc983f1478552ed0a5cdd0849bcd16d}\label{class_params_map_a5fc983f1478552ed0a5cdd0849bcd16d}} 
+virtual void \hyperlink{class_params_map_a5fc983f1478552ed0a5cdd0849bcd16d}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_params_map_ae6d77e7be346eda43a0d5c8848f8b387}\label{class_params_map_ae6d77e7be346eda43a0d5c8848f8b387}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is a container for skill/gesture arguments. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_params_map_a8a33e06714e2955ce0b81d27a8b59da2}\label{class_params_map_a8a33e06714e2955ce0b81d27a8b59da2}} 
+\index{Params\+Map@{Params\+Map}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Params\+Map@{Params\+Map}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily Json\+::\+Value\& Params\+Map\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Path }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Resolve a full path to a value within this \hyperlink{class_params_map}{Params\+Map}. If the value doesn\textquotesingle{}t exist then it a null value will be created and returned. \mbox{\Hypertarget{class_params_map_ab78106a273b59aee641d5cef3b561c20}\label{class_params_map_ab78106a273b59aee641d5cef3b561c20}} 
+\index{Params\+Map@{Params\+Map}!Resolve\+Variables@{Resolve\+Variables}}
+\index{Resolve\+Variables@{Resolve\+Variables}!Params\+Map@{Params\+Map}}
+\subsubsection{\texorpdfstring{Resolve\+Variables()}{ResolveVariables()}}
+{\footnotesize\ttfamily std\+::string Params\+Map\+::\+Resolve\+Variables (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Input }\end{DoxyParamCaption})}
+
+Resolve any variables in the provides string from this params map. Variable names start with \{ and end with \}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/Params\+Map.\+h\item 
+src/utils/Params\+Map.\+cpp\end{DoxyCompactItemize}

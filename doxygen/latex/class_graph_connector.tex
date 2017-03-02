@@ -1,0 +1,178 @@
+\hypertarget{class_graph_connector}{}\section{Graph\+Connector Class Reference}
+\label{class_graph_connector}\index{Graph\+Connector@{Graph\+Connector}}
+
+
+This class is used to connect graphs through the \hyperlink{class_i_topics}{I\+Topics} interface.  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Connector.\+h$>$}
+
+Inheritance diagram for Graph\+Connector\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.772152cm]{class_graph_connector}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_graph_connector_1_1_create_edge_event}{Create\+Edge\+Event}
+\item 
+struct \hyperlink{struct_graph_connector_1_1_create_vert_event}{Create\+Vert\+Event}
+\begin{DoxyCompactList}\small\item\em This is sent to the parent graph when a vertex is created. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_graph_connector_1_1_event_request}{Event\+Request}
+\item 
+struct \hyperlink{struct_graph_connector_1_1_i_event_request}{I\+Event\+Request}
+\item 
+struct \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event}
+\begin{DoxyCompactList}\small\item\em Base class for all events published to the graph-\/topic. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_graph_connector_1_1_remove_edge_event}{Remove\+Edge\+Event}
+\item 
+struct \hyperlink{struct_graph_connector_1_1_remove_vert_event}{Remove\+Vert\+Event}
+\begin{DoxyCompactList}\small\item\em This is sent to the parent when a vertex is removed. \end{DoxyCompactList}\item 
+struct \hyperlink{struct_graph_connector_1_1_traverse_request}{Traverse\+Request}
+\item 
+struct \hyperlink{struct_graph_connector_1_1_traverse_result}{Traverse\+Result}
+\begin{DoxyCompactList}\small\item\em This is sent to a child in response to a \hyperlink{struct_graph_connector_1_1_traverse_request}{Traverse\+Request}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a3c3f82646276f8b77083b5383a543480}\label{class_graph_connector_a3c3f82646276f8b77083b5383a543480}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_graph_connector}{Graph\+Connector} $>$ \hyperlink{class_graph_connector_a3c3f82646276f8b77083b5383a543480}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_ad4f6d8d2172b22fc4db5a6a4470a972c}\label{class_graph_connector_ad4f6d8d2172b22fc4db5a6a4470a972c}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_graph_connector}{Graph\+Connector} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a5303b1d359e39a15c5a726bdf6630332}\label{class_graph_connector_a5303b1d359e39a15c5a726bdf6630332}} 
+typedef Delegate$<$ \hyperlink{class_graph_connector}{Graph\+Connector} $\ast$ $>$ {\bfseries On\+Graph\+Connected}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a666f857aff32428c54227a02daf593a1}\label{class_graph_connector_a666f857aff32428c54227a02daf593a1}} 
+typedef unsigned int {\bfseries Event\+Id}
+\item 
+\mbox{\Hypertarget{class_graph_connector_aed06f194cfc6612a7f52785e5a9698a7}\label{class_graph_connector_aed06f194cfc6612a7f52785e5a9698a7}} 
+typedef \hyperlink{class_i_graph_1_1_i_edge}{I\+Graph\+::\+I\+Edge} {\bfseries I\+Edge}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a2c03a4770fe9d2dc006d30f17909c022}\label{class_graph_connector_a2c03a4770fe9d2dc006d30f17909c022}} 
+typedef \hyperlink{class_i_graph_1_1_i_vertex}{I\+Graph\+::\+I\+Vertex} {\bfseries I\+Vertex}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a36d2760a5143860b2500363745a2fc08}\label{class_graph_connector_a36d2760a5143860b2500363745a2fc08}} 
+typedef \hyperlink{class_i_graph_1_1_i_traverser}{I\+Graph\+::\+I\+Traverser} {\bfseries I\+Traverser}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a370455b7322aa1accaeb06b98d7a3a3d}\label{class_graph_connector_a370455b7322aa1accaeb06b98d7a3a3d}} 
+\hyperlink{class_graph_connector_a370455b7322aa1accaeb06b98d7a3a3d}{Graph\+Connector} (const I\+Graph\+::\+SP \&a\+\_\+sp\+Graph, const std\+::string \&a\+\_\+\+Target=\char`\"{}../.\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_a231b1d4b04afc030628e23ebbe89e2b5}\label{class_graph_connector_a231b1d4b04afc030628e23ebbe89e2b5}} 
+virtual bool \hyperlink{class_graph_connector_a231b1d4b04afc030628e23ebbe89e2b5}{On\+Send\+Traverse} (const \hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Traverser\+::\+SP} \&a\+\_\+sp\+Traverser)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_graph_1_1_i_observer}{I\+Graph\+::\+I\+Observer} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_a5ca194306dfd7b6ded8a516ebe7b46f0}\label{class_graph_connector_a5ca194306dfd7b6ded8a516ebe7b46f0}} 
+virtual void {\bfseries On\+Create\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+sp\+Vertex)
+\item 
+\mbox{\Hypertarget{class_graph_connector_affb407aff93ba87b5ad1e50a2418028a}\label{class_graph_connector_affb407aff93ba87b5ad1e50a2418028a}} 
+virtual void {\bfseries On\+Remove\+Vertex} (const \hyperlink{class_i_graph_1_1_i_vertex_af72b9df91f110bc7824c608c10cc819c}{I\+Vertex\+::\+SP} \&a\+\_\+p\+Vertex)
+\item 
+\mbox{\Hypertarget{class_graph_connector_a051d4ce9e6b7fc502d645e1a13f15637}\label{class_graph_connector_a051d4ce9e6b7fc502d645e1a13f15637}} 
+virtual void {\bfseries On\+Create\+Edge} (const \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_graph_connector_a6dd151551aa194ca2a68884a262f1722}\label{class_graph_connector_a6dd151551aa194ca2a68884a262f1722}} 
+virtual void {\bfseries On\+Remove\+Edge} (const \hyperlink{class_i_graph_1_1_i_edge_adfae3ec3e377543685a06b9c5d5a776a}{I\+Edge\+::\+SP} \&a\+\_\+sp\+Edge)
+\item 
+\mbox{\Hypertarget{class_graph_connector_a2278568365819a0636cd010f533605fd}\label{class_graph_connector_a2278568365819a0636cd010f533605fd}} 
+bool \hyperlink{class_graph_connector_a2278568365819a0636cd010f533605fd}{Is\+Graph\+Connected} () const
+\begin{DoxyCompactList}\small\item\em Returns true if this graph is connected to the topics system. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_a1b9ac951d6efd38c4ba5b43ee2592cc8}\label{class_graph_connector_a1b9ac951d6efd38c4ba5b43ee2592cc8}} 
+const I\+Graph\+::\+SP \& {\bfseries Get\+Graph} () const
+\item 
+\mbox{\Hypertarget{class_graph_connector_ac58171a7b584737e70f96d375af4472f}\label{class_graph_connector_ac58171a7b584737e70f96d375af4472f}} 
+const std\+::string \& {\bfseries Get\+Target} () const
+\item 
+bool \hyperlink{class_graph_connector_aa6bd5d8802483cf784c2b81177f29c85}{Connect} (\hyperlink{class_i_topics}{I\+Topics} $\ast$a\+\_\+p\+Topics, On\+Graph\+Connected a\+\_\+\+Callback=On\+Graph\+Connected())
+\item 
+\mbox{\Hypertarget{class_graph_connector_a7e9e85b346472cc02ef5caeaa7368b36}\label{class_graph_connector_a7e9e85b346472cc02ef5caeaa7368b36}} 
+bool \hyperlink{class_graph_connector_a7e9e85b346472cc02ef5caeaa7368b36}{Disconnect} ()
+\begin{DoxyCompactList}\small\item\em Disconnect from other graphs. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_connector_ae3147778dc8b51e6832b9ac12897df40}\label{class_graph_connector_ae3147778dc8b51e6832b9ac12897df40}} 
+typedef Delegate$<$ Event\+Id $>$ \hyperlink{class_graph_connector_ae3147778dc8b51e6832b9ac12897df40}{Event\+Callback}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_aeea3848dfbfa3053d767ccb75901b93a}\label{class_graph_connector_aeea3848dfbfa3053d767ccb75901b93a}} 
+typedef std\+::map$<$ Event\+Id, I\+Event\+Request\+::\+SP $>$ {\bfseries Event\+Map}
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_connector_adebe263327a7a0bc12564812c210bf9e}\label{class_graph_connector_adebe263327a7a0bc12564812c210bf9e}} 
+void {\bfseries On\+Subscriber} (const \hyperlink{struct_i_topics_1_1_sub_info}{I\+Topics\+::\+Sub\+Info} \&a\+\_\+\+Info)
+\item 
+\mbox{\Hypertarget{class_graph_connector_a1d7d502659b5e8e1438041a871eec76d}\label{class_graph_connector_a1d7d502659b5e8e1438041a871eec76d}} 
+void {\bfseries On\+Graph\+Event} (const \hyperlink{struct_i_topics_1_1_payload}{I\+Topics\+::\+Payload} \&a\+\_\+\+Info)
+\item 
+\mbox{\Hypertarget{class_graph_connector_a2ab15072f8e104e332c297c0afd425f2}\label{class_graph_connector_a2ab15072f8e104e332c297c0afd425f2}} 
+bool \hyperlink{class_graph_connector_a2ab15072f8e104e332c297c0afd425f2}{Send} (const \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} \&a\+\_\+\+Event)
+\begin{DoxyCompactList}\small\item\em Send this event to the parent of this graph, if a callback is provided then this event will be registered with the graph. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_ad45b604718166a5dcd2355959e69efe6}\label{class_graph_connector_ad45b604718166a5dcd2355959e69efe6}} 
+{\footnotesize template$<$typename T $>$ }\\Event\+Id {\bfseries Send} (const \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} \&a\+\_\+\+Event, Delegate$<$ T $>$ a\+\_\+\+Callback, T a\+\_\+\+Callback\+Arg, float a\+\_\+f\+Timeoout=30.\+0f)
+\item 
+\mbox{\Hypertarget{class_graph_connector_ac6bf3b038d903aaea6704e79482bfb73}\label{class_graph_connector_ac6bf3b038d903aaea6704e79482bfb73}} 
+bool \hyperlink{class_graph_connector_ac6bf3b038d903aaea6704e79482bfb73}{Reply} (const std\+::string \&a\+\_\+\+Child\+Origin, const \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} \&a\+\_\+\+Event)
+\begin{DoxyCompactList}\small\item\em This is invoked to send a reply to a specific child. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_aa341f3cc4e6ffd120ddb8ac4a66845ca}\label{class_graph_connector_aa341f3cc4e6ffd120ddb8ac4a66845ca}} 
+bool \hyperlink{class_graph_connector_aa341f3cc4e6ffd120ddb8ac4a66845ca}{Reply} (const \hyperlink{struct_graph_connector_1_1_i_graph_event}{I\+Graph\+Event} \&a\+\_\+\+Event)
+\begin{DoxyCompactList}\small\item\em This is invoked to send an event to all children. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_graph_connector_a48f97790e2a3731f0dff626aeb24137b}\label{class_graph_connector_a48f97790e2a3731f0dff626aeb24137b}} 
+void \hyperlink{class_graph_connector_a48f97790e2a3731f0dff626aeb24137b}{On\+Traverse\+Result} (\hyperlink{class_i_graph_1_1_i_traverser_a5a5ccc81423d6024742d1898a310d812}{I\+Traverser\+::\+SP} a\+\_\+sp\+Traverser)
+\begin{DoxyCompactList}\small\item\em Event Handlers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a552efdebf8eb045f2ed8fde903e82c6f}\label{class_graph_connector_a552efdebf8eb045f2ed8fde903e82c6f}} 
+I\+Graph\+::\+SP {\bfseries m\+\_\+sp\+Graph}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a7198c5a4f97b4edb55678c05ee2fe376}\label{class_graph_connector_a7198c5a4f97b4edb55678c05ee2fe376}} 
+\hyperlink{class_i_topics}{I\+Topics} $\ast$ {\bfseries m\+\_\+p\+Topics}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a6f3df4552a46d2b9bc81740ea6635254}\label{class_graph_connector_a6f3df4552a46d2b9bc81740ea6635254}} 
+std\+::string {\bfseries m\+\_\+\+Target}
+\item 
+\mbox{\Hypertarget{class_graph_connector_ae66b7f911c6a3350a639bbf17ef3503a}\label{class_graph_connector_ae66b7f911c6a3350a639bbf17ef3503a}} 
+On\+Graph\+Connected {\bfseries m\+\_\+\+On\+Graph\+Connected}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a58850f715ed348f2fc464eec638b0c5a}\label{class_graph_connector_a58850f715ed348f2fc464eec638b0c5a}} 
+bool {\bfseries m\+\_\+b\+Graph\+Connected}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a4ed9486ea3bf380e09e0564c31b95615}\label{class_graph_connector_a4ed9486ea3bf380e09e0564c31b95615}} 
+Event\+Map {\bfseries m\+\_\+\+Event\+Map}
+\item 
+\mbox{\Hypertarget{class_graph_connector_ac5bb4302e2c30eedc427a63cd82f2d04}\label{class_graph_connector_ac5bb4302e2c30eedc427a63cd82f2d04}} 
+bool {\bfseries m\+\_\+b\+Parent\+Event}
+\item 
+\mbox{\Hypertarget{class_graph_connector_ac4a2df1fc9ae3ff879e39c8e1f46ed07}\label{class_graph_connector_ac4a2df1fc9ae3ff879e39c8e1f46ed07}} 
+std\+::string {\bfseries m\+\_\+\+Graph\+Topic\+Id}
+\item 
+\mbox{\Hypertarget{class_graph_connector_a33b22c6af1b8a9cd60974cdcdd0ae44b}\label{class_graph_connector_a33b22c6af1b8a9cd60974cdcdd0ae44b}} 
+unsigned int {\bfseries m\+\_\+n\+Next\+Event\+Id}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class is used to connect graphs through the \hyperlink{class_i_topics}{I\+Topics} interface. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_graph_connector_aa6bd5d8802483cf784c2b81177f29c85}\label{class_graph_connector_aa6bd5d8802483cf784c2b81177f29c85}} 
+\index{Graph\+Connector@{Graph\+Connector}!Connect@{Connect}}
+\index{Connect@{Connect}!Graph\+Connector@{Graph\+Connector}}
+\subsubsection{\texorpdfstring{Connect()}{Connect()}}
+{\footnotesize\ttfamily bool Graph\+Connector\+::\+Connect (\begin{DoxyParamCaption}\item[{\hyperlink{class_i_topics}{I\+Topics} $\ast$}]{a\+\_\+p\+Topics,  }\item[{On\+Graph\+Connected}]{a\+\_\+\+Callback = {\ttfamily OnGraphConnected()} }\end{DoxyParamCaption})}
+
+Connect this graph to the provide topic system to allow for sharing graph data through the topic system. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/models/Graph\+Connector.\+h\item 
+src/models/Graph\+Connector.\+cpp\end{DoxyCompactItemize}

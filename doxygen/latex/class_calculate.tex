@@ -1,0 +1,63 @@
+\hypertarget{class_calculate}{}\section{Calculate Class Reference}
+\label{class_calculate}\index{Calculate@{Calculate}}
+
+
+This object is placed on the blackboard when we need self to calculate something.  
+
+
+
+
+{\ttfamily \#include $<$Calculate.\+h$>$}
+
+Inheritance diagram for Calculate\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_calculate}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculate_a45027220b95e94879281ce0d57423082}\label{class_calculate_a45027220b95e94879281ce0d57423082}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_calculate}{Calculate} $>$ \hyperlink{class_calculate_a45027220b95e94879281ce0d57423082}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculate_a25c76395c135b19bced534cfcf64eb64}\label{class_calculate_a25c76395c135b19bced534cfcf64eb64}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_calculate}{Calculate} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_calculate_abf54cf9803fcf27231ddb4fc8de521fc}\label{class_calculate_abf54cf9803fcf27231ddb4fc8de521fc}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_calculate_a777e77f559b8c54ff730eb37fd2ae6a5}\label{class_calculate_a777e77f559b8c54ff730eb37fd2ae6a5}} 
+virtual void \hyperlink{class_calculate_a777e77f559b8c54ff730eb37fd2ae6a5}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculate_a1a8f1974ec5b7b40fbc0dde839d2b1b5}\label{class_calculate_a1a8f1974ec5b7b40fbc0dde839d2b1b5}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_calculate_a9324cfcffaf7004813243ab39b003c66}\label{class_calculate_a9324cfcffaf7004813243ab39b003c66}} 
+\hyperlink{class_calculate_a9324cfcffaf7004813243ab39b003c66}{Calculate} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculate_afb33778c92ef17d52f11471cbea5be75}\label{class_calculate_afb33778c92ef17d52f11471cbea5be75}} 
+{\bfseries Calculate} (const std\+::string \&a\+\_\+\+Data, const std\+::string \&a\+\_\+\+Arithmetic, const std\+::string \&a\+\_\+\+Key)
+\item 
+\mbox{\Hypertarget{class_calculate_a9f653444641c2b365a4c6722017f6293}\label{class_calculate_a9f653444641c2b365a4c6722017f6293}} 
+const std\+::string \& \hyperlink{class_calculate_a9f653444641c2b365a4c6722017f6293}{Get\+Data} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_calculate_a1e1f0c9814392a129027be0a21cad11f}\label{class_calculate_a1e1f0c9814392a129027be0a21cad11f}} 
+const std\+::string \& {\bfseries Get\+Arithmetic} () const
+\item 
+\mbox{\Hypertarget{class_calculate_a41dadfb963f4b2de5413c25dccc7cced}\label{class_calculate_a41dadfb963f4b2de5413c25dccc7cced}} 
+const std\+::string \& {\bfseries Get\+Key} () const
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This object is placed on the blackboard when we need self to calculate something. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Calculate.\+h\item 
+src/blackboard/Calculate.\+cpp\end{DoxyCompactItemize}

@@ -1,0 +1,228 @@
+\hypertarget{class_self_instance}{}\section{Self\+Instance Class Reference}
+\label{class_self_instance}\index{Self\+Instance@{Self\+Instance}}
+
+
+This class wraps most of the core systems, this is the main object to create to make a self instance.  
+
+
+
+
+{\ttfamily \#include $<$Self\+Instance.\+h$>$}
+
+Inheritance diagram for Self\+Instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_self_instance}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_self_instance_1_1_embodiment_creds}{Embodiment\+Creds}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_self_instance_afe9d48a50ea3b492ee170aee2df222bf}\label{class_self_instance_afe9d48a50ea3b492ee170aee2df222bf}} 
+typedef std\+::list$<$ \hyperlink{class_i_agent_a9e88f0528d282c33200a2d43d1c29a73}{I\+Agent\+::\+SP} $>$ \hyperlink{class_self_instance_afe9d48a50ea3b492ee170aee2df222bf}{Agent\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_ae5004b7bbdce41e586fafd135fe00bb6}\label{class_self_instance_ae5004b7bbdce41e586fafd135fe00bb6}} 
+typedef std\+::list$<$ \hyperlink{class_i_sensor_a9c8b231fdda50c9d368e47ef5b9d0faf}{I\+Sensor\+::\+SP} $>$ {\bfseries Sensor\+List}
+\item 
+\mbox{\Hypertarget{class_self_instance_a9d262b06f2f0cc0ec7a20c30eabc7a1d}\label{class_self_instance_a9d262b06f2f0cc0ec7a20c30eabc7a1d}} 
+typedef std\+::list$<$ \hyperlink{class_i_feature_extractor_accaef91768ee64d51b4dc959f36e9f08}{I\+Feature\+Extractor\+::\+SP} $>$ {\bfseries Extractor\+List}
+\item 
+\mbox{\Hypertarget{class_self_instance_a073a63332a5268e5110754c649e79837}\label{class_self_instance_a073a63332a5268e5110754c649e79837}} 
+typedef std\+::list$<$ \hyperlink{class_i_classifier_a532d21507aef94011669a0b73bd49c2d}{I\+Classifier\+::\+SP} $>$ {\bfseries Classifier\+List}
+\item 
+\mbox{\Hypertarget{class_self_instance_a8ad7e4fb3916e304c53be9935ed55ee3}\label{class_self_instance_a8ad7e4fb3916e304c53be9935ed55ee3}} 
+typedef std\+::list$<$ std\+::string $>$ {\bfseries File\+List}
+\item 
+\mbox{\Hypertarget{class_self_instance_ab4c4fa2e00d630925101564cd74b484f}\label{class_self_instance_ab4c4fa2e00d630925101564cd74b484f}} 
+typedef std\+::list$<$ std\+::string $>$ {\bfseries Pattern\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_self_instance_a23539b3ec37014d479396edc909c3042}\label{class_self_instance_a23539b3ec37014d479396edc909c3042}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_self_instance_aa25dfe599222ab2755096a639d289086}\label{class_self_instance_aa25dfe599222ab2755096a639d289086}} 
+\hyperlink{class_self_instance_aa25dfe599222ab2755096a639d289086}{Self\+Instance} (const std\+::string \&a\+\_\+static\+Data\+Path=\char`\"{}./etc/\char`\"{}, const std\+::string \&a\+\_\+\+Instance\+Data\+Path=\char`\"{}./\char`\"{})
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_aa9d471e1337c32bb4d1bf6d55868a1f1}\label{class_self_instance_aa9d471e1337c32bb4d1bf6d55868a1f1}} 
+virtual void \hyperlink{class_self_instance_aa9d471e1337c32bb4d1bf6d55868a1f1}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_a5078af30738fff70b2eafc5438909590}\label{class_self_instance_a5078af30738fff70b2eafc5438909590}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_self_instance_a2ced01ef55817d35ef0f087ad8dc7a10}\label{class_self_instance_a2ced01ef55817d35ef0f087ad8dc7a10}} 
+bool \hyperlink{class_self_instance_a2ced01ef55817d35ef0f087ad8dc7a10}{Is\+Active} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_a02263295ff2e0504ed57768953ab101d}\label{class_self_instance_a02263295ff2e0504ed57768953ab101d}} 
+\hyperlink{class_topic_manager}{Topic\+Manager} $\ast$ {\bfseries Get\+Topic\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a38b7ed6db507cbd744d5942ebc453f49}\label{class_self_instance_a38b7ed6db507cbd744d5942ebc453f49}} 
+\hyperlink{class_i_topics}{I\+Topics} $\ast$ {\bfseries Get\+Topics} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a3d648ae8ebcb203364d883097cd673b3}\label{class_self_instance_a3d648ae8ebcb203364d883097cd673b3}} 
+\hyperlink{class_black_board}{Black\+Board} $\ast$ {\bfseries Get\+Black\+Board} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_aa0e9d3b425a9ed7eb2134a32431cb549}\label{class_self_instance_aa0e9d3b425a9ed7eb2134a32431cb549}} 
+\hyperlink{class_gesture_manager}{Gesture\+Manager} $\ast$ {\bfseries Get\+Gesture\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a027a77db08afcaf2ba4df736695b5fd8}\label{class_self_instance_a027a77db08afcaf2ba4df736695b5fd8}} 
+\hyperlink{class_skill_manager}{Skill\+Manager} $\ast$ {\bfseries Get\+Skill\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a13595470f0a2737b52484804ceee2da2}\label{class_self_instance_a13595470f0a2737b52484804ceee2da2}} 
+\hyperlink{class_sensor_manager}{Sensor\+Manager} $\ast$ {\bfseries Get\+Sensor\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a32452b411ff65f74e1822ad81764309c}\label{class_self_instance_a32452b411ff65f74e1822ad81764309c}} 
+\hyperlink{class_classifier_manager}{Classifier\+Manager} $\ast$ {\bfseries Get\+Classifier\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ab6ad4fbecb6e5a38b03b69d4b7a03654}\label{class_self_instance_ab6ad4fbecb6e5a38b03b69d4b7a03654}} 
+\hyperlink{class_plan_manager}{Plan\+Manager} $\ast$ {\bfseries Get\+Plan\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a91e42ba834bc740b0d3e676ef4a3637c}\label{class_self_instance_a91e42ba834bc740b0d3e676ef4a3637c}} 
+Thread\+Pool $\ast$ {\bfseries Get\+Thread\+Pool} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ad54339062f701c55c891a3ccad66d716}\label{class_self_instance_ad54339062f701c55c891a3ccad66d716}} 
+\hyperlink{class_feature_manager}{Feature\+Manager} $\ast$ {\bfseries Get\+Feature\+Manager} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a01cc8f3f72a2d8259857d43c84586129}\label{class_self_instance_a01cc8f3f72a2d8259857d43c84586129}} 
+\hyperlink{class_agent_society}{Agent\+Society} $\ast$ {\bfseries Get\+Agent\+Society} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ae651b5e653e0885b134efa0f00bbf396}\label{class_self_instance_ae651b5e653e0885b134efa0f00bbf396}} 
+Timer\+Pool $\ast$ {\bfseries Get\+Timer\+Pool} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a1d1f5b125c9f1517120a21415736c5cd}\label{class_self_instance_a1d1f5b125c9f1517120a21415736c5cd}} 
+const I\+Graph\+::\+SP \& {\bfseries Get\+Others\+Graph} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_aa62758efd3f14a06762529008d6ea503}\label{class_self_instance_aa62758efd3f14a06762529008d6ea503}} 
+const I\+Graph\+::\+SP \& {\bfseries Get\+Self\+Graph} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a0c6ea90f52ba3db61a326550ccc29d88}\label{class_self_instance_a0c6ea90f52ba3db61a326550ccc29d88}} 
+const I\+Graph\+::\+SP \& {\bfseries Get\+World\+Graph} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a5ff5c2fbb51ada97c503fea416fee56c}\label{class_self_instance_a5ff5c2fbb51ada97c503fea416fee56c}} 
+const std\+::string \& {\bfseries Get\+Instance\+Id} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_abc0e07164f89746fca8390e467404e6e}\label{class_self_instance_abc0e07164f89746fca8390e467404e6e}} 
+const std\+::string \& {\bfseries Get\+Robot\+Key} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ad30763e328de0e01691cdd8692fb484d}\label{class_self_instance_ad30763e328de0e01691cdd8692fb484d}} 
+const std\+::string \& {\bfseries Get\+Organization\+Id} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a267458318eb7e37a0ef7f2a6121f54eb}\label{class_self_instance_a267458318eb7e37a0ef7f2a6121f54eb}} 
+const std\+::string \& {\bfseries Get\+Robot\+Name} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ac08bf09be977e71fcf45b850bdf0d9be}\label{class_self_instance_ac08bf09be977e71fcf45b850bdf0d9be}} 
+void {\bfseries Set\+Robot\+Name} (const std\+::string \&a\+\_\+\+Robot\+Name)
+\item 
+\mbox{\Hypertarget{class_self_instance_ab916555a56d39beb0eb6b52783d821e9}\label{class_self_instance_ab916555a56d39beb0eb6b52783d821e9}} 
+const std\+::string \& {\bfseries Get\+Backend\+Language} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ab7b8eb62495fd9dcc0ec1b671e615e67}\label{class_self_instance_ab7b8eb62495fd9dcc0ec1b671e615e67}} 
+const std\+::string \& {\bfseries Get\+Robot\+Type} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a4c1f6b2955967db59e2d9d050de5496c}\label{class_self_instance_a4c1f6b2955967db59e2d9d050de5496c}} 
+const std\+::string \& {\bfseries Get\+Mac\+Id} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a76be0d2f669db02995e84164e72e3143}\label{class_self_instance_a76be0d2f669db02995e84164e72e3143}} 
+const std\+::string \& {\bfseries Get\+Robot\+Url} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_aa5f5c27b021ddc78b02cd13338b19589}\label{class_self_instance_aa5f5c27b021ddc78b02cd13338b19589}} 
+const std\+::string \& {\bfseries Get\+Robot\+Ip} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a8a7b7c2c258ddace6a0f91fbc77d5a00}\label{class_self_instance_a8a7b7c2c258ddace6a0f91fbc77d5a00}} 
+const std\+::string \& {\bfseries Get\+Logo\+Url} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a11c489d3391eeccba9ccac1daf137c6b}\label{class_self_instance_a11c489d3391eeccba9ccac1daf137c6b}} 
+const \hyperlink{class_self_instance_afe9d48a50ea3b492ee170aee2df222bf}{Agent\+List} \& {\bfseries Get\+Agent\+List} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a0724e14ee855023b68412b3fb5956a06}\label{class_self_instance_a0724e14ee855023b68412b3fb5956a06}} 
+const Sensor\+List \& {\bfseries Get\+Sensor\+List} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a510b01453a7a79e24bd07a47129fcdaf}\label{class_self_instance_a510b01453a7a79e24bd07a47129fcdaf}} 
+const Extractor\+List \& {\bfseries Get\+Extractor\+List} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a957136dfd247f31fda8f1f2e18004c3c}\label{class_self_instance_a957136dfd247f31fda8f1f2e18004c3c}} 
+const Classifier\+List \& {\bfseries Get\+Classifier\+List} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_aaaec3df876704d0e0a30455113e96844}\label{class_self_instance_aaaec3df876704d0e0a30455113e96844}} 
+const std\+::string \& {\bfseries Get\+Self\+Version} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_af7e0d0860e3e457cba5d8038c621a5e3}\label{class_self_instance_af7e0d0860e3e457cba5d8038c621a5e3}} 
+const Pattern\+List \& {\bfseries Get\+Pattern\+List} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a47cf283cb69769d3bd0aa469b977945e}\label{class_self_instance_a47cf283cb69769d3bd0aa469b977945e}} 
+const File\+List \& {\bfseries Get\+Gesture\+Files} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a87a36c016e988030d771b10aa673f5b0}\label{class_self_instance_a87a36c016e988030d771b10aa673f5b0}} 
+const File\+List \& {\bfseries Get\+Skill\+Files} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a402767301eaead3db955cb240b1adcb6}\label{class_self_instance_a402767301eaead3db955cb240b1adcb6}} 
+const File\+List \& {\bfseries Get\+Plan\+Files} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a7a43b2665d6ca29bb5db75cce5e619e2}\label{class_self_instance_a7a43b2665d6ca29bb5db75cce5e619e2}} 
+const std\+::string \& {\bfseries Get\+Self\+Ip} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_aaab7ca594af75546caf16b7b185fded0}\label{class_self_instance_aaab7ca594af75546caf16b7b185fded0}} 
+const std\+::string \& {\bfseries Get\+Bearer\+Token} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_ab31d6e62e7ab2f82c22c4b921a6d0b5e}\label{class_self_instance_ab31d6e62e7ab2f82c22c4b921a6d0b5e}} 
+const std\+::string \& {\bfseries Get\+Embodiment\+Id} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a8a2e9ff4f47092a7059bffec2a8deca8}\label{class_self_instance_a8a2e9ff4f47092a7059bffec2a8deca8}} 
+bool {\bfseries Use\+Dev\+Version} () const
+\item 
+\mbox{\Hypertarget{class_self_instance_a97cf05723d5aedca5a019ffa18a3fd76}\label{class_self_instance_a97cf05723d5aedca5a019ffa18a3fd76}} 
+void {\bfseries Set\+Use\+Dev\+Version} (bool a\+\_\+b\+Use\+Dev)
+\item 
+\mbox{\Hypertarget{class_self_instance_ade726e276fbba8797abe0149a1a847f6}\label{class_self_instance_ade726e276fbba8797abe0149a1a847f6}} 
+bool \hyperlink{class_self_instance_ade726e276fbba8797abe0149a1a847f6}{Start} ()
+\begin{DoxyCompactList}\small\item\em Initialize this self instance. \end{DoxyCompactList}\item 
+bool \hyperlink{class_self_instance_aab86fc32f63c281ad897215e0b54631e}{Update} ()
+\item 
+\mbox{\Hypertarget{class_self_instance_aed58b46328ea947d8320fd3a50fb50c3}\label{class_self_instance_aed58b46328ea947d8320fd3a50fb50c3}} 
+bool \hyperlink{class_self_instance_aed58b46328ea947d8320fd3a50fb50c3}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this self instance. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_a9fc56b9a6993f771fbcec364e21ff5e8}\label{class_self_instance_a9fc56b9a6993f771fbcec364e21ff5e8}} 
+int \hyperlink{class_self_instance_a9fc56b9a6993f771fbcec364e21ff5e8}{Run} ()
+\begin{DoxyCompactList}\small\item\em Main entry point for this Self\+Instace, this calls \hyperlink{class_self_instance_ade726e276fbba8797abe0149a1a847f6}{Start()}, \hyperlink{class_self_instance_aab86fc32f63c281ad897215e0b54631e}{Update()}, then \hyperlink{class_self_instance_aed58b46328ea947d8320fd3a50fb50c3}{Stop()} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_a92da6acbe1d35ecf72ed47285033cb7a}\label{class_self_instance_a92da6acbe1d35ecf72ed47285033cb7a}} 
+void {\bfseries Set\+Bearer\+Token} (const std\+::string \&a\+\_\+\+Bearer\+Token)
+\item 
+\mbox{\Hypertarget{class_self_instance_afa6c06bb9d737e3d11a69c707127727c}\label{class_self_instance_afa6c06bb9d737e3d11a69c707127727c}} 
+void {\bfseries Set\+Embodiment\+Id} (const std\+::string \&a\+\_\+\+Embodiment\+Id)
+\item 
+\mbox{\Hypertarget{class_self_instance_ad665c16bb1554d846d87136f4379baaa}\label{class_self_instance_ad665c16bb1554d846d87136f4379baaa}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ \hyperlink{class_self_instance_ad665c16bb1554d846d87136f4379baaa}{Find\+Agent} () const
+\begin{DoxyCompactList}\small\item\em Returns a agent object by it\textquotesingle{}s type. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_self_instance_accf56af2b1cfa2376c118f24e3ba57a8}\label{class_self_instance_accf56af2b1cfa2376c118f24e3ba57a8}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries Find\+Classifier} () const
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_self_instance_a13bb9a0ddd2b583b4f14440e2dcdea6c}\label{class_self_instance_a13bb9a0ddd2b583b4f14440e2dcdea6c}} 
+static \hyperlink{class_self_instance}{Self\+Instance} $\ast$ \hyperlink{class_self_instance_a13bb9a0ddd2b583b4f14440e2dcdea6c}{Get\+Instance} ()
+\begin{DoxyCompactList}\small\item\em Static instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class wraps most of the core systems, this is the main object to create to make a self instance. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_self_instance_aab86fc32f63c281ad897215e0b54631e}\label{class_self_instance_aab86fc32f63c281ad897215e0b54631e}} 
+\index{Self\+Instance@{Self\+Instance}!Update@{Update}}
+\index{Update@{Update}!Self\+Instance@{Self\+Instance}}
+\subsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily bool Self\+Instance\+::\+Update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Updates all systems of this self-\/instance, processes any pending events and queued data. Returns false if instance is stopped. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/Self\+Instance.\+h\item 
+src/Self\+Instance.\+cpp\end{DoxyCompactItemize}

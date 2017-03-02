@@ -1,0 +1,66 @@
+\hypertarget{class_s_m_s_gesture}{}\section{S\+M\+S\+Gesture Class Reference}
+\label{class_s_m_s_gesture}\index{S\+M\+S\+Gesture@{S\+M\+S\+Gesture}}
+
+
+This gesture can use the S\+MS service to send a text message.  
+
+
+
+
+{\ttfamily \#include $<$S\+M\+S\+Gesture.\+h$>$}
+
+Inheritance diagram for S\+M\+S\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_s_m_s_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_ac79a5910640fb6020f135cc119a580ad}\label{class_s_m_s_gesture_ac79a5910640fb6020f135cc119a580ad}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_a765d7d9bbd1caf03ed658d097b0fb3d3}\label{class_s_m_s_gesture_a765d7d9bbd1caf03ed658d097b0fb3d3}} 
+\hyperlink{class_s_m_s_gesture_a765d7d9bbd1caf03ed658d097b0fb3d3}{S\+M\+S\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_ad90bf727e605943ae51311646da1f56e}\label{class_s_m_s_gesture_ad90bf727e605943ae51311646da1f56e}} 
+virtual void \hyperlink{class_s_m_s_gesture_ad90bf727e605943ae51311646da1f56e}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_aeb16eb701c7a6eeea5f0f1fd662c1033}\label{class_s_m_s_gesture_aeb16eb701c7a6eeea5f0f1fd662c1033}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_ab857d98828882acecc1d5ecd0462a6f3}\label{class_s_m_s_gesture_ab857d98828882acecc1d5ecd0462a6f3}} 
+virtual bool \hyperlink{class_s_m_s_gesture_ab857d98828882acecc1d5ecd0462a6f3}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_adb8a28f69582ab2536fe02b96f87140f}\label{class_s_m_s_gesture_adb8a28f69582ab2536fe02b96f87140f}} 
+virtual bool \hyperlink{class_s_m_s_gesture_adb8a28f69582ab2536fe02b96f87140f}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_a94a668bc302f9657f9bd00b9312006ef}\label{class_s_m_s_gesture_a94a668bc302f9657f9bd00b9312006ef}} 
+void {\bfseries Send} ()
+\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_a4d913d652d256e097a1225345ebdf7c6}\label{class_s_m_s_gesture_a4d913d652d256e097a1225345ebdf7c6}} 
+void {\bfseries On\+Sent} (bool a\+\_\+b\+Error)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_a77f15eec10b4a3cf49398b627fb1f764}\label{class_s_m_s_gesture_a77f15eec10b4a3cf49398b627fb1f764}} 
+std\+::string \hyperlink{class_s_m_s_gesture_a77f15eec10b4a3cf49398b627fb1f764}{m\+\_\+\+Number}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_s_m_s_gesture_acc475543c2d0f0ba389cbd7f237b08fa}\label{class_s_m_s_gesture_acc475543c2d0f0ba389cbd7f237b08fa}} 
+std\+::string {\bfseries m\+\_\+\+Message}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture can use the S\+MS service to send a text message. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/S\+M\+S\+Gesture.\+h\item 
+src/gestures/S\+M\+S\+Gesture.\+cpp\end{DoxyCompactItemize}

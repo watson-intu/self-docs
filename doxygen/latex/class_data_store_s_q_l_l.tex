@@ -1,0 +1,54 @@
+\hypertarget{class_data_store_s_q_l_l}{}\section{Data\+Store\+S\+Q\+LL Class Reference}
+\label{class_data_store_s_q_l_l}\index{Data\+Store\+S\+Q\+LL@{Data\+Store\+S\+Q\+LL}}
+Inheritance diagram for Data\+Store\+S\+Q\+LL\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_data_store_s_q_l_l}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_ad362cb6a735634589de18259bc767316}\label{class_data_store_s_q_l_l_ad362cb6a735634589de18259bc767316}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_ab31e3a263ca49fe6761ec63760e15809}\label{class_data_store_s_q_l_l_ab31e3a263ca49fe6761ec63760e15809}} 
+\hyperlink{class_data_store_s_q_l_l_ab31e3a263ca49fe6761ec63760e15809}{Data\+Store\+S\+Q\+LL} ()
+\begin{DoxyCompactList}\small\item\em C\+Onstruction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_a2cd1693fa646f2aaf9a0d083263fc567}\label{class_data_store_s_q_l_l_a2cd1693fa646f2aaf9a0d083263fc567}} 
+virtual bool \hyperlink{class_data_store_s_q_l_l_a2cd1693fa646f2aaf9a0d083263fc567}{Start} (const std\+::string \&a\+\_\+\+DB, const Json\+::\+Value \&a\+\_\+\+Data\+Definition)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_data_store}{I\+Data\+Store} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_ae31fe0b15e58cb23ae928267ef3e72ad}\label{class_data_store_s_q_l_l_ae31fe0b15e58cb23ae928267ef3e72ad}} 
+virtual bool \hyperlink{class_data_store_s_q_l_l_ae31fe0b15e58cb23ae928267ef3e72ad}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Shutdown this data store, any pending data should be flushed. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_aa7f301e01cd51702d395064c3ec8a9f3}\label{class_data_store_s_q_l_l_aa7f301e01cd51702d395064c3ec8a9f3}} 
+virtual bool \hyperlink{class_data_store_s_q_l_l_aa7f301e01cd51702d395064c3ec8a9f3}{Save} (const std\+::string \&a\+\_\+\+ID, const Json\+::\+Value \&a\+\_\+\+Data, Delegate$<$ bool $>$ a\+\_\+\+Callback=Delegate$<$ bool $>$())
+\begin{DoxyCompactList}\small\item\em Store data into this data store. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_ae041df984085331486d97ba819adb896}\label{class_data_store_s_q_l_l_ae041df984085331486d97ba819adb896}} 
+virtual bool \hyperlink{class_data_store_s_q_l_l_ae041df984085331486d97ba819adb896}{Load} (const std\+::string \&a\+\_\+\+ID, Delegate$<$ Json\+::\+Value $\ast$$>$ a\+\_\+\+Callback)
+\begin{DoxyCompactList}\small\item\em Get data from this store by it\textquotesingle{}s primary ID, this is asynchronous and will invoke the callback. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_data_store_s_q_l_l_a1a8cbf495f74cfb43ed9d46bc9cc91cb}\label{class_data_store_s_q_l_l_a1a8cbf495f74cfb43ed9d46bc9cc91cb}} 
+virtual bool \hyperlink{class_data_store_s_q_l_l_a1a8cbf495f74cfb43ed9d46bc9cc91cb}{Delete} (const std\+::string \&a\+\_\+\+ID, Delegate$<$ bool $>$ a\+\_\+\+Callback=Delegate$<$ bool $>$())
+\begin{DoxyCompactList}\small\item\em Delete data from this store by it\textquotesingle{}s primary ID. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_data_store_s_q_l_l_ad2da91d2589839e6e02d3030c9fd832d}{Find} (const Conditions \&a\+\_\+\+Conditions, Delegate$<$ Query\+Results $\ast$$>$ a\+\_\+\+Callback)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_data_store_s_q_l_l_ad2da91d2589839e6e02d3030c9fd832d}\label{class_data_store_s_q_l_l_ad2da91d2589839e6e02d3030c9fd832d}} 
+\index{Data\+Store\+S\+Q\+LL@{Data\+Store\+S\+Q\+LL}!Find@{Find}}
+\index{Find@{Find}!Data\+Store\+S\+Q\+LL@{Data\+Store\+S\+Q\+LL}}
+\subsubsection{\texorpdfstring{Find()}{Find()}}
+{\footnotesize\ttfamily bool Data\+Store\+S\+Q\+L\+L\+::\+Find (\begin{DoxyParamCaption}\item[{const Conditions \&}]{a\+\_\+\+Conditions,  }\item[{Delegate$<$ Query\+Results $\ast$$>$}]{a\+\_\+\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Query for data based on conditions, this will invoke your callback with the ID\textquotesingle{}s of all records that match your conditions. 
+
+Implements \hyperlink{class_i_data_store_aa3e9e7b57b40b3c7ff2bd11c9f9b9bf7}{I\+Data\+Store}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/utils/Data\+Store\+S\+Q\+L\+L.\+h\item 
+src/utils/Data\+Store\+S\+Q\+L\+L.\+cpp\end{DoxyCompactItemize}

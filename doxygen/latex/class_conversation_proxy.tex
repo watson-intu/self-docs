@@ -1,0 +1,42 @@
+\hypertarget{class_conversation_proxy}{}\section{Conversation\+Proxy Class Reference}
+\label{class_conversation_proxy}\index{Conversation\+Proxy@{Conversation\+Proxy}}
+Inheritance diagram for Conversation\+Proxy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.514970cm]{class_conversation_proxy}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_conversation_proxy_a4162ffa048b1b4b9a86d8f1bac946c2b}\label{class_conversation_proxy_a4162ffa048b1b4b9a86d8f1bac946c2b}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_conversation_proxy_aad95391a2842d7862d12f1995f3cda29}\label{class_conversation_proxy_aad95391a2842d7862d12f1995f3cda29}} 
+\hyperlink{class_conversation_proxy_aad95391a2842d7862d12f1995f3cda29}{Conversation\+Proxy} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_conversation_proxy_a2d2a6b1626561ace7f91530b7518b3e9}\label{class_conversation_proxy_a2d2a6b1626561ace7f91530b7518b3e9}} 
+virtual void \hyperlink{class_conversation_proxy_a2d2a6b1626561ace7f91530b7518b3e9}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_conversation_proxy_a8c91058aa38f62f411bfb2af5ab98871}\label{class_conversation_proxy_a8c91058aa38f62f411bfb2af5ab98871}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_conversation_proxy_a482537f556269b33579dc33e22ce4bcd}\label{class_conversation_proxy_a482537f556269b33579dc33e22ce4bcd}} 
+virtual void \hyperlink{class_conversation_proxy_a482537f556269b33579dc33e22ce4bcd}{Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_text_classifier_proxy}{I\+Text\+Classifier\+Proxy} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_conversation_proxy_a33841bc367dd5971c54440416470fcb2}\label{class_conversation_proxy_a33841bc367dd5971c54440416470fcb2}} 
+virtual void {\bfseries Stop} ()
+\item 
+\mbox{\Hypertarget{class_conversation_proxy_a93d029052ebff80dbe2886cf457dc81a}\label{class_conversation_proxy_a93d029052ebff80dbe2886cf457dc81a}} 
+virtual void {\bfseries Classify\+Text} (\hyperlink{class_text_a35ce88bdca4f380b865b6066079230b1}{Text\+::\+SP} a\+\_\+sp\+Text, Delegate$<$ \hyperlink{struct_i_text_classifier_proxy_1_1_classify_result}{Classify\+Result} $\ast$$>$ a\+\_\+\+Callback)
+\item 
+\mbox{\Hypertarget{class_conversation_proxy_a11f23d4459907f1cee9be15ca0e25558}\label{class_conversation_proxy_a11f23d4459907f1cee9be15ca0e25558}} 
+void {\bfseries On\+Emotional\+State} (const \hyperlink{class_thing_event}{Thing\+Event} \&a\+\_\+\+Thing\+Event)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/classifiers/proxies/Conversation\+Proxy.\+h\item 
+src/classifiers/proxies/Conversation\+Proxy.\+cpp\end{DoxyCompactItemize}

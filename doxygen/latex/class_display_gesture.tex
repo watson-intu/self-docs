@@ -1,0 +1,63 @@
+\hypertarget{class_display_gesture}{}\section{Display\+Gesture Class Reference}
+\label{class_display_gesture}\index{Display\+Gesture@{Display\+Gesture}}
+
+
+This gesture can be used to display a visualization on a screen.  
+
+
+
+
+{\ttfamily \#include $<$Display\+Gesture.\+h$>$}
+
+Inheritance diagram for Display\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_display_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_display_gesture_a4ee96e56a95a5898cb663fcd8dd35373}\label{class_display_gesture_a4ee96e56a95a5898cb663fcd8dd35373}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_display_gesture_a26b9a348bba896bfda9c3e3598c85fba}\label{class_display_gesture_a26b9a348bba896bfda9c3e3598c85fba}} 
+\hyperlink{class_display_gesture_a26b9a348bba896bfda9c3e3598c85fba}{Display\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_display_gesture_a9276a10263e9c9b15efd2d9883f03e66}\label{class_display_gesture_a9276a10263e9c9b15efd2d9883f03e66}} 
+virtual void \hyperlink{class_display_gesture_a9276a10263e9c9b15efd2d9883f03e66}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_display_gesture_a514f7d39f6e12ad451ad97a6e6a83c3e}\label{class_display_gesture_a514f7d39f6e12ad451ad97a6e6a83c3e}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_display_gesture_ad624cc5eb904d63176eb594fed336ade}\label{class_display_gesture_ad624cc5eb904d63176eb594fed336ade}} 
+virtual bool \hyperlink{class_display_gesture_ad624cc5eb904d63176eb594fed336ade}{Can\+Execute} (const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_display_gesture_a85bd298434073aa8d384ccbf520ef221}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\item 
+\mbox{\Hypertarget{class_display_gesture_a46ea9bd9b94cf7a4bd828c5eaa7c87ce}\label{class_display_gesture_a46ea9bd9b94cf7a4bd828c5eaa7c87ce}} 
+virtual bool \hyperlink{class_display_gesture_a46ea9bd9b94cf7a4bd828c5eaa7c87ce}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture can be used to display a visualization on a screen. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_display_gesture_a85bd298434073aa8d384ccbf520ef221}\label{class_display_gesture_a85bd298434073aa8d384ccbf520ef221}} 
+\index{Display\+Gesture@{Display\+Gesture}!Execute@{Execute}}
+\index{Execute@{Execute}!Display\+Gesture@{Display\+Gesture}}
+\subsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily bool Display\+Gesture\+::\+Execute (\begin{DoxyParamCaption}\item[{Gesture\+Delegate}]{a\+\_\+\+Callback,  }\item[{const \hyperlink{class_params_map}{Params\+Map} \&}]{a\+\_\+\+Params }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+This function will be called by a Skill object, this object should invoke the provided callback when this gesture is done. 
+
+Reimplemented from \hyperlink{class_i_gesture_aa48e38eda852843cab78c22dabfe7371}{I\+Gesture}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Display\+Gesture.\+h\item 
+src/gestures/Display\+Gesture.\+cpp\end{DoxyCompactItemize}

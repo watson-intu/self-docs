@@ -1,0 +1,86 @@
+\hypertarget{class_plan_instance}{}\section{Plan\+Instance Class Reference}
+\label{class_plan_instance}\index{Plan\+Instance@{Plan\+Instance}}
+
+
+This object is created to use a skill through the \hyperlink{class_skill_manager}{Skill\+Manager}.  
+
+
+
+
+{\ttfamily \#include $<$Plan\+Instance.\+h$>$}
+
+Inheritance diagram for Plan\+Instance\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_plan_instance}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_instance_a327a14fdda85d66c88d053b970a7b090}\label{class_plan_instance_a327a14fdda85d66c88d053b970a7b090}} 
+enum \hyperlink{class_plan_instance_a327a14fdda85d66c88d053b970a7b090}{Plan\+State} \{ \newline
+{\bfseries I\+N\+V\+A\+L\+ID}, 
+{\bfseries F\+I\+N\+D\+I\+NG}, 
+{\bfseries E\+X\+E\+C\+U\+T\+I\+NG}, 
+{\bfseries C\+O\+M\+P\+L\+E\+T\+ED}, 
+\newline
+{\bfseries F\+A\+I\+L\+ED}, 
+{\bfseries U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}, 
+{\bfseries A\+B\+O\+R\+T\+ED}
+ \}\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{class_plan_instance_a9b591ea3150ee8c730516d6373e5d424}\label{class_plan_instance_a9b591ea3150ee8c730516d6373e5d424}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_plan_instance}{Plan\+Instance} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_plan_instance_af626bdd33f7b8a6577c437cca585b6bf}\label{class_plan_instance_af626bdd33f7b8a6577c437cca585b6bf}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_plan_instance}{Plan\+Instance} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_plan_instance_a9aebc14f1c7644ff749554b90587288a}\label{class_plan_instance_a9aebc14f1c7644ff749554b90587288a}} 
+typedef Delegate$<$ SP $>$ {\bfseries State\+Callback}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_instance_a74cdd19349519898ff334433731a9c79}\label{class_plan_instance_a74cdd19349519898ff334433731a9c79}} 
+\hyperlink{class_plan_instance_a74cdd19349519898ff334433731a9c79}{Plan\+Instance} (\hyperlink{class_plan_manager}{Plan\+Manager} $\ast$a\+\_\+p\+Manager, \hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} a\+\_\+sp\+Goal, State\+Callback a\+\_\+\+State\+Callback)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_instance_a9e0be799d35bde5deebbc311db47318c}\label{class_plan_instance_a9e0be799d35bde5deebbc311db47318c}} 
+\hyperlink{class_plan_manager}{Plan\+Manager} $\ast$ \hyperlink{class_plan_instance_a9e0be799d35bde5deebbc311db47318c}{Get\+Manager} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_instance_ac8127fe003f0e555a9229a8ecf59d5d3}\label{class_plan_instance_ac8127fe003f0e555a9229a8ecf59d5d3}} 
+const std\+::string \& {\bfseries Get\+Instance\+Id} () const
+\item 
+\mbox{\Hypertarget{class_plan_instance_aa716f1c87f9478eede96041ab6da16ed}\label{class_plan_instance_aa716f1c87f9478eede96041ab6da16ed}} 
+\hyperlink{class_goal_a818ae12a4d1f28bd433dab2a830a390e}{Goal\+::\+SP} {\bfseries Get\+Goal} () const
+\item 
+\mbox{\Hypertarget{class_plan_instance_a6d2cced91642018d67baf014fb3722cf}\label{class_plan_instance_a6d2cced91642018d67baf014fb3722cf}} 
+const std\+::string \& {\bfseries Get\+Plan\+Id} () const
+\item 
+\mbox{\Hypertarget{class_plan_instance_ae91f9dccb8f9593358ec91dc34921c92}\label{class_plan_instance_ae91f9dccb8f9593358ec91dc34921c92}} 
+Plan\+::\+SP {\bfseries Get\+Plan} () const
+\item 
+\mbox{\Hypertarget{class_plan_instance_abf3f6010f01fd60c283b23a6c56051be}\label{class_plan_instance_abf3f6010f01fd60c283b23a6c56051be}} 
+\hyperlink{class_plan_instance_a327a14fdda85d66c88d053b970a7b090}{Plan\+State} {\bfseries Get\+State} () const
+\item 
+\mbox{\Hypertarget{class_plan_instance_ac91f66e0b1bf50a8d6be79c76781b47e}\label{class_plan_instance_ac91f66e0b1bf50a8d6be79c76781b47e}} 
+bool \hyperlink{class_plan_instance_ac91f66e0b1bf50a8d6be79c76781b47e}{Start} ()
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_plan_instance_a803ee75828f7c000a94f6ec64123bfda}\label{class_plan_instance_a803ee75828f7c000a94f6ec64123bfda}} 
+bool {\bfseries Abort} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_plan_instance_aa54626b50863483f03ac26d30040160a}\label{class_plan_instance_aa54626b50863483f03ac26d30040160a}} 
+static const char $\ast$ \hyperlink{class_plan_instance_aa54626b50863483f03ac26d30040160a}{Get\+Plan\+State\+Text} (\hyperlink{class_plan_instance_a327a14fdda85d66c88d053b970a7b090}{Plan\+State} a\+\_\+e\+State)
+\begin{DoxyCompactList}\small\item\em Static. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object is created to use a skill through the \hyperlink{class_skill_manager}{Skill\+Manager}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/planning/Plan\+Instance.\+h\item 
+src/planning/Plan\+Instance.\+cpp\end{DoxyCompactItemize}

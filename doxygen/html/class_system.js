@@ -1,0 +1,27 @@
+var class_system =
+[
+    [ "System", "class_system.html#ae317936c9bcf1374d61745572e0f2f8a", null ],
+    [ "BuildHealthData", "class_system.html#a3af49b19dea14b475fbb69f55b94b4b6", null ],
+    [ "Deserialize", "class_system.html#a926e7819a6043204873d89bf573c5d0c", null ],
+    [ "DoOnCheckSystem", "class_system.html#a34f3ceb7546d6427ead43224c62e37e7", null ],
+    [ "ExecuteCommand", "class_system.html#a386ef99f860c490743e125b5fffd8630", null ],
+    [ "GetDataType", "class_system.html#a1c296e539ad609cbd4dcfeb1cc769d1a", null ],
+    [ "GetSensorName", "class_system.html#a6e4849ae61ff446173082dab15303e9d", null ],
+    [ "OnCheckSystem", "class_system.html#a3c73d924038bc5f47d5db5ad45da30d3", null ],
+    [ "OnPause", "class_system.html#afc1279ad309776fd87a5e86bff4d8b83", null ],
+    [ "OnResume", "class_system.html#a94409edf401ac878dc040c26f5855d54", null ],
+    [ "OnStart", "class_system.html#ae74346d0309dc922a4d1610f221c8afe", null ],
+    [ "OnStop", "class_system.html#aa1f43da6fe87d124d6b01854b29b1954", null ],
+    [ "RTTI_DECL", "class_system.html#aa8e6b43b1714e0b871c7e20020feca28", null ],
+    [ "SendHealthData", "class_system.html#a106ba821e48abf20082e8da7b7eac1ce", null ],
+    [ "Serialize", "class_system.html#a64dd14fe5c0cd644f05c9b2e6dba7917", null ],
+    [ "SetSystemCheckIntervval", "class_system.html#a2df512a3d855c1090a9d4dfcffa2a8e5", null ],
+    [ "m_bProcessing", "class_system.html#af7a055f6195aa2edf75b779791299cf9", null ],
+    [ "m_cpuUsageCommand", "class_system.html#afa4d0c4ecdf7d4f5b2986fce1c52c0e3", null ],
+    [ "m_diskUsageCommand", "class_system.html#ab913673a1fb4f3a77fb040410531009d", null ],
+    [ "m_fFreeMemoryThreshold", "class_system.html#a9a281c63600aa4fd0c530f0c8e6c7732", null ],
+    [ "m_freeMemoryCommand", "class_system.html#ab2b6073e862628249461f02d4aa8924c", null ],
+    [ "m_lastRebootCommand", "class_system.html#acf092d80220c1081f2d59366cb3b3cf6", null ],
+    [ "m_SystemCheckInterval", "class_system.html#ab9e9c5915c47645b7de9431223eb0306", null ],
+    [ "m_SystemCheckTimer", "class_system.html#aa626fe225f7c8983ab88e1235e4c3851", null ]
+];

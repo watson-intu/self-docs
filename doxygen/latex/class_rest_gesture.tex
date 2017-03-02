@@ -1,0 +1,116 @@
+\hypertarget{class_rest_gesture}{}\section{Rest\+Gesture Class Reference}
+\label{class_rest_gesture}\index{Rest\+Gesture@{Rest\+Gesture}}
+
+
+This gesture is for making a R\+E\+ST call to a server.  
+
+
+
+
+{\ttfamily \#include $<$Rest\+Gesture.\+h$>$}
+
+Inheritance diagram for Rest\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_rest_gesture}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_rest_gesture_1_1_context}{Context}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a4a175cc9d5bccdc4a21aed300daaf3a0}\label{class_rest_gesture_a4a175cc9d5bccdc4a21aed300daaf3a0}} 
+typedef I\+Web\+Client\+::\+Headers \hyperlink{class_rest_gesture_a4a175cc9d5bccdc4a21aed300daaf3a0}{Headers}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a1e0f78d88310995e5bd635789609b9fe}\label{class_rest_gesture_a1e0f78d88310995e5bd635789609b9fe}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a9fd1eb4ce8c6fe33dd9de988d50c6287}\label{class_rest_gesture_a9fd1eb4ce8c6fe33dd9de988d50c6287}} 
+\hyperlink{class_rest_gesture_a9fd1eb4ce8c6fe33dd9de988d50c6287}{Rest\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rest_gesture_ab9bfe8aa81bb486d803a8b7284f8e352}\label{class_rest_gesture_ab9bfe8aa81bb486d803a8b7284f8e352}} 
+virtual void \hyperlink{class_rest_gesture_ab9bfe8aa81bb486d803a8b7284f8e352}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rest_gesture_a5512d7d48510080437127b20cf9288b1}\label{class_rest_gesture_a5512d7d48510080437127b20cf9288b1}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a84673c22b5a8d5c30b946149b4884d6c}\label{class_rest_gesture_a84673c22b5a8d5c30b946149b4884d6c}} 
+virtual bool \hyperlink{class_rest_gesture_a84673c22b5a8d5c30b946149b4884d6c}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rest_gesture_a7100d55765846c97c9e508842e4e0be1}\label{class_rest_gesture_a7100d55765846c97c9e508842e4e0be1}} 
+virtual bool \hyperlink{class_rest_gesture_a7100d55765846c97c9e508842e4e0be1}{Abort} ()
+\begin{DoxyCompactList}\small\item\em Abort this gesture, if true is returned then abort succeeded and callback will N\+OT be invoked. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rest_gesture_a4d162d3bf24c609ecbef972ce4106548}\label{class_rest_gesture_a4d162d3bf24c609ecbef972ce4106548}} 
+void {\bfseries Set\+U\+RL} (const std\+::string \&a\+\_\+\+U\+RL)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_aa7b00dd7288c02c5734d26307d24b133}\label{class_rest_gesture_aa7b00dd7288c02c5734d26307d24b133}} 
+void {\bfseries Set\+Request\+Type} (const std\+::string \&a\+\_\+\+Type)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a31ccfc94a60ef18a27654687811868d1}\label{class_rest_gesture_a31ccfc94a60ef18a27654687811868d1}} 
+void {\bfseries Set\+Headers} (const \hyperlink{class_rest_gesture_a4a175cc9d5bccdc4a21aed300daaf3a0}{Headers} \&a\+\_\+\+Headers)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a1a127667476e3142509708fba5e0efdc}\label{class_rest_gesture_a1a127667476e3142509708fba5e0efdc}} 
+void {\bfseries Set\+Body} (const std\+::string \&a\+\_\+\+Body)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_ac4c643f8e46893be6927bff113e46349}\label{class_rest_gesture_ac4c643f8e46893be6927bff113e46349}} 
+void {\bfseries Set\+User\+Name} (const std\+::string \&a\+\_\+\+User\+Name)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_ac7588eae74ab37cf69bf3b07d7e7baa0}\label{class_rest_gesture_ac7588eae74ab37cf69bf3b07d7e7baa0}} 
+void {\bfseries Set\+Password} (const std\+::string \&a\+\_\+\+Password)
+\end{DoxyCompactItemize}
+\subsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a108359b9efddfa82d0937e9e6be25719}\label{class_rest_gesture_a108359b9efddfa82d0937e9e6be25719}} 
+void {\bfseries Send\+Request} ()
+\item 
+\mbox{\Hypertarget{class_rest_gesture_affaed5569ce356ae32df7cb7069cf9b1}\label{class_rest_gesture_affaed5569ce356ae32df7cb7069cf9b1}} 
+void {\bfseries On\+Data} (I\+Web\+Client\+::\+Request\+Data $\ast$a\+\_\+p\+Data)
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a0edfb9ae024ca7d2d1a77da59ec07960}\label{class_rest_gesture_a0edfb9ae024ca7d2d1a77da59ec07960}} 
+void {\bfseries On\+State} (I\+Web\+Client $\ast$a\+\_\+p\+Client)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a6a22d01d8dd0f079d11838cc9ff1fdef}\label{class_rest_gesture_a6a22d01d8dd0f079d11838cc9ff1fdef}} 
+I\+Web\+Client\+::\+SP \hyperlink{class_rest_gesture_a6a22d01d8dd0f079d11838cc9ff1fdef}{m\+\_\+sp\+Client}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_rest_gesture_a079d94256232fd5cefa7c0d3bc6dd29f}\label{class_rest_gesture_a079d94256232fd5cefa7c0d3bc6dd29f}} 
+std\+::string {\bfseries m\+\_\+\+U\+RL}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_aae1236601c757fe9ed87ebb807c67123}\label{class_rest_gesture_aae1236601c757fe9ed87ebb807c67123}} 
+std\+::string {\bfseries m\+\_\+\+Type}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a64a1789c6e4cf7cc23af0fcf68e2bd90}\label{class_rest_gesture_a64a1789c6e4cf7cc23af0fcf68e2bd90}} 
+\hyperlink{class_rest_gesture_a4a175cc9d5bccdc4a21aed300daaf3a0}{Headers} {\bfseries m\+\_\+\+Headers}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_af3187b2c88a15426267a60ebe17adf94}\label{class_rest_gesture_af3187b2c88a15426267a60ebe17adf94}} 
+std\+::string {\bfseries m\+\_\+\+Body}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a0b71a74bde90dcd240fcdd80320630b6}\label{class_rest_gesture_a0b71a74bde90dcd240fcdd80320630b6}} 
+std\+::string {\bfseries m\+\_\+\+User\+Name}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a716d029740b448e5aa90a5f867d0c608}\label{class_rest_gesture_a716d029740b448e5aa90a5f867d0c608}} 
+std\+::string {\bfseries m\+\_\+\+Password}
+\item 
+\mbox{\Hypertarget{class_rest_gesture_a93a5ee94d5e157536c9cdf3564816081}\label{class_rest_gesture_a93a5ee94d5e157536c9cdf3564816081}} 
+std\+::string {\bfseries m\+\_\+\+Response}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This gesture is for making a R\+E\+ST call to a server. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Rest\+Gesture.\+h\item 
+src/gestures/Rest\+Gesture.\+cpp\end{DoxyCompactItemize}

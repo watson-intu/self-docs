@@ -1,0 +1,72 @@
+\hypertarget{class_move_joint_gesture}{}\section{Move\+Joint\+Gesture Class Reference}
+\label{class_move_joint_gesture}\index{Move\+Joint\+Gesture@{Move\+Joint\+Gesture}}
+
+
+This is the base class for any gesture that moves a single joint on a robot.  
+
+
+
+
+{\ttfamily \#include $<$Move\+Joint\+Gesture.\+h$>$}
+
+Inheritance diagram for Move\+Joint\+Gesture\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_move_joint_gesture}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_ad06c6d93af134d7fa751760f2675591e}\label{class_move_joint_gesture_ad06c6d93af134d7fa751760f2675591e}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a6a705eec17c1cf1a4bdf4a94819a38b4}\label{class_move_joint_gesture_a6a705eec17c1cf1a4bdf4a94819a38b4}} 
+\hyperlink{class_move_joint_gesture_a6a705eec17c1cf1a4bdf4a94819a38b4}{Move\+Joint\+Gesture} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a9f3aa3e7c957ca1e5e1f9d36942d5a61}\label{class_move_joint_gesture_a9f3aa3e7c957ca1e5e1f9d36942d5a61}} 
+{\bfseries Move\+Joint\+Gesture} (const std\+::string \&a\+\_\+\+Gesture\+Id)
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_ad65de51279001cf45bd709857cb2e081}\label{class_move_joint_gesture_ad65de51279001cf45bd709857cb2e081}} 
+virtual void \hyperlink{class_move_joint_gesture_ad65de51279001cf45bd709857cb2e081}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a80e84475f200050e54ea4fa50eb221c6}\label{class_move_joint_gesture_a80e84475f200050e54ea4fa50eb221c6}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a05ffbd58e927b0f42aba6756925602ea}\label{class_move_joint_gesture_a05ffbd58e927b0f42aba6756925602ea}} 
+virtual bool \hyperlink{class_move_joint_gesture_a05ffbd58e927b0f42aba6756925602ea}{Execute} (Gesture\+Delegate a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_gesture}{I\+Gesture} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_joint_gesture_aea6c14e63573d012c4db6d4e07590ff5}\label{class_move_joint_gesture_aea6c14e63573d012c4db6d4e07590ff5}} 
+void \hyperlink{class_move_joint_gesture_aea6c14e63573d012c4db6d4e07590ff5}{Set\+Stiffness} (float a\+\_\+f\+Stiffness)
+\begin{DoxyCompactList}\small\item\em Mutators. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a5ed6a236f5c929feec0cc8588f4ff011}\label{class_move_joint_gesture_a5ed6a236f5c929feec0cc8588f4ff011}} 
+void {\bfseries Set\+Asbsolute} (bool a\+\_\+b\+Absolute)
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a98774a1369abe2e98142ce3364234668}\label{class_move_joint_gesture_a98774a1369abe2e98142ce3364234668}} 
+std\+::vector$<$ std\+::string $>$ \hyperlink{class_move_joint_gesture_a98774a1369abe2e98142ce3364234668}{m\+\_\+\+Joint\+Names}
+\begin{DoxyCompactList}\small\item\em Data. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a30e8c1563f7358a5889e197000cff070}\label{class_move_joint_gesture_a30e8c1563f7358a5889e197000cff070}} 
+std\+::vector$<$ float $>$ {\bfseries m\+\_\+f\+Angles}
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a0bbc55286e0507229008d60e54b88185}\label{class_move_joint_gesture_a0bbc55286e0507229008d60e54b88185}} 
+std\+::vector$<$ float $>$ {\bfseries m\+\_\+f\+Speeds}
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_ab9cd0c5f441ac92734acfac0fc969449}\label{class_move_joint_gesture_ab9cd0c5f441ac92734acfac0fc969449}} 
+float {\bfseries m\+\_\+f\+Stiffness}
+\item 
+\mbox{\Hypertarget{class_move_joint_gesture_a6c2cb16c48b3d0bed28fa26c6b126127}\label{class_move_joint_gesture_a6c2cb16c48b3d0bed28fa26c6b126127}} 
+bool {\bfseries m\+\_\+b\+Absolute}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This is the base class for any gesture that moves a single joint on a robot. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/gestures/Move\+Joint\+Gesture.\+h\item 
+src/gestures/Move\+Joint\+Gesture.\+cpp\end{DoxyCompactItemize}

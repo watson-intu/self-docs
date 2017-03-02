@@ -1,0 +1,61 @@
+\hypertarget{class_telephony_agent}{}\section{Telephony\+Agent Class Reference}
+\label{class_telephony_agent}\index{Telephony\+Agent@{Telephony\+Agent}}
+
+
+This agent handles making and answering phone calls.  
+
+
+
+
+{\ttfamily \#include $<$Telephony\+Agent.\+h$>$}
+
+Inheritance diagram for Telephony\+Agent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_telephony_agent}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_telephony_agent_a850b9b66618ba5754608eab6becd8de6}\label{class_telephony_agent_a850b9b66618ba5754608eab6becd8de6}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_telephony_agent_a52ecf2a6922d88291669cc99409781dc}\label{class_telephony_agent_a52ecf2a6922d88291669cc99409781dc}} 
+virtual void \hyperlink{class_telephony_agent_a52ecf2a6922d88291669cc99409781dc}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_agent_a762befed86fc28035dcced8945b5a16b}\label{class_telephony_agent_a762befed86fc28035dcced8945b5a16b}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+virtual bool \hyperlink{class_telephony_agent_a65529f3187ba02917a868595599ad0c2}{On\+Start} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_agent}{I\+Agent} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_telephony_agent_ae1e36f56ce02303ffe484a5aae55a16a}\label{class_telephony_agent_ae1e36f56ce02303ffe484a5aae55a16a}} 
+virtual bool {\bfseries On\+Stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This agent handles making and answering phone calls. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_telephony_agent_a65529f3187ba02917a868595599ad0c2}\label{class_telephony_agent_a65529f3187ba02917a868595599ad0c2}} 
+\index{Telephony\+Agent@{Telephony\+Agent}!On\+Start@{On\+Start}}
+\index{On\+Start@{On\+Start}!Telephony\+Agent@{Telephony\+Agent}}
+\subsubsection{\texorpdfstring{On\+Start()}{OnStart()}}
+{\footnotesize\ttfamily bool Telephony\+Agent\+::\+On\+Start (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+\hyperlink{class_i_agent}{I\+Agent} interface. 
+
+Find and start telephony service 
+
+Implements \hyperlink{class_i_agent_a176389a45e19affdd1b8be5c6c981120}{I\+Agent}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/agent/Telephony\+Agent.\+h\item 
+src/agent/Telephony\+Agent.\+cpp\end{DoxyCompactItemize}

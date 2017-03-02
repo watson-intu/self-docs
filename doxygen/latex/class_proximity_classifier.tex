@@ -1,0 +1,43 @@
+\hypertarget{class_proximity_classifier}{}\section{Proximity\+Classifier Class Reference}
+\label{class_proximity_classifier}\index{Proximity\+Classifier@{Proximity\+Classifier}}
+
+
+{\ttfamily \#include $<$Proximity\+Classifier.\+h$>$}
+
+Inheritance diagram for Proximity\+Classifier\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_proximity_classifier}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_proximity_classifier_a9510dd9ca45cd31fb5f104587dacf2d1}\label{class_proximity_classifier_a9510dd9ca45cd31fb5f104587dacf2d1}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_proximity_classifier_a1945267300b153cf021777fbb918c6c0}\label{class_proximity_classifier_a1945267300b153cf021777fbb918c6c0}} 
+virtual void \hyperlink{class_proximity_classifier_a1945267300b153cf021777fbb918c6c0}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proximity_classifier_a462a8a339e0b6b5b8d76b2bbf42ad0d5}\label{class_proximity_classifier_a462a8a339e0b6b5b8d76b2bbf42ad0d5}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_proximity_classifier_a612c087a73b3b90a1d2619291bd5b8f4}\label{class_proximity_classifier_a612c087a73b3b90a1d2619291bd5b8f4}} 
+virtual const char $\ast$ \hyperlink{class_proximity_classifier_a612c087a73b3b90a1d2619291bd5b8f4}{Get\+Name} () const
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_classifier}{I\+Classifier} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_proximity_classifier_aa27d2478586ac3c527e30730f3a1ce1b}\label{class_proximity_classifier_aa27d2478586ac3c527e30730f3a1ce1b}} 
+virtual bool {\bfseries On\+Start} ()
+\item 
+\mbox{\Hypertarget{class_proximity_classifier_a16728c50b71de336fd652800627083b9}\label{class_proximity_classifier_a16728c50b71de336fd652800627083b9}} 
+virtual bool {\bfseries On\+Stop} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This classifier subscribes to all video sensors and classifies all incoming video data which then adds a Concept to the \hyperlink{class_black_board}{Black\+Board}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/classifiers/Proximity\+Classifier.\+h\item 
+src/classifiers/Proximity\+Classifier.\+cpp\end{DoxyCompactItemize}

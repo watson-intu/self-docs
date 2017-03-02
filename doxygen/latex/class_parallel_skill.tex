@@ -1,0 +1,75 @@
+\hypertarget{class_parallel_skill}{}\section{Parallel\+Skill Class Reference}
+\label{class_parallel_skill}\index{Parallel\+Skill@{Parallel\+Skill}}
+
+
+This skill is composed of multiple skills running in sequence.  
+
+
+
+
+{\ttfamily \#include $<$Parallel\+Skill.\+h$>$}
+
+Inheritance diagram for Parallel\+Skill\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_parallel_skill}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_parallel_skill_abfbba287cbffa2c09cb0ed35b744a84b}\label{class_parallel_skill_abfbba287cbffa2c09cb0ed35b744a84b}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_parallel_skill}{Parallel\+Skill} $>$ \hyperlink{class_parallel_skill_abfbba287cbffa2c09cb0ed35b744a84b}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_parallel_skill_a132693de85c38f466f4b859d774b1eb0}\label{class_parallel_skill_a132693de85c38f466f4b859d774b1eb0}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_parallel_skill}{Parallel\+Skill} $>$ {\bfseries WP}
+\item 
+\mbox{\Hypertarget{class_parallel_skill_a2a5d4de4e904d3ece62997362d55ab80}\label{class_parallel_skill_a2a5d4de4e904d3ece62997362d55ab80}} 
+typedef std\+::vector$<$ \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} $>$ {\bfseries Skill\+List}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_parallel_skill_addd8cd932b5fdfb1e40a450130d4b924}\label{class_parallel_skill_addd8cd932b5fdfb1e40a450130d4b924}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_parallel_skill_a1aab97bb239fd46cff2f8fb84f6cb3ab}\label{class_parallel_skill_a1aab97bb239fd46cff2f8fb84f6cb3ab}} 
+\hyperlink{class_parallel_skill_a1aab97bb239fd46cff2f8fb84f6cb3ab}{Parallel\+Skill} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_parallel_skill_a6ccaaf922788b26a747539b7daba66ab}\label{class_parallel_skill_a6ccaaf922788b26a747539b7daba66ab}} 
+{\bfseries Parallel\+Skill} (const \hyperlink{class_parallel_skill}{Parallel\+Skill} \&a\+\_\+\+Copy)
+\item 
+\mbox{\Hypertarget{class_parallel_skill_a6b8c895c0996b4edec98cf4c26724fef}\label{class_parallel_skill_a6b8c895c0996b4edec98cf4c26724fef}} 
+virtual void \hyperlink{class_parallel_skill_a6b8c895c0996b4edec98cf4c26724fef}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_parallel_skill_a1690236d74fc34a01c1fedd333ed9ede}\label{class_parallel_skill_a1690236d74fc34a01c1fedd333ed9ede}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_parallel_skill_adedaf3393d261b029673dc7ab02f9d71}\label{class_parallel_skill_adedaf3393d261b029673dc7ab02f9d71}} 
+virtual bool \hyperlink{class_parallel_skill_adedaf3393d261b029673dc7ab02f9d71}{Can\+Use\+Skill} ()
+\begin{DoxyCompactList}\small\item\em \hyperlink{class_i_skill}{I\+Skill} interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_parallel_skill_ad95fee894046921fb0d3e9c91034737e}\label{class_parallel_skill_ad95fee894046921fb0d3e9c91034737e}} 
+virtual void \hyperlink{class_parallel_skill_ad95fee894046921fb0d3e9c91034737e}{Use\+Skill} (Delegate$<$ \hyperlink{class_i_skill}{I\+Skill} $\ast$$>$ a\+\_\+\+Callback, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params)
+\begin{DoxyCompactList}\small\item\em This should return true if this skill can be used, false is returned otherwise. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_parallel_skill_aef491a05fe20e3805ba7a42ef2f3bba3}\label{class_parallel_skill_aef491a05fe20e3805ba7a42ef2f3bba3}} 
+virtual bool {\bfseries Abort\+Skill} ()
+\item 
+\mbox{\Hypertarget{class_parallel_skill_a5c559b7917042634e3c2b09ffeaa5a7c}\label{class_parallel_skill_a5c559b7917042634e3c2b09ffeaa5a7c}} 
+virtual \hyperlink{class_i_skill}{I\+Skill} $\ast$ \hyperlink{class_parallel_skill_a5c559b7917042634e3c2b09ffeaa5a7c}{Clone} ()
+\begin{DoxyCompactList}\small\item\em Invoke this function to stop using this skill, the callback passed to \hyperlink{class_parallel_skill_ad95fee894046921fb0d3e9c91034737e}{Use\+Skill()} will N\+OT be invoked after this is called. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_parallel_skill_aebc7c4e32af3abe65d22c52e461bd7f2}\label{class_parallel_skill_aebc7c4e32af3abe65d22c52e461bd7f2}} 
+void {\bfseries Add\+Skill} (const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \&a\+\_\+p\+Skill)
+\item 
+\mbox{\Hypertarget{class_parallel_skill_adb8d923896f90ac909a755712bdeee01}\label{class_parallel_skill_adb8d923896f90ac909a755712bdeee01}} 
+void {\bfseries Clear\+Skill\+List} ()
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+\subsection{Detailed Description}
+This skill is composed of multiple skills running in sequence. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/Parallel\+Skill.\+h\item 
+src/skills/Parallel\+Skill.\+cpp\end{DoxyCompactItemize}

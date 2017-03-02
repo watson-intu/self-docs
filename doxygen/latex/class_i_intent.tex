@@ -1,0 +1,53 @@
+\hypertarget{class_i_intent}{}\section{I\+Intent Class Reference}
+\label{class_i_intent}\index{I\+Intent@{I\+Intent}}
+Inheritance diagram for I\+Intent\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=10.208333cm]{class_i_intent}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_intent_a2a721f97e3d6685a7ee8ca9704f1d1db}\label{class_i_intent_a2a721f97e3d6685a7ee8ca9704f1d1db}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_i_intent}{I\+Intent} $>$ \hyperlink{class_i_intent_a2a721f97e3d6685a7ee8ca9704f1d1db}{SP}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_intent_acb29fc08e37407d34bbecbc0665f39fd}\label{class_i_intent_acb29fc08e37407d34bbecbc0665f39fd}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_i_intent}{I\+Intent} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_intent_aca04e18b51f2bdc2144cd67663fc6387}\label{class_i_intent_aca04e18b51f2bdc2144cd67663fc6387}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_i_intent_a08d72267388eadc85428b0dd6e0cd2f6}\label{class_i_intent_a08d72267388eadc85428b0dd6e0cd2f6}} 
+\hyperlink{class_i_intent_a08d72267388eadc85428b0dd6e0cd2f6}{I\+Intent} (float a\+\_\+f\+Condidence=1.\+0f)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_intent_ad83df4bc7196a89f91cd439df7bb7dcd}\label{class_i_intent_ad83df4bc7196a89f91cd439df7bb7dcd}} 
+virtual void \hyperlink{class_i_intent_ad83df4bc7196a89f91cd439df7bb7dcd}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_intent_a580301ed11679bc7e07e29c68e6030ba}\label{class_i_intent_a580301ed11679bc7e07e29c68e6030ba}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_i_intent_a79c009788bf811866639bd57292420a6}\label{class_i_intent_a79c009788bf811866639bd57292420a6}} 
+double {\bfseries Get\+Confidence} () const
+\item 
+\mbox{\Hypertarget{class_i_intent_a2f63629fca41719474f8f445c6aea86d}\label{class_i_intent_a2f63629fca41719474f8f445c6aea86d}} 
+void {\bfseries Set\+Confidence} (double a\+\_\+\+Confidence)
+\item 
+\mbox{\Hypertarget{class_i_intent_a39b1efbdcfde15fb66513d1f9d867a1e}\label{class_i_intent_a39b1efbdcfde15fb66513d1f9d867a1e}} 
+virtual void {\bfseries Create} (const Json\+::\+Value \&a\+\_\+\+Intent, const Json\+::\+Value \&a\+\_\+\+Parse)=0
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_intent_ae225b8fc6856c1f88641f5c2dd3d0b31}\label{class_i_intent_ae225b8fc6856c1f88641f5c2dd3d0b31}} 
+double {\bfseries m\+\_\+\+Confidence}
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/I\+Intent.\+h\end{DoxyCompactItemize}

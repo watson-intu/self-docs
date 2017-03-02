@@ -1,0 +1,54 @@
+\hypertarget{class_status}{}\section{Status Class Reference}
+\label{class_status}\index{Status@{Status}}
+Inheritance diagram for Status\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{class_status}
+\end{center}
+\end{figure}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_status_abefb09daa7775defc3ecc20a6f2cf5bc}\label{class_status_abefb09daa7775defc3ecc20a6f2cf5bc}} 
+enum \hyperlink{class_status_abefb09daa7775defc3ecc20a6f2cf5bc}{Status\+State} \{ {\bfseries P\+\_\+\+I\+D\+LE} = 0x1, 
+{\bfseries P\+\_\+\+P\+R\+O\+C\+E\+S\+S\+I\+NG} = 0x2, 
+{\bfseries P\+\_\+\+F\+I\+N\+I\+S\+H\+ED} = 0x4
+ \}\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}
+\item 
+\mbox{\Hypertarget{class_status_abb96ff5b200e14639211100edaac5b65}\label{class_status_abb96ff5b200e14639211100edaac5b65}} 
+typedef boost\+::shared\+\_\+ptr$<$ \hyperlink{class_status}{Status} $>$ {\bfseries SP}
+\item 
+\mbox{\Hypertarget{class_status_a34791a434e50f43bcc15a0fc16a73804}\label{class_status_a34791a434e50f43bcc15a0fc16a73804}} 
+typedef boost\+::weak\+\_\+ptr$<$ \hyperlink{class_status}{Status} $>$ {\bfseries WP}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_status_aa4f82dc1b8baefd914ed3a11b50a37cd}\label{class_status_aa4f82dc1b8baefd914ed3a11b50a37cd}} 
+{\bfseries R\+T\+T\+I\+\_\+\+D\+E\+CL} ()
+\item 
+\mbox{\Hypertarget{class_status_a76a3da2e0b8cd16cc95f6f6bfcdd5737}\label{class_status_a76a3da2e0b8cd16cc95f6f6bfcdd5737}} 
+virtual void \hyperlink{class_status_a76a3da2e0b8cd16cc95f6f6bfcdd5737}{Serialize} (Json\+::\+Value \&json)
+\begin{DoxyCompactList}\small\item\em I\+Serializable interface. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_a21f186884c6f1fd59c2264abf25ce5c0}\label{class_status_a21f186884c6f1fd59c2264abf25ce5c0}} 
+virtual void {\bfseries Deserialize} (const Json\+::\+Value \&json)
+\item 
+\mbox{\Hypertarget{class_status_a944586fb328a3524805748c8f7b17f32}\label{class_status_a944586fb328a3524805748c8f7b17f32}} 
+\hyperlink{class_status_a944586fb328a3524805748c8f7b17f32}{Status} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_a97b67be4c6ba590bc836cfdfcadd1179}\label{class_status_a97b67be4c6ba590bc836cfdfcadd1179}} 
+{\bfseries Status} (const std\+::string \&a\+\_\+\+Thing\+State)
+\item 
+\mbox{\Hypertarget{class_status_a4f13863f48fc49d7a20f7333ce052af6}\label{class_status_a4f13863f48fc49d7a20f7333ce052af6}} 
+\hyperlink{class_status_abefb09daa7775defc3ecc20a6f2cf5bc}{Status\+State} \hyperlink{class_status_a4f13863f48fc49d7a20f7333ce052af6}{Get\+State} ()
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_status_a14875227f52b1f2a157a852237ed0ef5}\label{class_status_a14875227f52b1f2a157a852237ed0ef5}} 
+void {\bfseries Set\+State} (\hyperlink{class_status_abefb09daa7775defc3ecc20a6f2cf5bc}{Status\+State} a\+\_\+\+State)
+\end{DoxyCompactItemize}
+\subsection*{Additional Inherited Members}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/blackboard/Status.\+h\item 
+src/blackboard/Status.\+cpp\end{DoxyCompactItemize}

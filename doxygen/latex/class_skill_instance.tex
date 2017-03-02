@@ -1,0 +1,72 @@
+\hypertarget{class_skill_instance}{}\section{Skill\+Instance Class Reference}
+\label{class_skill_instance}\index{Skill\+Instance@{Skill\+Instance}}
+
+
+This object is created to use a skill through the \hyperlink{class_skill_manager}{Skill\+Manager}.  
+
+
+
+
+{\ttfamily \#include $<$Skill\+Instance.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_skill_instance_a19403519edc60dad57c324d9e976a811}\label{class_skill_instance_a19403519edc60dad57c324d9e976a811}} 
+enum \hyperlink{class_skill_instance_a19403519edc60dad57c324d9e976a811}{Use\+Skill\+State} \{ \newline
+{\bfseries U\+S\+\_\+\+I\+N\+V\+A\+L\+ID} = -\/1, 
+{\bfseries U\+S\+\_\+\+F\+I\+N\+D\+I\+NG}, 
+{\bfseries U\+S\+\_\+\+E\+X\+E\+C\+U\+T\+I\+NG}, 
+{\bfseries U\+S\+\_\+\+C\+O\+M\+P\+L\+E\+T\+ED}, 
+\newline
+{\bfseries U\+S\+\_\+\+F\+A\+I\+L\+ED}, 
+{\bfseries U\+S\+\_\+\+U\+N\+A\+V\+A\+I\+L\+A\+B\+LE}, 
+{\bfseries U\+S\+\_\+\+A\+B\+O\+R\+T\+ED}, 
+{\bfseries U\+S\+\_\+\+C\+O\+U\+NT}
+ \}\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_skill_instance_a515fed14e37c9594fd5957d38b9ce702}\label{class_skill_instance_a515fed14e37c9594fd5957d38b9ce702}} 
+\hyperlink{class_skill_instance_a515fed14e37c9594fd5957d38b9ce702}{Skill\+Instance} (\hyperlink{class_skill_manager}{Skill\+Manager} $\ast$a\+\_\+p\+Manager, const std\+::string \&a\+\_\+\+Skill, const \hyperlink{class_params_map}{Params\+Map} \&a\+\_\+\+Params, const Delegate$<$ \hyperlink{class_skill_instance}{Skill\+Instance} $\ast$$>$ a\+\_\+\+Callback, const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \&a\+\_\+sp\+Parent)
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_instance_ac407971cbe54230b62761856858a121d}\label{class_skill_instance_ac407971cbe54230b62761856858a121d}} 
+const std\+::string \& {\bfseries Get\+Skill\+G\+U\+ID} () const
+\item 
+\mbox{\Hypertarget{class_skill_instance_ae83a4ab0eb67843effa460ab6f3638c5}\label{class_skill_instance_ae83a4ab0eb67843effa460ab6f3638c5}} 
+const \hyperlink{class_i_skill_a68bcce999ab0444eebaca3fb8ddb8a31}{I\+Skill\+::\+SP} \& {\bfseries Get\+Skill} () const
+\item 
+\mbox{\Hypertarget{class_skill_instance_a4f42f818d3c85af8a94f4957fe7fcbf7}\label{class_skill_instance_a4f42f818d3c85af8a94f4957fe7fcbf7}} 
+\hyperlink{class_skill_instance_a19403519edc60dad57c324d9e976a811}{Use\+Skill\+State} {\bfseries Get\+State} () const
+\item 
+\mbox{\Hypertarget{class_skill_instance_af05695c74673b5c16df1d86c7c5b5519}\label{class_skill_instance_af05695c74673b5c16df1d86c7c5b5519}} 
+const \hyperlink{class_params_map}{Params\+Map} \& {\bfseries Get\+Params} () const
+\item 
+\mbox{\Hypertarget{class_skill_instance_a63f129e8dd614cba9f1567e1ba46d481}\label{class_skill_instance_a63f129e8dd614cba9f1567e1ba46d481}} 
+const \hyperlink{class_i_thing_a6e95654aef6362c48b9a2fd44a1f970a}{I\+Thing\+::\+SP} \& {\bfseries Get\+Parent} () const
+\item 
+\mbox{\Hypertarget{class_skill_instance_acd728fe75e8bd0ee20545b0db2795e8e}\label{class_skill_instance_acd728fe75e8bd0ee20545b0db2795e8e}} 
+bool {\bfseries Is\+Skill} (const std\+::string \&a\+\_\+\+Skill\+Name)
+\item 
+\mbox{\Hypertarget{class_skill_instance_a20a4ab223ea7e8ff3f57c1e0d6a28320}\label{class_skill_instance_a20a4ab223ea7e8ff3f57c1e0d6a28320}} 
+bool {\bfseries Abort} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_skill_instance_a18435ec49c4114f2de4dba02fe7dd743}\label{class_skill_instance_a18435ec49c4114f2de4dba02fe7dd743}} 
+static const char $\ast$ \hyperlink{class_skill_instance_a18435ec49c4114f2de4dba02fe7dd743}{State\+To\+String} (\hyperlink{class_skill_instance_a19403519edc60dad57c324d9e976a811}{Use\+Skill\+State} a\+\_\+\+State)
+\begin{DoxyCompactList}\small\item\em Converts the enum values to their string names. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_skill_instance_ae4725fa82e4efaf62e14cb0701f41e98}\label{class_skill_instance_ae4725fa82e4efaf62e14cb0701f41e98}} 
+static \hyperlink{class_skill_instance_a19403519edc60dad57c324d9e976a811}{Use\+Skill\+State} {\bfseries String\+To\+State} (const std\+::string \&a\+\_\+\+State)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This object is created to use a skill through the \hyperlink{class_skill_manager}{Skill\+Manager}. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/skills/Skill\+Instance.\+h\item 
+src/skills/Skill\+Instance.\+cpp\end{DoxyCompactItemize}

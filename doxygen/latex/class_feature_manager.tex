@@ -1,0 +1,45 @@
+\hypertarget{class_feature_manager}{}\section{Feature\+Manager Class Reference}
+\label{class_feature_manager}\index{Feature\+Manager@{Feature\+Manager}}
+
+
+{\ttfamily \#include $<$Feature\+Manager.\+h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_feature_manager_ac5e551b04984aaab5e31391e934208bb}\label{class_feature_manager_ac5e551b04984aaab5e31391e934208bb}} 
+typedef std\+::list$<$ \hyperlink{class_i_feature_extractor_accaef91768ee64d51b4dc959f36e9f08}{I\+Feature\+Extractor\+::\+SP} $>$ \hyperlink{class_feature_manager_ac5e551b04984aaab5e31391e934208bb}{Feature\+Extractor\+List}
+\begin{DoxyCompactList}\small\item\em Types. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_feature_manager_a8d757b7e1c0e8a173e42981a79898b73}\label{class_feature_manager_a8d757b7e1c0e8a173e42981a79898b73}} 
+typedef Factory$<$ \hyperlink{class_i_feature_extractor}{I\+Feature\+Extractor} $>$ {\bfseries Feature\+Extractor\+Factory}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_feature_manager_a4e0ef0a55579bdaefc85970cb492b1bb}\label{class_feature_manager_a4e0ef0a55579bdaefc85970cb492b1bb}} 
+\hyperlink{class_feature_manager_a4e0ef0a55579bdaefc85970cb492b1bb}{Feature\+Manager} ()
+\begin{DoxyCompactList}\small\item\em Construction. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_feature_manager_a365f702520b97592e1abff59eb907f2b}\label{class_feature_manager_a365f702520b97592e1abff59eb907f2b}} 
+const \hyperlink{class_feature_manager_ac5e551b04984aaab5e31391e934208bb}{Feature\+Extractor\+List} \& \hyperlink{class_feature_manager_a365f702520b97592e1abff59eb907f2b}{Get\+Feature\+Extractor\+List} () const
+\begin{DoxyCompactList}\small\item\em Accessors. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_feature_manager_ae22e14ad392ba3a7e23dccb40e7da30a}\label{class_feature_manager_ae22e14ad392ba3a7e23dccb40e7da30a}} 
+bool \hyperlink{class_feature_manager_ae22e14ad392ba3a7e23dccb40e7da30a}{Start} ()
+\begin{DoxyCompactList}\small\item\em Start this manager, initializes all available Classifer objects. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_feature_manager_aa84b4f17c9b92744ff06e4f92fe92904}\label{class_feature_manager_aa84b4f17c9b92744ff06e4f92fe92904}} 
+bool \hyperlink{class_feature_manager_aa84b4f17c9b92744ff06e4f92fe92904}{Stop} ()
+\begin{DoxyCompactList}\small\item\em Stop this manager. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_feature_manager_a3e5e9a2474841c6fff77cd2c95598611}\label{class_feature_manager_a3e5e9a2474841c6fff77cd2c95598611}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries Find\+Extractor} () const
+\item 
+\mbox{\Hypertarget{class_feature_manager_a0f82bb48dd79d49d62e083421165af34}\label{class_feature_manager_a0f82bb48dd79d49d62e083421165af34}} 
+{\footnotesize template$<$typename T $>$ }\\T $\ast$ {\bfseries Get\+Extractor} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This feature manager manages all Feature extractors, those feature extractors push data into the Blackboard object. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/extractors/Feature\+Manager.\+h\item 
+src/extractors/Feature\+Manager.\+cpp\end{DoxyCompactItemize}

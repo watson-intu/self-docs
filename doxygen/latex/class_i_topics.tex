@@ -1,0 +1,142 @@
+\hypertarget{class_i_topics}{}\section{I\+Topics Class Reference}
+\label{class_i_topics}\index{I\+Topics@{I\+Topics}}
+Inheritance diagram for I\+Topics\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_i_topics}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_i_topics_1_1_payload}{Payload}
+\item 
+struct \hyperlink{struct_i_topics_1_1_query_info}{Query\+Info}
+\item 
+struct \hyperlink{struct_i_topics_1_1_sub_info}{Sub\+Info}
+\item 
+struct \hyperlink{struct_i_topics_1_1_topic_info}{Topic\+Info}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_topics_a74ad40307166ea0365736630872ba6e9}\label{class_i_topics_a74ad40307166ea0365736630872ba6e9}} 
+typedef Delegate$<$ const \hyperlink{struct_i_topics_1_1_sub_info}{Sub\+Info} \&$>$ {\bfseries Sub\+Callback}
+\item 
+\mbox{\Hypertarget{class_i_topics_ab6fa21c607acaeedc367364086ef1292}\label{class_i_topics_ab6fa21c607acaeedc367364086ef1292}} 
+typedef Delegate$<$ const \hyperlink{struct_i_topics_1_1_payload}{Payload} \& $>$ {\bfseries Payload\+Callback}
+\item 
+\mbox{\Hypertarget{class_i_topics_a9afa8b499d4b423217ce644dfb378057}\label{class_i_topics_a9afa8b499d4b423217ce644dfb378057}} 
+typedef std\+::vector$<$ \hyperlink{struct_i_topics_1_1_topic_info}{Topic\+Info} $>$ {\bfseries Topic\+Vector}
+\item 
+\mbox{\Hypertarget{class_i_topics_a8f90a85e794ed0c0309cab2ea053a9ce}\label{class_i_topics_a8f90a85e794ed0c0309cab2ea053a9ce}} 
+typedef std\+::vector$<$ std\+::string $>$ {\bfseries Child\+Vector}
+\item 
+\mbox{\Hypertarget{class_i_topics_a35b7b6fadd6d1010e16f1f33fd1d1994}\label{class_i_topics_a35b7b6fadd6d1010e16f1f33fd1d1994}} 
+typedef Delegate$<$ const \hyperlink{struct_i_topics_1_1_query_info}{Query\+Info} \& $>$ {\bfseries Query\+Callback}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_topics_a430968c1f5aa9ab82e3013fc07322520}\label{class_i_topics_a430968c1f5aa9ab82e3013fc07322520}} 
+virtual void \hyperlink{class_i_topics_a430968c1f5aa9ab82e3013fc07322520}{Get\+Topics} (Topic\+Vector \&a\+\_\+\+Topics)=0
+\begin{DoxyCompactList}\small\item\em This returns a list of registered topics. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_topics_aaef29cbe6b8c089b22689a4ece3f711a}{Register\+Topic} (const std\+::string \&a\+\_\+\+Topic\+Id, const std\+::string \&a\+\_\+\+Type, Sub\+Callback a\+\_\+\+Subscriber\+Callback=Sub\+Callback())=0
+\item 
+\mbox{\Hypertarget{class_i_topics_ade655da69095758d398329c9a557e954}\label{class_i_topics_ade655da69095758d398329c9a557e954}} 
+virtual void \hyperlink{class_i_topics_ade655da69095758d398329c9a557e954}{Unregister\+Topic} (const std\+::string \&a\+\_\+\+Topic\+Id)=0
+\begin{DoxyCompactList}\small\item\em unregister a topic \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_topics_ac78125a64b65b178ee8d0260bd0a77ac}\label{class_i_topics_ac78125a64b65b178ee8d0260bd0a77ac}} 
+virtual bool \hyperlink{class_i_topics_ac78125a64b65b178ee8d0260bd0a77ac}{Is\+Subscribed} (const std\+::string \&a\+\_\+\+Topic\+Id)=0
+\begin{DoxyCompactList}\small\item\em This will return true if anyone is subscribed to the given topic. \end{DoxyCompactList}\item 
+virtual size\+\_\+t \hyperlink{class_i_topics_a5e49b50568c300e2f3a182942a3c316d}{Get\+Subscriber\+Count} (const std\+::string \&a\+\_\+\+Topic\+Id)=0
+\item 
+\mbox{\Hypertarget{class_i_topics_a1db328f00616a035e1f9fad6817bba29}\label{class_i_topics_a1db328f00616a035e1f9fad6817bba29}} 
+virtual bool \hyperlink{class_i_topics_a1db328f00616a035e1f9fad6817bba29}{Publish} (const std\+::string \&a\+\_\+\+Topic\+Id, const std\+::string \&a\+\_\+\+Data, bool a\+\_\+b\+Persisted=false, bool a\+\_\+b\+Binary=false)=0
+\begin{DoxyCompactList}\small\item\em Publish data for a given topic to all subscribers. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_topics_aa880819fe848bca35084d00b79f89bb9}\label{class_i_topics_aa880819fe848bca35084d00b79f89bb9}} 
+virtual bool \hyperlink{class_i_topics_aa880819fe848bca35084d00b79f89bb9}{Send} (const std\+::string \&a\+\_\+\+Targets, const std\+::string \&a\+\_\+\+Topic\+Id, const std\+::string \&a\+\_\+\+Data, bool a\+\_\+b\+Binary=false)=0
+\begin{DoxyCompactList}\small\item\em Send data for a given topic to a specific subscriber. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_topics_a569035e8547a27be7204b85d47ec0be1}\label{class_i_topics_a569035e8547a27be7204b85d47ec0be1}} 
+virtual bool \hyperlink{class_i_topics_a569035e8547a27be7204b85d47ec0be1}{Publish\+At} (const std\+::string \&a\+\_\+\+Path, const std\+::string \&a\+\_\+\+Data, bool a\+\_\+b\+Persisted=false, bool a\+\_\+b\+Binary=false)=0
+\begin{DoxyCompactList}\small\item\em Publish data for a remote target specified by the provided path. \end{DoxyCompactList}\item 
+virtual void \hyperlink{class_i_topics_a2d0193d6be4ce0c10d4bf352c21eb56a}{Query} (const std\+::string \&a\+\_\+\+Path, Query\+Callback a\+\_\+\+Callback)=0
+\begin{DoxyCompactList}\small\item\em This queries a node specified by the given path. \end{DoxyCompactList}\item 
+virtual bool \hyperlink{class_i_topics_a6381bbfcfc39b3630a802bae4c7c5337}{Subscribe} (const std\+::string \&a\+\_\+\+Path, Payload\+Callback a\+\_\+\+Callback)=0
+\begin{DoxyCompactList}\small\item\em Subscribe to the given topic specified by the provided path. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_i_topics_a4043b6a356ae263276d43c915bbb20ab}\label{class_i_topics_a4043b6a356ae263276d43c915bbb20ab}} 
+virtual bool \hyperlink{class_i_topics_a4043b6a356ae263276d43c915bbb20ab}{Unsubscribe} (const std\+::string \&a\+\_\+\+Path, void $\ast$a\+\_\+p\+Object=N\+U\+LL)=0
+\begin{DoxyCompactList}\small\item\em Unsubscribe from the given topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_i_topics_a73be27c489a5f26e044e2da65979613f}\label{class_i_topics_a73be27c489a5f26e044e2da65979613f}} 
+static std\+::string \hyperlink{class_i_topics_a73be27c489a5f26e044e2da65979613f}{Get\+Path} (const std\+::string \&a\+\_\+\+Origin, const std\+::string \&a\+\_\+\+Topic)
+\begin{DoxyCompactList}\small\item\em Helper function for appending a topic onto a origin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_i_topics_a5e49b50568c300e2f3a182942a3c316d}\label{class_i_topics_a5e49b50568c300e2f3a182942a3c316d}} 
+\index{I\+Topics@{I\+Topics}!Get\+Subscriber\+Count@{Get\+Subscriber\+Count}}
+\index{Get\+Subscriber\+Count@{Get\+Subscriber\+Count}!I\+Topics@{I\+Topics}}
+\subsubsection{\texorpdfstring{Get\+Subscriber\+Count()}{GetSubscriberCount()}}
+{\footnotesize\ttfamily virtual size\+\_\+t I\+Topics\+::\+Get\+Subscriber\+Count (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Topic\+Id }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+This returns a list of subscribers for the given topic, the strings returned will be relative paths to the given subscribers. 
+
+Implemented in \hyperlink{class_topic_manager_a7dd5e9041ac8f297f9695adf576beed0}{Topic\+Manager}.
+
+\mbox{\Hypertarget{class_i_topics_a2d0193d6be4ce0c10d4bf352c21eb56a}\label{class_i_topics_a2d0193d6be4ce0c10d4bf352c21eb56a}} 
+\index{I\+Topics@{I\+Topics}!Query@{Query}}
+\index{Query@{Query}!I\+Topics@{I\+Topics}}
+\subsubsection{\texorpdfstring{Query()}{Query()}}
+{\footnotesize\ttfamily virtual void I\+Topics\+::\+Query (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Path,  }\item[{Query\+Callback}]{a\+\_\+\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+This queries a node specified by the given path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+\+Callback} & the path to the node, we will invoke the callback with a \hyperlink{struct_i_topics_1_1_query_info}{Query\+Info} structure \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_topic_manager_a7b1d312d794d8876c0ea8592eb41a82b}{Topic\+Manager}.
+
+\mbox{\Hypertarget{class_i_topics_aaef29cbe6b8c089b22689a4ece3f711a}\label{class_i_topics_aaef29cbe6b8c089b22689a4ece3f711a}} 
+\index{I\+Topics@{I\+Topics}!Register\+Topic@{Register\+Topic}}
+\index{Register\+Topic@{Register\+Topic}!I\+Topics@{I\+Topics}}
+\subsubsection{\texorpdfstring{Register\+Topic()}{RegisterTopic()}}
+{\footnotesize\ttfamily virtual void I\+Topics\+::\+Register\+Topic (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Topic\+Id,  }\item[{const std\+::string \&}]{a\+\_\+\+Type,  }\item[{Sub\+Callback}]{a\+\_\+\+Subscriber\+Callback = {\ttfamily SubCallback()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+Local systems should register what topics they will be publishing, this allows other clients to enumerate available topics since some topics are not published unless they have subscribers. 
+
+Implemented in \hyperlink{class_topic_manager_a681e4ef90d13d2f0cca948135f4c8097}{Topic\+Manager}.
+
+\mbox{\Hypertarget{class_i_topics_a6381bbfcfc39b3630a802bae4c7c5337}\label{class_i_topics_a6381bbfcfc39b3630a802bae4c7c5337}} 
+\index{I\+Topics@{I\+Topics}!Subscribe@{Subscribe}}
+\index{Subscribe@{Subscribe}!I\+Topics@{I\+Topics}}
+\subsubsection{\texorpdfstring{Subscribe()}{Subscribe()}}
+{\footnotesize\ttfamily virtual bool I\+Topics\+::\+Subscribe (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{a\+\_\+\+Path,  }\item[{Payload\+Callback}]{a\+\_\+\+Callback }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Subscribe to the given topic specified by the provided path. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a\+\_\+\+Callback} & The topic to subscribe, \char`\"{}..\char`\"{} moves up to a parent self \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \hyperlink{class_topic_manager_a45df0bdd5a5d9ba4dfbb471726cf04c5}{Topic\+Manager}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/topics/I\+Topics.\+h\item 
+src/topics/I\+Topics.\+cpp\end{DoxyCompactItemize}
