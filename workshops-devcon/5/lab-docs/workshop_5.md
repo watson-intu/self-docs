@@ -42,17 +42,17 @@ Complete the following tasks:
 
 1. Before assembling your Raspberry Pi, charge your speaker by connecting it to your laptop using the USB to micro-USB cable. The indicator light will be red while the speaker is charging and blue when fully charged.
 
-	![Speaker charging.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/speaker_charging_in_laptop.png?raw=true)
+	![Speaker charging.](./speaker_charging_in_laptop.png?raw=true)
 
 2. After your speaker is charged, connect it to your Raspberry Pi using the 3.5mm audio cable.
 
-	![Speaker plugged into your Raspberry Pi.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/speaker_in_pi.png?raw=true)
+	![Speaker plugged into your Raspberry Pi.](./speaker_in_pi.png?raw=true)
 
 ### B. Microphone
 
 Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
-![Microphone](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/microphone.png?raw=true)
+![Microphone](./microphone.png?raw=true)
 
 ### C. Camera
 
@@ -66,7 +66,7 @@ Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
 5.	Refer to the image below for a properly assembled camera.
 
-	![Camera.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/camera4.png?raw=true)
+	![Camera.](./camera4.png?raw=true)
 
 ### D. LED
 
@@ -74,7 +74,7 @@ Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 	1.	Neopixel RGB LED
 	2.	Two female-female jumper wiresNeopixel_RGB_LED.jpg
 
-	![Neopixel RGB LED](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/neopixel_RGB_LED.jpg?raw=true)
+	![Neopixel RGB LED](./neopixel_RGB_LED.jpg?raw=true)
 
 2.	Connect Jumper Wire 1 to the GND pin. This is called the **cathode** pin
 
@@ -82,19 +82,19 @@ Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
 4.	Now position your Raspberry Pi such that the **power cable** is on the **bottom**. Connect the **Cathode end** to **pin #3** on the **top row**. Then connect the **Anode end ** to **pin #4** on the **bottom row**. Refer to the image below for a fully assembled Raspberry Pi.
 
-	![Assembled Raspberry Pi.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/anode_cathode.png?raw=true)
+	![Assembled Raspberry Pi.](./anode_cathode.png?raw=true)
 	
 ### E. Power
 
 To power up your Raspberry Pi, connect the power cable to your Raspberry Pi as shown in the image below. 
 
-![Power cable for Raspberry Pi.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/pi_charger.png?raw=true)
+![Power cable for Raspberry Pi.](./pi_charger.png?raw=true)
 
 ### F. Connecting the Raspberry Pi to an external monitor, keyboard and mouse
 
 Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in the image below.
 
-![Raspberry Pi and external connections.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/external_monitor_keyboard_to_pi.png?raw=true)
+![Raspberry Pi and external connections.](./external_monitor_keyboard_to_pi.png?raw=true)
 
 ## 2. Set up the Wi-Fi connection for your Raspberry Pi
 
@@ -102,7 +102,7 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 2. Connect your Raspberry Pi to a power source, and connect an external keyboard, mouse and monitor to your Raspberry Pi.
 
-3. You should see a window open on your monitor. Sometimes it might so happen that your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon ![wifi](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/wifi.png?raw=true) at the top of the window, select your network (at DevCon, it will be **ROBOT_PED1**), and enter your password (**panda$123** for ROBOT_PED1).
+3. You should see a window open on your monitor. Sometimes it might so happen that your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon ![wifi](./wifi.png?raw=true) at the top of the window, select your network (at DevCon, it will be **ROBOT_PED1**), and enter your password (**panda$123** for ROBOT_PED1).
 
 4.	Get the IP address of your Raspberry Pi.
 	1.	Click on the black **Terminal** icon on the top left toolbar.
@@ -420,6 +420,40 @@ You have now added a gesture for the LED light.  When you say, "Can you laugh?" 
 When Intu is asked "can you laugh" or "tell me a joke" and the Blackboard receives a [emote=show_laugh], how does Intu know that the LED gesture should be executed?
 
 It is from the configuration file `raspi.anims`, in `Intu/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
+
+## 7. Extra Credit: Teaching your TJBot to wave
+In this section we will explore how to make your TJBot go through and interaction like:
+```
+Human: "Wave to the crowd"
+TJBot: "I do not know how to Wave"
+Human: "Raise your right arm"
+TJBot: [you see physical action perfored]
+Human: "Lower your right arm"
+TJBot: [you see physical action perfored]
+Human: "That is how you wave"
+TJBot: "I now know how to wave"
+Human: "Wave to the crowd"
+TJBot: [you see BOTH physical action perfored]
+```
+To do this all we nee to do is add Alchemy into your registered services on the gateway and the update your body.json like you did above.
+
+The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create and instace of Alchemy. Once you have done that grab the key:
+    ![Getting the Alchemy API Key.](./FindingAlchemyOnBluemix.png?raw=true)
+
+The next step is to update your subscribed services on the [Intu Gateway](rg-gateway.mybluemix.net). Once you login use the left hand bar to navigate to MANAGE->Services like:
+    ![Finding the service managment page.](./GoingToManageServices.png?raw=true)
+
+The final step is to click "Add Service" and fill it in with:
+SERVICE NAME: AlchemyV1
+USER ID: Your_Alchemy_API_Key
+SERVICE ENDPOINT: http://gateway-a.watsonplatform.net/calls
+
+**LEAVE THE PASSWORD FIELD BLANK**
+
+It will look like this when you are done:
+    ![Filling in the Alchemy API Key.](./FillInAlchemy.png?raw=true)
+
+
 
 # Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)
  

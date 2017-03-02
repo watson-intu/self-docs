@@ -36,35 +36,35 @@ In this lab you will complete the following tasks:
 
 1. Before assembling your Raspberry Pi, charge your speaker by connecting it to your laptop using the USB to micro-USB cable. The indicator light will be red while the speaker is charging and blue when fully charged.
 
-![Speaker charging.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/speaker_charging_in_laptop.png?raw=true)
+![Speaker charging.](./speaker_charging_in_laptop.png?raw=true)
 
 2. After your speaker is charged, connect it to your Raspberry Pi using the 3.5mm audio cable.
 
-![Speaker plugged into your Raspberry Pi.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/speaker_in_pi.png?raw=true)
+![Speaker plugged into your Raspberry Pi.](./speaker_in_pi.png?raw=true)
 
 ### C. Microphone
 
 Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
-![Microphone](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/microphone.png?raw=true)
+![Microphone](./microphone.png?raw=true)
 
 ### D. Connecting the Servo Motor
 
-As part of this lab we will be using the Tower Pro SG90 micoservo. You can see the pin out of this servo motor ![here](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5.5/lab-docs/SG90Servo.pdf). You will need to connect the servo motor to the Raspi Board as below:
+As part of this lab we will be using the Tower Pro SG90 micoservo. You can see the pin out of this servo motor ![here](./SG90Servo.pdf). You will need to connect the servo motor to the Raspi Board as below:
 
-![Board Layout for Servo](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5.5/lab-docs/sevo_pin_layout.png?raw=true)
+![Board Layout for Servo](./sevo_pin_layout.png?raw=true)
 
 ### E. Power
 
 To power up your Raspberry Pi, connect the power cable to your Raspberry Pi as shown in the image below. 
 
-![Power cable for Raspberry Pi.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/pi_charger.png?raw=true)
+![Power cable for Raspberry Pi.](./pi_charger.png?raw=true)
 
 ### F. Connecting the Raspberry Pi to an external monitor, keyboard and mouse
 
 Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in the image below.
 
-![Raspberry Pi and external connections.](https://github.ibm.com/watson-labs-austin/self-sdk/blob/develop/docs/workshops-devcon/5/lab-docs/external_monitor_keyboard_to_pi.png?raw=true)
+![Raspberry Pi and external connections.](./external_monitor_keyboard_to_pi.png?raw=true)
 
 ## 2. Set up the Wi-Fi connection for your Raspberry Pi
 1. Insert your SD card into your Raspberry Pi if you have not done so already.
