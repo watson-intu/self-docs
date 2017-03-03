@@ -248,21 +248,40 @@ TJBot: [you see BOTH physical action perfored]
 ```
 To do this all we nee to do is add Alchemy into your registered services on the gateway and the update your body.json like you did above.
 
-The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create and instace of Alchemy. Once you have done that grab the key:
+The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create and instace of Alchemy. Once you have done that grab the "apikey":
     ![Getting the Alchemy API Key.](./FindingAlchemyOnBluemix.png?raw=true)
 
 The next step is to update your subscribed services on the [Intu Gateway](rg-gateway.mybluemix.net). Once you login use the left hand bar to navigate to MANAGE->Services like:
     ![Finding the service managment page.](./GoingToManageServices.png?raw=true)
 
 The final step is to click "Add Service" and fill it in with:
+```
 SERVICE NAME: AlchemyV1
 USER ID: Your_Alchemy_API_Key
 SERVICE ENDPOINT: http://gateway-a.watsonplatform.net/calls
-
+```
 **LEAVE THE PASSWORD FIELD BLANK**
 
 It will look like this when you are done:
     ![Filling in the Alchemy API Key.](./FillInAlchemy.png?raw=true)
+    
+You will want to also follow the steps in Section 5 [Updating the body.json configuration](#updating-the-body.json-configuration) to make sure your new Alchemy credentials are accessable by Intu on the Raspi. (Specifically the steps about updating the "m_EmbodimentCreds")
+
+Go ahead and rebuild and rerun self as you have been doing. And try going through the below interactions with your TJBot. If all goes well you can now teach it more complex interactions. Congratulations on completing this workshop!
+
+```
+Human: "Wave to the crowd"
+TJBot: "I do not know how to Wave"
+Human: "Raise your right arm"
+TJBot: [you see physical action perfored]
+Human: "Lower your right arm"
+TJBot: [you see physical action perfored]
+Human: "That is how you wave"
+TJBot: "I now know how to wave"
+Human: "Wave to the crowd"
+TJBot: [you see BOTH physical action perfored]
+```
+    
 
 # Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)
 
