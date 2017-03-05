@@ -248,56 +248,39 @@ In the above example, the `event` can be `add_gesture_proxy`, `remove_gesture_pr
 ```
 In the above example, the `event` can be (analogous to `gesture-manager`) `add-sensor-proxy` and `remove-sensor-proxy`, and both would in turn require the `sensorId`, `name`, `data_type`, `binary_type`, and `override`.
 
-**graph-skills**
+**models**
 
 *Subscribing*
 ```
 {
-	"targets": ["graph-skills"],
+	"targets": ["models"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
 *Unsubscribing*
 ```
 {
-	"targets": ["graph-skills"],
+	"targets": ["models"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
-*Publishing*
+*Traverse the models*
 
 ```
 {
-	"targets": ["graph-skills"],
+	"targets": ["models"],
 	"msg": "publish_at",
-	"data": "{\"event\":\"traverse\",\"payload\":\"{
-  "Type_" : "OutTraverser",
-  "m_spCondition" : {
-     "Type_" : "EqualityCondition",
-     "m_EqualOp" : "EQ",
-     "m_Path" : "_label",
-     "m_Value" : "reports_to"
-  },
-  "m_spNext" : {
-     "Type_" : "FilterTraverser",
-     "m_spCondition" : {
-        "Type_" : "EqualityCondition",
-        "m_EqualOp" : "EQ",
-        "m_Path" : "name",
-        "m_Value" : "Richard"
-     }
-  }
-}\"}",
+	"data": "{\r\n\t\"event\": \"traverse\",\r\n\t\"model\": \"world\",\r\n\t\"traverser\": {\r\n\t\t\"Type_\": \"OutTraverser\",\r\n\t\t\"m_spCondition\": {\r\n\t\t\t\"Type_\": \"EqualityCondition\",\r\n\t\t\t\"m_EqualOp\": \"EQ\",\r\n\t\t\t\"m_Path\": \"_label\",\r\n\t\t\t\"m_Value\": \"reports_to\"\r\n\t\t},\r\n\t\t\"m_spNext\": {\r\n\t\t\t\"Type_\": \"FilterTraverser\",\r\n\t\t\t\"m_spCondition\": {\r\n\t\t\t\t\"Type_\": \"EqualityCondition\",\r\n\t\t\t\t\"m_EqualOp\": \"EQ\",\r\n\t\t\t\t\"m_Path\": \"name\",\r\n\t\t\t\t\"m_Value\": \"Richard\"\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}",
 	"binary": false,
 	"persisted": false
 }
 
 ```
-In this example above the `event` could be `traverse`, `create_vertex`, `delete_vertex`, `create_edge`, etc. for example. The payloads would contain serialized information that the system can then use to create, update, or delete vertices or edges in the graph. You could also supply serialized traversal conditions that the graph can then use to traverse itself looking for all vertices that satisfy the traverser's conditions.
+In this example above the `event` could be `traverse`, `gremlin`, `create_vertex`, `drop_vertex`, `create_edge`, etc. for example. The payloads would contain serialized information that the system can then use to create, update, or delete vertices or edges in the graph. You could also supply serialized traversal conditions that the graph can then use to traverse itself looking for all vertices that satisfy the traverser's conditions.
 
 It is possible to register your own _types_ that are not part of the schema. _Intu_ supports generic `Thing` objects that you can register against the system.
 
