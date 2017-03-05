@@ -272,11 +272,11 @@ In the above example, the `event` can be (analogous to `gesture-manager`) `add-s
 
 ```
 {
-	"targets": ["models"],
-	"msg": "publish_at",
-	"data": "{\r\n\t\"event\": \"traverse\",\r\n\t\"model\": \"world\",\r\n\t\"traverser\": {\r\n\t\t\"Type_\": \"OutTraverser\",\r\n\t\t\"m_spCondition\": {\r\n\t\t\t\"Type_\": \"EqualityCondition\",\r\n\t\t\t\"m_EqualOp\": \"EQ\",\r\n\t\t\t\"m_Path\": \"_label\",\r\n\t\t\t\"m_Value\": \"reports_to\"\r\n\t\t},\r\n\t\t\"m_spNext\": {\r\n\t\t\t\"Type_\": \"FilterTraverser\",\r\n\t\t\t\"m_spCondition\": {\r\n\t\t\t\t\"Type_\": \"EqualityCondition\",\r\n\t\t\t\t\"m_EqualOp\": \"EQ\",\r\n\t\t\t\t\"m_Path\": \"name\",\r\n\t\t\t\t\"m_Value\": \"Richard\"\r\n\t\t\t}\r\n\t\t}\r\n\t}\r\n}",
-	"binary": false,
-	"persisted": false
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"traverse\",\r\n\t\"model\": \"others\",\r\n\t\"traverser\": {\r\n\t\t\"Type_\": \"FilterTraverser\",\r\n\t\t\"m_spCondition\": {\r\n\t\t\t\"Type_\": \"EqualityCondition\",\r\n\t\t\t\"m_EqualOp\": \"EQ\",\r\n\t\t\t\"m_Path\": \"_label\",\r\n\t\t\t\"m_Value\": \"person\"\r\n\t\t}\r\n\t}\r\n}",
+    "binary": false,
+    "persisted": false
 }
 
 ```
