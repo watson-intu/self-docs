@@ -286,7 +286,7 @@ In the above example, the `event` can be (analogous to `gesture-manager`) `add-s
 {
     "targets": ["models"],
     "msg": "publish_at",
-    "data": "{\r\n\t\"event\": \"gremlin\",\r\n\t\"graphId\": \"knowledge\",\r\n\t\"query\" : \"graph.traversal().V().has(\\\"_label\\\",bind0);\",\r\n\t\"bindings\" : \r\n\t{\r\n\t\t\"bind0\" : \"skill\"\r\n\t}\r\n}",
+    "data": "{\r\n\t\"event\": \"gremlin\",\r\n\t\"graph_id\": \"knowledge\",\r\n\t\"query\" : \"graph.traversal().V().has(\\\"_label\\\",bind0);\",\r\n\t\"bindings\" : \r\n\t{\r\n\t\t\"bind0\" : \"skill\"\r\n\t}\r\n}",
     "binary": false,
     "persisted": false
 }
@@ -313,7 +313,16 @@ In the above example, the `event` can be (analogous to `gesture-manager`) `add-s
     "persisted": false
 }
 ```
-
+*Create Edge*
+```
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"create_edge\",\r\n\t\"model\": \"world\",\r\n\t\"source_id\" : \"696324136\",\r\n\t\"destination_id\" : \"22382782\",\r\n\t\"label\" : \"aspect\",\r\n\t\"properties\" : { \"weight\" : 0.66 }\r\n}",
+    "binary": false,
+    "persisted": false
+}
+```
 
 In this example above the `event` could be `traverse`, `gremlin`, `create_vertex`, `drop_vertex`, `create_edge`, etc. for example. The payloads would contain serialized information that the system can then use to create, update, or delete vertices or edges in the graph. You could also supply serialized traversal conditions that the graph can then use to traverse itself looking for all vertices that satisfy the traverser's conditions.
 
