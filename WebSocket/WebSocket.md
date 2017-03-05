@@ -280,6 +280,19 @@ In the above example, the `event` can be (analogous to `gesture-manager`) `add-s
 }
 
 ```
+*Execute a Gremlin Query*
+
+...
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"gremlin\",\r\n\t\"graphId\": \"knowledge\",\r\n\t\"query\" : \"graph.traversal().V().has(\\\"_label\\\",bind0);\",\r\n\t\"bindings\" : \r\n\t{\r\n\t\t\"bind0\" : \"skill\"\r\n\t}\r\n}",
+    "binary": false,
+    "persisted": false
+}
+...
+
+
 In this example above the `event` could be `traverse`, `gremlin`, `create_vertex`, `drop_vertex`, `create_edge`, etc. for example. The payloads would contain serialized information that the system can then use to create, update, or delete vertices or edges in the graph. You could also supply serialized traversal conditions that the graph can then use to traverse itself looking for all vertices that satisfy the traverser's conditions.
 
 It is possible to register your own _types_ that are not part of the schema. _Intu_ supports generic `Thing` objects that you can register against the system.
