@@ -33,7 +33,7 @@ the various topics looks like this:
 	"targets": [""],
 	"msg": "query",
 	"request": "1",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -92,7 +92,7 @@ The `event_mask` in the examples below is a combination of bit flags so that you
 {
 	"targets": ["agent-society"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -102,7 +102,7 @@ The `event_mask` in the examples below is a combination of bit flags so that you
 {
 	"targets": ["agent-society"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -127,7 +127,7 @@ In the above example, the `event` can be `add_agent_proxy` or `remove_agent_prox
 {
 	"targets": ["blackboard"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -136,7 +136,7 @@ In the above example, the `event` can be `add_agent_proxy` or `remove_agent_prox
 {
 	"targets": ["blackboard"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 *Publishing*
@@ -159,7 +159,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["blackboard-stream"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -169,7 +169,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["blackboard-stream"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -191,7 +191,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["gesture-manager"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -200,7 +200,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["gesture-manager"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 *Publishing*
@@ -223,7 +223,7 @@ In the above example, the `event` can be `add_gesture_proxy`, `remove_gesture_pr
 {
 	"targets": ["sensor-manager"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -232,7 +232,7 @@ In the above example, the `event` can be `add_gesture_proxy`, `remove_gesture_pr
 {
 	"targets": ["sensor-manager"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 *Publishing*
