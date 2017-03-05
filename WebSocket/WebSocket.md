@@ -292,6 +292,28 @@ In the above example, the `event` can be (analogous to `gesture-manager`) `add-s
 }
 ```
 
+*Create a Vertex*
+```
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"create_vertex\",\r\n\t\"model\": \"world\",\r\n\t\"label\" : \"test\",\r\n\t\"properties\" : \r\n\t{\r\n\t\t\"name\" : \"Test Vertex\",\r\n\t\t\"hashId\" : \"X\"\r\n\t}\r\n}",
+    "binary": false,
+    "persisted": false
+}
+```
+
+*Drop a Vertex*
+```
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"drop_vertex\",\r\n\t\"model\": \"world\",\r\n\t\"vertex_id\" : \"696324136\"\r\n}",
+    "binary": false,
+    "persisted": false
+}
+```
+
 
 In this example above the `event` could be `traverse`, `gremlin`, `create_vertex`, `drop_vertex`, `create_edge`, etc. for example. The payloads would contain serialized information that the system can then use to create, update, or delete vertices or edges in the graph. You could also supply serialized traversal conditions that the graph can then use to traverse itself looking for all vertices that satisfy the traverser's conditions.
 
