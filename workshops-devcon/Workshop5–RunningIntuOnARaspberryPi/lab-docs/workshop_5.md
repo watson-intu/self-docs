@@ -23,7 +23,7 @@ In this workshop, you will assemble your own Raspberry Pi, which is a credit car
 
 **Notes:** 
 
-1. If you **do not** have an imaged card from Devcon, please go to the **Appendix** after assembling your Raspberry Pi.	
+1. If you **do not** have an imaged card from Devcon, please go to the **Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)**
 
 2. In this workshop, commands are issued from **Terminal** on **Mac** or **PuTTY** on **Windows**. For **Windows** users, if you do not have **PuTTY** installed, you can download it using this [link](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). **Windows** users will also require a file management tool to copy files over a network between their local machine and the Raspberry Pi. You can use a stand-alone tool like **Filezilla**, or you may prefer scp via Putty. **Filezilla** can be downloaded using this [link](https://filezilla-project.org/).
 
@@ -169,8 +169,8 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 
 	You should see a list of classes compiled and "All Done" at the end.
 
-## 3. Download the Self SDK onto your computer and add in the code for the LED gesture
-**Note:** The download of the Self SDK should be performed on both the Raspberry Pi and the laptop. We will use the laptop as the development machine and transfer the updated files to the Raspberry Pi.
+## 4. Download the Self SDK onto your computer and add in the code for the LED gesture
+**Note:** Download the Self SDK on both the Raspberry Pi and the laptop. We will use the laptop as the development machine and transfer the updated files to the Raspberry Pi.
 
 ### A. Download the Self SDK
 
@@ -343,7 +343,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	
 9. Save your changes (**Ctrl + S**). 
 
-## 4. Updating your Raspberry Pi with the LED gesture
+## 5. Updating your Raspberry Pi with the LED gesture
 
 1.	Copy the **workshop_five** directory from your local machine over to your Raspberry Pi. 
    
@@ -388,7 +388,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	
 	4. Run: `scripts/build_raspi.sh`
 
-## 5. Updating the `body.json` configuration
+## 6. Updating the `body.json` configuration
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
 
@@ -430,7 +430,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 7. Click **Yes**. This action saves your changes to your Raspberry Pi.
 
-**NOTE: ** Make sure you have the correct variables setup in `m_Libs`, else Intu wouldn't run.
+**NOTE:** Make sure you have the correct variables setup in `m_Libs`, else Intu wouldn't run.
 
 ### C. Building the Self SDK on your Raspberry Pi
 
@@ -443,7 +443,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	
 	**Note:** If you have any build errors, run: `scripts/clean.sh` and then rerun: `scripts/build_raspi.sh`
 
-## 6. Run Intu on your Raspberry Pi
+## 7. Run Intu on your Raspberry Pi
 
 Run Intu on your Raspberry Pi by completing the following steps in your terminal window. 
 
