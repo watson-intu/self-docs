@@ -123,13 +123,54 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 	1. Open a new PuTTY window and type in the Raspberry Pi's IP address. 
 	2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
 
-7. At this point, you can disconnect the external monitor, mouse and keyboard from the Raspberry Pi. **Do not disconnect the Raspberry Pi from its power source.**
 
-8. Check that your laptop is still on the same network as the Raspberry Pi, and reboot the Raspberry Pi by running `sudo reboot` in your SSH window (Terminal for Mac and PuTTY for Windows). Try SSHing back into the Pi - when you can, the Pi is back up and running.
+## 3. Setting up your Raspberry Pi for Builds
 
-**Note:** Unless explicitly stated, all of the following steps are to be run on your local computer.
+**Note:** If any step below fails or errors, run: `sudo apt-get update`, then repeat the step.
+
+1.	Open up a new browser window on your Raspberry Pi and download [**Anaconda 4.2.0 For Linux Python 2.7 version**](https://www.continuum.io/downloads).
+
+	**Make sure you download the correct version.** You need the **Linux** version regardless of the operating system that you have. Windows users may have to right click and select **Save as** to save the download locally.
+
+2.	Install Anaconda on your Raspberry Pi and set up the qiBuild.
+	
+	1. In a new terminal on your Raspberry Pi, run:  `bash Anaconda2-4.2.0-Linux-x86.sh`
+	
+	2. Follow the steps on the screen to install Anaconda. When you get to the license, keep hitting **Enter** to jump to the bottom. Type **yes** to approve the license.
+	
+	3. Hit **Enter** to install Anaconda in the default location. **Note**: It may take a while for the progress to update, and if you get the following error, please ignore it. Proceed with the next step.
+
+		```
+Anaconda2-4.2.0-Linux-x86.sh: line 484: /home/pi/anaconda2/pkgs/python-3.5.2-0/bin/python: cannot execute binary file: Exec format error
+ERROR:
+cannot execute native linux-32 binary, output from 'uname -a' is:
+Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Linux
+
+		```
+
+	5. Once Anaconda has successfully installed, run: `sudo apt-get install python-pip cmake` 
+	
+		**Note:** If this fails, run `sudo apt-get update` and then rerun: `sudo apt-get install python-pip cmake`
+
+	6.	Run: `sudo pip install qibuild`
+ 
+
+3.	Install the wiringPi library on the Raspberry Pi.
+	
+	1. In a new Terminal/PuTTY window, SSH into your Raspberry Pi: `ssh pi@{ip_address}`. You will be prompted for the username (**pi**) and/or password (**raspberry**) for the Raspberry Pi.
+	
+	2.	Navigate to your Raspberry Pi's **home directory** by running: `cd /home/pi` 
+	
+	3.	Run: `git clone git://git.drogon.net/wiringPi`
+	
+	4.	Now navigate into the wiringPi directory by running: `cd wiringPi/`
+	
+	5.	Run: `./build`
+
+	You should see a list of classes compiled and "All Done" at the end.
 
 ## 3. Download the Self SDK onto your computer and add in the code for the LED gesture
+**Note:** The download of the Self SDK should be performed on both the Raspberry Pi and the laptop. We will use the laptop as the development machine and transfer the updated files to the Raspberry Pi.
 
 ### A. Download the Self SDK
 
@@ -308,7 +349,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
    
    **For Mac users:** 
    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of workshop_five) by running: `cd intu/wlabs_self-sdk-master/examples`
-   2. Run: `scp -r workshop_five pi@{pi's_ip_address}:~/self/self-sdk-master/examples`
+   2. Run: `scp -r workshop_five pi@{pi's_ip_address}:~/intu/self-sdk-master/examples`
 
 	**For Windows users:** 
 	
@@ -317,7 +358,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 		2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
 		3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
 		4. In the **Port** field, specify **22**.  	
-	2. Navigate to **self/self-sdk-master/examples/** on the **Remote site** side of the screen.
+	2. Navigate to **intu/self-sdk-master/examples/** on the **Remote site** side of the screen.
 	
 	3. Navigate to the **intu/wlabs_self-sdk-master/examples/** directory on the **Local site** side of the screen.
 	
@@ -326,7 +367,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 2.	SSH to the Raspberry Pi in a new SSH window (Terminal for Mac or PuTTY for Windows):
 
 	1. Run:`ssh pi@{pi's_ip_address}`	
-  	2. Run: `cd /home/pi/self/self-sdk-master/examples`
+  	2. Run: `cd /home/pi/intu/self-sdk-master/examples`
 
 3.	Edit the `CMakeLists.txt` file in the examples directory you're currently in.
 
@@ -336,6 +377,16 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
    		1. Use **Ctrl + X** to `Exit`.
    		2. When prompted with: `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ? `, type **Y** for **Yes**. 
    		3. When prompted with: `File Name to Write: CMakeLists.txt`, hit **Return** or **Enter** to finalise your changes.
+   		
+4. Build Self on your Raspberry Pi with the following steps:
+
+	1.	Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
+	
+	2.	Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
+	
+	3. Run: `scripts/clean.sh` 
+	
+	4. Run: `scripts/build_raspi.sh`
 
 ## 5. Updating the `body.json` configuration
 
@@ -355,7 +406,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 **For Mac users:**
 
-1. Open your `body.json` file which is in path /home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json using your favorite text editor. 
+1. Open your `body.json` file which is in path /home/pi/intu/self-sdk-master/bin/raspi/etc/profile/body.json using your favorite text editor. 
 
 2. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "workshop_five_plugin"]`
 
@@ -378,6 +429,8 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 6. Exit the window you were using to edit the `body.json` file, upon which you will be prompted to upload the file back onto the server.
 
 7. Click **Yes**. This action saves your changes to your Raspberry Pi.
+
+**NOTE: ** Make sure you have the correct variables setup in `m_Libs`, else Intu wouldn't run.
 
 ### C. Building the Self SDK on your Raspberry Pi
 
@@ -416,7 +469,7 @@ Run Intu on your Raspberry Pi by completing the following steps in your terminal
 	./self_instance 
 ```
 
-You have now added a gesture for the LED light.  When you say, "Can you laugh?" or "Tell me a joke" to the robot, the LED light should blink, i.e. you have added the blinking of the LED to Intu as a gesture. 
+When Intu starts, it will give a notification like "Ah, I feel so much better". You have now added a gesture for the LED light.  When you say, "Can you laugh?" or "Tell me a joke" to the robot, the LED light should blink, i.e. you have added the blinking of the LED to Intu as a gesture. 
 
 
 ### What did we learn?
