@@ -130,7 +130,7 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 1.	Open up a new browser window on your Raspberry Pi and download [**Anaconda 4.2.0 For Linux Python 2.7 version**](https://www.continuum.io/downloads).
 
-	**Make sure you download the correct version.** You need the **Linux** version regardless of the operating system that you have. Windows users may have to right click and select **Save as** to save the download locally.
+	**Make sure you download the correct version.** You need the **Linux** version regardless of the operating system that you have. 
 
 2.	Install Anaconda on your Raspberry Pi and set up the qiBuild.
 	
