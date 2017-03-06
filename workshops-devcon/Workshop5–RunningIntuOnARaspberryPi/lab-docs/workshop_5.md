@@ -399,18 +399,8 @@ Run Intu on your Raspberry Pi by completing the following steps in your terminal
 
 3.	Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
 
-4.	Run: `export LD_LIBRARY_PATH=./`
+4.	Run: ./run_self.sh
 
-5.	Run: `export WIRINGPI_GPIOMEM=1`
-
-6.	Run: `./self_instance `
-
-**Note:** Each time you want to run Intu, you must follow steps 4-6 each time:
-
-```
-	export LD_LIBRARY_PATH=./
-	export WIRINGPI_GPIOMEM=1
-	./self_instance 
 ```
 
 You have now added a gesture for the LED light.  When you say, "Can you laugh?" or "Tell me a joke" to the robot, the LED light should blink, i.e. you have added the blinking of the LED to Intu as a gesture. 
