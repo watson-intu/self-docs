@@ -72,7 +72,7 @@ Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
 1.	Obtain the following parts:
 	1.	Neopixel RGB LED
-	2.	Two female-female jumper wiresNeopixel_RGB_LED.jpg
+	2.	Two female-female jumper wires
 
 	![Neopixel RGB LED](./neopixel_RGB_LED.jpg?raw=true)
 
@@ -104,12 +104,15 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 3. You should see a window open on your monitor. Sometimes it might so happen that your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon ![wifi](./wifi.png?raw=true) at the top of the window, select your network (at DevCon, it will be **ROBOT_PED1**), and enter your password (**panda$123** for ROBOT_PED1).
 
-4.	Get the IP address of your Raspberry Pi.
+4. Ensure ssh is enabled on your Raspberry Pi.
+	1.	    sudo raspi-config
+	2.	    Advanced Options -> SSH -> Enable
+5.	Get the IP address of your Raspberry Pi.
 	1.	Click on the black **Terminal** icon on the top left toolbar.
 	2.	Type in `ifconfig` and hit Enter.
 	3. Look for the **wlan0** section. The **inet addr** gives you the IP address of your Raspberry Pi (e.g. 10.0.1.2). 
 
-5.	**Important:** Ensure that your laptop is on the **same** network as your Raspberry Pi from this point onwards.
+6.	**Important:** Ensure that your laptop is on the **same** network as your Raspberry Pi from this point onwards.
 	
 	**For Mac users:**
 	1. Open a new Terminal window, and connect to the Raspberry Pi using: `ssh pi@{pi's_IP_address}` (e.g. ssh pi@10.0.1.2)
@@ -120,9 +123,9 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 	1. Open a new PuTTY window and type in the Raspberry Pi's IP address. 
 	2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
 
-6. At this point, you can disconnect the external monitor, mouse and keyboard from the Raspberry Pi. **Do not disconnect the Raspberry Pi from its power source.**
+7. At this point, you can disconnect the external monitor, mouse and keyboard from the Raspberry Pi. **Do not disconnect the Raspberry Pi from its power source.**
 
-7. Check that your laptop is still on the same network as the Raspberry Pi, and reboot the Raspberry Pi by running `sudo reboot` in your SSH window (Terminal for Mac and PuTTY for Windows). Try SSHing back into the Pi - when you can, the Pi is back up and running.
+8. Check that your laptop is still on the same network as the Raspberry Pi, and reboot the Raspberry Pi by running `sudo reboot` in your SSH window (Terminal for Mac and PuTTY for Windows). Try SSHing back into the Pi - when you can, the Pi is back up and running.
 
 **Note:** Unless explicitly stated, all of the following steps are to be run on your local computer.
 
