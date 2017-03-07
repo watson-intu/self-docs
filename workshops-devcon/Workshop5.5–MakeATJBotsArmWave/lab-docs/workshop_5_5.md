@@ -97,9 +97,9 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 1. [Download the Self SDK](https://hub.jazz.net/project/wlabs/self-sdk). Click on the **download icon** next to the default **master** branch selected.
 
-2. Create a new directory named **intu** in your **home** directory.
+2. Create a new directory named **self** in your **home** directory.
 
-3. Unzip the **wlabs_self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **wlabs_self-sdk-master** folder. This may take some time.
+3. Unzip the **wlabs_self-sdk-master.zip** file into **self**, making sure that you retain the folder structure, i.e. your self directory should now contain the unzipped **wlabs_self-sdk-master** folder. This may take some time.
 
 ### B. Creating  the Waving Arm Gesture with INTU
 1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Final. 
@@ -120,7 +120,7 @@ add_subdirectory(move_arm_joint)
 1.	Copy the entire **examples** directory from your local machine over to your Raspberry Pi. (This includes the move_arm_joint directory)
 
     **For Mac users:** 
-    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd intu/wlabs_self-sdk-master/`
+    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd self/wlabs_self-sdk-master/`
     2. Run: `scp -r examples pi@{IPaddress}:~/self/self-sdk-master/`
 
     **For Windows users:** 
@@ -131,7 +131,7 @@ add_subdirectory(move_arm_joint)
     4. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
     5. In the **Port** field, specify **22**.  	
     6. Navigate to **self/self-sdk-master/** on the **Remote site** side of the screen.
-    7.Navigate to the **intu/wlabs_self-sdk-master/** directory on the **Local site** side of the screen.
+    7.Navigate to the **self/wlabs_self-sdk-master/** directory on the **Local site** side of the screen.
     8.Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 
 ## 5. Updating the `body.json` configuration
@@ -228,7 +228,7 @@ You have now added a gesture for moving a joint with INTU.  When you say, "Raise
 ### Wait, wait, wait, but how does it work?
 When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First a **Natural Language Classifier** instance will decide that the r_hand_raise gesture is being called by some spoken input. Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
 
-It is from the configuration file `raspi.anims`, in `Intu/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
+It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
 
 ## 7. Extra Credit: Teaching your TJBot to wave
