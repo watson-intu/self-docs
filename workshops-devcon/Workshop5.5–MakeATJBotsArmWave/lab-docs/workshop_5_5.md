@@ -160,7 +160,11 @@ add_subdirectory(move_arm_joint)
 
     2. Open your `body.json` file using your favorite text editor. 
 
-    3. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "move_joint_plugin"]`
+    3. Locate the `m_Libs` variable, and change it to read: 
+    
+    	`"m_Libs":["platform_raspi", "move_joint_plugin"]` 
+    
+    	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
     4. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 
@@ -208,19 +212,9 @@ Run Intu on your Raspberry Pi by completing the following steps in your SSH wind
 
 3.	Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
 
-4.	Run: `export LD_LIBRARY_PATH=./`
+4.	Run: `./run_self `
 
-5.	Run: `export WIRINGPI_GPIOMEM=1`
-
-6.	Run: `./self_instance `
-
-**Note:** Each time you want to run Intu, you must follow steps 4-6 each time:
-
-```
-export LD_LIBRARY_PATH=./
-export WIRINGPI_GPIOMEM=1
-./self_instance 
-```
+**Note:** Each time you want to run Intu, you must cd to `/home/pi/self/self-sdk-master/bin/raspi`
 
 You have now added a gesture for moving a joint with INTU.  When you say, "Raise your right arm?" or "Lower your right arm" to the robot, the TJBot should move it arm. 
 
