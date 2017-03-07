@@ -76,14 +76,14 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 7.	Look for the **wlan0** section. The **inet addr** gives you the IP address of your Raspberry Pi (e.g. 10.0.1.2). 
 8.	**Important:** Ensure that your laptop is on the **same** network as your Raspberry Pi from this point onwards.
 
-**For Mac users:**
-1. Open a new Terminal window, and connect to the Raspberry Pi using: `ssh pi@{pi's_IP_address}` (e.g. ssh pi@10.0.1.2)
-2. You will be prompted for the Raspberry Pi's password. The default password is **raspberry**.
-
-**For Windows users:** 
-
-1. Open a new PuTTY window and type in the Raspberry Pi's IP address. 
-2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
+	**For Mac users:**
+    1. Open a new Terminal window, and connect to the Raspberry Pi using: `ssh pi@{pi's_IP_address}` (e.g. ssh pi@10.0.1.2)
+    2. You will be prompted for the Raspberry Pi's password. The default password is **raspberry**.
+    
+    **For Windows users:** 
+    
+    1. Open a new PuTTY window and type in the Raspberry Pi's IP address. 
+    2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
 
 6. At this point, you can disconnect the external monitor, mouse and keyboard from the Raspberry Pi. **Do not disconnect the Raspberry Pi from its power source.**
 
@@ -97,9 +97,9 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 1. [Download the Self SDK](https://hub.jazz.net/project/wlabs/self-sdk). Click on the **download icon** next to the default **master** branch selected.
 
-2. Create a new directory named **intu** in your **home** directory.
+2. Create a new directory named **self** in your **home** directory.
 
-3. Unzip the **wlabs_self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **wlabs_self-sdk-master** folder. This may take some time.
+3. Unzip the **wlabs_self-sdk-master.zip** file into **self**, making sure that you retain the folder structure, i.e. your self directory should now contain the unzipped **wlabs_self-sdk-master** folder. This may take some time.
 
 ### B. Creating  the Waving Arm Gesture with INTU
 1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Final. 
@@ -119,22 +119,20 @@ add_subdirectory(move_arm_joint)
 
 1.	Copy the entire **examples** directory from your local machine over to your Raspberry Pi. (This includes the move_arm_joint directory)
 
-**For Mac users:** 
-1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd intu/wlabs_self-sdk-master/`
-2. Run: `scp -r examples pi@{IPaddress}:~/self/self-sdk-master/`
+    **For Mac users:** 
+    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd self/wlabs_self-sdk-master/`
+    2. Run: `scp -r examples pi@{IPaddress}:~/self/self-sdk-master/`
 
-**For Windows users:** 
+    **For Windows users:** 
 
-1. Open Filezilla and connect to your Raspberry Pi. 
-1. In the **Host** field, specify your Raspberry Pi's IP address.
-2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
-3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
-4. In the **Port** field, specify **22**.  	
-2. Navigate to **self/self-sdk-master/** on the **Remote site** side of the screen.
-
-3. Navigate to the **intu/wlabs_self-sdk-master/** directory on the **Local site** side of the screen.
-
-4. Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
+    1. Open Filezilla and connect to your Raspberry Pi. 
+    2. In the **Host** field, specify your Raspberry Pi's IP address.
+    3. In the **Username** field, specify your Raspberry Pi's username (**pi**).
+    4. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
+    5. In the **Port** field, specify **22**.  	
+    6. Navigate to **self/self-sdk-master/** on the **Remote site** side of the screen.
+    7.Navigate to the **self/wlabs_self-sdk-master/** directory on the **Local site** side of the screen.
+    8.Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 
 ## 5. Updating the `body.json` configuration
 
@@ -151,40 +149,45 @@ add_subdirectory(move_arm_joint)
 4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favorite text editor.
 
 ### B. Configuring your `body.json` file
+1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above.
 
-**For Mac users:**
+    **For Mac users:**
 
-1. Copy the `body.json` from your Raspberry Pi to your local machine by running the following command in a new SSH window:
+    1. Copy the `body.json` from your Raspberry Pi to your local machine by running the following command in a new SSH window:
 `scp pi@[IPaddress]:/home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json ~/`
 
-Note that this copies the `body.json` file to your **home** directory.
+    Note that this copies the `body.json` file to your **home** directory.
 
-2. Open your `body.json` file using your favorite text editor. 
+    2. Open your `body.json` file using your favorite text editor. 
 
-3. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "move_joint_plugin"]`
+    3. Locate the `m_Libs` variable, and change it to read: 
+    
+    	`"m_Libs":["platform_raspi", "move_joint_plugin"]` 
+    
+    	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
-4. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
+    4. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 
-5. Save your changes and close the file.
+    5. Save your changes and close the file.
 
-6. Now copy your newly edited `body.json` from your local machine to the Raspberry Pi by running the following command from a **new** Terminal window: 
+    6. Now copy your newly edited `body.json` from your local machine to the Raspberry Pi by running the following command from a **new** Terminal window: 
 `scp ~/body.json pi@{IPaddress}:/home/pi/self/self-sdk-master/bin/raspi/etc/profile/`
 
-**For Windows users:**
+    **For Windows users:**
 
-1. Open Filezilla and connect to your Raspberry Pi.
+    1. Open Filezilla and connect to your Raspberry Pi.
 
-2. On the **Remote site** side of the Filezilla screen, navigate to **/home/pi/self/self-sdk-master/bin/raspi/etc/profile**.
+    2. On the **Remote site** side of the Filezilla screen, navigate to **/home/pi/self/self-sdk-master/bin/raspi/etc/profile**.
 
-3. Locate the `body.json` file in the profile directory, and right click and select **View/Edit**.
+    3. Locate the `body.json` file in the profile directory, and right click and select **View/Edit**.
 
-4. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "move_joint_plugin"]`
+    4. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "move_joint_plugin"]`
 
-5. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in the previous section.
+    5. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in the previous section.
 
-6. Exit the window you were using to edit the `body.json` file, upon which you will be prompted to upload the file back onto the server.
+    6. Exit the window you were using to edit the `body.json` file, upon which you will be prompted to upload the file back onto the server.
 
-7. Click **Yes**. This action saves your changes to your Raspberry Pi.
+    7. Click **Yes**. This action saves your changes to your Raspberry Pi.
 
 ### C. Building the Self SDK on your Raspberry Pi
 
@@ -209,19 +212,9 @@ Run Intu on your Raspberry Pi by completing the following steps in your SSH wind
 
 3.	Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
 
-4.	Run: `export LD_LIBRARY_PATH=./`
+4.	Run: `./run_self `
 
-5.	Run: `export WIRINGPI_GPIOMEM=1`
-
-6.	Run: `./self_instance `
-
-**Note:** Each time you want to run Intu, you must follow steps 4-6 each time:
-
-```
-export LD_LIBRARY_PATH=./
-export WIRINGPI_GPIOMEM=1
-./self_instance 
-```
+**Note:** Each time you want to run Intu, you must cd to `/home/pi/self/self-sdk-master/bin/raspi`
 
 You have now added a gesture for moving a joint with INTU.  When you say, "Raise your right arm?" or "Lower your right arm" to the robot, the TJBot should move it arm. 
 
@@ -229,7 +222,7 @@ You have now added a gesture for moving a joint with INTU.  When you say, "Raise
 ### Wait, wait, wait, but how does it work?
 When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First a **Natural Language Classifier** instance will decide that the r_hand_raise gesture is being called by some spoken input. Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
 
-It is from the configuration file `raspi.anims`, in `Intu/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
+It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
 
 ## 7. Extra Credit: Teaching your TJBot to wave
@@ -347,14 +340,14 @@ For **Windows** users, open **PuTTY**, type in the Raspberry Pi's IP address, an
 
 15.	**Important:** Ensure that your laptop is on the **same** network as your Raspberry Pi from this point onwards.
 
-**For Mac users:**
-1. Open a new Terminal window, and connect to the Raspberry Pi using: `ssh pi@{pi's_IP_address}` (e.g. ssh pi@10.0.1.2)
-2. You will be prompted for the Raspberry Pi's password. The default password is **raspberry**.
+    **For Mac users:**
+    1. Open a new Terminal window, and connect to the Raspberry Pi using: `ssh pi@{pi's_IP_address}` (e.g. ssh pi@10.0.1.2)
+    2. You will be prompted for the Raspberry Pi's password. The default password is **raspberry**.
 
-**For Windows users:** 
+    **For Windows users:** 
 
-1. Open a new PuTTY window and type in the Raspberry Pi's IP address. 
-2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
+    1. Open a new PuTTY window and type in the Raspberry Pi's IP address. 
+    2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
 
 16. At this point, you can disconnect the external monitor, mouse and keyboard from the Raspberry Pi. 
 
@@ -371,29 +364,29 @@ For **Windows** users, open **PuTTY**, type in the Raspberry Pi's IP address, an
 
 2.	Copy Anaconda from your laptop over to the Raspberry Pi. You will be prompted for the username (**pi**) and/or password (**raspberry**) for the Raspberry Pi.
 
-**For Mac users:**
+    **For Mac users:**
 
-1. Navigate to the directory where you downloaded Anaconda on your local machine. The file should be named: `Anaconda3-4.2.0-Linux-x86.sh`.
+    1. Navigate to the directory where you downloaded Anaconda on your local machine. The file should be named: `Anaconda3-4.2.0-Linux-x86.sh`.
 
-2. Run: `scp Anaconda2-4.2.0-Linux-x86.sh pi@{pi's_IP_address}:/home/pi` 
+    2. Run: `scp Anaconda2-4.2.0-Linux-x86.sh pi@{pi's_IP_address}:/home/pi` 
 
-**For Windows users:**
+    **For Windows users:**
 
-1. Open Filezilla and connect to your Raspberry Pi. 
-1. In the **Host** field, specify your Raspberry Pi's IP address.
-2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
-3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
-4. In the **Port** field, specify **22**. 
+    1. Open Filezilla and connect to your Raspberry Pi. 
+    2. In the **Host** field, specify your Raspberry Pi's IP address.
+    3. In the **Username** field, specify your Raspberry Pi's username (**pi**).
+    4. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
+    5. In the **Port** field, specify **22**. 
 
-2. In the **Local site** side of the screen, navigate to the `Anaconda2-4.2.0-Linux-x86.sh` file.
+    6. In the **Local site** side of the screen, navigate to the `Anaconda2-4.2.0-Linux-x86.sh` file.
 
-3.	In the **Remote site** side of the screen, navigate to the directory: **/home/pi**
+    7.	In the **Remote site** side of the screen, navigate to the directory: **/home/pi**
 
-4.	Click on the file `Anaconda2-4.2.0-Linux-x86.sh` on the **Local site** side of the screen and drag it to the **Remote site** side of the screen. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
+    8.	Click on the file `Anaconda2-4.2.0-Linux-x86.sh` on the **Local site** side of the screen and drag it to the **Remote site** side of the screen. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 
-3.	Install Anaconda on your Raspberry Pi and set up the qiBuild.
+    9.	Install Anaconda on your Raspberry Pi and set up the qiBuild.
 
-1. In a new Terminal/PuTTY window, SSH into your Raspberry Pi: `ssh pi@{ip_address}`. You will be prompted for the username (**pi**) and/or password (**raspberry**) for the Raspberry Pi.
+    10. In a new Terminal/PuTTY window, SSH into your Raspberry Pi: `ssh pi@{ip_address}`. You will be prompted for the username (**pi**) and/or password (**raspberry**) for the Raspberry Pi.
 
 2.	Run: `bash Anaconda2-4.2.0-Linux-x86.sh`
 
@@ -441,29 +434,29 @@ You should see a list of classes compiled and "All Done" at the end.
 
 2. Copy the zip file from your local machine across to the Raspberry Pi.
 
-**For Mac users:**
+    **For Mac users:**
 
-1. In a Terminal window, navigate to the directory where you downloaded the zip file, and copy it across to the newly created **self** directory on the Raspberry Pi using: `scp self-sdk-master.zip pi@{IPaddress}:/home/pi/self/`
+    1. In a Terminal window, navigate to the directory where you downloaded the zip file, and copy it across to the newly created **self** directory on the Raspberry Pi using: `scp self-sdk-master.zip pi@{IPaddress}:/home/pi/self/`
 
-**For Windows users:**
+    **For Windows users:**
 
-1. Open Filezilla and connect to your Raspberry Pi.
+    1. Open Filezilla and connect to your Raspberry Pi.
 
-1. In the **Host** field, specify your Raspberry Pi's IP address.
+    1. In the **Host** field, specify your Raspberry Pi's IP address.
 
-2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
+    2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
 
-3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
+    3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
 
-4. In the **Port** field, specify **22**. 
+    4. In the **Port** field, specify **22**. 
 
-2. In the **Local site** side of the screen, navigate to the `self-sdk-master.zip` file.
+    2. In the **Local site** side of the screen, navigate to the `self-sdk-master.zip` file.
 
-3.	In the **Remote site** side of the screen, navigate to the directory: **/home/pi/self**
+    3.	In the **Remote site** side of the screen, navigate to the directory: **/home/pi/self**
 
-4.	Click on the file `self-sdk-master.zip` on the **Local site** side of the screen and drag it to the **Remote site** side of the screen. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
+    4.	Click on the file `self-sdk-master.zip` on the **Local site** side of the screen and drag it to the **Remote site** side of the screen. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 
-3. Unzip the `self-sdk-master.zip` file into the **self** directory of your Raspberry Pi. 
+    3. Unzip the `self-sdk-master.zip` file into the **self** directory of your Raspberry Pi. 
 
 1.	Navigate to the **self** directory on your Raspberry Pi. You can open a new Terminal/PuTTY window as before, SSH into your Raspberry Pi, and run: `cd /home/pi/self`. If your prompt reads: `pi@raspberrypi:~/self $`, this confirms that you are in the **self** directory.
 
