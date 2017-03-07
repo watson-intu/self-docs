@@ -40,7 +40,14 @@ Complete the following tasks:
 13. Save the changes you made in the `Config.json` file.
   
 ## Running the Intu Avatar
-1. Confirm INTU is running on your machine.
+1. Confirm Intu is running on your machine. If Intu is **not running, run Intu Manager**.
+
+ 	1. Navigate to the directory where you installed the Intu Manager from Workshop 1 and run the application. (If you're using a **Mac**, right-click on the Intu Manager and select Open. If you're using **Windows**, double-click on the Intu Manager to run it.) 
+ 	2. If a security warning is displayed, accept the risk and open the file.
+ 	3. Make sure the **Windowed** checkbox is selected, accept the other default values, and click **Play!**. 
+ 	4. The Intu Manager page is displayed in your browser window. Click **Log In**. You are prompted to return to the Intu Manager. 
+ 	5. Select **Manage Intu**. A new Intu Tooling log in page is displayed. Click **Log in.**
+ 	6. Your Organization and Group should be preselected in the dropdown menu and Intu should now be running.
 
 2. Navigate back to the directory where you extracted the Intu Avatar, and open the `intu_avatar` application. If a security warning is displayed, continue to run the application.
 
