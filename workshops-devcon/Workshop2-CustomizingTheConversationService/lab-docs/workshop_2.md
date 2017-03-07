@@ -29,7 +29,7 @@ You must create your own instance of the Conversation service in Bluemix, config
 
 ### B. Importing the example "Self-Dialog" workspace into the Conversation service
 
-To complete this task, you must download the **Intu Starter Kit**, which contains a complete Conversation service workspace **Self-Dialog** that you need for this workshop.
+To complete this task, you must download the **Intu Starter Kit**, which contains a complete Conversation service workspace **Intu-Dialog** that you need for this workshop.
 
 **Important:** Should you wish to use your own **custom** Conversation workspace, please skip down and follow the instructions in **Challenge: Using your own custom Conversation workspace with Intu** below.
 
@@ -45,7 +45,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
  
 5. **Do not create a new workspace.** Click the **Import** icon next to the green **Create +** button.
 
-6. Click **Choose a file**, navigate to the directory where you extracted the Intu Starter Kit in step 2, select the `intu-workspace-full.json` file, and click **Import**. Keep the default settings so that you import everything. The workspace titled **Self-Dialog** is imported and is displayed on the Workspaces page.
+6. Click **Choose a file**, navigate to the directory where you extracted the Intu Starter Kit in step 2, select the `intu-workspace-full.json` file, and click **Import**. Keep the default settings so that you import everything. The workspace titled **Intu-Dialog** is imported and is displayed on the Workspaces page.
 
 
 ## 2. Customizing the greeting
@@ -56,9 +56,9 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 2. Click **Dialog** in the navigation bar at the top.
 
-3. Expand this branch of the dialog tree by clicking through the following dialog nodes: **#dialog** -> **@greeting** -> **@greeting:hello**. You may need to scroll down as you're clicking through. Note: Nodes may have the name "untitled node" as you are clicking on them, the node name is an optional field.
+3. Expand this branch of the dialog tree by clicking through the following dialog nodes: **#dialog** -> **@greeting** -> **@greeting:hello**. You may need to scroll down as you're clicking through. Note: Nodes may have the name "Untitled Node" as you are clicking on them. The node name is an optional field.
 
-4. After clicking on the **greeting:hello** node there are currently four responses for when a user says "hello" are displayed. You can edit, remove, and add to these. For now, on a new line, after "why hello there[emote=wave_anim]" add "Hello Workshop Two participant!" directly below it.
+4. After clicking on the **greeting:hello** node there are currently four responses for when a user says "hello". You can edit, remove, and add to these. For now, on a new line, after "why hello there[emote=wave_anim]" add "Hello Workshop Two participant!" directly below it.
 
 5. Click the **Conversation bubble** icon on the top right banner to open a **Try it out** panel where you can test your new response.
 
@@ -119,7 +119,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
   
 4. In the new box that is displayed, under **Enter new condition**, type **@countries:Australia**.
 
-5. Highlight #dialog_capitals box, click on the bottom third icon called the "jump to".
+5. Click on the **#dialog_capitals** node box. Next click on the **Jump to...** icon (the square icon with an arrow located to the right of the trashcan icon)
 
 6. Immediately click on the **@countries:Australia** box, then click on **Go to condition** which has just popped up.
 
@@ -140,11 +140,11 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 ## 4. Configuring Self to use your new Conversation instance
 
-Your installation of Self is preconfigured to use the default Conversation service. To configure Self to use your new Conversation instance which you just modified, complete the following steps:
+Your installation of Intu is preconfigured to use the default Conversation service. To configure Intu to use your new Conversation instance which you just modified, complete the following steps:
 
-1.	After testing your changes in the previous step above, click on "Back to Workspaces". Next, click on the name of your Conversation Workspace **Self-Dialog** in the top left of your browser window.
+1.	After testing your changes in the previous step above, click on the three horizontal bars icon in the top left corner. Next click "Back to workspaces".
 
-2.	This returns you to your Workspaces page, where you will see the Self-Dialog Workspace box. Click on the **three dots** in the top right hand corner of this box. Select **View details**.   
+2.	This returns you to your Workspaces page, where you will see the Intu-Dialog Workspace box. Click on the **three vertical dots** in the top right hand corner of this box. Select **View details**.   
 
 3.	Now copy the Workspace ID into the text file you created earlier in Section 1.
 
@@ -154,7 +154,7 @@ Your installation of Self is preconfigured to use the default Conversation servi
 
 6.	For your instance of **Conversation** click **Edit**, and copy over your username and password you saved earlier in your text file. Now copy your Workspace ID and paste it into the **self_dialog** parameter. 
 
-	**Important:** As you are using the **Self-Dialog** workspace, you do not 	need to worry about the **self_domain** parameter here. You can just leave 	**self_domain** with its default value, or delete it if you wish. If you 	were using your own, custom Conversation workspace (see **Challenge: Using 	your own custom Conversation workspace with Intu**), the **self_domain** 	parameter is where you would paste your Workspace ID. Please note that you have entered the workspace ID in the right place.
+	**Important:** As you are using the **Intu-Dialog** workspace, you do not 	need to worry about the **self_domain** parameter here. You can just leave 	**self_domain** with its default value, or delete it if you wish. If you 	were using your own, custom Conversation workspace (see **Challenge: Using 	your own custom Conversation workspace with Intu**), the **self_domain** 	parameter is where you would paste your Workspace ID. Please note that you have entered the workspace ID in the right place.
 	
 	In addition, do not change the service endpoint unless you are an enterprise user. 	Click **Save**.
 
