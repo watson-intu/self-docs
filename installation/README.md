@@ -1,4 +1,6 @@
 # Intu
+
+[Back](../README.md)
  
 Intu is an architecture that enables Watson services in devices that perceive by vision, audition, olfaction, sonar, infrared energy, temperature, and vibration. Intu-enabled devices express themselves and interact with their environments, other devices, and people through speakers, actuators, gestures, scent emitters, lights, navigation, and more.
 
