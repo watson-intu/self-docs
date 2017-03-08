@@ -101,7 +101,7 @@ The `event_mask` in the examples below is a combination of bit flags so that you
 ```
 {
 	"targets": ["agent-society"],
-	"msg": "subscribe",
+	"msg": "unsubscribe",
 	"origin": "<SelfId>/."
 }
 
