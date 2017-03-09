@@ -403,34 +403,19 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favorite text editor.
 
 ### B. Configuring your `body.json` file
+1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 
-**For Mac users:**
+    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
 
-1. Open your `body.json` file which is in path /home/pi/intu/self-sdk-master/bin/raspi/etc/profile/body.json using your favorite text editor. 
+    2. Locate the `m_Libs` variable, and change it to read: 
+    
+    	`"m_Libs":["platform_raspi", "workshop_five_plugin"]` 
+    
+    	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
-2. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "workshop_five_plugin"]`
+    4. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 
-3. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the section above ie 5.A.
-
-4. Save your changes and close the file.
-
-**For Windows users:**
-
-1. Open Filezilla and connect to your Raspberry Pi.
-
-2. On the **Remote site** side of the Filezilla screen, navigate to **/home/pi/self/self-sdk-master/bin/raspi/etc/profile**.
-
-3. Locate the `body.json` file in the profile directory, and right click and select **View/Edit**.
-
-4. Locate the `m_Libs` variable, and change it to read: `"m_Libs":["platform_raspi", "workshop_five_plugin"]`
-
-4. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the section above ie 5.A.
-
-6. Exit the window you were using to edit the `body.json` file, upon which you will be prompted to upload the file back onto the server.
-
-7. Click **Yes**. This action saves your changes to your Raspberry Pi.
-
-**NOTE:** Make sure you have the correct variables setup in `m_Libs`, else Intu wouldn't run.
+    5. Save your changes and close the file.
 
 ### C. Building the Self SDK on your Raspberry Pi
 
