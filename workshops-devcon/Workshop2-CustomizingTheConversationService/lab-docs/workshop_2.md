@@ -27,7 +27,7 @@ You must create your own instance of the Conversation service in Bluemix, config
   3. Click **View Credentials** for your newly created Conversation service.
   4. Copy the values for your `password` and `username` and paste them into a new text file in your favourite text editor. You will need these credentials in Section 4 below. **Leave this browser window open.**
 
-### B. Importing the example "Self-Dialog" workspace into the Conversation service
+### B. Importing the example "Intu-Dialog" workspace into the Conversation service
 
 To complete this task, you must download the **Intu Starter Kit**, which contains a complete Conversation service workspace **Intu-Dialog** that you need for this workshop.
 
@@ -52,7 +52,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 **Before you begin:** Turn on the microphone on your device.
 
-1. On the Self-Dialog workspace, click **Get started**.
+1. On the Intu-Dialog workspace, click **Get started**.
 
 2. Click **Dialog** in the navigation bar at the top.
 
@@ -226,7 +226,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
-Here you will find the instructions for using your own custom Conversation workspace instead of the example Self-Dialog workspace from above.
+Here you will find the instructions for using your own custom Conversation workspace instead of the example Intu-Dialog workspace from above.
 
 **Important:** As you may have read earlier, Intu is currently configured to recognize intents which are prefixed with “dialog_”. This is important to make sure Intu recognizes your intent and treats your input as a question that needs to be answered through Conversation. However, you can create your own prefix or pattern for intents should you choose.
 
