@@ -111,25 +111,27 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 ### C. Create new dialog
 
-1. Click **Dialog** on the top navigation bar, and click on any of the existing branches in grey, e.g. **#dialog**. You will see a gray **+** displayed at the **bottom** of the box that has expanded.
-  
-2. Click on this bottom gray **+** and in the new box that opens, type **#dialog_capitals**.
-  
-3. Click within the **#dialog_capitals**. Now, click the gray **+** icon on the right side of the box. 
-  
-4. In the new box that is displayed, under **Enter new condition**, type **@countries:Australia**.
+When configuring the dialog flow, keep in mind as you click/navigate through the dialog flow, displayed in a tree view, an edit box will pop up on the right side of the screen. The tree view is what shows the summary of dialogs and the way elements relate to each other. As you click on the elements of the tree view, a box pops up on the right in which the condition and response can be configured.
 
-5. Click on the **#dialog_capitals** node box. Next click on the **Jump to...** icon (the square icon with an arrow located to the right of the trashcan icon)
+1. Click **Dialog** on the top navigation bar, and click on any of the existing branches in grey in the tree view, e.g. **#dialog**. You will see a gray **+** displayed at the **bottom** of the box that has expanded.
+  
+2. Click on this bottom gray **+** and in the new edit box pops up on the right, type **#dialog_capitals**.
+  
+3. Click within the **#dialog_capitals** in the tree view. Now, click the gray **+** icon on the right side of the box. 
+  
+4. In the new edit box that pops up on the right, under **Enter new condition**, type **@countries:Australia**.
 
-6. Immediately click on the **@countries:Australia** box, then click on **Go to condition** which has just popped up.
+5. Click on the **#dialog_capitals** node box in the tree view. Next click on the **Jump to...** icon (the square icon with an arrow located to the right of the trashcan icon)
 
-7.  In the white pop-up **@countries:Australia** box, type in the response: **The capital of Australia is Canberra.**
+6. Immediately click on the **@countries:Australia** box in the tree view, then click on **Go to condition** which has just popped up.
+
+7.  In the **@countries:Australia** edit box on the right, type in the response: **The capital of Australia is Canberra.**
 
 8.	Click on the **@countries:Australia** where you just typed in the response: The capital of Australia is Canberra. The box will become outlined in green. Click on the gray **+** icon on the bottom of the box. 
 
-9.	In the new box that appears, under **Enter a condition**, type in: **@ countries:Canada,** and for the response: **The capital of Canada is Ottawa.**
+9.	In the new box that appears, under **Enter a condition**, type in: **@countries:Canada,** and for the response: **The capital of Canada is Ottawa.**
 
-10.	Repeat for **@capitals:New Zealand**, where the response will be **The capital of New Zealand is Wellington.**
+10.	Repeat for **@countries:New Zealand**, where the response will be **The capital of New Zealand is Wellington.**
 
 11. Click the **Conversation bubble** icon on the top right to open a **Try it out** panel where you can test your new response.
 
