@@ -27,7 +27,7 @@ In this lab you will complete the following tasks:
 2. [Set up the Wi-Fi connection for your Raspberry Pi](#set-up-the-wi-fi-connection-for-your-raspberry-pi)
 3. [Download the Self SDK onto your computer and add in the code for waving the arm gesture](#download-the-self-sdk-onto-your-computer-and-add-in-the-code-for-the-led-gesture)
 4. [Updating your Raspberry Pi with the Move Joint Gesture](#updating-your-raspberry-pi-with-the-led-gesture)
-5. [Updating the body.json configuration](#updating-the-body.json-configuration)
+5. [Updating the config.json and body.json](#Updating-the-config.json-and-body.json)
 6. [Run Intu on your Raspberry Pi](#run-intu-on-your-raspberry-pi)
 
 ## 1. Assembling the Raspberry Pi
@@ -50,7 +50,7 @@ Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
 ### D. Connecting the Servo Motor
 
-As part of this lab we will be using the Tower Pro SG90 micoservo. You can see the pin out of this servo motor ![here](./SG90Servo.pdf). You will need to connect the servo motor to the Raspi Board as below:
+As part of this lab we will be using the Tower Pro SG90 micoservo. You can see the pin out of this servo motor [here](./SG90Servo.pdf). You will need to connect the servo motor to the Raspi Board as below:
 
 ![Board Layout for Servo](./sevo_pin_layout.png?raw=true)
 
@@ -144,11 +144,11 @@ add_subdirectory(move_arm_joint)
 	4. Run: `scripts/build_raspi.sh`
 
 
-## 5. Updating the `body.json` configuration
+## 5. Updating the config.json and body.json
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
 
-**Note:** If you have updated your `body.json` file with your `EmbodimentCreds` from the [Intu Gateway](rg-`gateway.mybluemix.net`) in Workshop 1, please skip down to **Configuring your `body.json` file**. 
+**Note:** If you have updated your `config.json` file with your `EmbodimentCreds` from the [Intu Gateway](rg-`gateway.mybluemix.net`) in Workshop 1, please skip down to **Configuring your `config.json` file**. 
 
 1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
@@ -159,9 +159,9 @@ add_subdirectory(move_arm_joint)
 4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favorite text editor.
 
 ### B. Configuring your `body.json` file
-1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
+1. The body.json (Located: /home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json) file acts as an configuration for various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 
-    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
+    1. On your Raspberry Pi open your `config.json` file using your favorite text editor. 
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
@@ -169,7 +169,10 @@ add_subdirectory(move_arm_joint)
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
-    4. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
+### B. Configuring your `config.json` file
+1. The config.json (Located: /home/pi/self/self-sdk-master/bin/raspi/config.json) is used to hold data that will not change between Intu executions. In this file we will add the Bluemix Credentials you have on Intu Gateway webpage.
+
+    4. Open /home/pi/self/self-sdk-master/bin/raspi/config.json and locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 
     5. Save your changes and close the file.
 
@@ -223,7 +226,7 @@ TJBot: "I now know how to wave"
 Human: "Wave to the crowd"
 TJBot: [you see BOTH physical action perfored]
 ```
-2. To do this all we nee to do is add Alchemy into your registered services on the gateway and the update your body.json like you did above.
+2. To do this all we nee to do is add Alchemy into your registered services on the gateway and the update your body.json and config.json like you did above.
 
 	1. The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create an instace of Alchemy. Once you have done that grab the "apikey":
 	 ![Getting the Alchemy API Key.](./FindingAlchemyOnBluemix.png?raw=true)
@@ -253,6 +256,8 @@ TJBot: [you see BOTH physical action perfored]
 	2. Locate the `m_Libs` variable, and change it to read: 
 	`"m_Libs":["platform_raspi", "move_joint_plugin"]` 
 	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
+	
+	1. Open your `config.json` (/home/pi/self/self-sdk-master/bin/raspi/config.json) file using your favorite text editor. 
 	
 	3. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 	
