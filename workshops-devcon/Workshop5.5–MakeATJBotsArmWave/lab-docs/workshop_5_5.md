@@ -95,7 +95,7 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 ### A. Download the Self SDK
 
-1. [Download the Self SDK](https://hub.jazz.net/project/wlabs/self-sdk). Click on the **download icon** next to the default **master** branch selected.
+1. [Download the Self SDK](https://github.com/watson-intu/self-sdk). Click on the **download icon** next to the default **master** branch selected.
 
 2. Create a new directory named **self** in your **home** directory.
 
@@ -430,7 +430,7 @@ You should see a list of classes compiled and "All Done" at the end.
 
 ### A. Download the Self SDK
 
-1. [Download the Self SDK](https://hub.jazz.net/project/wlabs/self-sdk). Click on the **download icon** next to the default **master** branch selected.
+1. [Download the Self SDK](https://github.com/watson-intu/self-sdk). Click on the **download icon** next to the default **master** branch selected.
 
 2. Copy the zip file from your local machine across to the Raspberry Pi.
 
