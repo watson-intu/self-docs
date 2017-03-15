@@ -73,11 +73,11 @@ Now that Intu is installed successfully, explore how you can test conversations 
 To complete this challenge, do the tasks in Workshop 7: Installing, configuring, and running the Intu Avatar.
 
   
-## After DevCon ends
-Your instance of Intu is preconfigured with the following Watson services: Conversation, Natural Language Classifier, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
+## Reminder: Update services within 30 days of registering on the Gateway
+Your instance of Intu is preconfigured with the following Watson services: Conversation, Weather Company Data, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
 
 ### 1. Creating instances of Watson services
-To use Intu, you need operational instances of the following services in Bluemix: Conversation, Natural Language Classifier, Speech to Text, and Text to Speech.
+To use Intu, there are three required Bluemix services: Conversation, Speech to Text, and Text to Speech.
 
 **Pro tip:** As you complete this task, you'll receive credentials for each service instance, and you'll need these credentials later. Open a new file in your favorite text editor and create a section for each service so that you can temporarily store its credentials.
 
@@ -94,7 +94,7 @@ To use Intu, you need operational instances of the following services in Bluemix
   6. Click the **<--Watson** breadcrumb near the top left (directly above your Conversation service name). The list of your service instances is displayed.
   7. Add the next service instance by clicking the **Create Watson** **+** button. The Watson service catalog is displayed.
 
-4. Create instances of the Natural Language Classifier, Speech to Text, and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
+4. Create instances of Speech to Text and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
 
 
 ### 2. Configuring Intu to use your service instances
@@ -105,9 +105,45 @@ To configure Intu to use your instances of these Watson services, log in to the 
 
 2. Select your Organization and Group in the top Filter by menu, if not already selected.
 
-3. For your instances of the Natural Language Classifier, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
+3. For your instances of Speech to Text and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
 
 4. To configure your instance of **Conversation**, navigate to **DOWNLOADS** on the left of your Intu Gateway browser page, download the **Intu Starter Kit**, and follow the instructions in the `readme.txt` file. Alternatively, go to the instructions for **Workshop 2**, and follow the steps in: **1. Setting up the Conversation service**.
  
 
 **Important:** Do not change the service endpoint for your services unless you are an enterprise user.
+
+### 3. Adding more services beyond the required ones
+While only Conversation, Speech to Text, and Text to Speech are required for running Intu, you can add more Bluemix services for even more usability.  In the section below you can read about additional Intu features that can be used if you have the necessary Bluemix services configured in your Intu Gateway.  You will create and configure these services in the same way you did for the required services.
+
+Note: For the features listed below to work, you need to use the Conversation workspace downloaded from the **Intu Starter Kit**. You can use this workspace in addition to any other ones you would like to use.
+
+1. **Greeter Agent**: Intu will greet you!  For this to work you need to have your camera turned on. If you are running Intu on a Mac, Windows, or Nao robot device and are using the Intu Starter Kit Conversation workspace, simply saying _"turn the camera on"_ will turn your camera on.
+
+	* Additional Bluemix services required: **Visual Recognition**
+	* Service Names to use on the Gateway: **VisualRecognitionV1**
+	
+	Note: For a more personalized greeting, see **Name Agent** below.
+	
+2. **Weather Agent**: Get Intu to tell you about the weather! Examples of weather-related questions you can ask: _"What is the weather in Boston"_ or _"What will the weather be like in Las Vegas on Friday"_.
+
+	* Additional Bluemix services required: **Natural Langauge Understanding** and **Weather Company Data**
+	* Service Names to use on the Gateway: **NaturalLanguageUnderstandingV1** and **WeatherCompanyDataV1**
+	
+3. **Time Agent**: Get Intu to tell you what time it is! Examples of time-related questions you can ask: _"What time is it right now"_ or _"What time is it in Tokyo"_.
+
+	* Additional Bluemix servies required: **Natural Langauge Understanding** and **Weather Company Data**
+	* Service Names to use on the Gateway: **NaturalLanguageUnderstandingV1** and **WeatherCompanyDataV1**
+	
+4. **Name Agent**: You can rename your Intu device or get Intu to learn your name! Examples of name-related queries you can tell Intu: _"Your name is now Bobby"_ or _"My name is John"_.  Once Intu learns your name, it will greet you by name using the **Greeter Agent** mentioned above.
+
+	* Additional Bluemix servies required (for renaming only): **Natural Langauge Understanding**
+	* Additional Bluemix servies required (for learning your name): **Natural Langauge Understanding** and **Visual Recognition**
+	* Service Names to use on the Gateway: **NaturalLanguageUnderstandingV1** and **VisualRecognitionV1**
+	
+5. **Telephony Agent**: Get Intu to call you or someone else! Please see **Workshop 4** for more details on how to configure and use the Telephony Agent.
+
+	* Additional services required: **Nexmo** -- _note: This is **NOT** a Bluemix service_
+	* Service Names to use on the Gateway: **TelephonyV1**
+
+
+For more information about the Bluemix services listed above, please checkout [Natural Language Understanding](https://natural-language-understanding-demo.mybluemix.net/), [Weather Company Data](https://console.ng.bluemix.net/catalog/services/weather-company-data/), and [Visual Recognition](https://console.ng.bluemix.net/catalog/services/visual-recognition/). 
