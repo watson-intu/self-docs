@@ -207,7 +207,7 @@ You have now added a gesture for moving a joint with INTU.  When you say, "Raise
 
 
 ### Wait, wait, wait, but how does it work?
-When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First a **Natural Language Classifier** instance will decide that the r_hand_raise gesture is being called by some spoken input. Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
+When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
 
 It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
