@@ -228,7 +228,7 @@ TJBot: [you see BOTH physical action perfored]
 ```
 2. To do this all we nee to do is add Alchemy into your registered services on the gateway and the update your body.json and config.json like you did above.
 
-	1. The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create an instace of Alchemy. Once you have done that grab the "apikey":
+	1. The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create an instance of Alchemy. Once you have done that grab the "apikey":
 	 ![Getting the Alchemy API Key.](./FindingAlchemyOnBluemix.png?raw=true)
 
 	2. The next step is to update your subscribed services on the [Intu Gateway](rg-gateway.mybluemix.net). Once you login use the left hand bar to navigate to MANAGE->Services like:
