@@ -4,7 +4,7 @@
 Intu provides a highly customizable agent-based framework that allows Watson services to be added to many different kinds of physical devices.
 
 ##Getting Started
-[Install Intu on your system](https://github.com/watson-intu/self-sdk/blob/master/README.md)
+[Install Intu on your system](./installation/README.md#installing-intu)
 
 ##Tutorials
 [Workshops](./workshops-devcon)
