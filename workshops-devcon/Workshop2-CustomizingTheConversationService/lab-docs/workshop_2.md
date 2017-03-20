@@ -27,9 +27,9 @@ You must create your own instance of the Conversation service in Bluemix, config
   3. Click **View Credentials** for your newly created Conversation service.
   4. Copy the values for your `password` and `username` and paste them into a new text file in your favourite text editor. You will need these credentials in Section 4 below. **Leave this browser window open.**
 
-### B. Importing the example "Self-Dialog" workspace into the Conversation service
+### B. Importing the example "Intu-Dialog" workspace into the Conversation service
 
-To complete this task, you must download the **Intu Starter Kit**, which contains a complete Conversation service workspace **Self-Dialog** that you need for this workshop.
+To complete this task, you must download the **Intu Starter Kit**, which contains a complete Conversation service workspace **Intu-Dialog** that you need for this workshop.
 
 **Important:** Should you wish to use your own **custom** Conversation workspace, please skip down and follow the instructions in **Challenge: Using your own custom Conversation workspace with Intu** below.
 
@@ -45,20 +45,20 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
  
 5. **Do not create a new workspace.** Click the **Import** icon next to the green **Create +** button.
 
-6. Click **Choose a file**, navigate to the directory where you extracted the Intu Starter Kit in step 2, select the `intu-workspace-full.json` file, and click **Import**. Keep the default settings so that you import everything. The workspace titled **Self-Dialog** is imported and is displayed on the Workspaces page.
+6. Click **Choose a file**, navigate to the directory where you extracted the Intu Starter Kit in step 2, select the `intu-workspace-full.json` file, and click **Import**. Keep the default settings so that you import everything. The workspace titled **Intu-Dialog** is imported and is displayed on the Workspaces page.
 
 
 ## 2. Customizing the greeting
 
 **Before you begin:** Turn on the microphone on your device.
 
-1. On the Self-Dialog workspace, click **Get started**.
+1. On the Intu-Dialog workspace, click **Get started**.
 
 2. Click **Dialog** in the navigation bar at the top.
 
-3. Expand this branch of the dialog tree by clicking through the following dialog nodes: **#dialog** -> **@greeting** -> **@greeting:hello**. You may need to scroll down as you're clicking through. Note: Nodes may have the name "untitled node" as you are clicking on them, the node name is an optional field.
+3. Expand this branch of the dialog tree by clicking through the following dialog nodes: **#dialog** -> **@greeting** -> **@greeting:hello**. You may need to scroll down as you're clicking through. Note: Nodes may have the name "Untitled Node" as you are clicking on them. The node name is an optional field.
 
-4. After clicking on the **greeting:hello** node there are currently four responses for when a user says "hello" are displayed. You can edit, remove, and add to these. For now, on a new line, after "why hello there[emote=wave_anim]" add "Hello Workshop Two participant!" directly below it.
+4. After clicking on the **greeting:hello** node there are currently four responses for when a user says "hello". You can edit, remove, and add to these. For now, on a new line, after "why hello there[emote=wave_anim]" add "Hello Workshop Two participant!" directly below it.
 
 5. Click the **Conversation bubble** icon on the top right banner to open a **Try it out** panel where you can test your new response.
 
@@ -111,25 +111,27 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 ### C. Create new dialog
 
-1. Click **Dialog** on the top navigation bar, and click on any of the existing branches in grey, e.g. **#dialog**. You will see a gray **+** displayed at the **bottom** of the box that has expanded.
-  
-2. Click on this bottom gray **+** and in the new box that opens, type **#dialog_capitals**.
-  
-3. Click within the **#dialog_capitals**. Now, click the gray **+** icon on the right side of the box. 
-  
-4. In the new box that is displayed, under **Enter new condition**, type **@countries:Australia**.
+When configuring the dialog flow, keep in mind as you click/navigate through the dialog flow, displayed in a tree view, an edit box will pop up on the right side of the screen. The tree view is what shows the summary of dialogs and the way elements relate to each other. As you click on the elements of the tree view, a box pops up on the right in which the condition and response can be configured.
 
-5. Highlight #dialog_capitals box, click on the bottom third icon called the "jump to".
+1. Click **Dialog** on the top navigation bar, and click on any of the existing branches in grey in the tree view, e.g. **#dialog**. You will see a gray **+** displayed at the **bottom** of the box that has expanded.
+  
+2. Click on this bottom gray **+** and in the new edit box pops up on the right, type **#dialog_capitals**.
+  
+3. Click within the **#dialog_capitals** in the tree view. Now, click the gray **+** icon on the right side of the box. 
+  
+4. In the new edit box that pops up on the right, under **Enter new condition**, type **@countries:Australia**.
 
-6. Immediately click on the **@countries:Australia** box, then click on **Go to condition** which has just popped up.
+5. Click on the **#dialog_capitals** node box in the tree view. Next click on the **Jump to...** icon (the square icon with an arrow located to the right of the trashcan icon)
 
-7.  In the white pop-up **@countries:Australia** box, type in the response: **The capital of Australia is Canberra.**
+6. Immediately click on the **@countries:Australia** box in the tree view, then click on **Go to condition** which has just popped up.
+
+7.  In the **@countries:Australia** edit box on the right, type in the response: **The capital of Australia is Canberra.**
 
 8.	Click on the **@countries:Australia** where you just typed in the response: The capital of Australia is Canberra. The box will become outlined in green. Click on the gray **+** icon on the bottom of the box. 
 
-9.	In the new box that appears, under **Enter a condition**, type in: **@ countries:Canada,** and for the response: **The capital of Canada is Ottawa.**
+9.	In the new box that appears, under **Enter a condition**, type in: **@countries:Canada,** and for the response: **The capital of Canada is Ottawa.**
 
-10.	Repeat for **@capitals:New Zealand**, where the response will be **The capital of New Zealand is Wellington.**
+10.	Repeat for **@countries:New Zealand**, where the response will be **The capital of New Zealand is Wellington.**
 
 11. Click the **Conversation bubble** icon on the top right to open a **Try it out** panel where you can test your new response.
 
@@ -140,11 +142,11 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 ## 4. Configuring Self to use your new Conversation instance
 
-Your installation of Self is preconfigured to use the default Conversation service. To configure Self to use your new Conversation instance which you just modified, complete the following steps:
+Your installation of Intu is preconfigured to use the default Conversation service. To configure Intu to use your new Conversation instance which you just modified, complete the following steps:
 
-1.	After testing your changes in the previous step above, click on "Back to Workspaces". Next, click on the name of your Conversation Workspace **Self-Dialog** in the top left of your browser window.
+1.	After testing your changes in the previous step above, click on the three horizontal bars icon in the top left corner. Next click "Back to workspaces".
 
-2.	This returns you to your Workspaces page, where you will see the Self-Dialog Workspace box. Click on the **three dots** in the top right hand corner of this box. Select **View details**.   
+2.	This returns you to your Workspaces page, where you will see the Intu-Dialog Workspace box. Click on the **three vertical dots** in the top right hand corner of this box. Select **View details**.   
 
 3.	Now copy the Workspace ID into the text file you created earlier in Section 1.
 
@@ -154,7 +156,7 @@ Your installation of Self is preconfigured to use the default Conversation servi
 
 6.	For your instance of **Conversation** click **Edit**, and copy over your username and password you saved earlier in your text file. Now copy your Workspace ID and paste it into the **self_dialog** parameter. 
 
-	**Important:** As you are using the **Self-Dialog** workspace, you do not 	need to worry about the **self_domain** parameter here. You can just leave 	**self_domain** with its default value, or delete it if you wish. If you 	were using your own, custom Conversation workspace (see **Challenge: Using 	your own custom Conversation workspace with Intu**), the **self_domain** 	parameter is where you would paste your Workspace ID. Please note that you have entered the workspace ID in the right place.
+	**Important:** As you are using the **Intu-Dialog** workspace, you do not 	need to worry about the **self_domain** parameter here. You can just leave 	**self_domain** with its default value, or delete it if you wish. If you 	were using your own, custom Conversation workspace (see **Challenge: Using 	your own custom Conversation workspace with Intu**), the **self_domain** 	parameter is where you would paste your Workspace ID. Please note that you have entered the workspace ID in the right place.
 	
 	In addition, do not change the service endpoint unless you are an enterprise user. 	Click **Save**.
 
@@ -226,7 +228,7 @@ Your installation of Self is preconfigured to use the default Conversation servi
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
-Here you will find the instructions for using your own custom Conversation workspace instead of the example Self-Dialog workspace from above.
+Here you will find the instructions for using your own custom Conversation workspace instead of the example Intu-Dialog workspace from above.
 
 **Important:** As you may have read earlier, Intu is currently configured to recognize intents which are prefixed with “dialog_”. This is important to make sure Intu recognizes your intent and treats your input as a question that needs to be answered through Conversation. However, you can create your own prefix or pattern for intents should you choose.
 

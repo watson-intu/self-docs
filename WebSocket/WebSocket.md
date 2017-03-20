@@ -33,7 +33,7 @@ the various topics looks like this:
 	"targets": [""],
 	"msg": "query",
 	"request": "1",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -92,7 +92,7 @@ The `event_mask` in the examples below is a combination of bit flags so that you
 {
 	"targets": ["agent-society"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -101,8 +101,8 @@ The `event_mask` in the examples below is a combination of bit flags so that you
 ```
 {
 	"targets": ["agent-society"],
-	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"msg": "unsubscribe",
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -127,7 +127,7 @@ In the above example, the `event` can be `add_agent_proxy` or `remove_agent_prox
 {
 	"targets": ["blackboard"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -136,7 +136,7 @@ In the above example, the `event` can be `add_agent_proxy` or `remove_agent_prox
 {
 	"targets": ["blackboard"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 *Publishing*
@@ -159,7 +159,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["blackboard-stream"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -169,7 +169,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["blackboard-stream"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 
 ```
@@ -191,7 +191,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["gesture-manager"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -200,7 +200,7 @@ In the above example, the `event` could be `add_object`, `set_object_state` (str
 {
 	"targets": ["gesture-manager"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 *Publishing*
@@ -223,7 +223,7 @@ In the above example, the `event` can be `add_gesture_proxy`, `remove_gesture_pr
 {
 	"targets": ["sensor-manager"],
 	"msg": "subscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 
@@ -232,7 +232,7 @@ In the above example, the `event` can be `add_gesture_proxy`, `remove_gesture_pr
 {
 	"targets": ["sensor-manager"],
 	"msg": "unsubscribe",
-	"origin": "your Self Id followed by /."
+	"origin": "<SelfId>/."
 }
 ```
 *Publishing*
@@ -286,12 +286,43 @@ In the above example, the `event` can be (analogous to `gesture-manager`) `add-s
 {
     "targets": ["models"],
     "msg": "publish_at",
-    "data": "{\r\n\t\"event\": \"gremlin\",\r\n\t\"graphId\": \"knowledge\",\r\n\t\"query\" : \"graph.traversal().V().has(\\\"_label\\\",bind0);\",\r\n\t\"bindings\" : \r\n\t{\r\n\t\t\"bind0\" : \"skill\"\r\n\t}\r\n}",
+    "data": "{\r\n\t\"event\": \"gremlin\",\r\n\t\"graph_id\": \"knowledge\",\r\n\t\"query\" : \"graph.traversal().V().has(\\\"_label\\\",bind0);\",\r\n\t\"bindings\" : \r\n\t{\r\n\t\t\"bind0\" : \"skill\"\r\n\t}\r\n}",
     "binary": false,
     "persisted": false
 }
 ```
 
+*Create a Vertex*
+```
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"create_vertex\",\r\n\t\"model\": \"world\",\r\n\t\"label\" : \"test\",\r\n\t\"properties\" : \r\n\t{\r\n\t\t\"name\" : \"Test Vertex\",\r\n\t\t\"hashId\" : \"X\"\r\n\t}\r\n}",
+    "binary": false,
+    "persisted": false
+}
+```
+
+*Drop a Vertex*
+```
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"drop_vertex\",\r\n\t\"model\": \"world\",\r\n\t\"vertex_id\" : \"696324136\"\r\n}",
+    "binary": false,
+    "persisted": false
+}
+```
+*Create Edge*
+```
+{
+    "targets": ["models"],
+    "msg": "publish_at",
+    "data": "{\r\n\t\"event\": \"create_edge\",\r\n\t\"model\": \"world\",\r\n\t\"source_id\" : \"696324136\",\r\n\t\"destination_id\" : \"22382782\",\r\n\t\"label\" : \"aspect\",\r\n\t\"properties\" : { \"weight\" : 0.66 }\r\n}",
+    "binary": false,
+    "persisted": false
+}
+```
 
 In this example above the `event` could be `traverse`, `gremlin`, `create_vertex`, `drop_vertex`, `create_edge`, etc. for example. The payloads would contain serialized information that the system can then use to create, update, or delete vertices or edges in the graph. You could also supply serialized traversal conditions that the graph can then use to traverse itself looking for all vertices that satisfy the traverser's conditions.
 
