@@ -29,7 +29,7 @@ public:
 	virtual bool Execute( GestureDelegate a_Callback, const ParamsMap & a_Params );
 	virtual bool Abort();
 	//! Construction
-	RaspiMoveJointGesture() : m_PinNumber( 7 ), m_bWiredPi( false ), m_ArmLowPoint(0), m_ArmHighPoint(40)
+	RaspiMoveJointGesture() : m_PinNumber( 0 ), m_bWiredPi( false ), m_ArmLowPoint(0), m_ArmHighPoint(40)
 	{}
 private:
 	//! Data
