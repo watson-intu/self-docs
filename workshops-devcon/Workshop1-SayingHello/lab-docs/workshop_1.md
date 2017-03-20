@@ -25,26 +25,22 @@ Complete the following tasks:
 
 ## 2. Downloading Intu
 
-1. On the Intu Downloads page, click on the the topmost download arrow for **Download Intu Tooling Launcher**. **Intu-Tooling-OSX64.zip** or **Intu-Tooling-Win64.zip** will start to download, depending on your machine.
+1. On the Intu Downloads page, click on the the topmost download arrow for **Download Intu Tooling Launcher**. **Intu-Tooling-Launcher-OSX64.zip** or **Intu-Tooling-Launcher-Win64.zip** will start to download, depending on your machine.
 
-2. Extract the Intu-Tooling-OSX64 or Intu-Tooling-Win64 directory (it may do so automatically), and copy the entire directory into your **home** directory. This is:
-
-
-	**For Windows users:** C:\Users\username ("username" should read your name)
-	
-	**For Mac users:**
-	 /Users/username ("username" should read your name) 
+2. Extract the Intu-Tooling-Launcher-OSX64 or Intu-Tooling-Launcher-Win64 (it may do so automatically). 
 
 
 ## 3. Installing Intu
 
-1. Open the Intu-Tooling-OSX64 or Intu-Tooling-Win64 directory, where you will find the **Intu Manager**. Open Intu Manager.
+1. Open the Intu-Tooling-Launcher-OSX64 or Intu-Tooling-Launcher-Win64 directory, where you will find the **Intu Manager**. Open Intu Manager.
 	
 	**For Mac users:** Right-click on the Intu Manager and select **Open**
 	
 	**For Windows user**, double-click on the Intu Manager to open it. 
 	
 	If a security warning is displayed, accept the risk and open the file.
+
+    It will download and extract the latest version of **Intu Manager** to your local computer, then it will run **Intu Manager**. 
 2. Select the **Windowed** checkbox, accept the other default values, and click **Play!**. If a security warning is displayed, accept the risk. The Intu Manager page is now displayed. 
 3. Wait until you see a browser appear inside the application. At that point, log into Bluemix through said browser, and you will be automatically logged into tooling.
 4. Tooling's main screen will start. Click **Menu** then **Install Intu**.
