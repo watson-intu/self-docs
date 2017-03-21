@@ -395,8 +395,6 @@ First, this code iterates over the response to find the emotion that has the hig
 
 **Congratulations!** You just built all the functions required for the emotion agent. This process created the `libworkshop_three_plugin.dylib` in the **intu/self-sdk-master/bin/mac** directory.
 
-In the next task, you will update the `body.json` file also located in the **intu/self-sdk-master/bin/mac/etc/profile** directory to include the new plugin so that Intu can use it.
-
 
 ## 4. Configuring your Intu instance to include the emotion agent
 
