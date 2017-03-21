@@ -406,7 +406,10 @@ In the next task, you will update the `body.json` file also located in the **int
 2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
-4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favourite text editor.
+4. Create a `config.json` file in case it isn't present
+	
+	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac**.
+	* * For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
 
 ### B. Configuring your `body.json` file
 
@@ -424,7 +427,6 @@ In the next task, you will update the `body.json` file also located in the **int
 4. Locate `EmotionAgent` in the `body.json` file, and notice the `m_NegativeTones` and `m_PositiveTones` strings. To understand the tone of the input, these strings are compared to OnTone().
 
 5. Change `EmotionAgent` to `WorkshopThreeAgent` or the name you gave your class. As the instructions used `WorkshopThreeAgent`, the `"Type_"` field becomes `"Type_" : "WorkshopThreeAgent"`.
-6. Now find `"m_EmbodimentCreds":{ ... }` in your `body.json` file. Replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 7. Save your changes.
 
 ### 3. Building Intu
