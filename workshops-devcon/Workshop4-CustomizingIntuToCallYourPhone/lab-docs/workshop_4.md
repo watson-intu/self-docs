@@ -10,7 +10,7 @@ Complete the following tasks:
 
 1. [Signing up for a Nexmo account](#signing-up-for-a-nexmo-account)
 2. [Getting your Nexmo credentials](#getting-your-nexmo-credentials)
-3. [Using your Nexmo coupon](#using-your-Nexmo-coupon)
+3. [Using your Nexmo](#using-your-Nexmo)
 4. [Adding the telephony service to Intu](#adding-the-telephony-service-to-Intu)
 5. [Understanding plans](#understanding-plans)
 6. [Modifying plans to have the telephony service call your phone number](#modifying-plans-to-have-the-telephony-service-call-your-phone-number)
@@ -19,7 +19,7 @@ Complete the following tasks:
 
 1. [Sign up for a Nexmo account](https://dashboard.nexmo.com/sign-up)
   
-## 2. Getting your Nexmo credentials and coupon
+## 2. Getting your Nexmo credentials
 
 1. On the [Nexmo dashboard](https://dashboard.nexmo.com/), click the top right drop down menu (the one with your name next to it) to expand the account menu.
 
@@ -27,13 +27,7 @@ Complete the following tasks:
 
 3. Copy the values of the **API key** and **API Secret** parameters, and paste them into a new text file using your favourite text editor.
 
-4. Email [devrel@nexmo.com](mailto:devrel@nexmo.com?subject=Nexmo Coupon Request for Intu) to ask for a Nexmo coupon for Intu. Be sure to include your Nexmo API Key in the email so that Nexmo can verify your signup.
-
-## 3. Using your Nexmo coupon
- 
- 1. On the Nexmo dashboard, click the top right drop down menu (the one with your name next to it) and select **Coupons** to open the Coupons page.
- 
- 2. On the Coupons page, enter the Nexmo coupon code into the "Enter coupon code" field and click **Submit**. This will apply additional credit to your account and ensures the Telephony service can automatically provision a US phone number for your device by removing Nexmo account restrictions.
+4. You will need to pay for minutes on the Nexmo service. This will allow your account to allow to make calls using the API key/secret you copied above.
 
 ## 4. Adding the telephony service to Intu
 
