@@ -409,7 +409,7 @@ In the next task, you will update the `body.json` file also located in the **int
 4. Create a `config.json` file in case it isn't present
 	
 	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac**.
-	* * For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
+	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
 
 ### B. Configuring your `body.json` file
 
