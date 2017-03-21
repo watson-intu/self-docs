@@ -159,7 +159,7 @@ add_subdirectory(move_arm_joint)
 ### B. Configuring your `body.json` file
 1. The body.json (Located: /home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json) file acts as an configuration for various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 
-    1. On your Raspberry Pi open your `config.json` file using your favorite text editor. 
+    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
