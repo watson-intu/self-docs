@@ -254,7 +254,10 @@ In the next task, you will update the `body.json` file also located in the **int
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 
-4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favourite text editor.
+4. Create a `config.json` file in case it isn't present and paste the credentials obtained from the gateway in step 3 above.
+	
+	* For **OS X**,  in **wlabs_self-sdk-master/bin/mac**.
+	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
 
 ### B. Configuring your `body.json` file
 
@@ -264,9 +267,8 @@ In the next task, you will update the `body.json` file also located in the **int
 
 3. Add **workshop****_six****_plugin** to the end of the `m_Libs` variable for your platform, **as shown below**:
   `"m_Libs" : [ "platform_mac", "workshop_six_plugin"],`
-4. Now find `"m_EmbodimentCreds":{ ... }` in your `body.json` file. Replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
 
-5. Locate `m_Sensors` inside the `body.json`. Add the following
+4. Locate `m_Sensors` inside the `body.json`. Add the following
 
 ```
 {

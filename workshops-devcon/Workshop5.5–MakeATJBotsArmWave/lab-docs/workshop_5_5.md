@@ -148,33 +148,24 @@ add_subdirectory(move_arm_joint)
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
 
-**Note:** If you have updated your `config.json` file with your `EmbodimentCreds` from the [Intu Gateway](rg-`gateway.mybluemix.net`) in Workshop 1, please skip down to **Configuring your `config.json` file**. 
-
 1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
 2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 
-4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favorite text editor.
+4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **wlabs_self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
 
 ### B. Configuring your `body.json` file
 1. The body.json (Located: /home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json) file acts as an configuration for various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 
-    1. On your Raspberry Pi open your `config.json` file using your favorite text editor. 
+    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
     	`"m_Libs":["platform_raspi", "move_joint_plugin"]` 
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
-
-### B. Configuring your `config.json` file
-1. The config.json (Located: /home/pi/self/self-sdk-master/bin/raspi/config.json) is used to hold data that will not change between Intu executions. In this file we will add the Bluemix Credentials you have on Intu Gateway webpage.
-
-    4. Open /home/pi/self/self-sdk-master/bin/raspi/config.json and locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
-
-    5. Save your changes and close the file.
 
 ### C. Building the Self SDK on your Raspberry Pi
 
