@@ -398,10 +398,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 
-4. Create a `config.json` file in case it isn't present
-	
-	* For **OS X**, in **wlabs_self-sdk-master/bin/mac**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
+4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **wlabs_self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
 
 ### B. Configuring your `body.json` file
 1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
