@@ -117,7 +117,7 @@ Follow the instructions for your platform.
 		If you see this message, you will need to update **Xcode**.
 	
 3. Download **Anaconda 4.2.0 Python 2.7 version** by using the **Graphical Installer**. It is required to correctly configure pip in the following step.
-   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://repo.continuum.io/archive/index.html). Choose relevant pkg file based on your environment whose name starts from Anaconda2-4.2.0. Please note that Anaconda2 signifies Python version starting with 2 and Anaconda3 signifies Python version starting with 3. These instructions and the workshop have not been tested on Python 3.x
+   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://repo.continuum.io/archive/index.html). Choose relevant pkg file based on your environment whose name starts from Anaconda2-4.2.0. Please note that Anaconda2 signifies Python 2.x and Anaconda3 signifies Python 3.x. These instructions and the workshop have not been tested on Python 3.x
    2. Click the solid blue GRAPHICAL INSTALLER button for Python 2.7 Version. It should be 403 MB. The .pkg file downloads.
    3. After the file is downloaded, double-click it, and follow the prompts to install Anaconda.
    4. Open a **new** Terminal window and make sure your version of Python has been successfully updated by running the command: `python --version` 
@@ -220,7 +220,8 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 4. Locate the Workshop 3 code snippet files **to be filled in** in:
 
- `self-sdk-master/docs/workshops-devcon/3/code-snippets/WorkshopThreeAgent_start`
+ `self-docs/workshops-devcon/Workshop-CreatingAnEmotionAgent/code-snippets/Worksh
+opThreeAgent_Start/`
 
 5. Copy the `WorkshopThreeAgent.cpp` and the `WorkshopThreeAgent.h` files and paste them into the **agents** directory that you created.
 
@@ -407,25 +408,6 @@ In the next task, you will update the `body.json` file also located in the **int
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 4. Copy these credentials by clicking the **Copy** icon in the top right of the window, and paste this into a new text file using your favourite text editor.
-
-### B. Configuring your `body.json` file
-
-1. Open your `body.json` file. 
-
-	* For **OS X**, this will be in **self-sdk-master/bin/mac/etc/profile**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin -> Debug**. 
-	
-2. Locate the `m_Libs` variable.
-  * If you're using **OS X**, the variable is `"m_Libs" : [ "platform_mac" ],`
-  * If you're using **Windows**, the variable is `"m_Libs" : [ "platform_win" ],`
-3. Add **workshop****_three****_plugin** to the end of the `m_Libs` variable for your platform, **as shown below**:
-  * If you're using **OS X**, the variable is `"m_Libs" : [ "platform_mac", "workshop_three_plugin"],`
-  * If you're using **Windows**, the variable is `"m_Libs" : [ "platform_win", "workshop_three_plugin"],`
-4. Locate `EmotionAgent` in the `body.json` file, and notice the `m_NegativeTones` and `m_PositiveTones` strings. To understand the tone of the input, these strings are compared to OnTone().
-
-5. Change `EmotionAgent` to `WorkshopThreeAgent` or the name you gave your class. As the instructions used `WorkshopThreeAgent`, the `"Type_"` field becomes `"Type_" : "WorkshopThreeAgent"`.
-6. Now find `"m_EmbodimentCreds":{ ... }` in your `body.json` file. Replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
-7. Save your changes.
 
 ### 3. Building Intu
 
