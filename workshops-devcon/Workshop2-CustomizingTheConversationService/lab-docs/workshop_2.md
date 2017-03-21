@@ -290,7 +290,7 @@ Now, complete **Section 4: Configuring Self to use your new Conversation instanc
 Your instance of Intu is preconfigured with the following Watson services: Conversation, Weather Company Data, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
 
 ### A. Creating instances of Watson services
-To use Intu, you need operational instances of the following services in Bluemix: Conversation, Speech to Text, and Text to Speech.
+To use Intu, you need operational instances of the following services in Bluemix: Conversation, Weather Company Data, Speech to Text, and Text to Speech.
 
 **Pro tip:** As you complete this task, you'll receive credentials for each service instance, and you'll need these credentials later. Open a new file in your favourite text editor and create a section for each service so that you can temporarily store its credentials.
 
@@ -307,7 +307,7 @@ To use Intu, you need operational instances of the following services in Bluemix
   6. Click the **<--Watson** breadcrumb near the top left (directly above your Conversation service name). The list of your service instances is displayed.
   7. Add the next service instance by clicking the **Create Watson** **+** button. The Watson service catalog is displayed.
 
-4. Create instances of the Speech to Text and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
+4. Create instances of the Weather Company Data, Speech to Text and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
 
 ### B. Configuring Intu to use your service instances
 
@@ -317,6 +317,6 @@ To configure Intu to use your instances of these Watson services, log in to to t
 
 2. Select your Organization and Group in the top Filter by menu, if not already selected.
 
-3. For your instances of the Conversation, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
+3. For your instances of the Conversation, Weather Company Data, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
 
 **Important:** Do not change the service endpoint unless you are an enterprise user.
