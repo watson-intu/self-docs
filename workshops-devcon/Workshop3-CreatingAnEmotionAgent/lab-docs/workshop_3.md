@@ -408,7 +408,7 @@ In the next task, you will update the `body.json` file also located in the **int
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 4. Create a `config.json` file in case it isn't present
 	
-	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac**.
+	* For **OS X**,  in **wlabs_self-sdk-master/bin/mac**.
 	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
 
 ### B. Configuring your `body.json` file
@@ -427,7 +427,7 @@ In the next task, you will update the `body.json` file also located in the **int
 4. Locate `EmotionAgent` in the `body.json` file, and notice the `m_NegativeTones` and `m_PositiveTones` strings. To understand the tone of the input, these strings are compared to OnTone().
 
 5. Change `EmotionAgent` to `WorkshopThreeAgent` or the name you gave your class. As the instructions used `WorkshopThreeAgent`, the `"Type_"` field becomes `"Type_" : "WorkshopThreeAgent"`.
-7. Save your changes.
+6. Save your changes.
 
 ### 3. Building Intu
 
