@@ -446,11 +446,11 @@ In the next task, you will update the `body.json` file also located in the **int
 
 Now that you have added an Emotion Agent, Intu will start to adapt to you. First, ask Intu “How are you?”, and listen to the response. Now feed Intu some positive emotion statements like "Good job!”, and then ask “How are you?” again. Intu should now give a "happier" response than the one it gave before. Try the same thing for some negative emotion statements. Say “Wrong answer" a number of times and then ask “How are you?”. Intu should respond with a "sadder" response.
 
-## After DevCon ends
-Your instance of Intu is preconfigured with the following Watson services: Conversation, Natural Language Classifier, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
+## Reminder: Update services within 30 days of registering on the Gateway
+Your instance of Intu is preconfigured with the following Watson services: Conversation, Weather Company Data, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
 
 ### A. Creating instances of Watson services
-To use Intu, you need operational instances of the following services in Bluemix: Conversation, Natural Language Classifier, Speech to Text, and Text to Speech.
+To use Intu, you need operational instances of the following services in Bluemix: Conversation, Weather Company Data, Speech to Text, and Text to Speech.
 
 **Pro tip:** As you complete this task, you'll receive credentials for each service instance, and you'll need these credentials later. Open a new file in your favourite text editor and create a section for each service so that you can temporarily store its credentials.
 
@@ -467,7 +467,7 @@ To use Intu, you need operational instances of the following services in Bluemix
   6. Click the **<--Watson** breadcrumb near the top left (directly above your Conversation service name). The list of your service instances is displayed.
   7. Add the next service instance by clicking the **Create Watson** **+** button. The Watson service catalog is displayed.
 
-4. Create instances of the Natural Language Classifier, Speech to Text, and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
+4. Create instances of the Weather Company Data, Speech to Text, and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
 
 ### B. Configuring Intu to use your service instances
 
@@ -477,7 +477,7 @@ To configure Intu to use your instances of these Watson services, log in to the 
 
 2. Select your Organization and Group in the top Filter by menu, if not already selected.
 
-3. For your instances of the Natural Language Classifier, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
+3. For your instances of the Weather Company Data, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
 
 4. To configure your instance of **Conversation**, navigate to **DOWNLOADS** on the left of your Intu Gateway browser page, download the **Intu Starter Kit**, and follow the instructions in the `readme.txt` file. Alternatively, go to the instructions for **Workshop 2**, and follow the steps in: **1. Setting up the Conversation service**.
  
