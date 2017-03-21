@@ -117,7 +117,7 @@ Follow the instructions for your platform.
 		If you see this message, you will need to update **Xcode**.
 	
 3. Download **Anaconda 4.2.0 Python 2.7 version** by using the **Graphical Installer**. It is required to correctly configure pip in the following step.
-   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://repo.continuum.io/archive/.winzip/). Look for Anaconda2-4.2.0-MacOSX-x86_64.pkg. These instructions and the workshop have not been tested on Python 3.x
+   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://repo.continuum.io/archive/index.html). Choose relevant pkg file based on your environment whose name starts from Anaconda2-4.2.0. Please note that Anaconda2 signifies Python version starting with 2 and Anaconda3 signifies Python version starting with 3. These instructions and the workshop have not been tested on Python 3.x
    2. Click the solid blue GRAPHICAL INSTALLER button for Python 2.7 Version. It should be 403 MB. The .pkg file downloads.
    3. After the file is downloaded, double-click it, and follow the prompts to install Anaconda.
    4. Open a **new** Terminal window and make sure your version of Python has been successfully updated by running the command: `python --version` 
