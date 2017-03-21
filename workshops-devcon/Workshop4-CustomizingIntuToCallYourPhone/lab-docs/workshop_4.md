@@ -118,5 +118,6 @@ To configure Intu to use your instances of these Watson services, log in to to t
 
 2. Select your Organization and Group in the top Filter by menu, if not already selected.
 3. For your instances of the Conversation, Weather Company Data, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
+4. To configure your instance of **Conversation**, navigate to **DOWNLOADS** on the left of your Intu Gateway browser page, download the **Intu Starter Kit**, and follow the instructions in the `readme.txt` file. Alternatively, go to the instructions for **Workshop 2**, and follow the steps in: **1. Setting up the Conversation service**.
 
 **Important:** Do not change the service endpoint unless you are an enterprise user.
