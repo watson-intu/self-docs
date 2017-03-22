@@ -70,7 +70,7 @@ Follow the instructions for your platform.
 
 2. Create a new directory named **intu** in a directory of your choosing.
 
-3. Unzip the **wlabs_self-sdk-master.zip** file into the **intu** directory, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **wlabs_self-sdk-master** folder. This may take some time.
+3. Unzip the **wself-sdk-master.zip** file into the **intu** directory, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
 
 ### A. Preparing for OS X
 
@@ -117,7 +117,7 @@ Follow the instructions for your platform.
 		If you see this message, you will need to update **Xcode**.
 	
 3. Download **Anaconda 4.2.0 Python 2.7 version** by using the **Graphical Installer**. It is required to correctly configure pip in the following step.
-   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://www.continuum.io/downloads). These instructions and the workshop have not been tested on Python 3.x
+   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://repo.continuum.io/archive/index.html). Choose relevant file based on your environment (pkg for Mac) whose name starts from Anaconda2-4.2.0. Please note that Anaconda2 signifies Python 2.x and Anaconda3 signifies Python 3.x. These instructions and the workshop have not been tested on Python 3.x
    2. Click the solid blue GRAPHICAL INSTALLER button for Python 2.7 Version. It should be 403 MB. The .pkg file downloads.
    3. After the file is downloaded, double-click it, and follow the prompts to install Anaconda.
    4. Open a **new** Terminal window and make sure your version of Python has been successfully updated by running the command: `python --version` 
@@ -134,7 +134,7 @@ Follow the instructions for your platform.
 
 ### B. Building the Self SDK for OS X
 
-1. In a new Terminal window, navigate to the **wlabs_self-sdk-master** directory inside **intu**. You should just be able to run: `cd intu/wlabs_self-sdk-master` 
+1. In a new Terminal window, navigate to the **self-sdk-master** directory inside **intu**. You should just be able to run: `cd intu/self-sdk-master` 
 
 	**Note:** If you have **already built the Self SDK for OS X** in another workshop, run: `./scripts/clean.sh`    
 
@@ -182,7 +182,7 @@ Known toolchains are:
 
 1. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/).
 
-2. In **CLion**, select **Open** -> **your home directory** -> **intu** -> **wlabs_self-sdk-master** and click **OK**. 
+2. In **CLion**, select **Open** -> **your home directory** -> **intu** -> **self-sdk-master** and click **OK**. 
 
 	Note that a window may appear prompting you to open your project in a New Window or This Window. Select **New Window**. At the bottom of your CLion window, in the Problems tab, you will see the following Error, which you do not need to worry about:
 
@@ -191,7 +191,7 @@ Could not find a package configuration file provided by "SELF" with any of the f
   SELFConfig.cmake   self-config.cmake
 Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to a directory containing one of the above files.  If "SELF" provides a separate development package or SDK, be sure it has been installed.
 
-	2i. Inside the CLion **wlabs_self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_three** for the new directory name, and click **OK**.
+	2i. Inside the CLion **self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_three** for the new directory name, and click **OK**.
  
 	2ii. Right-click the `CMakeLists.txt` file in the **examples** directory, and click **Copy**. (If you are unsure of the directory you are in, look in the top-left navigation bar.)
   
@@ -220,13 +220,13 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 4. Locate the Workshop 3 code snippet files **to be filled in** in:
 
- `wlabs_self-sdk-master/docs/workshops-devcon/3/code-snippets/WorkshopThreeAgent_start`
+ `self-docs/workshops-devcon/Workshop-CreatingAnEmotionAgent/code-snippets/WorkshopThreeAgent_Start/`
 
 5. Copy the `WorkshopThreeAgent.cpp` and the `WorkshopThreeAgent.h` files and paste them into the **agents** directory that you created.
 
 **For Windows users:**
 
-1. Open up File Explorer and navigate to **intu/wlabs_self-sdk-master/examples**.
+1. Open up File Explorer and navigate to **intu/self-sdk-master/examples**.
 
 2. Create a new directory in examples called **workshop_three**. 
 
@@ -246,7 +246,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 10. Right-click on **agent**, and select **Add -> Existing Items**.
 
-11. Navigate to **wlabs_self-sdk-master/examples/workshop_three** and select the files: `WorkshopThreeAgent.cpp` and `WorkshopThreeAgent.h`.
+11. Navigate to **self-sdk-master/examples/workshop_three** and select the files: `WorkshopThreeAgent.cpp` and `WorkshopThreeAgent.h`.
 
 12. Right-click the **workshop_three_plugin** solution, open **Properties**, and make the following changes, but **before you begin, make sure Configuration at the top left is set to "All Configurations"**.
 
@@ -296,7 +296,7 @@ In the next step, you will build out the **OnText**, **OnTone** and **OnLearning
 
 **For OS X and Windows users:**
 
-1. In **wlabs_self-sdk-master****/docs/workshops-devcon/3/code-snippets/WorkshopThree_Snippets**, you will see the `WorkshopThreeCodeSnippets.txt` file. Open this file and find the OnText, OnTone and OnLearningIntent functions.
+1. In **self-sdk-master****/docs/workshops-devcon/3/code-snippets/WorkshopThree_Snippets**, you will see the `WorkshopThreeCodeSnippets.txt` file. Open this file and find the OnText, OnTone and OnLearningIntent functions.
 
 2. From `WorkshopThreeCodeSnippets.txt`, for the **OnText()** function, copy the code directly below **//Code for OnText()**. Now paste this inside the function body **{}** of **OnText()** in `WorkshopThreeAgent.cpp`, which is located inside your **agents** directory. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
   
@@ -387,15 +387,13 @@ First, this code iterates over the response to find the emotion that has the hig
 
 **Additional steps for OS X users:**
 
-1. Open a **new** Terminal window and navigate to **intu/wlabs_self-sdk-master** by running: `cd intu/wlabs_self-sdk-master`.
+1. Open a **new** Terminal window and navigate to **intu/self-sdk-master** by running: `cd intu/self-sdk-master`.
 
 	**Note:** If you have built the SDK in a previous workshop, make sure you run: `./scripts/clean.sh`.
 
 2. Run the build script: `./scripts/build_mac.sh`. **Do not close this Terminal window.**
 
-**Congratulations!** You just built all the functions required for the emotion agent. This process created the `libworkshop_three_plugin.dylib` in the **intu/wlabs_self-sdk-master/bin/mac** directory.
-
-In the next task, you will update the `body.json` file also located in the **intu/wlabs_self-sdk-master/bin/mac/etc/profile** directory to include the new plugin so that Intu can use it.
+**Congratulations!** You just built all the functions required for the emotion agent. This process created the `libworkshop_three_plugin.dylib` in the **intu/self-sdk-master/bin/mac** directory.
 
 
 ## 4. Configuring your Intu instance to include the emotion agent
@@ -433,7 +431,7 @@ In the next task, you will update the `body.json` file also located in the **int
 
 **For OS X users:**
 
-1. Return to your most recent Terminal window, where you should already be in the **mac** directory. Otherwise, open a **new** Terminal window and navigate to this directory by running: `cd intu/wlabs_self-sdk-master/bin/mac`
+1. Return to your most recent Terminal window, where you should already be in the **mac** directory. Otherwise, open a **new** Terminal window and navigate to this directory by running: `cd intu/self-sdk-master/bin/mac`
 
 2. Run: `export LD_LIBRARY_PATH=./`
 3. Run Intu by issuing the following command: `./self_instance`
