@@ -107,6 +107,8 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 4. Ensure ssh is enabled on your Raspberry Pi.
 	1.	    sudo raspi-config
 	2.	    Advanced Options -> SSH -> Enable
+	
+Note: If this doesn't work, then try the following command on the terminal `sudo service ssh restart`
 5.	Get the IP address of your Raspberry Pi.
 	1.	Click on the black **Terminal** icon on the top left toolbar.
 	2.	Type in `ifconfig` and hit Enter.
@@ -128,9 +130,7 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 **Note:** If any step below fails or errors, run: `sudo apt-get update`, then repeat the step.
 
-1.	Open up a new browser window on your Raspberry Pi and download [**Anaconda 4.2.0 For Linux Python 2.7 version**](https://www.continuum.io/downloads).
-
-	**Make sure you download the correct version.** You need the **Linux** version regardless of the operating system that you have. 
+1.	Download Anaconda on the Raspberry Pi: `wget https://repo.continuum.io/archive/Anaconda2-4.2.0-Linux-x86.sh`
 
 2.	Install Anaconda on your Raspberry Pi and set up the qiBuild.
 	
@@ -177,13 +177,13 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 1. [Download the Self SDK](https://github.com/watson-intu/self-sdk). Make sure the branch is master and click on download.
 2. Create a new directory named **intu** in your **home** directory.
 
-3. Unzip the **wlabs_self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **wlabs_self-sdk-master** folder. This may take some time.
+3. Unzip the **self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
 
 ### B. Creating the LED gesture on OS X
 
 1. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/).
 
-2. In **CLion**, select Open -> home directory -> intu -> wlabs_self-sdk-master and click **OK**. 
+2. In **CLion**, select Open -> home directory -> intu -> self-sdk-master and click **OK**. 
 
 	Note that a window may appear prompting you to open your project in a New Window or This Window. Select **New Window**. At the bottom of your CLion window, in the Problems tab, you will see the following Error, which you do not need to worry about:
 	
@@ -194,7 +194,7 @@ Could not find a package configuration file provided by "SELF" with any of the f
 Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to a directory containing one of the above files.  If "SELF" provides a separate development package or SDK, be sure it has been installed.
 	```
 
- 2i. Inside the CLion **wlabs_self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_five** for the new directory name, and click **OK**.
+ 2i. Inside the CLion **self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_five** for the new directory name, and click **OK**.
  
  2ii. Right-click the `CMakeLists.txt` file in the **examples** directory, and click **Copy**. (If you are unsure of the directory you are in, look in the top-left navigation bar.)
   
@@ -218,8 +218,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 3. Create a new directory inside **workshop_five** called **gestures**.
 
 4. Locate the Workshop 5 code snippet files **to be filled in** in:
-
- `wlabs_self-sdk-master/docs/workshops-devcon/5/code-snippets/WorkshopFiveGesture_start`
+`self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_start/`
 
 5. Copy the `WorkshopFiveGesture.cpp` and the `WorkshopFiveGesture.h` files and paste them into the **gestures** directory that you created.
 
@@ -229,7 +228,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 	* In the next step, you will build out the **DoAnimateThread** function using the example code provided.
 
-6. In **wlabs_****self-sdk-master/docs/workshops-devcon/5/code-snippets/WorkshopFive_Snippets**, you will see the `WorkshopFiveCodeSnippets.txt` file. Open this file and find the **DoAnimateThread** function.
+6. In **self-sdk-master/docs/workshops-devcon/5/code-snippets/WorkshopFive_Snippets**, you will see the `WorkshopFiveCodeSnippets.txt` file. Open this file and find the **DoAnimateThread** function.
 
 7. Copy the entire contents of `WorkshopFiveCodeSnippets.txt ` for the **DoAnimateThread()** function. Paste this inside the function body **{}** of **DoAnimateThread()** in `WorkshopFiveGesture.cpp` located in your **gestures** directory, directly above the line of code which reads: `Log::Debug("WorkshopFiveGesture", "in DoAnimateThread");`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
 
@@ -276,7 +275,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 2. In your home directory, create a new directory called **workshop_five**, and a second directory called **gestures** inside **workshop_five**.
 
-3. Navigate to **wlabs_****self-sdk-master/docs/workshops-devcon/5/code-snippets/WorkshopFiveGesture_Start/**, where you will find the following two files:
+3. Navigate to **self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_start/**, where you will find the following two files:
 	
 	`WorkshopFiveGesture.cpp` 
 	
@@ -284,7 +283,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 		
 4. Copy `WorkshopFiveGesture.cpp` and `WorkshopFiveGesture.h` from **WorkshopFiveGesture_Start/** to the **gestures** directory which you just created.
 	
-5. Now navigate to **wlabs_****self-sdk-master/docs/workshops-devcon/5/code-snippets/WorkshopFiveGesture_Snippets** and locate the `WorkshopFiveCodeSnippets.txt` file and find the **DoAnimateThread** function.
+5. Now navigate to **self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_Snippets** and locate the `WorkshopFiveCodeSnippets.txt` file and find the **DoAnimateThread** function.
 
 6. Copy the entire contents of `WorkshopFiveCodeSnippets.txt ` for the **DoAnimateThread()** function. Paste this inside the function body **{}** of **DoAnimateThread()** in `WorkshopFiveGesture.cpp` located in your **gestures** directory, directly above the line of code which reads: `Log::Debug("WorkshopFiveGesture", "in DoAnimateThread");`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
 
@@ -348,7 +347,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 1.	Copy the **workshop_five** directory from your local machine over to your Raspberry Pi. 
    
    **For Mac users:** 
-   1. Open a new terminal window and navigate to the **examples** directory (the parent directory of workshop_five) by running: `cd intu/wlabs_self-sdk-master/examples`
+   1. Open a new terminal window and navigate to the **examples** directory (the parent directory of workshop_five) by running: `cd intu/self-sdk-master/examples`
    2. Run: `scp -r workshop_five pi@{pi's_ip_address}:~/intu/self-sdk-master/examples`
 
 	**For Windows users:** 
@@ -360,7 +359,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 		4. In the **Port** field, specify **22**.  	
 	2. Navigate to **intu/self-sdk-master/examples/** on the **Remote site** side of the screen.
 	
-	3. Navigate to the **intu/wlabs_self-sdk-master/examples/** directory on the **Local site** side of the screen.
+	3. Navigate to the **intu/self-sdk-master/examples/** directory on the **Local site** side of the screen.
 	
 	4. Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 
@@ -398,12 +397,12 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 
-4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **wlabs_self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
+4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
 
 ### B. Configuring your `body.json` file
-1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the move_joint_plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
+1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 
-    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
+    1. On your Raspberry Pi open your `body.json` file located at `self-sdk-master/bin/raspi/etc/profile/body.json`
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
@@ -444,7 +443,7 @@ When Intu starts, it will give a notification like "Ah, I feel so much better". 
 ### What did we learn?
 When Intu is asked "can you laugh" or "tell me a joke" and the Blackboard receives a [emote=show_laugh], how does Intu know that the LED gesture should be executed?
 
-It is from the configuration file `raspi.anims`, in `Intu/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
+It is from the configuration file `raspi.anims`, in `Intu/self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
 # Workshop 5 Extra Credit – Using Intu to Make a TJBot's Arm Wave
 
@@ -476,7 +475,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 ## 2. Creating  the Waving Arm Gesture with INTU
 1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final. 
 2. We have found the CLion IDE to be an nice environment for this type of work. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/). (Alternatively, You may also use your favorite text editor and just follow the steps below.)
-3. Inside the **wlabs_self-sdk-master** project navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
+3. Inside the **self-sdk-master** project navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
 4. Edit the `examples/CMakeLists.txt` file to look like:
 	```
 	include_directories(".")
@@ -493,7 +492,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 1. Copy the entire **examples/move_arm_joint** directory from your local machine over to your Raspberry Pi.
 
     **For Mac users:** 
-    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd self/wlabs_self-sdk-master/examples`
+    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd self/self-sdk-master/examples`
     2. Run: `scp -r move_arm_joint pi@{IPaddress}:~/self/self-sdk-master/examples`
 
     **For Windows users:** 
@@ -504,7 +503,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
     4. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
     5. In the **Port** field, specify **22**.  	
     6. Navigate to **self/self-sdk-master/examples** on the **Remote site** side of the screen.
-    7.Navigate to the **self/wlabs_self-sdk-master/examples** directory on the **Local site** side of the screen.
+    7.Navigate to the **self/self-sdk-master/examples** directory on the **Local site** side of the screen.
     8.Drag your **move_arm_joint** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 2. Build Self on your Raspberry Pi with the following steps:
 
@@ -519,7 +518,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 ## 4. Configuring your `body.json` file
 1. We will add a few extra parameters to the body.json:
 
-    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
+    1. On your Raspberry Pi open your `body.json` file located at `self-sdk-master/bin/raspi/etc/profile/body.json`
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
@@ -549,9 +548,9 @@ You have now added a gesture for moving a joint with INTU.  When you say, "Raise
 
 
 ### Wait, wait, wait, but how does it work?
-When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
+When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
 
-It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
+It is from the configuration file `raspi.anims`, in `self/self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
 
 # Extra Extra Credit: Teaching your TJBot to wave
@@ -836,7 +835,7 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 
 ###You are now ready to proceed from **Section 3: Download the Self SDK onto your computer and add in the code for the LED gesture.** 
 
-As you have already downloaded the `wlabs_self-sdk-master.zip` file, your first step will be **Section 3.A.2:** Create a new directory named **intu** in your **home** directory
+As you have already downloaded the `self-sdk-master.zip` file, your first step will be **Section 3.A.2:** Create a new directory named **intu** in your **home** directory
 .
 
 **Code Overview**
