@@ -220,7 +220,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 4. Locate the Workshop 3 code snippet files **to be filled in** in:
 
- `self-docs/workshops-devcon/Workshop-CreatingAnEmotionAgent/code-snippets/WorkshopThreeAgent_Start/`
+ `self-docs/workshops-devcon/Workshop3-CreatingAnEmotionAgent/code-snippets/WorkshopThreeAgent_Start/`
 
 5. Copy the `WorkshopThreeAgent.cpp` and the `WorkshopThreeAgent.h` files and paste them into the **agents** directory that you created.
 
