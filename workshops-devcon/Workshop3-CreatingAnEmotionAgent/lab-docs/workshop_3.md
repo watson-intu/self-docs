@@ -70,7 +70,7 @@ Follow the instructions for your platform.
 
 2. Create a new directory named **intu** in a directory of your choosing.
 
-3. Unzip the **wself-sdk-master.zip** file into the **intu** directory, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
+3. Unzip the **self-sdk-master.zip** file into the **intu** directory, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
 
 ### A. Preparing for OS X
 
