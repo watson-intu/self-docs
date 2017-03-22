@@ -465,16 +465,6 @@ Now that you are familiar with the Raspberry Pi we can take this to the next sta
     7. The basic workshop 5
 5. *Note:* You will notice that Intu and Self are used interchangeably. Self is the code name for Intu.  
 
-
-In this lab you will complete the following tasks:
-
-1. [Assembling the Raspberry Pi](#assembling-the-raspberry-pi)
-2. [Set up the Wi-Fi connection for your Raspberry Pi](#set-up-the-wi-fi-connection-for-your-raspberry-pi)
-3. [Download the Self SDK onto your computer and add in the code for waving the arm gesture](#download-the-self-sdk-onto-your-computer-and-add-in-the-code-for-the-led-gesture)
-4. [Updating your Raspberry Pi with the Move Joint Gesture](#updating-your-raspberry-pi-with-the-led-gesture)
-5. [Updating the config.json and body.json](#Updating-the-config.json-and-body.json)
-6. [Run Intu on your Raspberry Pi](#run-intu-on-your-raspberry-pi)
-
 ## 1. Adding the Servo Motor
 
 ### A. Connecting the Servo Motor
@@ -484,7 +474,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 ![Board Layout for Servo](./sevo_pin_layout.png?raw=true)
 
 ## 2. Creating  the Waving Arm Gesture with INTU
-1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Final. 
+1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final. 
 2. We have found the CLion IDE to be an nice environment for this type of work. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/). (Alternatively, You may also use your favorite text editor and just follow the steps below.)
 3. Inside the **wlabs_self-sdk-master** project navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
 4. Edit the `examples/CMakeLists.txt` file to look like:
@@ -495,10 +485,10 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	add_subdirectory(sensor)
 	add_subdirectory(workshop_five)
 	```
-5. Next we will move the files from **docs/workshops-devcon/5.5/code-snippets/TJBotWave_Final/examples/move_arm_joint/** into the **move_arm_joint** directory. There should be 3 new files: CMakeLists.txt, RaspiMoveJointGesture.cpp, and RaspiMoveJointGesture.h now inside the **move_arm_joint** folder.
+5. Next we will move the files from **self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final/examples/move_arm_joint/** into the **move_arm_joint** directory. There should be 3 new files: CMakeLists.txt, RaspiMoveJointGesture.cpp, and RaspiMoveJointGesture.h now inside the **move_arm_joint** folder.
 6. Take a few moments to look at all three of these files as they are the core of the code that acts as a plugin to INTU allowing it to control the Raspberry Pi's GPIO pins (with PWM) allowing the arm to move. 
  
-## 4. Updating your Raspberry Pi with the move joint gesture
+## 3. Updating your Raspberry Pi with the move joint gesture
 
 1. Copy the entire **examples/move_arm_joint** directory from your local machine over to your Raspberry Pi.
 
@@ -516,7 +506,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
     6. Navigate to **self/self-sdk-master/examples** on the **Remote site** side of the screen.
     7.Navigate to the **self/wlabs_self-sdk-master/examples** directory on the **Local site** side of the screen.
     8.Drag your **move_arm_joint** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
-4. Build Self on your Raspberry Pi with the following steps:
+2. Build Self on your Raspberry Pi with the following steps:
 
 	1.	Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
 	
@@ -526,7 +516,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	
 	4. Run: `scripts/build_raspi.sh`
 
-### B. Configuring your `body.json` file
+## 4. Configuring your `body.json` file
 1. We will add a few extra parameters to the body.json:
 
     1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
@@ -537,7 +527,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
-### C. Go ahead and rebuild and rerun self:
+## 5. Go ahead and rebuild and rerun self:
 1. Rebuild:
 
 	1. Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
@@ -559,12 +549,12 @@ You have now added a gesture for moving a joint with INTU.  When you say, "Raise
 
 
 ### Wait, wait, wait, but how does it work?
-When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
+When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
 
 It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
 
-## 7. Extra Extra Credit: Teaching your TJBot to wave
+# Extra Extra Credit: Teaching your TJBot to wave
 1. In this section we will explore how to make your TJBot go through and interaction like:
 ```
 Human: "Wave to the crowd"
