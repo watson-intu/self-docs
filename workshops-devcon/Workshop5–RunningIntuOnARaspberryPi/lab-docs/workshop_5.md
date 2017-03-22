@@ -446,6 +446,198 @@ When Intu is asked "can you laugh" or "tell me a joke" and the Blackboard receiv
 
 It is from the configuration file `raspi.anims`, in `Intu/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
+# Workshop 5 Extra Credit – Using Intu to Make a TJBot's Arm Wave
+
+Now that you are familiar with the Raspberry Pi we can take this to the next stage and start working with the servo motor. You will program a Move Joint gesture for Intu, and run Intu off of your Raspberry Pi and see your TJBot's arm in action.
+
+**Before you begin:** 
+
+1. You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. After completing Workshop 1, you will have:
+2. Your own account, Organization, Group and Parent on the [Intu Gateway](rg-`gateway.mybluemix.net`)
+3. Your own [Intu Gateway](rg-`gateway.mybluemix.net`) credentials 
+4. You must have the following to complete Workshop 5 Extra Credit:
+    1. Raspberry Pi 3 with power cable
+    2. Anker Bluetooth Speaker with power cable and 3.5mm audio cable
+    3. USB Mini Microphone
+    4. Monitor (with a HDMI connection)
+    5. Keyboard and Mouse (with USB connections)
+    6. An imaged 32 GB SD card (16 GB would also work)
+    7. The basic workshop 5
+5. *Note:* You will notice that Intu and Self are used interchangeably. Self is the code name for Intu.  
+
+## 1. Adding the Servo Motor
+
+### A. Connecting the Servo Motor
+
+As part of this lab we will be using the Tower Pro SG90 micoservo. You can see the pin out of this servo motor [here](./SG90Servo.pdf). You will need to connect the servo motor to the Raspi Board as below:
+
+![Board Layout for Servo](./sevo_pin_layout.png?raw=true)
+
+## 2. Creating  the Waving Arm Gesture with INTU
+1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final. 
+2. We have found the CLion IDE to be an nice environment for this type of work. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/). (Alternatively, You may also use your favorite text editor and just follow the steps below.)
+3. Inside the **wlabs_self-sdk-master** project navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
+4. Edit the `examples/CMakeLists.txt` file to look like:
+	```
+	include_directories(".")
+	
+	add_subdirectory(move_arm_joint)
+	add_subdirectory(sensor)
+	add_subdirectory(workshop_five)
+	```
+5. Next we will move the files from **self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final/examples/move_arm_joint/** into the **move_arm_joint** directory. There should be 3 new files: CMakeLists.txt, RaspiMoveJointGesture.cpp, and RaspiMoveJointGesture.h now inside the **move_arm_joint** folder.
+6. Take a few moments to look at all three of these files as they are the core of the code that acts as a plugin to INTU allowing it to control the Raspberry Pi's GPIO pins (with PWM) allowing the arm to move. 
+ 
+## 3. Updating your Raspberry Pi with the move joint gesture
+
+1. Copy the entire **examples/move_arm_joint** directory from your local machine over to your Raspberry Pi.
+
+    **For Mac users:** 
+    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of move_arm_joint) by running: `cd self/wlabs_self-sdk-master/examples`
+    2. Run: `scp -r move_arm_joint pi@{IPaddress}:~/self/self-sdk-master/examples`
+
+    **For Windows users:** 
+
+    1. Open Filezilla and connect to your Raspberry Pi. 
+    2. In the **Host** field, specify your Raspberry Pi's IP address.
+    3. In the **Username** field, specify your Raspberry Pi's username (**pi**).
+    4. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
+    5. In the **Port** field, specify **22**.  	
+    6. Navigate to **self/self-sdk-master/examples** on the **Remote site** side of the screen.
+    7.Navigate to the **self/wlabs_self-sdk-master/examples** directory on the **Local site** side of the screen.
+    8.Drag your **move_arm_joint** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
+2. Build Self on your Raspberry Pi with the following steps:
+
+	1.	Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
+	
+	2.	Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
+	
+	3. Run: `scripts/clean.sh` 
+	
+	4. Run: `scripts/build_raspi.sh`
+
+## 4. Configuring your `body.json` file
+1. We will add a few extra parameters to the body.json:
+
+    1. On your Raspberry Pi open your `body.json` file using your favorite text editor. 
+
+    2. Locate the `m_Libs` variable, and change it to read: 
+    
+    	`"m_Libs":["platform_raspi", "move_joint_plugin", "workshop_five_plugin"]` 
+    
+    	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
+
+## 5. Go ahead and rebuild and rerun self:
+1. Rebuild:
+
+	1. Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
+	
+	2. Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
+
+	3. Run: `scripts/clean.sh` 
+
+	4. Run: `scripts/build_raspi.sh`
+
+2. Rerun:
+
+	1. Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
+
+	2. Run: `./run_self.sh`
+
+
+You have now added a gesture for moving a joint with INTU.  When you say, "Raise your right arm?" or "Lower your right arm" to the robot, the TJBot should move it arm. 
+
+
+### Wait, wait, wait, but how does it work?
+When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
+
+It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
+
+
+# Extra Extra Credit: Teaching your TJBot to wave
+1. In this section we will explore how to make your TJBot go through and interaction like:
+```
+Human: "Wave to the crowd"
+TJBot: "I do not know how to Wave"
+Human: "Raise your left arm"
+TJBot: [you see physical action perfored]
+Human: "Lower your left arm"
+TJBot: [you see physical action perfored]
+Human: "That is how you wave"
+TJBot: "I now know how to wave"
+Human: "Wave to the crowd"
+TJBot: [you see BOTH physical action perfored]
+```
+2. To do this all we need to do is add Alchemy into your registered services on the gateway and the update your body.json and config.json like you did above.
+
+	1. The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create an instance of Alchemy. Once you have done that grab the "apikey":
+	 ![Getting the Alchemy API Key.](./FindingAlchemyOnBluemix.png?raw=true)
+
+	2. The next step is to update your subscribed services on the [Intu Gateway](rg-gateway.mybluemix.net). Once you login use the left hand bar to navigate to MANAGE->Services like:
+    	![Finding the service managment page.](./GoingToManageServices.png?raw=true)
+
+	3. The final step is to click "Add Service" and fill it in with:
+
+	```
+	SERVICE NAME: AlchemyV1
+	USER ID: Your_Alchemy_API_Key
+	SERVICE ENDPOINT: http://gateway-a.watsonplatform.net/calls
+	```
+	**LEAVE THE PASSWORD FIELD BLANK**
+	
+	It will look like this when you are done:
+	![Filling in the Alchemy API Key.](./FillInAlchemy.png?raw=true)
+	    
+	4. Now you want to use the left nav bar on the gateway to navigate to "VIEW CREDENTIALS" and keep a copy of them for the next step.
+	![Gateway Creds Copy Paste.](./CopyingGatewayCredentials.png?raw=true)
+
+3. You will want to also follow the steps in Section 5 [Updating the body.json configuration](#updating-the-body.json-configuration) to make sure your new Alchemy credentials are accessable by Intu on the Raspi. (Specifically the steps about updating the "m_EmbodimentCreds")
+	
+	1. Open your `body.json` (/home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json) file using your favorite text editor. 
+	
+	2. Locate the `m_Libs` variable, and change it to read: 
+	`"m_Libs":["platform_raspi", "move_joint_plugin"]` 
+	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
+	
+	1. Open your `config.json` (/home/pi/self/self-sdk-master/bin/raspi/config.json) file using your favorite text editor. 
+	
+	3. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
+	
+	4. Save your changes and close the file.
+
+
+4. Go ahead and rebuild and rerun self:
+	1. Rebuild:
+
+		1. Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
+		
+		2. Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
+	
+		3. Run: `scripts/clean.sh` 
+	
+		4. Run: `scripts/build_raspi.sh`
+
+	2. Rerun:
+	
+		1. Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
+	
+		2. Run: `./run_self.sh`
+	
+6. Now try going through the below interactions with your TJBot. If all goes well you can now teach it more complex interactions. Congratulations on completing this workshop!
+
+```
+Human: "Wave to the crowd"
+TJBot: "I do not know how to Wave"
+Human: "Raise your right arm"
+TJBot: [you see physical action perfored]
+Human: "Lower your right arm"
+TJBot: [you see physical action perfored]
+Human: "That is how you wave"
+TJBot: "I now know how to wave"
+Human: "Wave to the crowd"
+TJBot: [you see BOTH physical action perfored]
+```
+
 # Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)
  
 **Note:** Commands are assumed to be issued from **Terminal** on **Mac** or **PuTTY** on **Windows**. For **Windows** users, if you do not have **PuTTY** installed, you can download it using this [link](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). **Windows** users will also require a file management tool to copy files over a network between their local machine and the Raspberry Pi. You can use a stand-alone tool like **Filezilla**. **Filezilla** can be downloaded using this [link](https://filezilla-project.org/).
