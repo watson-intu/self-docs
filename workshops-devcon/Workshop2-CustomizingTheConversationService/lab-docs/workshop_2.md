@@ -41,7 +41,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 3. Return to the Conversation service window in Bluemix (left open in your browser in step 4 above), and select **Manage**.
 
-4. Click **Launch tool**. You are directed to the Watson Conversation page. Click **Log in with IBM ID** if you see this window. 
+4. Click **Launch tool**. You are directed to the Watson Conversation page. Click **Log in with IBM ID** if you see this window. Note: If you encounter an error saying *Insufficient Privileges*, reopen Conversation in a different web browser.
  
 5. **Do not create a new workspace.** Click the **Import** icon next to the green **Create +** button.
 
