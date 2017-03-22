@@ -474,7 +474,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 ![Board Layout for Servo](./sevo_pin_layout.png?raw=true)
 
 ## 2. Creating  the Waving Arm Gesture with INTU
-1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Final. 
+1. To create this in the Raspberry Pi we are going to recreate the folder structure under **examples** that is found in this repo under self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final. 
 2. We have found the CLion IDE to be an nice environment for this type of work. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/). (Alternatively, You may also use your favorite text editor and just follow the steps below.)
 3. Inside the **wlabs_self-sdk-master** project navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
 4. Edit the `examples/CMakeLists.txt` file to look like:
@@ -485,7 +485,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	add_subdirectory(sensor)
 	add_subdirectory(workshop_five)
 	```
-5. Next we will move the files from **docs/workshops-devcon/5.5/code-snippets/TJBotWave_Final/examples/move_arm_joint/** into the **move_arm_joint** directory. There should be 3 new files: CMakeLists.txt, RaspiMoveJointGesture.cpp, and RaspiMoveJointGesture.h now inside the **move_arm_joint** folder.
+5. Next we will move the files from **self-sdk/docs/workshops-devcon/5/code-snippets/TJBotWave_Final/examples/move_arm_joint/** into the **move_arm_joint** directory. There should be 3 new files: CMakeLists.txt, RaspiMoveJointGesture.cpp, and RaspiMoveJointGesture.h now inside the **move_arm_joint** folder.
 6. Take a few moments to look at all three of these files as they are the core of the code that acts as a plugin to INTU allowing it to control the Raspberry Pi's GPIO pins (with PWM) allowing the arm to move. 
  
 ## 3. Updating your Raspberry Pi with the move joint gesture
@@ -549,7 +549,7 @@ You have now added a gesture for moving a joint with INTU.  When you say, "Raise
 
 
 ### Wait, wait, wait, but how does it work?
-When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5.5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
+When Intu is asked "Raise your right arm?" Blackboard receives a [r_hand_raise] by looking at the configuration file located in self-sdk/tree/develop/docs/workshops-devcon/5/code-snippets/TJBotWave_Reference/. Under this folder you will find **two** raspi-joints.json files. First an internal graph sturcture will traverse for a phrase mathcing for "right arm" then the instance will decide that the r_hand_raise gesture is the matching the spoken input (See the file located at: self/wlabs_self-sdk-master/bin/raspi/etc/shared/self_requests.json). Then under **skills/rasip-joints.json** you will see that r_hand_raise maps to a gesture with the same name, r_hand_raise. Under **gestures/rasip-joints.json** we will see concretely how we parameterize the arm movement. 
 
 It is from the configuration file `raspi.anims`, in `self/wlabs_self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
