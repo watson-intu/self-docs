@@ -465,16 +465,6 @@ Now that you are familiar with the Raspberry Pi we can take this to the next sta
     7. The basic workshop 5
 5. *Note:* You will notice that Intu and Self are used interchangeably. Self is the code name for Intu.  
 
-
-In this lab you will complete the following tasks:
-
-1. [Assembling the Raspberry Pi](#assembling-the-raspberry-pi)
-2. [Set up the Wi-Fi connection for your Raspberry Pi](#set-up-the-wi-fi-connection-for-your-raspberry-pi)
-3. [Download the Self SDK onto your computer and add in the code for waving the arm gesture](#download-the-self-sdk-onto-your-computer-and-add-in-the-code-for-the-led-gesture)
-4. [Updating your Raspberry Pi with the Move Joint Gesture](#updating-your-raspberry-pi-with-the-led-gesture)
-5. [Updating the config.json and body.json](#Updating-the-config.json-and-body.json)
-6. [Run Intu on your Raspberry Pi](#run-intu-on-your-raspberry-pi)
-
 ## 1. Adding the Servo Motor
 
 ### A. Connecting the Servo Motor
