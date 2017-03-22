@@ -588,25 +588,8 @@ TJBot: [you see BOTH physical action perfored]
 	It will look like this when you are done:
 	![Filling in the Alchemy API Key.](./FillInAlchemy.png?raw=true)
 	    
-	4. Now you want to use the left nav bar on the gateway to navigate to "VIEW CREDENTIALS" and keep a copy of them for the next step.
-	![Gateway Creds Copy Paste.](./CopyingGatewayCredentials.png?raw=true)
 
-3. You will want to also follow the steps in Section 5 [Updating the body.json configuration](#updating-the-body.json-configuration) to make sure your new Alchemy credentials are accessable by Intu on the Raspi. (Specifically the steps about updating the "m_EmbodimentCreds")
-	
-	1. Open your `body.json` (/home/pi/self/self-sdk-master/bin/raspi/etc/profile/body.json) file using your favorite text editor. 
-	
-	2. Locate the `m_Libs` variable, and change it to read: 
-	`"m_Libs":["platform_raspi", "move_joint_plugin"]` 
-	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
-	
-	1. Open your `config.json` (/home/pi/self/self-sdk-master/bin/raspi/config.json) file using your favorite text editor. 
-	
-	3. Locate `"m_EmbodimentCreds":{ ... }`, and replace this with the complete set of credentials you copied over into your text editor from the Intu Gateway in step 4 of the previous section.
-	
-	4. Save your changes and close the file.
-
-
-4. Go ahead and rebuild and rerun self:
+3. Go ahead and rebuild and rerun self:
 	1. Rebuild:
 
 		1. Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
@@ -623,7 +606,7 @@ TJBot: [you see BOTH physical action perfored]
 	
 		2. Run: `./run_self.sh`
 	
-6. Now try going through the below interactions with your TJBot. If all goes well you can now teach it more complex interactions. Congratulations on completing this workshop!
+4. Now try going through the below interactions with your TJBot. If all goes well you can now teach it more complex interactions. Congratulations on completing this workshop!
 
 ```
 Human: "Wave to the crowd"
