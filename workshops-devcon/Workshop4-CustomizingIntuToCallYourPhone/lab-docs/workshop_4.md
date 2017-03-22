@@ -60,9 +60,11 @@ All plans are loaded when Intu starts. When a goal object is placed on the black
 
 1. Locate the **plans** directory where you will be modifying your plan. If you used the Intu INSTALLER (from the Intu Gateway) to install Intu in Workshop 1, the path is:
 
-	**For Mac users:** /Applications/IBM/Self/latest/etc/shared/plans
+	* **For Mac users:** /Applications/IBM/Self/latest/etc/shared/plans
 	
-	**For Windows users:** C:\Users\username\AppData\LocalLow\IBM\Self\latest\etc\shared\latest\plans
+	* **For Windows users:** C:\Users\username\AppData\LocalLow\IBM\Self\{VERSION}\etc\shared\plans
+	
+	*Note for Windows Users:* replace {VERSION} with the latest version of Intu you installed. You can look in the *Self* directory to see which one is the newest.
 
 2.  Open the `default.json` file in the **plans** directory using your favourite text editor (if on mac, refrain from using TextEdit as it will format text and cause the plan not to be found. On Windows, it is preferable to use Notepad/Wordpad and on Mac it is preferable to use Sublime or nano/vim).
 
