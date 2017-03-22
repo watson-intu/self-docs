@@ -220,7 +220,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 4. Locate the Workshop 3 code snippet files **to be filled in** in:
 
- `self-docs/workshops-devcon/Workshop-CreatingAnEmotionAgent/code-snippets/WorkshopThreeAgent_Start/`
+ `self-docs/workshops-devcon/Workshop3-CreatingAnEmotionAgent/code-snippets/WorkshopThreeAgent_Start/`
 
 5. Copy the `WorkshopThreeAgent.cpp` and the `WorkshopThreeAgent.h` files and paste them into the **agents** directory that you created.
 
@@ -416,12 +416,9 @@ First, this code iterates over the response to find the emotion that has the hig
 	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac/etc/profile**.
 	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin -> Debug**. 
 	
-2. Locate the `m_Libs` variable.
-  * If you're using **OS X**, the variable is `"m_Libs" : [ "platform_mac" ],`
-  * If you're using **Windows**, the variable is `"m_Libs" : [ "platform_win" ],`
-3. Add **workshop****_three****_plugin** to the end of the `m_Libs` variable for your platform, **as shown below**:
-  * If you're using **OS X**, the variable is `"m_Libs" : [ "platform_mac", "workshop_three_plugin"],`
-  * If you're using **Windows**, the variable is `"m_Libs" : [ "platform_win", "workshop_three_plugin"],`
+2. Locate the `m_Libs` variable and add **workshop****_three****_plugin** to the `m_Libs` variable, **as shown below**:
+   `"m_Libs" : [ "workshop_three_plugin"],`
+
 4. Locate `EmotionAgent` in the `body.json` file, and notice the `m_NegativeTones` and `m_PositiveTones` strings. To understand the tone of the input, these strings are compared to OnTone().
 
 5. Change `EmotionAgent` to `WorkshopThreeAgent` or the name you gave your class. As the instructions used `WorkshopThreeAgent`, the `"Type_"` field becomes `"Type_" : "WorkshopThreeAgent"`.
