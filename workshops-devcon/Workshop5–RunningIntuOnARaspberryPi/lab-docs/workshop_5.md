@@ -108,7 +108,8 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 	1.	    sudo raspi-config
 	2.	    Advanced Options -> SSH -> Enable
 	
-Note: If this doesn't work, then try the following command on the terminal `sudo service ssh restart`
+Note: If this doesn't work, issue this command on the terminal `sudo service ssh restart`
+
 5.	Get the IP address of your Raspberry Pi.
 	1.	Click on the black **Terminal** icon on the top left toolbar.
 	2.	Type in `ifconfig` and hit Enter.
