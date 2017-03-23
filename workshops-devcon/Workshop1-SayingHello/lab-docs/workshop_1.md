@@ -15,7 +15,7 @@ Complete the following tasks:
 3. [Installing Intu](#installing-intu)
 4. [Saying hello to Intu](#saying-hello-to-intu)
 
-## 1. Requesting access to the Intu Gateway
+## 1. <a name="requesting-access-to-the-watson-intu-gateway">Requesting access to the Intu Gateway</a>
 
 1. Request access to the [Intu Gateway](https://rg-gateway.mybluemix.net/).
 2. Click **Log In** and specify your IBM Bluemix credentials. If you don't have IBM Bluemix account, create one at [IBM Bluemix](https://console.ng.bluemix.net/).
@@ -23,14 +23,14 @@ Complete the following tasks:
 4. Click **Submit**. After your request has been submitted you will be logged in and receive a confirmation email.
 5. The Intu Downloads page is displayed.
 
-## 2. Downloading Intu
+## 2. <a name="downloading-intu">Downloading Intu</a>
 
 1. On the Intu Downloads page, click on the the topmost download arrow for **Download Intu Tooling Launcher**. **Intu-Tooling-Launcher-OSX64.zip** or **Intu-Tooling-Launcher-Win64.zip** will start to download, depending on your machine.
 
 2. Extract the Intu-Tooling-Launcher-OSX64 or Intu-Tooling-Launcher-Win64 (it may do so automatically). 
 
 
-## 3. Installing Intu
+## 3. <a name="installing-intu">Installing Intu</a>
 
 1. Open the Intu-Tooling-Launcher-OSX64 or Intu-Tooling-Launcher-Win64 directory, where you will find the **Intu Manager**. Open Intu Manager.
 	
@@ -56,7 +56,7 @@ Complete the following tasks:
 
 Now that Intu is installed successfully, explore how you can test conversations in speech and text with Intu in the next task.
 
-## 4. Saying hello to Intu
+## 4. <a name="saying-hello-to-intu">Saying hello to Intu</a>
 
 1. In the Intu Manager, click **Menu**, and then click **Conversation** so that you can see what happens when you talk to Intu. Ensure that the status icon of the device you have installed Intu on is green. If it is red, talk to a moderator of the workshop.
 
