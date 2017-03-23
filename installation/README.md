@@ -6,7 +6,7 @@ Intu is an architecture that enables Watson services in devices that perceive by
 
 ## Before you begin
 
-  * To use Intu, you must have a Bluemix account. To register for a Bluemix account, go to https://console.ng.bluemix.net/registration/. 
+  * To use Intu, you must have a Bluemix account. To register for a Bluemix account, go to <a href="https://console.ng.bluemix.net/registration/" target="_blank">Bluemix Registration</a>. 
   * Ensure your hardware meets the following requirements:
   
     * Windows
@@ -43,7 +43,7 @@ Getting started includes the following tasks:
 
 ### Requesting access to the Watson Intu Gateway
 
-1. Request access to the Watson Intu Gateway. Open [Intu Gateway](https://rg-gateway.mybluemix.net/).
+1. Request access to the Watson Intu Gateway. Open <a href="https://rg-gateway.mybluemix.net/" target="_blank">Intu Gateway</a>
 2. Click **Log In** and specify your IBM Bluemix credentials.
 3. In the **Organization** field, specify the name of the organization that you represent.
 4. In the **Business Justification** field, briefly explain why you need access to the Intu Gateway.
@@ -75,7 +75,7 @@ Your installation is preconfigured to use the Conversation, Natural Language Cla
 
 **Pro tip:** As you complete this task, you'll receive credentials for each service instance, and you'll need these credentials later. Open a new file in your favorite text editor and create a section for each service so that you can temporarily store its credentials.
 
-1. [Log in to Bluemix](http://www.ibm.com/cloud-computing/bluemix/).
+1. <a href="http://www.ibm.com/cloud-computing/bluemix/" target="_blank">Log in to Bluemix</a>
 2. On the Bluemix dashboard, click **Catalog** in the navigation bar.
 3. Click **Watson** in the categories menu.
 4. Create an instance of the Conversation service.
@@ -128,16 +128,16 @@ Download the code to your computer. You can do download the code in either of th
 
 ### Windows
 
-1. Set up [Visual Studio 2015](https://www.visualstudio.com/downloads/).
+1. Set up <a href="https://www.visualstudio.com/downloads/">Visual Studio 2015</a>
 2. Open `/vs2015/self.sln` in this project.
 3. Select self-sdk as your startup project, compile, and run.
 
 ### OS X
 
-1. Set up [CMake](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys). To install CMake by using Homebrew, run `brew install cmake`.
+1. Set up <a href="http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys" target="_blank">CMake</a>. To install CMake by using Homebrew, run `brew install cmake`.
   * To install Homebrew, run the following command in your terminal: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-2. Set up [qiBuild](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install).
-  * `pip install qibuild` (NOTE: it is highly recommended to download [anaconda python version 2.7](https://www.continuum.io/downloads) to have pip correctly configured)
+2. Set up <a href="http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install" target="_blank">qiBuild</a>.
+  * `pip install qibuild` (NOTE: it is highly recommended to download <a href="https://www.continuum.io/downloads" target="_blank">anaconda python version 2.7</a> to have pip correctly configured
   * `qibuild config --wizard` (use default setup for steps by pressing 1 twice)
 3. Run the following commands:
   * `cd {self root directory}`
@@ -145,7 +145,7 @@ Download the code to your computer. You can do download the code in either of th
   
 This process stages the executables in the `bin/mac` directory on your local computer. You can change into that directory and run the unit_test and self_instance executables.
 
-PS: If you run into issues with the build, you might have to change a couple of Boost header files, as described here: https://github.com/Homebrew/legacy-homebrew/issues/27396 (specifically, you might have to replace your copy of Boost's boost/atomic/detail/cas128strong.hpp and boost/atomic/detail/gcc-atomic.hpp with the latest available in the Boost directory)
+PS: If you run into issues with the build, you might have to change a couple of Boost header files, as described <a href="https://github.com/Homebrew/legacy-homebrew/issues/27396" target="_blank">here</a> (specifically, you might have to replace your copy of Boost's boost/atomic/detail/cas128strong.hpp and boost/atomic/detail/gcc-atomic.hpp with the latest available in the Boost directory)
 
 ### Linux
 
@@ -222,8 +222,8 @@ This process installs Intu on the remote device whose user name and IP address y
 
 ### Aldebaran Nao and Pepper robots using OS X
 
-1. Set up [CMake](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys).
-2. Set up [qiBuild](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install).
+1. Set up <a href="http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys" target="_blank">CMake</a>
+2. Set up <a href="http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install" target="_blank">qiBuild</a>
 3. Run the following commmands:
   * `./scripts/build_nao.sh [profile]`
 4. Run the following command to install into on the given robot using scp:
@@ -232,5 +232,5 @@ This process installs Intu on the remote device whose user name and IP address y
 ## Feedback
 
 Post your comments and questions and include the `project-intu` and `intu` tags on 
-[dW Answers](https://developer.ibm.com/answers/questions/ask/?topics=watson)
-or [Stack Overflow](http://stackoverflow.com/questions/ask?tags=project-intu).
+<a href="https://developer.ibm.com/answers/questions/ask/?topics=watson" target="_blank">dW Answers</a>
+or <a href="http://stackoverflow.com/questions/ask?tags=project-intu" target="_blank">Stack Overflow</a>
