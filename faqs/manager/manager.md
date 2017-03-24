@@ -27,10 +27,10 @@
   * The Avatar requires a local instance of Intu to be running in order to work.
 
 * What is the purpose of the manager and gateway, why not just have the gateway?
-  * Sample answer
+  * The manager acts as two necessary functionalities: 1) an installer, and 2) a way to monitor live Intu instances, including remote Intu instances that are registered to the end users organization. While the gateway acts as a management system on the organization level, the Intu Manager acts as a manager on an individual Intu instance.
 
 * Health Services do not appear until Intu seems to be fully up and running; this doesn’t help diagnosing which services could be causing Intu to fail.
-  * Sample answer
+  * Health information for a given embodiment takes roughly 15 - 30 seconds to appear in tooling after the embodiment has started. Health information is not just focused on services that have gone down, but also real time diagnostics that could help prevent more permament issues. For example, if the embodiment running Intu is a physical robot, then health events are extremely important in case motors are beginning to overheat and needs to go into a rest phase.
 
 * What does a red dot mean in the user list?
   * A red dot indicates a device is offline
