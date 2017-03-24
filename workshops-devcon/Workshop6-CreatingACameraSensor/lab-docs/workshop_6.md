@@ -9,12 +9,12 @@ Complete the following tasks:
 1. [Understanding some Self terminology](#understanding-some-intu-terminology)
 2. [Building the Self SDK](#building-the-intu-sdk)
 3. [Creating a camera sensor](#creating-a-camera-sensor)
-4. [Configuring your Intu instance to include the camera sensor](#configuring-your-Intu-instance-to-include-the-emotion-agent)
+4. [Configuring your Intu instance to include the camera sensor](#configuring-your-Intu-instance-to-include-the-camera-sensor)
 
 
 ## 1. Understanding some Self terminology
 
-Before you create an emotion agent, become familiar with the following terminology:
+Before you create an camera sensor, become familiar with the following terminology:
 
   * **Blackboard**: The central message broker on which all the agents post data and listen for incoming data.
   
@@ -162,7 +162,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 ### B. Building out the OnStart(), CaptureVideo() and SendingData() functions for the camera sensor
 
-Open the `WorkshopSixSensor.cpp` file, which contains the following functions that enable the emotion agent you'll create:
+Open the `WorkshopSixSensor.cpp` file, which contains the following functions that enable the camera sensor you'll create:
 
   * **OnStart()**: Initializes the camera sensor. The OnStart() function is called by the SensorManager class. Because OnStart occurs on the main thread, we want to do as little as possible processing and do the core logic on a background thread. Here we instantiate the VideoCapture object from opencv and spawn a background thread to capture the images. Using our Delegate class, we can call functions in C++ on different threads.
   
