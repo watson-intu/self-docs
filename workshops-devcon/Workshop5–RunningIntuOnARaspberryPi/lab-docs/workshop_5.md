@@ -27,15 +27,6 @@ In this workshop, you will assemble your own Raspberry Pi, which is a credit car
 
 2. In this workshop, commands are issued from **Terminal** on **Mac** or **PuTTY** on **Windows**. For **Windows** users, if you do not have **PuTTY** installed, you can download it using this [link](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). **Windows** users will also require a file management tool to copy files over a network between their local machine and the Raspberry Pi. You can use a stand-alone tool like **Filezilla**, or you may prefer scp via Putty. **Filezilla** can be downloaded using this [link](https://filezilla-project.org/).
 
-Complete the following tasks:
-
-1. [Assembling the Raspberry Pi](#assembling-the-raspberry-pi)
-2. [Set up the Wi-Fi connection for your Raspberry Pi](#set-up-the-wi-fi-connection-for-your-raspberry-pi)
-3. [Download the Self SDK onto your computer and add in the code for the LED gesture](#download-the-self-sdk-onto-your-computer-and-add-in-the-code-for-the-led-gesture)
-4. [Updating your Raspberry Pi with the LED gesture](#updating-your-raspberry-pi-with-the-led-gesture)
-5. [Updating the body.json configuration](#updating-the-body.json-configuration)
-6. [Run Intu on your Raspberry Pi](#run-intu-on-your-raspberry-pi)
-
 ## 1. Assembling the Raspberry Pi
 
 ### A. Speaker
@@ -102,7 +93,7 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 
 2. Connect your Raspberry Pi to a power source, and connect an external keyboard, mouse and monitor to your Raspberry Pi.
 
-3. You should see a window open on your monitor. Sometimes it might so happen that your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon ![wifi](./wifi.png?raw=true) at the top of the window, select your network (at DevCon, it will be **ROBOT_PED1**), and enter your password (**panda$123** for ROBOT_PED1).
+3. You should see a window open on your monitor. Sometimes it might so happen that your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon ![wifi](./wifi.png?raw=true) at the top of the window, select your network, and enter your password.
 
 4. Ensure ssh is enabled on your Raspberry Pi.
 	1.	    sudo raspi-config
@@ -170,8 +161,7 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 
 	You should see a list of classes compiled and "All Done" at the end.
 
-## 4. Download the Self SDK onto your computer and add in the code for the LED gesture
-**Note:** Download the Self SDK on both the Raspberry Pi and the laptop. We will use the laptop as the development machine and transfer the updated files to the Raspberry Pi.
+## 4. Download and Build
 
 ### A. Download the Self SDK
 
@@ -180,30 +170,56 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 
 3. Unzip the **self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
 
-### B. Creating the LED gesture on OS X
 
-1. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/).
-
-2. In **CLion**, select Open -> home directory -> intu -> self-sdk-master and click **OK**. 
-
-	Note that a window may appear prompting you to open your project in a New Window or This Window. Select **New Window**. At the bottom of your CLion window, in the Problems tab, you will see the following Error, which you do not need to worry about:
+### B. Building Self SDK
+1. In your current (or a new) SSH session, navigate to the **~/intu/self-sdk-master** directory: `cd ~/intu/self-sdk-master`
 	
-	```
-	Error: By not providing "FindSELF.cmake" in CMAKE_MODULE_PATH this project has asked CMake to find a package configuration file provided by "SELF", but CMake did not find one.
-Could not find a package configuration file provided by "SELF" with any of the following names:
-  SELFConfig.cmake   self-config.cmake
-Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to a directory containing one of the above files.  If "SELF" provides a separate development package or SDK, be sure it has been installed.
-	```
+2.	Now build the Self SDK by running: `scripts/build_raspi.sh`
 
- 2i. Inside the CLion **self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_five** for the new directory name, and click **OK**.
- 
- 2ii. Right-click the `CMakeLists.txt` file in the **examples** directory, and click **Copy**. (If you are unsure of the directory you are in, look in the top-left navigation bar.)
-  
- 2iii. Right-click the **workshop_five** directory, and click **Paste**. This file helps to build the plugin for the the LED gesture.
+    **NOTE:**  You may need to mark this script as executable by running the `chmod +x scripts/build_raspi.sh`. If you have any build errors, run: `scripts/clean.sh` and then rerun: `scripts/build_raspi.sh`
 
- 2iv. Open the `CMakeLists.txt` file in the **workshop_five** directory, and overwrite all of its contents with the following code:
+## 6. Updating the configuration
 
-  ```
+### A. Retrieving the credentials for your Organization in the Intu Gateway
+
+1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
+
+2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
+
+3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
+
+4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **~/intu/self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
+
+### B. Configuring your `body.json` file
+1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we will be adding below. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
+
+    1. On your Raspberry Pi open your `body.json` file located at `~/intu/self-sdk-master/bin/raspi/etc/profile/body.json`
+
+    2. Locate the `m_Libs` variable, and change it to read: 
+    
+    	`"m_Libs":["workshop_five_plugin"]` 
+    
+    3. Save your changes and close the file.
+
+## 7. Run Intu on your Raspberry Pi
+
+Run Intu on your Raspberry Pi by completing the following steps in your terminal window. 
+
+1.	Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
+
+2.	Run: `./run_self.sh`
+
+When Intu starts, it will give a notification like "Ah, I feel so much better".  You should be able to ask things like "How are you", "tell me a joke", "what is your name" and it will respond. You can stop the program by pressing **Control-C**.
+
+**NOTE:** If you have a HDMI cable plugged into your Raspberry Pi, verify that the sound is set to **analog**. This can be done by right clicking the **speaker icon** at the top right hand corner of the Raspberry Pi's homescreen, and selecting **analog**.  Verify that you have a microphone and speaker plugged into your Raspberry Pi. Note that your speaker may need to be charged before use. 
+
+
+# Creating a Plugin
+
+1. SSH into your Pi or using an existing SSH connection, cd to the `~/intu/self-sdk-master/examples/' directory, and create a directory called **workshop_five**.  `mkdir workshop_five`
+
+2. Create a file called `CMakeLists.txt` in the **workshop_five** directory, and paste the following code:
+```
 	include_directories(. wiringPI)
 	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
 	add_definitions(${GCC_COVERAGE_LINK_FLAGS})
@@ -214,12 +230,43 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	qi_stage_lib(workshop_five_plugin)
 
 	target_link_libraries(workshop_five_plugin wiringPi)
-  ```
+```
 
-3. Create a new directory inside **workshop_five** called **gestures**.
+3. Create a new file called WorkshopFiveGesture.h and paste in the following code:
+```
+	#ifndef SELF_WORKSHOPFIVEGESTURE_H
+	#define SELF_WORKSHOPFIVEGESTURE_H
 
-4. Locate the Workshop 5 code snippet files **to be filled in** in:
-`self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_start/`
+	#include "gestures/AnimateGesture.h"
+
+	//! This is the class for animating a Raspberry Pi, such as changing LED colors.
+	class WorkshopFiveGesture : public AnimateGesture
+	{
+	public:
+		RTTI_DECL();
+
+		//! IGesture interface
+		virtual bool Execute( GestureDelegate a_Callback, const ParamsMap & a_Params );
+		virtual bool Abort();
+
+		//! Construction
+		WorkshopFiveGesture() : m_PinNumber( 7 ), m_bWiredPi( false )
+		{}
+
+	private:
+		//! Data
+		bool m_bWiredPi;
+		int m_PinNumber;
+
+		//! Callbacks
+		void AnimateThread( Request * a_pReq );
+		void DoAnimateThread( Request * a_pReq );
+		void AnimateDone( Request * a_pReq );
+	};
+
+
+	#endif //SELF_WORKSHOPFIVEGESTURE_H
+```
 
 5. Copy the `WorkshopFiveGesture.cpp` and the `WorkshopFiveGesture.h` files and paste them into the **gestures** directory that you created.
 
@@ -270,181 +317,51 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 8. Save your changes (**Cmd + S**). 
 
-### C. Creating the LED gesture on Windows
+## Updating your Raspberry Pi with the LED gesture
 
-1.	Open up File Explorer and navigate to your **home** directory. This should be: **C:\Users\username** ("username" should read your name)
-
-2. In your home directory, create a new directory called **workshop_five**, and a second directory called **gestures** inside **workshop_five**.
-
-3. Navigate to **self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_start/**, where you will find the following two files:
-	
-	`WorkshopFiveGesture.cpp` 
-	
-	`WorkshopFiveGesture.h`
-		
-4. Copy `WorkshopFiveGesture.cpp` and `WorkshopFiveGesture.h` from **WorkshopFiveGesture_Start/** to the **gestures** directory which you just created.
-	
-5. Now navigate to **self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_Snippets** and locate the `WorkshopFiveCodeSnippets.txt` file and find the **DoAnimateThread** function.
-
-6. Copy the entire contents of `WorkshopFiveCodeSnippets.txt ` for the **DoAnimateThread()** function. Paste this inside the function body **{}** of **DoAnimateThread()** in `WorkshopFiveGesture.cpp` located in your **gestures** directory, directly above the line of code which reads: `Log::Debug("WorkshopFiveGesture", "in DoAnimateThread");`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
-
-
-  ```
-    std::vector<AnimationEntry> anims;
-    for(size_t i=0;i<m_Animations.size();++i)
-    {
-        anims.push_back( m_Animations[i] );
-    }
-
-    if ( anims.size() > 0 )
-    {
-        srand( (unsigned int)Time().GetMilliseconds() );
-        const AnimationEntry & entry = anims[ rand() % anims.size() ];
-        Log::Debug( "WorkshopFiveGesture", "Gesture %s is running behavior %s.", m_GestureId.c_str(), entry.m_AnimId.c_str() );
-
-        if ( !m_bWiredPi )
-        {
-            wiringPiSetup();
-            pinMode(m_PinNumber, OUTPUT);
-            m_bWiredPi = true;
-        }
-        for(size_t i=0;i<5;++i)
-        {
-            digitalWrite(m_PinNumber, HIGH);
-            delay(200);
-            digitalWrite(m_PinNumber, LOW);
-            delay(200);
-        }
-    }
-    else
-    {
-        Log::Warning( "WorkshopFiveGesture", "No valid animations found for gesture %s", m_GestureId.c_str() );
-    }
-    
-    ```
- 
-7.	Navigate to the **workshop_five** directory you created in your home directory, and create a new text file called `CMakeLists.txt`. 
-
-8. Open this file and add in the following lines of code:
-
-	```
-	include_directories(. wiringPI)
-	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
-	add_definitions(${GCC_COVERAGE_LINK_FLAGS})
-
-	file(GLOB_RECURSE SELF_CPP RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
-	qi_create_lib(workshop_five_plugin SHARED ${SELF_CPP})
-	qi_use_lib(workshop_five_plugin self wdc)
-	qi_stage_lib(workshop_five_plugin)
-
-	target_link_libraries(workshop_five_plugin wiringPi)
-
-	```
-	
-9. Save your changes (**Ctrl + S**). 
-
-## 5. Updating your Raspberry Pi with the LED gesture
-
-1.	Copy the **workshop_five** directory from your local machine over to your Raspberry Pi. 
+1.    Copy the **workshop_five** directory from your local machine over to your Raspberry Pi. 
    
    **For Mac users:** 
    1. Open a new terminal window and navigate to the **examples** directory (the parent directory of workshop_five) by running: `cd intu/self-sdk-master/examples`
    2. Run: `scp -r workshop_five pi@{pi's_ip_address}:~/intu/self-sdk-master/examples`
 
-	**For Windows users:** 
-	
+    **For Windows users:** 
+    
    1. Open Filezilla and connect to your Raspberry Pi. 
-		1. In the **Host** field, specify your Raspberry Pi's IP address.
-		2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
-		3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
-		4. In the **Port** field, specify **22**.  	
-	2. Navigate to **intu/self-sdk-master/examples/** on the **Remote site** side of the screen.
-	
-	3. Navigate to the **intu/self-sdk-master/examples/** directory on the **Local site** side of the screen.
-	
-	4. Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
+        1. In the **Host** field, specify your Raspberry Pi's IP address.
+        2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
+        3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
+        4. In the **Port** field, specify **22**.      
+    2. Navigate to **intu/self-sdk-master/examples/** on the **Remote site** side of the screen.
+    
+    3. Navigate to the **intu/self-sdk-master/examples/** directory on the **Local site** side of the screen.
+    
+    4. Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
 
-2.	SSH to the Raspberry Pi in a new SSH window (Terminal for Mac or PuTTY for Windows):
+2.    SSH to the Raspberry Pi in a new SSH window (Terminal for Mac or PuTTY for Windows):
 
-	1. Run:`ssh pi@{pi's_ip_address}`	
-  	2. Run: `cd /home/pi/intu/self-sdk-master/examples`
+    1. Run:`ssh pi@{pi's_ip_address}`    
+      2. Run: `cd /home/pi/intu/self-sdk-master/examples`
 
-3.	Edit the `CMakeLists.txt` file in the examples directory you're currently in.
+3.    Edit the `CMakeLists.txt` file in the examples directory you're currently in.
 
-	1. Run: `nano CMakeLists.txt`
-	2. Carefully add the following line at the end of the file:		`add_subdirectory(workshop_five)`
-	3. Save your changes to the `CMakeLists.txt` file. 
-   		1. Use **Ctrl + X** to `Exit`.
-   		2. When prompted with: `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ? `, type **Y** for **Yes**. 
-   		3. When prompted with: `File Name to Write: CMakeLists.txt`, hit **Return** or **Enter** to finalise your changes.
-   		
+    1. Run: `nano CMakeLists.txt`
+    2. Carefully add the following line at the end of the file:        `add_subdirectory(workshop_five)`
+    3. Save your changes to the `CMakeLists.txt` file. 
+           1. Use **Ctrl + X** to `Exit`.
+           2. When prompted with: `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ? `, type **Y** for **Yes**. 
+           3. When prompted with: `File Name to Write: CMakeLists.txt`, hit **Return** or **Enter** to finalise your changes.
+           
 4. Build Self on your Raspberry Pi with the following steps:
 
-	1.	Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
-	
-	2.	Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
-	
-	3. Run: `scripts/clean.sh` 
-	
-	4. Run: `scripts/build_raspi.sh`
-
-## 6. Updating the `body.json` configuration
-
-### A. Retrieving the credentials for your Organization in the Intu Gateway
-
-1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
-
-2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
-
-3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
-
-4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
-
-### B. Configuring your `body.json` file
-1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we added above. In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
-
-    1. On your Raspberry Pi open your `body.json` file located at `self-sdk-master/bin/raspi/etc/profile/body.json`
-
-    2. Locate the `m_Libs` variable, and change it to read: 
+    1.    Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
     
-    	`"m_Libs":["workshop_five_plugin"]` 
+    2.    Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
     
-    	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
+    3. Run: `scripts/clean.sh` 
+    
+    4. Run: `scripts/build_raspi.sh`
 
-    3. Save your changes and close the file.
-
-### C. Building the Self SDK on your Raspberry Pi
-
-1. In your current (or a new) SSH session to the Raspberry Pi, navigate to the **self-sdk-master** directory: `cd self-sdk-master`
-	
-2.	Mark the build script as executable by running: 
-`chmod +x scripts/build_raspi.sh`
-
-3.	Now build the Self SDK by running: `scripts/build_raspi.sh`
-	
-	**Note:** If you have any build errors, run: `scripts/clean.sh` and then rerun: `scripts/build_raspi.sh`
-
-## 7. Run Intu on your Raspberry Pi
-
-Run Intu on your Raspberry Pi by completing the following steps in your terminal window. 
-
-**Note:** The following steps will need to be repeated each time you power up your Raspberry Pi (i.e. unplug and plug back in the power source to your Raspberry Pi).
-
-1.	If you have a HDMI cable plugged into your Raspberry Pi, verify that the sound is set to **analog**. This can be done by right clicking the **speaker icon** at the top right hand corner of the Raspberry Pi's homescreen, and selecting **analog**. 
-
-2.	Verify that you have a microphone and speaker plugged into your Raspberry Pi. Note that your speaker may need to be charged before use. Make sure that it is turned on before proceeding with the next step.
-
-3.	Navigate to the **raspi** directory using: `cd /home/pi/self/self-sdk-master/bin/raspi`.
-
-4.	Run: `./run_self.sh`
-
-When Intu starts, it will give a notification like "Ah, I feel so much better". You have now added a gesture for the LED light.  When you say, "Can you laugh?" or "Tell me a joke" to the robot, the LED light should blink, i.e. you have added the blinking of the LED to Intu as a gesture. 
-
-
-### What did we learn?
-When Intu is asked "can you laugh" or "tell me a joke" and the Blackboard receives a [emote=show_laugh], how does Intu know that the LED gesture should be executed?
-
-It is from the configuration file `raspi.anims`, in `Intu/self-sdk-master/bin/raspi/etc/gestures`. (More to come).
 
 # Workshop 5 Extra Credit – Using Intu to Make a TJBot's Arm Wave
 
@@ -837,6 +754,214 @@ As you have already downloaded the `self-sdk-master.zip` file, your first step w
   * **Execute():** The main implementation on how to carry out the execution of the gesture. If we look at the top of the cpp file, you will see two macros defined: REG_SERIALIZABLE and RTTI_IMPL. REG_SERIALIZABLE will serialize the object type to our system so we can get a handle on it using reflection, while RTTI_IMPL states that our implementation of the class WorkshopFiveGesture will override our base AnimateGesture class. The power of this allows us to have platform specific code to carry out execution of gestures while still keeping the core Intu platform agnostic. Therefore, when AnimateGesture is called to execute, our WorkshopFiveAnimation execute function will be called.
   
   * **Abort():** Will stop the execution of the gesture if the gesture is still in progress.
+
+### B. Creating the LED gesture on OS X
+
+1. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/).
+
+2. In **CLion**, select Open -> home directory -> intu -> self-sdk-master and click **OK**. 
+
+	Note that a window may appear prompting you to open your project in a New Window or This Window. Select **New Window**. At the bottom of your CLion window, in the Problems tab, you will see the following Error, which you do not need to worry about:
+	
+	```
+	Error: By not providing "FindSELF.cmake" in CMAKE_MODULE_PATH this project has asked CMake to find a package configuration file provided by "SELF", but CMake did not find one.
+Could not find a package configuration file provided by "SELF" with any of the following names:
+  SELFConfig.cmake   self-config.cmake
+Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to a directory containing one of the above files.  If "SELF" provides a separate development package or SDK, be sure it has been installed.
+	```
+
+ 2i. Inside the CLion **self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_five** for the new directory name, and click **OK**.
+ 
+ 2ii. Right-click the `CMakeLists.txt` file in the **examples** directory, and click **Copy**. (If you are unsure of the directory you are in, look in the top-left navigation bar.)
+  
+ 2iii. Right-click the **workshop_five** directory, and click **Paste**. This file helps to build the plugin for the the LED gesture.
+
+ 2iv. Open the `CMakeLists.txt` file in the **workshop_five** directory, and overwrite all of its contents with the following code:
+
+  ```
+	include_directories(. wiringPI)
+	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
+	add_definitions(${GCC_COVERAGE_LINK_FLAGS})
+
+	file(GLOB_RECURSE SELF_CPP RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
+	qi_create_lib(workshop_five_plugin SHARED ${SELF_CPP})
+	qi_use_lib(workshop_five_plugin self wdc)
+	qi_stage_lib(workshop_five_plugin)
+
+	target_link_libraries(workshop_five_plugin wiringPi)
+  ```
+
+3. Create a new directory inside **workshop_five** called **gestures**.
+
+4. Locate the Workshop 5 code snippet files **to be filled in** in:
+`self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_start/`
+
+5. Copy the `WorkshopFiveGesture.cpp` and the `WorkshopFiveGesture.h` files and paste them into the **gestures** directory that you created.
+
+	* Open the `WorkshopFiveGesture.cpp` file, which contains the following functions that enable the gesture you'll create:
+
+	* The Execute, Abort, AnimateThread and AnimateDone functions are already completely built out.
+
+	* In the next step, you will build out the **DoAnimateThread** function using the example code provided.
+
+6. In **self-sdk-master/docs/workshops-devcon/5/code-snippets/WorkshopFive_Snippets**, you will see the `WorkshopFiveCodeSnippets.txt` file. Open this file and find the **DoAnimateThread** function.
+
+7. Copy the entire contents of `WorkshopFiveCodeSnippets.txt ` for the **DoAnimateThread()** function. Paste this inside the function body **{}** of **DoAnimateThread()** in `WorkshopFiveGesture.cpp` located in your **gestures** directory, directly above the line of code which reads: `Log::Debug("WorkshopFiveGesture", "in DoAnimateThread");`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+
+
+  ```
+    std::vector<AnimationEntry> anims;
+    for(size_t i=0;i<m_Animations.size();++i)
+    {
+        anims.push_back( m_Animations[i] );
+    }
+
+    if ( anims.size() > 0 )
+    {
+        srand( (unsigned int)Time().GetMilliseconds() );
+        const AnimationEntry & entry = anims[ rand() % anims.size() ];
+        Log::Debug( "WorkshopFiveGesture", "Gesture %s is running behavior %s.", m_GestureId.c_str(), entry.m_AnimId.c_str() );
+
+        if ( !m_bWiredPi )
+        {
+            wiringPiSetup();
+            pinMode(m_PinNumber, OUTPUT);
+            m_bWiredPi = true;
+        }
+        for(size_t i=0;i<5;++i)
+        {
+            digitalWrite(m_PinNumber, HIGH);
+            delay(200);
+            digitalWrite(m_PinNumber, LOW);
+            delay(200);
+        }
+    }
+    else
+    {
+        Log::Warning( "WorkshopFiveGesture", "No valid animations found for gesture %s", m_GestureId.c_str() );
+    }
+    
+    ```
+
+8. Save your changes (**Cmd + S**). 
+
+### C. Creating the LED gesture on Windows
+
+1.	Open up File Explorer and navigate to your **home** directory. This should be: **C:\Users\username** ("username" should read your name)
+
+2. In your home directory, create a new directory called **workshop_five**, and a second directory called **gestures** inside **workshop_five**.
+
+3. Navigate to **self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_start/**, where you will find the following two files:
+	
+	`WorkshopFiveGesture.cpp` 
+	
+	`WorkshopFiveGesture.h`
+		
+4. Copy `WorkshopFiveGesture.cpp` and `WorkshopFiveGesture.h` from **WorkshopFiveGesture_Start/** to the **gestures** directory which you just created.
+	
+5. Now navigate to **self-docs/workshops-devcon/Workshop5–RunningIntuOnARaspberryPi/code-snippets/WorkshopFiveGesture_Snippets** and locate the `WorkshopFiveCodeSnippets.txt` file and find the **DoAnimateThread** function.
+
+6. Copy the entire contents of `WorkshopFiveCodeSnippets.txt ` for the **DoAnimateThread()** function. Paste this inside the function body **{}** of **DoAnimateThread()** in `WorkshopFiveGesture.cpp` located in your **gestures** directory, directly above the line of code which reads: `Log::Debug("WorkshopFiveGesture", "in DoAnimateThread");`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+
+
+  ```
+    std::vector<AnimationEntry> anims;
+    for(size_t i=0;i<m_Animations.size();++i)
+    {
+        anims.push_back( m_Animations[i] );
+    }
+
+    if ( anims.size() > 0 )
+    {
+        srand( (unsigned int)Time().GetMilliseconds() );
+        const AnimationEntry & entry = anims[ rand() % anims.size() ];
+        Log::Debug( "WorkshopFiveGesture", "Gesture %s is running behavior %s.", m_GestureId.c_str(), entry.m_AnimId.c_str() );
+
+        if ( !m_bWiredPi )
+        {
+            wiringPiSetup();
+            pinMode(m_PinNumber, OUTPUT);
+            m_bWiredPi = true;
+        }
+        for(size_t i=0;i<5;++i)
+        {
+            digitalWrite(m_PinNumber, HIGH);
+            delay(200);
+            digitalWrite(m_PinNumber, LOW);
+            delay(200);
+        }
+    }
+    else
+    {
+        Log::Warning( "WorkshopFiveGesture", "No valid animations found for gesture %s", m_GestureId.c_str() );
+    }
+    
+    ```
+ 
+7.	Navigate to the **workshop_five** directory you created in your home directory, and create a new text file called `CMakeLists.txt`. 
+
+8. Open this file and add in the following lines of code:
+
+	```
+	include_directories(. wiringPI)
+	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
+	add_definitions(${GCC_COVERAGE_LINK_FLAGS})
+
+	file(GLOB_RECURSE SELF_CPP RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
+	qi_create_lib(workshop_five_plugin SHARED ${SELF_CPP})
+	qi_use_lib(workshop_five_plugin self wdc)
+	qi_stage_lib(workshop_five_plugin)
+
+	target_link_libraries(workshop_five_plugin wiringPi)
+
+	```
+	
+9. Save your changes (**Ctrl + S**). 
+
+## 5. Updating your Raspberry Pi with the LED gesture
+
+1.	Copy the **workshop_five** directory from your local machine over to your Raspberry Pi. 
+   
+   **For Mac users:** 
+   1. Open a new terminal window and navigate to the **examples** directory (the parent directory of workshop_five) by running: `cd intu/self-sdk-master/examples`
+   2. Run: `scp -r workshop_five pi@{pi's_ip_address}:~/intu/self-sdk-master/examples`
+
+	**For Windows users:** 
+	
+   1. Open Filezilla and connect to your Raspberry Pi. 
+		1. In the **Host** field, specify your Raspberry Pi's IP address.
+		2. In the **Username** field, specify your Raspberry Pi's username (**pi**).
+		3. In the **Password** field, specify your Raspberry Pi's password (**raspberry**).
+		4. In the **Port** field, specify **22**.  	
+	2. Navigate to **intu/self-sdk-master/examples/** on the **Remote site** side of the screen.
+	
+	3. Navigate to the **intu/self-sdk-master/examples/** directory on the **Local site** side of the screen.
+	
+	4. Drag your **examples** directory from the **Local site** to the **Remote site** to copy the directory across to your Raspberry Pi. You can monitor the progress of the transfer in the panel located at the bottom of the Filezilla screen.
+
+2.	SSH to the Raspberry Pi in a new SSH window (Terminal for Mac or PuTTY for Windows):
+
+	1. Run:`ssh pi@{pi's_ip_address}`	
+  	2. Run: `cd /home/pi/intu/self-sdk-master/examples`
+
+3.	Edit the `CMakeLists.txt` file in the examples directory you're currently in.
+
+	1. Run: `nano CMakeLists.txt`
+	2. Carefully add the following line at the end of the file:		`add_subdirectory(workshop_five)`
+	3. Save your changes to the `CMakeLists.txt` file. 
+   		1. Use **Ctrl + X** to `Exit`.
+   		2. When prompted with: `Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES) ? `, type **Y** for **Yes**. 
+   		3. When prompted with: `File Name to Write: CMakeLists.txt`, hit **Return** or **Enter** to finalise your changes.
+   		
+4. Build Self on your Raspberry Pi with the following steps:
+
+	1.	Navigate into the **self-sdk-master** directory on your Raspberry Pi: `cd self-sdk-master`
+	
+	2.	Mark the build script as executable by running: `chmod +x scripts/build_raspi.sh`
+	
+	3. Run: `scripts/clean.sh` 
+	
+	4. Run: `scripts/build_raspi.sh`
 
 
 
