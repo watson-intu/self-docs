@@ -36,6 +36,6 @@
   * For local C++ agents you can simply recompile the shared library containing the agent. Agents that use the other language SDK's do not need to be configured, they can simply register when they run.
 
 * What is the difference between intent and agent, and how do they work together?
-  * The Intent is just another **Type** of object that can be placed on the Blackboard. An agent is not a blackboard objects, but an instance of a class derived from the IAgent class.
+  * The Intent is just another **Type** of object that can be placed on the Blackboard. An agent is not a blackboard object, but an instance of a class derived from the IAgent class.
 
 [Back to the index](../../README.md)
