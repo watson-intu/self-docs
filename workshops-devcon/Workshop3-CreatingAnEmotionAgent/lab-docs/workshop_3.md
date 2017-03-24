@@ -14,7 +14,7 @@ Complete the following tasks:
 4. [Creating an emotion agent](#creating-an-emotion-agent)
 5. [Configuring Intu to include your emotion agent](#configuring-intu-to-include-your-emotion-agent)
 
-## 1. Setting up the Tone Analyzer service
+## <a name="setting-up-the-tone-analyzer-service">1. Setting up the Tone Analyzer service </a>
 
 ### A. Creating your own instance of the Tone Analyzer service
 
@@ -48,7 +48,7 @@ Complete the following tasks:
 
 8. Click the **Add** button at the bottom right of the window.
 
-## 2. Understanding some Intu terminology
+## 2. <a name="understanding-some-intu-terminology">Understanding some Intu terminology</a>
 
 Before you create an emotion agent, become familiar with the following terminology:
 
@@ -60,7 +60,7 @@ Before you create an emotion agent, become familiar with the following terminolo
   
   * **Topic**: A channel to which Agents publish and subscribe.
 
-## 3. Building the Self SDK
+## 3. <a name="building-the-intu-sdk">Building the Self SDK</a>
 
 Follow the instructions for your platform.
 
@@ -174,7 +174,7 @@ Known toolchains are:
 	
 2. `plink git@github.ibm.com`
 
-## 4. Creating an emotion agent
+## 4. <a name="creating-an-emotion-agent">Creating an emotion agent</a>
 
 ### A. Preparing your directories and files for the emotion agent
 
@@ -492,9 +492,9 @@ In the next step, you will build out the **OnText**, **OnTone** and **OnLearning
 
 **For OS X and Windows users:**
 
-1. In **self-sdk-master****/docs/workshops-devcon/3/code-snippets/WorkshopThree_Snippets**, you will see the `WorkshopThreeCodeSnippets.txt` file. Open this file and find the OnText, OnTone and OnLearningIntent functions.
+1. In the following section, you will see code snippets that you need to copy and paste into the **WorkshopThreeAgent.cpp** file that you created earlier.  The instructions will tell you in which function specificially the snippets need to be pasted.
 
-2. From `WorkshopThreeCodeSnippets.txt`, for the **OnText()** function, copy the code directly below **//Code for OnText()**. Now paste this inside the function body **{}** of **OnText()** in `WorkshopThreeAgent.cpp`, which is located inside your **agents** directory. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+2. For the **OnText()** function, copy the code directly below **//Code for OnText()**. Now paste this inside the function body **{}** of **OnText()** in `WorkshopThreeAgent.cpp`, which is located inside your **agents** directory. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
   
   ```
   Text::SP spText = DynamicCast<Text>(a_ThingEvent.GetIThing());
@@ -592,7 +592,7 @@ First, this code iterates over the response to find the emotion that has the hig
 **Congratulations!** You just built all the functions required for the emotion agent. This process created the `libworkshop_three_plugin.dylib` in the **intu/self-sdk-master/bin/mac** directory.
 
 
-## 5. Configuring your Intu instance to include the emotion agent
+## 5. <a name="configuring-intu-to-include-your-emotion-agent">Configuring your Intu instance to include the emotion agent</a>
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
 1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
