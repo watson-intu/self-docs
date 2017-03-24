@@ -592,7 +592,7 @@ First, this code iterates over the response to find the emotion that has the hig
 **Congratulations!** You just built all the functions required for the emotion agent. This process created the `libworkshop_three_plugin.dylib` in the **intu/self-sdk-master/bin/mac** directory.
 
 
-## 4. Configuring your Intu instance to include the emotion agent
+## 5. Configuring your Intu instance to include the emotion agent
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
 1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
