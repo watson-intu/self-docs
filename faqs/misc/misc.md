@@ -31,31 +31,22 @@
 * What are different groups in the gateway? How are these used? (Are these "children"?)
   * An organization should have multiple groups if you want each device in the different groups to use different service credentials, perhaps they will use a different Conversation Workspace.  An example might be a Hotel Organization and each group has a different function within the hotel, perhaps one group is for the Front Lobby Concierge and another group is for In-Room queries.
 
-* How would we setup the terminal to run in the cloud? As a user using the avatar should not have to launch the Intu terminal to run the avatar, it should be seamless.
-  * Sample answer
-
 * Is it possible to chain agents together?
-  * Sample answer
+  * Agents communicate through the blackboard only by design. All objects on the blackboard are derived from the IThing class.
 
 * How do you setup Intu to have multiple users?
   * Once you create an organization, you can invite other users to join the group.  In the Gateway, navigate to the Manager -> Groups tab and you can add a user from there.
 
 * Do you need one version of Intu on your machine for one instance of the avatar?
-  * Sample answer
-
-* Where does Intu install to?
-  * Sample answer
-
-* What does Intu install? A client console application?
-  * Sample answer
+  * The avatar doesn't need the Intu instance to run on the local machine. It connects using a web socket.
 
 * Can we change the installation path?
-  * Sample answer
+  * Not currently.
 
 * Does Intu install any extra files that do not reside in the installation location?
-  * Sample answer
+  * On windows we install everything into the **C:/Users/<user name>/AppData/LocalLow/IBM/**
 
-* What does GetStatticRTTI() return? Do we have some API docs?
-  * Sample answer
+* What does GetStaticRTTI() return? Do we have some API docs?
+  * We implemented our own RTTI (Run time type information) rather than using the more expensive compiler based option. The GetStatisRTTI() function is invoked by a virtual function called GetRTTI() found in each class. This returns the RTTI object that defines the type, including the name of the class and it's base type. 
 
 [Back to the index](../../README.md)
