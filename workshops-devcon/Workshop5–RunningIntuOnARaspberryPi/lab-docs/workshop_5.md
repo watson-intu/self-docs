@@ -108,7 +108,8 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 	1.	    sudo raspi-config
 	2.	    Advanced Options -> SSH -> Enable
 	
-Note: If this doesn't work, then try the following command on the terminal `sudo service ssh restart`
+	Note: If this doesn't work, issue this command on the terminal `sudo service ssh restart`
+
 5.	Get the IP address of your Raspberry Pi.
 	1.	Click on the black **Terminal** icon on the top left toolbar.
 	2.	Type in `ifconfig` and hit Enter.
@@ -406,7 +407,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
-    	`"m_Libs":["platform_raspi", "workshop_five_plugin"]` 
+    	`"m_Libs":["workshop_five_plugin"]` 
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
@@ -522,7 +523,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
-    	`"m_Libs":["platform_raspi", "move_joint_plugin", "workshop_five_plugin"]` 
+    	`"m_Libs":["move_joint_plugin", "workshop_five_plugin"]` 
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
