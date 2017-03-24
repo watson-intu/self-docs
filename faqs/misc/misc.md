@@ -26,7 +26,7 @@
   * In the config.json, you only need to add your organization and group ids and bearer tokens.  Please see Workshop 7 for more details on how to run the Intu Avatar.
 
 * When you create an organization in the gateway, are you creating a parent? Is each device registered under the same organisation a child to that parent/organization?
-  * When you create an organization, a parent will be created automatically.  Each device is registered to the organization is a child of the parent.
+  * When you create an organization, a parent will be created automatically.  Each device registered to the organization is a child of the parent.
 
 * What are different groups in the gateway? How are these used? (Are these "children"?)
   * An organization should have multiple groups if you want each device in the different groups to use different service credentials, perhaps they will use a different Conversation Workspace.  An example might be a Hotel Organization and each group has a different function within the hotel, perhaps one group is for the Front Lobby Concierge and another group is for In-Room queries.
@@ -35,10 +35,10 @@
   * Agents communicate through the blackboard only by design. All objects on the blackboard are derived from the IThing class.
 
 * How do you setup Intu to have multiple users?
-  * Once you create an organization, you can invite other users to join the group.  In the Gateway, navigate to the Manager -> Groups tab and you can add a user from there.
+  * Once you create an organization, you can invite other users to join the group.  In the Gateway, navigate to the Manage -> Groups tab and you can add a user from there.
 
 * Do you need one version of Intu on your machine for one instance of the avatar?
-  * The avatar doesn't need the Intu instance to run on the local machine. It connects using a web socket.
+  * The Avatar doesn't need the Intu instance to run on the local machine. It connects using a web socket.
 
 * Can we change the installation path?
   * Not currently.
