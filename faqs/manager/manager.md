@@ -3,10 +3,10 @@
 ###Here is a collection of FAQs specific to the Intu manager
 
 * What other language is Intu going to support apart from C++?
-  * Sample answer
+  * While the core of Intu is written in C++, we are working on enabling Intu through sdks in Java, Python, and Javascript
 
 * How does Intu handle the user's question memory? E.g: If I ask a question, and a follow on question is asked, it knows that it’s merely a filter/linked to the first question for more detail.
-  * Sample answer
+  * For a more indepth and linked question flow, you would need to build out a detailed and complex Conversation workflow through Bluemix's Conversation Service.
 
 * Does the Intu manager need to be installed on a physical machine locally, on someone's PC? Can it be installed on a server/VM/cloud?
   * Sample answer
@@ -15,16 +15,16 @@
   * Sample answer
 
 * What is the Self Dialog ID that is in the Intu gateway? What does it do?
-  * Sample answer
+  * The "self_dialog" id on the Intu Gateway is a Conversation workspace id that is associated with your Conversation workspace.  "self_dialog" is meant to be associated with the json downloaded from the Intu Starter Kit and "self_domain" is meant to be your own personal Conversation workspace id.
 
 * Can multiple avatars on different users' machines talk to a single admin Intu gateway? Or does it have to be a 1:1 relationship, meaning that 1 Intu gateway for user x talk to the avatar of user x on the SAME machine?
   * Sample answer
 
 * When a user runs the avatar, is it mandatory to also run the Intu manager on the SAME machine? Can a user run the avatar without having to run the Intu manager, as it can be sitting on some server which is connected to the avatar?
-  * Sample answer
+  * As long as an instance of Intu is running, you do not need to run the Intu Manager while running the Intu Avatar.  Once you turn an Intu instance on through the Manager, you can close it.
 
 * Why do you have to physically turn on both your device and your avatar (SelfUnitySDK) in the Intu Manager in order to get the avatar running? Why does a second terminal window open?
-  * Sample answer
+  * The Avatar requires a local instance of Intu to be running in order to work.
 
 * What is the purpose of the manager and gateway, why not just have the gateway?
   * Sample answer
@@ -33,16 +33,16 @@
   * Sample answer
 
 * What does a red dot mean in the user list?
-  * Sample answer
+  * A red dot indicates a device is offline
 
 * What is the purpose of Self-Domain used in Services > Conversationv1
-  * Sample answer
+  * "self_domain" is the workspace id of your own custom conversation workspace, if you choose to use one.  "self_dialog" is the conversation workspace id for the workspace downloaded and imported from the Intu Starter Kit.
 
 * What are groups and organizations used for?
-  * Sample answer
+  * Organizations can hold multiple groups.  Groups are where you register devices to and configure services for.
 
 * What is the difference between the computer and the brain?
-  * Sample answer
+  * The brain icon indicates a device is a Parent instance.  A computer icon indicates a device is a laptop device, such as PC or Mac.
 
 * What is the parent? Why do you have a parent and Intu when you start up manager?
   * Sample answer
