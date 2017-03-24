@@ -18,7 +18,7 @@
   * The "self_dialog" id on the Intu Gateway is a Conversation workspace id that is associated with your Conversation workspace.  "self_dialog" is meant to be associated with the json downloaded from the Intu Starter Kit and "self_domain" is meant to be your own personal Conversation workspace id.
 
 * Can multiple avatars on different users' machines talk to a single admin Intu gateway? Or does it have to be a 1:1 relationship, meaning that 1 Intu gateway for user x talk to the avatar of user x on the SAME machine?
-  * Sample answer
+  * Multiple users can run the Intu Avatar on their own machines.  As long as all machines have Intu installed onto them and Intu is running, the Avatar will run.  All Intu instances can be registered to the same Organization and Group.  If this is the case, then all Avatars should work the exact same.
 
 * When a user runs the avatar, is it mandatory to also run the Intu manager on the SAME machine? Can a user run the avatar without having to run the Intu manager, as it can be sitting on some server which is connected to the avatar?
   * As long as an instance of Intu is running, you do not need to run the Intu Manager while running the Intu Avatar.  Once you turn an Intu instance on through the Manager, you can close it.
