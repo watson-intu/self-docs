@@ -48,9 +48,9 @@
   * The "parent" is created when the user creates a new organization in the gateway. There are multiple reasons for why an Intu instance has a parent, but the two main reasons are: 1) To monitor the embodiment when not directly connected to the same network, and 2) for skill sharing. The first point is very important if you require to know how the embodiment is performing in a remote location. The second reason is how we crowd source teaching. One of the fundamental principals of Intu is to learn through interactions. When one embodiment learns something, it will transfer the knowledge to it's parent. That way, if another Intu embodiment is asked to perform some task and it hasn't heard it before, it will ask it's parent and then bring down that knowledge
 
 * How do you change the installed instance's credentials on a machine without reinstalling?
-  * Sample answer
+  * If you are referring to service credentials, simply editing them on the Gateway is enough.  To immediately force your devices to pick up the new credentials, simply turn them off then back on.  Otherwise just wait no more than 15 minutes and your devices will automatically update with the new credentials.
 
 * Why does the Avatar have an on off button?
-  * Sample answer
+  * The Avatar has an on/off button because it is running a local instance of Intu.
 
 [Back to the index](../../README.md)
