@@ -407,7 +407,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
-    	`"m_Libs":["platform_raspi", "workshop_five_plugin"]` 
+    	`"m_Libs":["workshop_five_plugin"]` 
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
@@ -523,7 +523,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
-    	`"m_Libs":["platform_raspi", "move_joint_plugin", "workshop_five_plugin"]` 
+    	`"m_Libs":["move_joint_plugin", "workshop_five_plugin"]` 
     
     	**If there are any addional values here like "platfrom_linux" DELETE them all. You should only have 2 values under `m_libs`**
 
