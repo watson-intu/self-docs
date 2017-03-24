@@ -17,9 +17,9 @@ In this workshop, you will configure Intu's telephony plan to have Intu call you
 In this workshop, you will assemble your own Raspberry Pi, which is a credit card-sized computer. You will then program an LED gesture for Intu, and run Intu off of your Raspberry Pi and see your LED gesture in action.
 
 ## Workshop 6 [Creating a camera sensor](./Workshop6-CreatingACameraSensor/lab-docs/workshop_6.md)
-n this workshop, you create a camera sensor. Sensors take in data from the outside world to process. The camera sensor will aim to take in visual data from the environment, ready to be processed on Intu.
+In this workshop, you create a camera sensor. Sensors take in data from the outside world to process. The camera sensor will aim to take in visual data from the environment, ready to be processed on Intu.
 
 ## Workshop 7 [Installing, configuring, and running the Intu Avatar](./Workshop7-InstallingConfiguringAndRunningTheIntuAvatar/lab-docs/workshop_7.md)
-n this workshop, you install, configure, and run the Intu Avatar. You can use the avatar when you do not have a visual embodiment for Intu. Additionally, the avatar is useful in noisy environments because you can interact with it by using the keyboard instead of the microphone.
+In this workshop, you install, configure, and run the Intu Avatar. You can use the avatar when you do not have a visual embodiment for Intu. Additionally, the avatar is useful in noisy environments because you can interact with it by using the keyboard instead of the microphone.
 
 
