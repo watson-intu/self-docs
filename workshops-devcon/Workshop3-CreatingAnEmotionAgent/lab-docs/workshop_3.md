@@ -4,7 +4,7 @@ In this workshop, you create an emotion agent. Agents make decisions about how I
 
 **Before you begin:** You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
 
-**Note for Windows users:** You will need to have [**Visual Studio Community**](https://www.visualstudio.com/vs/community/) installed. This will take some time to download.
+**Note for Windows users:** You will need to have [**Visual Studio Community**](https://www.microsoft.com/en-us/download/details.aspx?id=48146) installed. This will take some time to download.
 
 Complete the following tasks:
 
@@ -414,7 +414,7 @@ First, this code iterates over the response to find the emotion that has the hig
 1. Open your `body.json` file. 
 
 	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac/etc/profile**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin -> Debug**. 
+	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **self -> sdk -> Debug**. 
 	
 2. Locate the `m_Libs` variable and add **workshop****_three****_plugin** to the `m_Libs` variable, **as shown below**:
    `"m_Libs" : [ "workshop_three_plugin"],`
