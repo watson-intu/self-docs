@@ -162,7 +162,7 @@ Known toolchains are:
 
 7. Right click on the **self-sdk** project, and open **properties**. In the **Debugging tab** of the properties, you will need to change **Working Directory** to **$(TargetDir)**.
 
-8. The first time you open your Visual Studio project, Visual Studio will want to compile for the **x86** architecture. In order to build Self, you will need to change this to **Win32**. Next to **Debug** in the task menu bar (directly below **File**), select the dropdown arrow and change **x86** to **Win32**.
+8. Visual Studio will need to compile for the **x86** architecture.  To the left of the *Local Windows Debugger* button, you will see Solution Platform options (usually x86 or x64). Make sure you select **x86**.
 
 9. Select **Build -> Build Solution**.
 
@@ -218,49 +218,245 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 3. Create a new directory inside this called **agents** in the **workshop_three** directory.
 
-4. Locate the Workshop 3 code snippet files **to be filled in** in:
+4. Right-click on the newly created directory and select **New -> C++ Source File**. Name the new file **WorkshopThreeAgent.cpp**.  Be sure to check the box for *Create an associated header*.
 
- `self-docs/workshops-devcon/Workshop3-CreatingAnEmotionAgent/code-snippets/WorkshopThreeAgent_Start/`
 
-5. Copy the `WorkshopThreeAgent.cpp` and the `WorkshopThreeAgent.h` files and paste them into the **agents** directory that you created.
+5. Paste the code found below in the **For Windows users section**. The first code block (found in step *8*) is for `WorkshopThreeAgent.cpp` and the second code block (found in step *9*) is for `WorkshopThreeAgent.h`.
 
 **For Windows users:**
 
 1. Open up File Explorer and navigate to **intu/self-sdk-master/examples**.
 
-2. Create a new directory in examples called **workshop_three**. 
+2. In **Visual Studio**, in the **examples** directory, add a new **Win32 Project** called `workshop_three_plugin`, and click **OK**. 
 
-3. Copy across `WorkshopThreeAgent.cpp` and `WorkshopThreeAgent.h` located under **self-sdk/docs/workshops-devcon/3/code-snippets/WorkshopThreeAgent_Start** into the **workshop_three** directory.
+3. Click **Next**, select **Application Type as DLL**, and uncheck **Precompiled header and Security Development Lifecycle (SDL) checks** under **Additional options**.
 
-4. In **Visual Studio**, in the **examples** directory, add a new **Win32 Project** called `workshop_three_plugin`, and click **OK**.
+4. Click **Finish**.
 
-5. Click **Next**, select **Application Type as DLL**, and uncheck **Precompiled header and Security Development Lifecycle (SDL) checks** under **Additional options**.
+5. Inside of `workshop_three_plugin`, remove the **Header Files**, **Resource Files**, and **Source Files** directories that were newly created in the solution.
 
-6. Click **Finish**.
+6. Inside the **Solution Explorer** window, right click **workshop_three****_plugin**, and select **Add -> New Filter**.
 
-7. Inside of `workshop_three_plugin`, remove the **Header Files**, **Resource Files**, and **Source Files** directories that were newly created in the solution.
+7. Name the filter **agent**.
 
-8. Inside the **Solution Explorer** window, right click **workshop_three****_plugin**, and select **Add -> New Filter**.
+8. Right-click on **agent**, and select **Add -> New Item**. Select **C++ File** and name it **WorkshopThreeAgent.cpp**. In this new file, paste the following code:
 
-9. Name the filter **agent**.
+	```
+	/**
+	* Copyright 2016 IBM Corp. All Rights Reserved.
+	*
+	* Licensed under the Apache License, Version 2.0 (the "License");
+	* you may not use this file except in compliance with the License.
+	* You may obtain a copy of the License at
+	*
+	*      http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing, software
+	* distributed under the License is distributed on an "AS IS" BASIS,
+	* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	* See the License for the specific language governing permissions and
+	* limitations under the License.
+	*
+	*/
+	
+	#include "WorkshopThreeAgent.h"
+	#include "SelfInstance.h"
+	#include "blackboard/BlackBoard.h"
+	#include "blackboard/Goal.h"
+	#include "skills/SkillManager.h"
+	
+	REG_SERIALIZABLE( WorkshopThreeAgent );
+	RTTI_IMPL( WorkshopThreeAgent, IAgent);
+	
+	// Serialize will build a JSON object from the object data created by the Emotion Agent.
+	void WorkshopThreeAgent::Serialize(Json::Value & json)
+	{
+	    IAgent::Serialize( json );
+	
+	    SerializeVector("m_NegativeTones", m_NegativeTones, json);
+	    SerializeVector("m_PositiveTones", m_PositiveTones, json);
+	
+	    json["m_EmotionalState"] = m_EmotionalState;
+	    json["m_EmotionTime"] = m_EmotionTime;
+	}
+	
+	//  Read in JSON data and create a readable object for functions to read from.
+	void WorkshopThreeAgent::Deserialize(const Json::Value & json)
+	{
+	    IAgent::Deserialize( json );
+	
+	    DeserializeVector("m_NegativeTones", json, m_NegativeTones);
+	    DeserializeVector("m_PositiveTones", json, m_PositiveTones);
+	
+	    if( json.isMember( "m_EmotionalState" ) )
+	        m_EmotionalState = json["m_EmotionalState"].asFloat();
+	    if (json.isMember("m_EmotionTime"))
+	        m_EmotionTime = json["m_EmotionTime"].asFloat();
+	
+	    if (m_NegativeTones.size() == 0)
+	        m_NegativeTones.push_back("extraversion");
+	    if (m_PositiveTones.size() == 0)
+	        m_PositiveTones.push_back("joy");
+	}
+	
+	//  OnStart() will subscribe the Emotion Agent to start listening for updates from the Blackboard and start listening.
+	bool WorkshopThreeAgent::OnStart()
+	{
+	    SelfInstance * pInstance = SelfInstance::GetInstance();
+	    assert( pInstance != NULL );
+	    BlackBoard * pBlackboard = pInstance->GetBlackBoard();
+	    assert( pBlackboard != NULL );
+	
+	    pBlackboard->SubscribeToType("LearningIntent",
+	                                 DELEGATE(WorkshopThreeAgent, OnLearningIntent, const ThingEvent &, this), TE_ADDED);
+	    pBlackboard->SubscribeToType("Text",
+	                                 DELEGATE(WorkshopThreeAgent, OnText, const ThingEvent &, this), TE_ADDED);
+	
+	    m_spEmotionTimer = TimerPool::Instance()->StartTimer(VOID_DELEGATE(WorkshopThreeAgent, OnEmotionCheck, this), m_EmotionTime, true, true);
+	    return true;
+	}
+	
+	//  OnStop() will unsubscribe the Emotion Agent, stopping it from listening for updates posted to the Blackboard.
+	//  This will ensure processes are won't be running in the background.
+	bool WorkshopThreeAgent::OnStop()
+	{
+	    SelfInstance::GetInstance()->GetBlackBoard()->UnsubscribeFromType( "LearningInten", this);
+	    SelfInstance::GetInstance()->GetBlackBoard()->UnsubscribeFromType( "Text", this );
+	    return true;
+	}
+	
+	//  OnText() waits for a text repsponse Tone Analyser instance
+	void WorkshopThreeAgent::OnText(const ThingEvent & a_ThingEvent)
+	{
+	
+	}
+	
+	//  OnLearningIntent() waits for a response waits for a target response, and depending on feedback being positive or net
+	//  and emotional state being constrained between zero and one, increments the emotional state. The updated emotional state
+	//  is then published to the Blackboard.
+	void WorkshopThreeAgent::OnLearningIntent(const ThingEvent & a_ThingEvent)
+	{
+	
+	}
+	
+	//  OnTone() waits for the response from the Tone Analyser...
+	void WorkshopThreeAgent::OnTone(DocumentTones * a_Callback)
+	{
+	
+	}
+	
+	//  Every 30 seconds OnEmotionCheck() will either increase or decrease the EmotionalState value to ensure that over time
+	//  EmotionalState resolve back to a value of 0.5 over time.
+	void WorkshopThreeAgent::OnEmotionCheck()
+	{
+	    if (m_EmotionalState > 0.5)
+	        m_EmotionalState -= 0.1f;
+	    else
+	        m_EmotionalState += 0.1f;
+	
+	    PublishEmotionalState();
+	}
+	
+	//  PublishEmotionalState() will publish a value of EmotionalState to the Blackboard. Agents listening for EmotionalState
+	//  will be updated when a new EmotionalState is published.
+	void WorkshopThreeAgent::PublishEmotionalState()
+	{
+	    Json::Value json;
+	    json["m_EmotionalState"] = m_EmotionalState;
+	
+	    SelfInstance::GetInstance()->GetBlackBoard()->AddThing(IThing::SP(
+	            new IThing(TT_PERCEPTION, "EmotionalState", json, 3600.0f)));
+	}
+	```
+	
+9. Right-click on **agent**, and select **Add -> New Item**. Select **Header File** and name it **WorkshopThreeAgent.h**. In this new file, paste the following code:
 
-10. Right-click on **agent**, and select **Add -> Existing Items**.
+	```
+	/**
+	* Copyright 2016 IBM Corp. All Rights Reserved.
+	*
+	* Licensed under the Apache License, Version 2.0 (the "License");
+	* you may not use this file except in compliance with the License.
+	* You may obtain a copy of the License at
+	*
+	*      http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing, software
+	* distributed under the License is distributed on an "AS IS" BASIS,
+	* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	* See the License for the specific language governing permissions and
+	* limitations under the License.
+	*
+	*/
+	
+	#ifndef SELF_WORKSHOP_THREE_AGENT_AGENT_H
+	#define SELF_WORKSHOP_THREE_AGENT_AGENT_H
+	
+	#include "agent/IAgent.h"
+	#include "blackboard/Text.h"
+	#include "blackboard/LearningIntent.h"
+	#include "services/WeatherInsights.h"
+	#include "services/ToneAnalyzer/ToneAnalyzer.h"
+	#include "sensors/SensorManager.h"
+	#include "sensors/MoodData.h"
+	#include "SelfLib.h"
+	
+	class SkillInstance;
+	
+	//! This agent handles emotions
+	
+	class WorkshopThreeAgent : public IAgent
+	{
+	public:
+	    RTTI_DECL();
+	
+	    WorkshopThreeAgent() : m_EmotionalState( 0.5f ), m_EmotionTime ( 30.0f )
+	    {}
+	
+	    //! ISerializable interface
+	    virtual void Serialize(Json::Value & json);
+	    virtual void Deserialize(const Json::Value & json);
+	
+	    //! IAgent interface
+	    virtual bool OnStart();
+	    virtual bool OnStop();
+	
+	private:
+	    //! Data
+	    std::vector<std::string>	m_NegativeTones;
+	    std::vector<std::string>	m_PositiveTones;
+	    float						m_EmotionalState;
+	    float						m_EmotionTime;
+	    TimerPool::ITimer::SP		m_spEmotionTimer;
+	
+	    //! Event Handlers
+	    void 		OnEmotion(const ThingEvent & a_ThingEvent);
+	    void		OnText(const ThingEvent & a_ThingEvent);
+	    void		OnLearningIntent(const ThingEvent & a_ThingEvent);
+	    void		OnTone(DocumentTones * a_Callback);
+	
+	    void		OnEnableEmotion();
+	    void		OnEmotionCheck();
+	    void		PublishEmotionalState();
+	};
+	
+	#endif // SELF_WORKSHOP_THREE_AGENT_AGENT_H
+	```
 
-11. Navigate to **self-sdk-master/examples/workshop_three** and select the files: `WorkshopThreeAgent.cpp` and `WorkshopThreeAgent.h`.
 
-12. Right-click the **workshop_three_plugin** solution, open **Properties**, and make the following changes, but **before you begin, make sure Configuration at the top left is set to "All Configurations"**.
+10. Right-click the `workshop_three_plugin` solution, open **Properties**, and make the following changes, but **before you begin, make sure Configuration at the top left is set to "All Configurations"**.
 
-* Change the value of **General -> Character Set** to **Use Multi-Byte Character Set**.
+11. Change the value of **General -> Character Set** to **Use Multi-Byte Character Set**.
 
-* Go to **C/C++ -> General** **-> Additional Include Directories** **->**, and add: `..\..\examples\workshop_three;..\..\include\self;..\..\include\wdc;..\..\lib\boost_1_60_0;..\..\lib;%(AdditionalIncludeDirectories)`
+12. Go to **C/C++ -> General** **-> Additional Include Directories** **->**, and add: `..\..\examples\workshop_three;..\..\include\self;..\..\include\wdc;..\..\lib\boost_1_60_0;..\..\lib;%(AdditionalIncludeDirectories)`
 
-* Go to **C/C++ -> Precompiled Headers -> Confirm Precompile Header**, and delete the value. Make sure it's blank.
+13. Go to **C/C++ -> Precompiled Headers -> Confirm Precompile Header**, and delete the value. Make sure it's blank.
 
-* Go to **Linker -> General -> Additional Library Directories ->**, and add: `../../lib/$(Configuration);../../lib/boost_1_60_0/stage/lib/`
+14. Go to **Linker -> General -> Additional Library Directories ->**, and add: `../../lib/$(Configuration);../../lib/boost_1_60_0/stage/lib/`
 
-* Replace the value of **Linker -> Input -> Additional Dependencies** with the following value: `jsoncpp.lib;self.lib;wdc.lib;%(AdditionalDependencies)`
+15. Replace the value of **Linker -> Input -> Additional Dependencies** with the following value: `jsoncpp.lib;self.lib;wdc.lib;%(AdditionalDependencies)`
 
-* Go to **Build Events -> Post-Build Event -> Command Line**, and add: `copy /Y "$(TargetPath)" "$(ProjectDir)..\..\bin\$(Configuration)"`
+16. Go to **Build Events -> Post-Build Event -> Command Line**, and add: `copy /Y "$(TargetPath)" "$(ProjectDir)..\..\bin\$(Configuration)"`
 
 
 ### B. Building out the OnText, OnTone and OnLearningIntent functions for your emotion agent
@@ -414,7 +610,7 @@ First, this code iterates over the response to find the emotion that has the hig
 1. Open your `body.json` file. 
 
 	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac/etc/profile**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **self -> sdk -> Debug**. 
+	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **self-sdk -> Debug**. 
 	
 2. Locate the `m_Libs` variable and add **workshop****_three****_plugin** to the `m_Libs` variable, **as shown below**:
    `"m_Libs" : [ "workshop_three_plugin"],`
