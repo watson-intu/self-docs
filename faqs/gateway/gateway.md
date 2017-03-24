@@ -6,10 +6,10 @@
   * The self_dialog key/value pair, which you see in the ConversationV1 service, is the workspace id that points to your base Conversation workspace.  It is generally the key for the conversation workspace that you would download from the Intu Starter Kit.
 
 * Credentials: M_BearerToken expires after a period, how long is this period, and what was the thought behind this as we would have to manually update all Intu users every time this expires?
-  * Sample answer
+  * When Intu is installed, it is given a temporary bearer token. This temporary bearer token is used to access the gateway, where the gateway will provide a permanent bearer token. The permanent bearer token is then used which will not expire. 
 
 * What is the parent in the gateway? And what would one use it for?
-  * Sample answer
+  * The "parent" is created when the user creates a new organization in the gateway. There are multiple reasons for why an Intu instance has a parent, but the two main reasons are: 1) To monitor the embodiment when not directly connected to the same network, and 2) for skill sharing. The first point is very important if you require to know how the embodiment is performing in a remote location. The second reason is how we crowd source teaching. One of the fundamental principals of Intu is to learn through interactions. When one embodiment learns something, it will transfer the knowledge to it's parent. That way, if another Intu embodiment is asked to perform some task and it hasn't heard it before, it will ask it's parent and then bring down that knowledge.
   
 * What services are required to run Intu?
   * Sign into the Intu Gateway. Select Manage > Services. Select your organization and group. Verify that you configured the following services with these specific names in the "Service Name" field:
