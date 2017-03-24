@@ -12,7 +12,7 @@
   * Any Intu instance can have a parent Intu instance. This forms a heirarchy of children and parents. You can communicate with any instance through a single connection to any instance in the heirarchy.
 
 * When a question is asked, a goal object is posted onto the blackboard for the goal agent to then determine the plan of action. How is the goal object generated, and by whom and where?
-  * Sample answer
+  * A agent creates the Goal object, the GoalAgent then selects a plan which executes one or more actions to complete the goal.
 
 * What is a goal object? Is there only one or multiple per question?
   * Typically there is only one, but that's not a requirement since a Goal may execute a plan that may create additional Goals.
