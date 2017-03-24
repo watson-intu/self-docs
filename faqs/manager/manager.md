@@ -45,7 +45,7 @@
   * The brain icon indicates a device is a Parent instance.  A computer icon indicates a device is a laptop device, such as PC or Mac.
 
 * What is the parent? Why do you have a parent and Intu when you start up manager?
-  * Sample answer
+  * The "parent" is created when the user creates a new organization in the gateway. There are multiple reasons for why an Intu instance has a parent, but the two main reasons are: 1) To monitor the embodiment when not directly connected to the same network, and 2) for skill sharing. The first point is very important if you require to know how the embodiment is performing in a remote location. The second reason is how we crowd source teaching. One of the fundamental principals of Intu is to learn through interactions. When one embodiment learns something, it will transfer the knowledge to it's parent. That way, if another Intu embodiment is asked to perform some task and it hasn't heard it before, it will ask it's parent and then bring down that knowledge
 
 * How do you change the installed instance's credentials on a machine without reinstalling?
   * Sample answer
