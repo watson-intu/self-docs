@@ -3,42 +3,33 @@
 ###Here is a collection of FAQs specific to the Intu architecture
 
 * Is there an orchestration layer in the backend architecture of Intu? If so, what is it?
-  * Sample answer
+  * Sometimes, some services we communicate with can act as orchestration layers. However, usually we handle orchestration within an agent inside Intu.
 
 * For a given topic, can the blackboard handle multiple outputs from a single/multiple agents and render them to the front end?
-  * Sample answer
+  * Yes, anyone can publish to a given topic and anyone can subscribe to that topic. 
 
 * What exactly is a "parent" vs. a "child"?
-  * Sample answer
+  * Any Intu instance can have a parent Intu instance. This forms a heirarchy of children and parents, you can communicate with any instance through a single connection to any instance in the heirarchy.
 
 * When a question is asked, a goal object is posted onto the blackboard for the goal agent to then determine the plan of action. How is the goal object generated, and by whom and where?
   * Sample answer
 
 * What is a goal object? Is there only one or multiple per question?
-  * Sample answer
-
-* Why do we need endpoints of services (e.g: conversation) in the avatar's config file when it is the Intu console which handles the thinking and contact the bluemix services via agents? Wouldn't it make more sense that the endpoints are configured on the Intu console?
-  * Sample answer
+  * Typically, there is only one, but that's not a requirement since a Goal may execute a plan that may create additional Goals.
 
 * How does the avatar communicate with the Intu console? Is it using the blackboard somehow? Or is it through a host IP? Or both?
-  * Sample answer
+  * The Avtar uses the web socket inteface of Intu to communicate. This is how all of our non-native SDK's communicate with an Intu instance.
 
 * According to the Self architecture document, the different subsystems (sensors, models, actuators, agency) have their own blackboard. Are these blackboard separated? If yes, do their agents talk to one another in the same environment?
-  * Sample answer
+  * They are seperated into seperate sub-tree's within a single blackboard instance.
 
 * What is the relationship and flow between a topic, intent and agents?
-  * Sample answer
+  * There is no direct flow between a topic and intent/agents. Various systems in Intu will publish and subscribe to topics, this is simply done to allow communications through the topic system. An intent is a type of IThing, which is posted to the blackboard. An agent can subscribe to the blackboard for any IThing type, including intents and other types of objects.
 
 * Why do we have to edit the body JSON file manually? How would we go about editing 100+ instances of this across users? And/or add agents at a later stage?
-  * Sample answer
+  * The body.json is eventually going away in future releases to be replaced by a cloud based graph.
 
 * How will we go about enabling multiple users, as each user will not have a Bluemix account?
-  * Sample answer
-
-* All Internet connection to and from Intu and the avatar need to be proxy aware. Can we specify the proxy settings, and add an exception list (list of URLs that will get ignored by the proxy)
-  * Sample answer
-
-* How are we going to install Intu on machines, without using the vanilla install, as we will have modified/updated agents.
-  * Sample answer
+  * We are working to allow a single Intu instance in the cloud to handle a large number of users at the same time. 
 
 [Back to the index](../../README.md)
