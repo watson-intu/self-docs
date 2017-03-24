@@ -9,10 +9,7 @@
   * For a more indepth and linked question flow, you would need to build out a detailed and complex Conversation workflow through Bluemix's Conversation Service.
 
 * Does the Intu manager need to be installed on a physical machine locally, on someone's PC? Can it be installed on a server/VM/cloud?
-  * Sample answer
-
-* Why do we need to remove Self ID on the config file in the exercise when the Intu gateway has a default value? Is it just a dummy value which does nothing?
-  * Sample answer
+  * Currently, the Intu Manager needs to be installed on a physical machine.
 
 * What is the Self Dialog ID that is in the Intu gateway? What does it do?
   * The "self_dialog" id on the Intu Gateway is a Conversation workspace id that is associated with your Conversation workspace.  "self_dialog" is meant to be associated with the json downloaded from the Intu Starter Kit and "self_domain" is meant to be your own personal Conversation workspace id.
