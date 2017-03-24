@@ -20,16 +20,16 @@
    8. Install Intu on Robot / RaspberryPI. If robot is not shown in Intu Manager, kill Intu instance on Robot and restart it with "-c 0 -f 0" parameters to see debug logs to check the issue.
    
 * Does a normal end user need to download Intu manager + whatever the unity front end is to run? E.g: Intu manager+Watson avatar, or is it ONLY the sys admin that needs Intu manager locally?
-  * Sample answer
+  * Anyone can download the Intu Manager.  If you would like to install Intu onto a device, such as a robot or your own local machine, you will need to download the Intu Manager. Additionally you should download the Intu Manager if you would like to monitor devices in your organizations.
 
 * In the config.json file, why do we need to have the services endpoints (e.g:conversation) and their credentials locally? Does the avatar not talk to the Intu manager with the Intu manager handling the services there? Also, if we change the values (endpoints/credentials) locally, does that get updated in the Intu gateway (synced)?
-  * Sample answer
+  * In the config.json, you only need to add your organization and group ids and bearer tokens.  Please see Workshop 7 for more details on how to run the Intu Avatar.
 
 * When you create an organization in the gateway, are you creating a parent? Is each device registered under the same organisation a child to that parent/organization?
-  * Sample answer
+  * When you create an organization, a parent will be created automatically.  Each device is registered to the organization is a child of the parent.
 
 * What are different groups in the gateway? How are these used? (Are these "children"?)
-  * Sample answer
+  * An organization should have multiple groups if you want each device in the different groups to use different service credentials, perhaps they will use a different Conversation Workspace.  An example might be a Hotel Organization and each group has a different function within the hotel, perhaps one group is for the Front Lobby Concierge and another group is for In-Room queries.
 
 * How would we setup the terminal to run in the cloud? As a user using the avatar should not have to launch the Intu terminal to run the avatar, it should be seamless.
   * Sample answer
@@ -38,7 +38,7 @@
   * Sample answer
 
 * How do you setup Intu to have multiple users?
-  * Sample answer
+  * Once you create an organization, you can invite other users to join the group.  In the Gateway, navigate to the Manager -> Groups tab and you can add a user from there.
 
 * Do you need one version of Intu on your machine for one instance of the avatar?
   * Sample answer
