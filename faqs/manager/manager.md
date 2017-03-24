@@ -3,10 +3,10 @@
 ###Here is a collection of FAQs specific to the Intu manager
 
 * What other language is Intu going to support apart from C++?
-  * While the core of Intu is written in C++, we are working on enabling Intu through sdks in Java, Python, and Javascript
+  * While the core of Intu is written in C++, we are working on enabling Intu through SDKs in Java, Python, and Javascript
 
 * How does Intu handle the user's question memory? E.g: If I ask a question, and a follow on question is asked, it knows that it’s merely a filter/linked to the first question for more detail.
-  * For a more indepth and linked question flow, you would need to build out a detailed and complex Conversation workflow through Bluemix's Conversation Service.
+  * For a more in-depth and linked question flow, you would need to build out a detailed and complex Conversation workflow through Bluemix's Conversation Service.
 
 * Does the Intu manager need to be installed on a physical machine locally, on someone's PC? Can it be installed on a server/VM/cloud?
   * Currently, the Intu Manager needs to be installed on a physical machine.
@@ -24,7 +24,7 @@
   * The Avatar requires a local instance of Intu to be running in order to work.
 
 * What is the purpose of the manager and gateway, why not just have the gateway?
-  * The manager acts as two necessary functionalities: 1) an installer, and 2) a way to monitor live Intu instances, including remote Intu instances that are registered to the end users organization. While the gateway acts as a management system on the organization level, the Intu Manager acts as a manager on an individual Intu instance.
+  * The manager acts as two necessary functionalities: 1) an installer, and 2) a way to monitor live Intu instances, including remote Intu instances that are registered to the end users' organization. While the gateway acts as a management system on the organization level, the Intu Manager acts as a manager on an individual Intu instance.
 
 * Health Services do not appear until Intu seems to be fully up and running; this doesn’t help diagnosing which services could be causing Intu to fail.
   * Health information for a given embodiment takes roughly 15 - 30 seconds to appear in tooling after the embodiment has started. Health information is not just focused on services that have gone down, but also real time diagnostics that could help prevent more permament issues. For example, if the embodiment running Intu is a physical robot, then health events are extremely important in case motors are beginning to overheat and needs to go into a rest phase.
