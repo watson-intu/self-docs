@@ -173,118 +173,25 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
-1.  Make sure Intu is not running.
+1.  Make sure Intu is not running and navigate to your Convesation Service's dashboard of workspaces.
 
-2.  When you import/ create your new workspace, make sure it is present in the same Bluemix Conversation Service.
+2.  If you are importing a workspace, simply import it the same way you imported the Starter Kit Workspace json.  If you are creating a brand new workspace, click the **Create** button. NOTE: When you import or create your new workspace, make sure it is present in the same Bluemix Conversation Service.
 
-3.  Click on the **three dots** in the top right hand corner of the newly created Workspace box. Select **View details**.
+3. If you are creating your own brand new workspace, add *Intents*, *Entities*, and a *Dialog flow* in the same way you were instructed in this workshop.  Be as creative as you would like with this workspace.
 
-4.  Copy the Workspace ID into a text file.
+4.  Get the Workspace Id -- Click on the three horizontal lines in the top left corner, click *Back to workspaces*. Once you see all your workspaces, click on the **three dots** in the top right hand corner of the newly created Workspace box. Select **View details**.
 
-5.  Navigate to your body.json file in the latest directory
-
-  **For Mac users:** Applications/IBM/Self/latest
-
-  **For Windows users:** C:\Users\username\AppData\LocalLow\IBM\Self\latest
-
-  Search for m_ClassifierProxies and add the following extra element to the array:
-  ```
-{
-               "Type_" : "ConversationProxy",
-               "m_Context" : null,
-               "m_Filters" : [
-                  {
-                     "Type_" : "DuplicateFilter",
-                     "m_MinIntentWindow" : 2
-                  },
-                  {
-                     "Type_" : "IntentFilter",
-                     "m_Intents" : [ "question", "nonsense" ]
-                  }
-               ],
-               "m_IntentOverride" : "m_IntentOverride",
-               "m_ServiceId" : "ConversationV1",
-               "m_WorkspaceId" : "{workspace_id}",
-               "m_WorkspaceKey" : "{workspace_key}",
-               "m_bPriority" : false
-}
-  ```
-  Update the **workspace_id** to the one taken in step 4. For the **workspace_key** make it any unique identifier. Save the above.
+5.  Copy the Workspace Id.
 
 6.  Return to the [Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
-  Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1 => Click on the + sign
+7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the *self_domain* key is still present, edit the value to point to your new Conversation workspace.  If the *self_domain* key is absent, => Click on the + sign. For the key field make it *self_domain* and for the value field make it your workspace id.
 
-7. For the key, add in the workspace_key and for the value, add in the workspace_id. Click save.
+8. Click save.
 
-8. Start Intu
+9. Start Intu. Your new Conversation workspace will be picked up. Test it by asking questions specific to that Conversation workspace.
 
-  1. Navigate to the directory where you installed the Intu Manager from Workshop 1 and run the application. (If you're using a **Mac**, right-click on the Intu Manager and select Open. If you're using **Windows**, double-click on the Intu Manager to run it.) 
-  2. If a security warning is displayed, accept the risk and open the file.
-  3. Make sure the **Windowed** checkbox is selected, accept the other default values, and click **Play!**. 
-  4. The Intu Manager page is displayed in your browser window. Click **Log In**. You are prompted to return to the Intu Manager. 
-  5. Select **Manage Intu**. A new Intu Tooling log in page is displayed. Click **Log in.**
-  6. Your Organization and Group should be preselected in the dropdown menu and Intu should now be running.
 
-## Challenge: Using your own custom Conversation workspace with Intu
-
-Here you will find the instructions for using your own custom Conversation workspace instead of the example Intu-Dialog workspace from above.
-
-**Important:** As you may have read earlier, Intu is currently configured to recognize intents which are prefixed with “dialog_”. This is important to make sure Intu recognizes your intent and treats your input as a question that needs to be answered through Conversation. However, you can create your own prefix or pattern for intents should you choose.
-
-###Configuring your intents for Conversation
-
-All new intents for Conversation must be correctly configured. If you create intents with your own prefix (instead of “dialog_”), you must ensure that a new "QuestionIntent" block specifying this unique prefix is added to your `body.json` configuration file. 
-
-Navigate to your `body.json` file in the **latest** directory.
-
-**For Mac users:** Applications/IBM/Self/latest
-
-**For Windows users:** C:\Users\username\AppData\LocalLow\IBM\Self\latest
-
-Search for "QuestionIntent", and you should find the following:
-            
-            {
-               "m_Class" : "QuestionIntent",
-               "m_Intent" : "dialog*"
-            },
-            {
-               "m_Class" : "QuestionIntent",
-               "m_Intent" : "PLACE*"
-            },
-            {
-               "m_Class" : "QuestionIntent",
-               "m_Intent" : "*INFO"
-            },
-            {
-               "m_Class" : "QuestionIntent",
-               "m_Intent" : "SERVICE*"
-            },
-            {
-               "m_Class" : "QuestionIntent",
-               "m_Intent" : "question*"
-            },
-            
-Notice the first "QuestionIntent" shown for "dialog*". This is what helps Intu to recognize intents prefixed with "dialog_".  Thus, when you create new intents, you can do **either or both** of **Option 1** and **Option 2** below.
-
-**Option 1: Creating intents which are all prefixed with "dialog_"** 
-
-1. If you have already created a working Conversation workspace, edit all of your intents so that they are prefixed with “dialog_”. Make sure these updates are applied to all intents in the **Intents** section of Conversation as well as in the **Dialog** section.
-
-2. If you have not yet created your Conversation workspace, make sure that when you do start creating it, all of your intents begin with “dialog_”.
-
-**Option 2: Adding in your own intent prefix or intent pattern by editing the body.json file**
-
-1. Instead of prefixing your intents with "dialog_", choose your own prefix. 
-
-2. In your `body.json` file, create a new "QuestionIntent" block specifying your prefix, e.g.:
-
-            {
-               "m_Class" : "QuestionIntent",
-               "m_Intent" : "MY_PREFIX*"
-            },
-
-Now, complete **Section 4: Configuring Self to use your new Conversation instance**. Make sure that you copy your Workspace ID into the **self_domain** parameter. You can just leave the **self_dialog** parameter with its default value, or delete it if you wish.
 
 ## Reminder: Update services within 30 days of registering on the Gateway
 Your instance of Intu is preconfigured with the following Watson services: Conversation, Weather Company Data, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
