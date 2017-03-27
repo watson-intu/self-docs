@@ -279,9 +279,9 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 **For Windows users:**
 
-2. In **Visual Studio**, in the **examples** directory, add a new **Win32 Project** called `workshop_three_plugin`, and click **OK**. 
+2. In **Visual Studio** open the solution located at **intu/self-sdk-master/vs2015/self-sdk.sln**. Right click on the **examples** folder and select **Add->New Project**. Select **Visual C++/Win32** in the tree to the left, select **Win32 Project** and set the name field to `workshop_three_plugin`, finally click **OK**. 
 
-3. Click **Next**, select **Application Type as DLL**, and uncheck **Precompiled header and Security Development Lifecycle (SDL) checks** under **Additional options**.
+3. Click **Next**, select **Application Type as DLL**, uncheck **Precompiled header and Security Development Lifecycle (SDL) checks** and check **Empty Project** under **Additional options**.
 
 4. Click **Finish**.
 
