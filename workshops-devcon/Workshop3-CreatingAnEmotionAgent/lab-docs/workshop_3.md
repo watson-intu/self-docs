@@ -66,7 +66,7 @@ Follow the instructions for your platform.
 
 **Before you begin**:
 
-[Download the Self SDK](https://github.com/watson-intu/self-sdk). This workshop assumes you've installed the SDK into **~/intu/self-sdk-master/**
+[Download the Self SDK](https://github.com/watson-intu/self-sdk). This workshop assumes you've installed the SDK into **~/intu/self-sdk-master/**.
 
 ### A. Preparing for OS X
 
