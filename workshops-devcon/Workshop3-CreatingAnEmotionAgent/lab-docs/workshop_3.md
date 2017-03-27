@@ -66,11 +66,7 @@ Follow the instructions for your platform.
 
 **Before you begin**:
 
-1. [Download the Self SDK](https://github.com/watson-intu/self-sdk).
-
-2. Create a new directory named **intu** in a directory of your choosing.
-
-3. Unzip the **self-sdk-master.zip** file into the **intu** directory, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
+[Download the Self SDK](https://github.com/watson-intu/self-sdk). This workshop assumes you've installed the SDK into **~/intu/self-sdk-master/**
 
 ### A. Preparing for OS X
 
