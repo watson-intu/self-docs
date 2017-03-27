@@ -251,7 +251,7 @@ mkdir workshop_five
 		virtual bool Abort();
 
 		//! Construction
-		WorkshopFiveGesture() : m_PinNumber( 7 ), m_bWiredPi( false )
+		WorkshopFiveGesture() : m_PinNumber( 11 ), m_bWiredPi( false )
 		{}
 
 	private:
