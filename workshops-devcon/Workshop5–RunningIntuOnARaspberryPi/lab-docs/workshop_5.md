@@ -362,12 +362,12 @@ mkdir workshop_five
 	1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we just created In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 	
 	```
-	nano ~/intu/self-sdk-master/bin/raspi/etc/profile/body.json
+	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
 	```
 
     2. Locate the `m_Libs` variable, and change it to read: 
     
-    	`"m_Libs":["workshop_five_plugin"]` 
+    	`"m_Libs":[ "platform_raspi", "camera_plugin", "workshop_five_plugin"]` 
     
     3. Save your changes and close the file.
 
@@ -564,12 +564,12 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 7. Configuring your **body.json** file
 	1. We will add a few extra parameters to the body.json:
 	```
-	nano ~/intu/self-sdk-master/bin/raspi/etc/profile/body.json
+	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
 	```
 
     2. Locate the `m_Libs` variable, and change it to read: 
 
-		`"m_Libs":["move_joint_plugin", "workshop_five_plugin"]` 
+		`"m_Libs":[ "platform_raspi", "camera_plugin", "workshop_five_plugin", "move_joint_plugin", "workshop_five_plugin"]` 
     
 8. Run Self:
 
