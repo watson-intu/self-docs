@@ -62,198 +62,18 @@ Before you create an emotion agent, become familiar with the following terminolo
 
 ## 3. <a name="building-the-intu-sdk">Building the Self SDK</a>
 
-Follow the instructions for your platform.
+See [Installing and building the Self SDK](https://github.com/watson-intu/self-sdk#compiling-intu-for-various-platforms) before you continue in this workshop.
 
-**Before you begin**:
-
-[Download the Self SDK](https://github.com/watson-intu/self-sdk#getting-the-files). This workshop assumes you've installed the SDK into **~/intu/self-sdk-master/**.
-
-### A. Preparing for OS X
-
-**Note**: If you have already completed **Preparing for OS X** in another workshop, you can skip this section.
-
-1. Install Homebrew by completing the following steps:
-   1. Open a new terminal window, and run the command:
-   ```
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
-   The following message is displayed:
-   ```
-   Press RETURN to continue or any other key to abort
-   ```
-   2. Press **Return** or **Enter**. A prompt for your laptop's password is displayed.
-   3. Specify your password, and press **Return** or **Enter**. If you have **macOS Sierra**, the following message is displayed:
-   
-   		```
-   		HEAD is now at 89fd34b Merge pull request #1368 from MikeMcQuaid/build-options-file
-   		Error: /usr/local/Cellar is not writable. You should change the
-   		ownership and permissions of /usr/local/Cellar back to your
-   		user account:
-   		sudo chown -R $(whoami) /usr/local/Cellar
-   		Failed during: /usr/local/bin/brew update --force
-   		```
-   
-   		Run: `sudo chown -R $(whoami) /usr/local/Cellar`
-   4. Now repeat step 1 by running: 
-    ```
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
-2. Install CMake using Homebrew.
-	1. Run the command: `sudo chown -R $(whoami) /usr/local`   
-	2. Now run: `brew install cmake`
-
-		**Note**: If you have **macOS Sierra**, you may see the following message if you happen to have an outdated version of **Xcode**: 
-	
-		```
-	Your Xcode (7.3.1) is outdated.
-	Please update to Xcode 8.1 (or delete it).
-	Xcode can be updated from the App Store.
-		```
-	
-		If you see this message, you will need to update **Xcode**.
-	
-3. Download **Anaconda 4.2.0 Python 2.7 version** by using the **Graphical Installer**. It is required to correctly configure pip in the following step.
-   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://repo.continuum.io/archive/index.html). Choose relevant file based on your environment (pkg for Mac) whose name starts from Anaconda2-4.2.0. Please note that Anaconda2 signifies Python 2.x and Anaconda3 signifies Python 3.x. These instructions and the workshop have not been tested on Python 3.x
-   2. Click the solid blue GRAPHICAL INSTALLER button for Python 2.7 Version. It should be 403 MB. The .pkg file downloads.
-   3. After the file is downloaded, double-click it, and follow the prompts to install Anaconda.
-   4. Open a **new** Terminal window and make sure your version of Python has been successfully updated by running the command: `python --version` 
- 	
- 		You should see: `Python 2.7.12 :: Anaconda 4.2.0 (x86_64)`
-
- 	If your Python version doesn't match the above, make sure that you have set your $PATH variable correctly in the shell so that it prioritizes the Anaconda installation over the standard OS X Python installation. If you have previously installed Anaconda Python 3.x, you might run into an error. In that case, use a different path for your new Python 2.7 installation.
-  
-4. Set up qiBuild.
-   1. Run: `pip install qibuild`
-   2. Run: `qibuild config --wizard` and be sure to include the two hyphens before **wizard** in the last command.
-   3. When the "Please choose a generator" prompt is displayed, specify **1**, and press **Enter**.
-   4. When the "Please choose an IDE" prompt is displayed, specify **1**, and press **Enter**.
-
-### B. Building the Self SDK for OS X
-
-1. In a new Terminal window, navigate to the **self-sdk-master** directory inside **intu**. You should just be able to run: `cd intu/self-sdk-master` 
-
-	**Note:** If you have **already built the Self SDK for OS X** in another workshop, run: `./scripts/clean.sh`    
-
-2. Run:
-`./scripts/build_mac.sh`  
-If you are running this script for the first time and you see the following message, do not worry as you do not have the toolchain. Let the script run and proceed with the next step.
-```
-[ERROR]: Exception No such toolchain: mac-self
-Known toolchains are:
-```
-
-### C. Building the Self SDK for Windows
-
-1. Preparing Windows only requires installing **[Visual Studio Community](https://www.visualstudio.com/vs/community/)**. **Note:** This will take some time to download.
-
-2. **Important:** When you install Visual Studio, in **Features**, inside the **Select features** box, make sure that **Visual C++** is selected under **Programming Languages**. 
-
-3. Visual Studio should launch automatically after installing. If it does not, open Visual Studio.
-
-4. Select **Open solution**.
-
-5. Open the solution found in **vs2015/self-sdk.sln**.
-
-6. Right click on the **self-sdk** project and select **Set as Startup Project**.
-
-7. Right click on the **self-sdk** project, and open **properties**. In the **Debugging tab** of the properties, you will need to change **Working Directory** to **$(TargetDir)**.
-
-8. Visual Studio will need to compile for the **x86** architecture.  To the left of the *Local Windows Debugger* button, you will see Solution Platform options (usually x86 or x64). Make sure you select **x86**.
-
-9. Select **Build -> Build Solution**.
-
-10. Select **Debug -> Start Debugging** to run the project with debugging.
-
-**Important:** If you use SourceTree, the process might get stuck when trying to pull by using SSH. This is because SourceTree will try to launch an interactive window that will be hidden. Run the following commands on the command line to fix the problem:
-
-1. `cd "C:\Program Files (x86)\Atlassian\SourceTree\tools\putty"`
-	
-2. `plink git@github.ibm.com`
 
 ## 4. <a name="creating-an-emotion-agent">Creating an emotion agent</a>
 
 ### A. Preparing your directories and files for the emotion agent
 
-**For OS X users:**
+1. Create a directory called **workshop_three** in the **~/intu/self-sdk-master/examples/** directory. 
 
-1. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/).
-
-2. In **CLion**, select **Open** -> **your home directory** -> **intu** -> **self-sdk-master** and click **OK**. 
-
-	Note that a window may appear prompting you to open your project in a New Window or This Window. Select **New Window**. At the bottom of your CLion window, in the Problems tab, you will see the following Error, which you do not need to worry about:
-
-	Error: By not providing "FindSELF.cmake" in CMAKE_MODULE_PATH this project has asked CMake to find a package configuration file provided by "SELF", but CMake did not find one.
-Could not find a package configuration file provided by "SELF" with any of the following names:
-  SELFConfig.cmake   self-config.cmake
-Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to a directory containing one of the above files.  If "SELF" provides a separate development package or SDK, be sure it has been installed.
-
-	2i. Inside the CLion **self-sdk-master project**, right-click **examples**, select **New**, and select **Directory**. Type in **workshop_three** for the new directory name, and click **OK**.
- 
-	2ii. Right-click the `CMakeLists.txt` file in the **examples** directory, and click **Copy**. (If you are unsure of the directory you are in, look in the top-left navigation bar.)
-  
-	2iii. Right-click the **workshop_three** directory, and click **Paste**. This file helps to build the plugin for the emotion agent.
-
-	2iv. Return to the **examples** directory, open the `CMakeLists.txt` file, and add the following line: `add_subdirectory(workshop_three)` at the end. Your file contains the following three lines:
-
-  ```
-    include_directories(".")
-
-    add_subdirectory(sensor)
-    add_subdirectory(workshop_three)
-  ```
-	2v. Open the `CMakeLists.txt` file in the **workshop_three** directory, and overwrite its content with this code:
-
-  ```
-    include_directories(.)
-
-    file(GLOB_RECURSE SELF_CPP RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
-    qi_create_lib(workshop_three_plugin SHARED ${SELF_CPP})
-    qi_use_lib(workshop_three_plugin self wdc)
-    qi_stage_lib(workshop_three_plugin)
-  ```
-
-3. Create a new directory inside this called **agents** in the **workshop_three** directory.
-
-4. Right-click on the newly created directory and select **New -> C++ Source File**. Name the new file **WorkshopThreeAgent.cpp**.  Be sure to check the box for *Create an associated header*.
-
-
-5. Paste the code found below in the **For Windows users section**. The first code block (found in step *8*) is for `WorkshopThreeAgent.cpp` and the second code block (found in step *9*) is for `WorkshopThreeAgent.h`.
-
-**For Windows users:**
-
-1. Open up File Explorer and navigate to **intu/self-sdk-master/examples**.
-
-2. In **Visual Studio**, in the **examples** directory, add a new **Win32 Project** called `workshop_three_plugin`, and click **OK**. 
-
-3. Click **Next**, select **Application Type as DLL**, and uncheck **Precompiled header and Security Development Lifecycle (SDL) checks** under **Additional options**.
-
-4. Click **Finish**.
-
-5. Inside of `workshop_three_plugin`, remove the **Header Files**, **Resource Files**, and **Source Files** directories that were newly created in the solution.
-
-6. Inside the **Solution Explorer** window, right click **workshop_three****_plugin**, and select **Add -> New Filter**.
-
-7. Name the filter **agent**.
-
-8. Right-click on **agent**, and select **Add -> New Item**. Select **C++ File** and name it **WorkshopThreeAgent.cpp**. In this new file, paste the following code:
+2. Create a file called **WorkshopThreeAgent.cpp** in this directory, and paste the following code:
 
 	```
-	/**
-	* Copyright 2016 IBM Corp. All Rights Reserved.
-	*
-	* Licensed under the Apache License, Version 2.0 (the "License");
-	* you may not use this file except in compliance with the License.
-	* You may obtain a copy of the License at
-	*
-	*      http://www.apache.org/licenses/LICENSE-2.0
-	*
-	* Unless required by applicable law or agreed to in writing, software
-	* distributed under the License is distributed on an "AS IS" BASIS,
-	* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	* See the License for the specific language governing permissions and
-	* limitations under the License.
-	*
-	*/
 	
 	#include "WorkshopThreeAgent.h"
 	#include "SelfInstance.h"
@@ -364,27 +184,9 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	            new IThing(TT_PERCEPTION, "EmotionalState", json, 3600.0f)));
 	}
 	```
-	
-9. Right-click on **agent**, and select **Add -> New Item**. Select **Header File** and name it **WorkshopThreeAgent.h**. In this new file, paste the following code:
+3. Create a file called **WorkshopThreeAgent.h** in the same directory, and paste the following code:
 
 	```
-	/**
-	* Copyright 2016 IBM Corp. All Rights Reserved.
-	*
-	* Licensed under the Apache License, Version 2.0 (the "License");
-	* you may not use this file except in compliance with the License.
-	* You may obtain a copy of the License at
-	*
-	*      http://www.apache.org/licenses/LICENSE-2.0
-	*
-	* Unless required by applicable law or agreed to in writing, software
-	* distributed under the License is distributed on an "AS IS" BASIS,
-	* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-	* See the License for the specific language governing permissions and
-	* limitations under the License.
-	*
-	*/
-	
 	#ifndef SELF_WORKSHOP_THREE_AGENT_AGENT_H
 	#define SELF_WORKSHOP_THREE_AGENT_AGENT_H
 	
@@ -438,7 +240,52 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	
 	#endif // SELF_WORKSHOP_THREE_AGENT_AGENT_H
 	```
+	
+**For OS X users:**
 
+1. If you do not have it installed already, download the trial version of the [CLion C++ IDE](https://www.jetbrains.com/clion/download/).
+
+2. In **CLion**, select **Open** -> **your home directory** -> **intu** -> **self-sdk-master** and click **OK**. 
+
+	Note that a window may appear prompting you to open your project in a New Window or This Window. Select **New Window**. At the bottom of your CLion window, in the Problems tab, you will see the following Error, which you do not need to worry about:
+
+	Error: By not providing "FindSELF.cmake" in CMAKE_MODULE_PATH this project has asked CMake to find a package configuration file provided by "SELF", but CMake did not find one.
+Could not find a package configuration file provided by "SELF" with any of the following names:
+  SELFConfig.cmake   self-config.cmake
+Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to a directory containing one of the above files.  If "SELF" provides a separate development package or SDK, be sure it has been installed.
+
+	2i. Right-click the `CMakeLists.txt` file in the **examples** directory, and click **Copy**. (If you are unsure of the directory you are in, look in the top-left navigation bar.)
+  
+	2ii. Right-click the **workshop_three** directory, and click **Paste**. This file helps to build the plugin for the emotion agent.
+
+	2iii. Return to the **examples** directory, open the `CMakeLists.txt` file, and add the following line: `add_subdirectory(workshop_three)` at the end. Your file contains the following three lines:
+
+  ```
+    include_directories(".")
+
+    add_subdirectory(sensor)
+    add_subdirectory(workshop_three)
+  ```
+	2iv. Open the `CMakeLists.txt` file in the **workshop_three** directory, and overwrite its content with this code:
+
+  ```
+    include_directories(.)
+
+    file(GLOB_RECURSE SELF_CPP RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
+    qi_create_lib(workshop_three_plugin SHARED ${SELF_CPP})
+    qi_use_lib(workshop_three_plugin self wdc)
+    qi_stage_lib(workshop_three_plugin)
+  ```
+
+**For Windows users:**
+
+2. In **Visual Studio**, in the **examples** directory, add a new **Win32 Project** called `workshop_three_plugin`, and click **OK**. 
+
+3. Click **Next**, select **Application Type as DLL**, and uncheck **Precompiled header and Security Development Lifecycle (SDL) checks** under **Additional options**.
+
+4. Click **Finish**.
+
+6. Inside the **Solution Explorer** window, right click **workshop_three****_plugin**, and select **Add -> Existing Item** then select the files you added above **WorkshopThreeAgent.cpp** and **WorkshopThreeAgent.h**.
 
 10. Right-click the `workshop_three_plugin` solution, open **Properties**, and make the following changes, but **before you begin, make sure Configuration at the top left is set to "All Configurations"**.
 
@@ -486,11 +333,9 @@ The Serialize, Deserialize, OnStart, OnStop, OnEmotion, OnLearningIntent, OnEmot
 
 In the next step, you will build out the **OnText**, **OnTone** and **OnLearningIntent** functions using the example code provided.
 
-**For OS X and Windows users:**
-
 1. In the following section, you will see code snippets that you need to copy and paste into the **WorkshopThreeAgent.cpp** file that you created earlier.  The instructions will tell you in which function specificially the snippets need to be pasted.
 
-2. For the **OnText()** function, copy the code directly below **//Code for OnText()**. Now paste this inside the function body **{}** of **OnText()** in `WorkshopThreeAgent.cpp`, which is located inside your **agents** directory. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+2. For the **OnText()** function, copy the code directly below:
   
   ```
   Text::SP spText = DynamicCast<Text>(a_ThingEvent.GetIThing());
@@ -504,10 +349,10 @@ In the next step, you will build out the **OnText**, **OnTone** and **OnLearning
     }
   ```
             
-3. For the **OnTone()** function, copy the code directly below **//Code for OnTone()**. Now paste this inside the function body **{}** of **OnTone()** in `WorkshopThreeAgent.cpp`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+3. For the **OnTone()** function, copy the code directly below:
   
   	```
-      if (a_Callback != NULL)
+     if (a_Callback != NULL)
     {
         double topScore = 0.0;
         Tone tone;
@@ -551,11 +396,10 @@ In the next step, you will build out the **OnText**, **OnTone** and **OnLearning
     }
   ```
   
-4. For the **OnLearningIntent()** function, copy the code directly below **//Code for OnLearningIntent()**. Now paste this inside the function body **{}** of **OnLearningIntent()** in `WorkshopThreeAgent.cpp`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.  
-  
- ```
+4. For the **OnLearningIntent()** function, copy the code directly below:
 
-  LearningIntent::SP spLearningIntent = DynamicCast<LearningIntent>(a_ThingEvent.GetIThing());
+	```
+	LearningIntent::SP spLearningIntent = DynamicCast<LearningIntent>(a_ThingEvent.GetIThing());
     if (spLearningIntent && spLearningIntent->GetVerb().compare("feedback") == 0)
     {
         if (spLearningIntent->GetTarget().compare("positive_feedback") == 0)
@@ -580,8 +424,6 @@ First, this code iterates over the response to find the emotion that has the hig
 **Additional steps for OS X users:**
 
 1. Open a **new** Terminal window and navigate to **intu/self-sdk-master** by running: `cd intu/self-sdk-master`.
-
-	**Note:** If you have built the SDK in a previous workshop, make sure you run: `./scripts/clean.sh`.
 
 2. Run the build script: `./scripts/build_mac.sh`. **Do not close this Terminal window.**
 
