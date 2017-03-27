@@ -212,10 +212,10 @@ cd ~/intu/self-sdk-master/examples/
 mkdir workshop_five
 ```
 
-2. Create your CMakeList.txt:
+2. Create your CMakeLists.txt:
 	```
 	cd workshop_five
-	nano CMakeList.txt
+	nano CMakeLists.txt
 	```
 
 	Paste or type the following code into the file:
