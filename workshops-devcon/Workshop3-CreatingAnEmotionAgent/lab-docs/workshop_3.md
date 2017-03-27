@@ -287,20 +287,28 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 
 6. Inside the **Solution Explorer** window, right click **workshop_three****_plugin**, and select **Add -> Existing Item** then select the files you added above **WorkshopThreeAgent.cpp** and **WorkshopThreeAgent.h**.
 
-10. Right-click the `workshop_three_plugin` solution, open **Properties**, and make the following changes, but **before you begin, make sure Configuration at the top left is set to "All Configurations"**.
+10. Right-click the **workshop_three_plugin** project, open **Properties**, and make the following changes:
+	1. Select Configuration at the top left is set to **All Configurations**.
+	2. Change the value of **General -> Character Set** to **Use Multi-Byte Character Set**.
+	3. Go to **C/C++ -> General** **-> Additional Include Directories** **->**, and add: 
+		```
+		..\..\examples\workshop_three;..\..\include\self;..\..\include\wdc;..\..\lib\boost_1_60_0;..\..\lib;%(AdditionalIncludeDirectories)
+		```
+	4. Go to **C/C++ -> Precompiled Headers -> Precompile Header File**, and delete the value. Make sure it's blank.
+	5. Go to **Linker -> General -> Additional Library Directories ->**, and add: 
+		```
+		../../lib/$(Configuration);../../lib/boost_1_60_0/stage/lib/
+		```
+	6. Replace the value of **Linker -> Input -> Additional Dependencies** with the following value: 
+		```
+		jsoncpp.lib;self.lib;wdc.lib;%(AdditionalDependencies)
+		```
+	7. Go to **Build Events -> Post-Build Event -> Command Line**, and add: 
+	```
+	copy /Y "$(TargetPath)" "$(ProjectDir)..\..\bin\$(Configuration)"
+	```
 
-11. Change the value of **General -> Character Set** to **Use Multi-Byte Character Set**.
-
-12. Go to **C/C++ -> General** **-> Additional Include Directories** **->**, and add: `..\..\examples\workshop_three;..\..\include\self;..\..\include\wdc;..\..\lib\boost_1_60_0;..\..\lib;%(AdditionalIncludeDirectories)`
-
-13. Go to **C/C++ -> Precompiled Headers -> Confirm Precompile Header**, and delete the value. Make sure it's blank.
-
-14. Go to **Linker -> General -> Additional Library Directories ->**, and add: `../../lib/$(Configuration);../../lib/boost_1_60_0/stage/lib/`
-
-15. Replace the value of **Linker -> Input -> Additional Dependencies** with the following value: `jsoncpp.lib;self.lib;wdc.lib;%(AdditionalDependencies)`
-
-16. Go to **Build Events -> Post-Build Event -> Command Line**, and add: `copy /Y "$(TargetPath)" "$(ProjectDir)..\..\bin\$(Configuration)"`
-
+11. Right-click the **workshop_three_plugin** project, select **Build Dependencies->Project Dependecies**. Check the checkbox beside **self-sdk** to make our new project dependent on the self-sdk project.
 
 ### B. Building out the OnText, OnTone and OnLearningIntent functions for your emotion agent
 
@@ -440,18 +448,21 @@ First, this code iterates over the response to find the emotion that has the hig
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 4. Create a `config.json` file in case it isn't present and paste the credentials obtained from the gateway in step 3 above.
 	
-	* For **OS X**,  in **wlabs_self-sdk-master/bin/mac**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
-
+	* For **OS X**,  in **~intu/self-sdk-master/bin/mac**.
+	* For **Windows**, in **intu/self-sdk-master/bin/Debug**. 
+		* **NOTE:** Debug may be called Release depending on the selected configuration.
+	
 ### B. Configuring your `body.json` file
 
 1. Open your `body.json` file. 
 
-	* For **OS X**, this will be in **wlabs_self-sdk-master/bin/mac/etc/profile**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **self-sdk -> Debug**. 
+	* For **OS X**, this will be in **intu/self-sdk-master/bin/mac/etc/profile**.
+	* For **Windows**, this will be in **intu/self-sdk-master/bin/Debug/etc/profile**.
 	
-2. Locate the `m_Libs` variable and add **workshop****_three****_plugin** to the `m_Libs` variable, **as shown below**:
-   `"m_Libs" : [ "workshop_three_plugin"],`
+2. Locate the `m_Libs` variable and add **workshop_three_plugin** to the `m_Libs` variable, **as shown below**:
+   ```
+	"m_Libs" : [ "workshop_three_plugin"],
+	```
 
 4. Locate `EmotionAgent` in the `body.json` file, and notice the `m_NegativeTones` and `m_PositiveTones` strings. To understand the tone of the input, these strings are compared to OnTone().
 
@@ -469,8 +480,14 @@ First, this code iterates over the response to find the emotion that has the hig
 
 **For Windows users:**
 
-1. From the Visual Studio Menu, select **Build -> Build Solution**.
+1. From the Visual Studio Menu, select **Build -> Build Solution**, wait for the build to complete before moving to the next step.
 
+2. Right-click on **workshop_three_plugin** and select **Set as startup project**. 
+
+3. Right-click on **workshop_three_plugin** and select **Properties**.
+	1. Select **Debugging** tab and browse the **Command** field to the **self_instance.exe** located in the **self-sdk-master/bin/Debug/** directory. 
+	2. Select the **Working Directory** and browse to the **self-sdk-master/bin/Debug** directory.
+	
 2. Run Intu by clicking **Local Windows Debugger** in Visual Studio.
 
 Now that you have added an Emotion Agent, Intu will start to adapt to you. First, ask Intu “How are you?”, and listen to the response. Now feed Intu some positive emotion statements like "Good job!”, and then ask “How are you?” again. Intu should now give a "happier" response than the one it gave before. Try the same thing for some negative emotion statements. Say “Wrong answer" a number of times and then ask “How are you?”. Intu should respond with a "sadder" response.
