@@ -4,7 +4,7 @@ In this workshop, you create an emotion agent. Agents make decisions about how I
 
 **Before you begin:** You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
 
-**Note for Windows users:** You will need to have [**Visual Studio 2015 Community**](https://www.microsoft.com/en-us/download/details.aspx?id=48146) installed. This will take some time to download.
+**Note for Windows users:** You will need to have [**Visual Studio  Community 2015**](https://www.microsoft.com/en-us/download/details.aspx?id=48146) installed. This will take some time to download.
 
 Complete the following tasks:
 
