@@ -409,7 +409,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 
 ## 2. Creating  the Waving Arm Gesture with INTU
 1. Inside the **self-sdk-master** directory navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
-2. Create a **CmakeList.txt** file in the **~/intu/self-sdk-master/examples/move_arm_joint** directory, and paste the following code:
+2. Create a **CMakeLists.txt** file in the **~/intu/self-sdk-master/examples/move_arm_joint** directory, and paste the following code:
 	```
 	include_directories(. wiringPI)
 	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
