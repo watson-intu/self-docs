@@ -569,7 +569,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 
     2. Locate the `m_Libs` variable, and change it to read: 
 
-		`"m_Libs":[ "platform_raspi", "camera_plugin", "workshop_five_plugin", "move_joint_plugin", "workshop_five_plugin"]` 
+		`"m_Libs":[ "platform_raspi", "camera_plugin", "move_joint_plugin", "workshop_five_plugin"]` 
     
 8. Run Self:
 
