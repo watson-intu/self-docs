@@ -185,7 +185,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 6.  Return to the [Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
-7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the *self_domain* key is still present, edit the value to point to your new Convesration workspace.  If the *self_domain* key is absent, => Click on the + sign. For the key field make it *self_domain* and for the value field make it your workspace id.
+7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the *self_domain* key is still present, edit the value to point to your new Conversation workspace.  If the *self_domain* key is absent, => Click on the + sign. For the key field make it *self_domain* and for the value field make it your workspace id.
 
 8. Click save.
 
