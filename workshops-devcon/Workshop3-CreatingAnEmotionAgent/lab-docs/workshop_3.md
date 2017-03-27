@@ -460,7 +460,7 @@ First, this code iterates over the response to find the emotion that has the hig
 5. Change `EmotionAgent` to `WorkshopThreeAgent` or the name you gave your class. As the instructions used `WorkshopThreeAgent`, the `"Type_"` field becomes `"Type_" : "WorkshopThreeAgent"`.
 6. Save your changes.
 
-### 3. Building and Running Intu
+### C. Building and Running Intu
 
 **For OS X users:**
 
