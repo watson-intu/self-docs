@@ -429,15 +429,6 @@ In the next step, you will build out the **OnText**, **OnTone** and **OnLearning
 First, this code iterates over the response to find the emotion that has the highest probability. Then, it checks whether the emotion is positive, and, if it is, the EmotionalState variable is incremented by 0.1. The EmotionalState variable cannot exceed one. If the highest probability tone is negative, the EmotionalState variable is decreased by 0.1. The EmotionalState variable cannot be less than zero.
 
 
-**Additional steps for OS X users:**
-
-1. Open a **new** Terminal window and navigate to **intu/self-sdk-master** by running: `cd intu/self-sdk-master`.
-
-2. Run the build script: `./scripts/build_mac.sh`. **Do not close this Terminal window.**
-
-**Congratulations!** You just built all the functions required for the emotion agent. This process created the `libworkshop_three_plugin.dylib` in the **intu/self-sdk-master/bin/mac** directory.
-
-
 ## 5. <a name="configuring-intu-to-include-your-emotion-agent">Configuring your Intu instance to include the emotion agent</a>
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
@@ -469,26 +460,35 @@ First, this code iterates over the response to find the emotion that has the hig
 5. Change `EmotionAgent` to `WorkshopThreeAgent` or the name you gave your class. As the instructions used `WorkshopThreeAgent`, the `"Type_"` field becomes `"Type_" : "WorkshopThreeAgent"`.
 6. Save your changes.
 
-### 3. Building Intu
+### 3. Building and Running Intu
 
 **For OS X users:**
 
-1. Return to your most recent Terminal window, where you should already be in the **mac** directory. Otherwise, open a **new** Terminal window and navigate to this directory by running: `cd intu/self-sdk-master/bin/mac`
+1. Open a **new** Terminal window or using an exisiting window and build with the following commands:
 
-2. Run: `export LD_LIBRARY_PATH=./`
-3. Run Intu by issuing the following command: `./self_instance`
+	```
+	cd ~/intu/self-sdk-master
+	scripts/build_mac.sh
+	```
 
+2. Execute the following commands to actually run Intu:
+	```
+	cd ~/intu/self-sdk-master/bin/mac
+	export LD_LIBRARY_PATH=./
+	./self_instance
+	```
+	
 **For Windows users:**
 
-1. From the Visual Studio Menu, select **Build -> Build Solution**, wait for the build to complete before moving to the next step.
+1. From the Visual Studio Menu, select **Build -> Build Solution**.
 
-2. Right-click on **workshop_three_plugin** and select **Set as startup project**. 
-
-3. Right-click on **workshop_three_plugin** and select **Properties**.
-	1. Select **Debugging** tab and browse the **Command** field to the **self_instance.exe** located in the **self-sdk-master/bin/Debug/** directory. 
-	2. Select the **Working Directory** and browse to the **self-sdk-master/bin/Debug** directory.
+2. Once built, you only need to do the following steps one time:
+	1. Right-click on **workshop_three_plugin** and select **Set as startup project**. 
+	2. Right-click on **workshop_three_plugin** and select **Properties**.
+		1. Select **Debugging** tab and browse the **Command** field to the **self_instance.exe** located in the **self-sdk-master/bin/Debug/** directory. 
+		2. Select the **Working Directory** and browse to the **self-sdk-master/bin/Debug** directory.
 	
-2. Run Intu by clicking **Local Windows Debugger** in Visual Studio.
+3. Run Intu by clicking **Local Windows Debugger** at the top of Visual Studio.
 
 Now that you have added an Emotion Agent, Intu will start to adapt to you. First, ask Intu “How are you?”, and listen to the response. Now feed Intu some positive emotion statements like "Good job!”, and then ask “How are you?” again. Intu should now give a "happier" response than the one it gave before. Try the same thing for some negative emotion statements. Say “Wrong answer" a number of times and then ask “How are you?”. Intu should respond with a "sadder" response.
 
