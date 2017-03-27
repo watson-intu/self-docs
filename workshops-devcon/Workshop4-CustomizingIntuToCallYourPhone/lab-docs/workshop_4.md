@@ -62,16 +62,16 @@ All plans are loaded when Intu starts. When a goal object is placed on the black
 
 	* **For Mac users:** /Applications/IBM/Self/latest/etc/shared/plans
 	
-	* **For Windows users:** C:\Users\username\AppData\LocalLow\IBM\Self\{VERSION}\etc\shared\plans
+	* **For Windows users:** C:\Users\username\AppData\LocalLow\IBM\Self\INTU_VERSION\etc\shared\plans
 	
-	*Note for Windows Users:* replace {VERSION} with the latest version of Intu you installed. You can look in the *Self* directory to see which one is the newest.
+	*Note for Windows Users:* replace *INTU_VERSION* with the latest version of Intu you installed. You can look in the *Self* directory to see which one is the newest.
 
 2.  Open the `default.json` file in the **plans** directory using your favourite text editor (if on mac, refrain from using TextEdit as it will format text and cause the plan not to be found. On Windows, it is preferable to use Notepad/Wordpad and on Mac it is preferable to use Sublime or nano/vim).
 
 3. Browse through the different plans, and notice how plans can have different preconditions based on the data that is represented.
 For example, look at the first plan called `"dialog_answer"`. It contains a set of preconditions (the key is `"m_PreConditions"`) that must be answered for that plan to execute. The first parameter, the array with the key `"m_Params"`, in that precondition states that the data being analyzed must have the format `"{"answer" : {"response" : ["some value"] }, }"`, where the array in response must not be equal to null, while the second precondition states the response array must not have a key of `"id"` in the response array.
 
-4. Search for a plan called `"outgoing_call"`, and change the value of `"m_ToNumber"` in the second action to your phone number (Be sure to include the country code first, e.g. **1555333213**). Now, look at the actions for this plan. The first action will have Intu `"Dialing"`, while the second action will carry out the execution to call the number specified.
+4. Search for a plan called `"outgoing_call"`, and change the value of `"m_ToNumber"` in the second action to your phone number (Be sure to include the country code first, e.g. **15551231234**). Now, look at the actions for this plan. The first action will have Intu `"Dialing"`, while the second action will carry out the execution to call the number specified.
 
 5. Run Intu. 
 
