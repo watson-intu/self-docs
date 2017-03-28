@@ -71,7 +71,7 @@ Plug the USB microphone into any one of the USB ports of your Raspberry Pi.
 
 3.	Connect Jumper Wire 2 to the +3.3V pin. This is called the **anode** pin
 
-4.	Now position your Raspberry Pi such that the **power cable** is on the **bottom**. Connect the **Cathode end** to **pin #3** on the **top row**. Then connect the **Anode end ** to **pin #4** on the **bottom row**. Refer to the image below for a fully assembled Raspberry Pi.
+4.	Refer to the image below for how your LED will look on an Raspberry Pi 3 Model B, with both the cathode and anode connected.
 
 	![Assembled Raspberry Pi.](./anode_cathode.png?raw=true)
 	
