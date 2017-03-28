@@ -25,7 +25,7 @@ Complete the following tasks:
 
 ## 2. <a name="downloading-intu">Downloading Intu</a>
 
-1. On the Intu Downloads page, click on the the topmost download arrow for **Download Intu Launcher**. **Intu-Tooling-Launcher-OSX64.zip** or **Intu-Tooling-Launcher-Win64.zip** will start to download, depending on your machine.
+1. On the Intu Downloads page, click on the topmost download arrow for **Download Intu Launcher**. **Intu-Tooling-Launcher-OSX64.zip** or **Intu-Tooling-Launcher-Win64.zip** will start to download, depending on your machine.
 
 2. Extract the Intu-Tooling-Launcher-OSX64 or Intu-Tooling-Launcher-Win64 (it may do so automatically). 
 
@@ -125,18 +125,18 @@ Note: For the features listed below to work, you need to use the Conversation wo
 	
 2. **Weather Agent**: Get Intu to tell you about the weather! Examples of weather-related questions you can ask: _"What is the weather in Boston"_ or _"What will the weather be like in Las Vegas on Friday"_.
 
-	* Additional Bluemix services required: **Natural Langauge Understanding** and **Weather Company Data**
+	* Additional Bluemix services required: **Natural Language Understanding** and **Weather Company Data**
 	* Service Names to use on the Gateway: **NaturalLanguageUnderstandingV1** and **WeatherCompanyDataV1**
 	
 3. **Time Agent**: Get Intu to tell you what time it is! Examples of time-related questions you can ask: _"What time is it right now"_ or _"What time is it in Tokyo"_.
 
-	* Additional Bluemix servies required: **Natural Langauge Understanding** and **Weather Company Data**
+	* Additional Bluemix services required: **Natural Language Understanding** and **Weather Company Data**
 	* Service Names to use on the Gateway: **NaturalLanguageUnderstandingV1** and **WeatherCompanyDataV1**
 	
 4. **Name Agent**: You can rename your Intu device or get Intu to learn your name! Examples of name-related queries you can tell Intu: _"Your name is now Bobby"_ or _"My name is John"_.  Once Intu learns your name, it will greet you by name using the **Greeter Agent** mentioned above.
 
-	* Additional Bluemix servies required (for renaming only): **Natural Langauge Understanding**
-	* Additional Bluemix servies required (for learning your name): **Natural Langauge Understanding** and **Visual Recognition**
+	* Additional Bluemix services required (for renaming only): **Natural Language Understanding**
+	* Additional Bluemix services required (for learning your name): **Natural Language Understanding** and **Visual Recognition**
 	* Service Names to use on the Gateway: **NaturalLanguageUnderstandingV1** and **VisualRecognitionV1**
 	
 5. **Telephony Agent**: Get Intu to call you or someone else! Please see **Workshop 4** for more details on how to configure and use the Telephony Agent.
