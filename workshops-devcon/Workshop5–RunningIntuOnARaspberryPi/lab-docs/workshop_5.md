@@ -671,7 +671,7 @@ TJBot: [you see BOTH physical action perfored]
 
 8. Connect your Raspberry Pi to a power source, and connect an external keyboard, mouse and monitor to your Raspberry Pi.
 
-9.	You should see a window open on your monitor. Click on the **Wifi networks (w)** icon at the top of the window, select your network (at DevCon, it will be **ROBOT_PED1**), and enter your password (**panda$123**).
+9.	You should see a window open on your monitor. Click on the **Wifi networks (w)** icon at the top of the window, select your network.
 
 10. As this is the first time your Raspberry Pi and SD card have been used, you'll have to select an operating system and let it install. Select **Raspbian [RECOMMENDED]**.
 
