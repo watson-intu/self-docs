@@ -79,7 +79,7 @@ For example, look at the first plan called `"dialog_answer"`. It contains a set 
 	3. A new page will open in your browser for the Intu Tooling Log In page. Click **Log In**. Wait until you see the prompt to return to the Intu Manager application. At that point, return back to the Intu Tooling application.
 	4. The Intu Manager window is displayed in the top left, and you're prompted to select your Organization and Group. 
 	5. Click **Next**. A "Connecting to parent..." message is displayed while your Intu Manager tries to establish a connection.
-	6. Click on the currently red **status icon** next to your device to **restart Intu**. This status icon should turn green and a new Terminal/command prompt window will open in the backgroun as Intu starts running.
+	6. Click on the currently red **status icon** next to your device to **restart Intu**. This status icon should turn green and a new Terminal/command prompt window will open in the background as Intu starts running.
 
 6. Ask Intu "Can you call me?". When your phone rings, answer it, and have a conversation with Intu. Say "Tell me a joke". You should hear Watson tell you a joke. You can continue to talk or hang up.
 
