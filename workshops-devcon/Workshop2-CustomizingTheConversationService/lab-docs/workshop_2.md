@@ -171,7 +171,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
-1.  Make sure Intu is not running and navigate to your Convesation Service's dashboard of workspaces.
+1.  Make sure Intu is not running and navigate to your Conversation Service's dashboard of workspaces.
 
 2.  If you are importing a workspace, simply import it the same way you imported the Starter Kit Workspace json.  If you are creating a brand new workspace, click the **Create** button. NOTE: When you import or create your new workspace, make sure it is present in the same Bluemix Conversation Service.
 
