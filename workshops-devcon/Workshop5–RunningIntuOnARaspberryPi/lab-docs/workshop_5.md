@@ -358,8 +358,8 @@ mkdir workshop_five
     scripts/build_raspi.sh
 	```
 
-8. Configuring your `body.json` file
-	1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we just created In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
+8. Configuring your `platform.json` file
+	1. The platform.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we just created In this section we are expecting the edits to the platform.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
 	
 	```
 	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
@@ -561,8 +561,8 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	scripts/build_raspi.sh
 	```
 
-7. Configuring your **body.json** file
-	1. We will add a few extra parameters to the body.json:
+7. Configuring your **platform.json** file
+	1. We will add a few extra parameters to the platform.json:
 	```
 	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
 	```
