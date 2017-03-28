@@ -251,7 +251,7 @@ mkdir workshop_five
 		virtual bool Abort();
 
 		//! Construction
-		WorkshopFiveGesture() : m_PinNumber( 7 ), m_bWiredPi( false )
+		WorkshopFiveGesture() : m_PinNumber( 16 ), m_bWiredPi( false )
 		{}
 
 	private:
@@ -444,7 +444,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 		virtual bool Execute( GestureDelegate a_Callback, const ParamsMap & a_Params );
 		virtual bool Abort();
 		//! Construction
-		RaspiMoveJointGesture() : m_PinNumber( 0 ), m_bWiredPi( false ), m_ArmLowPoint(0), m_ArmHighPoint(40)
+		RaspiMoveJointGesture() : m_PinNumber( 11 ), m_bWiredPi( false ), m_ArmLowPoint(0), m_ArmHighPoint(40)
 		{}
 	private:
 		//! Data
