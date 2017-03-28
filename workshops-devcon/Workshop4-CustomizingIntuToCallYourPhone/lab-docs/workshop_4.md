@@ -85,7 +85,7 @@ For example, look at the first plan called `"dialog_answer"`. It contains a set 
 
 ## Reminder: Update services within 30 days of registering on the Gateway
 
-If you want to test Self after the trial period ends, you must create your own instances of these services and configure Self to use them.
+If you want to test Intu after the trial period ends, you must create your own instances of these services and configure Intu to use them.
 
 ### A. Creating instances of Watson services
 To use Intu, you need operational instances of the following services in Bluemix: Conversation, Weather Company Data, Speech to Text, and Text to Speech.
