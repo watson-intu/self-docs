@@ -14,9 +14,9 @@ Complete the following tasks:
 
 ## 1. <a name="understanding-some-intu-terminology">Understanding some Self terminology</a>
 
-Before you create an camera sensor, become familiar with the following terminology:
+Before you create a camera sensor, become familiar with the following terminology:
 
-  * **Blackboard**: The central message broker on which all the agents post data and listen for incoming data.
+  * **Blackboard**: The central message broker on which all of the agents post data and listen for incoming data.
   
   * **Publish**: To push data onto the blackboard under a particular topic. 
   
