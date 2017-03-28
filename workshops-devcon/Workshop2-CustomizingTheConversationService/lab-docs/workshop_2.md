@@ -58,7 +58,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 3. Expand this branch of the dialog tree by clicking through the following dialog nodes: **#dialog** -> **@greeting** -> **@greeting:hello**. You may need to scroll down as you're clicking through. Note: Nodes may have the name "Untitled Node" as you are clicking on them. The node name is an optional field.
 
-4. After clicking on the **greeting:hello** node there are currently four responses for when a user says "hello". You can edit, remove, and add to these. For now, on a new line, after "why hello there[emote=wave_anim]" add "Hello Workshop Two participant!" directly below it.
+4. After clicking on the **@greeting:hello** node there are currently four responses for when a user says "hello". You can edit, remove, and add to these. For now, on a new line, after "why hello there[emote=wave_anim]" add "Hello Workshop Two participant!" directly below it.
 
 5. Click the **Conversation bubble** icon on the top right banner to open a **Try it out** panel where you can test your new response.
 
@@ -73,8 +73,6 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 ## 3. Adding a new conversation flow with a new intent, new entities, and new dialog
 
 ### A. Create a new intent
-
-**Important:** Intu is currently configured to recognize intents which are prefixed with **dialog_**. This is why when you do start creating an intent (like you will below for dialog_capitals) it begins with this **dialog** prefix. This is important to make sure Intu recognizes your intent and treats your input as a question that needs to be answered through Conversation. However, you can create your own prefix or pattern for intents should you choose, and you will find instructions for how to do this in **Challenge: Using your own custom Conversation workspace with Intu** below.
 
 1. Click on **Intents** on the top navigation bar of the Conversation browser window you're currently in.
 
@@ -185,7 +183,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 6.  Return to the [Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
-7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the *self_domain* key is still present, edit the value to point to your new Conversation workspace.  If the *self_domain* key is absent, => Click on the + sign. For the key field make it *self_domain* and for the value field make it your workspace id.
+7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the **self_domain** key is still present, edit the value to point to your new Conversation workspace.  If the **self_domain** key is absent, => Click on the + sign. For the key field make it **self_domain** and for the value field make it your workspace id.
 
 8. Click save.
 
