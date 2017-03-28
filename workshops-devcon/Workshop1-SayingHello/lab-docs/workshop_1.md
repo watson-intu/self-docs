@@ -6,7 +6,6 @@ In this workshop, you install Intu on your laptop and get it to say hello to you
 
 * You must have a Mac or Windows laptop.
 * Turn on your laptop's microphone.
-* You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
 
 Complete the following tasks:
 
