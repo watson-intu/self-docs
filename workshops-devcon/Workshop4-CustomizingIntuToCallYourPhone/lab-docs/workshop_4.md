@@ -10,16 +10,15 @@ Complete the following tasks:
 
 1. [Signing up for a Nexmo account](#signing-up-for-a-nexmo-account)
 2. [Getting your Nexmo credentials](#getting-your-nexmo-credentials)
-3. [Using your Nexmo](#using-your-Nexmo)
-4. [Adding the telephony service to Intu](#adding-the-telephony-service-to-Intu)
-5. [Understanding plans](#understanding-plans)
-6. [Modifying plans to have the telephony service call your phone number](#modifying-plans-to-have-the-telephony-service-call-your-phone-number)
+3. [Adding the telephony service to Intu](#adding-the-telephony-service-to-Intu)
+4. [Understanding plans](#understanding-plans)
+5. [Modifying plans to have the telephony service call your phone number](#modifying-plans-to-have-the-telephony-service-call-your-phone-number)
 
-## 1. Signing up for a Nexmo account
+## 1. <a name="signing-up-for-a-nexmo-account">Signing up for a Nexmo account</a>
 
 1. [Sign up for a Nexmo account](https://dashboard.nexmo.com/sign-up)
   
-## 2. Getting your Nexmo credentials
+## 2. <a naem="getting-your-nexmo-credentials">Getting your Nexmo credentials</a>
 
 1. On the [Nexmo dashboard](https://dashboard.nexmo.com/), click the top right drop down menu (the one with your name next to it) to expand the account menu.
 
@@ -29,7 +28,7 @@ Complete the following tasks:
 
 4. You will need to pay for minutes on the Nexmo service. This will allow your account to allow to make calls using the API key/secret you copied above.
 
-## 4. Adding the telephony service to Intu
+## 3. <a name="adding-the-telephony-service-to-Intu">Adding the telephony service to Intu</a>
 
 1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/).
 
@@ -44,7 +43,7 @@ Complete the following tasks:
 6. Click the blue **Add** box.
 7. If you currently have Intu already running, stop it to enable the Telephony service to automatically provision a US phone number for your device.
 
-## 5. Understanding plans 
+## 4. <a name="understanding-plans">Understanding plans</a>
 
 Plans are the primary driving factor in how Intu can accomplish goals. For example, you can preconfigure a plan that tells Intu how to act in a certain situation without any code changes.
 
@@ -56,7 +55,7 @@ Plans contain two major components:
 
 All plans are loaded when Intu starts. When a goal object is placed on the blackboard, the GoalAgent finds the best possible plan, executes the plan, and establish whether that goal was completed successfully (i.e., the plan finished with no action failures) or failed (i.e., no plan was found to carry out execution).
 
-## 6. Modifying plans to have the Telephony service call your phone number
+## 5. <a name="modifying-plans-to-have-the-telephony-service-call-your-phone-number">Modifying plans to have the Telephony service call your phone number</a>
 
 1. Locate the **plans** directory where you will be modifying your plan. If you used the Intu INSTALLER (from the Intu Gateway) to install Intu in Workshop 1, the path is:
 
