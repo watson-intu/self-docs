@@ -11,7 +11,7 @@ Complete the following tasks:
 3. [Adding a new conversation flow with a new intent, new entities, and new dialog](#adding-a-new-conversation-flow-with-a-new-intent,-new-entities,-and-new-dialog)
 4. [Configuring Self to use your new Conversation instance](#configuring-Self-to-use-your-new-Conversation-instance) 
 
-## 1. Setting up the Conversation service
+## 1. <a name="setting-up-the-conversation-service">Setting up the Conversation service</a>
 
 You must create your own instance of the Conversation service in Bluemix, configure Intu to use this service instance, and import a Conversation workspace.
 
@@ -48,7 +48,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 6. Click **Choose a file**, navigate to the directory where you extracted the Intu Starter Kit in step 2, select the `intu-workspace-full.json` file, and click **Import**. Keep the default settings so that you import everything. The workspace titled **Intu-Dialog** is imported and is displayed on the Workspaces page.
 
 
-## 2. Customizing the greeting
+## 2. <a name="customizing-the-greeting">Customizing the greeting</a>
 
 **Before you begin:** Turn on the microphone on your device.
 
@@ -70,7 +70,7 @@ To complete this task, you must download the **Intu Starter Kit**, which contain
 
 7. Close the **Try it out** box by clicking on the **X** icon (directly above the  **Clear** icon).
   
-## 3. Adding a new conversation flow with a new intent, new entities, and new dialog
+## 3. <a name="adding-a-new-conversation-flow-with-a-new-intent,-new-entities,-and-new-dialog">Adding a new conversation flow with a new intent, new entities, and new dialog</a>
 
 ### A. Create a new intent
 
@@ -138,7 +138,7 @@ When configuring the dialog flow, keep in mind as you click/navigate through the
 	1. In the **Enter something to test your bot** field at the bottom of the **Try it out** panel, type: **What is the capital of Australia?** You should see the response: **The capital of Australia is Canberra.** Note that Conversation may take a few minutes to train, as indicated by the pop-up message: **Watson is training on your recent changes** in purple.
 	2. Try asking for the capital of Canada and New Zealand.
 
-## 4. Configuring Self to use your new Conversation instance
+## 4. <a name="configuring-Self-to-use-your-new-Conversation-instance">Configuring Self to use your new Conversation instance</a>
 
 Your installation of Intu is preconfigured to use the default Conversation service. To configure Intu to use your new Conversation instance which you just modified, complete the following steps:
 

@@ -12,7 +12,7 @@ Complete the following tasks:
 4. [Configuring your Intu instance to include the camera sensor](#configuring-your-Intu-instance-to-include-the-camera-sensor)
 
 
-## 1. Understanding some Self terminology
+## 1. <a name="understanding-some-intu-terminology">Understanding some Self terminology</a>
 
 Before you create an camera sensor, become familiar with the following terminology:
 
@@ -24,7 +24,7 @@ Before you create an camera sensor, become familiar with the following terminolo
   
   * **Topic**: A channel to which Agents publish and subscribe.
 
-## 2. Building the Self SDK
+## 2. <a name="building-the-intu-sdk">Building the Self SDK</a>
 
 Follow the instructions for your platform.
 
@@ -109,7 +109,7 @@ Follow the instructions for your platform.
 Known toolchains are:
 ```
 
-## 3. Creating a camera sensor
+## 3. <a name="creating-a-camera-sensor">Creating a camera sensor</a>
 
 ### A. Preparing your directories and files for the camera sensor
 
@@ -244,7 +244,7 @@ In the next step, you will build out the **OnStart**, **CaptureVideo** and **Sen
 In the next task, you will update the `body.json` file also located in the **intu/self-sdk-master/bin/mac/etc/profile** directory to include the new plugin so that Intu can use it.
 
 
-## 4. Configuring your Intu instance to include the camera sensor
+## 4. <a name="configuring-your-Intu-instance-to-include-the-camera-sensor">Configuring your Intu instance to include the camera sensor</a>
 
 ### A. Retrieving the credentials for your Organization in the Intu Gateway
 
