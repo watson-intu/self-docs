@@ -53,7 +53,7 @@ Plans contain two major components:
   
   * **Actions**: After all preconditions are met, a series of actions are taken to to complete a plan. Intu supports two types of actions: CreateAction, which creates a blackboard object and places it on the blackboard, and UseSkillAction, which tells Intu to execute a specified skill.
 
-All plans are loaded when Intu starts. When a goal object is placed on the blackboard, the GoalAgent finds the best possible plan, executes the plan, and establish whether that goal was completed successfully (i.e., the plan finished with no action failures) or failed (i.e., no plan was found to carry out execution).
+All plans are loaded when Intu starts. When a goal object is placed on the blackboard, the GoalAgent finds the best possible plan, executes the plan, and establishes whether that goal was completed successfully (i.e., the plan finished with no action failures) or failed (i.e., no plan was found to carry out execution).
 
 ## 5. <a name="modifying-plans-to-have-the-telephony-service-call-your-phone-number">Modifying plans to have the Telephony service call your phone number</a>
 
@@ -65,9 +65,9 @@ All plans are loaded when Intu starts. When a goal object is placed on the black
 	
 	*Note for Windows Users:* replace *INTU_VERSION* with the latest version of Intu you installed. You can look in the *Self* directory to see which one is the newest.
 
-2.  Open the `default.json` file in the **plans** directory using your favourite text editor (if on mac, refrain from using TextEdit as it will format text and cause the plan not to be found. On Windows, it is preferable to use Notepad/Wordpad and on Mac it is preferable to use Sublime or nano/vim).
+2.  Open the `default.json` file in the **plans** directory using your favorite text editor (if on Mac, refrain from using TextEdit as it will format text and cause the plan not to be found. On Windows, it is preferable to use Notepad/Wordpad and on Mac it is preferable to use Sublime or nano/vim).
 
-3. Browse through the different plans, and notice how plans can have different preconditions based on the data that is represented.
+3. Browse through the different plans and notice how plans can have different preconditions based on the data that is represented.
 For example, look at the first plan called `"dialog_answer"`. It contains a set of preconditions (the key is `"m_PreConditions"`) that must be answered for that plan to execute. The first parameter, the array with the key `"m_Params"`, in that precondition states that the data being analyzed must have the format `"{"answer" : {"response" : ["some value"] }, }"`, where the array in response must not be equal to null, while the second precondition states the response array must not have a key of `"id"` in the response array.
 
 4. Search for a plan called `"outgoing_call"`, and change the value of `"m_ToNumber"` in the second action to your phone number (Be sure to include the country code first, e.g. **15551231234**). Now, look at the actions for this plan. The first action will have Intu `"Dialing"`, while the second action will carry out the execution to call the number specified.
@@ -75,13 +75,13 @@ For example, look at the first plan called `"dialog_answer"`. It contains a set 
 5. Run Intu. 
 
 	1. If you have closed your **Intu Manager**, navigate to the directory where you installed it in Workshop 1, and open Intu Manager.
-	2. Instead of clicking Install Intu in Workshop 1, click **Manage Intu**. 
-	3. A new page will open in your browser for the Intu Tooling Log In page. Click **Log In**. Wait until you see the prompt to return to the Intu Manager application. At that point, return back to the Intu Tooling application.
-	4. The Intu Manager window is displayed in the top left, and you're prompted to select your Organization and Group. 
-	5. Click **Next**. A "Connecting to parent..." message is displayed while your Intu Manager tries to establish a connection.
-	6. Click on the currently red **status icon** next to your device to **restart Intu**. This status icon should turn green and a new Terminal/command prompt window will open in the background as Intu starts running.
+	2. Login with your Bluemix credentials. 
+	3. Once logged in, select your Organization and Group.
+	4. Verify that you can see the device on which you installed Intu. 
+	5. Click on the on/off toggle to restart your device.
+	6. The status icon should turn green and a new Terminal/command prompt window will open in the background as Intu starts running.
 
-6. Ask Intu "Can you call me?". When your phone rings, answer it, and have a conversation with Intu. Say "Tell me a joke". You should hear Watson tell you a joke. You can continue to talk or hang up.
+6. Ask Intu "Can you call me?". When your phone rings, answer it. Have a conversation with Intu. Say "Tell me a joke". You should hear a joke. You can continue to talk or hang up.
 
 ## Reminder: Update services within 30 days of registering on the Gateway
 
