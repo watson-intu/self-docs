@@ -634,7 +634,7 @@ TJBot: [you see BOTH physical action perfored]
 
 1.	Connect your Raspberry Pi to a power source, and connect an external keyboard, mouse and monitor to your Raspberry Pi.
 
-2.	You should see a window open on your monitor. Click on the **Wifi networks (w)** icon at the top of the window, select your network (at DevCon, it will be **ROBOT_PED1**), and enter your password (**panda$123**).
+2.	You should see a window open on your monitor. Click on the **Wifi networks (w)** icon at the top of the window, select your network.
 
 3.	Get the IP address of your Raspberry Pi.
 	1.	Click on the black **Terminal** icon on the top left toolbar.
