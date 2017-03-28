@@ -308,7 +308,7 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	copy /Y "$(TargetPath)" "$(ProjectDir)..\..\bin\$(Configuration)"
 	```
 
-11. Right-click the **workshop_three_plugin** project, select **Build Dependencies->Project Dependecies**. Check the checkbox beside **self-sdk** to make our new project dependent on the self-sdk project.
+11. Right-click the **workshop_three_plugin** project, select **Build Dependencies->Project Dependencies**. Check the checkbox beside **self-sdk** to make our new project dependent on the self-sdk project.
 
 ### B. Building out the OnText, OnTone and OnLearningIntent functions for your emotion agent
 
@@ -464,7 +464,7 @@ First, this code iterates over the response to find the emotion that has the hig
 
 **For OS X users:**
 
-1. Open a **new** Terminal window or using an exisiting window and build with the following commands:
+1. Open a **new** Terminal window or using an existing window and build with the following commands:
 
 	```
 	cd ~/intu/self-sdk-master
