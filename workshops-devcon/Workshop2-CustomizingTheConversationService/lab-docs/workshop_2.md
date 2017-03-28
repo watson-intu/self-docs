@@ -2,14 +2,14 @@
 
 In this workshop, you customize the greeting in the dialog from the Conversation service workspace and extend the conversation by adding new intents, new entities, and new dialog.
 
-**Before you begin:** You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
+**Before you begin:** You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!.
 
 Complete the following tasks:
 
 1. [Setting up the Conversation service](#setting-up-the-conversation-service)
 2. [Customizing the greeting](#customizing-the-greeting)
 3. [Adding a new conversation flow with a new intent, new entities, and new dialog](#adding-a-new-conversation-flow-with-a-new-intent,-new-entities,-and-new-dialog)
-4. [Configuring Self to use your new Conversation instance](#configuring-Self-to-use-your-new-Conversation-instance) 
+4. [Configuring Intu to use your new Conversation instance](#configuring-Intu-to-use-your-new-Conversation-instance) 
 
 ## 1. <a name="setting-up-the-conversation-service">Setting up the Conversation service</a>
 
@@ -138,7 +138,7 @@ When configuring the dialog flow, keep in mind as you click/navigate through the
 	1. In the **Enter something to test your bot** field at the bottom of the **Try it out** panel, type: **What is the capital of Australia?** You should see the response: **The capital of Australia is Canberra.** Note that Conversation may take a few minutes to train, as indicated by the pop-up message: **Watson is training on your recent changes** in purple.
 	2. Try asking for the capital of Canada and New Zealand.
 
-## 4. <a name="configuring-Self-to-use-your-new-Conversation-instance">Configuring Self to use your new Conversation instance</a>
+## 4. <a name="configuring-Intu-to-use-your-new-Conversation-instance">Configuring Intu to use your new Conversation instance</a>
 
 Your installation of Intu is preconfigured to use the default Conversation service. To configure Intu to use your new Conversation instance which you just modified, complete the following steps:
 
