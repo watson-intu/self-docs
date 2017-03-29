@@ -135,7 +135,6 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	2iv. Return to the **examples** directory, open the `CMakeLists.txt` file, and add the following line: `add_subdirectory(workshop_six)` at the end. Your file contains the following three lines:
 
   ```
-  
     include_directories(".")
 
     add_subdirectory(sensor)
@@ -143,22 +142,171 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
   ```
 	2v. Open the `CMakeLists.txt` file in the **workshop_six** directory, and overwrite its content with this code:
 
- 	 ```
+ 	```
 	include_directories(.)
 
 	file(GLOB_RECURSE SELF_CPP RELATIVE ${CMAKE_CURRENT_SOURCE_DIR} "*.cpp")
 	qi_create_lib(workshop_six_plugin SHARED ${SELF_CPP})
 	qi_use_lib(workshop_six_plugin self wdc OPENCV2_CORE OPENCV2_HIGHGUI)
 	qi_stage_lib(workshop_six_plugin)
-  ```
+  	```
 
 3. Create a new directory called **sensors** in the **workshop_six** directory.
 
-4. Locate the Workshop 6 code snippet files **to be filled in** in:
+4. Right click on the newly created **sensors** directory and select **New** ==> **C/C++ Source File**.  Name this file **WorkshopSixSensor**.  Select the checkbox for *Create an associated header*. Click ok.
 
- `self-sdk-master/docs/workshops-devcon/6/code-snippets/WorkshopSixSensor_start`
+5. In the **WorkshopSixSensor.cpp** file paste the following code:
 
-5. Copy the `WorkshopSixSensor.cpp` and the `WorkshopSixSensor.h` files and paste them into the **sensors** directory that you created.
+	```
+	/**
+	* Copyright 2016 IBM Corp. All Rights Reserved.
+	*
+	* Licensed under the Apache License, Version 2.0 (the "License");
+	* you may not use this file except in compliance with the License.
+	* You may obtain a copy of the License at
+	*
+	*      http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing, software
+	* distributed under the License is distributed on an "AS IS" BASIS,
+	* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	* See the License for the specific language governing permissions and
+	* limitations under the License.
+	*
+	*/
+	
+	#include "WorkshopSixSensor.h"
+	
+	REG_SERIALIZABLE(WorkshopSixSensor);
+	RTTI_IMPL(WorkshopSixSensor, Camera);
+	
+	#ifndef _WIN32
+	REG_OVERRIDE_SERIALIZABLE(Camera, WorkshopSixSensor);
+	#endif
+	
+	//  OnStart() will create and subscribe a camera object to the Blackboard on a background thread.
+	bool WorkshopSixSensor::OnStart()
+	{
+	    Log::Debug("WorkshopSixSensor", "Starting Camera!");
+	    m_StopThread = false;
+	    m_ThreadStopped = false;
+	    return true;
+	}
+	
+	//  OnStop() when called will kill any camera thread that is running ensuring that the process is stopped.
+	bool WorkshopSixSensor::OnStop()
+	{
+	    Log::Debug("WorkshopSixSensor", "Stopping MacCamera!");
+	    m_StopThread = true;
+	    while (!m_ThreadStopped)
+	        tthread::this_thread::yield();
+	    return true;
+	}
+	
+	//  CaptureVideo() first checks that the thread is still live. If the thread is, then the frame object is then encoded
+	//  into the memory buffer as a JPEG. This then sends the buffered data.
+	void WorkshopSixSensor::CaptureVideo(void * arg)
+	{
+	
+	}
+	
+	//  OnPaused() will increment the variable Paused, each time it is called.
+	void WorkshopSixSensor::OnPause()
+	{
+	    m_Paused++;
+	}
+	
+	//  OnResume() Will decrease the variable Paused each time it is called.
+	void WorkshopSixSensor::OnResume()
+	{
+	    m_Paused--;
+	}
+	
+	//  SendingData will check to see if the frame has been paused. This function should call only call the SendData()
+	//  If variable m_Paused is greater than zero.
+	void WorkshopSixSensor::SendingData(VideoData * a_pData)
+	{
+	
+	}
+
+	```
+
+
+6. In the **WorkshopSixSensor.h** file, paste the following code:
+
+	```
+	/**
+	* Copyright 2016 IBM Corp. All Rights Reserved.
+	*
+	* Licensed under the Apache License, Version 2.0 (the "License");
+	* you may not use this file except in compliance with the License.
+	* You may obtain a copy of the License at
+	*
+	*      http://www.apache.org/licenses/LICENSE-2.0
+	*
+	* Unless required by applicable law or agreed to in writing, software
+	* distributed under the License is distributed on an "AS IS" BASIS,
+	* WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+	* See the License for the specific language governing permissions and
+	* limitations under the License.
+	*
+	*/
+	
+	#ifndef SELF_WORKSHOP_SIX_SENSOR_H
+	#define SELF_WORKSHOP_SIX_SENSOR_H
+	
+	#include "sensors/Camera.h"
+	#include "SelfInstance.h"
+	#include "utils/TimerPool.h"
+	
+	#ifndef _WIN32
+	#include <iostream>
+	#include <opencv2/highgui/highgui.hpp>
+	#include <opencv2/imgproc/imgproc.hpp>
+	#include <opencv2/core/core.hpp>
+	#endif
+	
+	//! Workshop Six Sensor
+	class WorkshopSixSensor : public Camera
+	{
+	public:
+	    RTTI_DECL();
+	
+	    //! Construction
+	    WorkshopSixSensor() : m_StopThread(false), m_ThreadStopped(false), m_Paused(0)
+	    {}
+	
+	    //! ISensor interface
+	    virtual const char * GetSensorName()
+	    {
+	        return "Camera";
+	    }
+	
+	    //! ISensor interface
+	    virtual bool OnStart();
+	    virtual bool OnStop();
+	    virtual void OnPause();
+	    virtual void OnResume();
+	
+	    void				SendingData(VideoData * a_pData);
+	
+	private:
+	
+	    //! Data
+	    volatile bool		m_StopThread;
+	    volatile bool		m_ThreadStopped;
+	    volatile int 		m_Paused;
+	#ifndef _WIN32
+	    cv::VideoCapture    m_Capture;
+	#endif
+	
+	    void                CaptureVideo(void * arg);
+	};
+	
+	#endif //SELF_WORKSHOP_
+	
+	```
+
 
 ### B. Building out the OnStart(), CaptureVideo() and SendingData() functions for the camera sensor
 
@@ -180,9 +328,9 @@ The OnStop, OnPause and OnResume functions are already completely built out.
 
 In the next step, you will build out the **OnStart**, **CaptureVideo** and **SendingData** functions using the example code provided.
 
-1. In **self-sdk-master/docs/workshops-devcon/6/code-snippets/WorkshopSixSensors_Snippets**, you will see the `WorkshopSixCodeSnippets.txt` file. Open this file and find the OnStart, CaptureVideo and SendingData functions.
+1. The new **WorkshopSixSensor.cpp** code you just added will need to be filled out with some code snippets listed below.
 
-2. From `WorkshopSixCodeSnippets.txt `, for the **OnStart()** function, copy the code directly below **//Code for OnStart()**. Now paste this inside the function body **{}** of **OnStart()** in `WorkshopSixSensor.cpp` inside your **sensors** directory, overwriting all the code already inside the function body **{}**. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+2. For the **OnStart()** function, copy the code directly below **//Code for OnStart()**. Now paste this inside the function body **{}** of **OnStart()** in `WorkshopSixSensor.cpp` inside your **sensors** directory, overwriting all the code already inside the function body **{}**. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
 
 
   ```
@@ -204,7 +352,7 @@ In the next step, you will build out the **OnStart**, **CaptureVideo** and **Sen
     
     ```
 
-3. For the **CaptureVideo()** function, copy the code directly below **//Code for CaptureVideo()**. Now paste this inside the function body **{}** of ** CaptureVideo()** in `WorkshopSixSensor.cpp`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
+3. For the **CaptureVideo()** function, copy the code directly below **//Code for CaptureVideo()**. Now paste this inside the function body **{}** of **CaptureVideo()** in `WorkshopSixSensor.cpp`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
 
 
   
@@ -270,28 +418,28 @@ In the next task, you will update the `body.json` file also located in the **int
 
 4. Locate `m_Sensors` inside the `body.json`. Add the following
 
-```
-{
+	```
+	{
        "Type_" : "Camera",
        "m_SensorId" : "8f385c2a-ecb0-3bfb-32af-3c54ec18db5c",
        "m_fFramesPerSec" : 10
     },
     
-```
+	```
 
-It should look something like
+5. Verify that it looks something like:
 
-```
-"m_Sensors" : [
-      {
-       "Type_" : "Camera",
-       "m_SensorId" : "8f385c2a-ecb0-3bfb-32af-3c54ec18db5c",
-       "m_fFramesPerSec" : 10
-    },
-      {....
-```
+	```
+	"m_Sensors" : [
+	{
+		"Type_" : "Camera",
+		"m_SensorId" : "8f385c2a-ecb0-3bfb-32af-3c54ec18db5c",
+		"m_fFramesPerSec" : 10
+	},
+	{....	   
+	```
 
-Save your changes.
+6. Save your changes.
 
 ### C. Building Intu
 
