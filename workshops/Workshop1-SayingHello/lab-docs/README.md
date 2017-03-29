@@ -144,4 +144,4 @@ Note: For the features listed below to work, you need to use the Conversation wo
 	* Service Names to use on the Gateway: **TelephonyV1**
 
 
-For more information about the Bluemix services listed above, please checkout [Natural Language Understanding](https://natural-language-understanding-demo.mybluemix.net/), [Weather Company Data](https://console.ng.bluemix.net/catalog/services/weather-company-data/), and [Visual Recognition](https://console.ng.bluemix.net/catalog/services/visual-recognition/). 
+For more information about the Bluemix services listed above, please checkout [Natural Language Understanding](https://www.ibm.com/watson/developercloud/natural-language-understanding.html), [Weather Company Data](https://console.ng.bluemix.net/catalog/services/weather-company-data/), and [Visual Recognition](https://console.ng.bluemix.net/catalog/services/visual-recognition/). 
