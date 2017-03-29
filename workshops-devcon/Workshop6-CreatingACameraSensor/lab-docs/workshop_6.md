@@ -402,10 +402,12 @@ In the next task, you will update the `body.json` file also located in the **int
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 
-4. Create a `config.json` file in case it isn't present and paste the credentials obtained from the gateway in step 3 above.
+4. Navigate to the following directories:
 	
-	* For **OS X**,  in **wlabs_self-sdk-master/bin/mac**.
-	* For **Windows**, in **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
+	* For **OS X**:  **wlabs_self-sdk-master/bin/mac**.
+	* For **Windows**: **Visual Studio**, in the **Solution Explorer**, go to **sdk -> bin**.
+
+5. If there is a `config.json` file, delete its current contents and paste the credentials you obtained into this file.  If there is no `config.json` present, add a new file in this directory and name it `config.json`.  Paste your credentials obtained from the gateway into this file.
 
 ### B. Configuring your `body.json` file
 
