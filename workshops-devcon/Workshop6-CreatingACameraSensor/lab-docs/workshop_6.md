@@ -400,7 +400,7 @@ In the next task, you will update the `body.json` file also located in the **int
 
 2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
 
-3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
+3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box. Click the **Copy** button.
 
 4. Navigate to the following directories:
 	
