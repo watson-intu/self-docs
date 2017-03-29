@@ -206,6 +206,8 @@ When Intu starts, it will give a notification like "Ah, I feel so much better". 
 
 # Creating a Plugin
 
+Now create your own LED plugin that would blink when intu tells a joke.
+
 1. SSH into your Pi or using an existing SSH connection and run the following commands:
 ```
 cd ~/intu/self-sdk-master/examples/
@@ -343,7 +345,7 @@ mkdir workshop_five
 	```
 6. Add your new plugin into the build.
 
-   1. Edit the **CMakeLists.txt** file in the examples directory you're currently in.
+   1. Edit the **CMakeLists.txt** file in the examples directory.
 	```
 	cd ~/intu/self-sdk-master/examples
     nano CMakeLists.txt
