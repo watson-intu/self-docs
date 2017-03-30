@@ -18,7 +18,7 @@ Complete the following tasks:
 
 1. [Sign up for a Nexmo account](https://dashboard.nexmo.com/sign-up)
   
-## 2. <a naem="getting-your-nexmo-credentials">Getting your Nexmo credentials</a>
+## 2. <a name="getting-your-nexmo-credentials">Getting your Nexmo credentials</a>
 
 1. On the [Nexmo dashboard](https://dashboard.nexmo.com/), click the top right drop down menu (the one with your name next to it) to expand the account menu.
 
