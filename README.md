@@ -1,7 +1,7 @@
 #Project Intu Documentation
 ---
 
-Intu provides a highly customizable agent-based framework that allows Watson services to be added to many different kinds of physical devices.
+Intu provides a highly customizable agent-based framework that allows Watson services to be added to many different kinds of physical devices. 
 
 ##Getting Started
 [Install Intu on your system](./installation/README.md#installing-intu)
