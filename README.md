@@ -7,7 +7,7 @@ Intu provides a highly customizable agent-based framework that allows Watson ser
 [Install Intu on your system](./installation/README.md#installing-intu)
 
 ##Tutorials
-[Workshops](./workshops-devcon)
+[Workshops](./workshops)
 
 ##Frequently Asked Questions
 
