@@ -206,6 +206,8 @@ When Intu starts, it will give a notification like "Ah, I feel so much better". 
 
 # Creating a Plugin
 
+Now create your own LED plugin that would blink when intu tells a joke.
+
 1. SSH into your Pi or using an existing SSH connection and run the following commands:
 ```
 cd ~/intu/self-sdk-master/examples/
@@ -251,7 +253,7 @@ mkdir workshop_five
 		virtual bool Abort();
 
 		//! Construction
-		WorkshopFiveGesture() : m_PinNumber( 16 ), m_bWiredPi( false )
+		WorkshopFiveGesture() : m_PinNumber( 7 ), m_bWiredPi( false )
 		{}
 
 	private:
@@ -343,7 +345,7 @@ mkdir workshop_five
 	```
 6. Add your new plugin into the build.
 
-   1. Edit the **CMakeLists.txt** file in the examples directory you're currently in.
+   1. Edit the **CMakeLists.txt** file in the examples directory.
 	```
 	cd ~/intu/self-sdk-master/examples
     nano CMakeLists.txt
@@ -358,8 +360,7 @@ mkdir workshop_five
     scripts/build_raspi.sh
 	```
 
-8. Configuring your `body.json` file
-	1. The body.json file acts as an configuration for all the various parts of the INTU platform. Here we will configure it to allow self to pick up on the workshop plugin we just created In this section we are expecting the edits to the body.json to be on the **Raspberry Pi** we have found vim to work well over SSH but editing directly in the NOOBs GUI works well too.
+8. Configuring your `platform.json` file
 	
 	```
 	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
@@ -444,7 +445,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 		virtual bool Execute( GestureDelegate a_Callback, const ParamsMap & a_Params );
 		virtual bool Abort();
 		//! Construction
-		RaspiMoveJointGesture() : m_PinNumber( 11 ), m_bWiredPi( false ), m_ArmLowPoint(0), m_ArmHighPoint(40)
+		RaspiMoveJointGesture() : m_PinNumber( 0 ), m_bWiredPi( false ), m_ArmLowPoint(0), m_ArmHighPoint(40)
 		{}
 	private:
 		//! Data
@@ -564,7 +565,7 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 7. Configuring your **body.json** file
 	1. We will add a few extra parameters to the body.json:
 	```
-	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
+	nano ~/intu/self-sdk-master/bin/raspi/etc/profile/body.json
 	```
 
     2. Locate the `m_Libs` variable, and change it to read: 
