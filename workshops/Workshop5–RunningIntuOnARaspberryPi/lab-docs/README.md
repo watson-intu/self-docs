@@ -561,14 +561,14 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	cd ~/intu/self-sdk-master
 	scripts/build_raspi.sh
 	```
-
-7. Configuring your **body.json** file
-	1. We will add a few extra parameters to the body.json:
+7. Configuring your `platform.json` file
+	
 	```
-	nano ~/intu/self-sdk-master/bin/raspi/etc/profile/body.json
+	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
 	```
 
-    2. Locate the `m_Libs` variable, and change it to read: 
+
+    Locate the `m_Libs` variable, and change it to read: 
 
 		`"m_Libs":[ "platform_raspi", "camera_plugin", "move_joint_plugin", "workshop_five_plugin"]` 
     
