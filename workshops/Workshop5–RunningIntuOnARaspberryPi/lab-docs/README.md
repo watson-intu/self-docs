@@ -1,13 +1,24 @@
 # Workshop 5 – Running Intu on a Raspberry Pi
 
-In this workshop, you will assemble your own Raspberry Pi, which is a credit card-sized computer. You will then program an LED gesture for Intu, and run Intu off of your Raspberry Pi and see your LED gesture in action.
+In this workshop you will assemble your own Raspberry Pi, which is a credit card-sized computer. You will then program an LED gesture for Intu, run Intu on your Raspberry Pi, and see your LED gesture in action.
+
+**In this workshop you will complete the following tasks:**
+
+1. [Assemble the Raspberry Pi](#assembling-the-pi)
+2. [Set up the Wi-Fi connection for your Raspberry Pi](#wifi-for-pi)
+3. [Set up your Raspberry Pi for Builds](#pi-for-builds)
+4. [Download and Build](#download-and-build)
+5. [Update the configuration](#updating-the-config)
+6. [Run Intu on your Raspberry Pi](#run-intu-on-pi)
+7. [Create a Plugin](#creating-a-plugin)
+8. [Extra Credit -- Using Intu to make a TJBot move its arm](#extra-credit-wave)
 
 **Before you begin:** 
 
-1. You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. After completing Workshop 1, you will have:
+1. You must have a Mac or Windows laptop and you must have completed **Workshop 1: Say Hello!**. After completing Workshop 1 you will have:
 
-	1. Your own account, Organization, Group and Parent on the [Intu Gateway](rg-`gateway.mybluemix.net`)
-	2. Your own [Intu Gateway](rg-`gateway.mybluemix.net`) credentials 
+	* Your own Organization, Group, and Parent on the [Intu Gateway](rg-`gateway.mybluemix.net`)
+	* Your own [Intu Gateway](rg-`gateway.mybluemix.net`) credentials 
 
 2. You must have the following to complete Workshop 5:
 	* Raspberry Pi 3 with power cable
@@ -19,15 +30,16 @@ In this workshop, you will assemble your own Raspberry Pi, which is a credit car
 	* Keyboard and Mouse (with USB connections)
 	* An imaged 32 GB SD card
 
-3. You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.  
+3. You will notice that *Intu* and *Self* are used interchangeably. *Self* is the technical name for *Intu*.  
+
 
 **Notes:** 
 
-1. If you **do not** have an imaged card from Devcon, please go to the **Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)**
+1. If you **do not** have an imaged card, please go to the [Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)](#appendix-pi)
 
-2. In this workshop, commands are issued from **Terminal** on **Mac** or **PuTTY** on **Windows**. For **Windows** users, if you do not have **PuTTY** installed, you can download it using this [link](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). **Windows** users will also require a file management tool to copy files over a network between their local machine and the Raspberry Pi. You can use a stand-alone tool like **Filezilla**, or you may prefer scp via Putty. **Filezilla** can be downloaded using this [link](https://filezilla-project.org/).
+2. In this workshop commands are issued from **Terminal** on **Mac** or **PuTTY** on **Windows**. For **Windows** users, if you do not have **PuTTY** installed, you can download it using this [link](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). **Windows** users will also require a file management tool to copy files over a network between their local machine and the Raspberry Pi. You can use a stand-alone tool like **Filezilla**, or you may prefer scp via Putty. **Filezilla** can be downloaded using this [link](https://filezilla-project.org/).
 
-## 1. Assembling the Raspberry Pi
+## 1. <a name="assembling-the-pi">Assembling the Raspberry Pi</a>
 
 ### A. Speaker
 
@@ -81,19 +93,21 @@ To power up your Raspberry Pi, connect the power cable to your Raspberry Pi as s
 
 ![Power cable for Raspberry Pi.](./pi_charger.png?raw=true)
 
-### F. Connecting the Raspberry Pi to an external monitor, keyboard and mouse
+### F. Connecting the Raspberry Pi to an external monitor, keyboard, and mouse
 
-Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in the image below.
+Connect your Raspberry Pi to an external monitor, keyboard, and mouse as shown in the image below.
 
 ![Raspberry Pi and external connections.](./external_monitor_keyboard_to_pi.png?raw=true)
 
-## 2. Set up the Wi-Fi connection for your Raspberry Pi
+## 2. <a name="wifi-for-pi">Set up the Wi-Fi connection for your Raspberry Pi</a>
 
 1. Insert your SD card into your Raspberry Pi if you have not done so already.
 
-2. Connect your Raspberry Pi to a power source, and connect an external keyboard, mouse and monitor to your Raspberry Pi.
+2. Connect your Raspberry Pi to a power source. Connect an external keyboard, mouse, and monitor to your Raspberry Pi.
 
-3. You should see a window open on your monitor. Sometimes it might so happen that your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon ![wifi](./wifi.png?raw=true) at the top of the window, select your network, and enter your password.
+3. You should see a window open on your monitor. Sometimes your power strip might not work correctly. If your Pi does not start, plug it directly into a wall socket. Click on the **Wifi networks** icon at the top of the window, select your network, and enter your password. The network icon looks like:
+	
+	![wifi](./wifi.png?raw=true)
 
 4. Ensure ssh is enabled on your Raspberry Pi.
 	1.	    sudo raspi-config
@@ -118,7 +132,7 @@ Connect your Raspberry Pi to an external monitor, keyboard and mouse as shown in
 	2. You will be prompted for the Raspberry Pi's username and password. The default username is **pi** and default password is **raspberry**.
 
 
-## 3. Setting up your Raspberry Pi for Builds
+## 3. <a name="pi-for-builds">Setting up your Raspberry Pi for Builds</a>
 
 **Note:** If any step below fails or errors, run: `sudo apt-get update`, then repeat the step.
 
@@ -145,7 +159,6 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 		**Note:** If this fails, run `sudo apt-get update` and then rerun: `sudo apt-get install python-pip cmake`
 
 	6.	Run: `sudo pip install qibuild`
- 
 
 3.	Install the wiringPi library on the Raspberry Pi.
 	
@@ -161,11 +174,12 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 
 	You should see a list of classes compiled and "All Done" at the end.
 
-## 4. Download and Build
+## 4. <a name="download-and-build">Download and Build</a>
 
 ### A. Download the Self SDK
 
 1. [Download the Self SDK](https://github.com/watson-intu/self-sdk). Make sure the branch is master and click on download.
+
 2. Create a new directory named **intu** in your **home** directory.
 
 3. Unzip the **self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder. This may take some time.
@@ -173,54 +187,59 @@ Linux raspberrypi 4.4.21-v7+ #911 SMP Thu Sep 15 14:22:38 BST 2016 armv7l GNU/Li
 
 ### B. Building Self SDK
 
-```
-cd ~/intu/self-sdk-master
-scripts/build_raspi.sh
-```
+1. Build the SDK by running the following two commands in your terminal:
+
+	```
+	cd ~/intu/self-sdk-master
+	scripts/build_raspi.sh
+	```
 
 **NOTE:**  You may need to mark this script as executable by running the `chmod +x scripts/build_raspi.sh`. If you have any build errors, run: `scripts/clean.sh` and then rerun: `scripts/build_raspi.sh`
 
-## 6. Updating the configuration
+## 5. <a name="updating-the-config">Updating the configuration</a>
 
 1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
 2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
 
-3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
+3. Select your Organization and Group in the top Filter by menu. Click on the **Get Credentials** button.
 
-4. Create a `config.json` file in case it isn't present on the **Raspberry Pi** in **~/intu/self-sdk-master/bin/raspi** and paste the credentials obtained from the gateway in step 3.
+4. On the **Raspberry Pi**, navigate to **~/intu/self-sdk-master/bin/raspi**. If there is no `config.json` file present, create a file and name it `config.json`. If there is already a `config.json` file, delete its contents. Paste the credentials obtained from the gateway in step 3 in the `config.json` file.
 
-## 7. Run Intu on your Raspberry Pi
+## 6. <a name="run-intu-on-pi">Run Intu on your Raspberry Pi</a>
 
-Run Intu on your Raspberry Pi by completing the following steps in your terminal window.
+1. Run Intu on your Raspberry Pi by executing the following steps in your terminal:
 
-```
-cd  ~/intu/self-sdk-master/bin/raspi
-./run_self.sh
-```
-	
-When Intu starts, it will give a notification like "Ah, I feel so much better".  You should be able to ask things like "How are you", "tell me a joke", "what is your name" and it will respond. You can stop the program by pressing **Control-C**.
+	```
+	cd  ~/intu/self-sdk-master/bin/raspi
+	./run_self.sh
+	```
 
-**NOTE:** If you have a HDMI cable plugged into your Raspberry Pi, verify that the sound is set to **analog**. This can be done by right clicking the **speaker icon** at the top right hand corner of the Raspberry Pi's homescreen, and selecting **analog**.  Verify that you have a microphone and speaker plugged into your Raspberry Pi. Note that your speaker may need to be charged before use. 
+When Intu starts, it will alert you by saying "Ah, I feel so much better".  After hearing this you will be able to ask questions to your Raspberry Pi like "how are you", "tell me a joke", or "what is your name" and it will respond. You can stop the program by pressing **Control-C**.
+
+**NOTE:** If you have a HDMI cable plugged into your Raspberry Pi, verify that the sound is set to **analog**. This can be done by right clicking the **speaker icon** at the top right hand corner of the Raspberry Pi's homescreen and selecting **analog**.  Verify that you have a microphone and speaker plugged into your Raspberry Pi. Note that your speaker may need to be charged before use. 
 
 
-# Creating a Plugin
+## 7. <a name="creating-a-plugin">Creating a Plugin</a>
 
-Now create your own LED plugin that would blink when intu tells a joke.
+Now create your own LED plugin that will blink when Intu tells a joke.
 
-1. SSH into your Pi or using an existing SSH connection and run the following commands:
-```
-cd ~/intu/self-sdk-master/examples/
-mkdir workshop_five
-```
+1. SSH into your Pi or use an existing SSH connection and run the following two commands:
 
-2. Create your CMakeLists.txt:
+	```
+	cd ~/intu/self-sdk-master/examples/
+	mkdir workshop_five
+	```
+
+2. Create your CMakeLists.txt by executing the following two commands in your terminal:
+
 	```
 	cd workshop_five
 	nano CMakeLists.txt
 	```
 
-	Paste or type the following code into the file:
+3. Paste or type the following code into the file:
+	
 	```
 	include_directories(. wiringPI)
 	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
@@ -234,7 +253,7 @@ mkdir workshop_five
 	target_link_libraries(workshop_five_plugin wiringPi)
 	```
 
-3. Create a new file called **WorkshopFiveGesture.h** and paste in the following code.
+4. Create a new file called **WorkshopFiveGesture.h** by running `nano WorkshopFiveGesture.h` in the terminal. Paste in the following code:
 
 	```
 	#ifndef SELF_WORKSHOPFIVEGESTURE_H
@@ -268,7 +287,8 @@ mkdir workshop_five
 	};
 	#endif //SELF_WORKSHOPFIVEGESTURE_H
 	```
-4. Create a file called **WorkshopFiveGesture.cpp** and paste in the following code:
+	
+5. Create a file called **WorkshopFiveGesture.cpp** by running `nano WorkshopFiveGesture.cpp` in the terminal. Paste in the following code:
 
 	```
 	#include "wiringPi.h"
@@ -323,7 +343,7 @@ mkdir workshop_five
 			ThreadPool::Instance()->InvokeOnThread(DELEGATE(WorkshopFiveGesture, AnimateThread, Request * , this), ActiveRequest());
 	}
 	```
-5. Update the **DoAnimateThread** function with the following code:
+6. Update the **DoAnimateThread** function with the following code:
 
 	```
 	// Code snippet for DoAnimateThread()
@@ -343,62 +363,53 @@ mkdir workshop_five
 		delay(200);
 	}
 	```
-6. Add your new plugin into the build.
+7. Add your new plugin into the build.
 
-   1. Edit the **CMakeLists.txt** file in the examples directory.
-	```
-	cd ~/intu/self-sdk-master/examples
-    nano CMakeLists.txt
-	```
-   2. Carefully add the following line at the end of the file: `add_subdirectory(workshop_five)`
+   1. Edit the **CMakeLists.txt** file in the examples directory by running the following commands in your terminal:
+   
+		```
+		cd ~/intu/self-sdk-master/examples
+	    nano CMakeLists.txt
+		```
+	
+   2. Carefully add the following line at the end of the file: 
+   
+   		`add_subdirectory(workshop_five)`
+   		
    3. Save your changes to the `CMakeLists.txt` file. 
            
-7. Build Self on your Raspberry Pi with the following steps:
+8. Build Self on your Raspberry Pi with the following steps:
 
 	```
     cd ~/intu/self-sdk-master
     scripts/build_raspi.sh
 	```
 
-8. Configuring your `platform.json` file
+9. To configure your `platform.json` file, run the following command in your terminal:
 	
 	```
 	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
 	```
 
-    2. Locate the `m_Libs` variable, and change it to read: 
+    1. Locate the `m_Libs` variable and change it to read: 
     
     	`"m_Libs":[ "platform_raspi", "camera_plugin", "workshop_five_plugin"]` 
     
-    3. Save your changes and close the file.
+    2. Save your changes and close the file.
 
-9. Run Intu on your Raspberry Pi
-
-	Run Intu on your Raspberry Pi by completing the following steps in your terminal window.
+10. Run Intu on your Raspberry Pi by completing the following steps in your terminal window:
+	
 	```
 	cd  ~/intu/self-sdk-master/bin/raspi
 	./run_self.sh
 	```
-	Once Intu is running, you should hear "Ah I feel so much better", you should then be able to ask "Tell me a joke", your LED should light up when it goes to laugh.
 	
-# Workshop 5 Extra Credit – Using Intu to Make a TJBot's Arm Wave
+	Once Intu is running you will hear "Ah I feel so much better". After hearing this you will then be able to ask "Tell me a joke". Your LED will light up after it is done telling you a joke.
+	
+# <a name="extra-credit-wave">Workshop 5 Extra Credit</a>
+## Using Intu to Make a TJBot move its arm
 
-Now that you are familiar with the Raspberry Pi we can take this to the next stage and start working with the servo motor. You will program a Move Joint gesture for Intu, and run Intu off of your Raspberry Pi and see your TJBot's arm in action.
-
-**Before you begin:** 
-
-1. You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. After completing Workshop 1, you will have:
-2. Your own account, Organization, Group and Parent on the [Intu Gateway](rg-`gateway.mybluemix.net`)
-3. Your own [Intu Gateway](rg-`gateway.mybluemix.net`) credentials 
-4. You must have the following to complete Workshop 5 Extra Credit:
-    1. Raspberry Pi 3 with power cable
-    2. Anker Bluetooth Speaker with power cable and 3.5mm audio cable
-    3. USB Mini Microphone
-    4. Monitor (with a HDMI connection)
-    5. Keyboard and Mouse (with USB connections)
-    6. An imaged 32 GB SD card (16 GB would also work)
-    7. The basic workshop 5
-5. *Note:* You will notice that Intu and Self are used interchangeably. Self is the code name for Intu.  
+Now that you are familiar with the Raspberry Pi we can take this to the next stage and start working with the servo motor. You will program a Move Joint gesture for Intu, run Intu off of your Raspberry Pi, and see your TJBot's arm in action.  
 
 ## 1. Adding the Servo Motor
 
@@ -408,9 +419,11 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 
 ![Board Layout for Servo](./sevo_pin_layout.png?raw=true)
 
-## 2. Creating  the Waving Arm Gesture with INTU
-1. Inside the **self-sdk-master** directory navigate to the **examples** directory. Inside here make an new directory called **move_arm_joint**
-2. Create a **CMakeLists.txt** file in the **~/intu/self-sdk-master/examples/move_arm_joint** directory, and paste the following code:
+## 2. Creating the Waving Arm Gesture with Intu
+1. Inside the **self-sdk-master** directory navigate to the **examples** directory. Inside here make an new directory called **move\_arm\_joint**
+
+2. Create a **CMakeLists.txt** file in the **~/intu/self-sdk-master/examples/move\_arm\_joint** directory, and paste the following code:
+	
 	```
 	include_directories(. wiringPI)
 	SET(GCC_COVERAGE_LINK_FLAGS "-lwiringPi")
@@ -429,7 +442,8 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	add_subdirectory(move_arm_joint)
 	```
 	
-4. Create a file called **RaspiMoveJointGesture.h** in the **move_arm_joint** directory and paste the following code:
+4. Create a file called **RaspiMoveJointGesture.h** in the **move\_arm\_joint** directory and paste the following code:
+	
 	```
 	#ifndef SELF_MoveArmJointGesture_H
 	#define SELF_MoveArmJointGesture_H
@@ -463,7 +477,8 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	};
 	#endif
 	```
-5. Create a file called **RaspiMoveJointGesture.cpp** in the **move_arm_joint** directory and paste the following code:
+5. Create a file called **RaspiMoveJointGesture.cpp** in the **move\_arm\_joint** directory and paste the following code:
+	
 	```
 	#include "wiringPi.h"
 	#include "softPwm.h"
@@ -555,85 +570,43 @@ As part of this lab we will be using the Tower Pro SG90 micoservo. You can see t
 	}
 	```
 
-6. Build Self on your Raspberry Pi with the following steps:
+6. Build Intu on your Raspberry Pi with the following steps:
 
 	```
 	cd ~/intu/self-sdk-master
 	scripts/build_raspi.sh
 	```
-7. Configuring your `platform.json` file
 	
-	```
-	nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
-	```
+7. Configure the `platform.json` file.
 
+	1. run the following command in your terminal:
+	
+		```
+		nano ~/intu/self-sdk-master/bin/raspi/etc/shared/platforms/raspi/platform.json
+		```
 
-    Locate the `m_Libs` variable, and change it to read: 
+    2. Locate the `m_Libs` variable and change it to read: 
 
 		`"m_Libs":[ "platform_raspi", "camera_plugin", "move_joint_plugin", "workshop_five_plugin"]` 
     
-8. Run Self:
+8. Run Intu by executing the following two commands in your terminal:
 
 	```
 	cd ~/intu/self-sdk-master/bin/raspi
 	./run_self.sh
 	```
 
-You have now added a gesture for moving a joint with INTU.  When you say, "Raise your right arm?" or "Lower your right arm" to the robot, the TJBot should move it arm. 
+You have now added a gesture for moving a joint with Intu.  When you say, "Raise your right arm?" or "Lower your right arm" to the TJBot, it will move its arm. 
 
 
-# Extra Extra Credit: Teaching your TJBot to wave
 
-1. To do this all we need to do is add Alchemy into your registered services on the gateway and the update your body.json and config.json like you did above.
-
-	1. The first thing is to go to [Bluemix](https://console.ng.bluemix.net/catalog/) and create an instance of Alchemy. Once you have done that grab the "apikey":
-	 ![Getting the Alchemy API Key.](./FindingAlchemyOnBluemix.png?raw=true)
-
-	2. The next step is to update your subscribed services on the [Intu Gateway](rg-gateway.mybluemix.net). Once you login use the left hand bar to navigate to MANAGE->Services like:
-    	![Finding the service managment page.](./GoingToManageServices.png?raw=true)
-
-	3. The final step is to click "Add Service" and fill it in with:
-
-	```
-	SERVICE NAME: AlchemyV1
-	USER ID: Your_Alchemy_API_Key
-	SERVICE ENDPOINT: http://gateway-a.watsonplatform.net/calls
-	```
-	**LEAVE THE PASSWORD FIELD BLANK**
-	
-	It will look like this when you are done:
-	![Filling in the Alchemy API Key.](./FillInAlchemy.png?raw=true)
-	    
-
-2. Go Run self:
-
-	```
-	cd ~/intu/self-sdk-master/bin/raspi
-	./run_self.sh
-	```
-	
-4. Now try going through the below interactions with your TJBot. If all goes well you can now teach it more complex interactions. Congratulations on completing this workshop!
-
-```
-Human: "Wave to the crowd"
-TJBot: "I do not know how to Wave"
-Human: "Raise your right arm"
-TJBot: [you see physical action perfored]
-Human: "Lower your right arm"
-TJBot: [you see physical action perfored]
-Human: "That is how you wave"
-TJBot: "I now know how to wave"
-Human: "Wave to the crowd"
-TJBot: [you see BOTH physical action perfored]
-```
-
-# Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)
+# <a name="appendix-pi">Appendix: Instructions for Running Intu on a Raspberry Pi (Without a Pre-Imaged SD Card)</a>
  
 **Note:** Commands are assumed to be issued from **Terminal** on **Mac** or **PuTTY** on **Windows**. For **Windows** users, if you do not have **PuTTY** installed, you can download it using this [link](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html). **Windows** users will also require a file management tool to copy files over a network between their local machine and the Raspberry Pi. You can use a stand-alone tool like **Filezilla**. **Filezilla** can be downloaded using this [link](https://filezilla-project.org/).
 
 ## 1. Set up the Wi-Fi connection for your Raspberry Pi
 
-1.	Connect your Raspberry Pi to a power source, and connect an external keyboard, mouse and monitor to your Raspberry Pi.
+1.	Connect your Raspberry Pi to a power source. Connect an external keyboard, mouse, and monitor to your Raspberry Pi.
 
 2.	You should see a window open on your monitor. Click on the **Wifi networks (w)** icon at the top of the window, select your network.
 
