@@ -433,7 +433,7 @@ First, this code iterates over the response to find the emotion that has the hig
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
 4. Create a `config.json` file in case it isn't present and paste the credentials obtained from the gateway in step 3 above.
 	
-	* For **OS X**,  in **~intu/self-sdk-master/bin/mac**.
+	* For **OS X**,  in **intu/self-sdk-master/bin/mac**.
 	* For **Windows**, in **intu/self-sdk-master/bin/Debug**. 
 		* **NOTE:** Debug may be called Release depending on the selected configuration.
 	
@@ -464,6 +464,7 @@ First, this code iterates over the response to find the emotion that has the hig
 	cd ~/intu/self-sdk-master
 	scripts/build_mac.sh
 	```
+**Note:** If you have any build errors, run: scripts/clean.sh and then rerun: scripts/build_mac.sh
 
 2. Execute the following commands to actually run Intu:
 	```
@@ -486,39 +487,6 @@ First, this code iterates over the response to find the emotion that has the hig
 
 Now that you have added an Emotion Agent, Intu will start to adapt to you. First, ask Intu “How are you?”, and listen to the response. Now feed Intu some positive emotion statements like "Good job!”, and then ask “How are you?” again. Intu should now give a "happier" response than the one it gave before. Try the same thing for some negative emotion statements. Say “Wrong answer" a number of times and then ask “How are you?”. Intu should respond with a "sadder" response.
 
-## Reminder: Update services within 30 days of registering on the Gateway
-Your instance of Intu is preconfigured with the following Watson services: Conversation, Weather Company Data, Speech to Text, and Text to Speech. The preconfiguration is enabled for 30 days. If you want to test Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
+## Reminder: Update your services on the Gateway
 
-### A. Creating instances of Watson services
-To use Intu, you need operational instances of the following services in Bluemix: Conversation, Weather Company Data, Speech to Text, and Text to Speech.
-
-**Pro tip:** As you complete this task, you'll receive credentials for each service instance, and you'll need these credentials later. Open a new file in your favourite text editor and create a section for each service so that you can temporarily store its credentials.
-
-1. On the Bluemix dashboard, click **Catalog** in the top right navigation bar.
-
-2. In the All Categories menu on the left, under Services, click on **Watson**.
-
-3. Create an instance of the Conversation service.
-  1. Click the **Conversation** tile.
-  2. Keep all the default values, and click **Create**.
-  3. Click the **Service Credentials** tab.
-  4. Click **View Credentials** for the new Conversation service instance.
-  5. Copy the values for your password and username and paste them into a new text file in your favourite text editor.
-  6. Click the **<--Watson** breadcrumb near the top left (directly above your Conversation service name). The list of your service instances is displayed.
-  7. Add the next service instance by clicking the **Create Watson** **+** button. The Watson service catalog is displayed.
-
-4. Create instances of the Weather Company Data, Speech to Text, and Text to Speech services by repeating the same substeps 1 - 7 that you completed to create the Conversation service instance.
-
-### B. Configuring Intu to use your service instances
-
-To configure Intu to use your instances of these Watson services, log in to the [Intu Gateway](https://rg-gateway.mybluemix.net/) and complete the following steps:
-
-1. Click on **MANAGE** on the left hand side navigation bar, and select **Services**. 
-
-2. Select your Organization and Group in the top Filter by menu, if not already selected.
-
-3. For your instances of the Weather Company Data, Speech to Text, and Text to Speech services, click **Edit**, and specify the user ID and password (saved in your text file in the previous section **Creating instances of Watson services**), and click **Save**.
-
-4. To configure your instance of **Conversation**, navigate to **DOWNLOADS** on the left of your Intu Gateway browser page, download the **Intu Starter Kit**, and follow the instructions in the `readme.txt` file. Alternatively, go to the instructions for **Workshop 2**, and follow the steps in: **1. Setting up the Conversation service**.
- 
-**Important:** Do not change the service endpoint for your services unless you are an enterprise user.
+You need to update your services on the Intu Gateway within 30 days of creating your organization.  For more details on how to do so, [click here](../../../update-services.md).
