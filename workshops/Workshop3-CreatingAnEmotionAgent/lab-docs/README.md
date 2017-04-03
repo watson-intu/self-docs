@@ -18,35 +18,24 @@ Complete the following tasks:
 
 ### A. Creating your own instance of the Tone Analyzer service
 
-1. [Log in to Bluemix](https://console.ng.bluemix.net/) if you are not already logged in.
+1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 
-2. On the Bluemix dashboard, click **Catalog** in the top-right navigation bar.
-
-3. In the All Categories menu on the left, under Services, click **Watson**.
-
-4. Click the **Tone Analyzer** tile.
-  1. Keep all the default values, and click **Create**.
-  2. Click the **Service Credentials** tab.
-  3. Click **View Credentials** for the new Tone Analyzer service instance you just created. 
-  4. Copy these credentials (everything inside **{ }**) and paste them into a new text file in your favourite text editor. You will need these credentials to configure your Tone Analyzer service in the section below.
-
-### B. Configure Intu to use your Tone Analyzer service instance
-
-1. Open a new browser window and [log in to the Intu Gateway](https://rg-gateway.mybluemix.net/).
-
-2. Click on **MANAGE** on the left hand side navigation bar, and select **Services**. Select your Organization and Group in the top Filter by menu
-
-3. Click the **Add Service** box.
-  
-4. In the **SERVICE NAME** field, specify **ToneAnalyzerV1**.
-
-5. In the **USER ID** field, copy in the username you pasted into your text file in the above.
-
-6. In the **PASSWORD** field, copy in the password.
-
-7. In the **SERVICE ENDPOINT** field, copy in the url.
-
-8. Click the **Add** button at the bottom right of the window.
+2. Click <a href="https://console.ng.bluemix.net/catalog/services/tone_analyzer" target="_blank">here</a> to be taken to the **Tone Analyzer** Service page in Bluemix.
+3. Click the **Create** button located at the bottom of the page.
+4. Wait a few moments while your new service is being created. Once it is created you will automatically be taken to your new service's page.
+5. Click on the **Service credentials** tab.
+6. Click on the **View credentials** button.  The credentials for your new Bluemix service will be displayed.
+7. Copy and paste the **username**, **password**, and **url** into the <a href="https://rg-gateway.mybluemix.net" target="_blank">Intu Gateway</a> by completing the following steps:
+    1. Click on **MANAGE** on the left-hand sidebar of the Intu Gateway.
+    2. Click on **Services**. You will be taken to the Services page on the Gateway.
+    3. If not yet selected, select your **Organization** and **Group** towards the top of the page.
+    4. You should see all your services displayed.
+    5. Click the **+ Add Service** button. A pop-up form will appear.
+    6. In the **SERVICE NAME** field, put **NaturalLanguageUnderstandingV1**.
+    7. Paste your username and password into the **USER ID** and **PASSWORD** fields.
+    8. In the **SERVICE ENDPOINT** field, paste the url obtained from Bluemix.
+    9. Click **SAVE**
+   
 
 ## 2. <a name="understanding-some-intu-terminology">Understanding some Intu terminology</a>
 
