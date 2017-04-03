@@ -71,7 +71,7 @@ Now that Intu is installed successfully, explore how you can test conversations 
 
 ## Challenge: Configuring the Intu Avatar for your instance
 
-To complete this challenge, do the tasks in [Workshop7 -- Installing, Configuring, and Running the Intu Avatar](../../../Workshop7-InstallingConfiguringAndRunningTheIntuAvatar/lab-docs/README.md).
+To complete this challenge, do the tasks in [Workshop7 -- Installing, Configuring, and Running the Intu Avatar](../../../workshops/Workshop7-InstallingConfiguringAndRunningTheIntuAvatar/lab-docs/README.md).
 
 ## Reminder: Update your services on the Gateway
 
