@@ -40,13 +40,7 @@ Complete the following tasks:
 13. Save the changes you made in the `Config.json` file.
   
 ## Running the Intu Avatar
-1. Confirm Intu is running on your machine. If Intu is not running, run **Intu Manager**.
-
- 	1. Navigate to the directory where you installed the Intu Manager from Workshop 1 and run the application. (If you're using a **Mac**, Ctrl+click on the Intu Manager and select Open. If you're using **Windows**, double-click on the Intu Manager to run it.) 
- 	2. If a security warning is displayed, accept the risk and open the file.
- 	3. Make sure the **Windowed** checkbox is selected, accept the other default values, and click **Play!**. 
- 	4. When prompted to login, enter your Bluemix credentials and continue.
- 	5. Your Organization and Group should be pre-selected in the dropdown menu and your Intu instance should appear with a Green dot indicating that it is running.
+1. Confirm Intu is running on your machine. If Intu is not running, run **Intu**. For instructions on how to do so, [click here](../../../installation/running.md)
 
 2. Navigate back to the directory where you extracted the Intu Avatar, and Ctrl+click on the `intu_avatar` application. If a security warning is displayed, click **Ok** to continue run the application.
 
