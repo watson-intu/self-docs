@@ -30,17 +30,16 @@ Complete the following tasks:
 
 ## 3. <a name="adding-the-telephony-service-to-Intu">Adding the telephony service to Intu</a>
 
-1. [Log in to the Intu Gateway](https://rg-gateway.mybluemix.net/).
-
+1. Log in to the [Intu Gateway](https://rg-gateway.mybluemix.net/).
 2. Click **MANAGE** on the left side of the page, and click **Services**.
 3. In the **Filter By** fields, select your Organization and Group.
-4. Click **Add Service**.
+4. Click **+ Add Service**.
 5. Specify your Nexmo credentials.
   1. In the **Service Name** field, specify **TelephonyV1**.
   2. In the **User ID** field, specify the **API key** value from your text file.
   3. In the **Password** field, specify the **API Secret** value from your text file.
   4. In the **Service Endpoint** field, specify: **ws://nexmo-watson.mybluemix.net/ws-embodiment**
-6. Click the blue **Add** box.
+6. Click **SAVE**.
 7. If you currently have Intu already running, stop it to enable the Telephony service to automatically provision a US phone number for your device.
 
 ## 4. <a name="understanding-plans">Understanding plans</a>
