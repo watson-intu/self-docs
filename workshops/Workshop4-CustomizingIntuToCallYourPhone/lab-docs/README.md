@@ -71,14 +71,7 @@ For example, look at the first plan called `"dialog_answer"`. It contains a set 
 
 4. Search for a plan called `"outgoing_call"`, and change the value of `"m_ToNumber"` in the second action to your phone number (Be sure to include the country code first, e.g. **15551231234**). Now, look at the actions for this plan. The first action will have Intu `"Dialing"`, while the second action will carry out the execution to call the number specified.
 
-5. Run Intu. 
-
-	1. If you have closed your **Intu Manager**, navigate to the directory where you installed it in Workshop 1, and open Intu Manager.
-	2. Login with your Bluemix credentials. 
-	3. Once logged in, select your Organization and Group.
-	4. Verify that you can see the device on which you installed Intu. 
-	5. Click on the on/off toggle to restart your device.
-	6. The status icon should turn green and a new Terminal/command prompt window will open in the background as Intu starts running.
+5. Run Intu. For instructions on how to do so [click here](../../../installation/configuring.md)
 
 6. Ask Intu "Can you call me?". When your phone rings, answer it. Have a conversation with Intu. Say "Tell me a joke". You should hear a joke. You can continue to talk or hang up.
 
