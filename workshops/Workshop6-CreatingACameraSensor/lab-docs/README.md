@@ -12,7 +12,7 @@ Complete the following tasks:
 4. [Configuring your Intu instance to include the camera sensor](#configuring-your-Intu-instance-to-include-the-camera-sensor)
 
 
-## 1. <a name="understanding-some-intu-terminology">Understanding some Self terminology</a>
+## 1. <a name="understanding-some-intu-terminology">Understanding some Intu terminology</a>
 
 Before you create a camera sensor, become familiar with the following terminology:
 
