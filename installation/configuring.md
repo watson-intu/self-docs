@@ -29,7 +29,7 @@ Note: While Weather Company Data is one of the 30 day trial pre-configured servi
 	6. Paste your username and password into the **USER ID** and **PASSWORD** fields.
 	7. Click **SAVE**
 
-*Note for Conversation service only*: In addition to configuring your username and password for this service, you also need to update the Workspace IDs. See [Workshop 2](../../workshops/Workshop2-CustomizingTheConversationService/lab-docs/README.md) for more details on how to create and update your own Conversation Workspaces.
+*Note for Conversation service only*: In addition to configuring your username and password for this service, you also need to update the Workspace IDs. See [Workshop 2](../../../workshops/Workshop2-CustomizingTheConversationService/lab-docs/README.md) for more details on how to create and update your own Conversation Workspaces.
 
 The **Intu Starter Kit** contains a Conversation service workspace that helps you visualize how intents, entities, and dialog are developed. You can expand on the workspace in the kit or use it as a guide for developing your own later.
 
