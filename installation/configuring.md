@@ -12,7 +12,7 @@ In order to use Intu, at minimum you need operational instances of the following
 
 Note: While Weather Company Data is one of the 30 day trial pre-configured services, it is not required to use Intu. It does, however, offer additional functionality ([as described below](#additional-functionality)).
 
-###To create and configure an instance of Watson <u>Conversation</u> Service:
+### <a name="conversation">To create and configure an instance of Watson <u>Conversation</u> Service</a>:
 
 1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 2. Click <a href="https://console.ng.bluemix.net/catalog/services/conversation" target="_blank">here</a> to be taken to the **Conversation** Service page in Bluemix.
