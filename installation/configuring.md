@@ -1,4 +1,4 @@
-# Configuring Intu
+# Configuring Intu to use your own Bluemix Services
 Your instance of Intu is pre-configured with the following Watson services from <a href="https://console.ng.bluemix.net" target="_blank">Bluemix</a>: Conversation, Weather Company Data, Speech to Text, and Text to Speech. The pre-configuration is enabled for 30 days. If you want to continue to use Intu after 30 days, you must create your own instances of these services and configure Intu to use them.
 
 **This page will walk you through the following:**
