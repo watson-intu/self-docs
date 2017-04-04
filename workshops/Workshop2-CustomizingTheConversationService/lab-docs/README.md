@@ -160,14 +160,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 7.	If Intu is already **running** (from Workshop 1), ask it a question, e.g. **What is the capital of Australia?**
 
-8. If Intu is **not running, run Intu Manager**.
-
-	1. Navigate to the directory where you installed the Intu Manager from Workshop 1 and run the application. (If you're using a **Mac**, right-click on the Intu Manager and select Open. If you're using **Windows**, double-click on the Intu Manager to run it.) 
-	2. If a security warning is displayed, accept the risk and open the file.
-	3. Make sure the **Windowed** checkbox is selected, accept the other default values, and click **Play!**. 
-	4. The Intu Manager page is displayed in your browser window. Click **Log In**. You are prompted to return to the Intu Manager. 
-	5. Select **Manage Intu**. A new Intu Tooling log in page is displayed. Click **Log in.**
-	6. Your Organization and Group should be preselected in the dropdown menu and Intu should now be running.
+8. If Intu is **not running, run Intu Manager**. For instructions on how to do so, [click here](../../../installation/running.md)
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
