@@ -17,7 +17,7 @@ You must create your own instance of the Conversation service in Bluemix, config
 
 ### A. Creating your own instance of the Conversation service
 
-First you will need to create your own instance of the Convesation service on Bluemix.  For step-by-step instructions on how to create and configure the Conversation service, [click here](../../../installation/configuring.md/#conversation)
+First you will need to create your own instance of the Convesation service on Bluemix.  For step-by-step instructions on how to create and configure the Conversation service, [click here](../../../installation/configuring.md/#conversation).
 
 ### B. Importing the example "Intu-Dialog" workspace into the Conversation service
 
@@ -144,7 +144,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 5.	Click on **MANAGE** on the left hand side navigation bar, and select **Services**. Select your Organization and Group in the top Filter by menu, if not already selected.
 
-6.	For your instance of **Conversation** click **Edit**, and copy over your username and password you saved earlier in your text file. Now copy your Workspace ID and paste it into the **self_dialog** parameter. 
+6.	For your instance of **ConversationV1** click the **Edit** button (pencil icon). Now copy your Workspace ID and paste it into the **self_dialog** parameter. 
 
 	**Important:** As you are using the **Intu-Dialog** workspace, you do not 	need to worry about the **self_domain** parameter here. You can just leave 	**self_domain** with its default value, or delete it if you wish. If you 	were using your own, custom Conversation workspace (see **Challenge: Using 	your own custom Conversation workspace with Intu**), the **self_domain** 	parameter is where you would paste your Workspace ID. Please note that you have entered the workspace ID in the right place.
 	
