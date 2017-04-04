@@ -468,4 +468,4 @@ The process you have just undertaken was adding a camera into your Intu instance
 
 ## Reminder: Update your services on the Gateway
 
-You need to update your services on the Intu Gateway within 30 days of creating your organization.  For more details on how to do so, [click here](../../../update-services.md).
+You need to update your services on the Intu Gateway within 30 days of creating your organization.  For more details on how to do so, [click here](../../../installation/configuring.md).
