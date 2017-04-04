@@ -19,16 +19,6 @@ You must create your own instance of the Conversation service in Bluemix, config
 
 First you will need to create your own instance of the Convesation service on Bluemix.  For step-by-step instructions on how to create and configure the Conversation service, [click here](../../../installation/configuring.md/#conversation)
 
-1. Open a new browser window, and [log in to Bluemix](https://console.ng.bluemix.net/dashboard/applications/).
-
-2. On the Bluemix dashboard, click **Catalog** in the top-right navigation bar.
-3. In the All Categories menu on the left, under Services, click on **Watson**.
-4. Click on the **Conversation** tile.
-  1. Keep all the default values, and click **Create**.
-  2. Click the **Service Credentials** tab.
-  3. Click **View Credentials** for your newly created Conversation service.
-  4. Copy the values for your `password` and `username` and paste them into a new text file in your favourite text editor. You will need these credentials in Section 4 below. **Leave this browser window open.**
-
 ### B. Importing the example "Intu-Dialog" workspace into the Conversation service
 
 To complete this task, you must download the **Intu Starter Kit**, which contains a complete Conversation service workspace **Intu-Dialog** that you need for this workshop.
