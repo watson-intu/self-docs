@@ -99,7 +99,7 @@ Note: For the features listed below to work, you need to use the Conversation wo
 	* Additional Bluemix services required (for learning your name): **Natural Language Understanding** and **Visual Recognition**
 
 	
-5. **Telephony Agent**: Get Intu to call you or someone else! Please see Workshop 4 for more details on how to configure and use the Telephony Agent.
+5. **Telephony Agent**: Get Intu to call you or someone else! Please see [Workshop 4](../workshops/Workshop4-CustomizingIntuToCallYourPhone/lab-docs/README.md) for more details on how to configure and use the Telephony Agent.
 
 	* Additional services required: **Nexmo** -- _note: This is **NOT** a Bluemix service_
 
