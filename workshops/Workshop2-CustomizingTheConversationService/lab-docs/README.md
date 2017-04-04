@@ -138,13 +138,13 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 2.	This returns you to your Workspaces page, where you will see the Intu-Dialog Workspace box. Click on the **three vertical dots** in the top right hand corner of this box. Select **View details**.   
 
-3.	Now copy the Workspace ID into the text file you created earlier in Section 1.
+3.	Copy the Workspace ID.
 
 4.	Return to the [Intu Gateway](https://rg-gateway.mybluemix.net/).
 
 5.	Click on **MANAGE** on the left hand side navigation bar, and select **Services**. Select your Organization and Group in the top Filter by menu, if not already selected.
 
-6.	For your instance of **ConversationV1** click the **Edit** button (pencil icon). Now copy your Workspace ID and paste it into the **self_dialog** parameter. 
+6.	For your instance of **ConversationV1** click the **Edit** button (pencil icon). Now paste your Workspace ID into the **self_dialog** parameter. 
 
 	**Important:** As you are using the **Intu-Dialog** workspace, you do not 	need to worry about the **self_domain** parameter here. You can just leave 	**self_domain** with its default value, or delete it if you wish. If you 	were using your own, custom Conversation workspace (see **Challenge: Using 	your own custom Conversation workspace with Intu**), the **self_domain** 	parameter is where you would paste your Workspace ID. Please note that you have entered the workspace ID in the right place.
 	
@@ -152,7 +152,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 7.	If Intu is already **running** (from Workshop 1), ask it a question, e.g. **What is the capital of Australia?**
 
-8. If Intu is **not running, run Intu Manager**. For instructions on how to do so, [click here](../../../installation/running.md)
+8. If Intu is **not running, run Intu Manager**. For instructions on how to do so, [click here](../../../installation/running.md).
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
@@ -164,11 +164,11 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 4.  Get the Workspace Id -- Click on the three horizontal lines in the top left corner, click *Back to workspaces*. Once you see all your workspaces, click on the **three dots** in the top right hand corner of the newly created Workspace box. Select **View details**.
 
-5.  Copy the Workspace Id.
+5.  Copy the Workspace ID.
 
 6.  Return to the [Intu Gateway](https://rg-gateway.mybluemix.net/). 
 
-7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the **self_domain** key is still present, edit the value to point to your new Conversation workspace.  If the **self_domain** key is absent, => Click on the + sign. For the key field make it **self_domain** and for the value field make it your workspace id.
+7. Click on Manage => Services => Choose the appropriate Organization and Group => edit ConversationV1. If the **self_domain** key is still present, edit the value to point to your new Conversation workspace.  If the **self_domain** key is absent, => Click on the + sign. For the key field make it **self_domain** and for the value field make it your Workspace ID.
 
 8. Click save.
 
