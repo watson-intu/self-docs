@@ -71,7 +71,7 @@ For example, look at the first plan called `"dialog_answer"`. It contains a set 
 
 4. Search for a plan called `"outgoing_call"`, and change the value of `"m_ToNumber"` in the second action to your phone number (Be sure to include the country code first, e.g. **15551231234**). Now, look at the actions for this plan. The first action will have Intu `"Dialing"`, while the second action will carry out the execution to call the number specified.
 
-5. Run Intu. For instructions on how to do so [click here](../../../installation/configuring.md)
+5. Run Intu. For instructions on how to do so [click here](../../../installation/running.md)
 
 6. Ask Intu "Can you call me?". When your phone rings, answer it. Have a conversation with Intu. Say "Tell me a joke". You should hear a joke. You can continue to talk or hang up.
 
