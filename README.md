@@ -4,7 +4,15 @@
 Intu provides a highly customizable agent-based framework that allows Watson services to be added to many different kinds of physical devices. 
 
 ##Getting Started
-[Install Intu on your system](./installation/README.md#installing-intu)
+To get started using Intu, complete the following tasks:
+
+1. [Requesting access to the Watson Intu Gateway and downloading the Intu Manager](./installation/downloading.md)
+2. [Installing Intu on your devices](./installation/installing.md)
+3. [Configuring Intu to use your own Bluemix services](./installation/configuring.md)
+4. [Compiling Intu for various platforms](./installation/compiling.md)
+5. [Running Intu](./installation/running.md)
+
+Alternatively, for a more tutorial-based appraoch to getting started using **Intu**, please see our [workshops](./workshops).
 
 ##Tutorials
 [Workshops](./workshops)
