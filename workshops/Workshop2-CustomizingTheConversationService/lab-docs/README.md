@@ -2,7 +2,7 @@
 
 In this workshop, you customize the greeting in the dialog from the Conversation service workspace and extend the conversation by adding new intents, new entities, and new dialog.
 
-**Before you begin:** You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!.
+**Before you begin:** You must have a Mac or Windows laptop, and you must have completed [Workshop 1 --  Say Hello!](../../../workshops/Workshop1-SayingHello/lab-docs/README.md).
 
 Complete the following tasks:
 
