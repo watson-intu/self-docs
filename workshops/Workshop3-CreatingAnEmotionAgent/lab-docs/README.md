@@ -489,4 +489,4 @@ Now that you have added an Emotion Agent, Intu will start to adapt to you. First
 
 ## Reminder: Update your services on the Gateway
 
-You need to update your services on the Intu Gateway within 30 days of creating your organization.  For more details on how to do so, [click here](../../../update-services.md).
+You need to update your services on the Intu Gateway within 30 days of creating your organization.  For more details on how to do so, [click here](../../../installation/configuring.md).
