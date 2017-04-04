@@ -17,6 +17,8 @@ You must create your own instance of the Conversation service in Bluemix, config
 
 ### A. Creating your own instance of the Conversation service
 
+First you will need to create your own instance of the Convesation service on Bluemix.  For step-by-step instructions on how to create and configure the Conversation service, [click here](../../../installation/configuring.md/#conversation)
+
 1. Open a new browser window, and [log in to Bluemix](https://console.ng.bluemix.net/dashboard/applications/).
 
 2. On the Bluemix dashboard, click **Catalog** in the top-right navigation bar.
