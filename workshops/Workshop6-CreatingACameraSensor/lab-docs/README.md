@@ -2,7 +2,7 @@
 
 In this workshop, you create a camera sensor. Sensors take in data from the outside world to process. The camera sensor will aim to take in visual data from the environment, ready to be processed on Intu. 
 
-**Before you begin:** You must have a **Mac**, and you must have completed Workshop 1: Say Hello!. You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
+**Before you begin:** You must have a **Mac**, and you must have completed [Workshop 1 --  Saying Hello!](../../../workshops/Workshop1-SayingHello/lab-docs/README.md). You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
 
 Complete the following tasks:
 
