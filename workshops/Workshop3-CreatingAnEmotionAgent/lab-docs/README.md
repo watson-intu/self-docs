@@ -458,13 +458,13 @@ First, this code iterates over the response to find the emotion that has the hig
 
 **For OS X users:**
 
-1. Build Intu for Mac. For instructions on how to do so, [click here](../../../installation/compiling/#osx.md).
+1. Build Intu for Mac. For instructions on how to do so, [click here](../../../installation/compiling.md/#osx).
 
 2. Run Intu. For instructions on how to do so, [click here](../../../installation/running.md)
 	
 **For Windows users:**
 
-1. Build Intu for Windows. For instructions on how to do so, [click here](../../../installation/compiling/#windows.md).
+1. Build Intu for Windows. For instructions on how to do so, [click here](../../../installation/compiling.md/#windows).
 
 2. Once built, you only need to do the following steps one time:
 	1. Right-click on **workshop_three_plugin** and select **Set as startup project**. 
