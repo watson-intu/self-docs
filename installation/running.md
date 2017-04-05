@@ -80,7 +80,7 @@ If you downloaded the **Intu SDK** and plan on running that instance of Intu, it
 3. Selct your Organization and Group
 4. Click **Get Credentials**
 5. Copy the json displayed
-6. If there is a `config.json` file present, delete its current contents
+6. Back in your terminal (you should already be in the correct directory if you've been following the instructions above) -- If there is a `config.json` file present, delete its current contents
 7. If there is no `config.json` file present, create a file and name it `config.json`
 8. In your `config.json` file, paste the copied credentials
 9. Save your updated `config.json`
