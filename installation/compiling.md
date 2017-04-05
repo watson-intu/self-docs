@@ -17,7 +17,7 @@ Here you will learn how to compile Intu for the following platforms:
 
 You have two options for acquiring the **Intu SDK**:
 
-**Option 1:** [Download the Self SDK](https://github.com/watson-intu/self-sdk) using git commands. Issue following commands on your terminal in Mac:
+**Option 1:** [Download the Intu SDK](https://github.com/watson-intu/self-sdk) using git commands. Issue following commands on your terminal in Mac:
 
 1. `git clone https://github.com/watson-intu/self-sdk.git`
 2. `cd self-sdk`
