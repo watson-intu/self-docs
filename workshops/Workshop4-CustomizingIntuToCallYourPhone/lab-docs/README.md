@@ -24,7 +24,7 @@ Complete the following tasks:
 
 2. Click **Settings**.
 
-3. Copy the values of the **API key** and **API Secret** parameters, and paste them into a new text file using your favourite text editor.
+3. Copy the values of the **API key** and **API Secret** parameters. You will need these for configuration on the Intu Gateway.
 
 4. You will need to pay for minutes on the Nexmo service. This will allow your account to allow to make calls using the API key/secret you copied above.
 
@@ -35,12 +35,12 @@ Complete the following tasks:
 3. In the **Filter By** fields, select your Organization and Group.
 4. Click **+ Add Service**.
 5. Specify your Nexmo credentials.
-  1. In the **Service Name** field, specify **TelephonyV1**.
-  2. In the **User ID** field, specify the **API key** value from your text file.
-  3. In the **Password** field, specify the **API Secret** value from your text file.
-  4. In the **Service Endpoint** field, specify: **ws://nexmo-watson.mybluemix.net/ws-embodiment**
+  1. In the **SERVICE NAME** field, specify **TelephonyV1**.
+  2. In the **USER ID** field, paste the **API key** value from Nexmo.
+  3. In the **PASSWORD** field, paste the **API Secret** value from Nexmo.
+  4. In the **SERVICE ENDPOINT** field, specify: **ws://nexmo-watson.mybluemix.net/ws-embodiment**
 6. Click **SAVE**.
-7. If you currently have Intu already running, stop it to enable the Telephony service to automatically provision a US phone number for your device.
+7. If you currently have Intu running, stop it to enable the Telephony service to automatically provision a US phone number for your device.
 
 ## 4. <a name="understanding-plans">Understanding plans</a>
 
