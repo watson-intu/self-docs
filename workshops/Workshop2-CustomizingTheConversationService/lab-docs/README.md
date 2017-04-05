@@ -152,7 +152,7 @@ Your installation of Intu is preconfigured to use the default Conversation servi
 
 7.	If Intu is already **running** (from Workshop 1), ask it a question, e.g. **What is the capital of Australia?**
 
-8. If Intu is **not running, run Intu Manager**. For instructions on how to do so, [click here](../../../installation/running.md).
+8. If Intu is **not running, run Intu Manager**. For instructions on how to do so, [click here](../../../installation/running.md/#intu-through-manager).
 
 ## Challenge: Using your own custom Conversation workspace with Intu
 
