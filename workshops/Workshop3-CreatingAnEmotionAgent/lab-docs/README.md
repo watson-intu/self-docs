@@ -460,7 +460,7 @@ First, this code iterates over the response to find the emotion that has the hig
 
 1. Build Intu for Mac. For instructions on how to do so, [click here](../../../installation/compiling.md/#osx).
 
-2. Run Intu. For instructions on how to do so, [click here](../../../installation/running.md)
+2. Run Intu. For instructions on how to do so, [click here](../../../installation/running.md/#intu-sdk)
 	
 **For Windows users:**
 
