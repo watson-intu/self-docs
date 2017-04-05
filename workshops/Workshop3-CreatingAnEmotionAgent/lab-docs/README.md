@@ -56,7 +56,7 @@ Before you create an emotion agent, become familiar with the following terminolo
 
 ## 3. <a name="building-the-intu-sdk">Building the Self SDK</a>
 
-See [Installing and building the Self SDK](https://github.com/watson-intu/self-sdk#compiling-intu-for-various-platforms) before you continue in this workshop.
+See [Installing and building the Self SDK](../../../installation/compiling.md) before you continue in this workshop.
 
 
 ## 4. <a name="creating-an-emotion-agent">Creating an emotion agent</a>
