@@ -38,53 +38,38 @@ If you downloaded the **Intu SDK** and plan on running that instance of Intu, it
 1. Open the Intu SDK project in Visual Studio
 2. Build the project
 3. In the Solution Explorer, got to **sdk -> bin**
-4. If you have already updated the `config.json` file yourself, skip ahead to step 8
-5. If there is a `config.json` file present, delete its current contents
-6. If there is no `config.json` file present, create a file and name it `config.json`
-7. Add your configuration to the `config.json` file by following [these instructions](#updating-config)
-8. Run Intu
+4. If you have not yet updated the `config.json` file, follow [these instructions](#updating-config) to do so
+5. Run Intu
 
 ### OS X
 1. Navigate to your Intu SDK root directory in your terminal
 2. Navigate to the `bin/mac` directory
-3. If you have already updated the `config.json` file yourself, skip ahead to step 7
-4. If there is a `config.json` file present, delete its current contents
-5. If there is no `config.json` file present, create a file and name it `config.json`
-6. Add your configuration to the `config.json` file by following [these instructions](#updating-config)
-7. Run the following command: `./self_instance`
-8. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 6.
+3. If you have not yet updated the `config.json` file, follow [these instructions](#updating-config) to do so
+4. Run the following command: `./self_instance`
+5. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 4.
 
 ### Linux
 1. Navigate to your Intu SDK root directory
 2. Navigate to the `bin/linux` directory
-3. If you have already updated the `config.json` file yourself, skip ahead to step 7
-4. If there is a `config.json` file present, delete its current contents
-5. If there is no `config.json` file present, create a file and name it `config.json`
-6. Add your configuration to the `config.json` file by following [these instructions](#updating-config)
-7. Run the following command: `./self_instance`
-8. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 6.
+3. If you have not yet updated the `config.json` file, follow [these instructions](#updating-config) to do so
+4. Run the following command: `./self_instance`
+5. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 4.
 
 ### Raspberry Pi
 1. ssh onto the Raspberry Pi
 2. On the Raspberry Pi, navigate to the Intu SDK root directory
 3. Navigate to the `bin/raspi` directory
-4. If you have already updated the `config.json` file yourself, skip ahead to step 8
-5. If there is a `config.json` file present, delete its current contents
-6. If there is no `config.json` file present, create a file and name it `config.json`
-7. Add your configuration to the `config.json` file by following [these instructions](#updating-config)
-8. Run the following command: `./run_self.sh`
-9. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 7.
+4. If you have not yet updated the `config.json` file, follow [these instructions](#updating-config) to do so
+5. Run the following command: `./run_self.sh`
+6. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 5.
 
 ### Nao and Pepper robots
 1. ssh onto the robot
 2. On the robot, navigate to the Intu SDK root directory
 3. Navigate to the `bin/nao` directory
-4. If you have already updated the `config.json` file yourself, skip ahead to step 8
-5. If there is a `config.json` file present, delete its current contents
-6. If there is no `config.json` file present, create a file and name it `config.json`
-7. Add your configuration to the `config.json` file by following [these instructions](#updating-config)
-8. Run the following command: `./self_instance`
-9. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 7.
+4. If you have not yet updated the `config.json` file, follow [these instructions](#updating-config) to do so
+5. Run the following command: `./self_instance`
+6. If you get an error, run `export LD_LIBRARY_PATH=./` and then redo step 5.
 
 
 
@@ -95,5 +80,7 @@ If you downloaded the **Intu SDK** and plan on running that instance of Intu, it
 3. Selct your Organization and Group
 4. Click **Get Credentials**
 5. Copy the json displayed
-6. In your `config.json` file, paste the copied credentials
-7. Save your updated `config.json`
+6. If there is a `config.json` file present, delete its current contents
+7. If there is no `config.json` file present, create a file and name it `config.json`
+8. In your `config.json` file, paste the copied credentials
+9. Save your updated `config.json`
