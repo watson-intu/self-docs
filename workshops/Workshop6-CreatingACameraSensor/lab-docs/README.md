@@ -24,90 +24,22 @@ Before you create a camera sensor, become familiar with the following terminolog
   
   * **Topic**: A channel to which Agents publish and subscribe.
 
-## 2. <a name="building-the-intu-sdk">Building the Self SDK</a>
+## 2. <a name="building-the-intu-sdk">Building the Intu SDK</a>
 
-Follow the instructions for your platform.
 
 **Before you begin**:
 
-1. [Download the Self SDK](https://github.com/watson-intu/self-sdk). Click on the **download icon** next to the default **master** branch selected.
+1. Create a new directory named **intu** in a directory of your choosing.
+2. In your `intu` directory, [download or clone the Intu SDK](../../../installation/compiling.md/#files). 
 
-2. Create a new directory named **intu** in a directory of your choosing.
-
-3. Unzip the **self-sdk-master.zip** file into **intu**, making sure that you retain the folder structure, i.e. your intu directory should now contain the unzipped **self-sdk-master** folder.
 
 ### A. Preparing for OS X
 
-**Note**: If you have already completed **Preparing for OS X** in another workshop, you can skip this section.
-
-1. Install Homebrew by completing the following steps:
-   1. Open a new terminal window, and run the command:
-   ```
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
-   The following message is displayed:
-   ```
-   Press RETURN to continue or any other key to abort
-   ```
-   2. Press **Return** or **Enter**. A prompt for your laptop's password is displayed.
-   3. Specify your password, and press **Return** or **Enter**. If you have **macOS Sierra**, the following message is displayed:
-   
-   		```
-   HEAD is now at 89fd34b Merge pull request #1368 from MikeMcQuaid/build-options-file
-   Error: /usr/local/Cellar is not writable. You should change the
-   ownership and permissions of /usr/local/Cellar back to your
-   user account:
-   sudo chown -R $(whoami) /usr/local/Cellar
-   Failed during: /usr/local/bin/brew update --force
-   		```
-   
-   		Run: `sudo chown -R $(whoami) /usr/local/Cellar`
-   4. Now repeat step 1 by running: 
-    ```
-   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-   ```
-2. Install CMake using Homebrew.
-	1. Run the command: `sudo chown -R $(whoami) /usr/local`   
-	2. Now run: `brew install cmake`
-
-		**Note**: If you have **macOS Sierra**, you may see the following message if you happen to have an outdated version of **Xcode**: 
-	
-		```
-	Your Xcode (7.3.1) is outdated.
-	Please update to Xcode 8.1 (or delete it).
-	Xcode can be updated from the App Store.
-		```
-	
-		If you see this message, you will need to update **Xcode**.
-	
-3. Download **Anaconda 4.2.0 Python 2.7 version** by using the **Graphical Installer**. It is required to correctly configure pip in the following step.
-   1. Open a new browser window and [download Anaconda 4.2.0 Python 2.7 version](https://www.continuum.io/downloads).
-   2. Click the solid blue GRAPHICAL INSTALLER button for Python 2.7 Version. It should be 403 MB. The .pkg file downloads.
-   3. After the file is downloaded, double-click it, and follow the prompts to install Anaconda.
-   4. Open a **new** Terminal window and make sure your version of Python has been successfully updated by running the command: `python --version` 
- 	
- 		You should see: `Python 2.7.12 :: Anaconda 4.2.0 (x86_64)`
-  
-4. Set up qiBuild.
-   1. Run: `pip install qibuild`
-   2. Run: `qibuild config --wizard` and be sure to include the two hyphens before **wizard** in the last command.
-   3. When the "Please choose a generator" prompt is displayed, specify **1**, and press **Enter**.
-   4. When the "Please choose an IDE" prompt is displayed, specify **1**, and press **Enter**.
+You will need to have **CMake** and **qiBuild** installed on your Mac to run this workshop. For instructions on how to install these, [click here](../../../installation/compiling.md/#setup).
    
 ### B. Building the Intu SDK for OS X
 
-1. In a new Terminal window, navigate to the **self-sdk-master** directory inside **intu**. You should just be able to run: `cd intu/self-sdk-master` 
-
-	**Note:** If you have **already built the Intu SDK for OS X** in another workshop, run: `./scripts/clean.sh`    
-
-2. Run:
-`./scripts/build_mac.sh`  
-
-	**Note:** If you are running this script for the first time and you see the following message, do not worry as you do not have the toolchain. Let the script run and proceed with the next step.
-```
-[ERROR]: Exception No such toolchain: mac-self
-Known toolchains are:
-```
+Build the **Intu SDK**.  [Click here](../../../installation/compiling.md/#osx) for instructions on how to do so.
 
 ## 3. <a name="creating-a-camera-sensor">Creating a camera sensor</a>
 
@@ -381,11 +313,7 @@ In the next step, you will build out the **OnStart**, **CaptureVideo** and **Sen
   ```
 
 
-5. Open a **new** Terminal window and navigate to **intu/self-sdk-master** by running: `cd intu/self-sdk-master`.
-
-	**Note:** If you have built the SDK in a previous workshop, make sure you run: `./scripts/clean.sh`.
-
-6. Run the build script: `./scripts/build_mac.sh`. **Do not close this Terminal window.**
+5. Now that you have updated the code, you will have to once again build the **Intu SDK**. [Click here](../../../installation/compiling.md/#osx) for instructions on how to do so.
 
 **Congratulations!** You just built all the functions required for the camera sensor. 
 
@@ -447,9 +375,7 @@ In the next task, you will update the `body.json` file also located in the **int
 
 1. Return to your most recent Terminal window, where you should already be in the **mac** directory. Otherwise, open a **new** Terminal window and navigate to this directory by running: `cd intu/self-sdk-master/bin/mac`
 
-2. Run the following command:
-  `export LD_LIBRARY_PATH=./`
-3. Run Intu by issuing the following command: `./self_instance `
+2. Run Intu. For instructions on how to do so, [click here](../../../installation/running.md/#intu-sdk).
 
 Now Intu is running, you should see your Mac camera turn on. Now Intu will be able to capture vision through your Mac camera.
 
