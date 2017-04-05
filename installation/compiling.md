@@ -1,8 +1,21 @@
-## Compiling Intu for various platforms
+# Compiling Intu for various platforms
 
-### Getting the files 
+Before you begin you will have to complete the following tasks:
 
-You may want to use git to clone the repository, so that the self-docs submodule is downloaded for easy referal. In your home directory, do the following:
+1. [Getting the files](#files)
+2. [Setting up CMake and qiBuild](#setup)
+
+Here you will learn how to compile Intu for the following platforms:
+
+1. [Windows](#windows)
+2. [Mac](#osx)
+3. [Linux](#linux)
+4. [Raspberry Pi](#raspi)
+5. [Naoqi (Nao and Pepper robots)](#naoqi)
+
+## <a name="files">Getting the files</a>
+
+You may want to use git to clone the repository, so that the self-docs submodule is downloaded for easy referral. In your home directory, do the following:
 
 **Option 1:** [Download the Self SDK](https://github.com/watson-intu/self-sdk) using git commands. Issue following commands on your terminal in Mac:
 
@@ -17,40 +30,64 @@ You may want to use git to clone the repository, so that the self-docs submodule
 2. `plink git@github.ibm.com`
 
 
-**Option 2:** [Download the Self SDK](https://github.com/watson-intu/self-sdk) and seperately download [Download the Self Docs](https://github.com/watson-intu/self-docs). Unzip it in a place you prefer.
+**Option 2:** [Download the Self SDK](https://github.com/watson-intu/self-sdk) and separately download [Download the Self Docs](https://github.com/watson-intu/self-docs). Unzip it in a place you prefer.
 
-### Windows
+## <a name="setup">Setting Up CMake and qiBuild</a>
+If you are going to be running Intu on **Mac, Linux,** or **Nao/Pepper**, you will need to complete the following set up for both **CMake** and **qiBuild**. If you are running Intu on Windows or Raspberry Pi, you can skip this section:
 
-1. Set up [Visual Studio 2015](https://www.visualstudio.com/downloads/).
-2. Open `/vs2015/self.sln` in this project.
-3. Select self-sdk as your startup project, compile, and run.
+### CMake
 
-### OS X
-
-1. Set up [CMake](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys). To install CMake by using Homebrew, run `brew install cmake`.
+1. Check if you currently have **CMake** by executing the following command in your terminal: `cmake --version`
+2. If a version number is displayed, you have **CMake** already installed and can skip ahead to the **qiBuild** section.
+3. Set up [CMake](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys). To install CMake by using Homebrew, run `brew install cmake`. (Note: Linux users can use Linux package manager to install CMake)
   * To install Homebrew, run the following command in your terminal: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-2. Set up [qiBuild](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install).
+
+For more information on **CMake**, [click here](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys).
+
+### qiBuild
+
+4. Check if you currently have **qiBuild** by executing the following command in your terminal: `qibuild --version`
+5. If a version number is displayed, you have **qiBuild** already installed and can skip the rest of this section.
+6. Set up [qiBuild](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install) by executing the following commands in your terminal:
   * `pip install qibuild` (NOTE: it is highly recommended to download [anaconda python version 2.7](https://www.continuum.io/downloads) to have pip correctly configured)
   * `qibuild config --wizard` (use default setup for steps by pressing 1 twice)
-3. Run the following commands:
-  * `cd {self root directory}`
-  * `./scripts/build_mac.sh [profile]`
+
+For more information on **qiBuild**, [click here](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install).
+
+
+
+## 1. <a name="windows">Windows</a>
+
+1. Set up [Visual Studio 2015](https://www.visualstudio.com/downloads/).
+2. Open `/vs2015/self.sln` in Visual Studio.
+3. Select **self-sdk** as your startup project
+4. Select **Build -> Build Solution**
+
+## 2. <a name="osx">OS X</a>
+
+Complete the following steps after you have [set up CMake and qiBuild](#setup):
+
+1. Navigate to your root Intu directory (where you downloaded or cloned the **Intu SDK**)
+2. Execute the following command: `./scripts/build_mac.sh`
+3. If you have any build errors, run: `./scripts/clean.sh` and then redo step 2.
   
-This process stages the executables in the `bin/mac` directory on your local computer. You can change into that directory and run the unit_test and self_instance executables.
+This process stages the executables in the `bin/mac` directory on your local computer. You can change into that directory and run the **unit\_test** and **self\_instance** executables.
 
-PS: If you run into issues with the build, you might have to change a couple of Boost header files, as described here: https://github.com/Homebrew/legacy-homebrew/issues/27396 (specifically, you might have to replace your copy of Boost's boost/atomic/detail/cas128strong.hpp and boost/atomic/detail/gcc-atomic.hpp with the latest available in the Boost directory)
+PS: If you run into issues with the build, you might have to change a couple of Boost header files, as described [here](https://github.com/Homebrew/legacy-homebrew/issues/27396). Specifically, you might have to replace your copy of Boost's `boost/atomic/detail/cas128strong.hpp` and `boost/atomic/detail/gcc-atomic.hpp` with the latest available in the Boost directory.
 
-### Linux
+## 3. <a name="linux">Linux</a>
 
-1. Set up qibuild and CMake. You can use your Linux package manager to install CMake, and any distribution of Python (2.7 recommended) to install qibuild through pip.
-2. Run the following commands:
-  * `./scripts/build_linux.sh [profile]`
+Complete these steps after you have [set up CMake and qiBuild](#setup):
 
-### Raspberry Pi
+1. Navigate to your root Intu directory (where you downloaded or cloned the **Intu SDK**)
+2. Execute the following command: `./scripts/build_linux.sh`
+3. If you have any build errors, run: `./scripts/clean.sh` and then redo step 2.
+
+## 4. <a name="raspi">Raspberry Pi</a>
 
 **Note:** If any step below fails or errors, run: `sudo apt-get update`, then repeat the step.
 
-1.	Install Raspbian Operating System onto your Raspbery Pi
+1.	Install Raspbian Operating System onto your Raspberry Pi
 
 2.	Open up a new browser window on your laptop and download [**Anaconda 4.2.0 For Linux Python 2.7 version**](https://www.continuum.io/downloads).
 
@@ -108,11 +145,13 @@ PS: If you run into issues with the build, you might have to change a couple of 
 	4. Run: `./run_self.sh`
     
 
-### Aldebaran Nao and Pepper robots using OS X
+## 5. <a name="naoqi">Nao and Pepper robots</a>
 
-1. Set up [CMake](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys).
-2. Set up [qiBuild](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#qibuild-install).
-3. Run the following commmands:
-  * `./scripts/build_nao.sh [profile]`
-4. Run the following command to install into on the given robot using scp:
-  * `./scripts/install_nao.sh [user@host]`
+Complete the following steps after you have [set up CMake and qiBuild](#setup):
+
+Note: You do not need to have the **Intu SDK** directly downloaded or cloned on the robot, but rather you can build the **Intu SDK** locally and then *scp* the build onto the robot.
+
+1. Verify you and the robot are on the same network
+2. Navigate to your root Intu directory (where you downloaded or cloned the **Intu SDK**)
+3. Execute the following command: `./scripts/build_nao.sh`
+4. Execute the following command to install Intu on the robot using scp: `./scripts/install_nao.sh [user@host]`
