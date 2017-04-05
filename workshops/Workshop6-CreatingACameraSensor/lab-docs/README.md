@@ -6,8 +6,8 @@ In this workshop, you create a camera sensor. Sensors take in data from the outs
 
 Complete the following tasks:
 
-1. [Understanding some Self terminology](#understanding-some-intu-terminology)
-2. [Building the Self SDK](#building-the-intu-sdk)
+1. [Understanding some Intu terminology](#understanding-some-intu-terminology)
+2. [Building the Intu SDK](#building-the-intu-sdk)
 3. [Creating a camera sensor](#creating-a-camera-sensor)
 4. [Configuring your Intu instance to include the camera sensor](#configuring-your-Intu-instance-to-include-the-camera-sensor)
 
