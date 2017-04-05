@@ -35,7 +35,7 @@ You may want to use git to clone the repository, so that the self-docs submodule
 ## <a name="setup">Setting Up CMake and qiBuild</a>
 If you are going to be running Intu on **Mac, Linux,** or **Nao/Pepper**, you will need to complete the following set up for both **CMake** and **qiBuild**. If you are running Intu on Windows or Raspberry Pi, you can skip this section:
 
-**Note**: We require the installation of **Homebrew** and **Anaconda**. For instructions on how to install them, [click here](../installation/additional.md).
+**Note**: To complete the following **CMake** and **qiBuild** installations, it is required to install **Homebrew** and **Anaconda**. For instructions on how to install them, [click here](../installation/additional.md).
 
 ### CMake
 
