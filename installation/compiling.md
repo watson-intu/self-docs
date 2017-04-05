@@ -2,7 +2,7 @@
 
 Before you begin you will have to complete the following tasks:
 
-1. [Getting the files](#files)
+1. [Downloading the Intu SDK](#files)
 2. [Setting up CMake and qiBuild](#setup)
 
 Here you will learn how to compile Intu for the following platforms:
@@ -13,9 +13,9 @@ Here you will learn how to compile Intu for the following platforms:
 4. [Raspberry Pi](#raspi)
 5. [Naoqi (Nao and Pepper robots)](#naoqi)
 
-## <a name="files">Getting the files</a>
+## <a name="files">Downloading the Intu SDK</a>
 
-You may want to use git to clone the repository, so that the self-docs submodule is downloaded for easy referral. In your home directory, do the following:
+You have two options for acquiring the **Intu SDK**:
 
 **Option 1:** [Download the Self SDK](https://github.com/watson-intu/self-sdk) using git commands. Issue following commands on your terminal in Mac:
 
