@@ -2,7 +2,7 @@
 
 In this workshop, you create an emotion agent. Agents make decisions about how Intu operates and responds. The emotion agent uses the Tone Analyzer service on Bluemix, which analyzes a person's tone and determines whether that tone is positive or negative.
 
-**Before you begin:** You must have a Mac or Windows laptop, and you must have completed Workshop 1: Say Hello!. You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
+**Before you begin:** You must have a Mac or Windows laptop, and you must have completed [Workshop 1 --  Saying Hello!](../../../workshops/Workshop1-SayingHello/lab-docs/README.md). You will notice that Intu and Self are used interchangeably. Self is the technical name for Intu.
 
 **Note for Windows users:** You will need to have [**Visual Studio  Community 2015**](https://www.microsoft.com/en-us/download/details.aspx?id=48146) installed. This will take some time to download.
 
@@ -431,7 +431,7 @@ First, this code iterates over the response to find the emotion that has the hig
 2. Click on **VIEW CREDENTIALS** in the left hand navigation bar.
 
 3. Select your Organization and Group in the top Filter by menu, and click on the **Get Credentials** box.
-4. Create a `config.json` file in case it isn't present and paste the credentials obtained from the gateway in step 3 above.
+4. Create a `config.json` file if it isn't present and paste the credentials obtained from the gateway in step 3 above. If it is present, delete the current content and paste the credentials. Save this file.
 	
 	* For **OS X**,  in **intu/self-sdk-master/bin/mac**.
 	* For **Windows**, in **intu/self-sdk-master/bin/Debug**. 
@@ -466,12 +466,7 @@ First, this code iterates over the response to find the emotion that has the hig
 	```
 **Note:** If you have any build errors, run: scripts/clean.sh and then rerun: scripts/build_mac.sh
 
-2. Execute the following commands to actually run Intu:
-	```
-	cd ~/intu/self-sdk-master/bin/mac
-	export LD_LIBRARY_PATH=./
-	./self_instance
-	```
+2. Run Intu. For instructions on how to do so, [click here](../../../installation/running.md)
 	
 **For Windows users:**
 
