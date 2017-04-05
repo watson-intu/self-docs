@@ -35,12 +35,13 @@ You may want to use git to clone the repository, so that the self-docs submodule
 ## <a name="setup">Setting Up CMake and qiBuild</a>
 If you are going to be running Intu on **Mac, Linux,** or **Nao/Pepper**, you will need to complete the following set up for both **CMake** and **qiBuild**. If you are running Intu on Windows or Raspberry Pi, you can skip this section:
 
+**Note**: We require the installation of **Homebrew** and **Anaconda**. For instructions on how to install them, [click here](../installation/additional.md).
+
 ### CMake
 
 1. Check if you currently have **CMake** by executing the following command in your terminal: `cmake --version`
 2. If a version number is displayed, you have **CMake** already installed and can skip ahead to the **qiBuild** section.
 3. Set up [CMake](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys). To install CMake by using Homebrew, run `brew install cmake`. (Note: Linux users can use Linux package manager to install CMake)
-  * To install Homebrew, run the following command in your terminal: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 For more information on **CMake**, [click here](http://doc.aldebaran.com/2-1/dev/cpp/install_guide.html#required-buidsys).
 
