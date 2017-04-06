@@ -39,7 +39,7 @@ The **Intu Starter Kit** contains a Conversation service workspace that helps yo
 4. Complete the instructions in `readme.txt`.
 
 
-###To create and configure an instance of Watson <u>Speech to Text</u> Service:
+### To create and configure an instance of Watson <u>Speech to Text</u> Service:
 
 1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 2. Click <a href="https://console.ng.bluemix.net/catalog/services/speech-to-text" target="_blank">here</a> to be taken to the **Speech to Text** Service page in Bluemix.
@@ -56,7 +56,7 @@ The **Intu Starter Kit** contains a Conversation service workspace that helps yo
 	6. Paste your username and password into the **USER ID** and **PASSWORD** fields.
 	7. Click **SAVE**
 
-###To create and configure an instance of Watson <u>Text to Speech</u> Service:
+### To create and configure an instance of Watson <u>Text to Speech</u> Service:
 
 1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 2. Click <a href="https://console.ng.bluemix.net/catalog/services/text-to-speech" target="_blank">here</a> to be taken to the **Text to Speech** Service page in Bluemix.
@@ -108,7 +108,7 @@ Note: For the features listed below to work, you need to use the Conversation wo
 
 As mentioned in the previous section, adding the Weather Company Data, Visual Recognition, and Natural Language Understanding Bluemix services can add more functionality to your Intu instance.
 
-###To create and configure an instance of <u>Weather Company Data</u> Service:
+### To create and configure an instance of <u>Weather Company Data</u> Service:
 
 1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 2. Click <a href="https://console.ng.bluemix.net/catalog/services/weather-company-data" target="_blank">here</a> to be taken to the **Weather Company Data** Service page in Bluemix.
@@ -125,7 +125,7 @@ As mentioned in the previous section, adding the Weather Company Data, Visual Re
 	6. Paste your username and password into the **USER ID** and **PASSWORD** fields.
 	7. Click **SAVE**
 
-###To create and configure an instance of <u>Visual Recognition</u> Service:
+### To create and configure an instance of <u>Visual Recognition</u> Service:
 
 1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 2. Click <a href="https://console.ng.bluemix.net/catalog/services/visual-recognition" target="_blank">here</a> to be taken to the **Visual Recognition** Service page in Bluemix.
@@ -144,7 +144,7 @@ As mentioned in the previous section, adding the Weather Company Data, Visual Re
 	8. In the **SERVICE ENDPOINT** field, paste the url obtained from Bluemix.
 	9. Click **SAVE**
 
-###To create and configure an instance of <u>Natural Language Understanding</u> Service:
+### To create and configure an instance of <u>Natural Language Understanding</u> Service:
 
 1. Verify you are logged into <a href="https://console.ng.bluemix.net/" target="_blank">Bluemix</a>.
 2. Click <a href="https://console.ng.bluemix.net/catalog/services/natural-language-understanding" target="_blank">here</a> to be taken to the **Natural Language Understanding** Service page in Bluemix.
