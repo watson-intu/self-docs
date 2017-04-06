@@ -68,7 +68,6 @@ See [Installing and building the Self SDK](../../../installation/compiling.md) b
 2. Create a file called **WorkshopThreeAgent.cpp** in this directory, and paste the following code:
 
 	```
-	
 	#include "WorkshopThreeAgent.h"
 	#include "SelfInstance.h"
 	#include "blackboard/BlackBoard.h"
@@ -417,7 +416,6 @@ In the next step, you will build out the **OnText**, **OnTone** and **OnLearning
 
         PublishEmotionalState();
     }
-  
 	```
   
 First, this code iterates over the response to find the emotion that has the highest probability. Then, it checks whether the emotion is positive, and, if it is, the EmotionalState variable is incremented by 0.1. The EmotionalState variable cannot exceed one. If the highest probability tone is negative, the EmotionalState variable is decreased by 0.1. The EmotionalState variable cannot be less than zero.
