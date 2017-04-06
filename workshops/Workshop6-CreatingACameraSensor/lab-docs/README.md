@@ -160,7 +160,6 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	{
 	
 	}
-
 	```
 
 
@@ -236,7 +235,6 @@ Add the installation prefix of "SELF" to CMAKE_PREFIX_PATH or set "SELF_DIR" to 
 	};
 	
 	#endif //SELF_WORKSHOP_
-	
 	```
 
 
@@ -281,7 +279,6 @@ In the next step, you will build out the **OnStart**, **CaptureVideo** and **Sen
 	#endif
 	    ThreadPool::Instance()->InvokeOnThread<void *>(DELEGATE(WorkshopSixSensor, CaptureVideo, void *, this), 0);
 	    return true;
-    
     ```
 
 3. For the **CaptureVideo()** function, copy the code directly below **//Code for CaptureVideo()**. Now paste this inside the function body **{}** of **CaptureVideo()** in `WorkshopSixSensor.cpp`. The code which you need is displayed below for completeness; however, it is **not** recommended for you to copy it from here due to formatting issues.
@@ -354,7 +351,6 @@ In the next task, you will update the `body.json` file also located in the **int
        "m_SensorId" : "8f385c2a-ecb0-3bfb-32af-3c54ec18db5c",
        "m_fFramesPerSec" : 10
     },
-    
 	```
 
 5. Verify that it looks something like:
