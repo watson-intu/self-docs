@@ -1,0 +1,55 @@
+How to Create a Linux SELF Docker Container
+-------------------------------------------
+
+0. Make sure you have access to a Linux build of SELF (everything inside either the stage/ directory or the sdk/bin/linux directory, depending on how you built your Linux binaries)
+
+1. Make sure you have both the Docker daemon and Docker CLI installed. Refer to (https://docs.docker.com/engine/getstarted/) to get relevant instructions for your platform. In summary, for Linux it is the same executable that can be run as a daemon and as the client. For OS X, if you install Docker Toolbox from the Docker Website, it installs docker-machine, which downloads a lightweight Linux VM (boot2docker) that you can then run locally as your Docker host/ daemon. The docker command would work as usual as the CLI
+
+2. Start your Docker daemon and make sure the environment variables are updated properly (follow the documentation above from the Docker Website). In summary, run the following in every terminal you want to use Docker in
+    $ eval $(docker-machine env)
+
+    You will need to run this every time you restart your Docker host, which would happen whenever you change networks, for example
+
+3. Pull the Ubuntu 14.04 image by using the command
+    $ docker pull ubuntu:14.04
+
+4. Run the Ubuntu 14.04 image by using
+    $ docker run -i -t ubuntu:14.04 /bin/bash
+
+5. Inside the container, create a directory /home/self/latest
+    # mkdir /home/self/latest
+
+6. You ~might~ want to run an update on the repositories inside the container because by default they aren't up to date
+    # apt-get -qq update
+
+7. From another terminal, where the Docker environment variables are set properly, copy over the Linux executable to the container and expand it into the /home/self/latest directory inside the container
+
+8. From that same terminal, get the same of the currently running Docker container. You will need it later
+    $ docker ps
+
+9. Update the run_self.py and run_self.sh scripts to make sure that all the paths pointing to the NAO home or all the paths containing ~ are properly resolved to the /home/self/latest in the container
+
+10. Make sure that everything runs by running the following in the /home/self/latest directory in the container
+    # ./run_self.sh
+
+11. Get out of the container by using
+    # exit
+
+12. Commit your changes to the Linux Ubuntu image
+    $ docker commit --author "Author Name <Author EMail>" --message "Created a working SELF container" <CONTAINER_NAME> IMAGE_NAME:TAG
+    e.g.
+    $ docker commit --author "Ravi S Sinha <rssinha@us.ibm.com>" --message "Created a working SELF container" sleepy_euler ubuntu:14.04
+
+    Here the container name is the name you saw under the NAMES column in the output of $ docker ps
+
+13. [Depending on whether you need to modify the gateway and ports if they are not preconfigured the way you want them] Accordingly modify the etc/profile/body.json in the SELF directory
+
+14. Additional Docker commands that might be useful:
+    // Get the IP address of a container
+    $ docker inspect --format '{{ .NetworkSettings.IPAddress }}' <CONTAINER_NAME>
+
+    // Look at all the Docker images you have installed locally
+    $ docker images
+
+    // Look at the currently running Docker containers/ images
+    $ docker ps
